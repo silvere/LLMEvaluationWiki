@@ -2,3 +2,6 @@ node_modules/
 .DS_Store
 *.log
 quartz/.quartz-cache/
+quartz/public/
+quartz/node_modules/
+quartz/.quartz-cache/
