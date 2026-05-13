@@ -2,6 +2,31 @@
 
 中文 LLM 评测知识库。基于 [Karpathy LLM Wiki 范式](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)，由 AI agent 持续维护的结构化复利知识库。
 
+## 新机器快速上手
+
+```bash
+# 1. clone（包含 submodule 占位）
+git clone https://github.com/silvere/LLMEvaluationWiki.git
+cd LLMEvaluationWiki
+
+# 2. 安装根目录脚本依赖（Node 20+）
+npm install
+
+# 3. 安装 Quartz 依赖
+cd quartz && npm install && cd ..
+
+# 4. 同步 raw/ 私有子模块（需有 LLMEvaluationWiki-raw 权限）
+git submodule update --init
+
+# 5. 本地预览（build 静态文件后用任意 HTTP server）
+cd quartz && npx quartz build && cd ..
+cd quartz/public && python3 -m http.server 8083
+# 访问 http://localhost:8083
+```
+
+> **Note**: Quartz 的 `--serve` hot-reload 在 macOS 默认限制下会崩溃（`EMFILE`），用上面静态文件方式替代。
+> 如需热重载：`ulimit -n 4096` 后再跑 `npx quartz build --serve`。
+
 ## 导读
 
 - **[AGENTS.md](./AGENTS.md)** — AI 操作手册（schema 规范、ingest SOP、操作权限边界）
