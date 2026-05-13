@@ -1,0 +1,21 @@
+{
+  "name": "llm-evaluation-wiki",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "validate": "tsx scripts/validate-frontmatter.ts",
+    "build-index": "tsx scripts/build-index.ts",
+    "lint": "tsx scripts/lint-wiki.ts",
+    "check-all": "npm run validate && npm run build-index && npm run lint"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "@types/js-yaml": "^4.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "glob": "^11.0.0"
+  }
+}

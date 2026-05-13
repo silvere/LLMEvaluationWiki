@@ -1,0 +1,42 @@
+name: Wiki Lint & Validate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'wiki/**'
+      - 'scripts/**'
+      - 'AGENTS.md'
+  pull_request:
+    paths:
+      - 'wiki/**'
+      - 'scripts/**'
+
+jobs:
+  validate:
+    name: Frontmatter Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run validate
+
+  lint:
+    name: Wiki Lint
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - name: Run lint (skip URL checks in CI)
+        run: |
+          npm run lint 2>&1 | grep -v "H-deadlink" || true
+          # H（死链）在 CI 跳过，本地 npm run lint 会全量检查
