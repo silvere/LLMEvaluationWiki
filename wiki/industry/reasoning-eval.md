@@ -60,7 +60,6 @@ sources: []
 
 ## 相关页面
 
-- [[math-education-eval]] - 数学教育AI评测
 - [[scientific-research-eval]] - 科学研究AI评测
 - [[hallucination-eval]] - 幻觉专项评测
 - [[autonomous-agents-eval]] - 自主代理评测

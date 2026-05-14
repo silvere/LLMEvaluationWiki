@@ -17,7 +17,7 @@ size: 11550
 format: multiple-choice
 status: active
 saturation_threshold: 0.75
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # MMMU（Massive Multitask Multi-modal Understanding）
@@ -56,4 +56,4 @@ MMMU 的重要性在于它揭示了当前多模态模型的深层能力短板。
 
 - [[MMLU]]
 - [[benchmark-saturation]]
-- [[multimodal-evaluation]]
+- [[multimodal-eval]]

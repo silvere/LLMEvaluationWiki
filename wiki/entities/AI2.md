@@ -55,6 +55,6 @@ AI2 在"评测基准必须公开透明"这一原则上立场鲜明。OLMo 项目
 - [[ARC]]
 - [[HellaSwag]]
 - [[WinoGrande]]
-- [[OLMo]]
-- [[Dolma]]
+- 
+- 
 - [[Yejin-Choi]]

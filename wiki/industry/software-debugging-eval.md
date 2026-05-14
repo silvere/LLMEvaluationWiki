@@ -59,5 +59,4 @@ sources: []
 
 - [[code-eval]] - 代码AI评测
 - [[code-review-eval]] - 代码审查AI评测
-- [[programming-tutoring-eval]] - 编程教育AI评测
 - [[autonomous-agents-eval]] - 自主代理评测

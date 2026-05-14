@@ -56,7 +56,6 @@ sources: []
 
 ## 相关页面
 
-- [[financial-risk-eval]] - 金融风险AI评测
 - [[compliance-eval]] - 合规AI评测
 - [[reasoning-eval]] - 推理能力评测
 - [[data-analysis-eval]] - 数据分析AI评测

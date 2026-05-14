@@ -61,4 +61,3 @@ AI在科学研究中的应用正从文献检索和写作辅助扩展到假说生
 - [[biology-eval]] - 生物AI评测
 - [[physics-eval]] - 物理AI评测
 - [[reasoning-eval]] - 推理能力评测
-- [[math-education-eval]] - 数学教育AI评测

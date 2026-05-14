@@ -17,7 +17,7 @@ size: 817
 format: multiple-choice
 status: active
 saturation_threshold: 0.85
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # TruthfulQA
@@ -56,5 +56,5 @@ TruthfulQA 采用双维度评测：Truthfulness（真实性，回答是否准确
 
 - [[SimpleQA]]
 - [[HarmBench]]
-- [[hallucination-evaluation]]
+- [[TruthfulQA]]
 - [[data-contamination]]

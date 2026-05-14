@@ -6,7 +6,7 @@ author_mode: llm
 confidence: draft
 as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
-domain: [alignment, safety]
+domain: [safety, dialog]
 language: en
 year: 2024
 authors: ["Wenting Zhao", "Xiang Ren", "Jack Hessel", "Claire Cardie", "Yejin Choi", "Yuntian Deng"]

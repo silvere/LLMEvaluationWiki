@@ -17,7 +17,7 @@ size: 4326
 format: multiple-choice
 status: active
 saturation_threshold: 0.80
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # SimpleQA
@@ -55,5 +55,5 @@ SimpleQA 发布时的核心发现是：即使是最强的 GPT-4o 模型，在这
 ## 相关页面
 
 - [[TruthfulQA]]
-- [[hallucination-evaluation]]
+- [[TruthfulQA]]
 - [[MMLU]]

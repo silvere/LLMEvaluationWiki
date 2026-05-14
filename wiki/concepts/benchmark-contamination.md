@@ -7,6 +7,8 @@ confidence: draft
 as_of_date: "2026-05-13"
 last_verified: "2026-05-13"
 sources: []
+aliases:
+  - data-contamination
 ---
 
 # Benchmark 数据污染

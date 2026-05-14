@@ -13,8 +13,9 @@ authors: ["DeepSeek-AI"]
 published: "2024-05-07"
 ingested: "2026-05-14"
 license: "DeepSeek Model License"
-discusses: ["[[DeepSeek]]", "[[混合专家架构]]", "[[MoE]]", "[[推理效率]]", "[[中文评测]]"]
-sources: []
+discusses: ["[[deepseek|DeepSeek]]", "[[scaling-laws|混合专家架构]]", "[[deepseek-v2-2024|MoE]]", "[[inference-time-scaling|推理效率]]", ""]
+sources:
+  - "https://arxiv.org/abs/2405.04434"
 ---
 
 # DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model
@@ -49,9 +50,8 @@ sources: []
 
 ## 相关 wiki 页
 
-- [[DeepSeek]]
-- [[混合专家架构]]
-- [[MoE]]
-- [[推理效率]]
-- [[中文评测]]
-- [[开源模型]]
+- [[deepseek|DeepSeek]]
+- [[scaling-laws|混合专家架构]]
+- [[deepseek-v2-2024|MoE]]
+- [[inference-time-scaling|推理效率]]
+- [[open-vs-closed-model-eval|开源模型]]

@@ -66,4 +66,4 @@ ARC-Challenge 是评测语言模型科学推理能力的重要基准，被广泛
 - [[HellaSwag]]
 - [[OpenBookQA]]
 - [[PIQA]]
-- [[SciQ]]
+- [[ARC]]

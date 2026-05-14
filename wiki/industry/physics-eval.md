@@ -56,6 +56,5 @@ sources: []
 ## 相关页面
 
 - [[scientific-research-eval]] - 科学研究AI评测
-- [[math-education-eval]] - 数学教育AI评测
 - [[chemistry-eval]] - 化学AI评测
 - [[reasoning-eval]] - 推理能力评测

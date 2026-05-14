@@ -58,6 +58,5 @@ sources: []
 ## 相关页面
 
 - [[legal-eval]] - 法律AI评测
-- [[legal-contract-eval]] - 法律合同AI评测
 - [[information-extraction-eval]] - 信息抽取评测
 - [[document-understanding-eval]] - 文档理解评测

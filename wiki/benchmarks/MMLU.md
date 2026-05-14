@@ -17,7 +17,7 @@ size: 15908
 format: multiple-choice
 status: saturated
 saturation_threshold: 0.90
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # MMLU（Massive Multitask Language Understanding）

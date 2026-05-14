@@ -6,6 +6,8 @@ author_mode: llm
 confidence: draft
 as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
+aliases:
+  - VideoMME
 domain: [multimodal]
 language: en
 year: 2024

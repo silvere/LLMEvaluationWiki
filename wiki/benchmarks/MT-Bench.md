@@ -17,7 +17,7 @@ size: 80
 format: multiple-choice
 status: active
 saturation_threshold: 0.90
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # MT-Bench（Multi-Turn Benchmark）
@@ -57,4 +57,4 @@ MT-Bench 的核心评测机制是 LLM-as-Judge：使用 GPT-4 对模型的每轮
 - [[Chatbot-Arena]]
 - [[IFEval]]
 - [[llm-as-judge]]
-- [[instruction-following-evaluation]]
+- [[IFEval]]

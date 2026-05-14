@@ -58,6 +58,4 @@ sources: []
 ## 相关页面
 
 - [[summarization-eval]] - 文本摘要评测
-- [[marketing-content-eval]] - 营销内容AI评测
 - [[academic-writing-eval]] - 学术写作AI评测
-- [[journalism-eval]] - 新闻AI评测

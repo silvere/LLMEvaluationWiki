@@ -36,8 +36,8 @@ sources: []
 
 ## 相关页面
 
-- [[GPT-3]]
+- [[GPT-4]]
 - [[In-Context-Learning]]
-- [[Few-Shot评测]]
+- [[benchmark-design]]
 - [[Scaling-Laws]]
 - [[OpenAI]]

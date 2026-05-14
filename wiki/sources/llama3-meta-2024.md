@@ -13,8 +13,9 @@ authors: ["Meta AI"]
 published: "2024-04-18"
 ingested: "2026-05-14"
 license: "Meta Llama 3 Community License"
-discusses: ["[[Llama 3]]", "[[开源模型]]", "[[指令微调]]", "[[安全评测]]"]
-sources: []
+discusses: ["[[LLaMA|Llama 3]]", "[[open-vs-closed-model-eval|开源模型]]", "[[instruction-following-eval|指令微调]]", "[[safety-eval-landscape|安全评测]]"]
+sources:
+  - "https://ai.meta.com/blog/meta-llama-3/"
 ---
 
 # Meta Llama 3
@@ -49,8 +50,8 @@ sources: []
 
 ## 相关 wiki 页
 
-- [[Llama 3]]
-- [[Llama 2]]
-- [[开源模型]]
-- [[指令微调]]
-- [[RLHF]]
+- [[LLaMA|Llama 3]]
+- [[LLaMA|Llama 2]]
+- [[open-vs-closed-model-eval|开源模型]]
+- [[instruction-following-eval|指令微调]]
+- [[rlhf|RLHF]]

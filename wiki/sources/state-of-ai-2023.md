@@ -13,8 +13,9 @@ authors: ["Nathan Benaich", "Alex Chisholm", "Othmane Sebbouh", "Niki Ilhardt"]
 published: "2023-10-12"
 ingested: "2026-05-14"
 license: "State of AI Report"
-discusses: ["[[AI发展趋势]]", "[[大语言模型]]", "[[AI安全]]", "[[AI产业]]", "[[GPU算力]]"]
-sources: []
+discusses: ["", "", "", "", "[[scaling-laws|GPU算力]]"]
+sources:
+  - "https://www.stateof.ai/2023"
 ---
 
 # State of AI Report 2023
@@ -47,9 +48,9 @@ sources: []
 
 ## 相关 wiki 页
 
-- [[AI发展趋势]]
-- [[大语言模型]]
-- [[开源模型]]
-- [[AI治理]]
-- [[GPU算力]]
-- [[扩展定律]]
+- 
+- 
+- [[open-vs-closed-model-eval|开源模型]]
+- 
+- [[scaling-laws|GPU算力]]
+- [[scaling-laws|扩展定律]]

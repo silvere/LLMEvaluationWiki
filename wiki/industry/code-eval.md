@@ -56,9 +56,14 @@ sources: []
 - **BigCode Project**：开源代码模型和配套评测基础设施（HumanEval+等）
 - **UC Berkeley**：Gorilla等工具调用代码评测研究
 
+## 代码 Agent 的轨迹多样性扩展
+
+[[td-scaling]]（2026）提出 TDScaling 框架，核心发现是：对于代码 Agent，训练轨迹的**多样性**比数量更能带来性能增益。通过合成并筛选高差异性的失败/成功轨迹（而非简单扩大数据量），模型性能得到显著提升。这对代码 Agent 评测的启示是：eval 结果需要区分"训练数据量大"和"训练数据多样"这两种改进路径。
+
 ## 相关页面
 
-- [[software-debugging-eval]] - 软件调试AI评测
-- [[code-review-eval]] - 代码审查AI评测
-- [[programming-tutoring-eval]] - 编程教育AI评测
-- [[autonomous-agents-eval]] - 自主代理评测
+- [[software-debugging-eval]] — 软件调试AI评测
+- [[code-review-eval]] — 代码审查AI评测
+- [[autonomous-agents-eval]] — 自主代理评测
+- [[td-scaling]] — 轨迹多样性扩展原始论文
+- [[agent-eval]] — Agent 评测综述

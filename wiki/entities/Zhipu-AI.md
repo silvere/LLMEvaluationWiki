@@ -46,8 +46,8 @@ sources: []
 
 ## 相关页面
 
-- [[GLM]]
-- [[ChatGLM]]
+- 
+- 
 - [[C-Eval]]
 - [[CMMLU]]
 - [[Shanghai-AI-Lab]]

@@ -17,7 +17,7 @@ size: 6000000
 format: multiple-choice
 status: active
 saturation_threshold: 0.90
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # Chatbot Arena（LMSYS）

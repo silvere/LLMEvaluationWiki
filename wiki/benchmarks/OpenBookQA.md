@@ -63,5 +63,5 @@ OpenBookQA 的设计精心之处在于显式区分了"书本知识"和"常识推
 - [[ARC]]
 - [[MMLU]]
 - [[CommonsenseQA]]
-- [[SciQ]]
+- [[ARC]]
 - [[PIQA]]

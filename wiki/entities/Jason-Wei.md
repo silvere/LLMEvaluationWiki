@@ -39,7 +39,7 @@ sources: []
 ## 相关页面
 
 - [[Chain-of-Thought]]
-- [[涌现能力]]
+- 
 - [[GSM8K]]
 - [[BIG-Bench]]
 - [[Google-DeepMind]]

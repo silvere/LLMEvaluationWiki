@@ -13,8 +13,9 @@ authors: ["Anthropic"]
 published: "2024-03-04"
 ingested: "2026-05-14"
 license: "Anthropic Model Card"
-discusses: ["[[Claude 3]]", "[[Constitutional AI]]", "[[安全评测]]", "[[多模态模型]]", "[[对齐]]"]
-sources: []
+discusses: ["[[Claude|Claude 3]]", "[[RLHF|Constitutional AI]]", "[[safety-eval-landscape|安全评测]]", "[[multimodal-eval|多模态模型]]", "[[capability-vs-alignment|对齐]]"]
+sources:
+  - "https://www.anthropic.com/claude-3-model-card"
 ---
 
 # Claude 3 Model Card
@@ -49,9 +50,9 @@ sources: []
 
 ## 相关 wiki 页
 
-- [[Claude 3]]
-- [[Constitutional AI]]
-- [[安全评测]]
-- [[多模态模型]]
+- [[Claude|Claude 3]]
+- [[RLHF|Constitutional AI]]
+- [[safety-eval-landscape|安全评测]]
+- [[multimodal-eval|多模态模型]]
 - [[GPQA]]
-- [[长上下文评测]]
+- [[CLongEval|长上下文评测]]

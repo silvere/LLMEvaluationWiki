@@ -17,7 +17,7 @@ size: 0
 format: open-ended
 status: active
 saturation_threshold: 0.85
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # AIME（American Invitational Mathematics Examination）

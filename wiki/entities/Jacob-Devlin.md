@@ -36,8 +36,8 @@ sources: []
 
 ## 相关页面
 
-- [[BERT]]
+- [[BERTScore]]
 - [[GLUE]]
-- [[SQuAD]]
-- [[预训练语言模型]]
-- [[NLP评测范式转变]]
+- [[SQuAD-2.0]]
+- 
+- 

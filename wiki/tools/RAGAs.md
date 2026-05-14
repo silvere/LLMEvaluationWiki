@@ -43,7 +43,7 @@ from datasets import Dataset
 data = {
     "question": ["What is photosynthesis?"],
     "answer": ["Photosynthesis is the process by which plants make food."],
-    "contexts": [["Photosynthesis converts light energy into chemical energy..."]],
+    "contexts": ,
 }
 dataset = Dataset.from_dict(data)
 result = evaluate(dataset, metrics=[faithfulness, answer_relevancy])

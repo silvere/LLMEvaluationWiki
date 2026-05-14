@@ -13,8 +13,9 @@ authors: ["OpenAI"]
 published: "2023-03-15"
 ingested: "2026-05-14"
 license: "OpenAI Technical Report"
-discusses: ["[[GPT-4]]", "[[多模态模型]]", "[[RLHF]]", "[[对齐]]", "[[安全评测]]"]
-sources: []
+discusses: ["[[GPT-4|GPT-4]]", "[[multimodal-eval|多模态模型]]", "[[rlhf|RLHF]]", "[[capability-vs-alignment|对齐]]", "[[safety-eval-landscape|安全评测]]"]
+sources:
+  - "https://openai.com/research/gpt-4"
 ---
 
 # GPT-4 Technical Report
@@ -48,8 +49,8 @@ sources: []
 
 ## 相关 wiki 页
 
-- [[GPT-4]]
-- [[多模态模型]]
+- [[GPT-4|GPT-4]]
+- [[multimodal-eval|多模态模型]]
 - [[MMLU]]
-- [[对齐]]
-- [[安全评测]]
+- [[capability-vs-alignment|对齐]]
+- [[safety-eval-landscape|安全评测]]

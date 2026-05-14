@@ -1,0 +1,17 @@
+# Orphan wikilinks in wiki/sources/
+# Generated: 2026-05-14T07:36:42.756Z
+# 白名单孤儿（已知无对应页，不需处理）：9 个
+# 新增孤儿（需要在 MANUAL_ALIASES 补映射或新建页面）：0 个
+
+## 白名单孤儿
+[[AI产业]] — in: state-of-ai-2023.md
+[[AI反馈]] — in: 2212.08073.md
+[[AI发展趋势]] — in: ai-index-2024.md, state-of-ai-2023.md
+[[AI安全]] — in: ai-index-2024.md, state-of-ai-2023.md
+[[AI治理]] — in: ai-index-2024.md, state-of-ai-2023.md
+[[AI能力进展]] — in: ai-index-2024.md
+[[GitHub]] — in: 2310.01848.md
+[[大语言模型]] — in: state-of-ai-2023.md
+[[法律推理]] — in: 2308.11462.md
+
+## 新增孤儿（需处理）

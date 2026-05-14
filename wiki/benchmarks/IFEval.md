@@ -17,7 +17,7 @@ size: 541
 format: multiple-choice
 status: active
 saturation_threshold: 0.90
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # IFEval（Instruction Following Evaluation）
@@ -56,4 +56,4 @@ IFEval 的评测指标分两个粒度：Prompt 级别（整道题所有指令全
 
 - [[MT-Bench]]
 - [[Chatbot-Arena]]
-- [[instruction-following-evaluation]]
+- [[IFEval]]

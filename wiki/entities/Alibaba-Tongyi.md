@@ -45,7 +45,7 @@ Qwen 系列的全面开源（包括从小到大多个规模），为评测界提
 
 ## 相关页面
 
-- [[Qwen]]
+- 
 - [[OpenCompass]]
 - [[C-Eval]]
 - [[Shanghai-AI-Lab]]

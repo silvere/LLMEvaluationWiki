@@ -40,6 +40,6 @@ sources: []
 - [[Chatbot-Arena]]
 - [[LMSYS-Org]]
 - [[MT-Bench]]
-- [[vLLM]]
+- 
 - [[LLM-as-Judge]]
 - [[Wei-Lin-Chiang]]

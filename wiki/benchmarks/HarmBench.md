@@ -17,7 +17,7 @@ size: 0
 format: multiple-choice
 status: active
 saturation_threshold: 0.80
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # HarmBench
@@ -55,5 +55,5 @@ HarmBench 的核心设计是统一框架：将多种主流攻击方法（包括 
 ## 相关页面
 
 - [[TruthfulQA]]
-- [[safety-evaluation]]
+- [[safety-eval-landscape]]
 - [[red-teaming]]

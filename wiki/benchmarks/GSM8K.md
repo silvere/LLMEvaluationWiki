@@ -17,7 +17,7 @@ size: 8500
 format: open-ended
 status: saturated
 saturation_threshold: 0.95
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # GSM8K（Grade School Math 8K）

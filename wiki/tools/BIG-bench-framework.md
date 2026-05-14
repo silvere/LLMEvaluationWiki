@@ -7,6 +7,9 @@ confidence: draft
 as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
 sources: []
+aliases:
+  - big-bench
+  - BIG-Bench
 ---
 
 # BIG-bench 评测框架

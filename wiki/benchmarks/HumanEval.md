@@ -17,7 +17,7 @@ size: 164
 format: code
 status: saturated
 saturation_threshold: 0.95
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # HumanEval（含 HumanEval+）

@@ -42,7 +42,7 @@ sources: []
 
 - [[Chatbot-Arena]]
 - [[LMSYS-Org]]
-- [[FastChat]]
-- [[Vicuna]]
+- 
+- 
 - [[MT-Bench]]
 - [[Lianmin-Zheng]]

@@ -61,5 +61,4 @@ sources: []
 
 - [[code-eval]] - 代码AI评测
 - [[reasoning-eval]] - 推理能力评测
-- [[robotics-eval]] - 机器人AI评测
 - [[cybersecurity-eval]] - 网络安全AI评测

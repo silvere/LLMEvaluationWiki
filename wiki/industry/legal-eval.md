@@ -56,7 +56,6 @@ sources: []
 
 ## 相关页面
 
-- [[legal-contract-eval]] - 法律合同AI评测
 - [[compliance-eval]] - 合规AI评测
 - [[patent-analysis-eval]] - 专利AI评测
 - [[reasoning-eval]] - 推理能力评测

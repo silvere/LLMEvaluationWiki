@@ -17,7 +17,7 @@ size: 13948
 format: multiple-choice
 status: active
 saturation_threshold: 0.85
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # C-Eval
@@ -55,6 +55,6 @@ C-Eval 的重要性在于它填补了中文 LLM 评测领域的空白。在 C-Ev
 ## 相关页面
 
 - [[MMLU]]
-- [[multilingual-evaluation]]
+- [[benchmark-design]]
 - [[data-contamination]]
 - [[benchmark-saturation]]

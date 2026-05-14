@@ -37,9 +37,9 @@ sources: []
 
 ## 相关页面
 
-- [[InstructGPT]]
+- [[GPT-4]]
 - [[RLHF]]
-- [[人类偏好评测]]
+- 
 - [[AlpacaEval]]
 - [[Chatbot-Arena]]
 - [[OpenAI]]

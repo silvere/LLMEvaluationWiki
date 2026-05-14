@@ -17,7 +17,7 @@ size: 500
 format: code
 status: active
 saturation_threshold: 0.60
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # SWE-bench Verified

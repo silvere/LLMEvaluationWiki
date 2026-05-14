@@ -6,6 +6,8 @@ author_mode: llm
 confidence: draft
 as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
+aliases:
+  - τ-bench
 domain: [agent]
 language: en
 year: 2024
@@ -92,8 +94,11 @@ sources:
 - 用户模拟器的真实性对评测结果有较大影响
 - 评测成本较高（每次测试需要多轮对话交互）
 
-## 相关基准
+## 相关页面
 
-- **ToolBench**：更广泛的 API 工具调用评测
-- **AgentBench**：多任务综合代理评测
-- **GAIA**：真实世界任务助手评测
+- [[tau2-bench]] — τ-bench 第二代，新增电信域 + Dec-POMDP 建模
+- [[tau3-bench]] — τ-bench 第三代，新增银行域 + 语音模态
+- [[ToolBench]]
+- [[AgentBench]]
+- [[GAIA]]
+- [[BFCL]]

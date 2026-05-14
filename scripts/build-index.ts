@@ -13,7 +13,7 @@ import yaml from "js-yaml";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const ROOT = join(__dirname, "..");
 const WIKI_DIR = join(ROOT, "wiki");
-const INDEX_PATH = join(ROOT, "index.md");
+const INDEX_PATH = join(WIKI_DIR, "index.md");
 const TODAY = new Date().toISOString().split("T")[0];
 
 interface PageMeta {
@@ -58,6 +58,26 @@ const TYPE_LABELS: Record<string, string> = {
   synthesis:   "synthesis/ — 综合分析",
   industry:    "industry/ — 行业垂类",
 };
+
+// §7 校验：wiki/synthesis/ 下不允许存在 sources 为空的页面
+const SYNTHESIS_DIR = join(WIKI_DIR, "synthesis");
+let synthViolations = 0;
+try {
+  for (const f of walkDir(SYNTHESIS_DIR)) {
+    const fm = extractFrontmatter(readFileSync(f, "utf-8"));
+    if (!fm) continue;
+    const sources = fm["sources"];
+    if (!Array.isArray(sources) || sources.length === 0) {
+      console.error(`❌ synthesis 页面缺少 sources：${f}`);
+      synthViolations++;
+    }
+  }
+} catch { /* synthesis dir may not exist */ }
+if (synthViolations > 0) {
+  console.error(`\n⛔ build-index 中止：${synthViolations} 篇 synthesis 页面违反 §7（sources 为空）。`);
+  console.error("   请补充 sources 引用，或将文件移至 private/synthesis-draft/。");
+  process.exit(1);
+}
 
 const pages: PageMeta[] = [];
 for (const f of walkDir(WIKI_DIR)) {
@@ -121,7 +141,9 @@ for (const t of TYPE_ORDER) {
     const sb = p.status && p.status !== "active" ? ` \`${p.status}\`` : "";
     const db = p.domain?.slice(0, 3).join(", ") ?? "";
     const yb = p.year ? ` (${p.year})` : "";
-    lines.push(`- [[${p.title}]](${p.file})${cb}${sb}${db ? " · " + db : ""}${yb}`);
+    const slug = p.file.replace(/\.md$/, "").split("/").pop() ?? p.title;
+    const wikilink = slug === p.title ? `[[${slug}]]` : `[[${slug}|${p.title}]]`;
+    lines.push(`- ${wikilink}${cb}${sb}${db ? " · " + db : ""}${yb}`);
   }
   lines.push("");
 }

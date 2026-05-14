@@ -59,4 +59,3 @@ LLM推荐评测需要超越传统推荐系统指标（准确率、召回率、ND
 
 - [[customer-service-eval]] - 客服AI评测
 - [[data-analysis-eval]] - 数据分析AI评测
-- [[marketing-content-eval]] - 营销内容AI评测

@@ -6,7 +6,7 @@ author_mode: llm
 confidence: draft
 as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
-domain: [agent, tool]
+domain: [agent]
 language: en
 year: 2023
 authors: ["Xingyao Wang", "Zihan Wang", "Jiateng Liu", "Yangyi Chen", "Lifan Yuan", "Hao Peng", "Heng Ji"]

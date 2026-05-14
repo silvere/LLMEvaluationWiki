@@ -1,0 +1,752 @@
+---
+title: LLMEvaluationWiki 全量索引
+type: index
+publish: true
+last_generated: 2026-05-14
+---
+
+# LLMEvaluationWiki 索引
+
+> ⚠️ 本文件由 `scripts/build-index.ts` 自动生成，**请勿手动编辑**。
+> 每次 `/ingest` 操作完成后会自动重建。上次生成：2026-05-14
+
+---
+
+## 统计
+
+| 类别 | 页数 |
+|------|------|
+| benchmark | 365 |
+| concept | 100 |
+| tool | 23 |
+| leaderboard | 20 |
+| entity | 70 |
+| source | 68 |
+| synthesis | 0 |
+| industry | 38 |
+| **合计** | **684** |
+
+---
+
+## benchmarks/ — 评测集
+
+- [[ADE20K]] `draft` · multimodal (2017)
+- [[AdvBench]] `draft` · safety (2023)
+- [[AgentBench]] `draft` · agent (2023)
+- [[AGIEval]] `draft` · knowledge, reasoning (2023)
+- [[AI2D]] `draft` · multimodal, knowledge (2016)
+- [[Aider-Polyglot|Aider Polyglot]] `draft` · code (2024)
+- [[AIME]] `draft` · math, reasoning (1983)
+- [[AIME24|AIME 2024]] `draft` · math, reasoning (2024)
+- [[AITZ]] `draft` · agent, multimodal (2024)
+- [[ALFWorld]] `draft` · agent (2021)
+- [[AlignBench]] `draft` · reasoning, knowledge, instruction-following (2023)
+- [[All-Angles-Bench]] `draft` · multimodal, reasoning (2025)
+- [[AlpacaEval]] `draft` · instruction-following (2023)
+- [[AlpacaEval-2.0|AlpacaEval 2.0]] `draft` · instruction-following (2024)
+- [[AMC23]] `draft` · math, reasoning (2023)
+- [[Android-Control]] `draft` · agent, multimodal (2024)
+- [[AndroidWorld]] `draft` · agent (2024)
+- [[ANLI|ANLI (Adversarial NLI)]] `draft` · reasoning (2020)
+- [[API-Bank]] `draft` · agent (2023)
+- [[APPS]] `draft` · code (2021)
+- [[AppWorld]] `draft` · agent (2024)
+- [[AQuA]] `draft` `saturated` · math, reasoning (2017)
+- [[ARB]] `draft` · reasoning, math (2023)
+- [[ARC]] `draft` `saturated` · knowledge, reasoning (2018)
+- [[ARC-AGI1]] `draft` · reasoning (2019)
+- [[ARC-AGI2]] `draft` · reasoning (2025)
+- [[ARC-c|ARC-Challenge]] `draft` `saturated` · knowledge, reasoning (2018)
+- [[ARC-e|ARC-Easy]] `draft` `saturated` · knowledge (2018)
+- [[ArenaHard|Arena-Hard]] `draft` · reasoning, instruction-following (2024)
+- [[ARKitScenes]] `draft` · multimodal, vision (2021)
+- [[BBEH]] `draft` · reasoning, knowledge (2025)
+- [[BBH]] `draft` `saturated` · reasoning, knowledge (2022)
+- [[BBQ]] `draft` · bias-fairness (2022)
+- [[BeaverTails]] `draft` · safety, bias-fairness (2023)
+- [[BFCL]] `draft` · agent, code (2024)
+- [[BigCodeBench]] `draft` · code (2024)
+- [[BiGGen-Bench]] `draft` · reasoning, instruction-following, knowledge (2024)
+- [[BIRD]] `draft` · code (2023)
+- [[BLINK]] `draft` · multimodal, reasoning (2024)
+- [[BoolQ]] `draft` · reasoning, knowledge (2019)
+- [[C-Eval]] `draft` · knowledge, reasoning, multilingual (2023)
+- [[C3]] `draft` · knowledge (2020)
+- [[CanItEdit]] `draft` · code (2023)
+- [[CC-OCR]] `draft` · multimodal, multilingual (2024)
+- [[CG-Bench]] `draft` · video, multimodal (2024)
+- [[CHAIR]] `draft` · multimodal, vision (2018)
+- [[CharadesSTA|Charades-STA]] `draft` · multimodal (2017)
+- [[ChartQA]] `draft` · multimodal (2022)
+- [[CharXiv]] `draft` · multimodal (2024)
+- [[Chatbot-Arena|Chatbot Arena]] `draft` · dialog, instruction-following, reasoning (2023)
+- [[Chinese-SimpleQA|Chinese SimpleQA]] `draft` · knowledge, multilingual (2024)
+- [[ChronoMagic-Bench]] `draft` · multimodal (2024)
+- [[CipherBank]] `draft` · reasoning, knowledge (2025)
+- [[ClassEval]] `draft` · code (2023)
+- [[CLongEval]] `draft` · long-context, reasoning, knowledge (2024)
+- [[CLUEWSC]] `draft` · reasoning, multilingual (2020)
+- [[CMI-Bench]] `draft` · audio (2025)
+- [[CMM-Math]] `draft` · math, multimodal (2024)
+- [[CMMLU]] `draft` · knowledge, reasoning (2023)
+- [[CNMO-2024|CNMO 2024]] `draft` · math, reasoning (2024)
+- [[COCO-Stuff-164K]] `draft` · multimodal, vision (2018)
+- [[CodeApex]] `draft` · code (2023)
+- [[CodeContests]] `draft` · code, reasoning (2022)
+- [[Codeforces]] `draft` · code (2024)
+- [[Collie-Hard|Collie Hard]] `draft` · reasoning (2024)
+- [[Commonsense-T2I]] `draft` · multimodal, reasoning (2024)
+- [[CommonsenseQA]] `draft` · knowledge, reasoning (2019)
+- [[COPA]] `draft` `saturated` · reasoning (2011)
+- [[CoQA]] `draft` · reasoning, dialog (2019)
+- [[CountBench]] `draft` · multimodal (2024)
+- [[CREAK|CREAK (Commonsense Reasoning over Entity Knowledge)]] `draft` · knowledge, reasoning (2021)
+- [[CRPE]] `draft` · multimodal, reasoning (2024)
+- [[CRUXEval]] `draft` · code, reasoning (2024)
+- [[CUBE]] `draft` · knowledge, reasoning, multilingual (2024)
+- [[CValues]] `draft` · safety, bias-fairness (2023)
+- [[DA-2K]] `draft` · multimodal, reasoning (2024)
+- [[DISC-Law-Eval]] `draft` · knowledge, reasoning (2023)
+- [[Do-Not-Answer]] `draft` · safety (2023)
+- [[DocVQA]] `draft` · multimodal (2020)
+- [[DrawBench]] `draft` · multimodal (2022)
+- [[DROP]] `draft` · reasoning, math (2019)
+- [[DS-1000]] `draft` · code (2022)
+- [[Effibench]] `draft` · code (2024)
+- [[EgoSchema]] `draft` · multimodal (2023)
+- [[EMMA]] `draft` · multimodal, reasoning (2024)
+- [[EntityQuestions]] `draft` · knowledge (2021)
+- [[EvalCrafter]] `draft` · multimodal (2024)
+- [[EvalMuse-Alignment]] `draft` · multimodal (2024)
+- [[EvalMuse-Structure]] `draft` · multimodal (2024)
+- [[EvalPerf]] `draft` · code, efficiency (2024)
+- [[Event-Bench]] `draft` · multimodal, reasoning (2024)
+- [[EvoEval]] `draft` · code (2024)
+- [[FActScore]] `draft` · hallucination, knowledge (2023)
+- [[FairCoder]] `draft` · code, safety (2025)
+- [[FETV]] `draft` · multimodal (2023)
+- [[FEVER]] `draft` · knowledge, hallucination (2018)
+- [[FinanceBench]] `draft` · knowledge, reasoning (2023)
+- [[FinEval]] `draft` · knowledge (2023)
+- [[FinQA]] `draft` · reasoning, math (2021)
+- [[FLASK]] `draft` · instruction-following, reasoning, safety (2023)
+- [[FLoRes-200]] `draft` · multilingual (2022)
+- [[FollowBench]] `draft` · instruction-following (2023)
+- [[FormalMATH]] `draft` · math, reasoning (2025)
+- [[FRAMES]] `draft` · long-context, reasoning (2024)
+- [[FrontierMath]] `draft` · math, reasoning (2024)
+- [[FSC-147]] `draft` · vision (2021)
+- [[FullStackBench]] `draft` · code (2024)
+- [[GAIA|GAIA (General AI Assistants)]] `draft` · agent, reasoning (2023)
+- [[GAOKAO-Bench]] `draft` · knowledge, reasoning, math (2023)
+- [[Gecko]] `draft` · knowledge, reasoning (2024)
+- [[GenAI-Bench]] `draft` · multimodal (2024)
+- [[GenVidBench]] `draft` · multimodal, safety (2025)
+- [[GeoQA]] `draft` · math, reasoning (2021)
+- [[GeoSense]] `draft` · reasoning, multimodal, science (2025)
+- [[GLUE]] `draft` `saturated` · reasoning, knowledge (2018)
+- [[GPQA]] `draft` · knowledge, reasoning (2023)
+- [[GPQA-Diamond]] `draft` · knowledge, reasoning, science (2023)
+- [[Graphwalks]] `draft` · reasoning (2024)
+- [[GSM8K]] `draft` `saturated` · math, reasoning (2021)
+- [[HallusionBench]] `draft` · multimodal, hallucination (2023)
+- [[HaluEval]] `draft` · hallucination, knowledge (2023)
+- [[HarmBench]] `draft` · safety (2024)
+- [[HellaSwag]] `draft` `saturated` · reasoning (2019)
+- [[HELMET]] `draft` · long-context, reasoning, retrieval (2024)
+- [[HLE]] `draft` · knowledge, reasoning, science (2025)
+- [[Holmes-VAU]] `draft` · video, multimodal, safety (2024)
+- [[HotpotQA]] `draft` · reasoning, retrieval (2018)
+- [[HumanEval]] `draft` `saturated` · code (2021)
+- [[HumanEval-V]] `draft` · code, multimodal (2024)
+- [[HumanEval-X]] `draft` · code (2023)
+- [[HumanEval-XL]] `draft` · code, multilingual (2024)
+- [[HumanEvalPack]] `draft` · code (2023)
+- [[IFEval]] `draft` · instruction-following (2023)
+- [[ImageNet-1K]] `draft` · multimodal (2012)
+- [[ImageNet-A]] `draft` · multimodal (2021)
+- [[ImageNet-R]] `draft` · multimodal (2021)
+- [[ImageNet-Sketch]] `draft` · vision (2019)
+- [[ImageNet-V2]] `draft` · multimodal (2019)
+- [[InfoVQA]] `draft` · multimodal (2022)
+- [[InterCode]] `draft` · code, agent (2023)
+- [[IT-Bench]] `draft` · agent, code (2025)
+- [[JailbreakBench]] `draft` · safety (2024)
+- [[KoLA]] `draft` · knowledge, reasoning (2023)
+- [[KORBench]] `draft` · reasoning, knowledge (2024)
+- [[L-Eval]] `draft` · long-context, reasoning, knowledge (2023)
+- [[LAMBADA]] `draft` `saturated` · reasoning, knowledge (2016)
+- [[LawBench]] `draft` · knowledge, reasoning (2023)
+- [[LCB]] `draft` · code (2024)
+- [[LegalBench]] `draft` · reasoning, knowledge (2023)
+- [[LegalBench-RAG]] `draft` · knowledge, reasoning (2024)
+- [[LEGO-Puzzles]] `draft` · multimodal, reasoning (2025)
+- [[LexEval]] `draft` · knowledge, reasoning (2024)
+- [[LIFEBENCH]] `draft` · knowledge, reasoning (2025)
+- [[LiveBench]] `draft` · knowledge, reasoning, math (2024)
+- [[LiveCodeBench]] `draft` · code (2024)
+- [[LiveMathBench]] `draft` · math, reasoning (2024)
+- [[LLaVA-Bench]] `draft` · multimodal, dialog (2023)
+- [[LOFT]] `draft` · long-context, knowledge (2024)
+- [[LogiQA]] `draft` · reasoning (2020)
+- [[LongBench]] `draft` · long-context, reasoning, knowledge (2023)
+- [[LongBench-v2|LongBench v2]] `draft` · long-context, knowledge, reasoning (2024)
+- [[LongVideoBench]] `draft` · multimodal, long-context (2024)
+- [[LVBench]] `draft` · multimodal, long-context (2024)
+- [[LVOmniBench]] `draft` · multimodal, long-context (2026)
+- [[MADial-Bench]] `draft` · dialog, reasoning (2024)
+- [[Mantis-Eval]] `draft` · multimodal, reasoning (2024)
+- [[MARBLE]] `draft` · reasoning, multilingual (2023)
+- [[MATH]] `draft` `saturated` · math, reasoning (2021)
+- [[MATH500]] `draft` · math, reasoning (2023)
+- [[MathBench]] `draft` · math, knowledge (2024)
+- [[MathIF]] `draft` · math, reasoning (2025)
+- [[MathVerse]] `draft` · multimodal, math (2024)
+- [[MathVision]] `draft` · multimodal, math, reasoning (2024)
+- [[MathVista]] `draft` · multimodal, math (2023)
+- [[MBPP]] `draft` · code (2021)
+- [[MBPP-Plus|MBPP+]] `draft` · code (2023)
+- [[McEval]] `draft` · code, multilingual (2024)
+- [[MedBench]] `draft` · knowledge, science, multilingual (2024)
+- [[MedQA]] `draft` · knowledge, reasoning (2021)
+- [[MGSM]] `draft` · math, multilingual (2023)
+- [[MIBench]] `draft` · reasoning, knowledge (2024)
+- [[Minerva]] `draft` · math, reasoning (2022)
+- [[MINT|MINT (Multi-turn INteractive Tool-use)]] `draft` · agent (2023)
+- [[MIRB]] `draft` · multimodal, reasoning (2024)
+- [[MixEval]] `draft` · knowledge, reasoning (2024)
+- [[ML-Bench]] `draft` · code (2024)
+- [[MLE-Bench]] `draft` · agent, code, science (2024)
+- [[MLGym-Bench]] `draft` · agent, reasoning, science (2025)
+- [[MLVU]] `draft` · multimodal, long-context (2024)
+- [[MMBench]] `draft` · multimodal (2023)
+- [[MMBench-Video]] `draft` · multimodal (2024)
+- [[MME]] `draft` · multimodal (2023)
+- [[MME-CoT]] `draft` · multimodal, reasoning (2025)
+- [[MME-RealWorld]] `draft` · multimodal (2024)
+- [[MME-Unify]] `draft` · multimodal (2025)
+- [[MME-VideoOCR]] `draft` · multimodal (2025)
+- [[MMHal-Bench]] `draft` · multimodal, safety (2023)
+- [[MMIU]] `draft` · multimodal, reasoning (2024)
+- [[MMLongBench|MMLongBench-Doc]] `draft` · multimodal, long-context (2024)
+- [[MMLU]] `draft` `saturated` · knowledge, reasoning, multilingual (2020)
+- [[MMLU-Pro]] `draft` · knowledge, reasoning (2024)
+- [[MMLU-Redux]] `draft` · knowledge, reasoning (2024)
+- [[MMMB]] `draft` · multilingual, multimodal (2024)
+- [[MMMLU]] `draft` · knowledge, multilingual (2024)
+- [[MMMU]] `draft` · multimodal, knowledge, reasoning (2023)
+- [[MMMU-Pro]] `draft` · multimodal, knowledge (2024)
+- [[MMNeedle]] `draft` · multimodal, long-context (2024)
+- [[MMStar]] `draft` · multimodal (2024)
+- [[MMT-Bench]] `draft` · multimodal, knowledge, reasoning (2024)
+- [[MMVet]] `draft` · multimodal (2023)
+- [[MMVP]] `draft` · multimodal (2024)
+- [[MMVU]] `draft` · multimodal, knowledge (2024)
+- [[MobileMiniWob++]] `draft` · agent (2024)
+- [[MotionBench]] `draft` · multimodal (2024)
+- [[Movie-Gen-Video-Bench|Movie Gen Video Bench]] `draft` · video, multimodal (2024)
+- [[MT-Bench]] `draft` · reasoning, instruction-following, dialog (2023)
+- [[MT-Bench-101]] `draft` · dialog, instruction-following (2024)
+- [[MT-Video-Bench]] `draft` · multimodal, dialog (2025)
+- [[MTEB]] `draft` · knowledge (2022)
+- [[MTVQA]] `draft` · multimodal, multilingual (2024)
+- [[MuirBench]] `draft` · multimodal, reasoning (2024)
+- [[Multi-IF]] `draft` · reasoning, multilingual (2024)
+- [[Multi-SWE-bench]] `draft` · code, agent (2025)
+- [[MultiChallenge]] `draft` · dialog, reasoning (2025)
+- [[Multilingual-MMBench|Multilingual MMBench]] `draft` · multimodal, multilingual (2024)
+- [[MultiNLI]] `draft` `saturated` · reasoning (2018)
+- [[MultiPL-E]] `draft` · code (2022)
+- [[MusicEval]] `draft` · audio (2025)
+- [[MuSR]] `draft` · reasoning (2023)
+- [[MVBench]] `draft` · multimodal, reasoning (2023)
+- [[NaturalQuestions]] `draft` · knowledge, retrieval (2019)
+- [[NeedleInAHaystack|Needle In A Haystack]] `draft` · long-context, retrieval (2023)
+- [[NeedleBench]] `draft` · long-context, multilingual (2024)
+- [[Nestful]] `draft` · agent, reasoning (2024)
+- [[NYU-Depth-V2]] `draft` · multimodal, vision (2012)
+- [[OCRBench]] `draft` · multimodal (2023)
+- [[OCRBench-V2|OCRBench V2]] `draft` · multimodal (2024)
+- [[OlympiadBench]] `draft` · math, reasoning (2024)
+- [[OmniEval]] `draft` · multimodal, knowledge, reasoning (2025)
+- [[OmniMath]] `draft` · math, reasoning (2024)
+- [[Online-Mind2Web]] `draft` · agent, reasoning (2025)
+- [[OpenAI-MRCR]] `draft` · long-context, dialog (2025)
+- [[OpenBookQA]] `draft` · knowledge, reasoning (2018)
+- [[OSWorld]] `draft` · agent (2024)
+- [[OVBench]] `draft` · multimodal (2024)
+- [[OVOBench|OVO-Bench]] `draft` · video, multimodal (2025)
+- [[PaperBench]] `draft` · agent, code, science (2025)
+- [[PARTNR]] `draft` · agent, reasoning (2024)
+- [[PAWS-X|PAWS-X (Cross-lingual Paraphrase Adversaries from Word Scrambling)]] `draft` · multilingual (2019)
+- [[PerceptionTest]] `draft` · multimodal, reasoning (2023)
+- [[PhyBench]] `draft` · multimodal, reasoning, science (2024)
+- [[Physics-IQ]] `draft` · multimodal, video, science (2025)
+- [[PhyX]] `draft` · multimodal, science, reasoning (2025)
+- [[PIQA]] `draft` · reasoning, knowledge (2020)
+- [[Plot2Code]] `draft` · multimodal, code (2024)
+- [[PolyMath]] `draft` · math, reasoning, multilingual (2024)
+- [[POPE]] `draft` · multimodal, hallucination (2023)
+- [[PRM-Bench]] `draft` · math, reasoning (2025)
+- [[ProofWriter]] `draft` · reasoning (2021)
+- [[PubMedQA]] `draft` · knowledge, reasoning (2019)
+- [[Putnam]] `draft` · math, reasoning (2024)
+- [[QASPER|QASPER (Question Answering on Scientific Papers)]] `draft` · knowledge, retrieval (2021)
+- [[QuALITY]] `draft` · reasoning, long-context (2022)
+- [[R-Bench]] `draft` · multimodal, vision (2024)
+- [[RACE|RACE (ReAding Comprehension from Examinations)]] `draft` · knowledge, reasoning (2017)
+- [[RealToxicityPrompts]] `draft` · safety (2020)
+- [[RealWorldQA]] `draft` · multimodal, reasoning (2024)
+- [[ReClor]] `draft` · reasoning (2020)
+- [[RefCOCO]] `draft` · multimodal (2016)
+- [[RefCOCO+]] `draft` · multimodal (2016)
+- [[RefCOCOg]] `draft` · multimodal (2016)
+- [[RISEBench]] `draft` · reasoning (2025)
+- [[RobustAPI]] `draft` · agent, reasoning (2024)
+- [[RULER]] `draft` · long-context, reasoning, retrieval (2024)
+- [[S-Eval]] `draft` · safety (2024)
+- [[SafeBench]] `draft` · safety (2024)
+- [[SafetyBench]] `draft` · safety (2023)
+- [[SALAD-Bench]] `draft` · safety (2024)
+- [[SciBench]] `draft` · reasoning, math (2023)
+- [[SciCode]] `draft` · code, reasoning (2024)
+- [[ScienceQA]] `draft` · multimodal, knowledge (2022)
+- [[ScienceWorld]] `draft` · agent, reasoning (2022)
+- [[ScreenSpot]] `draft` · multimodal, agent (2024)
+- [[ScreenSpot-Pro|ScreenSpot Pro]] `draft` · agent, multimodal (2025)
+- [[SCROLLS]] `draft` · long-context, reasoning (2022)
+- [[SEED-Bench]] `draft` · multimodal (2023)
+- [[SEEDBench-2-Plus]] `draft` · multimodal, knowledge, reasoning (2024)
+- [[ShareGPT]] `draft` · dialog (2023)
+- [[SimpleQA]] `draft` · hallucination, knowledge (2024)
+- [[SingMOS-Pro]] `draft` · audio (2024)
+- [[SNLI]] `draft` `saturated` · reasoning (2015)
+- [[SocialIQA]] `draft` · reasoning, knowledge (2019)
+- [[SongEval]] `draft` · audio (2025)
+- [[Spider]] `draft` · code (2018)
+- [[SQuAD-2.0|SQuAD 2.0]] `draft` `saturated` · knowledge, reasoning (2018)
+- [[Step-Video-T2V-Eval]] `draft` · video, multimodal (2025)
+- [[StereoSet]] `draft` · bias-fairness (2021)
+- [[StrategyQA]] `draft` · reasoning (2021)
+- [[StreamBench]] `draft` · multimodal (2024)
+- [[StrongREJECT]] `draft` · safety (2024)
+- [[SUN-RGBD]] `draft` · multimodal, vision (2015)
+- [[SUPER]] `draft` · agent, code (2024)
+- [[SuperCLUE-Safety]] `draft` · safety, multilingual (2023)
+- [[SuperGLUE]] `draft` `saturated` · reasoning, knowledge (2019)
+- [[SWE-bench]] `draft` · code, agent (2023)
+- [[SWE-bench-Lite|SWE-bench Lite]] `draft` · code, agent (2023)
+- [[SWE-bench-Pro|SWE-bench Pro]] `draft` · code, agent (2025)
+- [[SWE-bench-Verified|SWE-bench Verified]] `draft` · code, agent (2024)
+- [[SWE-Lancer]] `draft` · code, agent (2025)
+- [[SWT-Bench]] `draft` · code (2024)
+- [[SysBench]] `draft` · safety, dialog (2024)
+- [[T2I-CompBench++]] `draft` · multimodal (2024)
+- [[T2V-CompBench]] `draft` · multimodal (2024)
+- [[T2VQA-DB]] `draft` · multimodal (2024)
+- [[TACoS]] `draft` · multimodal (2013)
+- [[TDD-Bench-Verified|TDD-Bench Verified]] `draft` · code, agent (2024)
+- [[TempCompass]] `draft` · multimodal, reasoning (2024)
+- [[TemporalBench]] `draft` · video, multimodal (2024)
+- [[TextVQA]] `draft` · multimodal (2019)
+- [[TheAgentCompany]] `draft` · agent, code (2024)
+- [[TheoremQA]] `draft` · reasoning, math (2023)
+- [[TOMATO]] `draft` · multimodal (2024)
+- [[ToolACE]] `draft` · agent (2024)
+- [[ToolBench]] `draft` · agent (2023)
+- [[ToxiGen]] `draft` · safety, bias-fairness (2022)
+- [[TriviaQA]] `draft` · knowledge, retrieval (2017)
+- [[TruthfulQA]] `draft` · hallucination, knowledge (2022)
+- [[TVBench]] `draft` · multimodal (2024)
+- [[TyDiQA|TyDi QA (Typologically Diverse Question Answering)]] `draft` · knowledge, multilingual (2020)
+- [[VBench]] `draft` · multimodal (2023)
+- [[VBench-2.0]] `draft` · multimodal (2025)
+- [[VCBench]] `draft` · multimodal, reasoning (2024)
+- [[VCR]] `draft` · multimodal, reasoning (2024)
+- [[VE-Bench]] `draft` · multimodal (2024)
+- [[Video-Holmes]] `draft` · multimodal, reasoning (2025)
+- [[Video-MME]] `draft` · multimodal (2024)
+- [[VideoGen-Eval|VideoGen-Eval 1.0]] `draft` · multimodal (2024)
+- [[VisualWebBench]] `draft` · multimodal, agent (2024)
+- [[VMBench]] `draft` · video, multimodal (2025)
+- [[VQAv2]] `draft` · multimodal (2017)
+- [[WebArena]] `draft` · agent (2023)
+- [[WebVoyager]] `draft` · agent, multimodal (2024)
+- [[WebWalkerQA]] `draft` · agent, knowledge (2025)
+- [[WiCE]] `draft` · hallucination, reasoning (2023)
+- [[WildBench]] `draft` · instruction-following, reasoning (2024)
+- [[WildChat]] `draft` · safety, dialog (2024)
+- [[WildGuard]] `draft` · safety (2024)
+- [[WildVision]] `draft` · multimodal (2024)
+- [[WindowsAgentArena]] `draft` · agent (2024)
+- [[WinoBias]] `draft` · bias-fairness (2018)
+- [[WinoGrad|Winograd Schema Challenge]] `draft` · reasoning, knowledge (2012)
+- [[WinoGrande]] `draft` `saturated` · reasoning (2019)
+- [[WMT23|WMT23 (Conference on Machine Translation 2023)]] `draft` · multilingual (2023)
+- [[WorldModelBench]] `draft` · reasoning, multimodal, video (2024)
+- [[WorldScore]] `draft` · multimodal, reasoning (2024)
+- [[XBench]] `draft` · multilingual, multimodal (2025)
+- [[XCOPA|XCOPA (Cross-lingual Choice of Plausible Alternatives)]] `draft` · reasoning, multilingual (2021)
+- [[xLAM]] `draft` · agent (2024)
+- [[XNLI|XNLI (Cross-lingual Natural Language Inference)]] `draft` · reasoning, multilingual (2018)
+- [[XSTest]] `draft` · safety (2023)
+- [[ZebraLogicBench]] `draft` · reasoning (2024)
+- [[Zero-SCROLLS]] `draft` · long-context, reasoning (2023)
+- [[tau-bench|τ-bench (tau-bench)]] `draft` · agent (2024)
+- [[tau2-bench|τ²-Bench]] `draft` · agent, dialog (2025)
+- [[tau3-bench|τ³-Bench]] `draft` · agent, dialog (2025)
+
+---
+
+## concepts/ — 概念与方法
+
+- [[safety-eval-landscape|安全评测全景]] `draft` · safety
+- [[leaderboard-contamination|榜单污染（Leaderboard Contamination）]] `draft`
+- [[annotation-artifacts|标注产物（Annotation Artifacts）]] `draft`
+- [[inter-annotator-agreement|标注一致性（Inter-Annotator Agreement）]] `draft`
+- [[test-time-compute|测试时计算（Test-Time Compute）]] `draft`
+- [[sycophancy|谄媚行为（Sycophancy）]] `draft`
+- [[membership-inference|成员推断攻击（Membership Inference Attack）]] `draft`
+- [[needle-in-haystack-concept|大海捞针测试（Needle in a Haystack）]] `draft`
+- [[dynamic-benchmarks-concept|动态基准（Dynamic Benchmarks）]] `draft`
+- [[adversarial-robustness|对抗鲁棒性（Adversarial Robustness）]] `draft`
+- [[multi-turn-eval|多轮对话评测（Multi-Turn Evaluation）]] `draft`
+- [[multimodal-eval|多模态评测]] `draft`
+- [[distributional-shift|分布偏移（Distributional Shift）]] `draft`
+- [[out-of-distribution-generalization|分布外泛化（Out-of-Distribution Generalization）]] `draft`
+- [[tool-use-eval|工具使用评测（Tool Use Evaluation）]] `draft`
+- [[specification-gaming|规格投机（Specification Gaming）]] `draft`
+- [[red-teaming|红队测试（Red Teaming）]] `draft`
+- [[hallucination-taxonomy|幻觉分类体系（Hallucination Taxonomy）]] `draft`
+- [[benchmark-design|基准设计原则（Benchmark Design）]] `draft`
+- [[benchmark-gaming|基准刷分（Benchmark Gaming）]] `draft`
+- [[benchmark-validity|基准效度（Benchmark Validity）]] `draft`
+- [[reward-hacking|奖励黑客（Reward Hacking）]] `draft`
+- [[shortcut-learning|捷径学习（Shortcut Learning）]] `draft`
+- [[exact-match|精确匹配率（Exact Match）]] `draft`
+- [[open-ended-eval-challenges|开放式评测挑战（Open-Ended Evaluation Challenges）]] `draft`
+- [[open-vs-closed-model-eval|开源 vs 闭源模型评测]] `draft` · benchmark-design
+- [[perplexity|困惑度（Perplexity）]] `draft`
+- [[scaling-laws|扩展定律（Scaling Laws）]] `draft`
+- [[zero-shot-evaluation|零样本评测（Zero-Shot Evaluation）]] `draft`
+- [[model-card|模型卡（Model Card）]] `draft`
+- [[model-collapse|模型坍塌（Model Collapse）]] `draft`
+- [[capability-elicitation|能力激发（Capability Elicitation）]] `draft`
+- [[capability-overhang|能力悬挂（Capability Overhang）]] `draft`
+- [[capability-vs-alignment|能力与对齐的权衡（Capability vs Alignment）]] `draft`
+- [[preference-eval|偏好评测（Preference Evaluation）]] `draft`
+- [[evaluation-overfitting|评测过拟合（Evaluation Overfitting）]] `draft`
+- [[confidence-intervals-eval|评测置信区间（Confidence Intervals in Evaluation）]] `draft`
+- [[expected-calibration-error|期望校准误差（Expected Calibration Error）]] `draft`
+- [[deceptive-alignment|欺骗性对齐（Deceptive Alignment）]] `draft`
+- [[human-eval-protocol|人工评测协议（Human Evaluation Protocol）]] `draft`
+- [[RLHF|人类反馈强化学习（RLHF）]] `draft`
+- [[human-preference-eval|人类偏好评测]] `draft`
+- [[verbosity-bias|冗长偏差（Verbosity Bias）]] `draft`
+- [[sandbagging|沙袋行为（Sandbagging）]] `draft`
+- [[in-context-learning|上下文学习（In-Context Learning）]] `draft`
+- [[win-rate|胜率（Win Rate）]] `draft`
+- [[win-rate-vs-elo|胜率与 Elo 分数]] `draft`
+- [[factuality-eval|事实性评测（Factuality Evaluation）]] `draft`
+- [[dataset-contamination-types|数据集污染类型（Dataset Contamination Types）]] `draft`
+- [[chain-of-thought-eval|思维链评测（Chain-of-Thought Evaluation）]] `draft`
+- [[prompt-sensitivity|提示敏感性（Prompt Sensitivity）]] `draft`
+- [[prompt-injection|提示注入（Prompt Injection）]] `draft`
+- [[inference-time-scaling|推理时扩展（Inference-Time Scaling）]] `draft`
+- [[micro-vs-macro-average|微观平均与宏观平均（Micro vs Macro Average）]] `draft`
+- [[position-bias|位置偏差（Position Bias）]] `draft`
+- [[contamination-detection|污染检测（Contamination Detection）]] `draft`
+- [[sparse-evaluation|稀疏评测（Sparse Evaluation）]] `draft`
+- [[prompt-leakage|系统提示泄露（Prompt Leakage）]] `draft`
+- [[significance-testing|显著性检验（Significance Testing）]] `draft`
+- [[constitutional-AI|宪法 AI（Constitutional AI）]] `draft`
+- [[effect-size-NLP|效应量（Effect Size in NLP Evaluation）]] `draft`
+- [[emergent-capabilities|涌现能力（Emergent Capabilities）]] `draft`
+- [[correlation-with-human|与人类判断的相关性（Correlation with Human Judgment）]] `draft`
+- [[meta-evaluation|元评测（Meta-Evaluation）]] `draft`
+- [[jailbreak|越狱攻击（Jailbreak）]] `draft`
+- [[DPO|直接偏好优化（DPO）]] `draft`
+- [[calibration|置信度校准（Calibration）]] `draft`
+- [[crowdsourcing-eval|众包评测（Crowdsourcing Evaluation）]] `draft`
+- [[automated-eval-vs-human|自动评测与人工评测的对比]] `draft`
+- [[self-enhancement-bias|自我增强偏差（Self-Enhancement Bias）]] `draft`
+- [[self-consistency|自一致性（Self-Consistency）]] `draft`
+- [[bootstrap-sampling|自助采样法（Bootstrap Sampling）]] `draft`
+- [[agent-eval|Agent 评测]] `draft`
+- [[benchmark-saturation|Benchmark 饱和]] `draft` · benchmark-design
+- [[benchmark-contamination|Benchmark 数据污染]] `draft`
+- [[BERTScore]] `draft`
+- [[BLEU|BLEU 分数]] `draft`
+- [[Brier-score|Brier 分数（Brier Score）]] `draft`
+- [[chain-of-thought|Chain-of-Thought (CoT) 推理]] `draft`
+- [[Cohens-kappa|Cohen's κ 系数]] `draft`
+- [[elo-rating|Elo 评分与 Bradley-Terry 模型]] `draft`
+- [[F1-score|F1 分数]] `draft`
+- [[few-shot-learning|Few-shot / Zero-shot 评测]] `draft`
+- [[Fleiss-kappa|Fleiss' κ 系数]] `draft`
+- [[goodharts-law|Goodhart's Law 与评测]] `draft`
+- [[Kendall-tau|Kendall's τ（Kendall 相关系数）]] `draft`
+- [[Krippendorffs-alpha|Krippendorff's α 系数]] `draft`
+- [[Likert-scale|Likert 量表]] `draft`
+- [[llm-as-judge|LLM-as-Judge 评测方法]] `draft`
+- [[McNemar-test|McNemar 检验（McNemar's Test）]] `draft`
+- [[METEOR]] `draft`
+- [[min-k-contamination|Min-K% 概率法]] `draft`
+- [[n-gram-contamination|n-gram 重叠污染检测]] `draft`
+- [[pass-at-k|Pass@k]] `draft`
+- [[Pearson-correlation|Pearson 相关系数（Pearson Correlation）]] `draft`
+- [[process-reward-model|Process Reward Model (PRM)]] `draft`
+- [[retrieval-augmented-generation-eval|RAG 评测（Retrieval-Augmented Generation Evaluation）]] `draft`
+- [[ROUGE|ROUGE 指标]] `draft`
+- [[Spearman-correlation|Spearman 等级相关系数]] `draft`
+- [[Wilcoxon-test|Wilcoxon 检验（Wilcoxon Test）]] `draft`
+
+---
+
+## tools/ — 评测工具链
+
+- [[AlpacaFarm]] `draft`
+- [[Arize-Phoenix|Arize Phoenix]] `draft`
+- [[BIG-bench-framework|BIG-bench 评测框架]] `draft`
+- [[Braintrust]] `draft`
+- [[chatbot-arena-platform|Chatbot Arena 平台（技术实现）]] `draft`
+- [[continuous-eval]] `draft`
+- [[DeepEval]] `draft`
+- [[evalplus|EvalPlus（HumanEval+）]] `draft`
+- [[Evidently-AI|Evidently AI]] `draft`
+- [[Giskard]] `draft`
+- [[helm|HELM（Stanford CRFM）]] `draft`
+- [[inspect-ai|Inspect AI（UK AI Safety Institute）]] `draft`
+- [[LangSmith-Eval|LangSmith Eval]] `draft`
+- [[lm-evaluation-harness|Language Model Evaluation Harness（EleutherAI）]] `draft`
+- [[LMMS-Eval]] `draft`
+- [[MT-Bench-code|MT-Bench 评测实现]] `draft`
+- [[OpenAI-Evals|OpenAI Evals]] `draft`
+- [[opencompass|OpenCompass（上海 AI 实验室）]] `draft`
+- [[Prometheus]] `draft`
+- [[PromptBench]] `draft`
+- [[promptfoo]] `draft`
+- [[RAGAs]] `draft`
+- [[TruLens]] `draft`
+
+---
+
+## leaderboards/ — 榜单
+
+- [[OpenCompass-Sinian|司南排行榜（OpenCompass Sinian）]] `draft`
+- [[Agent-Leaderboard|Agent Leaderboard]] `draft`
+- [[Aider-Leaderboard|Aider Leaderboard]] `draft`
+- [[AlpacaEval-Leaderboard|AlpacaEval Leaderboard]] `draft`
+- [[ArenaHard-Leaderboard|Arena-Hard Leaderboard]] `draft`
+- [[Artificial-Analysis-Leaderboard|Artificial Analysis Leaderboard]] `draft` · leaderboard, benchmark-design
+- [[BigCodeBench-Leaderboard|BigCodeBench Leaderboard]] `draft`
+- [[EvalPlus-Leaderboard|EvalPlus Leaderboard]] `draft`
+- [[HELM-Leaderboard|HELM Leaderboard]] `draft`
+- [[HuggingFace-Open-LLM-Leaderboard|Hugging Face Open LLM Leaderboard]] `draft`
+- [[LiveBench]] `draft`
+- [[LiveBench-Leaderboard|LiveBench Leaderboard]] `draft`
+- [[LMSYS-Chatbot-Arena|LMSYS Chatbot Arena]] `draft`
+- [[MMMU-Leaderboard|MMMU Leaderboard]] `draft`
+- [[Open-LLM-Leaderboard-v2|Open LLM Leaderboard v2]] `draft`
+- [[Scale-SEAL-Leaderboard|Scale SEAL Leaderboard]] `draft`
+- [[SuperCLUE-Leaderboard|SuperCLUE Leaderboard]] `draft`
+- [[SWE-bench-Leaderboard|SWE-bench Leaderboard]] `draft`
+- [[WildBench-Leaderboard|WildBench Leaderboard]] `draft`
+- [[WildVision-Arena|WildVision Arena]] `draft`
+
+---
+
+## entities/ — 机构与人物
+
+- [[Alibaba-Tongyi|阿里巴巴通义（Alibaba Tongyi）]] `draft`
+- [[Baidu-AI|百度AI（Baidu AI）]] `draft`
+- [[01-AI|零一万物（01.AI）]] `draft`
+- [[Shanghai-AI-Lab|上海人工智能实验室（上海 AI 实验室）]] `draft`
+- [[Moonshot-AI|月之暗面（Moonshot AI）]] `draft`
+- [[Zhipu-AI|智谱AI（Zhipu AI）]] `draft`
+- [[ByteDance-AI|字节跳动AI（ByteDance AI）]] `draft`
+- [[AI2|Allen Institute for AI (AI2)]] `draft`
+- [[Andrej-Karpathy|Andrej Karpathy]] `draft`
+- [[Anthropic]] `draft`
+- [[ARC-Alignment|ARC（对齐研究中心）]] `draft`
+- [[BAIR|BAIR（Berkeley AI Research）]] `draft`
+- [[Center-for-AI-Safety|Center for AI Safety (CAIS)]] `draft`
+- [[Christopher-Manning|Christopher Manning]] `draft`
+- [[Claude]] `draft` · entity
+- [[CMU-LTI|CMU LTI（卡内基梅隆大学语言技术研究所）]] `draft`
+- [[Cohere]] `draft`
+- [[Dan-Hendrycks|Dan Hendrycks]] `draft`
+- [[Dario-Amodei|Dario Amodei]] `draft`
+- [[DeepSeek|DeepSeek（深度求索）]] `draft`
+- [[EleutherAI]] `draft`
+- [[Emily-Bender|Emily Bender]] `draft`
+- [[Epoch-AI|Epoch AI]] `draft`
+- [[Fei-Fei-Li|Fei-Fei Li（李飞飞）]] `draft`
+- [[Gemini]] `draft` · entity
+- [[Google-DeepMind|Google DeepMind]] `draft`
+- [[GPT-4]] `draft` · entity
+- [[Graham-Neubig|Graham Neubig]] `draft`
+- [[Hugging-Face|Hugging Face]] `draft`
+- [[Ilya-Sutskever|Ilya Sutskever]] `draft`
+- [[Jacob-Devlin|Jacob Devlin]] `draft`
+- [[Jason-Wei|Jason Wei]] `draft`
+- [[Kawin-Ethayarajh|Kawin Ethayarajh]] `draft`
+- [[Lianmin-Zheng|Lianmin Zheng（郑联民）]] `draft`
+- [[LLaMA]] `draft` · entity
+- [[LMSYS-Org|LMSYS Org]] `draft`
+- [[Long-Ouyang|Long Ouyang（欧阳龙）]] `draft`
+- [[Margaret-Mitchell|Margaret Mitchell]] `draft`
+- [[Meta-AI|Meta AI]] `draft`
+- [[METR|METR（Model Evaluation and Threat Research）]] `draft`
+- [[Microsoft-Research|Microsoft Research]] `draft`
+- [[Mila|Mila（蒙特利尔学习算法研究所）]] `draft`
+- [[MiniMax]] `draft`
+- [[Mistral-AI|Mistral AI]] `draft`
+- [[MIT-CSAIL|MIT CSAIL（MIT 计算机科学与人工智能实验室）]] `draft`
+- [[MLCommons]] `draft`
+- [[Nathan-Lambert|Nathan Lambert]] `draft`
+- [[Neel-Nanda|Neel Nanda]] `draft`
+- [[NVIDIA-AI|NVIDIA AI]] `draft`
+- [[OpenAI]] `draft`
+- [[Oren-Etzioni|Oren Etzioni]] `draft`
+- [[Oxford-FHI|Oxford FHI（牛津大学人类未来研究所）]] `draft`
+- [[Partnership-on-AI|Partnership on AI (PAI)]] `draft`
+- [[Percy-Liang|Percy Liang]] `draft`
+- [[Peter-Clark|Peter Clark]] `draft`
+- [[Rohan-Taori|Rohan Taori]] `draft`
+- [[Sam-Bowman|Sam Bowman]] `draft`
+- [[Samuel-Bowman|Samuel Bowman]] `draft`
+- [[Scale-AI|Scale AI]] `draft`
+- [[Stability-AI|Stability AI]] `draft`
+- [[Stanford-CRFM|Stanford CRFM]] `draft`
+- [[Timnit-Gebru|Timnit Gebru]] `draft`
+- [[Tom-Brown|Tom Brown]] `draft`
+- [[UK-AISI|UK AI Safety Institute（英国人工智能安全研究所）]] `draft`
+- [[Vector-Institute|Vector Institute（向量研究所）]] `draft`
+- [[Wei-Lin-Chiang|Wei-Lin Chiang（蔣維麟）]] `draft`
+- [[xAI]] `draft`
+- [[Yann-LeCun|Yann LeCun]] `draft`
+- [[Yejin-Choi|Yejin Choi（崔叶真）]] `draft`
+- [[Yoshua-Bengio|Yoshua Bengio]] `draft`
+
+---
+
+## sources/ — 原始文献摘要
+
+- [[2402.10260|A Strong REJECT for Empty Jailbreaks]] `draft`
+- [[1910.14599|Adversarial NLI: A New Benchmark for Natural Language Understanding]] `draft`
+- [[2308.03688|AgentBench: Evaluating LLMs as Agents]] `draft`
+- [[agent-evolver|AgentEvolver: Towards Efficient Self-Evolving Agent System]] `draft` (2025)
+- [[2304.06364|AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models]] `draft`
+- [[ai-index-2024|AI Index Report 2024]] `draft`
+- [[2305.14387|AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback]] `draft`
+- [[2307.04657|BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset]] `draft`
+- [[1904.09675|BERTScore: Evaluating Text Generation with BERT]] `draft`
+- [[td-scaling|Beyond Quantity: Trajectory Diversity Scaling for Code Agents]] `draft` (2026)
+- [[2206.04615|Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models]] `draft`
+- [[2406.15877|BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions]] `draft`
+- [[2201.11903|Chain-of-Thought Prompting Elicits Reasoning in Large Language Models]] `draft`
+- [[claude3-anthropic-2024|Claude 3 Model Card]] `draft`
+- [[2306.09212|CMMLU: Measuring Chinese Massive Multitask Language Understanding]] `draft`
+- [[2212.08073|Constitutional AI: Harmlessness from AI Feedback]] `draft`
+- [[2401.03065|CRUXEval: A Benchmark for Code Reasoning, Understanding and Execution]] `draft`
+- [[deepseek-v2-2024|DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model]] `draft`
+- [[2310.16789|Detecting Pretraining Data from Large Language Models]] `draft`
+- [[2101.02235|Did Aristotle Use a Laptop? A Question Answering Benchmark with Implicit Reasoning Strategies]] `draft`
+- [[2305.18290|Direct Preference Optimization: Your Language Model is Secretly a Reward Model]] `draft`
+- [[2308.13387|Do-Not-Answer: A Dataset for Evaluating Safeguards in LLMs]] `draft`
+- [[2206.07682|Emergent Abilities of Large Language Models]] `draft`
+- [[2108.07258|Evaluating Large Language Models Trained on Code]] `draft`
+- [[2305.14251|FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation]] `draft`
+- [[2110.14168|Finetuned Language Models Are Zero-Shot Learners]] `draft`
+- [[gemini-1-0-google-2024|Gemini: A Family of Highly Capable Multimodal Models]] `draft`
+- [[genvid-bench|GenVidBench: A Challenging Benchmark for AI-Generated Video Detection]] `draft` (2026)
+- [[1804.07461|GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding]] `draft`
+- [[2311.12983|GPQA: A Graduate-Level Google-Proof Q&A Benchmark]] `draft`
+- [[gpt4-technical-report-2023|GPT-4 Technical Report]] `draft`
+- [[2310.14566|HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models]] `draft`
+- [[2305.11747|HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models]] `draft`
+- [[1907.10641|HellaSwag: Can a Machine Really Finish Your Sentence?]] `draft`
+- [[2305.10207|Holistic Evaluation of Language Models]] `draft`
+- [[2305.20050|Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena]] `draft`
+- [[2308.11462|LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models]] `draft`
+- [[2307.09288|Llama 2: Open Foundation and Fine-Tuned Chat Models]] `draft`
+- [[2308.14508|LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding]] `draft`
+- [[lvomni-bench|LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs]] `draft` (2026)
+- [[2310.02255|MathVista: Evaluating Math Reasoning in Visual Contexts]] `draft`
+- [[2109.07958|Measuring Coding Challenge Competence With APPS]] `draft`
+- [[2009.03300|Measuring Massive Multitask Language Understanding]] `draft`
+- [[llama3-meta-2024|Meta Llama 3]] `draft`
+- [[2404.07440|Meta Llama 3 技术报告]] `draft`
+- [[2310.16944|Mistral 7B]] `draft`
+- [[2307.06281|MMBench: Is Your Multi-modal Model an All-around Player?]] `draft`
+- [[2311.16502|MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark]] `draft`
+- [[mt-video-bench|MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating Multimodal LLMs in Multi-Turn Dialogues]] `draft` (2026)
+- [[2402.14008|OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems]] `draft`
+- [[2107.03374|Program Synthesis with Large Language Models]] `draft`
+- [[2001.08361|Scaling Laws for Neural Language Models]] `draft`
+- [[2203.11171|Self-Consistency Improves Chain of Thought Reasoning in Language Models]] `draft`
+- [[sparseeval|SparseEval: Efficient Evaluation of Large Language Models by Sparse Optimization]] `draft` (2026)
+- [[state-of-ai-2023|State of AI Report 2023]] `draft`
+- [[1905.07830|SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems]] `draft`
+- [[2310.01848|SWE-bench: Can Language Models Resolve Real-World GitHub Issues?]] `draft`
+- [[thinking-to-recall|Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs]] `draft` (2026)
+- [[2307.16789|ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs]] `draft`
+- [[2203.02155|Training language models to follow instructions with human feedback]] `draft`
+- [[epoch-compute-trends-2023|Trends in Machine Learning Hardware and Computing]] `draft`
+- [[2309.05463|TruthfulQA: Measuring How Models Mimic Human Falsehoods]] `draft`
+- [[2307.15043|Universal and Transferable Adversarial Attacks on Aligned Language Models]] `draft`
+- [[videoscaffold|VideoScaffold: Elastic-Scale Visual Hierarchies for Streaming Video Understanding in MLLMs]] `draft` (2025)
+- [[2307.13854|WebArena: A Realistic Web Environment for Building Autonomous Agents]] `draft`
+- [[reward-model-teacher|What Makes a Reward Model a Good Teacher? An Optimization Perspective]] `draft` (2025)
+- [[2308.11432|WildBench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild]] `draft`
+- [[2308.01263|XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models]] `draft`
+
+---
+
+## synthesis/ — 综合分析
+
+*（尚无内容）*
+
+---
+
+## industry/ — 行业垂类
+
+- [[creative-writing-eval|创意写作评测]] `draft`
+- [[code-review-eval|代码审查AI评测]] `draft`
+- [[code-eval|代码与软件工程AI评测]] `draft`
+- [[dialogue-systems-eval|对话系统评测]] `draft`
+- [[multilingual-eval|多语言AI评测]] `draft`
+- [[legal-eval|法律AI评测]] `draft`
+- [[compliance-eval|合规AI评测]] `draft`
+- [[chemistry-eval|化学AI评测]] `draft`
+- [[hallucination-eval|幻觉专项评测]] `draft`
+- [[translation-eval|机器翻译评测]] `draft`
+- [[RAG-eval|检索增强生成评测]] `draft`
+- [[education-eval|教育AI评测]] `draft`
+- [[financial-eval|金融AI评测]] `draft`
+- [[scientific-research-eval|科学研究AI评测]] `draft`
+- [[customer-service-eval|客服AI评测]] `draft`
+- [[software-debugging-eval|软件调试AI评测]] `draft`
+- [[social-science-eval|社会科学AI评测]] `draft`
+- [[biology-eval|生物AI评测]] `draft`
+- [[data-analysis-eval|数据分析AI评测]] `draft`
+- [[math-olympiad-eval|数学竞赛 AI 评测]] `draft`
+- [[recommendation-eval|推荐系统AI评测]] `draft`
+- [[reasoning-eval|推理能力专项评测]] `draft`
+- [[cybersecurity-eval|网络安全AI评测]] `draft`
+- [[summarization-eval|文本摘要评测]] `draft`
+- [[document-understanding-eval|文档理解评测]] `draft`
+- [[accessibility-eval|无障碍AI评测]] `draft`
+- [[physics-eval|物理AI评测]] `draft`
+- [[psychological-eval|心理健康AI评测]] `draft`
+- [[information-extraction-eval|信息抽取评测]] `draft`
+- [[academic-writing-eval|学术写作AI评测]] `draft`
+- [[drug-discovery-eval|药物发现AI评测]] `draft`
+- [[medical-eval|医疗AI评测]] `draft`
+- [[medical-imaging-eval|医学影像AI评测（多模态）]] `draft`
+- [[language-learning-eval|语言学习AI评测]] `draft`
+- [[knowledge-graph-eval|知识图谱AI评测]] `draft`
+- [[instruction-following-eval|指令跟随专项评测]] `draft`
+- [[patent-analysis-eval|专利AI评测]] `draft`
+- [[autonomous-agents-eval|自主代理评测]] `draft`

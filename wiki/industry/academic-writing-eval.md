@@ -59,5 +59,4 @@ AI辅助学术写作正在从拼写检查、语法修正扩展到摘要生成、
 
 - [[summarization-eval]] - 文本摘要评测
 - [[hallucination-eval]] - 幻觉专项评测
-- [[journalism-eval]] - 新闻AI评测
 - [[scientific-research-eval]] - 科学研究AI评测

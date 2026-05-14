@@ -17,7 +17,7 @@ size: 0
 format: code
 status: active
 saturation_threshold: 0.70
-sources: ["[[2026-04-llm-eval-landscape]]"]
+sources: [""]
 ---
 
 # LiveCodeBench
