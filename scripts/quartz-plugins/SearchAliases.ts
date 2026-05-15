@@ -183,15 +183,38 @@ export const SearchAliases: QuartzTransformerPlugin<PluginOptions> = (opts) => {
     externalResources() {
       // 给左侧 Explorer 链接加 native title tooltip：hover 显示完整名称
       // （配合 custom.scss 里的 line-clamp 截断使用，截断仅是视觉，完整名靠 hover 显示）
+      //
+      // 注意：Explorer 是客户端渲染（explorer.inline.ts 通过 <template> 在 nav 事件
+      // 异步生成 li/a），所以直接监听 nav 时机太早。改用 MutationObserver 监听
+      // .explorer-content 子节点变化，每次新增 a/span 就补 title。
       const script = `
-        document.addEventListener("nav", () => {
-          for (const a of document.querySelectorAll(".explorer-content a")) {
-            if (!a.getAttribute("title")) a.setAttribute("title", a.textContent.trim())
+        (function() {
+          const setTitle = (el) => {
+            if (el && !el.getAttribute("title")) {
+              const text = (el.textContent || "").trim()
+              if (text) el.setAttribute("title", text)
+            }
           }
-          for (const s of document.querySelectorAll(".explorer-content .folder-container .folder-title, .explorer-content .folder-container button span")) {
-            if (!s.getAttribute("title")) s.setAttribute("title", s.textContent.trim())
+          const apply = (root) => {
+            for (const a of root.querySelectorAll(".explorer-content a")) setTitle(a)
+            for (const s of root.querySelectorAll(".explorer-content .folder-title, .explorer-content .folder-container button span")) setTitle(s)
           }
-        })
+          const observe = () => {
+            const container = document.querySelector(".explorer-content")
+            if (!container) return false
+            apply(document)
+            const mo = new MutationObserver(() => apply(container))
+            mo.observe(container, { childList: true, subtree: true })
+            if (window.addCleanup) window.addCleanup(() => mo.disconnect())
+            return true
+          }
+          document.addEventListener("nav", () => {
+            // explorer 是 async 渲染，多试几次直到 container 出现
+            if (observe()) return
+            const t = setInterval(() => { if (observe()) clearInterval(t) }, 100)
+            setTimeout(() => clearInterval(t), 5000)
+          })
+        })()
       `
       return {
         additionalHead: [
