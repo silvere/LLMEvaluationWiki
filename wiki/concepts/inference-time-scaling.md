@@ -61,6 +61,15 @@ sources: []
 
 ## 近期相关研究（arXiv 2026-05 自动入库）
 
-> 以下为 v3 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+> 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
 
-- [[2605.02964|Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use]] · score 20/25
+- [[2410.08474|SPORTU: A Comprehensive Sports Understanding Benchmark for Multimodal Large Language Models]] · score 26/25
+- [[2511.01833|TIR-Bench: A Comprehensive Benchmark for Agentic Thinking-with-Images Reasoning]] · score 21/25
+- [[2506.04280|Evaluating MLLMs with Multimodal Multi-image Reasoning Benchmark]] · score 20/25
+- [[2409.13711|WebQuest: A Benchmark for Multimodal QA on Web Page Sequences]] · score 19/25
+- [[2604.23178|Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in LLM-as-a-Judge Pipelines]] · score 19/25
+- [[2604.12379|Beyond Output Correctness: Benchmarking and Evaluating Large Language Model Reasoning in Coding Tasks]] · score 19/25
+- [[2510.24816|Perception, Understanding and Reasoning, A Multimodal Benchmark for Video Fake News Detection]] · score 18/25
+- [[2605.09997|GraphInstruct: A Progressive Benchmark for Diagnosing Capability Gaps in LLM Graph Generation]] · score 18/25
+- [[2603.17145|REAL: Regression-Aware Reinforcement Learning for LLM-as-a-Judge]] · score 18/25
+- [[2601.10165|Advancing Adaptive Multi-Stage Video Anomaly Reasoning: A Benchmark Dataset and Method]] · score 18/25

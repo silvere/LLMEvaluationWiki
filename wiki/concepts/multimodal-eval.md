@@ -55,9 +55,31 @@ aliases:
 
 ## 近期相关研究（arXiv 2026-05 自动入库）
 
-> 以下为 v3 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+> 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
 
-- [[2603.25089|THEMIS: Towards Holistic Evaluation of MLLMs for Scientific Paper Fraud Forensics]] · score 24/25
-- [[2603.24946|MobileDev-Bench: A Benchmark for Issue Resolution in Mobile Application Development]] · score 20/25
-- [[2509.11101|Seeing is Not Understanding: A Benchmark on Perception-Cognition Disparities in Large Language Models]] · score 19/25
-- [[2603.14468|LongVidSearch: An Agentic Benchmark for Multi-hop Evidence Retrieval Planning in Long Videos]] · score 18/25
+- [[2410.08474|SPORTU: A Comprehensive Sports Understanding Benchmark for Multimodal Large Language Models]] · score 26/25
+- [[2511.01833|TIR-Bench: A Comprehensive Benchmark for Agentic Thinking-with-Images Reasoning]] · score 21/25
+- [[2410.12564|FTII-Bench: A Comprehensive Multimodal Benchmark for Flow Text with Image Insertion]] · score 21/25
+- [[2410.04526|FAMMA: A Benchmark for Financial Domain Multilingual Multimodal Question Answering]] · score 21/25
+- [[2506.04280|Evaluating MLLMs with Multimodal Multi-image Reasoning Benchmark]] · score 20/25
+- [[2504.16137|Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark]] · score 20/25
+- [[2412.15574|J-EDI QA: Benchmark for deep-sea organism-specific multimodal LLM]] · score 19/25
+- [[2409.13711|WebQuest: A Benchmark for Multimodal QA on Web Page Sequences]] · score 19/25
+- [[2604.24645|K-MetBench: A Multi-Dimensional Benchmark for Fine-Grained Evaluation of Expert Reasoning, Locality, and Multimodality in Meteorology]] · score 19/25
+- [[2604.15994|ReactBench: A Benchmark for Topological Reasoning in MLLMs on Chemical Reaction Diagrams]] · score 19/25
+- [[2603.12266|MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning]] · score 19/25
+- [[2603.11987|LABSHIELD: A Multimodal Benchmark for Safety-Critical Reasoning and Planning in Scientific Laboratories]] · score 19/25
+- [[2511.12263|CrossVid: A Comprehensive Benchmark for Evaluating Cross-Video Reasoning in Multimodal Large Language Models]] · score 18/25
+- [[2510.24816|Perception, Understanding and Reasoning, A Multimodal Benchmark for Video Fake News Detection]] · score 18/25
+- [[2601.16449|Emotion-LLaMAv2 and MMEVerse: A New Framework and Benchmark for Multimodal Emotion Understanding]] · score 18/25
+- [[2405.07960|AgentClinic: a multimodal agent benchmark to evaluate AI in simulated clinical environments]] · score 18/25
+- [[2605.09675|CodeClinic: Evaluating Automation of Coding Skills for Clinical Reasoning Agents]] · score 18/25
+- [[2604.24690|Can LLMs Act as Historians? Evaluating Historical Research Capabilities of LLMs via the Chinese Imperial Examination]] · score 18/25
+- [[2604.16980|Evaluating Multimodal LLMs for Inpatient Diagnosis: Real-World Performance, Safety, and Cost Across Ten Frontier Models]] · score 18/25
+- [[2603.29139|SciVisAgentBench: A Benchmark for Evaluating Scientific Data Analysis and Visualization Agents]] · score 18/25
+- [[2603.22529|Ego2Web: A Web Agent Benchmark Grounded in Egocentric Videos]] · score 18/25
+- [[2602.23649|AudioCapBench: Quick Evaluation on Audio Captioning across Sound, Music, and Speech]] · score 18/25
+- [[2604.18584|MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval]] · score 18/25
+- [[2602.22273|FIRE: A Comprehensive Benchmark for Financial Intelligence and Reasoning Evaluation]] · score 18/25
+- [[2601.10649|MINERVA-Cultural: A Benchmark for Cultural and Multilingual Long Video Reasoning]] · score 18/25
+- [[2601.10165|Advancing Adaptive Multi-Stage Video Anomaly Reasoning: A Benchmark Dataset and Method]] · score 18/25

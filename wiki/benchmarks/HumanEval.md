@@ -64,7 +64,6 @@ HumanEval+ 是 EvalPlus 项目对 HumanEval 的增强版本，通过自动化方
 
 ## 近期相关研究（arXiv 2026-05 自动入库）
 
-> 以下为 v3 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+> 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
 
-- [[2605.11006|An Execution-Verified Multi-Language Benchmark for Code Semantic Reasoning]] · score 21/25
-- [[2605.14537|Cattle Trade: A Multi-Agent Benchmark for LLM Bluffing, Bidding, and Bargaining]] · score 19/25
+- [[2604.12379|Beyond Output Correctness: Benchmarking and Evaluating Large Language Model Reasoning in Coding Tasks]] · score 19/25

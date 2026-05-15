@@ -57,18 +57,26 @@ Agent 评测是指评估 AI 系统在需要规划、决策、工具使用和多�
 
 ## 近期相关研究（arXiv 2026-05 自动入库）
 
-> 以下为 v3 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+> 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
 
-- [[2605.11006|An Execution-Verified Multi-Language Benchmark for Code Semantic Reasoning]] · score 21/25
-- [[2605.02964|Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use]] · score 20/25
-- [[2602.03712|SWE-Refactor: A Repository-Level Benchmark for Real-World LLM-Based Code Refactoring]] · score 20/25
-- [[2603.24946|MobileDev-Bench: A Benchmark for Issue Resolution in Mobile Application Development]] · score 20/25
-- [[2603.08655|OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning]] · score 19/25
-- [[2605.14537|Cattle Trade: A Multi-Agent Benchmark for LLM Bluffing, Bidding, and Bargaining]] · score 19/25
-- [[2511.21654|EvilGenie: A Reward Hacking Benchmark]] · score 19/25
-- [[2605.10246|SciIntegrity-Bench: A Benchmark for Evaluating Academic Integrity in AI Scientist Systems]] · score 18/25
-- [[2602.16902|LLM-WikiRace Benchmark: How Far Can LLMs Plan over Real-World Knowledge Graphs?]] · score 18/25
-- [[2603.14468|LongVidSearch: An Agentic Benchmark for Multi-hop Evidence Retrieval Planning in Long Videos]] · score 18/25
-- [[2605.12501|Covering Human Action Space for Computer Use: Data Synthesis and Benchmark]] · score 18/25
-- [[2510.06186|RECODE-H: A Benchmark for Research Code Development with Interactive Human Feedback]] · score 18/25
-- [[2605.00674|Beyond Benchmarks: MathArena as an Evaluation Platform for Mathematics with LLMs]] · score 18/25
+- [[2604.02648|GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers]] · score 23/25
+- [[2511.01833|TIR-Bench: A Comprehensive Benchmark for Agentic Thinking-with-Images Reasoning]] · score 21/25
+- [[2410.04526|FAMMA: A Benchmark for Financial Domain Multilingual Multimodal Question Answering]] · score 21/25
+- [[2602.21143|A Benchmark for Deep Information Synthesis]] · score 21/25
+- [[2511.13095|BeDiscovER: The Benchmark of Discourse Understanding in the Era of Reasoning Language Models]] · score 20/25
+- [[2409.13711|WebQuest: A Benchmark for Multimodal QA on Web Page Sequences]] · score 19/25
+- [[2604.24645|K-MetBench: A Multi-Dimensional Benchmark for Fine-Grained Evaluation of Expert Reasoning, Locality, and Multimodality in Meteorology]] · score 19/25
+- [[2603.12266|MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning]] · score 19/25
+- [[2603.11987|LABSHIELD: A Multimodal Benchmark for Safety-Critical Reasoning and Planning in Scientific Laboratories]] · score 19/25
+- [[2602.17072|BankMathBench: A Benchmark for Numerical Reasoning in Banking Scenarios]] · score 19/25
+- [[2604.10015|FinTrace: Holistic Trajectory-Level Evaluation of LLM Tool Calling for Long-Horizon Financial Tasks]] · score 18/25
+- [[2601.16449|Emotion-LLaMAv2 and MMEVerse: A New Framework and Benchmark for Multimodal Emotion Understanding]] · score 18/25
+- [[2405.07960|AgentClinic: a multimodal agent benchmark to evaluate AI in simulated clinical environments]] · score 18/25
+- [[2605.03242|Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios]] · score 18/25
+- [[2605.09675|CodeClinic: Evaluating Automation of Coding Skills for Clinical Reasoning Agents]] · score 18/25
+- [[2605.08904|OPT-BENCH: Evaluating the Iterative Self-Optimization of LLM Agents in Large-Scale Search Spaces]] · score 18/25
+- [[2604.11201|CocoaBench: Evaluating Unified Digital Agents in the Wild]] · score 18/25
+- [[2604.23539|MetaGAI: A Large-Scale and High-Quality Benchmark for Generative AI Model and Data Card Generation]] · score 18/25
+- [[2603.29139|SciVisAgentBench: A Benchmark for Evaluating Scientific Data Analysis and Visualization Agents]] · score 18/25
+- [[2603.22529|Ego2Web: A Web Agent Benchmark Grounded in Egocentric Videos]] · score 18/25
+- [[2602.22273|FIRE: A Comprehensive Benchmark for Financial Intelligence and Reasoning Evaluation]] · score 18/25

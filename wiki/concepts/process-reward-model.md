@@ -43,3 +43,9 @@ o1 类（具备显式推理过程）模型的兴起使 PRM 的重要性大幅提
 - [[chain-of-thought]] — CoT 推理链是 PRM 的评分对象
 - [[agent-eval]] — Agent 任务中的长序列决策需要类 PRM 的过程评估
 - [[calibration]] — PRM 的步骤分数本身也需要校准
+
+## 近期相关研究（arXiv 2026-05 自动入库）
+
+> 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+
+- [[2604.12379|Beyond Output Correctness: Benchmarking and Evaluating Large Language Model Reasoning in Coding Tasks]] · score 19/25

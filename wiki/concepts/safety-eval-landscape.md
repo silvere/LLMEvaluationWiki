@@ -54,10 +54,11 @@ domain:
 
 ## 近期相关研究（arXiv 2026-05 自动入库）
 
-> 以下为 v3 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+> 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
 
-- [[2605.02964|Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use]] · score 20/25
-- [[2506.08584|CounselBench: A Large-Scale Expert Evaluation and Adversarial Benchmarking of Large Language Models in Mental Health Question Answering]] · score 20/25
-- [[2602.01714|MedAraBench: Large-Scale Arabic Medical Question Answering Dataset and Benchmark]] · score 20/25
-- [[2605.11209|Measuring Five-Nines Reliability: Sample-Efficient LLM Evaluation in Saturated Benchmarks]] · score 19/25
-- [[2603.11281|ThReadMed-QA: A Multi-Turn Medical Dialogue Benchmark from Real Patient Questions]] · score 18/25
+- [[2504.16137|Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark]] · score 20/25
+- [[2603.11987|LABSHIELD: A Multimodal Benchmark for Safety-Critical Reasoning and Planning in Scientific Laboratories]] · score 19/25
+- [[2605.03242|Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios]] · score 18/25
+- [[2604.16980|Evaluating Multimodal LLMs for Inpatient Diagnosis: Real-World Performance, Safety, and Cost Across Ten Frontier Models]] · score 18/25
+- [[2603.17145|REAL: Regression-Aware Reinforcement Learning for LLM-as-a-Judge]] · score 18/25
+- [[2601.10165|Advancing Adaptive Multi-Stage Video Anomaly Reasoning: A Benchmark Dataset and Method]] · score 18/25

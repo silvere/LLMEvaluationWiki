@@ -60,3 +60,10 @@ GPQA 的核心价值在于评测模型是否真正掌握了研究生级别的科
 - [[MMLU-Pro]]
 - [[benchmark-saturation]]
 - [[data-contamination]]
+
+## 近期相关研究（arXiv 2026-05 自动入库）
+
+> 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+
+- [[2410.04526|FAMMA: A Benchmark for Financial Domain Multilingual Multimodal Question Answering]] · score 21/25
+- [[2504.16137|Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark]] · score 20/25
