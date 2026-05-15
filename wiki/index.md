@@ -2,13 +2,13 @@
 title: LLMEvaluationWiki 全量索引
 type: index
 publish: true
-last_generated: 2026-05-14
+last_generated: 2026-05-15
 ---
 
 # LLMEvaluationWiki 索引
 
 > ⚠️ 本文件由 `scripts/build-index.ts` 自动生成，**请勿手动编辑**。
-> 每次 `/ingest` 操作完成后会自动重建。上次生成：2026-05-14
+> 每次 `/ingest` 操作完成后会自动重建。上次生成：2026-05-15
 
 ---
 
@@ -21,10 +21,10 @@ last_generated: 2026-05-14
 | tool | 23 |
 | leaderboard | 20 |
 | entity | 70 |
-| source | 117 |
+| paper | 92 |
 | synthesis | 0 |
 | industry | 38 |
-| **合计** | **733** |
+| **合计** | **708** |
 
 ---
 
@@ -631,120 +631,95 @@ last_generated: 2026-05-14
 
 ---
 
-## sources/ — 原始文献摘要
+## papers/ — 论文摘要与 claim
 
-- [[2505.17465|A Position Paper on the Automatic Generation of Machine Learning Leaderboards]] `draft` · benchmark-design (2025)
 - [[2402.10260|A Strong REJECT for Empty Jailbreaks]] `draft`
 - [[1910.14599|Adversarial NLI: A New Benchmark for Natural Language Understanding]] `draft`
-- [[2605.03590|AfriVox-v2: A Domain-Verticalized Benchmark for In-the-Wild African Speech Recognition]] `draft` · benchmark-design (2026)
+- [[2601.15297|AfriEconQA: A Benchmark Dataset for African Economic Analysis based on World Bank Reports]] `draft` · benchmark-design (2026)
 - [[2308.03688|AgentBench: Evaluating LLMs as Agents]] `draft`
 - [[agent-evolver|AgentEvolver: Towards Efficient Self-Evolving Agent System]] `draft` (2025)
-- [[2605.10286|AgentRx: A Benchmark Study of LLM Agents for Multimodal Clinical Prediction Tasks]] `draft` · benchmark-design (2026)
 - [[2304.06364|AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models]] `draft`
 - [[ai-index-2024|AI Index Report 2024]] `draft`
 - [[2305.14387|AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback]] `draft`
-- [[2605.11030|An Executable Benchmarking Suite for Tool-Using Agents]] `draft` · benchmark-design (2026)
-- [[2604.08540|AVGen-Bench: A Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation]] `draft` · benchmark-design (2026)
+- [[2605.11006|An Execution-Verified Multi-Language Benchmark for Code Semantic Reasoning]] `draft` · benchmark-design (2026)
 - [[2307.04657|BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset]] `draft`
-- [[2605.10865|BenchCAD: A Comprehensive, Industry-Standard Benchmark for Programmatic CAD]] `draft` · benchmark-design (2026)
-- [[2605.07731|Benchmarking EngGPT2-16B-A3B against Comparable Italian and International Open-source LLMs]] `draft` · benchmark-design (2026)
-- [[2605.03111|Benchmarking Local Language Models for Social Robots using Edge Devices]] `draft` · benchmark-design (2026)
-- [[2605.10146|Benchmarking Safety Risks of Knowledge-Intensive Reasoning under Malicious Knowledge Editing]] `draft` · benchmark-design (2026)
 - [[1904.09675|BERTScore: Evaluating Text Generation with BERT]] `draft`
+- [[2605.00674|Beyond Benchmarks: MathArena as an Evaluation Platform for Mathematics with LLMs]] `draft` · benchmark-design (2026)
 - [[td-scaling|Beyond Quantity: Trajectory Diversity Scaling for Code Agents]] `draft` (2026)
 - [[2206.04615|Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models]] `draft`
 - [[2406.15877|BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions]] `draft`
-- [[2605.09611|Byte-Exact Deduplication in Retrieval-Augmented Generation: A Three-Regime Empirical Analysis Across Public Benchmarks]] `draft` · benchmark-design (2026)
-- [[2604.16372|CFMS: Towards Explainable and Fine-Grained Chinese Multimodal Sarcasm Detection Benchmark]] `draft` · benchmark-design (2026)
+- [[2605.14537|Cattle Trade: A Multi-Agent Benchmark for LLM Bluffing, Bidding, and Bargaining]] `draft` · benchmark-design (2026)
 - [[2201.11903|Chain-of-Thought Prompting Elicits Reasoning in Large Language Models]] `draft`
+- [[2601.01982|ChaosBench-Logic: A Benchmark for Logical and Symbolic Reasoning on Chaotic Dynamical Systems]] `draft` · benchmark-design (2026)
 - [[claude3-anthropic-2024|Claude 3 Model Card]] `draft`
 - [[2306.09212|CMMLU: Measuring Chinese Massive Multitask Language Understanding]] `draft`
 - [[2212.08073|Constitutional AI: Harmlessness from AI Feedback]] `draft`
+- [[2506.08584|CounselBench: A Large-Scale Expert Evaluation and Adversarial Benchmarking of Large Language Models in Mental Health Question Answering]] `draft` · benchmark-design (2025)
+- [[2605.12501|Covering Human Action Space for Computer Use: Data Synthesis and Benchmark]] `draft` · benchmark-design (2026)
+- [[2512.21877|CricBench: A Multilingual Benchmark for Evaluating LLMs in Cricket Analytics]] `draft` · benchmark-design (2025)
 - [[2401.03065|CRUXEval: A Benchmark for Code Reasoning, Understanding and Execution]] `draft`
 - [[deepseek-v2-2024|DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model]] `draft`
-- [[2605.09679|DeepTumorVQA: A Hierarchical 3D CT Benchmark for Stage-Wise Evaluation of Medical VLMs and Tool-Augmented Agents]] `draft` · benchmark-design (2026)
 - [[2310.16789|Detecting Pretraining Data from Large Language Models]] `draft`
 - [[2101.02235|Did Aristotle Use a Laptop? A Question Answering Benchmark with Implicit Reasoning Strategies]] `draft`
-- [[2605.11601|DiffScore: Text Evaluation Beyond Autoregressive Likelihood]] `draft` · benchmark-design (2026)
 - [[2305.18290|Direct Preference Optimization: Your Language Model is Secretly a Reward Model]] `draft`
-- [[2506.17208|Dissecting the SWE-Bench Leaderboards: Profiling Submitters and Architectures of LLM- and Agent-Based Repair Systems]] `draft` · benchmark-design (2025)
 - [[2308.13387|Do-Not-Answer: A Dataset for Evaluating Safeguards in LLMs]] `draft`
-- [[2605.09098|Dynamic Meta-Metrics: Source-Sentence Conditioned Weighting for MT Evaluation]] `draft` · benchmark-design (2026)
-- [[2605.08636|EdgeFlowerTune: Evaluating Federated LLM Fine-Tuning Under Realistic Edge System Constraints]] `draft` · benchmark-design (2026)
 - [[2206.07682|Emergent Abilities of Large Language Models]] `draft`
 - [[2108.07258|Evaluating Large Language Models Trained on Code]] `draft`
+- [[2511.21654|EvilGenie: A Reward Hacking Benchmark]] `draft` · benchmark-design (2025)
 - [[2305.14251|FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation]] `draft`
-- [[2605.09106|Fin-Bias: Comprehensive Evaluation for LLM Decision-Making under human bias in Finance Domain]] `draft` · benchmark-design (2026)
 - [[2110.14168|Finetuned Language Models Are Zero-Shot Learners]] `draft`
-- [[2605.10141|FormalRewardBench: A Benchmark for Formal Theorem Proving Reward Models]] `draft` · benchmark-design (2026)
-- [[2605.09163|FORTIS: Benchmarking Over-Privilege in Agent Skills]] `draft` · benchmark-design (2026)
-- [[2605.09027|GAMBIT: A Three-Mode Benchmark for Adversarial Robustness in Multi-Agent LLM Collectives]] `draft` · benchmark-design (2026)
 - [[gemini-1-0-google-2024|Gemini: A Family of Highly Capable Multimodal Models]] `draft`
 - [[genvid-bench|GenVidBench: A Challenging Benchmark for AI-Generated Video Detection]] `draft` (2026)
 - [[1804.07461|GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding]] `draft`
 - [[2311.12983|GPQA: A Graduate-Level Google-Proof Q&A Benchmark]] `draft`
 - [[gpt4-technical-report-2023|GPT-4 Technical Report]] `draft`
-- [[2604.15715|GTA-2: Benchmarking General Tool Agents from Atomic Tool-Use to Open-Ended Workflows]] `draft` · benchmark-design (2026)
 - [[2310.14566|HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models]] `draft`
 - [[2305.11747|HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models]] `draft`
 - [[1907.10641|HellaSwag: Can a Machine Really Finish Your Sentence?]] `draft`
 - [[2305.10207|Holistic Evaluation of Language Models]] `draft`
-- [[2605.11195|How Does Differential Privacy Affect Social Bias in LLMs? A Systematic Evaluation]] `draft` · benchmark-design (2026)
-- [[2604.19071|HoWToBench: Holistic Evaluation for LLM's Capability in Human-level Writing using Tree of Writing]] `draft` · benchmark-design (2026)
-- [[2604.27249|Instruction Complexity Induces Positional Collapse in Adversarial LLM Evaluation]] `draft` · benchmark-design (2026)
+- [[2604.02729|IndustryCode: A Benchmark for Industry Code Generation]] `draft` · benchmark-design (2026)
 - [[2305.20050|Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena]] `draft`
-- [[2603.13238|KazakhOCR: A Synthetic Benchmark for Evaluating Multimodal Models in Low-Resource Kazakh Script OCR]] `draft` · benchmark-design (2026)
-- [[2507.00999|La Leaderboard: A Large Language Model Leaderboard for Spanish Varieties and Languages of Spain and Latin America]] `draft` · benchmark-design (2025)
-- [[2603.17265|LED: A Benchmark for Evaluating Layout Error Detection in Document Analysis]] `draft` · benchmark-design (2026)
 - [[2308.11462|LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models]] `draft`
+- [[2604.01754|LiveMathematicianBench: A Live Benchmark for Mathematician-Level Reasoning with Proof Sketches]] `draft` · benchmark-design (2026)
 - [[2307.09288|Llama 2: Open Foundation and Fine-Tuned Chat Models]] `draft`
-- [[2604.25665|LLM-ReSum: A Framework for LLM Reflective Summarization through Self-Evaluation]] `draft` · benchmark-design (2026)
+- [[2602.16902|LLM-WikiRace Benchmark: How Far Can LLMs Plan over Real-World Knowledge Graphs?]] `draft` · benchmark-design (2026)
 - [[2308.14508|LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding]] `draft`
+- [[2603.14468|LongVidSearch: An Agentic Benchmark for Multi-hop Evidence Retrieval Planning in Long Videos]] `draft` · benchmark-design (2026)
 - [[lvomni-bench|LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs]] `draft` (2026)
-- [[2605.06334|MANTRA: Synthesizing SMT-Validated Compliance Benchmarks for Tool-Using LLM Agents]] `draft` · benchmark-design (2026)
-- [[2603.11414|MaterialFigBENCH: benchmark dataset with figures for evaluating college-level materials science problem-solving abilities of multimodal large language models]] `draft` · benchmark-design (2026)
 - [[2310.02255|MathVista: Evaluating Math Reasoning in Visual Contexts]] `draft`
 - [[2109.07958|Measuring Coding Challenge Competence With APPS]] `draft`
-- [[2605.06327|Measuring Evaluation-Context Divergence in Open-Weight LLMs: A Paired-Prompt Protocol with Pilot Evidence of Alignment-Pipeline-Specific Heterogeneity]] `draft` · benchmark-design (2026)
+- [[2605.11209|Measuring Five-Nines Reliability: Sample-Efficient LLM Evaluation in Saturated Benchmarks]] `draft` · benchmark-design (2026)
 - [[2009.03300|Measuring Massive Multitask Language Understanding]] `draft`
-- [[2605.09661|MedMeta: A Benchmark for LLMs in Synthesizing Meta-Analysis Conclusion from Medical Studies]] `draft` · benchmark-design (2026)
-- [[2605.00969|MedMosaic: A Challenging Large Scale Benchmark of Diverse Medical Audio]] `draft` · benchmark-design (2026)
+- [[2602.01714|MedAraBench: Large-Scale Arabic Medical Question Answering Dataset and Benchmark]] `draft` · benchmark-design (2026)
 - [[llama3-meta-2024|Meta Llama 3]] `draft`
 - [[2404.07440|Meta Llama 3 技术报告]] `draft`
-- [[2605.09708|Metal-Sci: A Scientific Compute Benchmark for Evolutionary LLM Kernel Search on Apple Silicon]] `draft` · benchmark-design (2026)
 - [[2310.16944|Mistral 7B]] `draft`
 - [[2307.06281|MMBench: Is Your Multi-modal Model an All-around Player?]] `draft`
 - [[2311.16502|MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark]] `draft`
-- [[2605.05175|MRI-Eval: A Tiered Benchmark for Evaluating LLM Performance on MRI Physics and GE Scanner Operations Knowledge]] `draft` · benchmark-design (2026)
+- [[2603.24946|MobileDev-Bench: A Benchmark for Issue Resolution in Mobile Application Development]] `draft` · benchmark-design (2026)
 - [[mt-video-bench|MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating Multimodal LLMs in Multi-Turn Dialogues]] `draft` (2026)
-- [[2605.05739|Multi-Dimensional Behavioral Evaluation of Agentic Stock Prediction Systems Using Large Language Model Judges with Closed-Loop Reinforcement Learning Feedback]] `draft` · benchmark-design (2026)
-- [[2605.01687|MultiBreak: A Scalable and Diverse Multi-turn Jailbreak Benchmark for Evaluating LLM Safety]] `draft` · benchmark-design (2026)
-- [[2605.07051|NSMQ Riddles: A Benchmark of Scientific and Mathematical Riddles for Quizzing Large Language Models]] `draft` · benchmark-design (2026)
+- [[2603.08655|OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning]] `draft` · benchmark-design (2026)
 - [[2402.14008|OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems]] `draft`
-- [[2605.01333|OralMLLM-Bench: Evaluating Cognitive Capabilities of Multimodal Large Language Models in Dental Practice]] `draft` · benchmark-design (2026)
 - [[2107.03374|Program Synthesis with Large Language Models]] `draft`
-- [[2605.04018|Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems]] `draft` · benchmark-design (2026)
-- [[2605.11769|Safety-Oriented Evaluation of Language Understanding Systems for Air Traffic Control]] `draft` · benchmark-design (2026)
-- [[2605.08334|SalesSim: Benchmarking and Aligning Multimodal Language Models as Retail User Simulators]] `draft` · benchmark-design (2026)
+- [[2510.06186|RECODE-H: A Benchmark for Research Code Development with Interactive Human Feedback]] `draft` · benchmark-design (2025)
+- [[2605.02964|Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use]] `draft` · benchmark-design (2026)
 - [[2001.08361|Scaling Laws for Neural Language Models]] `draft`
+- [[2605.10246|SciIntegrity-Bench: A Benchmark for Evaluating Academic Integrity in AI Scientist Systems]] `draft` · benchmark-design (2026)
+- [[2509.11101|Seeing is Not Understanding: A Benchmark on Perception-Cognition Disparities in Large Language Models]] `draft` · benchmark-design (2025)
 - [[2203.11171|Self-Consistency Improves Chain of Thought Reasoning in Language Models]] `draft`
-- [[2605.07001|SmellBench: Evaluating LLM Agents on Architectural Code Smell Repair]] `draft` · benchmark-design (2026)
 - [[sparseeval|SparseEval: Efficient Evaluation of Large Language Models by Sparse Optimization]] `draft` (2026)
-- [[2605.07446|SSP-based construction of evaluation-annotated data for fine-grained aspect-based sentiment analysis]] `draft` · benchmark-design (2026)
 - [[state-of-ai-2023|State of AI Report 2023]] `draft`
-- [[2604.24544|STELLAR-E: a Synthetic, Tailored, End-to-end LLM Application Rigorous Evaluator]] `draft` · benchmark-design (2026)
 - [[1905.07830|SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems]] `draft`
 - [[2310.01848|SWE-bench: Can Language Models Resolve Real-World GitHub Issues?]] `draft`
+- [[2602.03712|SWE-Refactor: A Repository-Level Benchmark for Real-World LLM-Based Code Refactoring]] `draft` · benchmark-design (2026)
+- [[2603.25089|THEMIS: Towards Holistic Evaluation of MLLMs for Scientific Paper Fraud Forensics]] `draft` · benchmark-design (2026)
 - [[thinking-to-recall|Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs]] `draft` (2026)
+- [[2603.11281|ThReadMed-QA: A Multi-Turn Medical Dialogue Benchmark from Real Patient Questions]] `draft` · benchmark-design (2026)
 - [[2307.16789|ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs]] `draft`
-- [[2605.04298|Towards Self-Referential Analytic Assessment: A Profile-Based Approach to L2 Writing Evaluation with LLMs]] `draft` · benchmark-design (2026)
 - [[2203.02155|Training language models to follow instructions with human feedback]] `draft`
 - [[epoch-compute-trends-2023|Trends in Machine Learning Hardware and Computing]] `draft`
 - [[2309.05463|TruthfulQA: Measuring How Models Mimic Human Falsehoods]] `draft`
 - [[2307.15043|Universal and Transferable Adversarial Attacks on Aligned Language Models]] `draft`
-- [[2605.07395|Unsolvability Ceiling in Multi-LLM Routing: An Empirical Study of Evaluation Artifacts]] `draft` · benchmark-design (2026)
-- [[2508.09463|User-centric Subjective Leaderboard by Customizable Reward Modeling]] `draft` · benchmark-design (2025)
-- [[2605.07872|Video Understanding Reward Modeling: A Robust Benchmark and Performant Reward Models]] `draft` · benchmark-design (2026)
 - [[videoscaffold|VideoScaffold: Elastic-Scale Visual Hierarchies for Streaming Video Understanding in MLLMs]] `draft` (2025)
 - [[2307.13854|WebArena: A Realistic Web Environment for Building Autonomous Agents]] `draft`
 - [[reward-model-teacher|What Makes a Reward Model a Good Teacher? An Optimization Perspective]] `draft` (2025)

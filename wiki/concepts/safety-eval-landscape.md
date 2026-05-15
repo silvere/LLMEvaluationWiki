@@ -51,3 +51,13 @@ domain:
 - [[TruthfulQA]]
 - [[benchmark-contamination]]
 - [[benchmark-gaming]]
+
+## 近期相关研究（arXiv 2026-05 自动入库）
+
+> 以下为 v3 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+
+- [[2605.02964|Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use]] · score 20/25
+- [[2506.08584|CounselBench: A Large-Scale Expert Evaluation and Adversarial Benchmarking of Large Language Models in Mental Health Question Answering]] · score 20/25
+- [[2602.01714|MedAraBench: Large-Scale Arabic Medical Question Answering Dataset and Benchmark]] · score 20/25
+- [[2605.11209|Measuring Five-Nines Reliability: Sample-Efficient LLM Evaluation in Saturated Benchmarks]] · score 19/25
+- [[2603.11281|ThReadMed-QA: A Multi-Turn Medical Dialogue Benchmark from Real Patient Questions]] · score 18/25

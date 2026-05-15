@@ -52,3 +52,12 @@ aliases:
 - [[benchmark-contamination]] — 多模态数据污染检测更困难
 - [[Dan-Hendrycks]] — MMMU 的共同作者之一
 - [[multimodal-eval]] — 本页
+
+## 近期相关研究（arXiv 2026-05 自动入库）
+
+> 以下为 v3 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+
+- [[2603.25089|THEMIS: Towards Holistic Evaluation of MLLMs for Scientific Paper Fraud Forensics]] · score 24/25
+- [[2603.24946|MobileDev-Bench: A Benchmark for Issue Resolution in Mobile Application Development]] · score 20/25
+- [[2509.11101|Seeing is Not Understanding: A Benchmark on Perception-Cognition Disparities in Large Language Models]] · score 19/25
+- [[2603.14468|LongVidSearch: An Agentic Benchmark for Multi-hop Evidence Retrieval Planning in Long Videos]] · score 18/25

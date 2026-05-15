@@ -40,6 +40,7 @@ const TYPE_REQUIRED: Record<string, string[]> = {
   leaderboard: [...COMMON_REQUIRED, "sources"],
   entity:      [...COMMON_REQUIRED, "sources"],
   source:      [...COMMON_REQUIRED, "source_type", "url", "ingested", "discusses"],
+  paper:       [...COMMON_REQUIRED, "sources", "arxiv_id"],
   synthesis:   [...COMMON_REQUIRED, "sources"],
   industry:    [...COMMON_REQUIRED, "sources"],
 };

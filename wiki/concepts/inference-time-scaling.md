@@ -58,3 +58,9 @@ sources: []
 - [[chain-of-thought]]
 - [[scaling-laws]]
 - [[calibration]]
+
+## 近期相关研究（arXiv 2026-05 自动入库）
+
+> 以下为 v3 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
+
+- [[2605.02964|Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use]] · score 20/25
