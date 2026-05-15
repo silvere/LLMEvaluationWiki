@@ -5,3 +5,10 @@ quartz/.quartz-cache/
 quartz/public/
 quartz/node_modules/
 quartz/.quartz-cache/
+
+# 私有工作目录（CLAUDE.md §5 红线：不对外渲染、不进 git）
+private/
+
+# Claude Code self-improvement hook 沉淀（保留 LEARNINGS.md，忽略其它）
+.learnings/ERRORS.md
+.learnings/FEATURE_REQUESTS.md

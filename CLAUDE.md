@@ -142,6 +142,58 @@ for link, count in broken.most_common():
 
 ---
 
+### 2.7 搜索别名注入机制（SearchAliases Plugin）
+
+**背景**：Quartz 默认搜索有三个系统性问题，导致搜「tau」搜不到 `tau-bench`、搜「kappa」搜不到 Cohen's κ：
+
+1. encoder 只把 ASCII 空白和 CJK 当 token 分隔符——`-`、`(`、`)`、全角括号 `（）`、希腊字母都粘在 token 里
+   - `"τ-bench (tau-bench)"` 被切成 `["τ-bench", "(tau-bench)"]`，搜「tau」时不是任何 token 的前缀
+2. FlexSearch `tokenize: "forward"` 只做**字符前缀匹配**，不做子串匹配
+3. frontmatter 的 `aliases` 字段**完全没进搜索索引**
+
+实测影响面（658 篇）：title 含括号 119 篇（18%）+ title 含希腊字母 5 篇 + 全部 aliases 失效。
+
+**解决方案**：自研 Quartz Transformer Plugin `SearchAliases`，在 build 时给每篇 markdown 末尾追加一行可见的「Also known as: ...」脚注，把 title / aliases / slug 的切分变体（去括号、按连字符切、希腊→ASCII）作为合法 markdown 注入。Description plugin 后续转 text 时一并进 content 索引，被 FlexSearch 索引到。
+
+**关键文件**：
+- `scripts/quartz-plugins/SearchAliases.ts` — Plugin 本体（~80 行）
+- `quartz/quartz.config.ts` — 在 transformers 数组末尾加 `SearchAliases()`
+
+**Token 生成规则**：
+- 整串经 `normalize()`：所有切分标点 → 单空格（apostrophe `'` 不切，避免 `Cohen's` 被拆）
+- 整串 `transliterateGreek()`：τ→tau, κ→kappa, α→alpha 等 24 个希腊字母
+- 按空白/括号切（保留连字符）：`"MINT (Multi-turn INteractive Tool-use)"` → `["MINT", "Multi-turn", "INteractive", "Tool-use"]`
+- 长度 < 2 的丢弃；与 title 完全相同的不重复进 alias 集合
+- 相邻重复词去重：`tau bench tau bench` → `tau bench tau`
+
+**希腊字母 ASCII 转写表**（学术常用 24 个）：
+```
+α→alpha β→beta γ→gamma δ→delta ε→epsilon ζ→zeta η→eta θ→theta
+ι→iota κ→kappa λ→lambda μ→mu ν→nu ξ→xi ο→omicron π→pi
+ρ→rho σ→sigma τ→tau υ→upsilon φ→phi χ→chi ψ→psi ω→omega
+```
+
+**写新 wiki 页时的注意事项**：
+- 通常**不需要**手动维护 alias——Plugin 会从 title 自动生成 ASCII 变体和切分子词
+- 仅当**title 完全是中文或缩写不直观**时，才在 frontmatter 加 `aliases:`（如 LLaMA 加 `aliases: [llama]`）
+- 测试 token 生成：`npx tsx -e "import { generateSearchTokens } from './scripts/quartz-plugins/SearchAliases.ts'; console.log(generateSearchTokens('你的标题', [], 'slug'))"`
+
+**验证搜索效果**：在主仓库根目录跑
+```bash
+cd quartz && npx quartz build --directory ../wiki  # 重建
+# 然后用浏览器搜「tau」「bench」「kappa」「multi-turn」等关键词
+```
+
+**不解决的问题**（超出 Plugin 范围）：
+- 「bench」这类过于通用的关键词，tau-bench 仍排不到 top（FlexSearch ranking 限制）
+- 拼音搜索 / typo 容错 / 真正的子串匹配——需要替换 Search 组件，本期未做
+
+**升级 quartz submodule 时**：
+- Plugin 文件物理上在主仓库 `scripts/quartz-plugins/`，submodule 升级不会冲突
+- 唯一需 cherry-pick 的是 `quartz/quartz.config.ts` 里的 2 行改动（import + transformers 数组里加 `SearchAliases()`）
+
+---
+
 ## 3. 内容约定
 
 ### 3.1 文件命名
@@ -205,4 +257,7 @@ domain:
 - **不得将 synthesis/ 下无 sources 的页面推送到公网**（见 §2.6）
 - **`private/` 和 `99-Meta/` 目录不对外渲染**（已在 `ignorePatterns` 中）
 - **sources/ 文件内部人员姓名不得出现**（如阅读组成员名字）
-- **不得修改 `quartz/` submodule 代码**（只改 `quartz.config.ts` 和 `quartz.layout.ts`）
+- **不得修改 `quartz/` submodule 代码**，可改的 submodule 文件白名单（均为 Quartz 官方预留的 user override 口子）：
+  - `quartz/quartz.config.ts` — 站点配置、plugins 注册
+  - `quartz/quartz.layout.ts` — 页面布局/组件挑选
+  - `quartz/quartz/styles/custom.scss` — 自定义 CSS 覆盖（上游永远不动此文件）
