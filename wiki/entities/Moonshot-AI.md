@@ -45,7 +45,7 @@ sources: []
 
 ## 相关页面
 
-- 
-- 
+- Kimi
+- 长上下文评测
 - [[RULER]]
 - [[NeedleInAHaystack]]

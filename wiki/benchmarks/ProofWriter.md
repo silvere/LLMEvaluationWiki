@@ -48,5 +48,5 @@ ProofWriter 是研究 LLM 演绎推理与神经符号方法结合的重要基准
 - [[BBH]]
 - [[StrategyQA]]
 - [[MuSR]]
-- 
+- MuSR
 - [[AQuA]]

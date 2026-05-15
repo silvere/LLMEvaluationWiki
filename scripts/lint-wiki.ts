@@ -159,6 +159,17 @@ const draftCount = [...pages.values()].filter(p => p.confidence === "draft").len
 if (draftCount > 20)
   add("warning", "I-draft-backlog", "wiki/", `draft 积压：${draftCount} 篇 > 20 阈值，请优先审稿`);
 
+// J: 空 bullet — `- ` 后无内容（Session G 死链清零留下的占位符模式）
+for (const [, p] of pages) {
+  const content = readFileSync(join(ROOT, p.file), "utf-8");
+  const lines = content.split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    if (/^- *$/.test(lines[i])) {
+      add("error", "J-empty-bullet", p.file, `空 bullet（行 ${i + 1}）—— 删除该行或填入内容`);
+    }
+  }
+}
+
 // H: Dead links (async, check up to 20 URLs)
 const urlsToCheck: { url: string; file: string }[] = [];
 for (const [, p] of pages) {

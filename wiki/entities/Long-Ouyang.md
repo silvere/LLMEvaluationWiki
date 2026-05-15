@@ -39,7 +39,7 @@ sources: []
 
 - [[GPT-4]]
 - [[RLHF]]
-- 
+- 人类偏好评测
 - [[AlpacaEval]]
 - [[Chatbot-Arena]]
 - [[OpenAI]]

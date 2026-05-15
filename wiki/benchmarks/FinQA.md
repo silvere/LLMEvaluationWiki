@@ -47,6 +47,6 @@ FinQA 同时提供了一个专家标注的推理程序（domain-specific languag
 
 - [[FinanceBench]]
 - [[DROP]]
-- 
-- 
+- DROP
+- FinEval
 - [[FinEval]]

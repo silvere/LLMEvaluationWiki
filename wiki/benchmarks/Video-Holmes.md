@@ -56,5 +56,5 @@ Video-Holmes 的典型任务包括：
 
 - [[LongVideoBench]]
 - [[MME-VideoOCR]]
-- 
+- MME-VideoOCR
 - [[EgoSchema]]

@@ -46,7 +46,7 @@ DeepSeek-R1 的发布引发了国际社会对中国开源 LLM 能力的重新评
 ## 相关页面
 
 - [[DeepSeek]]
-- 
+- MoE架构
 - [[HumanEval]]
-- 
+- MATH评测集
 - [[Open-LLM-Leaderboard]]

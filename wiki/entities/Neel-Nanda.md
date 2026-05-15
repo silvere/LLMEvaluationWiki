@@ -40,8 +40,8 @@ sources: []
 
 ## 相关页面
 
-- 
-- 
-- 
+- 机械可解释性
+- TransformerLens
+- Grokking
 - [[AI安全评测]]
 - [[Anthropic]]

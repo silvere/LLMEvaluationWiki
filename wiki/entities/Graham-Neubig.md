@@ -42,7 +42,7 @@ sources: []
 ## 相关页面
 
 - [[SWE-bench]]
-- 
-- 
+- 代码生成评测
+- 多语言评测
 - [[PromptBench]]
 - [[METR]]

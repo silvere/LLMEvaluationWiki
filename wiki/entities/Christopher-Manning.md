@@ -41,7 +41,7 @@ sources: []
 ## 相关页面
 
 - [[SQuAD-2.0]]
-- 
-- 
+- GloVe
+- NLP评测指标
 - [[Stanford-CRFM]]
 - [[Percy-Liang]]

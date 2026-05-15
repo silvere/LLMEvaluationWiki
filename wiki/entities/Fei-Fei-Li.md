@@ -40,8 +40,8 @@ sources: []
 
 ## 相关页面
 
-- 
-- 
+- ImageNet
+- 视觉AI评测
 - [[Stanford-CRFM]]
-- 
+- Stanford-HAI
 - [[多模态评测]]

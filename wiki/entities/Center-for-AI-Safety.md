@@ -47,7 +47,7 @@ CAIS 通过 Hendrycks 的个人学术影响力和机构资助，将 AI 安全能
 ## 相关页面
 
 - [[MMLU]]
-- 
+- MATH评测集
 - [[Dan-Hendrycks]]
 - [[AI安全评测]]
 - [[METR]]

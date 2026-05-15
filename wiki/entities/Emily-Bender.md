@@ -38,8 +38,8 @@ sources: []
 
 ## 相关页面
 
-- 
-- 
-- 
-- 
+- Stochastic-Parrots
+- NLP评测批评
+- 语言模型理解能力
+- AI伦理
 - [[Partnership-on-AI]]

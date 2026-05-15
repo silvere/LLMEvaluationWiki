@@ -54,5 +54,5 @@ MIBench 的测试设计刻意包含对抗性问题（如诱导模型声称自己
 ## 相关页面
 
 - [[TruthfulQA]]
-- 
+- TruthfulQA
 - [[FActScore]]
