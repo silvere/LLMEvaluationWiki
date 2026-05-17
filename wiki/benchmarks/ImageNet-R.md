@@ -18,7 +18,7 @@ status: active
 
 ## 概述
 
-ImageNet-R（Renditions）由 Dan Hendrycks 等人于 2021 年提出，包含 **30,000 张**来自 ImageNet 200 个类别的多种渲染风格图像，涵盖艺术画（art）、卡通（cartoon）、素描（sketch）、刺绣（embroidery）、折纸（origami）、玩具（toy）、雕塑（sculpture）等多达 30 种视觉风格。
+ImageNet-R（Renditions）由 [[Dan-Hendrycks|Dan Hendrycks]] 等人于 2021 年提出，包含 **30,000 张**来自 ImageNet 200 个类别的多种渲染风格图像，涵盖艺术画（art）、卡通（cartoon）、素描（sketch）、刺绣（embroidery）、折纸（origami）、玩具（toy）、雕塑（sculpture）等多达 30 种视觉风格。
 
 ImageNet-R 旨在测试模型是否能识别跨越不同视觉域（domain）的同一概念，而不仅仅依赖于真实照片的纹理统计特征。这与人类视觉的强泛化能力对照：人类能轻松识别一张卡通猫与一只真实猫为同一类别，而依赖纹理偏差训练的 CNN 模型往往在此类测试上表现不佳。
 

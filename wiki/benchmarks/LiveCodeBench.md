@@ -59,3 +59,15 @@ LiveCodeBench 的重要发现之一是揭示了"HumanEval 高分陷阱"：在 Hu
 - [[SWE-bench-Verified]]
 - [[data-contamination]]
 - [[benchmark-saturation]]
+
+## 主流模型得分（来自 wiki/models/）
+
+> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
+
+| 模型 | 分数 | 备注 |
+|------|------|------|
+| [[Gemini-2.5-Pro|Gemini 2.5 Pro]] | 约 80% |  |
+| [[Qwen3|Qwen3 系列（235B-A22B / 32B / Thinking）]] | 约 70% |  |
+| [[Kimi-K2|Kimi K2]] | 约 53.7% |  |
+| [[Llama-4|Llama 4 (Maverick / Scout)]] | 约 43.4% |  |
+| [[Gemini-2.0-Flash|Gemini 2.0 Flash]] | 约 36% |  |

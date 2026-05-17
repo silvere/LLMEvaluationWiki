@@ -50,3 +50,10 @@ DeepSeek-R1 的发布引发了国际社会对中国开源 LLM 能力的重新评
 - [[HumanEval]]
 - MATH评测集
 - [[Open-LLM-Leaderboard]]
+
+## 模型版本（指向 wiki/models/ Spec）
+
+> 以下为本 wiki 收录的该系列具体版本 Spec：
+
+- [[DeepSeek-R1|DeepSeek R1]]（2025-01）
+- [[DeepSeek-V3|DeepSeek V3 / V3.1]]（2024-12 (V3), 2025-03 (V3.1)）

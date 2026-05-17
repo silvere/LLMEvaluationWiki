@@ -48,3 +48,10 @@ sources: []
 - Doubao
 - [[C-Eval]]
 - [[多模态评测]]
+
+## 模型版本（指向 wiki/models/ Spec）
+
+> 以下为本 wiki 收录的该机构发布模型 Spec：
+
+- [[Doubao-Seed-1.6|Doubao Seed 1.6 / Seed-Thinking]]（2025-04 (Seed-Thinking-v1.5), 2025-06 (Seed 1.6)）
+- [[Doubao-1.5-Pro|Doubao 1.5 Pro]]（2025-01）

@@ -54,6 +54,15 @@ GPQA 的核心价值在于评测模型是否真正掌握了研究生级别的科
 - **题目来源的专家偏差**：题目由特定领域的研究人员撰写，覆盖范围集中在自然科学（生物、物理、化学），对数学、工程、人文等领域的覆盖相对有限，所得分数对"研究生水平知识"的代表性存在一定偏差。
 - **评测成本高**：题目涉及高度专业知识，人工核实和构建新题需要昂贵的领域专家时间投入，数据集扩展困难，难以快速增大规模以弥补统计局限。
 
+## 专家级 QA 的扩展前沿（2026）
+
+GPQA 之外，多项新基准从不同专业领域填补"研究生级"评测覆盖：
+
+- **病毒学专家级 QA**：[[2504.16137|Virology Capabilities Test (VCT)]]（Götting 等，2024-04）发现前沿 MLLM 在病毒学专家 QA 上 43.8% 准确率——**超越 94% 病毒学家在其专长子领域**。这是首个明确量化 MLLM 在专业领域"已超越专家"的证据，对 GPQA 类专家基准的难度设计提出反向挑战。
+- **金融多语言多模态 QA**：[[2410.04526|FAMMA]] 在金融领域引入图表/多语言/专家级问答评测，弥补了 GPQA 偏自然科学的覆盖空白。
+- **历史专业研究**：[[2604.24690|ProHist-Bench]] 首个职业历史研究能力评测框架。
+- **化学/生物实验室安全**：[[2603.11987|LABSHIELD]] 实验室场景的多模态安全推理与规划，覆盖危险化学品、生物危险等专业判断。
+
 ## 相关页面
 
 - [[MMLU]]
@@ -67,3 +76,28 @@ GPQA 的核心价值在于评测模型是否真正掌握了研究生级别的科
 
 - [[2410.04526|FAMMA: A Benchmark for Financial Domain Multilingual Multimodal Question Answering]] · score 21/25
 - [[2504.16137|Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark]] · score 20/25
+
+## 主流模型得分（来自 wiki/models/）
+
+> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
+
+| 模型 | 分数 | 备注 |
+|------|------|------|
+| [[Gemini-3.1-Pro|Gemini 3.1 Pro]] | 94.3% | Diamond |
+| [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] | 90.1% | Diamond |
+| [[GLM-5.1|GLM-5.1]] | 86.2% | Diamond |
+| [[GLM-5|GLM-5]] | 86.0% | Diamond |
+| [[GPT-5|GPT-5]] | 约 85-88% | Diamond |
+| [[o3|o3]] | 87.7% | Diamond |
+| [[Gemini-2.5-Pro|Gemini 2.5 Pro]] | 84.0% | Diamond |
+| [[Claude-3.7-Sonnet|Claude 3.7 Sonnet]] | 约 78% | Diamond |
+| [[o1|o1]] | 78.0% | Diamond |
+| [[Doubao-Seed-1.6|Doubao Seed 1.6 / Seed-Thinking]] | 约 77.3% | Diamond |
+| [[Kimi-K2|Kimi K2]] | 约 75.1% | Diamond |
+| [[DeepSeek-R1|DeepSeek R1]] | 71.5% | Diamond |
+| [[Qwen3|Qwen3 系列（235B-A22B / 32B / Thinking）]] | 约 70% | thinking |
+| [[Llama-4|Llama 4 (Maverick / Scout)]] | 约 69.8% | Diamond (Maverick |
+| [[Claude-3.5-Sonnet|Claude 3.5 Sonnet]] | 65.0% | Diamond |
+| [[Gemini-2.0-Flash|Gemini 2.0 Flash]] | 62.1% | Diamond |
+| [[DeepSeek-V3|DeepSeek V3 / V3.1]] | 约 59% | Diamond |
+| [[GPT-4o|GPT-4o]] | 53.6% | Diamond |

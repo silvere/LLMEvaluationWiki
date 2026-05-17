@@ -54,3 +54,15 @@ CodeElo 基准包含近 6 个月的 Codeforces 竞赛真题，附带比赛分组
 - [[HumanEval]]
 - [[APPS]]
 - [[SWE-bench-Verified]]
+
+## 主流模型得分（来自 wiki/models/）
+
+> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
+
+| 模型 | 分数 | 备注 |
+|------|------|------|
+| [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] | 3206 | Elo（2026-04） |
+| [[Doubao-Seed-2.0|Doubao Seed 2.0（Pro/Lite/Mini）]] | 3020 | Elo (Pro) |
+| [[DeepSeek-R1|DeepSeek R1]] | 2029 (96.3 percentile) | Elo |
+| [[Kimi-K1.5|Kimi K1.5]] | 94 percentile | Elo |
+| [[Doubao-Seed-1.6|Doubao Seed 1.6 / Seed-Thinking]] | 约 86.0 percentile | Elo |

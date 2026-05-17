@@ -55,6 +55,17 @@ HumanEval+ 是 EvalPlus 项目对 HumanEval 的增强版本，通过自动化方
 - **测试用例覆盖不足**：原版 HumanEval 每题平均测试用例极少（约 7 条），边界情况覆盖不充分，导致"表面通过但逻辑错误"的虚假通过问题。HumanEval+ 通过扩充测试用例缓解了这一问题。
 - **任务场景过于局限**：仅覆盖独立函数级 Python 任务，不涉及多文件项目、依赖管理、调试、代码审查等真实软件工程场景，与实际开发需求差距较大。SWE-bench 等仓库级基准已成为更贴近现实的代码能力评测标准。
 
+## 饱和后的扩展方向（2026 新基准）
+
+继 SWE-bench 后，2026 年又出现一批代码评测新方向，明确针对 HumanEval 不覆盖的能力：
+
+- **跨语言代码语义**：[[2605.11006|Execution-Verified Multi-Language Benchmark]]（Li 等，2026-05）跨多语言代码理解，平均 F1 **仅 72.9%**，证明 HumanEval 的 Python 高分**不能泛化**到其他语言的代码语义理解。
+- **代码推理质量**：[[2604.12379|CodeRQ-Bench]]（Li 等，2026-04）从"代码是否通过测试"扩展到"代码推理质量"（注释、变量命名、控制流清晰度等三大维度），是首个评测"代码可读性/可维护性"的基准。
+- **代码重构**：[[2602.03712|SWE-Refactor]] 把代码任务从"修 bug"扩展到"重构现有代码"，引入语义保持约束。
+- **代码迁移**：JMigBench (arXiv 2605.05175) 评估 LLM 在 Java 8 → Java 11 等版本迁移上的能力。
+- **代码幻觉检测**：Delulu (arXiv 2605.10978) 在 Fill-in-the-Middle 任务上的多语言代码幻觉检测。
+- **企业代码**：[[2604.02729|IndustryCode]] 在真实工业代码任务上揭示 HumanEval 与实际工业代码生成的鸿沟（HumanEval 93%+ → 工业代码 42% 整体）。
+
 ## 相关页面
 
 - [[SWE-bench-Verified]]
@@ -67,3 +78,18 @@ HumanEval+ 是 EvalPlus 项目对 HumanEval 的增强版本，通过自动化方
 > 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
 
 - [[2604.12379|Beyond Output Correctness: Benchmarking and Evaluating Large Language Model Reasoning in Coding Tasks]] · score 19/25
+
+## 主流模型得分（来自 wiki/models/）
+
+> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
+
+| 模型 | 分数 | 备注 |
+|------|------|------|
+| [[Claude-3.7-Sonnet|Claude 3.7 Sonnet]] | 约 92-95% |  |
+| [[Qwen2.5-72B|Qwen2.5 系列（含 72B / Coder / Math / VL）]] | 约 92.7% | Coder-32B |
+| [[Claude-3.5-Sonnet|Claude 3.5 Sonnet]] | 92.0% |  |
+| [[GPT-4o|GPT-4o]] | 90.2% |  |
+| [[GPT-4.1|GPT-4.1]] | 约 90%+ |  |
+| [[DeepSeek-V3|DeepSeek V3 / V3.1]] | 约 82-89% |  |
+| [[Llama-3.3-70B|Llama 3.3 70B]] | 约 88.4% |  |
+| [[Gemini-1.5-Pro|Gemini 1.5 Pro]] | 71.9% |  |

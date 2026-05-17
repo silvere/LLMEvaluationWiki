@@ -58,3 +58,24 @@ SWE-bench Verified 目前是业界最受认可的软件工程 Agent 能力评测
 - [[HumanEval]]
 - [[LiveCodeBench]]
 - [[data-contamination]]
+
+## 主流模型得分（来自 wiki/models/）
+
+> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
+
+| 模型 | 分数 | 备注 |
+|------|------|------|
+| [[Gemini-3.1-Pro|Gemini 3.1 Pro]] | 80.6% |  |
+| [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] | 80.6% | open-source 与 Gemini 3.1 Pro 同档 |
+| [[GLM-5|GLM-5]] | 77.8% | open-source 第一（同期） |
+| [[Claude-Opus-4|Claude Opus 4 / Opus 4.1]] | 72.5-79.4% |  |
+| [[Gemini-3-Flash|Gemini 3 Flash]] | 78% | agentic |
+| [[Claude-Sonnet-4.5|Claude Sonnet 4.5]] | 77.2% |  |
+| [[GPT-5|GPT-5]] | 约 74% |  |
+| [[o3|o3]] | 约 71% |  |
+| [[Claude-3.7-Sonnet|Claude 3.7 Sonnet]] | 70.3% (高级配置) |  |
+| [[Kimi-K2|Kimi K2]] | 约 65.8% | Agentic |
+| [[Gemini-2.5-Pro|Gemini 2.5 Pro]] | 63.2% |  |
+| [[GPT-4.1|GPT-4.1]] | 54.6% |  |
+| [[Claude-3.5-Sonnet|Claude 3.5 Sonnet]] | 49.0% |  |
+| [[o1|o1]] | 48.9% |  |

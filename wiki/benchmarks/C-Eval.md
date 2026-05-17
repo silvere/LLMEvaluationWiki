@@ -58,3 +58,11 @@ C-Eval 的重要性在于它填补了中文 LLM 评测领域的空白。在 C-Ev
 - [[benchmark-design]]
 - [[data-contamination]]
 - [[benchmark-saturation]]
+
+## 主流模型得分（来自 wiki/models/）
+
+> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
+
+| 模型 | 分数 | 备注 |
+|------|------|------|
+| [[Doubao-1.5-Pro|Doubao 1.5 Pro]] | 约 89.2% |  |

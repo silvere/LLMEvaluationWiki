@@ -19,7 +19,7 @@ status: active
 
 ## 概述
 
-Movie Gen Video Bench 是 Meta AI 在其基础媒体模型 Movie Gen 技术报告（arXiv:2410.13720）中发布的文生视频评测基准，于 2024 年 10 月正式开源于 GitHub（facebookresearch/MovieGenBench）和 Hugging Face。它是 Movie Gen Bench 套件的视频部分，配套另有 Movie Gen Audio Bench（527 个提示词，评测音频生成）。
+Movie Gen Video Bench 是 Meta AI 在其基础媒体模型 Movie Gen 技术报告（arXiv:2410.13720）中发布的文生视频评测基准，于 2024 年 10 月正式开源于 GitHub（facebookresearch/MovieGenBench）和 [[Hugging-Face|Hugging Face]]。它是 Movie Gen Bench 套件的视频部分，配套另有 Movie Gen Audio Bench（527 个提示词，评测音频生成）。
 
 Movie Gen 是 Meta 研发的一系列基础媒体生成模型，能够生成最高 1080p 高清视频（带不同宽高比）并同步生成音频。为系统评估该模型的能力，Meta 团队构建了专门的评测基准，其规模是此前同类研究所用基准的三倍以上，并采用大规模人工评估作为主要评测手段。
 

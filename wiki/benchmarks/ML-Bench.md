@@ -18,7 +18,7 @@ status: active
 
 ## 概述
 
-ML-Bench 是 2024 年（arXiv 预印于 2023 年底）提出的机器学习代码生成评测基准，专注于评测 LLM 在真实 ML 代码库语境下完成机器学习任务的能力。与通用代码生成基准（HumanEval、MBPP）不同，ML-Bench 要求模型理解并正确调用真实的 ML 框架（PyTorch、TensorFlow、Hugging Face Transformers、scikit-learn 等）的 API 接口，完成模型训练、推理、数据处理等实际 ML 工作流。
+ML-Bench 是 2024 年（arXiv 预印于 2023 年底）提出的机器学习代码生成评测基准，专注于评测 LLM 在真实 ML 代码库语境下完成机器学习任务的能力。与通用代码生成基准（HumanEval、MBPP）不同，ML-Bench 要求模型理解并正确调用真实的 ML 框架（PyTorch、TensorFlow、[[Hugging-Face|Hugging Face]] Transformers、scikit-learn 等）的 API 接口，完成模型训练、推理、数据处理等实际 ML 工作流。
 
 ML-Bench 包含 9641 个任务实例，来自 GitHub 上 18 个热门 ML 开源仓库的 README 和文档，每个任务提供详细的自然语言要求和参考解决方案。基准分为两个评测设置：**ML-Bench-GitHub**（基于完整仓库上下文）和 **ML-Bench-Quarter**（仅提供部分上下文），测试模型在不同信息量下的代码生成能力。
 

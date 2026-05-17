@@ -49,3 +49,10 @@ sources: []
 - 长上下文评测
 - [[RULER]]
 - [[NeedleInAHaystack]]
+
+## 模型版本（指向 wiki/models/ Spec）
+
+> 以下为本 wiki 收录的该机构发布模型 Spec：
+
+- [[Kimi-K2|Kimi K2]]（2025-07）
+- [[Kimi-K1.5|Kimi K1.5]]（2025-01）

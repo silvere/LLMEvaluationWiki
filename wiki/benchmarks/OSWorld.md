@@ -50,3 +50,11 @@ OSWorld 的核心创新在于评测环境的真实性——任务运行在实际
 - [[WindowsAgentArena]]
 - [[ScreenSpot Pro]]
 - [[AgentBench]]
+
+## 主流模型得分（来自 wiki/models/）
+
+> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
+
+| 模型 | 分数 | 备注 |
+|------|------|------|
+| [[Claude-Sonnet-4.5|Claude Sonnet 4.5]] | 约 50-61% |  |

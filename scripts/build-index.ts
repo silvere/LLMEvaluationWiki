@@ -47,13 +47,14 @@ function walkDir(dir: string): string[] {
   return results;
 }
 
-const TYPE_ORDER = ["benchmark", "concept", "tool", "leaderboard", "entity", "paper", "synthesis", "industry"];
+const TYPE_ORDER = ["benchmark", "concept", "tool", "leaderboard", "entity", "model", "paper", "synthesis", "industry"];
 const TYPE_LABELS: Record<string, string> = {
   benchmark:   "benchmarks/ — 评测集",
   concept:     "concepts/ — 概念与方法",
   tool:        "tools/ — 评测工具链",
   leaderboard: "leaderboards/ — 榜单",
   entity:      "entities/ — 机构与人物",
+  model:       "models/ — 模型 Spec 与评测",
   paper:       "papers/ — 论文摘要与 claim",
   synthesis:   "synthesis/ — 综合分析",
   industry:    "industry/ — 行业垂类",

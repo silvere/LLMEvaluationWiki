@@ -18,7 +18,7 @@ status: active
 
 ## 概述
 
-ImageNet-A（Natural Adversarial Examples）由 Dan Hendrycks 等人于 2021 年提出，包含 **7,500 张**从互联网收集的真实自然图像，这些图像对标准 ImageNet 训练的 ResNet-50 模型造成了严重失误（模型准确率接近随机水平），但对人类而言并不困难。
+ImageNet-A（Natural Adversarial Examples）由 [[Dan-Hendrycks|Dan Hendrycks]] 等人于 2021 年提出，包含 **7,500 张**从互联网收集的真实自然图像，这些图像对标准 ImageNet 训练的 ResNet-50 模型造成了严重失误（模型准确率接近随机水平），但对人类而言并不困难。
 
 与合成对抗样本不同，ImageNet-A 完全由**自然场景图像**构成，失误原因来自背景混乱、罕见视角、遮挡、纹理误导等真实因素，而非人工添加的扰动。这使其成为测试模型鲁棒性与分布外泛化能力（Out-of-Distribution Generalization）的有力工具。
 

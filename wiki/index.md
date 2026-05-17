@@ -2,13 +2,13 @@
 title: LLMEvaluationWiki 全量索引
 type: index
 publish: true
-last_generated: 2026-05-15
+last_generated: 2026-05-17
 ---
 
 # LLMEvaluationWiki 索引
 
 > ⚠️ 本文件由 `scripts/build-index.ts` 自动生成，**请勿手动编辑**。
-> 每次 `/ingest` 操作完成后会自动重建。上次生成：2026-05-15
+> 每次 `/ingest` 操作完成后会自动重建。上次生成：2026-05-17
 
 ---
 
@@ -20,11 +20,12 @@ last_generated: 2026-05-15
 | concept | 100 |
 | tool | 23 |
 | leaderboard | 20 |
-| entity | 70 |
-| paper | 139 |
+| entity | 138 |
+| model | 40 |
+| paper | 163 |
 | synthesis | 0 |
 | industry | 38 |
-| **合计** | **755** |
+| **合计** | **887** |
 
 ---
 
@@ -565,69 +566,182 @@ last_generated: 2026-05-15
 - [[Moonshot-AI|月之暗面（Moonshot AI）]] `draft`
 - [[Zhipu-AI|智谱AI（Zhipu AI）]] `draft`
 - [[ByteDance-AI|字节跳动AI（ByteDance AI）]] `draft`
+- [[Aaron-Jaech|Aaron Jaech]] `draft` · entity
+- [[Adina-Williams|Adina Williams]] `draft` · benchmark-design
+- [[Alex-Gu|Alex Gu]] `draft` · benchmark-design
+- [[Alexander-Wettig|Alexander Wettig]] `draft` · benchmark-design
 - [[AI2|Allen Institute for AI (AI2)]] `draft`
 - [[Andrej-Karpathy|Andrej Karpathy]] `draft`
 - [[Anthropic]] `draft`
 - [[ARC-Alignment|ARC（对齐研究中心）]] `draft`
 - [[BAIR|BAIR（Berkeley AI Research）]] `draft`
+- [[Barry-Haddow|Barry Haddow]] `draft` · benchmark-design
+- [[Bill-Yuchen-Lin|Bill Yuchen Lin]] `draft` · benchmark-design
+- [[Binyuan-Hui|Binyuan Hui]] `draft` · benchmark-design
+- [[Carlos-E-Jimenez|Carlos E. Jimenez]] `draft` · benchmark-design
 - [[Center-for-AI-Safety|Center for AI Safety (CAIS)]] `draft`
+- [[Chaoyou-Fu|Chaoyou Fu]] `draft` · benchmark-design
 - [[Christopher-Manning|Christopher Manning]] `draft`
+- [[Chunqiu-Steven-Xia|Chunqiu Steven Xia]] `draft` · benchmark-design
 - [[Claude]] `draft` · entity
 - [[CMU-LTI|CMU LTI（卡内基梅隆大学语言技术研究所）]] `draft`
 - [[Cohere]] `draft`
+- [[Dahua-Lin|Dahua Lin]] `draft` · benchmark-design
 - [[Dan-Hendrycks|Dan Hendrycks]] `draft`
+- [[Daniel-Fried|Daniel Fried]] `draft` · benchmark-design
+- [[Danqi-Chen|Danqi Chen]] `draft` · benchmark-design
 - [[Dario-Amodei|Dario Amodei]] `draft`
+- [[David-Dohan|David Dohan]] `draft` · benchmark-design
 - [[DeepSeek|DeepSeek（深度求索）]] `draft`
+- [[Devi-Parikh|Devi Parikh]] `draft` · benchmark-design
+- [[Dhruv-Batra|Dhruv Batra]] `draft` · benchmark-design
 - [[EleutherAI]] `draft`
 - [[Emily-Bender|Emily Bender]] `draft`
 - [[Epoch-AI|Epoch AI]] `draft`
+- [[Eunsol-Choi|Eunsol Choi]] `draft` · benchmark-design
+- [[Fei-Huang|Fei Huang]] `draft` · benchmark-design
 - [[Fei-Fei-Li|Fei-Fei Li（李飞飞）]] `draft`
+- [[Feifan-Song|Feifan Song]] `draft` · benchmark-design
+- [[Ge-Zhang|Ge Zhang]] `draft` · benchmark-design
 - [[Gemini]] `draft` · entity
 - [[Google-DeepMind|Google DeepMind]] `draft`
 - [[GPT-4]] `draft` · entity
 - [[Graham-Neubig|Graham Neubig]] `draft`
+- [[Hannaneh-Hajishirzi|Hannaneh Hajishirzi]] `draft` · benchmark-design
+- [[Heng-Ji|Heng Ji]] `draft` · benchmark-design
+- [[Henryk-Michalewski|Henryk Michalewski]] `draft` · benchmark-design
 - [[Hugging-Face|Hugging Face]] `draft`
 - [[Ilya-Sutskever|Ilya Sutskever]] `draft`
 - [[Jacob-Devlin|Jacob Devlin]] `draft`
 - [[Jason-Wei|Jason Wei]] `draft`
+- [[Jiawei-Liu|Jiawei Liu]] `draft` · benchmark-design
+- [[Jie-Tang|Jie Tang]] `draft` · benchmark-design
+- [[John-Yang|John Yang]] `draft` · benchmark-design
+- [[Kai-Wei-Chang|Kai-Wei Chang]] `draft` · benchmark-design
+- [[Karthik-Narasimhan|Karthik Narasimhan]] `draft` · benchmark-design
 - [[Kawin-Ethayarajh|Kawin Ethayarajh]] `draft`
+- [[Kexin-Pei|Kexin Pei]] `draft` · benchmark-design
+- [[Leandro-von-Werra|Leandro von Werra]] `draft` · benchmark-design
+- [[Lei-Li|Lei Li]] `draft` · benchmark-design
 - [[Lianmin-Zheng|Lianmin Zheng（郑联民）]] `draft`
+- [[Lingming-Zhang|Lingming Zhang]] `draft` · benchmark-design
 - [[LLaMA]] `draft` · entity
 - [[LMSYS-Org|LMSYS Org]] `draft`
 - [[Long-Ouyang|Long Ouyang（欧阳龙）]] `draft`
+- [[Maarten-Sap|Maarten Sap]] `draft` · benchmark-design
+- [[Maosong-Sun|Maosong Sun]] `draft` · benchmark-design
+- [[Marc-Alexandre-Côté|Marc-Alexandre Côté]] `draft` · benchmark-design
 - [[Margaret-Mitchell|Margaret Mitchell]] `draft`
+- [[Mengdan-Zhang|Mengdan Zhang]] `draft` · benchmark-design
 - [[Meta-AI|Meta AI]] `draft`
 - [[METR|METR（Model Evaluation and Threat Research）]] `draft`
 - [[Microsoft-Research|Microsoft Research]] `draft`
 - [[Mila|Mila（蒙特利尔学习算法研究所）]] `draft`
+- [[Ming-Yin|Ming Yin]] `draft` · benchmark-design
 - [[MiniMax]] `draft`
 - [[Mistral-AI|Mistral AI]] `draft`
 - [[MIT-CSAIL|MIT CSAIL（MIT 计算机科学与人工智能实验室）]] `draft`
 - [[MLCommons]] `draft`
 - [[Nathan-Lambert|Nathan Lambert]] `draft`
 - [[Neel-Nanda|Neel Nanda]] `draft`
+- [[Niklas-Muennighoff|Niklas Muennighoff]] `draft` · benchmark-design
+- [[Noah-A-Smith|Noah A. Smith]] `draft` · benchmark-design
 - [[NVIDIA-AI|NVIDIA AI]] `draft`
+- [[Ofir-Press|Ofir Press]] `draft` · benchmark-design
 - [[OpenAI]] `draft`
 - [[Oren-Etzioni|Oren Etzioni]] `draft`
+- [[Oriol-Vinyals|Oriol Vinyals]] `draft` · benchmark-design
 - [[Oxford-FHI|Oxford FHI（牛津大学人类未来研究所）]] `draft`
+- [[Pan-Lu|Pan Lu]] `draft` · benchmark-design
 - [[Partnership-on-AI|Partnership on AI (PAI)]] `draft`
+- [[Peixian-Chen|Peixian Chen]] `draft` · benchmark-design
 - [[Percy-Liang|Percy Liang]] `draft`
 - [[Peter-Clark|Peter Clark]] `draft`
+- [[Qian-Liu|Qian Liu]] `draft` · benchmark-design
+- [[Qinkai-Zheng|Qinkai Zheng]] `draft` · benchmark-design
+- [[Renrui-Zhang|Renrui Zhang]] `draft` · benchmark-design
 - [[Rohan-Taori|Rohan Taori]] `draft`
+- [[Rongrong-Ji|Rongrong Ji]] `draft` · benchmark-design
 - [[Sam-Bowman|Sam Bowman]] `draft`
 - [[Samuel-Bowman|Samuel Bowman]] `draft`
+- [[Samuel-R-Bowman|Samuel R. Bowman]] `draft` · benchmark-design
 - [[Scale-AI|Scale AI]] `draft`
+- [[Shaohui-Lin|Shaohui Lin]] `draft` · benchmark-design
+- [[Shengding-Hu|Shengding Hu]] `draft` · benchmark-design
+- [[Shunyu-Yao|Shunyu Yao]] `draft` · benchmark-design
 - [[Stability-AI|Stability AI]] `draft`
 - [[Stanford-CRFM|Stanford CRFM]] `draft`
+- [[Tao-Yu|Tao Yu]] `draft` · benchmark-design
+- [[Tatsunori-Hashimoto|Tatsunori Hashimoto]] `draft` · entity
+- [[Terry-Yue-Zhuo|Terry Yue Zhuo]] `draft` · benchmark-design
 - [[Timnit-Gebru|Timnit Gebru]] `draft`
 - [[Tom-Brown|Tom Brown]] `draft`
+- [[Tony-Xia|Tony Xia]] `draft` · benchmark-design
+- [[Tristan-Thrush|Tristan Thrush]] `draft` · entity
 - [[UK-AISI|UK AI Safety Institute（英国人工智能安全研究所）]] `draft`
 - [[Vector-Institute|Vector Institute（向量研究所）]] `draft`
+- [[Wei-Wang|Wei Wang]] `draft` · benchmark-design
 - [[Wei-Lin-Chiang|Wei-Lin Chiang（蔣維麟）]] `draft`
+- [[Wenhu-Chen|Wenhu Chen]] `draft` · benchmark-design
 - [[xAI]] `draft`
+- [[Xiao-Liu|Xiao Liu]] `draft` · benchmark-design
+- [[Xing-Sun|Xing Sun]] `draft` · benchmark-design
+- [[Xingyao-Wang|Xingyao Wang]] `draft` · benchmark-design
+- [[Xuanyu-Lei|Xuanyu Lei]] `draft` · benchmark-design
 - [[Yann-LeCun|Yann LeCun]] `draft`
 - [[Yejin-Choi|Yejin Choi（崔叶真）]] `draft`
+- [[Yonatan-Bisk|Yonatan Bisk]] `draft` · benchmark-design
+- [[Yongbin-Li|Yongbin Li]] `draft` · benchmark-design
 - [[Yoshua-Bengio|Yoshua Bengio]] `draft`
+- [[Yunhang-Shen|Yunhang Shen]] `draft` · benchmark-design
+- [[Yuxiao-Dong|Yuxiao Dong]] `draft` · benchmark-design
+- [[Zhiyuan-Liu|Zhiyuan Liu]] `draft` · benchmark-design
+- [[Zihan-Wang|Zihan Wang]] `draft` · benchmark-design
+
+---
+
+## models/ — 模型 Spec 与评测
+
+- [[Claude-3.5-Sonnet|Claude 3.5 Sonnet]] `draft` · model-spec
+- [[Claude-3.7-Sonnet|Claude 3.7 Sonnet]] `draft` · model-spec
+- [[Claude-Haiku-4.5|Claude Haiku 4.5]] `draft` · model-spec
+- [[Claude-Opus-4|Claude Opus 4 / Opus 4.1]] `draft` · model-spec
+- [[Claude-Opus-4.7|Claude Opus 4.7]] `draft` · model-spec
+- [[Claude-Sonnet-4.5|Claude Sonnet 4.5]] `draft` · model-spec
+- [[Claude-Sonnet-4.6|Claude Sonnet 4.6]] `draft` · model-spec
+- [[DeepSeek-R1|DeepSeek R1]] `draft` · model-spec
+- [[DeepSeek-V3|DeepSeek V3 / V3.1]] `draft` · model-spec
+- [[DeepSeek-V3.1|DeepSeek V3.1 / V3.2]] `draft` · model-spec
+- [[DeepSeek-V4-Flash|DeepSeek V4-Flash]] `draft` · model-spec
+- [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] `draft` · model-spec
+- [[Doubao-1.5-Pro|Doubao 1.5 Pro]] `draft` · model-spec
+- [[Doubao-Seed-1.6|Doubao Seed 1.6 / Seed-Thinking]] `draft` · model-spec
+- [[Doubao-Seed-2.0|Doubao Seed 2.0（Pro/Lite/Mini）]] `draft` · model-spec
+- [[Gemini-1.5-Pro|Gemini 1.5 Pro]] `draft` · model-spec
+- [[Gemini-2.0-Flash|Gemini 2.0 Flash]] `draft` · model-spec
+- [[Gemini-2.5-Pro|Gemini 2.5 Pro]] `draft` · model-spec
+- [[Gemini-3-Flash|Gemini 3 Flash]] `draft` · model-spec
+- [[Gemini-3.1-Pro|Gemini 3.1 Pro]] `draft` · model-spec
+- [[GLM-5]] `draft` · model-spec
+- [[GLM-5.1]] `draft` · model-spec
+- [[GPT-4.1]] `draft` · model-spec
+- [[GPT-4o]] `draft` · model-spec
+- [[GPT-5]] `draft` · model-spec
+- [[GPT-5.5|GPT-5.5（含 Pro / Instant 变体）]] `draft` · model-spec
+- [[Grok-4.3|Grok 4.3]] `draft` · model-spec
+- [[Kimi-K1.5|Kimi K1.5]] `draft` · model-spec
+- [[Kimi-K2|Kimi K2]] `draft` · model-spec
+- [[Kimi-K2.5|Kimi K2.5]] `draft` · model-spec
+- [[Kimi-K2.6|Kimi K2.6]] `draft` · model-spec
+- [[Llama-3.3-70B|Llama 3.3 70B]] `draft` · model-spec
+- [[Llama-4|Llama 4 (Maverick / Scout)]] `draft` · model-spec
+- [[o1]] `draft` · model-spec
+- [[o3]] `draft` · model-spec
+- [[Qwen3.5|Qwen 3.5 (397B-A17B)]] `draft` · model-spec
+- [[Qwen3.6|Qwen 3.6 Max]] `draft` · model-spec
+- [[Qwen2.5-72B|Qwen2.5 系列（含 72B / Coder / Math / VL）]] `draft` · model-spec
+- [[Qwen3|Qwen3 系列（235B-A22B / 32B / Thinking）]] `draft` · model-spec
+- [[Yi-Lightning]] `draft` · model-spec
 
 ---
 
@@ -653,21 +767,26 @@ last_generated: 2026-05-15
 - [[2605.00674|Beyond Benchmarks: MathArena as an Evaluation Platform for Mathematics with LLMs]] `draft` · benchmark-design (2026)
 - [[2604.12379|Beyond Output Correctness: Benchmarking and Evaluating Large Language Model Reasoning in Coding Tasks]] `draft` · benchmark-design (2026)
 - [[td-scaling|Beyond Quantity: Trajectory Diversity Scaling for Code Agents]] `draft` (2026)
+- [[2411.09772|Beyond Static Tools: Evaluating Large Language Models for Cryptographic Misuse Detection]] `draft` · benchmark-design (2024)
 - [[2206.04615|Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models]] `draft`
+- [[2509.24210|BeyondBench: Contamination-Resistant Evaluation of Reasoning in Language Models]] `draft` · benchmark-design (2025)
 - [[2406.15877|BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions]] `draft`
 - [[2604.24690|Can LLMs Act as Historians? Evaluating Historical Research Capabilities of LLMs via the Chinese Imperial Examination]] `draft` · benchmark-design (2026)
 - [[2605.14537|Cattle Trade: A Multi-Agent Benchmark for LLM Bluffing, Bidding, and Bargaining]] `draft` · benchmark-design (2026)
 - [[2201.11903|Chain-of-Thought Prompting Elicits Reasoning in Large Language Models]] `draft`
 - [[2601.01982|ChaosBench-Logic: A Benchmark for Logical and Symbolic Reasoning on Chaotic Dynamical Systems]] `draft` · benchmark-design (2026)
 - [[claude3-anthropic-2024|Claude 3 Model Card]] `draft`
+- [[2311.09154|CLEAN-EVAL: Clean Evaluation on Contaminated Large Language Models]] `draft` · benchmark-design (2023)
 - [[2306.09212|CMMLU: Measuring Chinese Massive Multitask Language Understanding]] `draft`
 - [[2604.11201|CocoaBench: Evaluating Unified Digital Agents in the Wild]] `draft` · benchmark-design (2026)
 - [[2605.09675|CodeClinic: Evaluating Automation of Coding Skills for Clinical Reasoning Agents]] `draft` · benchmark-design (2026)
+- [[2410.09997|Collu-Bench: A Benchmark for Predicting Language Model Hallucinations in Code]] `draft` · benchmark-design (2024)
 - [[2605.12918|CommonWhy: A Dataset for Evaluating Entity-Based Causal Commonsense Reasoning in Large Language Models]] `draft` · benchmark-design (2026)
 - [[2212.08073|Constitutional AI: Harmlessness from AI Feedback]] `draft`
 - [[2506.08584|CounselBench: A Large-Scale Expert Evaluation and Adversarial Benchmarking of Large Language Models in Mental Health Question Answering]] `draft` · benchmark-design (2025)
 - [[2605.12501|Covering Human Action Space for Computer Use: Data Synthesis and Benchmark]] `draft` · benchmark-design (2026)
 - [[2512.21877|CricBench: A Multilingual Benchmark for Evaluating LLMs in Cricket Analytics]] `draft` · benchmark-design (2025)
+- [[2603.21454|Cross-Context Verification: Hierarchical Detection of Benchmark Contamination through Session-Isolated Analysis]] `draft` · benchmark-design (2026)
 - [[2511.12263|CrossVid: A Comprehensive Benchmark for Evaluating Cross-Video Reasoning in Multimodal Large Language Models]] `draft` · benchmark-design (2025)
 - [[2401.03065|CRUXEval: A Benchmark for Code Reasoning, Understanding and Execution]] `draft`
 - [[deepseek-v2-2024|DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model]] `draft`
@@ -679,6 +798,7 @@ last_generated: 2026-05-15
 - [[2206.07682|Emergent Abilities of Large Language Models]] `draft`
 - [[2601.16449|Emotion-LLaMAv2 and MMEVerse: A New Framework and Benchmark for Multimodal Emotion Understanding]] `draft` · benchmark-design (2026)
 - [[2605.03242|Enhancing Agent Safety Judgment: Controlled Benchmark Rewriting and Analogical Reasoning for Deceptive Out-of-Distribution Scenarios]] `draft` · benchmark-design (2026)
+- [[2510.19423|ETOM: A Five-Level Benchmark for Evaluating Tool Orchestration within the MCP Ecosystem]] `draft` · benchmark-design (2025)
 - [[2108.07258|Evaluating Large Language Models Trained on Code]] `draft`
 - [[2506.04280|Evaluating MLLMs with Multimodal Multi-image Reasoning Benchmark]] `draft` · benchmark-design (2025)
 - [[2604.16980|Evaluating Multimodal LLMs for Inpatient Diagnosis: Real-World Performance, Safety, and Cost Across Ten Frontier Models]] `draft` · benchmark-design (2026)
@@ -696,18 +816,25 @@ last_generated: 2026-05-15
 - [[2311.12983|GPQA: A Graduate-Level Google-Proof Q&A Benchmark]] `draft`
 - [[gpt4-technical-report-2023|GPT-4 Technical Report]] `draft`
 - [[2605.09997|GraphInstruct: A Progressive Benchmark for Diagnosing Capability Gaps in LLM Graph Generation]] `draft` · benchmark-design (2026)
+- [[2602.01031|HalluHard: A Hard Multi-Turn Hallucination Benchmark]] `draft` · benchmark-design (2026)
 - [[2310.14566|HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models]] `draft`
+- [[2403.04307|HaluEval-Wild: Evaluating Hallucinations of Language Models in the Wild]] `draft` · benchmark-design (2024)
 - [[2305.11747|HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models]] `draft`
 - [[1907.10641|HellaSwag: Can a Machine Really Finish Your Sentence?]] `draft`
 - [[2305.10207|Holistic Evaluation of Language Models]] `draft`
 - [[2604.02729|IndustryCode: A Benchmark for Industry Code Generation]] `draft` · benchmark-design (2026)
+- [[2603.11481|INFACT: A Diagnostic Benchmark for Induced Faithfulness and Factuality Hallucinations in Video-LLMs]] `draft` · benchmark-design (2026)
+- [[2510.02271|InfoMosaic-Bench: Evaluating Multi-Source Information Seeking in Tool-Augmented Agents]] `draft` · benchmark-design (2025)
+- [[2604.12311|Is Vibe Coding the Future? An Empirical Assessment of LLM Generated Codes for Construction Safety]] `draft` · benchmark-design (2026)
 - [[2412.15574|J-EDI QA: Benchmark for deep-sea organism-specific multimodal LLM]] `draft` · benchmark-design (2024)
 - [[2305.20050|Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena]] `draft`
 - [[2604.23178|Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in LLM-as-a-Judge Pipelines]] `draft` · benchmark-design (2026)
 - [[2604.24645|K-MetBench: A Multi-Dimensional Benchmark for Fine-Grained Evaluation of Expert Reasoning, Locality, and Multimodality in Meteorology]] `draft` · benchmark-design (2026)
+- [[2407.05868|KG-FPQ: Evaluating Factuality Hallucination in LLMs with Knowledge Graph-based False Premise Questions]] `draft` · benchmark-design (2024)
 - [[2512.24572|Korean Canonical Legal Benchmark: Toward Knowledge-Independent Evaluation of LLMs' Legal Reasoning Capabilities]] `draft` · benchmark-design (2025)
 - [[2603.11987|LABSHIELD: A Multimodal Benchmark for Safety-Critical Reasoning and Planning in Scientific Laboratories]] `draft` · benchmark-design (2026)
 - [[2308.11462|LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models]] `draft`
+- [[2406.19314|LiveBench: A Challenging, Contamination-Limited LLM Benchmark]] `draft` · benchmark-design (2024)
 - [[2604.04815|LiveFact: A Dynamic, Time-Aware Benchmark for LLM-Driven Fake News Detection]] `draft` · benchmark-design (2026)
 - [[2604.01754|LiveMathematicianBench: A Live Benchmark for Mathematician-Level Reasoning with Proof Sketches]] `draft` · benchmark-design (2026)
 - [[2307.09288|Llama 2: Open Foundation and Fine-Tuned Chat Models]] `draft`
@@ -717,10 +844,13 @@ last_generated: 2026-05-15
 - [[lvomni-bench|LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs]] `draft` (2026)
 - [[2604.18584|MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval]] `draft` · benchmark-design (2026)
 - [[2310.02255|MathVista: Evaluating Math Reasoning in Visual Contexts]] `draft`
+- [[2508.07575|MCPToolBench++: A Large Scale AI Agent Model Context Protocol MCP Tool Use Benchmark]] `draft` · benchmark-design (2025)
+- [[2508.14925|MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers]] `draft` · benchmark-design (2025)
 - [[2109.07958|Measuring Coding Challenge Competence With APPS]] `draft`
 - [[2605.11209|Measuring Five-Nines Reliability: Sample-Efficient LLM Evaluation in Saturated Benchmarks]] `draft` · benchmark-design (2026)
 - [[2009.03300|Measuring Massive Multitask Language Understanding]] `draft`
 - [[2602.01714|MedAraBench: Large-Scale Arabic Medical Question Answering Dataset and Benchmark]] `draft` · benchmark-design (2026)
+- [[2409.19492|MedHalu: Hallucinations in Responses to Healthcare Queries by Large Language Models]] `draft` · benchmark-design (2024)
 - [[llama3-meta-2024|Meta Llama 3]] `draft`
 - [[2404.07440|Meta Llama 3 技术报告]] `draft`
 - [[2604.23539|MetaGAI: A Large-Scale and High-Quality Benchmark for Generative AI Model and Data Card Generation]] `draft` · benchmark-design (2026)
@@ -728,12 +858,15 @@ last_generated: 2026-05-15
 - [[2310.16944|Mistral 7B]] `draft`
 - [[2603.12266|MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning]] `draft` · benchmark-design (2026)
 - [[2307.06281|MMBench: Is Your Multi-modal Model an All-around Player?]] `draft`
+- [[2412.15194|MMLU-CF: A Contamination-free Multi-task Language Understanding Benchmark]] `draft` · benchmark-design (2024)
 - [[2311.16502|MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark]] `draft`
 - [[2603.24946|MobileDev-Bench: A Benchmark for Issue Resolution in Mobile Application Development]] `draft` · benchmark-design (2026)
 - [[mt-video-bench|MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating Multimodal LLMs in Multi-Turn Dialogues]] `draft` (2026)
+- [[2410.11710|MTU-Bench: A Multi-granularity Tool-Use Benchmark for Large Language Models]] `draft` · benchmark-design (2024)
 - [[2603.08655|OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning]] `draft` · benchmark-design (2026)
 - [[2402.14008|OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems]] `draft`
 - [[2605.08904|OPT-BENCH: Evaluating the Iterative Self-Optimization of LLM Agents in Large-Scale Search Spaces]] `draft` · benchmark-design (2026)
+- [[2406.18326|PaCoST: Paired Confidence Significance Testing for Benchmark Contamination Detection in Large Language Models]] `draft` · benchmark-design (2024)
 - [[2510.24816|Perception, Understanding and Reasoning, A Multimodal Benchmark for Video Fake News Detection]] `draft` · benchmark-design (2025)
 - [[2107.03374|Program Synthesis with Large Language Models]] `draft`
 - [[2602.20629|QEDBENCH: Quantifying the Alignment Gap in Automated Evaluation of University-Level Mathematical Proofs]] `draft` · benchmark-design (2026)
@@ -759,8 +892,11 @@ last_generated: 2026-05-15
 - [[thinking-to-recall|Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs]] `draft` (2026)
 - [[2603.11281|ThReadMed-QA: A Multi-Turn Medical Dialogue Benchmark from Real Patient Questions]] `draft` · benchmark-design (2026)
 - [[2511.01833|TIR-Bench: A Comprehensive Benchmark for Agentic Thinking-with-Images Reasoning]] `draft` · benchmark-design (2025)
+- [[2406.20015|ToolBeHonest: A Multi-level Hallucination Diagnostic Benchmark for Tool-Augmented Large Language Models]] `draft` · benchmark-design (2024)
 - [[2307.16789|ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs]] `draft`
+- [[2601.12294|ToolPRMBench: Evaluating and Advancing Process Reward Models for Tool-using Agents]] `draft` · benchmark-design (2026)
 - [[2510.26205|Towards Global Retrieval Augmented Generation: A Benchmark for Corpus-Level Reasoning]] `draft` · benchmark-design (2025)
+- [[2511.01527|TPS-Bench: Evaluating AI Agents' Tool Planning & Scheduling Abilities in Compounding Tasks]] `draft` · benchmark-design (2025)
 - [[2203.02155|Training language models to follow instructions with human feedback]] `draft`
 - [[epoch-compute-trends-2023|Trends in Machine Learning Hardware and Computing]] `draft`
 - [[2309.05463|TruthfulQA: Measuring How Models Mimic Human Falsehoods]] `draft`
@@ -769,7 +905,9 @@ last_generated: 2026-05-15
 - [[2504.16137|Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark]] `draft` · benchmark-design (2025)
 - [[2307.13854|WebArena: A Realistic Web Environment for Building Autonomous Agents]] `draft`
 - [[2409.13711|WebQuest: A Benchmark for Multimodal QA on Web Page Sequences]] `draft` · benchmark-design (2024)
+- [[2508.06530|What Makes 'Good' Distractors for Object Hallucination Evaluation in Large Vision-Language Models?]] `draft` · benchmark-design (2025)
 - [[reward-model-teacher|What Makes a Reward Model a Good Teacher? An Optimization Perspective]] `draft` (2025)
+- [[2510.04849|When Models Lie, We Learn: Multilingual Span-Level Hallucination Detection with PsiloQA]] `draft` · benchmark-design (2025)
 - [[2308.11432|WildBench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild]] `draft`
 - [[2308.01263|XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models]] `draft`
 

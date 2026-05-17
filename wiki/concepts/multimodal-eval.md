@@ -47,6 +47,23 @@ aliases:
 - **视频评测复杂性**：视频理解涉及时序推理，评测指标和数据集标准尚不统一。[[MT-Video-Bench]] 引入了多轮对话维度，[[LVOmniBench]] 进一步加入了长时（>10分钟）+音频联合理解。
 - **污染风险**：训练数据中的图像-文本对可能覆盖评测集，污染检测比纯文本更难。
 
+## 2026 年 MLLM 评测的关键发现
+
+新一批 arXiv 高质量论文（≥18/25）进一步细化了 MLLM 的能力边界，几乎一致地显示**多模态模型在专业领域显著弱于人类**：
+
+- **学术造假取证（顶级 T1 lab）**：[[2603.25089|THEMIS]]（Ma 等，2026-03，60+ 页）4000+ 真实撤稿案例上，**SOTA GPT-5 仅 56.15%**，证明现有 MLLM 在视觉欺诈推理上远未达到专家水平。
+- **感知 vs. 认知解耦**：[[2509.11101|Seeing is Not Understanding]] 系统量化"看到 ≠ 理解"——同样的视觉刺激下，MLLM 感知准确但认知推理跌穿底线，暗示当前主流评测高估了视觉能力。
+- **体育理解**：[[2410.08474|SPORTU]]（多模态体育理解，2024-10）最高 71%，但仍远低于人类。
+- **图文混排理解**：[[2410.12564|FTII-Bench]]（Flow Text with Image Insertion）评估模型在文中插图任务上的图文对齐能力。
+- **金融多模态 QA**：[[2410.04526|FAMMA]] 跨语言金融图表推理；[[2602.22273|FIRE]] 综合金融图表理解。
+- **多图推理**：[[2506.04280|Multimodal Multi-image Reasoning Benchmark]] 测试模型在多图比对/串联推理上的表现。
+- **病毒学专业**：[[2504.16137|Virology Capabilities Test (VCT)]]（Götting 等，2024-04）MLLM 在病毒学专家级 QA 上达 43.8% 准确率——**超越 94% 人类专家在其专长领域的表现**，凸显 MLLM 在某些专业领域已具备超人能力。
+- **视觉异常推理**：[[2601.10165|Adaptive Multi-Stage Video Anomaly Reasoning]] 提出分阶段推理评测。
+- **历史研究**：[[2604.24690|Can LLMs Act as Historians?]] 引入 ProHist-Bench 评估职业历史研究能力。
+- **数学视觉**：[[2604.18584|MathNet]] 全球多模态数学推理与检索。
+
+整体趋势：MLLM 在**通用感知任务**接近 SOTA，但在**领域专家任务**和**感知→认知链路**仍是显著短板。
+
 ## 相关页面
 
 - [[benchmark-contamination]] — 多模态数据污染检测更困难
@@ -57,29 +74,4 @@ aliases:
 
 > 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
 
-- [[2410.08474|SPORTU: A Comprehensive Sports Understanding Benchmark for Multimodal Large Language Models]] · score 26/25
-- [[2511.01833|TIR-Bench: A Comprehensive Benchmark for Agentic Thinking-with-Images Reasoning]] · score 21/25
-- [[2410.12564|FTII-Bench: A Comprehensive Multimodal Benchmark for Flow Text with Image Insertion]] · score 21/25
-- [[2410.04526|FAMMA: A Benchmark for Financial Domain Multilingual Multimodal Question Answering]] · score 21/25
-- [[2506.04280|Evaluating MLLMs with Multimodal Multi-image Reasoning Benchmark]] · score 20/25
-- [[2504.16137|Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark]] · score 20/25
-- [[2412.15574|J-EDI QA: Benchmark for deep-sea organism-specific multimodal LLM]] · score 19/25
-- [[2409.13711|WebQuest: A Benchmark for Multimodal QA on Web Page Sequences]] · score 19/25
-- [[2604.24645|K-MetBench: A Multi-Dimensional Benchmark for Fine-Grained Evaluation of Expert Reasoning, Locality, and Multimodality in Meteorology]] · score 19/25
-- [[2604.15994|ReactBench: A Benchmark for Topological Reasoning in MLLMs on Chemical Reaction Diagrams]] · score 19/25
-- [[2603.12266|MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning]] · score 19/25
-- [[2603.11987|LABSHIELD: A Multimodal Benchmark for Safety-Critical Reasoning and Planning in Scientific Laboratories]] · score 19/25
-- [[2511.12263|CrossVid: A Comprehensive Benchmark for Evaluating Cross-Video Reasoning in Multimodal Large Language Models]] · score 18/25
-- [[2510.24816|Perception, Understanding and Reasoning, A Multimodal Benchmark for Video Fake News Detection]] · score 18/25
-- [[2601.16449|Emotion-LLaMAv2 and MMEVerse: A New Framework and Benchmark for Multimodal Emotion Understanding]] · score 18/25
-- [[2405.07960|AgentClinic: a multimodal agent benchmark to evaluate AI in simulated clinical environments]] · score 18/25
-- [[2605.09675|CodeClinic: Evaluating Automation of Coding Skills for Clinical Reasoning Agents]] · score 18/25
-- [[2604.24690|Can LLMs Act as Historians? Evaluating Historical Research Capabilities of LLMs via the Chinese Imperial Examination]] · score 18/25
-- [[2604.16980|Evaluating Multimodal LLMs for Inpatient Diagnosis: Real-World Performance, Safety, and Cost Across Ten Frontier Models]] · score 18/25
-- [[2603.29139|SciVisAgentBench: A Benchmark for Evaluating Scientific Data Analysis and Visualization Agents]] · score 18/25
-- [[2603.22529|Ego2Web: A Web Agent Benchmark Grounded in Egocentric Videos]] · score 18/25
-- [[2602.23649|AudioCapBench: Quick Evaluation on Audio Captioning across Sound, Music, and Speech]] · score 18/25
-- [[2604.18584|MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval]] · score 18/25
-- [[2602.22273|FIRE: A Comprehensive Benchmark for Financial Intelligence and Reasoning Evaluation]] · score 18/25
-- [[2601.10649|MINERVA-Cultural: A Benchmark for Cultural and Multilingual Long Video Reasoning]] · score 18/25
-- [[2601.10165|Advancing Adaptive Multi-Stage Video Anomaly Reasoning: A Benchmark Dataset and Method]] · score 18/25
+- [[2508.06530|What Makes "Good" Distractors for Object Hallucination Evaluation in Large Vision-Language Models?]] · Ming-Kun Xie 等 · score 19/25

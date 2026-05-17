@@ -50,3 +50,10 @@ Qwen 系列的全面开源（包括从小到大多个规模），为评测界提
 - [[C-Eval]]
 - [[Shanghai-AI-Lab]]
 - [[MMLU]]
+
+## 模型版本（指向 wiki/models/ Spec）
+
+> 以下为本 wiki 收录的该机构发布模型 Spec：
+
+- [[Qwen3|Qwen3 系列（235B-A22B / 32B / Thinking）]]（2025-04 (235B MoE 等多尺寸)）
+- [[Qwen2.5-72B|Qwen2.5 系列（含 72B / Coder / Math / VL）]]（2024-09）

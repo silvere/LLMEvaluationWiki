@@ -25,7 +25,7 @@ sources:
 
 ## 概述
 
-GAIA（General AI Assistants）是由 Meta AI Research 和 Hugging Face 于 2023 年提出的通用 AI 助手评测基准，旨在测试 AI 系统作为**真实世界任务助手**的综合能力。GAIA 的核心理念是：一个真正有用的 AI 助手应当能够处理需要**多步骤规划、工具使用、网络检索、文件处理**等组合能力的现实任务。
+GAIA（General AI Assistants）是由 Meta AI Research 和 [[Hugging-Face|Hugging Face]] 于 2023 年提出的通用 AI 助手评测基准，旨在测试 AI 系统作为**真实世界任务助手**的综合能力。GAIA 的核心理念是：一个真正有用的 AI 助手应当能够处理需要**多步骤规划、工具使用、网络检索、文件处理**等组合能力的现实任务。
 
 ## 设计理念
 

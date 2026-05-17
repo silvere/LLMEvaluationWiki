@@ -19,7 +19,7 @@ status: active
 
 ## 概述
 
-Online-Mind2Web 是俄亥俄州立大学 NLP Group（OSU-NLP-Group）发布的在线网页 Agent 评测基准，作为论文"An Illusion of Progress? Assessing the Current State of Web Agents"（arXiv:2504.01382）的核心贡献，于 2025 年发布，被 COLM（Conference on Language Modeling）2025 收录。数据集已在 Hugging Face（osunlp/Online-Mind2Web）和 GitHub（OSU-NLP-Group/Online-Mind2Web）开源。
+Online-Mind2Web 是俄亥俄州立大学 NLP Group（OSU-NLP-Group）发布的在线网页 Agent 评测基准，作为论文"An Illusion of Progress? Assessing the Current State of Web Agents"（arXiv:2504.01382）的核心贡献，于 2025 年发布，被 COLM（Conference on Language Modeling）2025 收录。数据集已在 [[Hugging-Face|Hugging Face]]（osunlp/Online-Mind2Web）和 GitHub（OSU-NLP-Group/Online-Mind2Web）开源。
 
 该工作是对现有 Web Agent 基准的系统性批判与改进。研究团队发现，当前最广泛使用的在线 Web Agent 基准（如 WebVoyager）存在严重缺陷：任务覆盖面窄、网站多样性不足、许多任务存在"捷径"（仅靠 Google 搜索可解决 51% 的任务）、且自动评估与人工评估的一致性很低。基于此，团队构建了 Online-Mind2Web，覆盖 136 个真实网站的 300 个多样化任务，并设计了新的 LLM-as-Judge 评估方法（与人工判断一致性约 85%）。
 

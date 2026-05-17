@@ -58,3 +58,14 @@ SWE-bench Pro 的发布时机恰逢 SWE-bench Verified 开始出现[[benchmark-s
 - [[Multi-SWE-bench]]
 - [[SWE-Lancer]]
 - [[benchmark-saturation]]
+
+## 主流模型得分（来自 wiki/models/）
+
+> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
+
+| 模型 | 分数 | 备注 |
+|------|------|------|
+| [[Kimi-K2.6|Kimi K2.6]] | 58.6% | tied with GPT-5.5 |
+| [[GLM-5.1|GLM-5.1]] | 58.4% | 榜首（超过 Claude Opus 4.6 / GPT-5.4） |
+| [[Qwen3.6|Qwen 3.6 Max Preview]] | 榜首 | 官方表述：top in SWE-bench Pro |
+| [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] | 55.4% | open-source 第一 |

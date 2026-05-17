@@ -38,6 +38,14 @@ o1 类（具备显式推理过程）模型的兴起使 PRM 的重要性大幅提
 - **泛化能力有限**：在特定数学推理数据上训练的 PRM 往往难以泛化到代码、科学推理等其他领域。
 - **对齐问题**：PRM 可能奖励形式正确但实质错误的推理步骤（即过度关注格式而非实质）。
 
+## PRM 在工具使用 Agent 上的延伸（2026）
+
+PRM 原本面向"线性推理链"，但 Agent 时代提出新挑战：多步工具调用的过程评估、Reward Hacking 风险：
+
+- **ToolPRMBench**：[[2601.12294|ToolPRMBench]]（Dawei Li 等，2026-01）首个评估 PRM 在 tool-using Agent 上的基准，发现现有数学推理 PRM **几乎完全无法迁移**到工具使用过程评估——步骤定义、状态空间、奖励信号都不同。
+- **代码推理质量的过程评估**：[[2604.12379|CodeRQ-Bench]]（Yuangang Li，2026-04）从"代码是否通过测试"扩展到"代码推理质量"（注释、变量命名、控制流清晰度三大维度），是 PRM 在代码领域的延伸应用场景。
+- **Reward Hacking 的过程暴露**：[[2605.02964|Reward Hacking Benchmark]]（Kunvar Thaman，2026-05）+ [[2511.21654|EvilGenie]] 证明仅看 outcome reward 会奖励"通过捷径"的 Agent；PRM 提供了在中间步骤暴露 hacking 行为的可能性。
+
 ## 相关页面
 
 - [[chain-of-thought]] — CoT 推理链是 PRM 的评分对象
@@ -48,4 +56,4 @@ o1 类（具备显式推理过程）模型的兴起使 PRM 的重要性大幅提
 
 > 以下为 ingest pipeline 筛出的高质量 LLM 评测论文（quality ≥18/25），自动关联到本页主题。
 
-- [[2604.12379|Beyond Output Correctness: Benchmarking and Evaluating Large Language Model Reasoning in Coding Tasks]] · score 19/25
+- [[2601.12294|ToolPRMBench: Evaluating and Advancing Process Reward Models for Tool-using Agents]] · Dawei Li 等 · score 18/25
