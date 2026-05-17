@@ -227,6 +227,87 @@ domain:
 ---
 ```
 
+### 3.4 entity 类型模板（人物 / 机构）
+
+`type: entity` 进一步用 `entity_type` 区分：`person` / `org` / `model`。
+
+#### 人物 (`entity_type: person`) 模板
+
+```yaml
+---
+title: "Full Name"               # 显示名 = 真名（英文 / 中文混排允许）
+type: entity
+entity_type: person
+publish: true
+author_mode: llm
+confidence: draft
+as_of_date: "YYYY-MM-DD"
+last_verified: "YYYY-MM-DD"
+sources: ["https://homepage.example.org", "https://scholar.google.com/..."]
+aliases:
+  - English variants
+  - 中文名
+
+# 人物专有字段（强烈建议填写，validate 缺失只 warn）
+affiliation: "Stanford University / OpenAI"
+position: "Assistant Professor / Research Scientist / PhD"
+education: ["MIT PhD (YYYY)", "Stanford BS (YYYY)"]
+research_focus:
+  - LLM evaluation
+  - Alignment
+homepage: "https://..."
+google_scholar: "https://scholar.google.com/citations?user=..."
+arxiv_id: "https://arxiv.org/a/..."
+domain:
+  - entity
+---
+
+# Full Name
+
+> 一句话定位（含最重要的关键词让搜索能命中）
+
+## 基本信息
+- **所属机构**：...
+- **职位**：...
+- **学历背景**：...
+- **主页 / Scholar**：[link](...)
+
+## 评测领域主要贡献
+（2-4 段，每段引一篇代表论文 [[arxiv-id|Title]]，让反向链接成立）
+
+## 代表性工作
+- [[xxxx.xxxx|Paper]] — 一句话归纳
+- ...
+
+## 本 wiki 收录的该作者论文
+<!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:START -->
+（由 scripts/sync-author-backlinks.ts 自动维护，请勿手动编辑）
+<!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:END -->
+
+## 相关页面
+- [[相关机构]] / [[同领域专家]] / [[相关 benchmark / concept]]
+```
+
+#### 关键约束
+- **建页前必须用 WebSearch / agent-reach 核查**：affiliation / 职位 / 代表作年份。LLM 训练记忆有截止时间，研究者跳槽常见
+- **不要假装有 Google Scholar / arXiv 链接**：核查不到就留空，不要编 URL
+- **`<!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS -->` 区块**由 `scripts/sync-author-backlinks.ts` 维护，手动编辑会被覆盖
+- 人物页填 `aliases` 一定要含英中混合形式（让中文搜索者也能命中）
+
+#### 半自动建页
+
+```bash
+npx tsx scripts/ingest-researcher.ts \
+  --name "Jacob Steinhardt" \
+  --affiliation "UC Berkeley" \
+  --position "Assistant Professor" \
+  --homepage "https://..." \
+  --scholar "https://scholar.google.com/citations?user=..." \
+  --focus "alignment, LLM evaluation"
+```
+
+生成 stub 后用户手工补「评测领域主要贡献」段，再跑 sync-author-backlinks。
+
 ---
 
 ## 4. 已建立的关键缺失页（2026-05-14 补建）
