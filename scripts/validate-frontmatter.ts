@@ -17,7 +17,7 @@ const WIKI_DIR = join(ROOT, "wiki");
 
 const VALID_TYPES = new Set([
   "benchmark", "concept", "tool", "leaderboard", "entity",
-  "source", "synthesis", "industry",
+  "source", "paper", "model", "synthesis", "industry", "index",
 ]);
 const VALID_STATUS = new Set(["active", "saturated", "contaminated", "deprecated"]);
 const VALID_AUTHOR_MODE = new Set(["llm", "human", "mixed"]);
@@ -26,23 +26,40 @@ const VALID_DOMAINS = new Set([
   "knowledge", "reasoning", "math", "code", "long-context",
   "instruction-following", "multimodal", "safety", "hallucination",
   "bias-fairness", "efficiency", "retrieval", "agent", "multilingual",
-  "dialog", "other",
+  "dialog", "vision", "video", "audio", "science", "other",
 ]);
 const VALID_SOURCE_TYPES = new Set([
   "paper", "blog", "report", "leaderboard-snapshot", "talk",
 ]);
 
-const COMMON_REQUIRED = ["title", "type", "publish", "author_mode", "confidence", "as_of_date", "last_verified"];
+// 必填字段（缺失 = error）。对齐 CLAUDE.md §3.3
+const COMMON_REQUIRED = ["title", "type", "publish", "confidence", "as_of_date", "last_verified"];
 const TYPE_REQUIRED: Record<string, string[]> = {
-  benchmark:   [...COMMON_REQUIRED, "sources", "domain", "language", "year", "status"],
+  benchmark:   [...COMMON_REQUIRED, "sources", "domain"],
   concept:     [...COMMON_REQUIRED, "sources"],
   tool:        [...COMMON_REQUIRED, "sources"],
   leaderboard: [...COMMON_REQUIRED, "sources"],
   entity:      [...COMMON_REQUIRED, "sources"],
-  source:      [...COMMON_REQUIRED, "source_type", "url", "ingested", "discusses"],
-  paper:       [...COMMON_REQUIRED, "sources", "arxiv_id"],
+  source:      [...COMMON_REQUIRED, "source_type", "url"],
+  paper:       [...COMMON_REQUIRED, "sources"],
+  model:       [...COMMON_REQUIRED, "sources", "developer"],
   synthesis:   [...COMMON_REQUIRED, "sources"],
   industry:    [...COMMON_REQUIRED, "sources"],
+  index:       ["title", "type", "publish"],
+};
+
+// 推荐字段（缺失 = warn）。提升页面元信息丰富度但不阻塞
+const TYPE_RECOMMENDED: Record<string, string[]> = {
+  benchmark:   ["author_mode", "language", "year", "status"],
+  concept:     ["author_mode"],
+  tool:        ["author_mode"],
+  leaderboard: ["author_mode"],
+  entity:      ["author_mode"],
+  source:      ["author_mode", "ingested", "discusses"],
+  paper:       ["author_mode", "arxiv_id"],
+  model:       ["author_mode", "release_date"],
+  synthesis:   ["author_mode"],
+  industry:    ["author_mode"],
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────────
@@ -106,6 +123,12 @@ function validateFile(filePath: string, content: string): ValidationResult {
   for (const field of required) {
     const val = fm[field];
     if (val === undefined || val === null || val === "") result.errors.push(`缺少必填字段: ${field}`);
+  }
+
+  const recommended = TYPE_RECOMMENDED[type] ?? [];
+  for (const field of recommended) {
+    const val = fm[field];
+    if (val === undefined || val === null || val === "") result.warnings.push(`推荐字段缺失: ${field}`);
   }
 
   if (fm["author_mode"] && !VALID_AUTHOR_MODE.has(fm["author_mode"] as string))

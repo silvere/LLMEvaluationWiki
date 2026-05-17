@@ -170,6 +170,33 @@ for (const [, p] of pages) {
   }
 }
 
+// K: 命名一致性（warn 级别）
+//   - benchmarks/ + entities/ + models/: PascalCase / kebab-case 混用允许，但禁止全 lower 文件名（除官方 brand 含小写）
+//   - concepts/: 推荐 kebab-case
+//   - papers/: arXiv ID 数字格式或 slug-style，允许混合
+const NAMING_EXCEPTIONS = new Set([
+  // benchmark 官方命名就是 kebab-lowercase 的例外白名单
+  "tau-bench", "tau2-bench", "tau3-bench", "winogrande", "humaneval-x",
+]);
+function checkNamingPattern(file: string, type: string) {
+  const base = file.split("/").pop()!.replace(/\.md$/, "");
+  if (NAMING_EXCEPTIONS.has(base.toLowerCase())) return;
+  if (type === "concept") {
+    // concept 推荐 kebab-case（全小写 + 连字符）
+    if (/[A-Z]/.test(base) && !/^[A-Z][a-z]+/.test(base)) {
+      add("warning", "K-naming", file, `concept 推荐 kebab-case 命名（当前: ${base}）`);
+    }
+  } else if (type === "benchmark" || type === "entity" || type === "model") {
+    // 这些推荐 PascalCase。检测全 lowercase 文件名（且不在白名单）
+    if (/^[a-z][a-z0-9_-]+$/.test(base) && base.length > 2) {
+      add("warning", "K-naming", file, `${type} 推荐 PascalCase 命名或加入 NAMING_EXCEPTIONS（当前: ${base}）`);
+    }
+  }
+}
+for (const [, p] of pages) {
+  checkNamingPattern(p.file, p.type);
+}
+
 // H: Dead links (async, check up to 20 URLs)
 const urlsToCheck: { url: string; file: string }[] = [];
 for (const [, p] of pages) {
