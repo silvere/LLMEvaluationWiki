@@ -20,12 +20,12 @@ last_generated: 2026-05-17
 | concept | 100 |
 | tool | 23 |
 | leaderboard | 20 |
-| entity | 138 |
+| entity | 162 |
 | model | 40 |
 | paper | 163 |
 | synthesis | 0 |
 | industry | 38 |
-| **合计** | **887** |
+| **合计** | **911** |
 
 ---
 
@@ -572,6 +572,7 @@ last_generated: 2026-05-17
 - [[Alexander-Wettig|Alexander Wettig]] `draft` · benchmark-design
 - [[AI2|Allen Institute for AI (AI2)]] `draft`
 - [[Andrej-Karpathy|Andrej Karpathy]] `draft`
+- [[Andy-Zou|Andy Zou]] `draft` · entity
 - [[Anthropic]] `draft`
 - [[ARC-Alignment|ARC（对齐研究中心）]] `draft`
 - [[BAIR|BAIR（Berkeley AI Research）]] `draft`
@@ -593,6 +594,7 @@ last_generated: 2026-05-17
 - [[Dario-Amodei|Dario Amodei]] `draft`
 - [[David-Dohan|David Dohan]] `draft` · benchmark-design
 - [[DeepSeek|DeepSeek（深度求索）]] `draft`
+- [[Denny-Zhou|Denny Zhou]] `draft` · entity
 - [[Devi-Parikh|Devi Parikh]] `draft` · benchmark-design
 - [[Dhruv-Batra|Dhruv Batra]] `draft` · benchmark-design
 - [[EleutherAI]] `draft`
@@ -607,16 +609,25 @@ last_generated: 2026-05-17
 - [[Google-DeepMind|Google DeepMind]] `draft`
 - [[GPT-4]] `draft` · entity
 - [[Graham-Neubig|Graham Neubig]] `draft`
+- [[Greg-Brockman|Greg Brockman]] `draft` · entity
 - [[Hannaneh-Hajishirzi|Hannaneh Hajishirzi]] `draft` · benchmark-design
+- [[Hao-Zhang|Hao Zhang]] `draft` · entity
 - [[Heng-Ji|Heng Ji]] `draft` · benchmark-design
 - [[Henryk-Michalewski|Henryk Michalewski]] `draft` · benchmark-design
 - [[Hugging-Face|Hugging Face]] `draft`
 - [[Ilya-Sutskever|Ilya Sutskever]] `draft`
+- [[Ion-Stoica|Ion Stoica]] `draft` · entity
 - [[Jacob-Devlin|Jacob Devlin]] `draft`
+- [[Jacob-Hilton|Jacob Hilton]] `draft` · entity
+- [[Jacob-Steinhardt|Jacob Steinhardt]] `draft` · entity
+- [[Jared-Kaplan|Jared Kaplan]] `draft` · entity
 - [[Jason-Wei|Jason Wei]] `draft`
+- [[Jiajun-Wu|Jiajun Wu]] `draft` · entity
 - [[Jiawei-Liu|Jiawei Liu]] `draft` · benchmark-design
 - [[Jie-Tang|Jie Tang]] `draft` · benchmark-design
 - [[John-Yang|John Yang]] `draft` · benchmark-design
+- [[Julian-Michael|Julian Michael]] `draft` · entity
+- [[Junyang-Lin|Junyang Lin]] `draft` · entity
 - [[Kai-Wei-Chang|Kai-Wei Chang]] `draft` · benchmark-design
 - [[Karthik-Narasimhan|Karthik Narasimhan]] `draft` · benchmark-design
 - [[Kawin-Ethayarajh|Kawin Ethayarajh]] `draft`
@@ -628,10 +639,12 @@ last_generated: 2026-05-17
 - [[LLaMA]] `draft` · entity
 - [[LMSYS-Org|LMSYS Org]] `draft`
 - [[Long-Ouyang|Long Ouyang（欧阳龙）]] `draft`
+- [[Maarten-Bosma|Maarten Bosma]] `draft` · entity
 - [[Maarten-Sap|Maarten Sap]] `draft` · benchmark-design
 - [[Maosong-Sun|Maosong Sun]] `draft` · benchmark-design
 - [[Marc-Alexandre-Côté|Marc-Alexandre Côté]] `draft` · benchmark-design
 - [[Margaret-Mitchell|Margaret Mitchell]] `draft`
+- [[Mark-Chen|Mark Chen]] `draft` · entity
 - [[Mengdan-Zhang|Mengdan Zhang]] `draft` · benchmark-design
 - [[Meta-AI|Meta AI]] `draft`
 - [[METR|METR（Model Evaluation and Threat Research）]] `draft`
@@ -642,10 +655,12 @@ last_generated: 2026-05-17
 - [[Mistral-AI|Mistral AI]] `draft`
 - [[MIT-CSAIL|MIT CSAIL（MIT 计算机科学与人工智能实验室）]] `draft`
 - [[MLCommons]] `draft`
+- [[Mustafa-Suleyman|Mustafa Suleyman]] `draft` · entity
 - [[Nathan-Lambert|Nathan Lambert]] `draft`
 - [[Neel-Nanda|Neel Nanda]] `draft`
 - [[Niklas-Muennighoff|Niklas Muennighoff]] `draft` · benchmark-design
 - [[Noah-A-Smith|Noah A. Smith]] `draft` · benchmark-design
+- [[Noam-Brown|Noam Brown]] `draft` · entity
 - [[NVIDIA-AI|NVIDIA AI]] `draft`
 - [[Ofir-Press|Ofir Press]] `draft` · benchmark-design
 - [[OpenAI]] `draft`
@@ -654,26 +669,31 @@ last_generated: 2026-05-17
 - [[Oxford-FHI|Oxford FHI（牛津大学人类未来研究所）]] `draft`
 - [[Pan-Lu|Pan Lu]] `draft` · benchmark-design
 - [[Partnership-on-AI|Partnership on AI (PAI)]] `draft`
+- [[Paul-Christiano|Paul Christiano]] `draft` · entity
 - [[Peixian-Chen|Peixian Chen]] `draft` · benchmark-design
+- [[Pengfei-Liu|Pengfei Liu]] `draft` · entity
 - [[Percy-Liang|Percy Liang]] `draft`
 - [[Peter-Clark|Peter Clark]] `draft`
 - [[Qian-Liu|Qian Liu]] `draft` · benchmark-design
 - [[Qinkai-Zheng|Qinkai Zheng]] `draft` · benchmark-design
+- [[Quoc-Le|Quoc V. Le]] `draft` · entity
 - [[Renrui-Zhang|Renrui Zhang]] `draft` · benchmark-design
 - [[Rohan-Taori|Rohan Taori]] `draft`
 - [[Rongrong-Ji|Rongrong Ji]] `draft` · benchmark-design
-- [[Sam-Bowman|Sam Bowman]] `draft`
-- [[Samuel-Bowman|Samuel Bowman]] `draft`
-- [[Samuel-R-Bowman|Samuel R. Bowman]] `draft` · benchmark-design
+- [[Saining-Xie|Saining Xie]] `draft` · entity
+- [[Samuel-Bowman|Samuel R. Bowman]] `draft` · entity
+- [[Sayash-Kapoor|Sayash Kapoor]] `draft` · entity
 - [[Scale-AI|Scale AI]] `draft`
 - [[Shaohui-Lin|Shaohui Lin]] `draft` · benchmark-design
 - [[Shengding-Hu|Shengding Hu]] `draft` · benchmark-design
 - [[Shunyu-Yao|Shunyu Yao]] `draft` · benchmark-design
 - [[Stability-AI|Stability AI]] `draft`
 - [[Stanford-CRFM|Stanford CRFM]] `draft`
+- [[Stephen-Casper|Stephen Casper]] `draft` · entity
 - [[Tao-Yu|Tao Yu]] `draft` · benchmark-design
 - [[Tatsunori-Hashimoto|Tatsunori Hashimoto]] `draft` · entity
 - [[Terry-Yue-Zhuo|Terry Yue Zhuo]] `draft` · benchmark-design
+- [[Tianxiang-Sun|Tianxiang Sun]] `draft` · entity
 - [[Timnit-Gebru|Timnit Gebru]] `draft`
 - [[Tom-Brown|Tom Brown]] `draft`
 - [[Tony-Xia|Tony Xia]] `draft` · benchmark-design
@@ -690,12 +710,16 @@ last_generated: 2026-05-17
 - [[Xuanyu-Lei|Xuanyu Lei]] `draft` · benchmark-design
 - [[Yann-LeCun|Yann LeCun]] `draft`
 - [[Yejin-Choi|Yejin Choi（崔叶真）]] `draft`
+- [[Yi-Tay|Yi Tay]] `draft` · entity
 - [[Yonatan-Bisk|Yonatan Bisk]] `draft` · benchmark-design
 - [[Yongbin-Li|Yongbin Li]] `draft` · benchmark-design
 - [[Yoshua-Bengio|Yoshua Bengio]] `draft`
+- [[Yujia-Qin|Yujia Qin]] `draft` · entity
 - [[Yunhang-Shen|Yunhang Shen]] `draft` · benchmark-design
 - [[Yuxiao-Dong|Yuxiao Dong]] `draft` · benchmark-design
+- [[Zhilin-Yang|Zhilin Yang]] `draft` · entity
 - [[Zhiyuan-Liu|Zhiyuan Liu]] `draft` · benchmark-design
+- [[Zifan-Wang|Zifan Wang]] `draft` · entity
 - [[Zihan-Wang|Zihan Wang]] `draft` · benchmark-design
 
 ---
