@@ -24,6 +24,14 @@ sources: [""]
 
 > 从 BIG-Bench 中筛选出最难的 27 个任务子集，专为评测思维链（Chain-of-Thought）推理能力而设计，2024 年后顶级模型已接近饱和。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://github.com/suzgunmirac/BIG-Bench-Hard](https://github.com/suzgunmirac/BIG-Bench-Hard)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BBH 由 Suzgun 等人于 2022 年提出，其全称为 BIG-Bench Hard，是对 Google 主导的大型语言模型评测集 BIG-Bench 的聚焦子集。BIG-Bench 原本包含 200 余项多样化任务，但大量任务对早期语言模型来说并无区分力，要么过于简单、要么随机猜测即可蒙对。BBH 的做法是从中筛选出 27 个特定任务，选取标准是：这些任务在直接提示（few-shot direct prompting）下表现接近随机，但引入思维链提示（Chain-of-Thought prompting）后有显著提升，从而专门考察模型的推理链能力。

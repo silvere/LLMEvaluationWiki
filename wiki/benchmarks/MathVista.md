@@ -23,6 +23,15 @@ sources:
 
 # MathVista：数学视觉推理综合评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2310.02255](https://arxiv.org/abs/2310.02255)
+- **官方主页**: [https://mathvista.github.io](https://mathvista.github.io)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MathVista 是 2023 年由 UCLA、微软研究院等机构联合提出的数学视觉推理评测基准，荣获 **NeurIPS 2023 数据集与基准赛道**亮点论文。它聚焦于评测大模型在**数学推理与视觉感知**交叉领域的能力，包含 **6,141 道**来自不同数学场景的视觉题目。

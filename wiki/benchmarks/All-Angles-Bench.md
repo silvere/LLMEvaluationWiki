@@ -17,6 +17,14 @@ status: active
 
 > 专注于多视角三维场景理解的 MLLM 评测基准，通过来自 EGO4D-EXO 和 EgoHumans 的真实多视角场景，系统揭示现有模型在跨视角对应推理上的能力缺口。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2504.15280](https://arxiv.org/abs/2504.15280)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 All-Angles-Bench 由 Chenyu Wang 等研究者提出，论文"Seeing from Another Perspective: Evaluating Multi-View Understanding in MLLMs"于 2025 年 4 月提交至 arXiv（2504.15280）。该基准针对一个在现有评测中被大量忽视的问题：当模型需要整合来自不同摄像机角度的视觉信息时，其理解能力会发生怎样的变化？

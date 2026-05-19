@@ -24,6 +24,15 @@ sources: []
 
 > 大规模事实核查基准，要求模型从 Wikipedia 中检索证据并判断声明的真实性。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1803.05355](https://arxiv.org/abs/1803.05355)
+- **官方主页**: [https://fever.ai/](https://fever.ai/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FEVER 由 Thorne 等人于 2018 年提出，来自谢菲尔德大学和爱丁堡大学（发表于 NAACL 2018）。该数据集是 NLP 领域最重要的**事实核查**（fact verification）基准之一，对推动该研究方向的发展起到了关键作用。

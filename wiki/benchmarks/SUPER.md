@@ -17,6 +17,14 @@ status: active
 
 > 由 Allen Institute for AI 发布的 agent 评测基准，评测 LLM agent 能否自主完成从真实研究代码库中拉取、配置并执行任务的全流程。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2409.07440](https://arxiv.org/abs/2409.07440)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SUPER（Setting Up and Executing tasks from research rePosItories）由 Allen Institute for AI（AI2）于 2024 年发布，收录于 EMNLP 2024 主会议论文集。它是第一个专门评测 LLM agent 在真实机器学习与自然语言处理研究仓库中"端到端完成任务"能力的基准。

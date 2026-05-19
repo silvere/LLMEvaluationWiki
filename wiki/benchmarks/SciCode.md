@@ -26,6 +26,15 @@ sources:
 
 > 包含338道科学研究级编程问题的评测基准，跨越数学、物理、化学、生物、材料科学等多个学科，要求模型具备真实科研人员水平的编程与领域知识。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2407.13168](https://arxiv.org/abs/2407.13168)
+- **官方主页**: [https://scicode-bench.github.io/](https://scicode-bench.github.io/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SciCode由Tian等人于2024年发布，针对科学研究场景下的代码编写能力进行评测。与DS-1000等数据科学编程基准不同，SciCode的题目来源于真实的科学研究需求，涵盖数值模拟、数据分析、算法实现等科研常见编程任务，要求模型具备相应学科的专业知识。

@@ -26,6 +26,15 @@ sources:
 
 > 由清华大学CodeGeeX团队发布的多语言代码评测基准，将HumanEval扩展至Python、Java、C++、Go、JavaScript五种编程语言，支持代码生成、代码翻译等多类任务。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2303.17568](https://arxiv.org/abs/2303.17568)
+- **官方主页**: [https://github.com/THUDM/CodeGeeX](https://github.com/THUDM/CodeGeeX)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 HumanEval-X由Zheng等人于2023年随CodeGeeX论文发布，是对OpenAI原版HumanEval的多语言扩展版本。原版HumanEval仅支持Python，而实际软件开发中需要多种语言的编程能力。HumanEval-X将原版164道题目扩展到5种编程语言的高质量实现，每种语言的题目均通过人工翻译和验证，确保各语言版本的语义一致性。

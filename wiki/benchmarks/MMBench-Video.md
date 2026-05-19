@@ -16,6 +16,14 @@ status: active
 
 > MMBench 系列的视频扩展版，通过自由形式问答和 GPT-4 评分系统评测视频多模态模型的综合理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.14515](https://arxiv.org/abs/2406.14515)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMBench-Video 由上海 AI 实验室于 2024 年提出，是广受认可的图像多模态基准 MMBench 的视频版本扩展。该基准采用 MMBench 体系的能力分类框架，将其延伸至视频理解场景，系统评测模型在感知、推理、知识等多维度的视频理解能力。

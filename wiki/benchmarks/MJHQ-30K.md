@@ -22,6 +22,15 @@ domain:
 
 > Playground AI 2023-12 随 Playground v2 模型一起发布的图像生成美学评测：30K 张来自 Midjourney 的高质量图像（10 类 × 3K），用 FID + aesthetic + CLIP score 三指标评估 text-to-image 模型的「美感」。是工业界 T2I 模型 launch 时常报的对照表。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **Hugging Face**: [https://huggingface.co/datasets/playgroundai/MJHQ-30K](https://huggingface.co/datasets/playgroundai/MJHQ-30K)
+- **官网**: [https://playground.com/blog/playground-v2](https://playground.com/blog/playground-v2)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **数据**：30K Midjourney 高质量图像

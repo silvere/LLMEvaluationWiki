@@ -17,6 +17,14 @@ status: active
 
 > 多学科视频理解基准，要求模型结合专业领域知识和视频内容进行推理，覆盖 30 个学科领域。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2412.04429](https://arxiv.org/abs/2412.04429)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMVU（Massive Multidisciplinary Video Understanding）于 2024 年底提出，是面向**专业领域视频理解**的综合评测基准。与通用视频理解基准不同，MMVU 强调领域专业知识与视频内容理解的深度结合，要求模型不仅能理解视频中发生了什么，还需具备相应专业知识才能正确作答。

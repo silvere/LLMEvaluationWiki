@@ -16,6 +16,14 @@ status: active
 
 > 针对大型语言模型安全对齐的多层次分类有害问题评测基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2402.05044](https://arxiv.org/abs/2402.05044)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SALAD-Bench 是由清华大学、人民大学等机构于 2024 年提出的 LLM 安全评测基准，包含超过 21,000 个精心设计的有害问题，覆盖 6 大类、16 中类、65 小类的细粒度安全分类体系。相比 AdvBench 等早期安全基准，SALAD-Bench 的规模更大、类别体系更系统、难度分层更细致。

@@ -24,6 +24,15 @@ sources: []
 
 > 测试模型对物理世界直觉和日常常识的理解能力的二选一问答基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1911.11641](https://arxiv.org/abs/1911.11641)
+- **官方主页**: [https://yonatanbisk.com/piqa/](https://yonatanbisk.com/piqa/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 PIQA（Physical Intuition QA）由 Bisk 等人于 2019 年提出（发表于 AAAI 2020），专注于测试模型对物理世界的直觉理解。与其他常识推理数据集不同，PIQA 特别关注**具身知识**（embodied knowledge），即关于物体属性、材料特性和物理操作的日常直觉，这类知识往往在文本语料中极少被明确描述。

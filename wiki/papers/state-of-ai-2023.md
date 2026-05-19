@@ -20,6 +20,10 @@ sources:
 
 # State of AI Report 2023
 
+> [!note] 本页为历史快照（2023 年度版）
+> 后续年度版本：[[state-of-ai-2024|State of AI Report 2024]] · [[state-of-ai-2025|State of AI Report 2025]]
+> 平行年度报告：[[ai-index-2024]] · [[ai-index-2025]] · [[ai-index-2026]]（Stanford HAI 系列）
+
 > 年度 State of AI Report 第六版，系统梳理 2023 年 AI 研究、产业和政策动态，重点关注 GPT-4 等大模型的能力突破、算力军备竞赛和 AI 安全治理的新进展。
 
 ## 核心主张

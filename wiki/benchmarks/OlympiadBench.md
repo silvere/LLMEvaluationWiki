@@ -26,6 +26,15 @@ sources:
 
 > 包含8952道中英文奥林匹克竞赛级别数学与物理题目的双语评测基准，用于评测大语言模型在高难度科学竞赛推理上的极限能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2402.14008](https://arxiv.org/abs/2402.14008)
+- **官方主页**: [https://github.com/OpenBMB/OlympiadBench](https://github.com/OpenBMB/OlympiadBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 OlympiadBench由He等人于2024年发布，收集了来自中国和国际数学奥林匹克（IMO）、物理奥林匹克（IPhO）及相关竞赛的真实题目，涵盖中英文两种语言。这是目前规模最大的奥林匹克竞赛级别双语科学推理基准之一。

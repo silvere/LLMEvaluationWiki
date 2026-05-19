@@ -24,6 +24,15 @@ sources: []
 
 > 基于 12 个细粒度技能维度的语言模型综合评测框架，支持人工和 LLM-as-Judge 两种评测方式。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.10928](https://arxiv.org/abs/2307.10928)
+- **官方主页**: [https://github.com/kaistAI/FLASK](https://github.com/kaistAI/FLASK)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FLASK 由 Ye 等人于 2023 年提出，来自韩国科学技术院（KAIST）。该框架的核心贡献是将语言模型的能力分解为 **12 个细粒度技能维度**，每道题都标注了评测所需的具体技能，实现了比传统"宏观平均"更精细的能力分析。

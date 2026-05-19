@@ -17,6 +17,14 @@ status: active
 
 > 由中国科学技术大学等机构发布的代码生成社会偏见评测基准，通过函数生成与单元测试生成两类任务，系统测量 LLM 在涉及敏感人口属性时是否产生歧视性代码输出（arXiv:2501.05396，2025）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2501.05396](https://arxiv.org/abs/2501.05396)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FairCoder（Evaluating Social Bias of LLMs in Code Generation）是专注于代码生成公平性评测的综合基准，于 2025 年 1 月发布于 arXiv。该工作针对一个被长期忽视的问题：当 LLM 生成涉及不同人口群体（性别、种族、年龄、社会经济地位等）的代码时，是否存在系统性偏见？

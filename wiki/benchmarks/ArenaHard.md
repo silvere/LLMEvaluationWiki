@@ -24,6 +24,15 @@ sources: []
 
 > 从 Chatbot Arena 中筛选的 500 道高质量、高难度指令，使用 GPT-4 Turbo 作为 Judge 进行自动评测。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.11939](https://arxiv.org/abs/2406.11939)
+- **官方主页**: [https://github.com/lmarena/arena-hard-auto](https://github.com/lmarena/arena-hard-auto)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Arena-Hard 由 Li 等人于 2024 年提出，来自加州大学伯克利分校 Sky Computing Lab。该基准从 Chatbot Arena 的真实用户查询中，通过严格的质量筛选机制提取出 500 道最具区分度的高难度题目。

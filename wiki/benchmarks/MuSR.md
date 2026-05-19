@@ -16,6 +16,14 @@ status: active
 
 > 多步骤软推理（Multistep Soft Reasoning）基准，通过算法生成包含长篇叙事的推理谜题，要求模型在复杂语境中追踪多个实体并进行链式推理。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2310.16049](https://arxiv.org/abs/2310.16049)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MuSR（Multistep Soft Reasoning）由 Sprague 等人于 2023 年发布，采用算法生成（algorithmically generated）方式构建评测数据，确保题目不会出现在模型训练数据中，从根本上规避数据污染问题。数据集包含三类推理场景：**谋杀悬疑推理**（murder mystery，给定案情描述，判断嫌疑人）、**团队合作任务分配**（team allocation，根据人员能力和约束条件分配任务）、**物体空间追踪**（object placement，追踪多步骤操作后物体的最终位置）。

@@ -16,6 +16,14 @@ status: active
 
 > 由自然图像构成的对抗性 ImageNet 测试集，专门收录令标准模型大量失误的真实困难样本。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1907.07174](https://arxiv.org/abs/1907.07174)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ImageNet-A（Natural Adversarial Examples）由 [[Dan-Hendrycks|Dan Hendrycks]] 等人于 2021 年提出，包含 **7,500 张**从互联网收集的真实自然图像，这些图像对标准 ImageNet 训练的 ResNet-50 模型造成了严重失误（模型准确率接近随机水平），但对人类而言并不困难。

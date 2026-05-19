@@ -23,6 +23,15 @@ sources:
 
 # RealToxicityPrompts：真实文本毒性触发评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2009.11462](https://arxiv.org/abs/2009.11462)
+- **官方主页**: [https://github.com/allenai/real-toxicity-prompts](https://github.com/allenai/real-toxicity-prompts)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 RealToxicityPrompts 是 2020 年由 Allen Institute for AI 提出的语言模型毒性评测基准，发表于 EMNLP 2020 Findings。它包含约 **100,000 条**来自真实互联网文本的提示词，旨在评测语言模型在真实提示词诱导下产生有毒内容的倾向，是语言模型安全研究领域的奠基性工作之一。

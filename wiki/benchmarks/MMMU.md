@@ -18,11 +18,37 @@ format: multiple-choice
 status: active
 saturation_threshold: 0.75
 sources: [""]
+sota:
+  - score: "85.0"
+    model: "Qwen3.5"
+    harness: null
+    notes: "2026-02"
 ---
 
 # MMMU（Massive Multitask Multi-modal Understanding）
 
 > 覆盖 30 个学科的专家级多模态评测基准，用于测试模型真正理解图像与文字结合内容的能力。
+
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Qwen3.5]] | — | 85.0 | — | 2026-02 | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2311.16502](https://arxiv.org/abs/2311.16502)
+- **官方主页**: [https://mmmu-benchmark.github.io](https://mmmu-benchmark.github.io)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

@@ -16,6 +16,14 @@ status: active
 
 > 语言约束生成评测基准，要求模型在严格遵守词汇、结构等约束条件的前提下生成文本。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.08689](https://arxiv.org/abs/2307.08689)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Collie（Constraint-rich Language Generation）由斯坦福大学团队于 2023 年提出（论文发布于 2023 年，更新的 Hard 版本延伸至 2024 年），是专为评测语言模型在**约束条件生成**任务上的遵循能力设计的基准。"Hard"子集专门筛选出对当时最强模型仍构成显著挑战的高难度约束生成任务。

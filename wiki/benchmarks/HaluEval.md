@@ -24,6 +24,15 @@ sources: []
 
 > 大规模幻觉评测基准，包含 35k 人工标注样本，系统评测语言模型在不同任务场景下的幻觉倾向。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.11747](https://arxiv.org/abs/2305.11747)
+- **官方主页**: [https://github.com/RUCAIBox/HaluEval](https://github.com/RUCAIBox/HaluEval)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 HaluEval 由 Li 等人于 2023 年提出，来自中国人民大学（发表于 EMNLP 2023）。该基准系统性地研究语言模型的**幻觉问题**（hallucination），构建了大规模的幻觉样本数据集，并提供了一套评测框架来衡量模型识别和避免幻觉的能力。

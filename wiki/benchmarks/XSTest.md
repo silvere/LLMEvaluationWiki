@@ -23,6 +23,15 @@ sources:
 
 # XSTest：过度拒绝（Exaggerated Safety）评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2308.01263](https://arxiv.org/abs/2308.01263)
+- **官方主页**: [https://github.com/paul-rottger/exaggerated-safety](https://github.com/paul-rottger/exaggerated-safety)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 XSTest（eXaggerated Safety Test）是 2023 年提出的专门评测大语言模型**过度拒绝（Exaggerated Safety）**问题的基准，发表于 NAACL 2024。它包含 **250 道**看似有害但实际无害的安全问题，旨在揭示模型因过度谨慎而拒绝正当合理请求的问题——这是安全对齐研究中与有害输出同等重要但常被忽视的另一面。

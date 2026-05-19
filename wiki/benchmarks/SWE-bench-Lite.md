@@ -26,6 +26,15 @@ sources:
 
 > SWE-bench的300道精选子集，筛选了"易于确认"（self-contained）的任务，降低了评测成本同时保持了基准的代表性，是最常用的SWE-bench评测变体之一。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2310.01848](https://arxiv.org/abs/2310.01848)
+- **官方主页**: [https://www.swebench.com/](https://www.swebench.com/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SWE-bench Lite是从原版SWE-bench的2294个任务中筛选出的300个任务子集，由SWE-bench原作者团队发布。筛选标准为"self-contained"（自包含）任务：即修复所需的信息主要包含在Issue描述和相关代码文件中，不依赖外部数据库、网络资源或复杂的环境配置。

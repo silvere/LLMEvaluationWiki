@@ -17,6 +17,14 @@ status: active
 
 > 知识与推理复杂组合基准（Knowledge-Oriented Reasoning Benchmark），通过多步骤、跨领域知识推理链评测模型的深层推理与知识整合能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.23180](https://arxiv.org/abs/2410.23180)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 KORBench（Knowledge-Oriented Reasoning Benchmark）于 2024 年发布，针对当前 LLM 评测中"知识"与"推理"往往被单独考察的问题，设计了需要两者深度融合的复杂推理任务。该基准的核心假设是：真实世界的专业推理任务往往要求模型同时调用跨领域事实知识并进行多步逻辑推导，单维度测试无法真实反映模型能力。

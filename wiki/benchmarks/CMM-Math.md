@@ -17,6 +17,14 @@ status: active
 
 > 面向中文多模态数学推理的大规模评测与训练数据集，覆盖中国小学至高中共 12 个年级约 28,000 道含图数学题，由 ACM MM 2025 收录。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2409.02834](https://arxiv.org/abs/2409.02834)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CMM-Math（Chinese Multimodal Math）于 2024 年 9 月发布，是首个专门针对中文多模态数学推理场景的大规模数据集，填补了现有多模态数学基准几乎全为英文的空白。该工作由来自国内外高校和研究机构的研究团队联合完成，最终被 ACM MM 2025 收录。

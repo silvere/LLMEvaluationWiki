@@ -18,6 +18,14 @@ status: active
 
 > 中文多维度综合评测基准（Comprehensive Understanding and Benchmarking Evaluation），从知识、推理、语言理解、安全等多个维度系统评测中文大语言模型。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2408.02718](https://arxiv.org/abs/2408.02718)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CUBE（Comprehensive Understanding and Benchmarking Evaluation）由国内研究团队于 2024 年发布，旨在填补中文 LLM 评测中缺乏系统性、多维度综合评测框架的空白。与 C-Eval、CMMLU 等专注知识问答的基准不同，CUBE 试图构建更接近真实应用场景的全面评测体系。

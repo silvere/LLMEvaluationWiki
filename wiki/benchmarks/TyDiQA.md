@@ -23,6 +23,16 @@ sources:
 
 # TyDi QA
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2003.05002](https://arxiv.org/abs/2003.05002)
+- **官方主页**: [https://github.com/google-research-datasets/tydiqa](https://github.com/google-research-datasets/tydiqa)
+- **官网**: [Clark, J.H., et al. (2020). TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages. TACL 2020.](Clark, J.H., et al. (2020). TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages. TACL 2020.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 TyDi QA（Typologically Diverse Question Answering）是由 Google Research 于 2020 年发布的多语言信息检索型问答基准，专注于覆盖**类型学多样性（typological diversity）**的语言——即在语言结构（语序、形态学、书写系统等）上尽可能不同的语言组合。这一设计克服了许多多语言数据集中语言分布偏向印欧语系的问题。

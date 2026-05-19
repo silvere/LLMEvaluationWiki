@@ -17,6 +17,14 @@ status: active
 
 > 多模态版"大海捞针"测试，评测多模态大模型在大量图像中精准定位目标图像信息的检索能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.07230](https://arxiv.org/abs/2406.07230)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMNeedle（Multimodal Needle-in-a-Haystack）于 2024 年提出，将自然语言处理领域著名的"大海捞针"（NIAH）测试扩展到多模态场景。原版 NIAH 测试评测语言模型在超长文本中检索特定信息的能力，而 MMNeedle 将此概念迁移至图像序列：给定一组包含若干张图像（"草堆"），以及一个关于其中某张图像的特定问题（"针"），评测模型能否准确找到并回答该问题。

@@ -26,6 +26,15 @@ sources:
 
 > MATH基准测试集的500题精选子集，由OpenAI的Lightman等人在"Let's Verify Step by Step"论文中引入，已成为评测数学推理能力的标准子集之一。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.20050](https://arxiv.org/abs/2305.20050)
+- **GitHub**: [https://github.com/openai/prm800k](https://github.com/openai/prm800k)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MATH500不是独立的新基准，而是从Hendrycks等人发布的原版MATH数据集（12,500道题）中精心挑选的500道题目子集，由OpenAI研究团队在2023年的过程奖励模型（PRM）研究论文中提出。

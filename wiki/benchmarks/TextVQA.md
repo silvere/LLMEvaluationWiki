@@ -23,6 +23,15 @@ sources:
 
 # TextVQA：文字感知视觉问答基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1904.08920](https://arxiv.org/abs/1904.08920)
+- **官方主页**: [https://textvqa.org](https://textvqa.org)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 TextVQA 是 2019 年由 Meta AI（Facebook AI Research）提出的视觉问答基准，发表于 CVPR 2019。它专门评测模型**读取和推理图像中出现的文字**的能力，包含 **45,336 道**问题，来自 28,408 张自然场景图像。TextVQA 的提出揭示了传统 VQA 模型忽视图像内文字信息的重要局限，推动了 OCR 感知多模态研究方向的发展。

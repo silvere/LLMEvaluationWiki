@@ -17,6 +17,14 @@ status: active
 
 > 覆盖多种语言的多任务推理评测基准，旨在系统衡量大语言模型在非英语环境下的推理能力退化程度。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2310.17317](https://arxiv.org/abs/2310.17317)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MARBLE（Multilingual Argument Reasoning Benchmark for Language Evaluation）由 Schmitt 等人于 2023 年发布，专注于评测模型在多种语言下的推理能力，而不仅仅是知识翻译。MARBLE 的核心问题是：当评测语言从英语切换为其他语言时，模型的推理性能会下降多少，以及这种下降是源于语言理解障碍还是推理能力本身的语言敏感性。

@@ -10,11 +10,56 @@ domain:
 year: 2024
 arxiv_id: "2501.01257"
 status: active
+sota:
+  - score: "3206"
+    model: "DeepSeek-V4-Pro"
+    harness: null
+    notes: "Elo（2026-04）"
+  - score: "3020"
+    model: "Doubao-Seed-2.0"
+    harness: null
+    notes: "Elo (Pro)"
+  - score: "2029 (96.3 percentile)"
+    model: "DeepSeek-R1"
+    harness: null
+    notes: "Elo"
+  - score: "94 percentile"
+    model: "Kimi-K1.5"
+    harness: null
+    notes: "Elo"
+  - score: "约 86.0 percentile"
+    model: "Doubao-Seed-1.6"
+    harness: null
+    notes: "Elo"
 ---
 
 # Codeforces
 
 > 以 Codeforces 竞技编程平台真题为基础、采用 ELO 评分系统评测 LLM 竞技编程能力上限的基准体系（代表性实现：CodeElo）。
+
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[DeepSeek-V4-Pro]] | — | 3206 | — | Elo（2026-04） | — |
+| 2 | [[Doubao-Seed-2.0]] | — | 3020 | — | Elo (Pro) | — |
+| 3 | [[DeepSeek-R1]] | — | 2029 (96.3 percentile) | — | Elo | — |
+| 4 | [[Kimi-K1.5]] | — | 94 percentile | — | Elo | — |
+| 5 | [[Doubao-Seed-1.6]] | — | 约 86.0 percentile | — | Elo | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2501.01257](https://arxiv.org/abs/2501.01257)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

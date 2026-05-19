@@ -26,6 +26,15 @@ sources:
 
 > 包含1140道编程任务的大规模代码评测基准，涵盖139个Python库的实际调用场景，难度显著高于HumanEval，更贴近真实软件开发需求。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.15877](https://arxiv.org/abs/2406.15877)
+- **官方主页**: [https://bigcode-bench.github.io/](https://bigcode-bench.github.io/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BigCodeBench由BigCode社区的Zhuo等人于2024年发布，旨在弥补HumanEval、MBPP等早期代码基准在难度和多样性上的不足。其设计理念是模拟程序员在实际开发中的工作场景：需要调用第三方库、处理复杂API、完成有实际意义的功能模块。

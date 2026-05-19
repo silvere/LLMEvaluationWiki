@@ -16,6 +16,14 @@ status: active
 
 > RefCOCO 的 Google 版本，采用独立标注流程，生成更长、更自然的指代表达。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1608.00272](https://arxiv.org/abs/1608.00272)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 RefCOCOg 是 RefCOCO 家族的第三个成员，由 Google 团队在与 RefCOCO/RefCOCO+ 相同时期独立标注。其核心区别在于**标注流程**：采用非游戏化的 Amazon Mechanical Turk 任务，标注者有更充裕的时间撰写描述，因此生成的指代表达**更长、更自然**，平均每条描述约 8.4 个单词（RefCOCO 约 3.6 个词，RefCOCO+ 约 3.5 个词）。

@@ -24,6 +24,15 @@ sources: []
 
 > 基于真实搜索查询的是非题数据集，每题附有相关文章段落，测试阅读理解与判断能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1905.10044](https://arxiv.org/abs/1905.10044)
+- **官方主页**: [https://github.com/google-research-datasets/boolean-questions](https://github.com/google-research-datasets/boolean-questions)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BoolQ 由 Clark 等人于 2019 年提出，来自 Google Research。数据集的核心特点是**自然性**——题目均来自真实用户在 Google 搜索中提出的是非问题，因此具有很高的现实意义和多样性。每道题由三部分组成：一个是非疑问句（question）、一段相关 Wikipedia 文章段落（passage），以及答案（True/False）。

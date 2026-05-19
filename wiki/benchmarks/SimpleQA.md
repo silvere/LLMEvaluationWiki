@@ -24,6 +24,14 @@ sources: [""]
 
 > OpenAI 设计的事实性问答基准，用于测试模型在有明确答案的问题上的幻觉程度，GPT-4o 仅得 38.2%。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://openai.com/research/simpleqa](https://openai.com/research/simpleqa)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SimpleQA 由 OpenAI 于 2024 年发布，目标是建立一个衡量大语言模型"事实幻觉"（factual hallucination）程度的简洁基准。与 TruthfulQA 测试模型是否重复常见错误信念不同，SimpleQA 的重点是：对于有唯一明确答案的事实性问题，模型能否给出正确回答，还是会自信地编造错误答案？

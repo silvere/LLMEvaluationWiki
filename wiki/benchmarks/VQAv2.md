@@ -23,6 +23,15 @@ sources:
 
 # VQAv2：视觉问答平衡数据集 v2
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1612.00837](https://arxiv.org/abs/1612.00837)
+- **官方主页**: [https://visualqa.org](https://visualqa.org)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 VQAv2 是 2017 年由 Goyal 等人提出的视觉问答数据集，发表于 CVPR 2017。它是原始 VQA（VQA v1）的改进版本，通过**配对平衡（Balanced Pairs）**机制消除了语言先验偏见，共包含约 **215 万道**问答对，基于 COCO 图像数据集构建。VQAv2 是视觉问答领域最重要的基准之一，长期作为多模态模型的标准评测集。

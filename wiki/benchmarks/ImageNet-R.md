@@ -16,6 +16,14 @@ status: active
 
 > ImageNet 的多渲染风格测试集，收录艺术画、卡通、素描等多种非照片渲染形式，测试模型对风格分布偏移的鲁棒性。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2006.16668](https://arxiv.org/abs/2006.16668)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ImageNet-R（Renditions）由 [[Dan-Hendrycks|Dan Hendrycks]] 等人于 2021 年提出，包含 **30,000 张**来自 ImageNet 200 个类别的多种渲染风格图像，涵盖艺术画（art）、卡通（cartoon）、素描（sketch）、刺绣（embroidery）、折纸（origami）、玩具（toy）、雕塑（sculpture）等多达 30 种视觉风格。

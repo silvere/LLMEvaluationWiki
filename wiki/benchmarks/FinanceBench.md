@@ -24,6 +24,15 @@ sources: []
 
 > 基于真实上市公司财务报告的金融问答基准，评测模型对财务文档的准确理解和数值推理能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2311.11944](https://arxiv.org/abs/2311.11944)
+- **官方主页**: [https://github.com/patronus-ai/financebench](https://github.com/patronus-ai/financebench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FinanceBench 由 Islam 等人于 2023 年提出，来自 Patronus AI。该数据集专注于评测语言模型对**真实金融文档**（主要是上市公司 10-K、10-Q 等 SEC 报告）的理解和推理能力，是金融 AI 评测领域的重要基准。

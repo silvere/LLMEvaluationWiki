@@ -16,6 +16,14 @@ status: active
 
 > 评测 LLM 为真实 GitHub Issue 编写有效测试用例（而非直接修复）能力的代码基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.12952](https://arxiv.org/abs/2406.12952)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SWT-Bench（Software Testing Benchmark）是 2024 年提出的代码测试生成评测基准，与 SWE-Bench 关注代码修复不同，SWT-Bench 专注于评测 LLM 能否为真实的 GitHub Issue 编写能够**复现 Bug 的测试用例**。这一任务反映了软件开发中"测试先行"（Test-Driven Development）的最佳实践——在修复 Bug 前，先编写能够暴露问题的测试。

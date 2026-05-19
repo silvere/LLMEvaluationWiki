@@ -26,6 +26,15 @@ sources:
 
 > 包含12751个SQL问题的大规模Text-to-SQL基准，使用真实业务数据库，难度和复杂度显著高于Spider，是当前最具挑战性的Text-to-SQL基准之一。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.03111](https://arxiv.org/abs/2305.03111)
+- **官方主页**: [https://bird-bench.github.io/](https://bird-bench.github.io/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BIRD由Li等人于2023年发布，旨在弥补Spider等基准与实际工业应用之间的差距。BIRD的核心特点是使用**真实的大规模数据库**：每个数据库包含真实业务数据，平均有3.33个表但包含大量数据行，使得模型需要理解数据的实际分布和业务含义才能生成正确的SQL。

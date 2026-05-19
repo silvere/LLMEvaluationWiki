@@ -10,11 +10,35 @@ domain:
 year: 2024
 arxiv_id: "2404.07972"
 status: active
+sota:
+  - score: "约 50-61%"
+    model: "Claude-Sonnet-4.5"
+    harness: null
 ---
 
 # OSWorld
 
 > 在真实计算机桌面环境中评测 AI 代理完成多步 GUI 操作任务的能力。
+
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Claude-Sonnet-4.5]] | — | 约 50-61% | — |  | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2404.07972](https://arxiv.org/abs/2404.07972)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

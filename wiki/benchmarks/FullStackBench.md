@@ -16,6 +16,14 @@ status: active
 
 > 覆盖前端、后端、数据库、DevOps 全栈技术栈的多语言代码生成综合评测基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2412.00535](https://arxiv.org/abs/2412.00535)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FullStackBench 是 2024 年底发布的全栈代码生成评测基准，旨在全面评测 LLM 在完整软件工程技术栈中的代码能力。与现有代码基准主要聚焦于 Python 算法题不同，FullStackBench 覆盖了 **16 种编程语言**（Python、JavaScript、TypeScript、Java、C++、Go、Rust、SQL、HTML/CSS 等）和 **4 大技术领域**（前端开发、后端开发、数据库操作、DevOps/系统脚本），是迄今覆盖技术栈最广的代码评测基准。

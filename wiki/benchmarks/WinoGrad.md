@@ -23,6 +23,15 @@ sources:
 
 # Winograd Schema Challenge
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://cs.nyu.edu/~davise/papers/WinogradSchemas/WS.html](https://cs.nyu.edu/~davise/papers/WinogradSchemas/WS.html)
+- **官网**: [Levesque, H., Davis, E., & Morgenstern, L. (2012). The Winograd Schema Challenge. AAAI Spring Symposium: Logical Formalizations of Commonsense Reasoning.](Levesque, H., Davis, E., & Morgenstern, L. (2012). The Winograd Schema Challenge. AAAI Spring Symposium: Logical Formalizations of Commonsense Reasoning.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Winograd Schema Challenge（WSC）是一个经典的常识推理基准，由 Hector J. Levesque 等人于 2012 年提出。该基准专注于测试机器在理解代词指代消歧（coreference resolution）方面的能力，被认为是图灵测试的替代性评测方案之一。

@@ -24,6 +24,15 @@ sources: []
 
 > 基于对话形式的阅读理解数据集，要求模型在多轮对话上下文中连续理解和回答问题。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1808.07042](https://arxiv.org/abs/1808.07042)
+- **官方主页**: [https://stanfordnlp.github.io/coqa/](https://stanfordnlp.github.io/coqa/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CoQA 由 Reddy 等人于 2019 年提出（发表于 TACL 2019），来自斯坦福大学 NLP 组。该数据集的核心创新是将阅读理解与**对话上下文**结合：每个对话包含多轮问答，后续问题通常依赖前面对话内容，模型需要理解对话历史才能正确回答。

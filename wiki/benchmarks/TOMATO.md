@@ -16,6 +16,14 @@ status: active
 
 > 时序视频定位综合评测基准，涵盖多种时序推理场景，测试多模态模型的精细时序理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.16871](https://arxiv.org/abs/2406.16871)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 TOMATO（Temporal Ordering, Motional Alignment, and Temporal Awareness Observations）于 2024 年发布，是专为评测多模态大语言模型**细粒度时序视频理解**能力设计的综合基准。TOMATO 包含多种时序推理子任务，涵盖动作顺序判断、运动方向识别、时间点问答、时序关系推断等。

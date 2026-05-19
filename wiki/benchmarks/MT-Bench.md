@@ -24,6 +24,15 @@ sources: [""]
 
 > 用 GPT-4 作为评判的多轮对话质量基准，最早系统性验证 LLM-as-Judge 范式，开创聊天助手能力评测新方向。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2306.05685](https://arxiv.org/abs/2306.05685)
+- **官方主页**: [https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MT-Bench 由 LMSYS 团队（Zheng et al.）于 2023 年发布，与 Chatbot Arena 同一论文提出。其目标是构建一套可自动化、可扩展的对话质量评测方案，用以替代昂贵且不可扩展的人类标注评分。

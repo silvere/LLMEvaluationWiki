@@ -21,6 +21,15 @@ domain:
 
 > Stanford Vision and Learning Lab（[[Fei-Fei-Li]] 等）2022 推出、2024-03 v2 发布的 embodied AI benchmark：1,000 个日常家务任务（来自人类时间使用调查）+ 50 个场景 + 5,000+ 物体，搭配 OmniGibson 物理仿真。是「real-world transfer 友好的家务机器人」评测金标准，2025 NeurIPS 设 BEHAVIOR Challenge。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv**: [https://arxiv.org/abs/2403.09227](https://arxiv.org/abs/2403.09227)
+- **GitHub**: [https://github.com/StanfordVL/BEHAVIOR-1K](https://github.com/StanfordVL/BEHAVIOR-1K)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **任务数**：1,000 个日常活动（cleaning / cooking / organizing 等）

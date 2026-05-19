@@ -23,6 +23,16 @@ sources:
 
 # CREAK
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2109.01653](https://arxiv.org/abs/2109.01653)
+- **官方主页**: [https://github.com/yasumasaonoe/creak](https://github.com/yasumasaonoe/creak)
+- **官网**: [Onoe, Y., et al. (2021). CREAK: A Dataset for Commonsense Reasoning over Entity Knowledge. NeurIPS 2021 Datasets and Benchmarks Track.](Onoe, Y., et al. (2021). CREAK: A Dataset for Commonsense Reasoning over Entity Knowledge. NeurIPS 2021 Datasets and Benchmarks Track.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CREAK（Commonsense Reasoning over Entity Knowledge）是由 University of Texas at Austin 等机构于 2021 年发布的常识推理基准，专注于**实体知识与常识推理的交叉领域**。该数据集要求模型判断涉及具体实体（如人物、地点、事物）的陈述的真假，其中正确回答不仅依赖事实知识，还需要结合常识进行推理。

@@ -17,6 +17,14 @@ status: active
 
 > 企业真实工作流代理评测基准，模拟一家软件公司的日常任务环境，评测 AI 代理在代码开发、项目管理、文档协作等实际工作场景中的自主完成能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2412.14161](https://arxiv.org/abs/2412.14161)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 TheAgentCompany 由 CMU、UIUC 等机构于 2024 年发布，是迄今为止最贴近真实软件企业工作环境的代理评测基准。该基准构建了一个完整的模拟软件公司环境，配备真实工具栈：GitLab（代码仓库）、Jira（项目管理）、Confluence（文档协作）、Slack（团队沟通）、以及标准开发环境（Shell、浏览器、IDE）。

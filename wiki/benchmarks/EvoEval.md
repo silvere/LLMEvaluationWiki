@@ -26,6 +26,15 @@ sources:
 
 > 通过自动化"进化"手段从HumanEval衍生出多个变体套件的代码评测基准，用于揭示模型在原版HumanEval上的表现是否存在过拟合或题目泄漏问题。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://evo-eval.github.io/](https://evo-eval.github.io/)
+- **GitHub**: [https://github.com/evo-eval/evoeval](https://github.com/evo-eval/evoeval)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 EvoEval由Xia等人于2024年发布，其核心思路是使用LLM对HumanEval的原始题目进行语义等价变换，生成多个难度和风格各异的变体题目集，从而构建更难以被记忆、更能反映真实泛化能力的评测套件。

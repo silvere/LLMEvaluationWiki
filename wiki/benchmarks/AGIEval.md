@@ -24,6 +24,15 @@ sources: []
 
 > 基于人类权威考试（中国高考、SAT、LSAT、GRE、GMAT 等）的双语 AGI 能力评测基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2304.06364](https://arxiv.org/abs/2304.06364)
+- **官方主页**: [https://github.com/microsoft/AGIEval](https://github.com/microsoft/AGIEval)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AGIEval 由 Zhong 等人于 2023 年提出（来自微软研究院，发表于 EMNLP 2023 findings）。该数据集的核心理念是：**人类设计的权威考试是评测 AGI 能力的天然基准**——这些考试经过专业设计和严格验证，已知对人类有效，且涵盖多种认知能力维度。

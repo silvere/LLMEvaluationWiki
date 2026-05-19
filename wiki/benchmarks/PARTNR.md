@@ -17,6 +17,14 @@ status: active
 
 > Meta 发布的具身协作机器人任务规划评测基准，评测 AI 代理与人类（或另一个机器人代理）协同完成家庭场景中复杂物理任务的规划和执行能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2411.00081](https://arxiv.org/abs/2411.00081)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 PARTNR（Planning and Reasoning for Tasks with Non-Rigid Requirements）由 Meta FAIR 于 2024 年发布，是具身 AI（Embodied AI）领域最具挑战性的协作任务基准之一。与传统机器人任务评测专注单智能体独立操作不同，PARTNR 专门评测**人机协作（Human-Robot Collaboration）和多智能体协调**场景。

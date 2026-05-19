@@ -16,6 +16,14 @@ status: active
 
 > 面向文本生成视频模型的综合评测框架，覆盖视觉质量、文本对齐、动作合理性等多维度。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2310.11440](https://arxiv.org/abs/2310.11440)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 EvalCrafter 是 2024 年（arXiv 预印于 2023 年底）发布的文本生成视频（Text-to-Video, T2V）综合评测基准。它针对 T2V 模型的评测设计了一套多维度指标体系，超越了简单的 FID/FVD 指标，从视觉质量、运动流畅性、文本语义对齐、动作合理性等多个角度系统评估生成视频的质量。

@@ -24,6 +24,15 @@ sources: [""]
 
 > 测试模型是否会复现人类常见错误信念的幻觉评测基准，同时评估回答的真实性与信息量两个维度。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2109.07958](https://arxiv.org/abs/2109.07958)
+- **官方主页**: [https://github.com/sylinrl/TruthfulQA](https://github.com/sylinrl/TruthfulQA)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 TruthfulQA 由 Lin et al. 于 2022 年发布，是最早专门针对大语言模型"幻觉"（hallucination）问题进行系统性评测的基准之一。其设计出发点是一个反直觉的观察：规模更大、能力更强的语言模型，在某些特定问题上反而更容易产生听起来合理但实际错误的回答。

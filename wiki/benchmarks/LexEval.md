@@ -17,6 +17,14 @@ status: active
 
 > 由中国科学技术大学等机构发布的综合性中文法律基准，收录 23 项子任务、14,150 道题，是迄今规模最大的中文法律 LLM 评测数据集，已被 NeurIPS 2024 收录。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2409.20288](https://arxiv.org/abs/2409.20288)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LexEval（A Comprehensive Chinese Legal Benchmark for Evaluating Large Language Models）是专为评估大语言模型在中文法律领域综合能力而设计的标准化基准。该基准于 2024 年发布并被 NeurIPS 2024 数据集与基准跟踪录用，是目前最全面的中文法律 LLM 评测框架。

@@ -18,11 +18,36 @@ format: multiple-choice
 status: active
 saturation_threshold: 0.85
 sources: [""]
+sota:
+  - score: "约 89.2%"
+    model: "Doubao-1.5-Pro"
+    harness: null
 ---
 
 # C-Eval
 
 > 针对中文语言模型的综合知识评测基准，覆盖 52 个学科，是 MMLU 在中文语境下的对应版本。
+
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Doubao-1.5-Pro]] | — | 约 89.2% | — |  | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.08322](https://arxiv.org/abs/2305.08322)
+- **官方主页**: [https://cevalbenchmark.com](https://cevalbenchmark.com)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

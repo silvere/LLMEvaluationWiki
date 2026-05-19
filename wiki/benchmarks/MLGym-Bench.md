@@ -18,6 +18,14 @@ status: active
 
 > Meta 发布的机器学习科研 Agent 评测框架与基准，包含 13 个真实 ML 科研任务，评测 AI Agent 进行模型训练、实验设计、超参搜索等全流程科研工作的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2502.14499](https://arxiv.org/abs/2502.14499)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MLGym-Bench 于 2025 年 2 月发布，是 Meta FAIR 研究团队推出的首个将机器学习（ML）科研任务形式化为 Gym 环境的评测框架与基准。其目标不仅是评测现有前沿 LLM 在 ML 科研任务上的能力，还为训练更强的科研 Agent 提供可扩展的强化学习环境。

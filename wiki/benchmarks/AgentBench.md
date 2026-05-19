@@ -23,6 +23,16 @@ sources:
 
 # AgentBench
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2308.03688](https://arxiv.org/abs/2308.03688)
+- **官方主页**: [https://llmbench.ai/agent](https://llmbench.ai/agent)
+- **官网**: [Liu, X., et al. (2023). AgentBench: Evaluating LLMs as Agents. ICLR 2024.](Liu, X., et al. (2023). AgentBench: Evaluating LLMs as Agents. ICLR 2024.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AgentBench 是由清华大学等机构于 2023 年提出的综合性智能代理（LLM Agent）评测基准，通过 **8 个不同环境**系统评测大型语言模型作为自主代理的综合能力。AgentBench 是首个对多种代理场景进行统一规范化评测的基准之一，揭示了开源 LLM 与商业 API 模型之间的显著能力差距。

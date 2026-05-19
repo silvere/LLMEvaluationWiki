@@ -19,6 +19,14 @@ aliases:
 
 > 面向中文长文本的"大海捞针"（Needle-in-Haystack）评测基准，系统评估大语言模型在超长上下文中定位和检索关键信息的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2407.11963](https://arxiv.org/abs/2407.11963)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 NeedleBench 由上海 AI 实验室于 2024 年发布，是专为中文设计的长上下文检索评测框架。其核心灵感来自 Needle-in-a-Haystack（NIH）测试范式：在大量无关背景文本（"干草堆"）中嵌入关键信息片段（"针"），要求模型准确检索。

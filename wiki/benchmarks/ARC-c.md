@@ -20,6 +20,14 @@ status: saturated
 
 > ARC（AI2 Reasoning Challenge）数据集中的困难子集，包含约 1,172 道无法通过简单检索或词频方法回答的科学推理题，是评测中小型语言模型推理能力的经典基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1803.05457](https://arxiv.org/abs/1803.05457)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ARC-Challenge（常缩写为 ARC-c）是 [[ARC]] 数据集的困难子集。ARC 由 Clark 等人于 2018 年发布，来自 Allen Institute for AI（AI2），完整数据集包含约 7,787 道美国小学至初中科学考试题，分为 Easy（ARC-e）和 Challenge（ARC-c）两个子集。

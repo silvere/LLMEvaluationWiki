@@ -17,6 +17,14 @@ status: active
 
 > 首个系统评测大型视觉语言模型多图推理能力的综合基准，包含 7 种多图关系类型、52 项任务、77K 图像与 11K 多选题，由上海人工智能实验室等机构于 2024 年发布，ICLR 2025 收录。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2408.02718](https://arxiv.org/abs/2408.02718)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMIU（Multimodal Multi-Image Understanding）于 2024 年 8 月发布，是迄今规模最大、类别最全面的多图多模态理解评测基准。该工作由来自上海人工智能实验室、香港大学等机构的研究者联合完成，并于 2025 年被 ICLR 收录。

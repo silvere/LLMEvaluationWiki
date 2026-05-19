@@ -24,6 +24,15 @@ sources: []
 
 > 基于社交互动场景的常识推理基准，测试模型对人类社会行为、意图和情感的理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1904.09728](https://arxiv.org/abs/1904.09728)
+- **官方主页**: [https://leaderboard.allenai.org/socialiqa/submissions/public](https://leaderboard.allenai.org/socialiqa/submissions/public)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SocialIQA 由 Sap 等人于 2019 年提出（发表于 EMNLP 2019），专注于评测**社交智能**（social intelligence）——即对人类在社交场景中的行为、动机、情感和影响的理解能力。这是其区别于其他常识推理数据集的核心特点。

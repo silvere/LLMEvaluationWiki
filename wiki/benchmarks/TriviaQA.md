@@ -24,6 +24,15 @@ sources: []
 
 > 大规模三方组合问答数据集，包含问题、答案及多个支持文档，用于评测开放域阅读理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1705.03551](https://arxiv.org/abs/1705.03551)
+- **官方主页**: [http://nlp.cs.washington.edu/triviaqa/](http://nlp.cs.washington.edu/triviaqa/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 TriviaQA 由 Joshi 等人于 2017 年提出（发表于 ACL 2017），来自华盛顿大学。数据集的构建方式独特：首先从公开的 trivia 网站（竞猜题来源）收集问题和答案对，再通过搜索引擎和 Wikipedia 为每道题找到支持证据文档，形成"问题-答案-证据"三元组。

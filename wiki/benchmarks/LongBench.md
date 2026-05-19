@@ -24,6 +24,15 @@ sources: []
 
 > 首个中英文双语长文本理解评测基准，包含 21 个子任务，平均上下文长度约 14k tokens。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2308.14508](https://arxiv.org/abs/2308.14508)
+- **官方主页**: [https://github.com/THUDM/LongBench](https://github.com/THUDM/LongBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LongBench 由 Bai 等人于 2023 年提出，来自清华大学（发表于 ACL 2024）。该基准是最早系统性评测大型语言模型**长文本理解能力**的综合性基准之一，填补了当时缺乏标准化长上下文评测工具的空白。

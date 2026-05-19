@@ -23,6 +23,15 @@ sources:
 
 # MME：多模态大模型综合评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2306.13394](https://arxiv.org/abs/2306.13394)
+- **官方主页**: [https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MME（Multimodal Large Language Model Evaluation）是 2023 年由 Fu 等人提出的多模态大语言模型综合评测基准。它是最早系统化评测多模态大模型（如 GPT-4V、LLaVA 等）的基准之一，在学术界被广泛引用，成为多模态模型对比分析的标准参照。

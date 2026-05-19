@@ -18,6 +18,14 @@ status: active
 
 > 由 Google DeepMind 发布的物理直觉视频推理基准，通过真实物理场景视频测试多模态模型对刚体碰撞、流体运动、热力学等物理规律的直觉理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2501.05040](https://arxiv.org/abs/2501.05040)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Physics-IQ（2025，Google DeepMind）是专门评测多模态大模型**物理世界直觉推理**能力的视频基准。不同于纯文本物理题，Physics-IQ 要求模型观看真实拍摄的物理实验视频，然后回答关于物理现象的预测性问题（如："球落入水中后，水面波纹会如何传播？"）。

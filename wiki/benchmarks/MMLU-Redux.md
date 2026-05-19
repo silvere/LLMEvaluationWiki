@@ -20,6 +20,14 @@ arxiv_id: "2406.04127"
 
 > 对 MMLU 原始题目进行人工重新标注后的精纯版本，修正了约 4% 的标注错误，提供更可靠的知识评测基线。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.04127](https://arxiv.org/abs/2406.04127)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMLU-Redux 是对原始 MMLU（Massive Multitask Language Understanding）数据集的重新标注版本。研究者对 MMLU 的 3,000 道题（30 个科目各 100 题）进行了系统性人工审查，发现约 4.03% 的题目存在错误（模糊题干、错误答案、多个正确选项等），并予以修正。

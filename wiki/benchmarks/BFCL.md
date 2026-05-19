@@ -17,6 +17,14 @@ status: active
 
 > Berkeley Function Calling Leaderboard（伯克利函数调用排行榜），系统评测大语言模型调用外部 API 和工具函数的准确性、格式合规性和参数填充能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2407.09203](https://arxiv.org/abs/2407.09203)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BFCL（Berkeley Function Calling Leaderboard）由加州大学伯克利分校于 2024 年发布，是目前最权威的 LLM **函数调用（Function Calling / Tool Use）**能力评测平台。随着 OpenAI 函数调用 API、Anthropic 工具使用等特性的普及，如何准确评测模型调用工具的能力成为迫切需求。

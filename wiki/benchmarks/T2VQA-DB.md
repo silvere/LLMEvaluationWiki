@@ -16,6 +16,14 @@ status: active
 
 > 基于大规模人工标注的文本到视频质量评估数据库，用于开发和验证 T2V 自动质量评估模型。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2404.04990](https://arxiv.org/abs/2404.04990)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 T2VQA-DB（Text-to-Video Quality Assessment Database）是 2024 年提出的专门针对文本生成视频质量感知评估的标注数据库与基准。不同于侧重语义对齐的 T2V 评测（如 FETV、EvalCrafter），T2VQA-DB 聚焦于**感知质量维度**，包括视频的清晰度、失真程度、自然度、技术缺陷等，更接近视频质量评估（VQA）领域的传统研究方向。

@@ -23,6 +23,16 @@ sources:
 
 # QASPER
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2105.03011](https://arxiv.org/abs/2105.03011)
+- **官方主页**: [https://allenai.org/data/qasper](https://allenai.org/data/qasper)
+- **官网**: [Dasigi, P., et al. (2021). A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers. NAACL 2021.](Dasigi, P., et al. (2021). A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers. NAACL 2021.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 QASPER（Question Answering on Scientific Papers）是由 Allen Institute for AI 于 2021 年发布的科学论文问答基准。该数据集专注于**信息检索型问答**（information-seeking QA），测试模型从完整 NLP 论文全文中定位和综合信息的能力。

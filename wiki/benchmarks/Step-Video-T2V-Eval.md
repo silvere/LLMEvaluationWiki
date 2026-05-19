@@ -17,6 +17,14 @@ status: active
 
 > 由阶跃星辰（StepFun）随 Step-Video-T2V 模型一同发布的文生视频质量评测基准，包含 128 个多样化提示词，覆盖 11 个类别，用于横向对比开源与商业文生视频引擎的生成质量（arXiv:2502.10248，2025）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2502.10248](https://arxiv.org/abs/2502.10248)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Step-Video-T2V-Eval 是阶跃星辰（StepFun）在其文生视频技术报告（arXiv:2502.10248）中提出并开源的评测基准，随 Step-Video-T2V 模型于 2025 年 2 月发布。该基准旨在为文生视频模型的横向对比提供标准化评估框架，填补该领域缺乏统一、多类别评测基准的空白。

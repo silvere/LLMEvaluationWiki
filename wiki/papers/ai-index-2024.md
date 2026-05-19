@@ -20,6 +20,10 @@ sources:
 
 # AI Index Report 2024
 
+> [!note] 本页为历史快照（2024 年度版）
+> 后续年度版本：[[ai-index-2025|AI Index Report 2025]] · [[ai-index-2026|AI Index Report 2026]]
+> 平行年度报告：[[state-of-ai-2024]] · [[state-of-ai-2025]]（Air Street Capital 系列）
+
 > Stanford HAI 年度 AI 指数报告，系统追踪 AI 研究、应用、经济影响和治理动态，2024 版重点记录生成式 AI 的爆发性增长、性能提升趋势和新兴安全挑战。
 
 ## 核心主张

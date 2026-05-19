@@ -24,6 +24,15 @@ sources: []
 
 > 覆盖 10 种文本类型的大规模自然语言推理数据集，是 NLI 研究的核心基准之一。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1704.05426](https://arxiv.org/abs/1704.05426)
+- **官方主页**: [https://cims.nyu.edu/~sbowman/multinli/](https://cims.nyu.edu/~sbowman/multinli/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MultiNLI 由 Williams 等人于 2018 年提出（发表于 NAACL 2018），来自纽约大学。该数据集是 SNLI 的重要扩展版本，最大改进是引入了多种文本类型（genres）：包括口语、书面语、政府文件、小说、电话对话等 10 种不同的文本风格，极大提升了数据集的领域多样性。

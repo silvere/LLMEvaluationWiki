@@ -16,6 +16,14 @@ status: active
 
 > 将 HumanEval 和 MBPP 的题目机械转译为 18 种编程语言的多语言代码生成基准，用于评测模型的跨语言代码泛化能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2208.08227](https://arxiv.org/abs/2208.08227)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MultiPL-E 由 Cassano 等人于 2022 年发布，核心思路是通过自动化翻译工具将 HumanEval（164 题）和 MBPP（374 题）的 Python 题目逐一转译为 18 种编程语言，包括 JavaScript、TypeScript、Java、C++、C#、PHP、Ruby、Scala、Swift、Rust、Julia、Lua、Racket、D、Bash 等。这一设计让研究者能够在完全控制题目难度和语义内容的前提下，系统评测模型对不同编程语言的掌握程度。

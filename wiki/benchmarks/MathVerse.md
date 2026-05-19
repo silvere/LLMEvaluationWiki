@@ -23,6 +23,15 @@ sources:
 
 # MathVerse：数学图形视觉推理评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2403.14624](https://arxiv.org/abs/2403.14624)
+- **官方主页**: [https://mathverse-cuhk.github.io](https://mathverse-cuhk.github.io)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MathVerse 是 2024 年提出的数学视觉推理专项评测基准，专注于评测多模态模型理解和推理**数学图形**（几何图、函数图、统计图等）的能力。它包含 **2,612 道**题目，每道题设计了 **6 个变体子集**，用于精确区分模型依赖视觉信息与文字信息的程度。

@@ -24,6 +24,15 @@ sources: []
 
 > 全面的长上下文语言模型评测套件，覆盖多种应用场景和长度档位，提供系统性长文本能力分析。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.02694](https://arxiv.org/abs/2410.02694)
+- **官方主页**: [https://github.com/princeton-nlp/HELMET](https://github.com/princeton-nlp/HELMET)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 HELMET 由 Yen 等人于 2024 年提出，来自普林斯顿大学（发表于 ICLR 2025）。该基准的核心目标是提供一个**系统性、全面性**的长上下文评测框架，解决当前长文本评测碎片化、缺乏统一标准的问题。

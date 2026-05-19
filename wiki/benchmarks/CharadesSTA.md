@@ -16,6 +16,14 @@ status: active
 
 > 基于 Charades 数据集的时序动作定位基准，要求模型将自然语言描述与视频中的时间段对齐。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1705.02101](https://arxiv.org/abs/1705.02101)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Charades-STA 于 2017 年发布，是在 Charades 数据集基础上为**时序句子定位**（Temporal Sentence Grounding）任务构建的扩展基准。Charades 数据集包含约 9,848 个日常室内活动视频（平均时长约 30 秒），由众包标注者按脚本拍摄完成。Charades-STA 在此基础上为 16,128 段查询-时间段对提供了时序对齐标注。

@@ -24,6 +24,15 @@ sources: []
 
 > 斯坦福大学的机器阅读理解数据集，2.0 版本引入无法回答的问题，测试模型的"知道自己不知道"能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1806.03822](https://arxiv.org/abs/1806.03822)
+- **官方主页**: [https://rajpurkar.github.io/SQuAD-explorer/](https://rajpurkar.github.io/SQuAD-explorer/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SQuAD 2.0 由 Rajpurkar 等人于 2018 年提出（发表于 ACL 2018），是 SQuAD 1.1 的重要升级版本。SQuAD 1.1 的所有问题在对应段落中都有明确答案，而 SQuAD 2.0 引入了约 53,775 道**无法回答的问题**（unanswerable questions），这些问题表面上与段落相关，但实际上在段落中找不到答案。

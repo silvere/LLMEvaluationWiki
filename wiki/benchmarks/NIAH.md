@@ -23,6 +23,15 @@ domain:
 
 > Greg Kamradt 提出的长上下文压力测试范式：把一句无关「针」（needle）藏到大段干扰文本（haystack）的随机深度位置，问模型能否准确召回。是 2023 起所有长上下文模型（GPT-4 Turbo / Claude 2.1 / Gemini 1.5 / Qwen2-Long 等）默认对比项。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **GitHub**: [https://github.com/gkamradt/LLMTest_NeedleInAHaystack](https://github.com/gkamradt/LLMTest_NeedleInAHaystack)
+- **arXiv**: [https://arxiv.org/abs/2504.04713](https://arxiv.org/abs/2504.04713)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **任务**：长 prompt 末尾问一个仅靠「针」内容才能答对的问题

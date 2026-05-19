@@ -16,6 +16,14 @@ status: active
 
 > VBench 升级版，新增人物可信度、物理合理性、创意生成等高阶维度的视频生成评测。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2503.21755](https://arxiv.org/abs/2503.21755)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 VBench-2.0 是上海 AI 实验室等机构于 2025 年发布的 VBench 升级版本，针对新一代高质量视频生成模型（如 Sora、Kling 2.0、Vidu 等）提出了更高层次的评测维度。VBench 1.0 聚焦于视频质量和语义一致性等基础维度，而 VBench-2.0 进一步引入了**人物可信度**（Face Naturalness、Human Action Quality）、**物理合理性**（Physics Plausibility）、**创意能力**（Creative Generation）等更具挑战性的高阶评测维度。

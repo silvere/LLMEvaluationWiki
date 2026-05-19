@@ -26,6 +26,15 @@ sources:
 
 > Google Research于2022年发布的定量推理评测框架，通过在MATH和OCWCourses等数据集上评测数学与科学定量推理能力，同时也指代同名的专门训练模型。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2206.14858](https://arxiv.org/abs/2206.14858)
+- **Google**: [https://ai.googleblog.com/2022/06/minerva-solving-quantitative-reasoning.html](https://ai.googleblog.com/2022/06/minerva-solving-quantitative-reasoning.html)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 "Minerva"既指Google Research于2022年发布的专用数学推理模型，也指该论文中使用的评测方法论。Lewkowycz等人在论文"Solving Quantitative Reasoning Problems with Language Models"中展示了通过在大量科学文献（arXiv论文等）上继续预训练，可以显著提升模型在定量推理任务上的表现。

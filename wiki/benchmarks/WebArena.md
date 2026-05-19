@@ -23,6 +23,16 @@ sources:
 
 # WebArena
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.13854](https://arxiv.org/abs/2307.13854)
+- **官方主页**: [https://webarena.dev](https://webarena.dev)
+- **官网**: [Zhou, S., et al. (2023). WebArena: A Realistic Web Environment for Building Autonomous Agents. ICLR 2024.](Zhou, S., et al. (2023). WebArena: A Realistic Web Environment for Building Autonomous Agents. ICLR 2024.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WebArena 是由 CMU 等机构于 2023 年提出的 Web 浏览代理评测基准，提供了一个**可复现的真实 Web 环境**，用于评测 AI 代理在浏览网页、操作 Web 应用、完成实际网络任务方面的能力。与使用快照或模拟环境的早期工作不同，WebArena 搭建了完整的自托管 Web 生态系统。

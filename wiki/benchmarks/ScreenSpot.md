@@ -17,6 +17,14 @@ status: active
 
 > 评测多模态大模型在 GUI 截图中定位指定 UI 元素能力的基准，面向屏幕操作智能体场景。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2401.13649](https://arxiv.org/abs/2401.13649)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ScreenSpot 由 NUS（新加坡国立大学）于 2024 年提出，专注于评测多模态大模型的**GUI 视觉定位**（Grounding）能力——即给定自然语言指令，模型能否准确在屏幕截图中找到对应的 UI 元素坐标（如按钮、图标、文本框等）。

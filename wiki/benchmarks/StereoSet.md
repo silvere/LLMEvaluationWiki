@@ -23,6 +23,15 @@ sources:
 
 # StereoSet：语言模型刻板印象测量基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2004.09456](https://arxiv.org/abs/2004.09456)
+- **官方主页**: [https://github.com/moinnadeem/StereoSet](https://github.com/moinnadeem/StereoSet)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 StereoSet 是 2021 年由 Nadeem 等人提出的语言模型刻板印象评测基准，发表于 ACL 2021。它包含约 **17,000 条**测试样本，覆盖**性别、种族、宗教、职业**四个维度的刻板印象，同时测量语言模型的**语言建模能力（Language Modeling Score）**和**刻板印象得分（Stereotype Score）**，致力于在两者之间寻找平衡。

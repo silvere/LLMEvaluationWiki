@@ -23,6 +23,15 @@ sources:
 
 # OCRBench：多模态模型 OCR 与文字理解评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.07895](https://arxiv.org/abs/2305.07895)
+- **官方主页**: [https://github.com/Yuliang-Liu/MultimodalOCR](https://github.com/Yuliang-Liu/MultimodalOCR)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 OCRBench 是 2023 年提出的专门针对多模态大模型**光学字符识别（OCR）与文字理解**能力的综合评测基准。它包含 **1,000 道**精心策划的题目，来源于 **29 个不同的 OCR 相关场景**，是目前覆盖 OCR 场景最广泛的多模态评测之一。

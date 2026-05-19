@@ -16,6 +16,14 @@ status: active
 
 > 通过视觉感知对比对（CLIP 易混淆图像对）揭示多模态模型"视而不见"的细微视觉感知盲区。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2401.06209](https://arxiv.org/abs/2401.06209)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMVP（Multimodal Visual Perception）由 CMU 和微软研究院于 2024 年提出，专门针对多模态大语言模型在**细粒度视觉感知**上的系统性盲区设计。该基准的核心发现是：CLIP 视觉编码器会将某些视觉上有明显区别的图像对嵌入到相邻的特征空间（称为 CLIP-blind pairs），导致依赖 CLIP 编码器的 MLLMs 在处理这类图像时出现系统性误判。

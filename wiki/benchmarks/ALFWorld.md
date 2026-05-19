@@ -23,6 +23,16 @@ sources:
 
 # ALFWorld
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2010.03768](https://arxiv.org/abs/2010.03768)
+- **官方主页**: [https://alfworld.github.io](https://alfworld.github.io)
+- **官网**: [Shridhar, M., et al. (2021). ALFWorld: Aligning Text and Embodied Environments for Interactive Learning. ICLR 2021.](Shridhar, M., et al. (2021). ALFWorld: Aligning Text and Embodied Environments for Interactive Learning. ICLR 2021.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ALFWorld 是由微软研究院等机构于 2021 年发布的家庭任务代理评测基准，全名 Alfred Language World，将文字游戏（TextWorld）与视觉具身仿真环境（ALFRED）进行语义对齐。ALFWorld 旨在研究语言对齐（text-to-action）在具身任务规划中的效果，测试代理能否将自然语言目标转化为正确的动作序列。

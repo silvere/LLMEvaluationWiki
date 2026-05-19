@@ -24,6 +24,15 @@ sources: []
 
 > 覆盖 200 种语言的大规模多语言机器翻译评测基准，每种语言包含相同的 1,000 个英文段落的翻译。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2207.04672](https://arxiv.org/abs/2207.04672)
+- **官方主页**: [https://github.com/facebookresearch/flores](https://github.com/facebookresearch/flores)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FLoRes-200 由 Costa-jussà 等人于 2022 年提出（发表于 TACL 2022），来自 Meta AI Research。该数据集将原版 FLoRes-101（101 种语言）扩展到 200 种语言，是目前覆盖语言数量最多的机器翻译评测基准之一。

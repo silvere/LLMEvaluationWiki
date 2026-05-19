@@ -24,6 +24,15 @@ sources: []
 
 > 基于长篇文章（平均约 5,000 词）的多选阅读理解基准，专门测试模型在长文本上的深度理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2112.08608](https://arxiv.org/abs/2112.08608)
+- **官方主页**: [https://github.com/nyu-mll/quality](https://github.com/nyu-mll/quality)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 QuALITY 由 Pang 等人于 2022 年提出（发表于 NAACL 2022），来自纽约大学。该数据集专门针对**长文本理解**场景：文章平均约 5,000 词，远超 SQuAD 等传统阅读理解数据集的文章长度，更接近现实中的长篇阅读场景。

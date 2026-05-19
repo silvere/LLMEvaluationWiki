@@ -16,6 +16,14 @@ status: active
 
 > 在真实 Android 设备上评测 AI 代理完成日常应用任务的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2405.14573](https://arxiv.org/abs/2405.14573)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AndroidWorld 是 Google DeepMind 于 2024 年发布的 Android 移动端代理评测基准。它运行在真实的 Android 模拟器（Android 13）上，要求代理通过无障碍服务（Accessibility API）感知屏幕 UI 树状态并执行触摸/滑动/输入操作，完成在真实手机应用中的多步骤任务。

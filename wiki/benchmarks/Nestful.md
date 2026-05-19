@@ -17,6 +17,14 @@ status: active
 
 > IBM Research 发布的嵌套 API 调用序列评测基准，包含 1,800+ 可执行嵌套函数调用序列，专门测试 LLM 处理"将一个函数调用的输出作为另一函数输入"这类真实 Agent 工具链模式的能力，EMNLP 2025 收录。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2409.03797](https://arxiv.org/abs/2409.03797)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Nestful（官方写作 NESTFUL）于 2024 年 9 月发布，由 IBM Research 与佐治亚理工学院研究团队联合完成，并于 2025 年被 EMNLP 收录。该基准聚焦于一个在真实 Agent 系统中普遍存在但此前被严重忽视的能力：嵌套函数调用（nested function call）——即将一个 API 调用的返回值直接传递给另一个 API 调用作为输入参数，形成调用链。

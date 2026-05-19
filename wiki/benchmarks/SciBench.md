@@ -26,6 +26,15 @@ sources:
 
 > 包含295道来自大学物理、化学和数学教材的计算题，要求模型进行精确数值推理，用于评测大语言模型解决大学本科级别科学问题的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.10635](https://arxiv.org/abs/2307.10635)
+- **官方主页**: [https://scibench-ucla.github.io/](https://scibench-ucla.github.io/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SciBench由Wang等人于2023年发布，题目来源于大学物理、物理化学、热力学等课程的标准教材（如Atkins物理化学、Serway物理学等），代表了本科理工科水平的计算推理难度。

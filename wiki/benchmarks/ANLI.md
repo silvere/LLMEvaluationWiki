@@ -23,6 +23,16 @@ sources:
 
 # ANLI（Adversarial NLI）
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1910.14599](https://arxiv.org/abs/1910.14599)
+- **官方主页**: [https://github.com/facebookresearch/anli](https://github.com/facebookresearch/anli)
+- **官网**: [Nie, Y., et al. (2020). Adversarial NLI: A New Benchmark for Natural Language Understanding. ACL 2020.](Nie, Y., et al. (2020). Adversarial NLI: A New Benchmark for Natural Language Understanding. ACL 2020.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Adversarial NLI（ANLI）是由 Facebook AI Research 等机构于 2020 年提出的自然语言推理基准。与传统 NLI 数据集不同，ANLI 采用了**对抗性人机协作（Human-and-Model-in-the-Loop Enabled Training, HAMLET）**构造流程，专门生成能够欺骗当前最优模型的难题，从而持续挑战模型的语言推理能力。

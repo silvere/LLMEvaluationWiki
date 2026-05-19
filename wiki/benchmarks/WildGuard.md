@@ -23,6 +23,15 @@ sources:
 
 # WildGuard：野外安全交互评测与分类工具
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.18495](https://arxiv.org/abs/2406.18495)
+- **官方主页**: [https://github.com/allenai/wildguard](https://github.com/allenai/wildguard)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WildGuard 是 2024 年由 Allen Institute for AI 提出的开源安全评测工具和数据集，专注于**真实用户-AI 交互场景**中的安全性评测。它提供了一个包含约 **13,000 条**真实或接近真实的用户-AI 交互标注数据集，同时开源了一个基于 Mistral-7B 微调的安全分类器，用于判断提示词的有害性和模型回复的合规性。

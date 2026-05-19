@@ -23,6 +23,15 @@ sources:
 
 # MMStar：精选高质量多模态评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2403.20330](https://arxiv.org/abs/2403.20330)
+- **官方主页**: [https://github.com/MMStar-Benchmark/MMStar](https://github.com/MMStar-Benchmark/MMStar)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMStar 是 2024 年提出的高质量多模态基准，通过严格的筛选流程从现有多模态基准中提取 **1,500 道**确实需要视觉理解才能作答的题目。其设计核心是消除两类常见问题：**无需视觉即可回答的题目**和**数据集污染（Data Leakage）**，确保每道题都能真实反映模型的多模态能力。

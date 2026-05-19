@@ -17,6 +17,14 @@ status: active
 
 > 由 AMAP-ML 提出并发表于 ICCV 2025 的视频运动生成质量评测基准，首次从人类感知对齐的视角系统评测文生视频模型的运动质量。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2503.10076](https://arxiv.org/abs/2503.10076)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 VMBench（Video Motion Benchmark）由高德地图 AI 实验室（AMAP-ML）研究团队提出，论文发表于 ICCV 2025。它是首个以人类感知对齐（perception-aligned）为核心理念、专门评测文生视频（text-to-video）模型运动质量的综合基准。

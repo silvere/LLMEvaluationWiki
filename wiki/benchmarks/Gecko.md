@@ -17,6 +17,14 @@ status: active
 
 > Google 提出的文本嵌入模型综合评测基准，覆盖检索、语义相似度、分类等多任务嵌入能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2403.20327](https://arxiv.org/abs/2403.20327)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Gecko 是 Google 于 2024 年提出的文本嵌入（Text Embedding）综合评测基准与模型框架。作为基准，Gecko 整合了来自 BEIR、MTEB 等现有评测套件的核心任务，同时引入了新设计的任务，全面评测文本嵌入模型在**检索（Retrieval）**、**语义相似度（STS）**、**重排序（Reranking）**、**文本分类（Classification）**、**聚类（Clustering）**等多任务场景下的向量表示质量。

@@ -24,6 +24,16 @@ sources:
 
 # AI2D：科学图表理解评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://allenai.org/data/diagrams](https://allenai.org/data/diagrams)
+- **官网**: [https://prior.allenai.org/projects/diagram-understanding](https://prior.allenai.org/projects/diagram-understanding)
+- **arXiv**: [https://arxiv.org/abs/1603.07988](https://arxiv.org/abs/1603.07988)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AI2D（Allen Institute for AI Diagram Understanding）是 2016 年由 Allen Institute for AI 提出的科学图表理解数据集。它包含超过 **5,000 张**科学示意图（主要来自 K–12 年级教科书）和约 **15,000 道**配套问答题，是评测模型理解科学图示、标注和教材插图能力的重要基准。

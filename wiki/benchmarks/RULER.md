@@ -24,6 +24,15 @@ sources: [""]
 
 > 专为测试长上下文理解能力设计的综合评测框架，覆盖 4K 到 128K 的上下文长度，揭示模型声称能力与实际性能之间的差距。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2404.06654](https://arxiv.org/abs/2404.06654)
+- **官方主页**: [https://github.com/hsiehjackson/RULER](https://github.com/hsiehjackson/RULER)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 RULER 于 2024 年发布，全称 Ruler Unified Long-context Evaluation for Language Models，是专门评测大语言模型长上下文处理能力的综合框架。其设计动机源于一个普遍现象：许多模型在技术规格上声称支持 128K 乃至更长的上下文窗口，但在实际使用中，随着输入长度增加，模型性能往往大幅下滑，尤其是在需要从长文档中精准检索或跨段落推理时。

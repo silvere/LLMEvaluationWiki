@@ -17,6 +17,14 @@ status: active
 
 > 评测多模态大模型多图像理解与推理能力的基准，覆盖需要跨图像比较、关联和推理的 12 类任务。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.09411](https://arxiv.org/abs/2406.09411)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MuirBench（Multi-Image Understanding and Reasoning Benchmark）于 2024 年提出，专门评测多模态大语言模型的**多图像理解**能力。随着多模态模型的发展，处理多张图像的场景（如图像比较、序列图像理解、图集问答）越来越重要，但现有基准大多仅关注单图像理解。

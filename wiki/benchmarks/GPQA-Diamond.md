@@ -18,6 +18,14 @@ status: active
 
 > GPQA 数据集中经过最严格双重专家筛选的 448 道研究生级科学问答子集，是当前最具挑战性的知识推理基准之一，非专家人类准确率仅约 34%。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2311.12022](https://arxiv.org/abs/2311.12022)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 GPQA-Diamond 是 [[GPQA]]（Graduate-Level Google-Proof Q&A）的最难子集，共包含 448 道题。"Diamond"子集的筛选标准极为严苛：每道题需满足至少两位相关领域专家（在职研究员或博士生）独立作答均正确，且非领域专家在允许使用互联网的条件下答对率极低（测试显示非专家准确率约 34%，仅略高于随机猜测的 25% 基线）。

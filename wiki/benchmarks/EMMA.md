@@ -17,6 +17,14 @@ status: active
 
 > 端到端多模态多步推理基准，要求模型在单次推理过程中融合文本与视觉信息完成复杂任务。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2501.05444](https://arxiv.org/abs/2501.05444)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 EMMA（End-to-end Multimodal Model Assessment）于 2024 年底发布（论文于 2025 年初公开），是专为评测多模态大语言模型**多步骤、跨模态推理**能力设计的综合基准。EMMA 要求模型在不借助外部工具或中间步骤分解的情况下，直接融合文本和图像信息完成涉及多步推理的任务。

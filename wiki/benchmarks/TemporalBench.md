@@ -17,6 +17,14 @@ status: active
 
 > 专注于细粒度视频时序理解的多模态评测基准，由微软联合斯坦福大学于2024年发布，揭示了当前视频模型在时序理解上与人类的巨大差距。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.10818](https://arxiv.org/abs/2410.10818)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 TemporalBench 于 2024 年 10 月发布，全称 "Benchmarking Fine-grained Temporal Understanding for Multimodal Video Models"，旨在系统评测多模态视频模型对视频时序关系的细粒度理解能力。现有的视频评测基准大多侧重于视频内容识别或静态帧理解，往往无法有效区分模型是否真正理解了视频中事件发生的先后顺序、动作的频率变化或运动的幅度差异——这类基准更像是静态图像基准在视频上的直接迁移。

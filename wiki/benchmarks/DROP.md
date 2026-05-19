@@ -24,6 +24,15 @@ sources: []
 
 > 要求在段落理解基础上进行离散推理（加减法、计数、排序等）的阅读理解数据集。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1903.00161](https://arxiv.org/abs/1903.00161)
+- **官方主页**: [https://allenai.org/data/drop](https://allenai.org/data/drop)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 DROP（Discrete Reasoning Over Paragraphs）由 Dua 等人于 2019 年提出（发表于 NAACL 2019），来自 Allen Institute for AI。该数据集专门针对**离散推理**（discrete reasoning）能力：模型不仅需要理解文本，还需要在文本信息的基础上执行加减法、计数、排序、集合运算等数学或逻辑操作。

@@ -19,6 +19,14 @@ status: saturated
 
 > ARC（AI2 Reasoning Challenge）数据集中的简单子集，包含约 5,197 道可通过检索或词频方法回答的科学知识题，现代 LLM 在此子集上已接近满分。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1803.05457](https://arxiv.org/abs/1803.05457)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ARC-Easy（常缩写为 ARC-e）是 [[ARC]] 数据集的简单子集。ARC 由 Clark 等人于 2018 年发布，来自 Allen Institute for AI（AI2）。ARC-Easy 包含约 5,197 道测试题，这些题目的特征是：至少有一种简单基线系统（基于检索或词频统计）能够正确回答，因此代表了相对直接的科学知识问题。

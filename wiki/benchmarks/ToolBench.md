@@ -23,6 +23,16 @@ sources:
 
 # ToolBench
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.16789](https://arxiv.org/abs/2307.16789)
+- **官方主页**: [https://github.com/OpenBMB/ToolBench](https://github.com/OpenBMB/ToolBench)
+- **官网**: [Qin, Y., et al. (2023). ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs. ICLR 2024.](Qin, Y., et al. (2023). ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs. ICLR 2024.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ToolBench（又称 ToolLLM 配套基准）是由清华大学 OpenBMB 团队于 2023 年发布的大规模工具使用能力评测基准，通过 **RapidAPI** 平台接入超过 16,000 个真实世界 API，评测 LLM 在多步骤工具调用场景下完成复杂任务的能力。ToolBench 是目前规模最大的真实 API 工具使用基准之一。

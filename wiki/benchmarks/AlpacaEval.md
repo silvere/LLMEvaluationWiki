@@ -24,6 +24,15 @@ sources: []
 
 > 基于 LLM-as-Judge 的指令跟随能力自动评测框架，以 Win Rate（对比 text-davinci-003）为核心指标。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.14387](https://arxiv.org/abs/2305.14387)
+- **官方主页**: [https://tatsu-lab.github.io/alpaca_eval/](https://tatsu-lab.github.io/alpaca_eval/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AlpacaEval 由 Li 等人于 2023 年提出，来自斯坦福大学（与 Alpaca 项目相关）。该评测框架的核心创新是将**成对比较**（pairwise comparison）与**LLM-as-Judge**结合，为指令跟随能力提供快速、低成本的自动化评测方案。

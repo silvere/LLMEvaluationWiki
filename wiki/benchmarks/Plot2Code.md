@@ -17,6 +17,14 @@ status: active
 
 > 评测多模态大模型从图表图像生成可执行可视化代码能力的基准，测试视觉理解与代码生成的协同推理。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2403.00476](https://arxiv.org/abs/2403.00476)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Plot2Code 于 2024 年提出，是评测多模态大模型**图表代码生成**能力的专项基准。该基准的任务是：给定一张数据可视化图表（如 matplotlib/seaborn 生成的折线图、柱状图、散点图等），要求模型生成能够复现该图表的可执行 Python 代码。

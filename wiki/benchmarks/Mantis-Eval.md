@@ -17,6 +17,14 @@ status: active
 
 > 为 Mantis 多图像多模态模型评测设计的基准，系统评测模型在多图像输入下的共指、比较和推理能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2405.01483](https://arxiv.org/abs/2405.01483)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Mantis-Eval 由 Georgia Tech 于 2024 年提出，作为 Mantis 多图像交错多模态大语言模型的评测配套基准。Mantis 是首批专门训练用于高质量多图像理解的开源多模态模型，而 Mantis-Eval 则提供了系统性的多图像评测框架。

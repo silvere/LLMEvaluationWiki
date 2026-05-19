@@ -23,6 +23,16 @@ sources:
 
 # WildChat
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2405.01470](https://arxiv.org/abs/2405.01470)
+- **官方主页**: [https://huggingface.co/datasets/allenai/WildChat-1M](https://huggingface.co/datasets/allenai/WildChat-1M)
+- **官网**: [Zhao, W., et al. (2024). WildChat: 1M ChatGPT Interaction Logs in the Wild. ICLR 2024.](Zhao, W., et al. (2024). WildChat: 1M ChatGPT Interaction Logs in the Wild. ICLR 2024.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WildChat 是由 Allen Institute for AI 等机构于 2024 年发布的大规模真实用户对话数据集，包含约 **100 万条真实用户与 ChatGPT（GPT-3.5/GPT-4）的交互记录**。数据收集自一个提供免费 ChatGPT API 访问的平台，用户在使用前同意数据收集条款。WildChat 是目前规模最大、覆盖用例最广的真实用户对话数据集之一。

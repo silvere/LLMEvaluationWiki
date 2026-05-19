@@ -23,6 +23,15 @@ sources:
 
 # JailbreakBench：越狱攻击标准化评测框架
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2404.01318](https://arxiv.org/abs/2404.01318)
+- **官方主页**: [https://jailbreakbench.github.io](https://jailbreakbench.github.io)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 JailbreakBench 是 2024 年提出的**标准化越狱攻击评测框架**，旨在解决越狱研究中评测协议不一致、结果难以复现的问题。它包含 **100 道**精心策划的越狱场景（JBB-Behaviors），并提供统一的攻击代码实现、评分工具链和公开排行榜，是越狱研究领域最重要的标准化基准。

@@ -16,6 +16,14 @@ status: active
 
 > 基于 COCO 图像的指代表达理解基准，要求模型根据自然语言描述定位图像中的特定物体。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1608.00272](https://arxiv.org/abs/1608.00272)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 RefCOCO 是 2016 年由 UNC 团队提出的指代表达理解（Referring Expression Comprehension, REC）基准数据集，基于 MS-COCO 图像构建。数据通过交互式游戏（ReferIt Game）收集，标注者需用简短描述区分同一图像中的多个同类物体，最终生成约 **50,000 张图像上的 142,209 条指代表达**。

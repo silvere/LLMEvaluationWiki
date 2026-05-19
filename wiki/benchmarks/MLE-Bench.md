@@ -18,6 +18,14 @@ status: active
 
 > 机器学习工程代理评测基准（Machine Learning Engineering Benchmark），使用真实 Kaggle 竞赛任务评测 AI 代理端到端完成 ML 工程项目的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.07095](https://arxiv.org/abs/2410.07095)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MLE-Bench 由 OpenAI 于 2024 年发布，使用来自 Kaggle 平台的 75 个真实机器学习竞赛任务评测 AI 代理的综合 ML 工程能力。与代码生成基准（如 HumanEval、SWE-bench）不同，MLE-Bench 要求代理完成完整的 ML 工作流：理解问题描述、进行数据探索（EDA）、特征工程、模型选择、训练调优，最终生成满足精度要求的提交文件。

@@ -17,6 +17,14 @@ status: active
 
 > 专为在线视频理解设计的评测基准，强调时间戳感知能力，包含 12 项任务、644 个视频和约 2,800 条细粒度标注，评测视频 LLM 在三种时序推理场景下的表现（arXiv:2501.05510，CVPR 2025）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2501.05510](https://arxiv.org/abs/2501.05510)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 OVO-Bench（Online-VideO-Benchmark）是专注于在线视频理解评测的基准，全称强调"Online"（在线/实时）这一核心特征，于 2025 年 1 月发布于 arXiv（arXiv:2501.05510），并被 CVPR 2025 收录。代码和数据已在 GitHub（JoeLeelyf/OVO-Bench）公开。

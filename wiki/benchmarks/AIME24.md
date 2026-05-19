@@ -26,6 +26,15 @@ sources:
 
 > 2024年美国数学邀请考试（AIME I 和 AIME II）的30道题目，是当前评测大语言模型数学竞赛级推理能力最常用的近期基准之一，具有低数据污染风险。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems](https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems)
+- **官网**: [https://artofproblemsolving.com/wiki/index.php/2024_AIME_II_Problems](https://artofproblemsolving.com/wiki/index.php/2024_AIME_II_Problems)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AIME（American Invitational Mathematics Examination，美国数学邀请考试）是高中数学竞赛体系中仅次于USAMO的顶级赛事，参赛资格需通过AMC筛选。AIME每年举行两次（AIME I和AIME II），每次15道题，答案均为0-999之间的整数，无需选择，完全开放式计算。

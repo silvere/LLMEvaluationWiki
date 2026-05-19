@@ -17,6 +17,14 @@ status: active
 
 > 视觉字幕恢复（Visual Caption Restoration）基准，评测多模态大模型从遮挡图文中推理恢复文字内容的细粒度视觉-文字对齐能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.07384](https://arxiv.org/abs/2406.07384)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 VCR（Visual Caption Restoration）于 2024 年提出，是一个独特的多模态推理评测基准。该基准的核心任务是：给定一张图像，其中部分文字描述（字幕或标注）被遮盖（Mask），要求模型结合图像视觉内容和上下文文字推断恢复被遮盖的词语。

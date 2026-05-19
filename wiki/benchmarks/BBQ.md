@@ -23,6 +23,15 @@ sources:
 
 # BBQ：偏见基准问答测试集
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2110.08193](https://arxiv.org/abs/2110.08193)
+- **官方主页**: [https://github.com/nyu-mll/BBQ](https://github.com/nyu-mll/BBQ)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BBQ（Bias Benchmark for QA）是 2022 年由纽约大学提出的社会偏见评测基准，发表于 ACL 2022 Findings。它包含 **58,492 道**多项选择题，专门评测语言模型在不同**上下文充分程度（Context Sufficiency）**下对 **9 种社会偏见维度**的表现，是 NLP 偏见研究最重要的基准之一。

@@ -17,6 +17,14 @@ status: active
 
 > 专门评测多模态大模型对象幻觉（object hallucination）问题的基准，通过开放式问答衡量模型的幻觉频率和回答质量。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2309.14525](https://arxiv.org/abs/2309.14525)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMHal-Bench（Multimodal Hallucination Benchmark）由 Salesforce Research 于 2023 年提出，是首个系统性评测多模态大语言模型（MLLMs）对象幻觉问题的基准之一。该基准通过要求模型回答关于图像中具体对象的开放式问题，检验模型是否会描述图像中实际不存在的内容。

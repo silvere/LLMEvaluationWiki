@@ -24,6 +24,15 @@ sources: []
 
 > 细粒度文本蕴含评测基准，要求对声明进行子句级分解并逐条验证与支持文档的蕴含关系。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2303.08731](https://arxiv.org/abs/2303.08731)
+- **官方主页**: [https://github.com/ryokamoi/wice](https://github.com/ryokamoi/wice)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WiCE 由 Kamoi 等人于 2023 年提出（发表于 EMNLP 2023）。该基准专注于**细粒度文本蕴含**（fine-grained textual entailment）任务，要求模型不仅判断整体声明是否被支持，还要对声明进行子句级（subclaim）分解，并逐条判断每个子声明是否被给定文档所支持。

@@ -22,6 +22,15 @@ domain:
 
 > 由华盛顿大学 / Apple / TRI 等机构 2024-06 发布的「数据中心型」LM 评测协议：固定训练超参与模型结构，只让参赛者改进训练数据；从 Common Crawl 提取 240T token 的开放语料 DCLM-Pool，按 53 个下游任务统一评测。是 pretraining data curation 评测的事实标准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官网**: [https://www.datacomp.ai/dclm/](https://www.datacomp.ai/dclm/)
+- **arXiv**: [https://arxiv.org/abs/2406.11794](https://arxiv.org/abs/2406.11794)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **协议**：固定 model architecture + training recipe，仅评测数据 curation 策略

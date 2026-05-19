@@ -24,6 +24,14 @@ sources: []
 
 > 来自真实 Google 搜索的大规模开放域问答数据集，包含长答案和短答案两类标注。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://ai.google.com/research/NaturalQuestions](https://ai.google.com/research/NaturalQuestions)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 NaturalQuestions（NQ）由 Kwiatkowski 等人于 2019 年提出，来自 Google Research（发表于 TACL 2019）。该数据集由真实用户在 Google 搜索中提交的问题组成，每个问题附有对应的 Wikipedia 页面，并由专业标注者标注了长答案（整个段落）和短答案（简短的文字片段或是/否）。

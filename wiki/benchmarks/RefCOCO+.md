@@ -16,6 +16,14 @@ status: active
 
 > RefCOCO 的变体版本，禁止标注者使用绝对位置词，迫使模型依赖外观属性理解指代表达。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1608.00272](https://arxiv.org/abs/1608.00272)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 RefCOCO+ 与 RefCOCO 同时发布（均来自 arxiv:1608.00272），同样基于 MS-COCO 图像，通过 ReferIt Game 收集标注。其核心区别在于**限制标注者不得使用绝对空间位置词**（如"左边""右边""上方"等），迫使描述依赖颜色、服装、动作等**外观属性**来区分目标物体。

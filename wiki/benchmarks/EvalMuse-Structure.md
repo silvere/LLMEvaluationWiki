@@ -16,6 +16,14 @@ status: active
 
 > EvalMuse-40K 框架中的结构化评测子集，包含 12,000 张 AI 生成图像及对应的结构失真标注（边界框 + 结构评分），专门评估文生图模型输出的形态完整性与结构真实性（arXiv:2412.18150，AAAI 2025）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2412.18150](https://arxiv.org/abs/2412.18150)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 EvalMuse-Structure 是 EvalMuse-40K 综合评测框架的结构维度子集，整体框架于 2024 年 12 月发布于 arXiv（arXiv:2412.18150），并被 AAAI 2025 收录，同时入选 CVPR 2025 NTIRE 挑战赛的评测赛道之一。

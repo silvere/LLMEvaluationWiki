@@ -26,6 +26,15 @@ sources:
 
 > 包含10000道来自编程竞赛网站的Python编程题，覆盖入门、面试和竞赛三个难度级别，是评测大语言模型代码生成能力的重要基准之一。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2105.09938](https://arxiv.org/abs/2105.09938)
+- **官方主页**: [https://github.com/hendrycks/apps](https://github.com/hendrycks/apps)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 APPS由Dan Hendrycks等人于2021年发布，旨在衡量语言模型生成能能够通过单元测试的Python代码的能力。题目来源于Codewars、AtCoder、Kattis等编程竞赛和练习平台，确保题目的真实性和多样性。每道题目均配有问题描述、测试用例和参考解答。

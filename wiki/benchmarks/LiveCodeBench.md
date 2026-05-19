@@ -4,25 +4,73 @@ type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
+as_of_date: "2026-05-19"
+last_verified: "2026-05-19"
 domain: [code]
 language: en
 year: 2024
-authors: []
-arxiv_id: ""
+authors: ["Naman Jain", "King Han", "Alex Gu", "Wen-Ding Li", "Fanjia Yan", "Tianjun Zhang", "Sida Wang", "Armando Solar-Lezama", "Koushik Sen", "Ion Stoica"]
+arxiv_id: "2403.07974"
 official_url: "https://livecodebench.github.io"
-license: ""
-size: 0
+official_leaderboard: "https://livecodebench.github.io/leaderboard.html"
+license: "MIT"
+size: 600
 format: code
-status: active
-saturation_threshold: 0.70
-sources: [""]
+saturation_status: active
+sources:
+  - "https://arxiv.org/abs/2403.07974"
+  - "https://livecodebench.github.io/"
+  - "https://github.com/livecodebench/livecodebench"
+evaluation_protocol:
+  default_shots: "0-shot"
+  default_cot: true
+  tool_use: false
+  scoring: "pass@1（部分变体支持 pass@5）"
+  time_filter: "按题目发布日期过滤，仅评测模型 cutoff 之后的题"
+pitfalls:
+  - "**必须报告时间窗**：'LiveCodeBench 80%' 没意义，必须说 '2024-08 之后题目 80%'，否则无法排除污染"
+  - "数据来源 LeetCode/AtCoder/CodeForces，仍以英文 + 算法竞赛风格为主，对工程任务代表性不足（应结合 SWE-bench）"
+  - "模型 cutoff 内的题分数会被记忆污染，cutoff 后题分数显著下降——这正是 LiveCodeBench 的设计核心"
+  - "题目持续更新（约每月），不同时间快照的分数不可直接对比，引用时必须说明 leaderboard 版本"
+sota:
+  - score: "91.7%"
+    model: "Gemini-3-Pro-Preview"
+    harness: null
+    notes: "Artificial Analysis 排行榜"
+  - score: "90.8%"
+    model: "Gemini-3-Flash-Reasoning"
+    harness: null
+  - score: "89.6%"
+    model: "DeepSeek-V3.2-Speciale"
+    harness: null
+  - score: "约 80%"
+    model: "Gemini-2.5-Pro"
+    harness: null
+  - score: "约 70%"
+    model: "Qwen3"
+    harness: null
+  - score: "约 53.7%"
+    model: "Kimi-K2"
+    harness: null
+  - score: "约 43.4%"
+    model: "Llama-4"
+    harness: null
+  - score: "约 36%"
+    model: "Gemini-2.0-Flash"
+    harness: null
 ---
 
 # LiveCodeBench
 
 > 持续从竞赛平台收集比赛后新题的动态代码评测基准，天然抗污染，揭示了模型在 HumanEval 上的高分与真实代码能力之间的差距。
+
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://livecodebench.github.io](https://livecodebench.github.io)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 
@@ -46,6 +94,23 @@ LiveCodeBench 的重要发现之一是揭示了"HumanEval 高分陷阱"：在 Hu
 ## SOTA 表现
 
 - 顶级模型（2024-2025 年）：待更新
+
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Gemini-2.5-Pro]] | — | 约 80% | — |  | — |
+| 2 | [[Qwen3]] | — | 约 70% | — |  | — |
+| 3 | [[Kimi-K2]] | — | 约 53.7% | — |  | — |
+| 4 | [[Llama-4]] | — | 约 43.4% | — |  | — |
+| 5 | [[Gemini-2.0-Flash]] | — | 约 36% | — |  | — |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

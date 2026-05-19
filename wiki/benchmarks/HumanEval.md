@@ -4,25 +4,65 @@ type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
+as_of_date: "2026-05-19"
+last_verified: "2026-05-19"
 domain: [code]
 language: en
 year: 2021
-authors: ["Chen et al."]
+authors: ["Mark Chen", "Jerry Tworek", "Heewoo Jun", "Qiming Yuan", "Henrique Ponde de Oliveira Pinto", "Jared Kaplan", "Harri Edwards", "Yuri Burda", "Nicholas Joseph", "Greg Brockman"]
 arxiv_id: "2107.03374"
 official_url: "https://github.com/openai/human-eval"
+official_leaderboard: "https://paperswithcode.com/sota/code-generation-on-humaneval"
 license: "MIT"
 size: 164
 format: code
-status: saturated
-saturation_threshold: 0.95
-sources: [""]
+saturation_status: saturated
+sources:
+  - "https://arxiv.org/abs/2107.03374"
+  - "https://github.com/openai/human-eval"
+evaluation_protocol:
+  default_shots: "0-shot"
+  default_cot: false
+  tool_use: false
+  scoring: "pass@k（k 通常为 1，最初论文用 pass@1/10/100）"
+pitfalls:
+  - "样本量太小（164 题），统计噪声大，单次 run 1-2 个百分点波动很常见"
+  - "完全饱和：顶级模型 pass@1 ≥ 93%（GPT-5.4 93.1% / Claude Sonnet 4 95.1%）；继续报告 HumanEval 已无区分度"
+  - "确认污染：HumanEval 已在公开训练语料数年，所有主流 base model 几乎确定见过，分数虚高（参考 LiveCodeBench 论文 2403.07974）"
+  - "与 MBPP 题目重叠（10+ 题），跨 benchmark 不可独立采样"
+  - "pass@1 vs pass@10 区别巨大（顶级模型 pass@10 比 pass@1 高 5-15pt），跨论文比较前必须看 k"
+  - "应替换为：HumanEval+ / EvalPlus（更多测试用例）/ LiveCodeBench / SWE-bench-Verified"
+sota:
+  - score: "约 92-95%"
+    model: "Claude-3.7-Sonnet"
+    harness: null
+  - score: "约 92.7%"
+    model: "Qwen2.5-72B"
+    harness: null
+    notes: "Coder-32B"
+  - score: "92.0%"
+    model: "Claude-3.5-Sonnet"
+    harness: null
+  - score: "90.2%"
+    model: "GPT-4o"
+    harness: null
+  - score: "约 90%+"
+    model: "GPT-4.1"
+    harness: null
 ---
 
 # HumanEval（含 HumanEval+）
 
 > OpenAI 于 2021 年发布的函数级 Python 编程评测基准，2024 年后顶级模型准确率已超过 93%，完全饱和。
+
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2107.03374](https://arxiv.org/abs/2107.03374)
+- **官方主页**: [https://github.com/openai/human-eval](https://github.com/openai/human-eval)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 
@@ -48,6 +88,23 @@ HumanEval+ 是 EvalPlus 项目对 HumanEval 的增强版本，通过自动化方
 ## SOTA 表现
 
 - 顶级模型（2024-2025 年）：93%+（pass@1）
+
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Claude-3.7-Sonnet]] | — | 约 92-95% | — |  | — |
+| 2 | [[Qwen2.5-72B]] | — | 约 92.7% | — | Coder-32B | — |
+| 3 | [[Claude-3.5-Sonnet]] | — | 92.0% | — |  | — |
+| 4 | [[GPT-4o]] | — | 90.2% | — |  | — |
+| 5 | [[GPT-4.1]] | — | 约 90%+ | — |  | — |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

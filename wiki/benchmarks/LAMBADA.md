@@ -24,6 +24,15 @@ sources: []
 
 > 测试模型在长篇叙事上下文中预测最后一个词的能力，强调跨段落的远程依赖理解。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1606.06031](https://arxiv.org/abs/1606.06031)
+- **官方主页**: [https://zenodo.org/record/2630551](https://zenodo.org/record/2630551)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LAMBADA 由 Paperno 等人于 2016 年提出（发表于 ACL 2016）。其核心设计思路是：找出那些人类需要阅读完整段落才能预测最后一词、但单凭最后一句话无法预测的文本片段。这确保了测试的是**真正的上下文理解能力**，而非局部语言模式匹配。

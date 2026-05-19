@@ -26,6 +26,15 @@ sources:
 
 > 包含4428道来自全球各类数学竞赛的开放式数学题，覆盖从国家级到国际级数学竞赛，是评测模型奥林匹克级数学推理能力的大规模基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.07985](https://arxiv.org/abs/2410.07985)
+- **官方主页**: [https://omni-math.github.io/](https://omni-math.github.io/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 OmniMath由Gao等人于2024年发布，汇集了来自全球超过100场数学竞赛的题目，包括国际数学奥林匹克（IMO）、美国数学奥林匹克（USAMO）、Putnam竞赛、中国数学奥林匹克等权威赛事。数据集的特点是覆盖面广（"omni"），既包含近年的竞赛题（降低数据污染风险），也包含历史经典题目。

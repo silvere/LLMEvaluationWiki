@@ -11,11 +11,51 @@ domain:
 year: 2025
 arxiv_id: "2509.16941"
 status: active
+sota:
+  - score: "58.6%"
+    model: "Kimi-K2.6"
+    harness: null
+    notes: "tied with GPT-5.5"
+  - score: "58.4%"
+    model: "GLM-5.1"
+    harness: null
+    notes: "榜首（超过 Claude Opus 4.6 / GPT-5.4）"
+  - score: "榜首"
+    model: "Qwen3.6"
+    harness: null
+    notes: "官方表述：top in SWE-bench Pro"
+  - score: "55.4%"
+    model: "DeepSeek-V4-Pro"
+    harness: null
+    notes: "open-source 第一"
 ---
 
 # SWE-bench Pro
 
 > 由 OpenAI 发布的企业级长周期软件工程任务评测基准，包含 1865 个来自 41 个真实代码仓库的复杂任务，旨在测试 AI agent 处理跨文件、跨模块长链推理任务的能力上限。
+
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Kimi-K2.6]] | — | 58.6% | — | tied with GPT-5.5 | — |
+| 2 | [[GLM-5.1]] | — | 58.4% | — | 榜首（超过 Claude Opus 4.6 / GPT-5.4） | — |
+| 3 | [[Qwen3.6]] | — | 榜首 | — | 官方表述：top in SWE-bench Pro | — |
+| 4 | [[DeepSeek-V4-Pro]] | — | 55.4% | — | open-source 第一 | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2509.16941](https://arxiv.org/abs/2509.16941)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

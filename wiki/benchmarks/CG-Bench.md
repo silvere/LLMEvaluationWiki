@@ -17,6 +17,14 @@ status: active
 
 > 专注于长视频线索定位与问答的评测基准，通过"线索锚定"机制提升评测可信度，揭示现有多模态模型在长视频理解上的真实瓶颈。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2412.12075](https://arxiv.org/abs/2412.12075)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CG-Bench（Clue-Grounded Question Answering Benchmark for Long Video Understanding）由多所研究机构联合发布，论文于 2024 年 12 月提交至 arXiv。该基准的核心创新在于引入"线索定位（clue grounding）"机制，要求模型不仅给出答案，还需指出答案在视频中的对应时间区间，以此判断模型是否真正理解视频内容，而非依赖语言先验猜测。

@@ -16,6 +16,14 @@ status: active
 
 > ImageNet 测试集的重采样版本，旨在揭示模型是否对原始测试集产生了过拟合。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1902.10811](https://arxiv.org/abs/1902.10811)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ImageNet-V2 由 Benjamin Recht 等人于 2019 年提出，通过严格遵循原始 ImageNet 数据收集流程重新采样，构建了一个与 ImageNet-1K 测试集分布高度相似但**图像全新**的测试集，包含 **10,000 张**图像（每类 10 张），覆盖全部 1,000 个 ImageNet 类别。

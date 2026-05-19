@@ -21,6 +21,15 @@ domain:
 
 > KAUST Vision-CAIR 2024-06 推出的超长视频理解 benchmark：1,000+ 小时电影 / 电视剧素材，平均 53 分钟（最长 201 分钟），108.2K QA pairs 覆盖 9 类技能（grounding + reasoning）。是 LMM 在「电影级长视频」场景下的事实测评，揭示 GPT-4o 在 grounding 类只能拿 47.1%。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv**: [https://arxiv.org/abs/2406.19875](https://arxiv.org/abs/2406.19875)
+- **项目主页**: [https://vision-cair.github.io/Infinibench/](https://vision-cair.github.io/Infinibench/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **视频规模**：>1,000 小时，平均 53 分钟，max 201 分钟（3.35h）

@@ -24,6 +24,15 @@ sources: []
 
 > GLUE 的升级版，包含 8 个更具挑战性的 NLP 任务，推动了语言理解研究的进一步深化。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1905.07830](https://arxiv.org/abs/1905.07830)
+- **官方主页**: [https://super.gluebenchmark.com/](https://super.gluebenchmark.com/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SuperGLUE 由 Wang 等人于 2019 年提出（发表于 NeurIPS 2019），在 GLUE 于 2019 年初迅速饱和后推出。SuperGLUE 包含 8 个更困难的任务，旨在为研究社区提供一个持续有挑战性的评测平台。

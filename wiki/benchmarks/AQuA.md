@@ -17,6 +17,14 @@ status: saturated
 
 > 包含约 10 万道代数文字题的问答数据集，每道题提供自然语言推理过程（rationale），是早期训练和评测 LLM 数学推理与思维链能力的重要资源。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1705.04146](https://arxiv.org/abs/1705.04146)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AQuA（Algebra Question Answering with Rationales）由 Ling 等人于 2017 年发布，包含约 100,000 道代数文字题，数据来源于 GRE 和 GMAT 备考题库。AQuA 的核心特色是为每道题提供了人工标注的推理过程（rationale）——用自然语言描述解题步骤，从问题分析到答案推导的完整思路，这在 2017 年是代数推理数据集中的重要创新。

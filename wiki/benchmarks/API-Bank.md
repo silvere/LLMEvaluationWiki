@@ -23,6 +23,16 @@ sources:
 
 # API-Bank
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2304.08244](https://arxiv.org/abs/2304.08244)
+- **官方主页**: [https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank](https://github.com/AlibabaResearch/DAMO-ConvAI/tree/main/api-bank)
+- **官网**: [Li, M., et al. (2023). API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs. EMNLP 2023.](Li, M., et al. (2023). API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs. EMNLP 2023.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 API-Bank 是由阿里巴巴达摩院于 2023 年发布的 API 调用能力综合评测基准，旨在系统性地评测大型语言模型在工具增强（tool-augmented）场景下的三个层次能力：**调用计划**（是否需要调用 API）、**API 检索**（找到正确的 API）和 **API 调用**（正确填充参数并执行）。

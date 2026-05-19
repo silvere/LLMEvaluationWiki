@@ -21,6 +21,15 @@ domain:
 
 > 2024-03 由清华 NLP（THUNLP）联合 01.AI / Google / 港大发布，是 [[ToolBench]] 的稳定化升级：用虚拟 API server + GPT-4 judge 解决真实 API 不稳定导致的评测复现性问题。被 ACL 2024 Findings 收录。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv**: [https://arxiv.org/abs/2403.07714](https://arxiv.org/abs/2403.07714)
+- **GitHub**: [https://github.com/THUNLP-MT/StableToolBench](https://github.com/THUNLP-MT/StableToolBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **虚拟 API server**：用 cache + LLM-based simulator 模拟 ToolBench 16K+ API

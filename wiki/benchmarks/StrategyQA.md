@@ -23,6 +23,16 @@ sources:
 
 # StrategyQA
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2101.02235](https://arxiv.org/abs/2101.02235)
+- **官方主页**: [https://github.com/eladsegal/strategyqa](https://github.com/eladsegal/strategyqa)
+- **官网**: [Geva, M., et al. (2021). Did Aristotle Use a Laptop? A Question Answering Benchmark with Implicit Reasoning Strategies. TACL 2021.](Geva, M., et al. (2021). Did Aristotle Use a Laptop? A Question Answering Benchmark with Implicit Reasoning Strategies. TACL 2021.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 StrategyQA 是由 Allen Institute for AI 和 Tel-Aviv University 于 2021 年发布的策略性问答基准。该基准专注于**隐式多步推理**（implicit multi-step reasoning）——问题本身不暗示推理路径，模型需要自行分解并推断回答策略。

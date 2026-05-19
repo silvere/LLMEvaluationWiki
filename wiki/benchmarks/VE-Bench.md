@@ -16,6 +16,14 @@ status: active
 
 > 专门评测 AI 视频编辑模型质量的综合性基准，覆盖编辑精度、内容保留和感知质量三维度。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.05765](https://arxiv.org/abs/2410.05765)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 VE-Bench（Video Editing Benchmark）是 2024 年提出的视频编辑质量评测基准，填补了视频编辑（Video Editing）这一细分任务缺乏系统性评测标准的空白。与文本生成视频（T2V）评测不同，视频编辑任务要求模型在保留原始视频核心内容（背景、结构、时序）的同时，按照编辑指令精确修改指定元素（更换风格、改变对象属性、局部替换等）。

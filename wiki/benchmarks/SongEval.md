@@ -16,6 +16,14 @@ status: active
 
 > 西北工业大学 ASLP 实验室发布的 AI 生成歌曲美学评测基准，首个包含完整曲目和专业标注的开源歌曲质量评测数据集。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2505.10793](https://arxiv.org/abs/2505.10793)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SongEval 由西北工业大学语音语言处理实验室（ASLP-lab）发布，论文于 2025 年 5 月提交至 arXiv（2505.10793），并已被 ICASSP 2026 收录。SongEval 是目前规模最大的开源 AI 生成歌曲美学评测数据集，填补了歌曲生成评测领域缺乏专业主观基准的空白。

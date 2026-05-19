@@ -24,6 +24,15 @@ sources: []
 
 > 来自 AI2 的小学科学题推理基准，分为 Easy 和 Challenge 两个子集。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1803.05457](https://arxiv.org/abs/1803.05457)
+- **官方主页**: [https://allenai.org/data/arc](https://allenai.org/data/arc)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ARC（AI2 Reasoning Challenge）由 Clark 等人于 2018 年发布，来自 Allen Institute for AI（AI2）。数据集收集了真实美国小学到初中阶段的科学考试题，共约 7,787 道四选一多选题。

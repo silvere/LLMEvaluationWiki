@@ -23,6 +23,15 @@ sources:
 
 # SafetyBench：中英双语安全能力综合评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://github.com/thu-coai/SafetyBench](https://github.com/thu-coai/SafetyBench)
+- **arXiv**: [https://arxiv.org/abs/2309.07045](https://arxiv.org/abs/2309.07045)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SafetyBench 是 2023 年由清华大学提出的大规模中英双语安全评测基准。它包含 **11,435 道**多项选择题，覆盖 **7 个安全类别**，是专门为中文大语言模型安全性评测设计的系统性基准之一，同时提供英文版本支持跨语言对比。

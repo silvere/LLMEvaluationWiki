@@ -26,6 +26,15 @@ sources:
 
 > 包含800道Python函数题，分为输入预测（CRUXEval-I）和输出预测（CRUXEval-O）两个子任务，评测模型对代码执行过程的推理理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2401.03065](https://arxiv.org/abs/2401.03065)
+- **官方主页**: [https://github.com/facebookresearch/cruxeval](https://github.com/facebookresearch/cruxeval)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CRUXEval由Gu等人于2024年发布，旨在评测语言模型的代码推理与执行理解能力，而非单纯的代码生成能力。其核心思路是：给定一个Python函数，要求模型在不实际执行代码的情况下，通过推理预测函数的输入或输出。

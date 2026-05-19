@@ -17,6 +17,14 @@ status: active
 
 > Google 发布的 Android 设备控制数据集与基准，包含高层意图和低层操作两级指令，系统研究数据规模对 UI 控制 Agent 性能的影响。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.03679](https://arxiv.org/abs/2406.03679)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Android-Control 由 Google 研究团队（Wei Li、William Bishop、Alice Li、Chris Rawles 等）于 2024 年提出，论文"On the Effects of Data Scale on UI Control Agents"发表于 arXiv（2406.03679）。该工作的双重贡献在于：一方面构建了迄今为止任务多样性最高的 Android 设备控制数据集，另一方面系统性地研究了训练数据规模对 LLM/VLM agent 性能的影响规律。

@@ -17,6 +17,14 @@ status: active
 
 > 中文简单问答事实性评测基准，对标 SimpleQA，专门评测大语言模型在中文知识问答中的事实准确性与不确定性校准能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2411.07140](https://arxiv.org/abs/2411.07140)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Chinese SimpleQA 于 2024 年发布，是 OpenAI SimpleQA 基准的中文版本，由国内研究团队构建，专注于评测 LLM 在中文领域的**事实性（Factuality）**表现。该基准的核心设计理念与 SimpleQA 一致：问题设计为有且仅有一个正确答案，答案可以被事实核查，不存在歧义。

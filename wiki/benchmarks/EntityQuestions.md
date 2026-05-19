@@ -23,6 +23,16 @@ sources:
 
 # EntityQuestions
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2109.08535](https://arxiv.org/abs/2109.08535)
+- **官方主页**: [https://github.com/princeton-nlp/EntityQuestions](https://github.com/princeton-nlp/EntityQuestions)
+- **官网**: [Sciavolino, C., et al. (2021). Simple Entity-Centric Questions Challenge Dense Retrievers. EMNLP 2021.](Sciavolino, C., et al. (2021). Simple Entity-Centric Questions Challenge Dense Retrievers. EMNLP 2021.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 EntityQuestions 是由 Princeton NLP 于 2021 年发布的实体中心问答基准，专门用于测试语言模型和检索系统对**长尾实体（tail entity）**相关事实知识的掌握程度。该数据集揭示了密集检索（Dense Retrieval）系统在处理罕见实体时的系统性弱点。

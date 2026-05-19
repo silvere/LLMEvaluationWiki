@@ -22,6 +22,15 @@ task: "AI-generated-video-detection"
 
 > 迄今规模最大的 AI 生成视频检测基准，包含 6,784,490 个视频样本，采用跨来源与跨生成器设置，覆盖 11 种主流生成器
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2501.11340](https://arxiv.org/abs/2501.11340)
+- **官网**: 待填充
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 GenVidBench 是专为 AI 生成视频检测（fake video detection）任务设计的大规模评测基准。随着 Sora、Kling 等视频生成模型的快速发展，AI 生成视频的视觉质量已接近真实拍摄素材，给内容平台审核和媒体可信度带来严峻挑战。GenVidBench 以 678 万级别的样本量和跨来源/跨生成器的任务设定，构成迄今为止最大规模、最具挑战性的视频真伪检测数据集。

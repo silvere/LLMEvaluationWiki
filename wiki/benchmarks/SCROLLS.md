@@ -24,6 +24,15 @@ sources: []
 
 > 包含 7 个长文档理解和摘要任务的聚合基准，提供统一评测界面和排行榜。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2201.03533](https://arxiv.org/abs/2201.03533)
+- **官方主页**: [https://www.scrolls-benchmark.com/](https://www.scrolls-benchmark.com/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SCROLLS 由 Shaham 等人于 2022 年提出（发表于 EMNLP 2022），来自特拉维夫大学等机构。该基准将 7 个已有的长文档 NLP 数据集整合为一个统一的评测套件，提供标准化的数据加载、评测指标和排行榜平台，降低了长文本研究的评测门槛。

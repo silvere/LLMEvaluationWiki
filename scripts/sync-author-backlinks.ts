@@ -48,7 +48,9 @@ function listMd(dir: string): string[] {
   const out: string[] = [];
   for (const entry of readdirSync(dir)) {
     const full = join(dir, entry);
-    if (statSync(full).isFile() && entry.endsWith(".md")) out.push(full);
+    const st = statSync(full);
+    if (st.isDirectory()) out.push(...listMd(full));
+    else if (st.isFile() && entry.endsWith(".md")) out.push(full);
   }
   return out;
 }

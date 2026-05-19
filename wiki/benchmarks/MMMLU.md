@@ -25,6 +25,14 @@ sources:
 
 > MMLU的多语言版本，将原版英文题目翻译为多种主要语言，用于评测大语言模型在非英语语言上的知识理解和推理能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://huggingface.co/datasets/openai/MMMLU](https://huggingface.co/datasets/openai/MMMLU)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMMLU是对Hendrycks等人原版MMLU（Massive Multitask Language Understanding）的多语言扩展，由OpenAI发布于Hugging Face平台。原版MMLU包含57个学科领域的约14,000道英文选择题，覆盖从小学到专业资格考试的广泛知识范围。

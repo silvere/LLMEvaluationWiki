@@ -23,6 +23,15 @@ sources:
 
 # POPE：视觉对象幻觉轮询评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.10355](https://arxiv.org/abs/2305.10355)
+- **官方主页**: [https://github.com/AoiDragon/POPE](https://github.com/AoiDragon/POPE)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 POPE（Polling-based Object Probing Evaluation）是 2023 年提出的视觉语言模型**对象幻觉（Object Hallucination）**专项评测基准，发表于 EMNLP 2023。它通过系统性的轮询问答方式检测模型是否会"凭空捏造"图像中不存在的对象，是目前最广泛使用的幻觉评测基准之一。

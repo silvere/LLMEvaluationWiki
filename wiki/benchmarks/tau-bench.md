@@ -21,9 +21,35 @@ status: active
 saturation_threshold: 0.80
 sources:
   - "Yao, S., et al. (2024). τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv:2406.12045."
+sota:
+  - score: "高于 Opus 4"
+    model: "Claude-Sonnet-4.5"
+    harness: null
 ---
 
 # τ-bench（tau-bench）
+
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Claude-Sonnet-4.5]] | — | 高于 Opus 4 | — |  | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.12045](https://arxiv.org/abs/2406.12045)
+- **官方主页**: [https://github.com/sierra-research/tau-bench](https://github.com/sierra-research/tau-bench)
+- **官网**: [Yao, S., et al. (2024). τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv:2406.12045.](Yao, S., et al. (2024). τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv:2406.12045.)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

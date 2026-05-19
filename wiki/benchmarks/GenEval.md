@@ -22,6 +22,15 @@ domain:
 
 > Allen AI / Meta 2023-10 推出的 object-focused text-to-image 评测框架：用 atomic prompt + 物体检测 / VQA judge 评测组合属性（object co-occurrence / position / count / color）。是 T2I 模型 compositional 能力评测的事实标准，几乎所有现代 T2I 模型（SD3 / DALL-E 3 / Imagen 3 / FLUX）都报 GenEval 分数。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv**: [https://arxiv.org/abs/2310.11513](https://arxiv.org/abs/2310.11513)
+- **GitHub**: [https://github.com/djghosh13/geneval](https://github.com/djghosh13/geneval)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计（GenEval v1）
 
 - **维度**：6 维

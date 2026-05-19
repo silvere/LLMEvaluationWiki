@@ -23,6 +23,15 @@ sources:
 
 # BeaverTails：安全对齐研究数据集
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.04657](https://arxiv.org/abs/2307.04657)
+- **官方主页**: [https://sites.google.com/view/pku-beavertails](https://sites.google.com/view/pku-beavertails)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BeaverTails 是 2023 年由北京大学提出的大规模安全对齐数据集，发表于 NeurIPS 2023 数据集赛道。它包含约 **33 万条**问答对，每条均附有**安全性标注**（Safe/Unsafe）和**有害类别标签**，旨在为 RLHF（基于人类反馈的强化学习）和安全对齐研究提供高质量数据基础。

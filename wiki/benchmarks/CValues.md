@@ -23,6 +23,15 @@ sources:
 
 # CValues：中文大语言模型价值观对齐评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.09705](https://arxiv.org/abs/2307.09705)
+- **官方主页**: [https://github.com/X-PLUG/CValues](https://github.com/X-PLUG/CValues)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CValues 是 2023 年由阿里巴巴团队提出的中文大语言模型**价值观对齐**评测基准。它专注于评测中文 LLM 在**安全性（Safety）**和**责任性（Responsibility）**两个维度上的价值对齐程度，包含约 **2,000 条**测试样本，是首批系统化评测中文模型价值观的重要基准之一。

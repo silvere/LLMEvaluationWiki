@@ -24,6 +24,15 @@ sources: []
 
 > 基于知识图谱结构的知识导向型语言模型评测基准，分层次评测模型对知识的记忆、理解、应用和创造能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2306.09296](https://arxiv.org/abs/2306.09296)
+- **官方主页**: [https://kola.xlore.cn/](https://kola.xlore.cn/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 KoLA 由 Yu 等人于 2023 年提出，来自清华大学知识工程组。该基准的独特之处在于将**知识能力**分为四个层次，形成类似布鲁姆认知分类法的知识评测框架：

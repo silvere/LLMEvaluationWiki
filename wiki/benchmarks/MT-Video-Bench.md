@@ -22,6 +22,15 @@ task: "video-understanding"
 
 > 首个专注于多轮对话场景的视频理解综合评测基准，包含 1,000 个对话、5,887 个 QA 对，从感知性与交互性两大维度系统评估多模态 LLM 的视频理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2510.17722](https://arxiv.org/abs/2510.17722)
+- **官网**: 待填充
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MT-Video-Bench（Multi-Turn Video Benchmark）是 2026 年初提出的视频理解评测基准，由 Fudan University、Nanjing University（NJU-LINK）、USTC 与 Kuaishou Technology 联合构建。不同于 [[Video-MME]] 等以单轮问答为主的视频评测基准，MT-Video-Bench 模拟真实人机交互场景，要求模型在连续多轮对话中保持上下文一致性、处理话题转换并展现主动交互能力。

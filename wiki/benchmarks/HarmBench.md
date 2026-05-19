@@ -24,6 +24,15 @@ sources: [""]
 
 > 标准化的 LLM 安全红队评测框架，统一衡量多种攻击方法对不同模型的攻击成功率。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2402.04249](https://arxiv.org/abs/2402.04249)
+- **官方主页**: [https://github.com/centerforaisafety/HarmBench](https://github.com/centerforaisafety/HarmBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 HarmBench 于 2024 年发布，由 Center for AI Safety 团队主导。其目标是为 LLM 安全红队测试提供标准化的评测基础设施，解决此前安全评测领域"各自为战"的碎片化问题——不同论文使用不同攻击方法、不同数据集、不同评判标准，导致研究结果难以横向对比。

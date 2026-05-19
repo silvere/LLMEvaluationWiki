@@ -20,6 +20,14 @@ status: active
 
 > 由 Sierra Research 发布的 τ-bench 第二代版本，引入电信（Telecom）领域，采用 Dec-POMDP 建模多 agent 协作，评测 AI agent 在双控制域（双向信息不完全）场景下的工具使用和对话推理能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2506.07982](https://arxiv.org/abs/2506.07982)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 τ²-Bench（tau-squared-bench，2025，Sierra Research）是 [[tau-bench|τ-bench]] 系列的第二代版本，在原有零售（Retail）和航空（Airline）两个领域基础上新增**电信（Telecom）**场景，并引入更严格的形式化框架——Dec-POMDP（去中心化部分可观测马尔可夫决策过程）。

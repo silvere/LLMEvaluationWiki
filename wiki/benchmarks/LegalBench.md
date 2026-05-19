@@ -24,6 +24,15 @@ sources: []
 
 > 由法学院学生和法律专家合作构建的 162 个法律推理任务集合，覆盖法律推理的多个维度。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2308.11462](https://arxiv.org/abs/2308.11462)
+- **官方主页**: [https://hazyresearch.stanford.edu/legalbench/](https://hazyresearch.stanford.edu/legalbench/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LegalBench 由 Guha 等人于 2023 年提出，来自斯坦福大学 Hazy Research Lab（发表于 NeurIPS 2023）。该基准是迄今为止最全面的法律推理评测套件，由超过 40 位法学院学生和法律专家共同构建，历时数年完成。

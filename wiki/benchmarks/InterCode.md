@@ -26,6 +26,15 @@ sources:
 
 > 交互式代码执行评测框架，支持SQL和Bash两类任务，要求AI代理通过多轮交互执行代码、观察结果并迭代改进，模拟真实编程工作流。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2306.14898](https://arxiv.org/abs/2306.14898)
+- **官方主页**: [https://intercode-benchmark.github.io/](https://intercode-benchmark.github.io/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 InterCode由Yang等人于2023年发布，是一个专注于**交互式代码执行**的评测框架，与传统的一次性代码生成评测（如HumanEval）不同。InterCode模拟了程序员真实的编程工作流：执行代码、观察输出、根据反馈修改代码，通过多轮交互逐步解决问题。

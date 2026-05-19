@@ -17,6 +17,14 @@ status: active
 
 > 评测视觉指令跟随能力的早期多模态基准，通过 GPT-4 评分衡量模型回应多样化视觉问题的质量。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2304.08485](https://arxiv.org/abs/2304.08485)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LLaVA-Bench（Large Language and Vision Assistant Benchmark）由 UW-Madison 和 Microsoft Research 于 2023 年随 LLaVA 模型一同发布。它是最早采用**视觉指令跟随（Visual Instruction Following）**范式的多模态评测基准之一，通过开放式对话问题和 GPT-4 评分来衡量模型理解图像并进行自然对话的能力。

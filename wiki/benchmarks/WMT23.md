@@ -23,6 +23,16 @@ sources:
 
 # WMT23
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2311.09979](https://arxiv.org/abs/2311.09979)
+- **官方主页**: [https://www2.statmt.org/wmt23/](https://www2.statmt.org/wmt23/)
+- **官网**: [Kocmi, T., et al. (2023). Findings of the 2023 Conference on Machine Translation (WMT23). WMT 2023.](Kocmi, T., et al. (2023). Findings of the 2023 Conference on Machine Translation (WMT23). WMT 2023.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WMT（Conference on Machine Translation）是机器翻译领域最权威的年度竞赛与评测会议，由 EMNLP 机器翻译工作坊演变而来。WMT23 于 2023 年举办，为该系列的第 23 届，包含多个翻译方向的竞赛任务，并发布了大规模多语言翻译评测数据集。WMT 系列是机器翻译质量评测和自动评测指标研究的标准数据来源。

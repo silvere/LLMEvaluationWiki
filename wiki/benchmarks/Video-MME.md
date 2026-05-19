@@ -25,6 +25,15 @@ sources:
 
 # Video-MME：全面的视频多模态评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2405.21075](https://arxiv.org/abs/2405.21075)
+- **官方主页**: [https://video-mme.github.io](https://video-mme.github.io)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Video-MME 是 2024 年提出的视频理解综合评测基准，专注于评测**视频多模态大模型（Video MLLMs）**的理解能力。它包含 **900 个视频**（总时长 254 小时）和 **2,700 道**问答题，覆盖短、中、长三种时长类别，是目前最全面的视频理解基准之一。

@@ -4,25 +4,58 @@ type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
+as_of_date: "2026-05-19"
+last_verified: "2026-05-19"
 domain: [instruction-following]
 language: en
 year: 2023
-authors: ["Zhou et al."]
+authors: ["Jeffrey Zhou", "Tianjian Lu", "Swaroop Mishra", "Siddhartha Brahma", "Sujoy Basu", "Yi Luan", "Denny Zhou", "Le Hou"]
 arxiv_id: "2311.07911"
 official_url: "https://github.com/google-research/google-research/tree/master/instruction_following_eval"
-license: ""
+official_leaderboard: "https://benchlm.ai/instruction-following"
+license: "Apache-2.0"
 size: 541
-format: multiple-choice
-status: active
-saturation_threshold: 0.90
-sources: [""]
+format: programmatic-verifiable
+saturation_status: saturated
+sources:
+  - "https://arxiv.org/abs/2311.07911"
+  - "https://github.com/google-research/google-research/tree/master/instruction_following_eval"
+evaluation_protocol:
+  default_shots: "0-shot"
+  default_cot: false
+  tool_use: false
+  scoring: "Prompt-level / Instruction-level accuracy（strict & loose 两套指标）"
+pitfalls:
+  - "**Strict vs Loose 模式分数差 10-15pt**：strict 严格匹配格式（如字数 ≥400），loose 容忍轻微违反；跨论文必须确认是哪个"
+  - "Prompt-level vs Instruction-level：一个 prompt 可有多条指令，Prompt-level 要求**全部**满足，Instruction-level 是平均通过率，分数有 5-10pt 差异"
+  - "饱和：顶级模型 ≥90%（Claude Mythos Preview / GPT-5.4 / Grok 4.20 等），区分度低；应配合 AdvancedIF / MultiIF / FollowBench"
+  - "指令类型固定 25 种（写 N 字、含关键词、避免字母 'C' 等），覆盖工程价值有限，对 jailbreak / 长指令 / 多 turn 不评测"
+  - "对 verifier 实现敏感（Python 字数统计 vs LLM judge 差异），不同评测框架（lm-eval-harness / official）的实现细节稍异"
+sota:
+  - score: "100.0%"
+    model: "Kimi-K2.5-Reasoning"
+    harness: null
+    notes: "BenchLM 2026-04 weighted score"
+  - score: "100.0%"
+    model: "Grok-4.20-Multi-agent"
+    harness: null
+  - score: "97.1%"
+    model: "Grok-4.20"
+    harness: null
 ---
 
 # IFEval（Instruction Following Evaluation）
 
 > 用可程序化验证的具体指令测试模型的精确遵循能力，客观衡量模型对格式和内容约束的执行准确性。
+
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2311.07911](https://arxiv.org/abs/2311.07911)
+- **官方主页**: [https://github.com/google-research/google-research/tree/master/instruction_following_eval](https://github.com/google-research/google-research/tree/master/instruction_following_eval)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

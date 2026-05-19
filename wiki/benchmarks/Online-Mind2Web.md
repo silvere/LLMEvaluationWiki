@@ -17,6 +17,14 @@ status: active
 
 > 俄亥俄州立大学 NLP 团队发布的在线网页 Agent 评测基准，包含 300 个真实多样任务、覆盖 136 个网站，论文揭示当前主流 Web Agent 在真实环境中的能力被严重高估（arXiv:2504.01382，COLM 2025）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2504.01382](https://arxiv.org/abs/2504.01382)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Online-Mind2Web 是俄亥俄州立大学 NLP Group（OSU-NLP-Group）发布的在线网页 Agent 评测基准，作为论文"An Illusion of Progress? Assessing the Current State of Web Agents"（arXiv:2504.01382）的核心贡献，于 2025 年发布，被 COLM（Conference on Language Modeling）2025 收录。数据集已在 [[Hugging-Face|Hugging Face]]（osunlp/Online-Mind2Web）和 GitHub（OSU-NLP-Group/Online-Mind2Web）开源。

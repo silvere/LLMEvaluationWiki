@@ -16,6 +16,14 @@ status: active
 
 > ImageNet 1000 类的手绘草图变体，专门用于评测视觉模型对非自然图像分布的域外泛化能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1905.13549](https://arxiv.org/abs/1905.13549)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ImageNet-Sketch 由 Wang 等人于 NeurIPS 2019 论文《Learning Robust Global Representations by Penalizing Local Predictive Power》（arXiv 1905.13549）中伴随发布，是一个与 ImageNet 验证集类别完全对应的**草图风格图像**评测数据集。其核心目标是评测在 ImageNet 自然照片上预训练的视觉模型，是否能够迁移到以黑白草图为主的非自然图像分布，衡量模型对语义概念的泛化能力而非纹理依赖性。

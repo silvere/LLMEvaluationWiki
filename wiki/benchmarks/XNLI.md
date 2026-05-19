@@ -23,6 +23,16 @@ sources:
 
 # XNLI
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1809.05053](https://arxiv.org/abs/1809.05053)
+- **官方主页**: [https://github.com/facebookresearch/XNLI](https://github.com/facebookresearch/XNLI)
+- **官网**: [Conneau, A., et al. (2018). XNLI: Evaluating Cross-lingual Sentence Representations. EMNLP 2018.](Conneau, A., et al. (2018). XNLI: Evaluating Cross-lingual Sentence Representations. EMNLP 2018.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 XNLI（Cross-lingual Natural Language Inference）是由 Facebook AI Research 等机构于 2018 年发布的经典跨语言自然语言推理基准，将英语 MultiNLI 数据集扩展到 **15 种语言**。XNLI 是多语言 NLP 领域使用最广泛的评测基准之一，推动了跨语言预训练模型（mBERT、XLM、XLM-R）的发展。

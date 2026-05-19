@@ -26,6 +26,15 @@ sources:
 
 > 耶鲁大学发布的跨领域Text-to-SQL基准，包含10181个问题和对应SQL查询，跨越200个数据库和138个不同领域，是Text-to-SQL研究领域最重要的标准基准之一。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1809.08887](https://arxiv.org/abs/1809.08887)
+- **官方主页**: [https://yale-lily.github.io/spider](https://yale-lily.github.io/spider)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Spider由Yu等人于2018年（Yale LILY实验室）发布，是Text-to-SQL任务的标志性基准。与早期Text-to-SQL数据集（如ATIS、WikiSQL）相比，Spider的最大特点是**跨数据库泛化**：测试集中的数据库和问题在训练时完全不可见，要求模型具备真正的泛化能力。

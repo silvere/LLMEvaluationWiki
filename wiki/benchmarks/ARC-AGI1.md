@@ -19,6 +19,14 @@ aliases:
 
 > 抽象推理语料库 1.0（Abstraction and Reasoning Corpus），François Chollet 于 2019 年提出的 AGI 能力测试基准，通过视觉模式推理任务衡量模型的核心知识泛化能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1911.01547](https://arxiv.org/abs/1911.01547)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ARC-AGI1（Abstract and Reasoning Corpus for Artificial General Intelligence，第一代）由 Google 研究员 François Chollet 于 2019 年在其里程碑论文《On the Measure of Intelligence》中提出。该基准的设计哲学深刻影响了此后 AGI 能力讨论的框架：真正的智能不在于记忆大量知识，而在于用**极少量先验**（先天核心知识：对象持久性、基本几何、空间关系、数字感）解决**全新类型的问题**。

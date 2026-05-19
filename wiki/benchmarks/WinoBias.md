@@ -23,6 +23,15 @@ sources:
 
 # WinoBias：性别-职业偏见指代消解评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1804.06876](https://arxiv.org/abs/1804.06876)
+- **官方主页**: [https://github.com/uclanlp/corefBias](https://github.com/uclanlp/corefBias)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WinoBias 是 2018 年由 Zhao 等人提出的性别偏见评测基准，发表于 NAACL 2018。它包含 **3,160 条**Winograd 风格的句子，专门评测 NLP 系统（尤其是指代消解模型）中存在的**性别-职业刻板印象偏见**，是偏见评测领域的经典基准之一。

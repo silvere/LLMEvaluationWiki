@@ -17,6 +17,14 @@ status: active
 
 > 评测 LLM 在多轮对话中跟随累加约束条件能力的基准，扩展 IFEval 至多轮多语言场景，包含 4,501 条多语言三轮对话，由 Meta AI 于 2024 年发布。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.15553](https://arxiv.org/abs/2410.15553)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Multi-IF（Multi-Turn and Multilingual Instruction Following）于 2024 年 10 月发布，由 Meta AI 研究团队推出，是对 IFEval 基准的重要扩展。该工作的出发点是：现有指令跟随评测（包括 IFEval）几乎全部聚焦于单轮、英语场景，而真实世界的 LLM 使用往往是多轮对话，且用户在对话过程中会不断追加新的约束条件，模型必须在跟随新指令的同时保持对历史约束的一致遵从。

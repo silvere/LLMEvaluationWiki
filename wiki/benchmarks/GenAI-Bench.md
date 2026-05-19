@@ -16,6 +16,14 @@ status: active
 
 > 由 Adobe Research 提出的生成式 AI 评测基准，专门评测文生图和文生视频模型在细粒度语义对齐（Compositional Prompt Following）上的能力，强调模型是否能忠实遵循复杂的组合性文本描述。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.13743](https://arxiv.org/abs/2406.13743)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 GenAI-Bench（2024，Adobe Research）是针对文生图（T2I）和文生视频（T2V）模型的统一评测基准，聚焦于**复杂组合性提示的语义对齐能力**。现有 T2I/T2V 评测往往使用简单单概念提示（如"一只猫"），难以区分模型在多概念、属性绑定、空间关系、计数等复杂语义上的差异。

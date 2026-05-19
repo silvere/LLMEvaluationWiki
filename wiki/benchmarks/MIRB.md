@@ -17,6 +17,14 @@ status: active
 
 > 多图像推理基准（Multi-Image Reasoning Benchmark），评测多模态大模型在多图交叉推理、比较分析和序列理解方面的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.09411](https://arxiv.org/abs/2406.09411)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MIRB（Multi-Image Reasoning Benchmark）于 2024 年提出，是专注于**多图像推理**场景的评测基准，与 MuirBench 同期发布（共享同一 arXiv 编号，但侧重点有所不同）。MIRB 重点评测模型在接收多张相关图像输入时，能否进行有效的跨图像推理和信息整合。

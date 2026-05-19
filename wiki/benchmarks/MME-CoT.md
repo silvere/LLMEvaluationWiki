@@ -17,6 +17,14 @@ status: active
 
 > 首个系统评测多模态大模型链式思考（Chain-of-Thought）推理质量、鲁棒性和效率的综合基准，发表于 ICML 2025，揭示反思机制与推理效率之间的深层权衡。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2502.09621](https://arxiv.org/abs/2502.09621)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MME-CoT 由 Jiang 等研究者提出，论文"MME-CoT: Benchmarking Chain-of-Thought in Large Multimodal Models for Reasoning Quality, Robustness, and Efficiency"于 2025 年 2 月发表于 arXiv（2502.09621），并被 ICML 2025 正式接收。这是多模态 CoT 评测领域第一项综合性研究，填补了现有多模态基准对推理过程评估的空白。

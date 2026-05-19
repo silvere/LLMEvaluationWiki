@@ -23,6 +23,16 @@ sources:
 
 # MINT
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2309.10691](https://arxiv.org/abs/2309.10691)
+- **官方主页**: [https://github.com/xingyaoww/mint-bench](https://github.com/xingyaoww/mint-bench)
+- **官网**: [Wang, X., et al. (2023). MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback. ICLR 2024.](Wang, X., et al. (2023). MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback. ICLR 2024.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MINT（Multi-turn INteractive Tool-use）是由 UIUC 等机构于 2023 年提出的多轮交互工具使用评测基准，专注于测试 LLM 在**反馈驱动**的多轮交互中使用工具（代码执行器、搜索引擎等）完成任务的能力。MINT 的核心创新在于引入了**语言反馈机制**，允许人类或 LLM 模拟器在任务执行过程中提供自然语言纠正信号。

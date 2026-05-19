@@ -24,6 +24,15 @@ sources: []
 
 > 面向长文本理解的多领域评测基准，覆盖法律、金融、学术等专业领域，包含封闭式和开放式两类任务。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.11088](https://arxiv.org/abs/2307.11088)
+- **官方主页**: [https://github.com/OpenLMLab/LEval](https://github.com/OpenLMLab/LEval)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 L-Eval 由 An 等人于 2023 年提出，来自复旦大学 OpenLMLab。该基准专注于评测语言模型在**专业领域长文档**上的理解和推理能力，覆盖 20 个子任务，包含多种专业垂直领域。

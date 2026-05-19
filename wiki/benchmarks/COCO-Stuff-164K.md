@@ -17,6 +17,14 @@ status: active
 
 > 在 COCO 2017 全量 164K 图像上扩展像素级 Stuff 类别标注的语义分割数据集，是当前规模最大的 Thing+Stuff 全类型标注数据集之一。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1612.03716](https://arxiv.org/abs/1612.03716)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 COCO-Stuff 由 Caesar 等人于 CVPR 2018 论文《COCO-Stuff: Thing and Stuff Classes in Context》（arXiv 1612.03716）中提出，是对 MS-COCO 数据集的重要语义标注扩展。原始 COCO 数据集仅提供 80 个"Thing"类别（具有明确轮廓的可数物体）的实例级标注，COCO-Stuff 进一步为全部 164K 张图像补充了 **91 个"Stuff"类别**（无明确轮廓的背景材质与场景区域，如天空、草地、水面、道路等）的像素级标注，使得 COCO-Stuff-164K 成为同时覆盖 Thing（80 类）和 Stuff（91 类）两大语义类型共 **171 个有效类别**（另加 1 个"unlabeled"类）的完整场景理解数据集。

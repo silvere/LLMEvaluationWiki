@@ -26,6 +26,15 @@ sources:
 
 > 包含来自数学、物理学、生物学、化学、法律等多领域研究级别难题的高级推理基准，旨在评测语言模型在专家水平复杂推理任务上的表现极限。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.13692](https://arxiv.org/abs/2307.13692)
+- **官方主页**: [https://github.com/TheDuckAI/arb](https://github.com/TheDuckAI/arb)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ARB由Sawada等人于2023年发布，旨在提供一个覆盖多个高难度学科领域的推理评测基准，弥补现有基准在评测研究级（PhD及以上水平）推理能力上的不足。

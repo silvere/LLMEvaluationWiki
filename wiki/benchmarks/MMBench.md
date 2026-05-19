@@ -23,6 +23,15 @@ sources:
 
 # MMBench：多模态理解细粒度评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.06281](https://arxiv.org/abs/2307.06281)
+- **官方主页**: [https://mmbench.opencompass.org.cn](https://mmbench.opencompass.org.cn)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMBench 是 2023 年由上海 AI Lab 联合多家机构提出的多模态理解评测基准。它的核心目标是从**细粒度能力维度**系统衡量视觉语言模型的综合理解水平，并通过与 ChatGPT 协同的答案匹配机制解决选项格式不一致问题。

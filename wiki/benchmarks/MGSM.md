@@ -18,11 +18,24 @@ format: open-ended
 status: active
 saturation_threshold: 0.90
 sources: []
+sota:
+  - score: "约 91.1%"
+    model: "Llama-3.3-70B"
+    harness: null
 ---
 
 # MGSM（Multilingual Grade School Math）
 
 > 将 GSM8K 数学题翻译为 10 种语言的多语言小学数学推理基准。
+
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2210.03057](https://arxiv.org/abs/2210.03057)
+- **官方主页**: [https://github.com/google-research/url-nlp/tree/main/mgsm](https://github.com/google-research/url-nlp/tree/main/mgsm)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 
@@ -54,6 +67,19 @@ MGSM 的重要发现是：模型在不同语言上的数学推理能力存在显
 ## SOTA 表现
 
 顶尖多语言模型（GPT-4o、Gemini Ultra 等）在 MGSM 的平均准确率超过 85%（英文），但各语言间仍存在差距。具体最新成绩见各模型官方技术报告。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Llama-3.3-70B]] | — | 约 91.1% | — |  | — |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

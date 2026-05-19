@@ -21,6 +21,14 @@ domain:
 
 > 2020-11 由 Google Research（[[Yi-Tay]] / Mostafa Dehghani 等）发布的高效 Transformer 评测套件：1K–16K token 序列，6 个任务覆盖文本 / 图像 / 数学表达式 / 路径检索等多模态。系统对比 Reformer / Linformer / Linear / Sinkhorn / Performer / Synthesizer / Sparse / Longformer 等 10 种长序列模型，是 2020-2023 高效 Transformer 研究的事实基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv**: [https://arxiv.org/abs/2011.04006](https://arxiv.org/abs/2011.04006)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计（6 任务）
 
 - **ListOps** —— 嵌套数学表达式（最长 2K）

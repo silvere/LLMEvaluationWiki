@@ -24,6 +24,15 @@ sources: []
 
 > 基于生物医学研究论文摘要的问答基准，答案为 yes/no/maybe 三类，测试生物医学文献理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1909.06146](https://arxiv.org/abs/1909.06146)
+- **官方主页**: [https://pubmedqa.github.io/](https://pubmedqa.github.io/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 PubMedQA 由 Jin 等人于 2019 年提出（发表于 EMNLP 2019）。该数据集利用 PubMed 生物医学研究论文的结构化摘要（包含研究目的、方法、结果、结论）来构建是非类问答任务。

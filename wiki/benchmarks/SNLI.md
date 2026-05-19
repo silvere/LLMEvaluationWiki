@@ -24,6 +24,15 @@ sources: []
 
 > 斯坦福大学发布的首个大规模自然语言推理数据集，奠定了 NLI 研究范式的基础。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1508.05326](https://arxiv.org/abs/1508.05326)
+- **官方主页**: [https://nlp.stanford.edu/projects/snli/](https://nlp.stanford.edu/projects/snli/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SNLI 由 Bowman 等人于 2015 年提出（发表于 EMNLP 2015），来自斯坦福大学。这是 NLP 历史上第一个大规模的**自然语言推理**（NLI）数据集，其发布开创了以神经网络方法研究语义蕴含问题的新时代。

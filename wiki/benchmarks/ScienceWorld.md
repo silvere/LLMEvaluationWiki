@@ -23,6 +23,16 @@ sources:
 
 # ScienceWorld
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2203.07540](https://arxiv.org/abs/2203.07540)
+- **官方主页**: [https://github.com/allenai/ScienceWorld](https://github.com/allenai/ScienceWorld)
+- **官网**: [Wang, R., et al. (2022). ScienceWorld: Is Your Agent Smarter than a 5th Grader? EMNLP 2022.](Wang, R., et al. (2022). ScienceWorld: Is Your Agent Smarter than a 5th Grader? EMNLP 2022.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ScienceWorld 是由 Allen Institute for AI 于 2022 年提出的科学实验仿真代理评测环境，旨在测试 AI 代理在**交互式科学实验场景**中执行小学水平科学实验的能力。与纯文本问答不同，ScienceWorld 要求代理通过顺序动作操作虚拟实验室环境来完成实验任务。

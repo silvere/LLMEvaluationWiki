@@ -17,6 +17,14 @@ status: active
 
 > Big-Bench Extra Hard（BBEH），BIG-Bench Hard 的升级版，通过更复杂的任务变体和更严格的评分机制，专为测试前沿 LLM 的极限推理能力而设计。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2502.19187](https://arxiv.org/abs/2502.19187)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BBEH（Big-Bench Extra Hard）由 Google DeepMind 于 2025 年发布，是对 2022 年 BIG-Bench Hard（BBH）的重要升级。随着 GPT-4、Gemini 1.5、Claude 3 等前沿模型在 BBH 上的得分已接近饱和（>80%），原版 BBH 已丧失对顶级模型的区分能力，BBEH 应运而生。

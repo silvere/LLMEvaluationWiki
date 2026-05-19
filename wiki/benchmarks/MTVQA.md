@@ -17,6 +17,14 @@ status: active
 
 > 多语言文本视觉问答基准，评测多模态模型在图像中识别和理解非英语场景文字的能力，覆盖 9 种语言。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2405.11985](https://arxiv.org/abs/2405.11985)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MTVQA（Multilingual Text-centric Visual Question Answering）于 2024 年提出，专门评测多模态大模型对图像中**多语言文本**的识别和理解能力。现有文本视觉理解（Text-VQA）基准几乎全部以英文为主，MTVQA 填补了这一空白，系统评测模型在 9 种非英语语言的图像文字理解表现。

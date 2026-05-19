@@ -25,6 +25,15 @@ sources:
 
 > 威廉·洛厄尔·普特南数学竞赛题目集，是北美大学本科生级别最高荣誉的数学竞赛，作为LLM评测基准时代表了数学证明推理能力的极限挑战。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://math.scu.edu/putnam/](https://math.scu.edu/putnam/)
+- **官网**: [https://artofproblemsolving.com/wiki/index.php/William_Lowell_Putnam_Mathematical_Competition](https://artofproblemsolving.com/wiki/index.php/William_Lowell_Putnam_Mathematical_Competition)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 威廉·洛厄尔·普特南数学竞赛（William Lowell Putnam Mathematical Competition）由美国数学学会主办，每年12月举行，面向美国和加拿大的大学本科生。竞赛包含12道题（上午6道，下午6道），要求提供严格的数学证明，满分为120分。令人印象深刻的是，历年参赛学生的平均分通常只有1-2分（满分120分），该竞赛被认为是有史以来最难的数学竞赛之一。

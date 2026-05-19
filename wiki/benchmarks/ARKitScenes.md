@@ -17,6 +17,14 @@ status: active
 
 > Apple 发布的首个基于消费级 LiDAR 传感器采集的大规模室内 RGB-D 数据集，用于 3D 场景理解评测。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2111.08897](https://arxiv.org/abs/2111.08897)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ARKitScenes 由 Apple Machine Learning Research 于 2021 年发布，是第一个利用消费级设备（iPad Pro 内置 LiDAR 扫描仪）采集的大规模 RGB-D 室内场景数据集。论文发表于 NeurIPS 2021 Datasets and Benchmarks Track。与此前主要依赖专业扫描设备的数据集不同，ARKitScenes 使用大规模可普及硬件采集，显著降低了数据获取门槛，同时引入了更真实的传感器噪声特征。

@@ -16,6 +16,14 @@ status: active
 
 > 评测 LLM 基于给定事实和规则生成多步骤逻辑推理链（proof）能力的基准，涵盖从单步到五步以上的演绎推理深度。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2012.13048](https://arxiv.org/abs/2012.13048)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ProofWriter 由 Clark 等人（Allen Institute for AI）于 2021 年发布，专注于评测模型能否在严格的演绎逻辑框架下生成正确的多步推理证明（proof）。数据集使用程序化方法生成，每道题包含一组事实（facts）、一组规则（rules）和一个目标命题（hypothesis），模型需要判断目标命题是否成立（True/False/Unknown），并给出完整的推理链。

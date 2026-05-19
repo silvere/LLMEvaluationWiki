@@ -24,6 +24,15 @@ sources: []
 
 > 面向中文大型语言模型对齐能力的多维度评测基准，采用 LLM-as-Judge 自动评分。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2311.18743](https://arxiv.org/abs/2311.18743)
+- **官方主页**: [https://github.com/THUDM/AlignBench](https://github.com/THUDM/AlignBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AlignBench 由 Liu 等人于 2023 年提出，来自清华大学（发表于 ACL 2024）。该基准专门针对中文大型语言模型的**对齐能力**（alignment），即模型能否遵循人类指令、安全可靠地完成中文任务。

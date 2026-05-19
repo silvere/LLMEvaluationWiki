@@ -20,6 +20,14 @@ domain:
 
 > 自 1994 起每两年举办一次的蛋白质结构预测盲测，由 Maryland 大学 Prediction Center 组织。CASP14（2020）见证 [[AlphaFold|AlphaFold2]] 达到原子级精度（0.96 Å RMSD vs 第二名 2.8 Å），CASP15（2022）扩展到 protein complex，CASP16（2024-2025）转向 RNA / ligand / [[AlphaFold|AlphaFold3]] 等多模态生物分子。是科学 AI 评测的金标准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官网**: [https://predictioncenter.org/](https://predictioncenter.org/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **盲测协议**：实验测定但未公开的结构作为 hidden test set，参赛队伍提交预测

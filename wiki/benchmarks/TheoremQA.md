@@ -26,6 +26,15 @@ sources:
 
 > 包含800道需要应用科学定理求解的问题集，涵盖数学、物理、电子工程、金融等多个领域，结合选择题和开放式问答，评测模型将抽象定理应用于具体问题的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.12524](https://arxiv.org/abs/2305.12524)
+- **官方主页**: [https://github.com/wenhuchen/TheoremQA](https://github.com/wenhuchen/TheoremQA)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 TheoremQA由Chen等人于2023年发布，专注于评测语言模型能否理解并正确应用科学定理解决实际问题。题目涵盖的定理范围广泛，包括：数学（傅里叶变换、贝叶斯定理等）、物理学（牛顿定律、热力学定律等）、电子工程（信号处理、电路理论等）、金融学（Black-Scholes模型等）。

@@ -18,6 +18,14 @@ status: active
 
 > SEED-Bench 系列的扩展版本，新增图表、地图、网页等复杂视觉场景，评测多模态模型的高阶视觉理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2404.16790](https://arxiv.org/abs/2404.16790)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SEEDBench-2-Plus 由腾讯 AI Lab 于 2024 年提出，是 SEED-Bench-2 的进一步扩展。SEED-Bench 系列是多模态评测的重要基准体系，SEEDBench-2-Plus 在 SEED-Bench-2 的基础上，专门新增了**复杂视觉场景**的评测维度，重点覆盖图表（Charts）、地图（Maps）和网页（Webs）三类在现实应用中极为常见但此前缺乏专项评测的视觉类型。

@@ -22,6 +22,14 @@ domain:
 
 > 2023-07 由 HKU / Microsoft 等发布的 text-to-image compositional 评测：6,000 个 prompt，分 3 类 compositional 能力 ×（attribute binding / object relationships / complex composition）。是与 [[GenEval]] 并列的 T2I compositional 评测主流，T2I-CompBench++（2024）扩展到更复杂的多模态场景。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv**: [https://arxiv.org/abs/2307.06350](https://arxiv.org/abs/2307.06350)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **3 大类 + 6 子任务**：

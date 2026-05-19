@@ -16,6 +16,14 @@ status: active
 
 > 公平细粒度文本到视频生成评测基准，支持多维度自动化评测与人工评估对比。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2311.01813](https://arxiv.org/abs/2311.01813)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FETV（Fine-grained and Evaluative Text-to-Video）是 2023 年提出的文本生成视频评测基准，旨在解决现有 T2V 评测方法粒度粗糙、维度单一的问题。FETV 构建了一个包含 619 个提示词的评测集，每个提示词都附有详细的元信息标注，包括主体类型、动作类型、属性特征、关系描述等，支持细粒度的分类评测。

@@ -24,6 +24,15 @@ sources: []
 
 > 面向中文大型语言模型的长上下文理解评测基准，覆盖多种真实中文长文本场景。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2403.03514](https://arxiv.org/abs/2403.03514)
+- **官方主页**: [https://github.com/zexuanqiu/CLongEval](https://github.com/zexuanqiu/CLongEval)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CLongEval 于 2024 年发布，专门针对**中文**语境下的长上下文理解能力评测。在 LongBench 等双语长文本基准之外，CLongEval 提供了更具中文特色的长文本任务，填补了中文长上下文评测的空白。

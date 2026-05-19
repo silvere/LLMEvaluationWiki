@@ -1,0 +1,83 @@
+---
+title: "字节跳动AI（ByteDance AI）"
+type: entity
+entity_type: org
+publish: true
+author_mode: llm
+confidence: draft
+as_of_date: "2026-05-14"
+last_verified: "2026-05-14"
+sources: []
+---
+
+# 字节跳动AI（ByteDance AI）
+
+> 字节跳动旗下 AI 研究与产品部门，豆包（Doubao）系列模型的开发者，在多模态生成和对话 AI 产品领域活跃。
+
+## 基本信息
+
+- **性质**：字节跳动（ByteDance）旗下 AI 研究与产品部门
+- **主要研究机构**：字节跳动 AI Lab、Seed 团队
+- **总部**：中国北京
+- **规模**：千人以上 AI 相关人员
+
+## 主要贡献（评测相关）
+
+**豆包（Doubao）系列模型**：字节跳动的豆包 Pro 等模型在中文对话、知识问答等评测维度具有商用级别表现，在国内 C-Eval、CMMLU 等中文评测基准上发布了评测结果。
+
+**代码生成评测**：字节跳动在代码大模型方向（如 MarsCode）发布了 HumanEval 等代码生成评测结果，参与国内外代码 LLM 评测竞争。
+
+**多模态研究**：字节 AI Lab 发表了多篇多模态模型相关论文，并在视觉-语言评测基准上提供了比较结果。
+
+**语音与视频评测**：字节旗下产品（如剪映 AI、即梦）在视频生成质量评测领域有所涉及，推动了视频生成评测指标的应用。
+
+**学术发表**：字节跳动 AI Lab 在自然语言处理、计算机视觉、语音识别等方向持续发表顶会论文，部分工作直接涉及模型评测方法。
+
+## 代表性模型/产品
+
+- **豆包（Doubao）系列**：对话大模型产品
+- **MarsCode**：代码智能 IDE 及代码模型
+- **Seed 系列**：字节内部基础模型
+- **即梦（Dreamina）**：图像/视频生成产品
+
+## 对评测生态的影响
+
+字节跳动以大规模产品用户数据为基础，形成了工业界对真实用户交互评测的独特资源。其在开源社区的参与度相对有限，但商业产品评测数据为行业提供了真实场景效果参照。
+
+## 相关页面
+
+- Doubao
+- [[C-Eval]]
+- [[多模态评测]]
+
+## 模型版本（指向 wiki/models/ Spec）
+
+> 以下为本 wiki 收录的该机构发布模型 Spec：
+
+- [[Doubao-Seed-1.6|Doubao Seed 1.6 / Seed-Thinking]]（2025-04 (Seed-Thinking-v1.5), 2025-06 (Seed 1.6)）
+- [[Doubao-1.5-Pro|Doubao 1.5 Pro]]（2025-01）
+
+<!-- AUTO-RELATED:START -->
+
+## 自动关联
+
+> 以下由 `scripts/inject-entity-related.ts` 自动维护——基于 `wiki/models/` 的 `developer` 字段与 `wiki/entities/` 的 `entity_type` 字段。手动编辑会被覆盖。
+
+### 该机构发布的模型 Spec
+
+- [[Doubao-Seed-2.0|Doubao Seed 2.0（Pro/Lite/Mini）]]（2026-02）
+- [[Doubao-Seed-1.6|Doubao Seed 1.6 / Seed-Thinking]]（2025-04 (Seed-Thinking-v1.5), 2025-06 (Seed 1.6)）
+- [[Doubao-1.5-Pro|Doubao 1.5 Pro]]（2025-01）
+
+### 同类机构
+
+- [[Zhipu-AI|智谱AI（Zhipu AI）]]
+- [[Moonshot-AI|月之暗面（Moonshot AI）]]
+- [[MiniMax|MiniMax]]
+- [[DeepSeek|DeepSeek（深度求索）]]
+- [[Baidu-AI|百度AI（Baidu AI）]]
+- [[Alibaba-Tongyi|阿里巴巴通义（Alibaba Tongyi）]]
+- [[01-AI|零一万物（01.AI）]]
+- [[xAI|xAI]]
+
+<!-- AUTO-RELATED:END -->

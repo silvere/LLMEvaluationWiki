@@ -23,6 +23,15 @@ sources:
 
 # HallusionBench：视觉语言幻觉系统评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2310.14566](https://arxiv.org/abs/2310.14566)
+- **官方主页**: [https://github.com/tianyi-lab/HallusionBench](https://github.com/tianyi-lab/HallusionBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 HallusionBench 是 2023 年提出的专门针对视觉语言模型（VLM）**幻觉（Hallucination）**问题的评测基准。它包含 **1,129 对**视觉问题，通过精心设计的图像-问题配对揭示模型在视觉感知与语言先验之间的冲突，是幻觉评测领域的重要基准。

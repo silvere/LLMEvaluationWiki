@@ -21,6 +21,15 @@ domain:
 
 > 2024-03 由 [[Dan-Hendrycks|Hendrycks]] 等（[[Center-for-AI-Safety]]）联合 60+ 安全专家发布，3,668 题多选题覆盖 biosecurity / cybersecurity / chemical security 危险知识代理，目标是评估「LLM 在双用途风险领域到底知道多少」并配套 unlearning 方法（CUT）。是 [[safety-eval-landscape]] 中危险能力评估的标杆。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv**: [https://arxiv.org/abs/2403.03218](https://arxiv.org/abs/2403.03218)
+- **官网**: [https://www.wmdp.ai/](https://www.wmdp.ai/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **题量**：3,668 MCQ（biosecurity 1,520 / cybersecurity 1,987 / chemical security 408 等子集）

@@ -17,6 +17,14 @@ status: active
 
 > 模型识别基准（Model Identification Benchmark），评测大语言模型对自身身份、知识边界及元认知能力的准确性。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2405.06161](https://arxiv.org/abs/2405.06161)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MIBench（Model Identification Benchmark）于 2024 年发布，专注于评测一个以往被忽视的 LLM 能力维度：**自我认知与模型识别**。随着各类 AI 助手产品广泛部署，模型是否能准确识别自身版本、训练截止日期、知识边界以及能力限制，直接影响用户信任和系统可靠性。

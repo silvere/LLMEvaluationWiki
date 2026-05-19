@@ -18,6 +18,14 @@ status: active
 
 > 由浙江大学等机构发布的长视频异常理解基准 HIVAU-70k，包含超过 70,000 条多粒度标注，覆盖片段级、事件级和视频级三个层次，用于评测多模态 LLM 对视频中异常行为的识别、定位与解释能力（arXiv:2412.06171，CVPR 2025 Highlight）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2412.06171](https://arxiv.org/abs/2412.06171)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Holmes-VAU（Towards Long-term Video Anomaly Understanding at Any Granularity）是一个专为长视频异常理解设计的综合性基准与方法框架，于 2024 年 12 月发布于 arXiv（arXiv:2412.06171），并被 CVPR 2025 评为 Highlight 论文。该工作由浙江大学 pipixin321 团队主导，代码和数据已在 GitHub 开源。

@@ -24,6 +24,15 @@ sources: []
 
 > 基于真实用户查询的复杂指令评测基准，使用 GPT-4 Turbo 进行细粒度 LLM-as-Judge 评分。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.04770](https://arxiv.org/abs/2406.04770)
+- **官方主页**: [https://huggingface.co/spaces/allenai/WildBench](https://huggingface.co/spaces/allenai/WildBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WildBench 由 Lin 等人于 2024 年提出，来自 Allen Institute for AI（AI2）。该基准的核心特点是使用**真实用户**在 WildChat 平台上提交的实际查询，确保评测内容反映真实的使用场景和需求，而非人工设计的题目。

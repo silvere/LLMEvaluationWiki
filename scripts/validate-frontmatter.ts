@@ -17,7 +17,7 @@ const WIKI_DIR = join(ROOT, "wiki");
 
 const VALID_TYPES = new Set([
   "benchmark", "concept", "tool", "leaderboard", "entity",
-  "source", "paper", "model", "synthesis", "industry", "index",
+  "source", "paper", "model", "synthesis", "industry", "index", "harness",
 ]);
 const VALID_STATUS = new Set(["active", "saturated", "contaminated", "deprecated"]);
 const VALID_AUTHOR_MODE = new Set(["llm", "human", "mixed"]);
@@ -45,6 +45,7 @@ const TYPE_REQUIRED: Record<string, string[]> = {
   model:       [...COMMON_REQUIRED, "sources", "developer"],
   synthesis:   [...COMMON_REQUIRED, "sources"],
   industry:    [...COMMON_REQUIRED, "sources"],
+  harness:     [...COMMON_REQUIRED, "sources", "developer"],
   index:       ["title", "type", "publish"],
 };
 
@@ -139,6 +140,25 @@ function validateFile(filePath: string, content: string): ValidationResult {
     result.errors.push(`status 非法: "${fm["status"]}"，允许值: ${[...VALID_STATUS].join(", ")}`);
   if (type === "source" && fm["source_type"] && !VALID_SOURCE_TYPES.has(fm["source_type"] as string))
     result.errors.push(`source_type 非法: "${fm["source_type"]}"`);
+
+  // sota schema 校验（benchmark 类）— 详见 CLAUDE.md §3.5
+  if (type === "benchmark" && fm["sota"] !== undefined) {
+    const sota = fm["sota"];
+    if (!Array.isArray(sota)) {
+      result.errors.push(`sota 必须是数组，实际: ${typeof sota}`);
+    } else {
+      if (sota.length > 5) result.warnings.push(`sota 数组长度 ${sota.length} > 5，建议精简到 Top-5`);
+      sota.forEach((e: unknown, i: number) => {
+        if (typeof e !== "object" || e === null) {
+          result.errors.push(`sota[${i}] 必须是对象`);
+          return;
+        }
+        const entry = e as Record<string, unknown>;
+        if (!entry["score"]) result.errors.push(`sota[${i}].score 缺失`);
+        if (!entry["model"]) result.errors.push(`sota[${i}].model 缺失`);
+      });
+    }
+  }
 
   if (type === "benchmark" && fm["domain"]) {
     const domains = Array.isArray(fm["domain"]) ? fm["domain"] : [fm["domain"]];

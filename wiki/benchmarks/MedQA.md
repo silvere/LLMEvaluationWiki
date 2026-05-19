@@ -24,6 +24,15 @@ sources: []
 
 > 基于美国医学执照考试（USMLE）的医学推理问答基准，同时包含中国和台湾医学考试题目。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2009.13081](https://arxiv.org/abs/2009.13081)
+- **官方主页**: [https://github.com/jind11/MedQA](https://github.com/jind11/MedQA)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MedQA 由 Jin 等人于 2021 年提出（发表于 Applied Sciences 2021）。该数据集从多个国家的医学执照考试中收集题目，旨在评测语言模型的医学知识理解和临床推理能力。

@@ -17,6 +17,14 @@ status: active
 
 > 专为长视频理解设计的多模态基准，通过"引用字幕辅助推理"范式评测模型在数分钟至一小时视频中的时序推理与信息整合能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2407.15754](https://arxiv.org/abs/2407.15754)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LongVideoBench 于 2024 年发布，填补了视频理解领域在长时序场景下的评测空白。此前多数视频基准（如 MVBench、VideoMME）以短片段（数十秒）为主，而 LongVideoBench 的视频时长覆盖 15 秒至 60 分钟，中位时长约 10 分钟，真正考验模型跨越长时间跨度的理解能力。

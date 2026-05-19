@@ -20,11 +20,24 @@ saturation_threshold: 0.50
 sources:
   - "https://epochai.org/frontiermath"
   - "https://www.nature.com/articles/d41586-024-03502-6"
+sota:
+  - score: "约 25%"
+    model: "o3"
+    harness: null
 ---
 
 # FrontierMath
 
 > 由Epoch AI委托专业数学家出题的极高难度数学评测集，题目来自数学研究前沿，旨在测试当前最先进AI系统能否解决需要博士级别知识的数学问题。
+
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://epochai.org/frontiermath](https://epochai.org/frontiermath)
+- **官网**: [https://www.nature.com/articles/d41586-024-03502-6](https://www.nature.com/articles/d41586-024-03502-6)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 
@@ -57,6 +70,19 @@ FrontierMath的核心特点：
 | 人类数学研究者 | 视子领域，通常需数小时/道 |
 
 注：FrontierMath代表了当前AI数学能力的天花板挑战，预计需要数年才能显著突破。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[o3]] | — | 约 25% | — |  | — |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

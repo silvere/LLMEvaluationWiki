@@ -24,6 +24,15 @@ sources: []
 
 > 基于中国国家公务员考试逻辑推理题的双语（中英文）逻辑推理评测基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2007.08124](https://arxiv.org/abs/2007.08124)
+- **官方主页**: [https://github.com/lgw863/LogiQA-dataset](https://github.com/lgw863/LogiQA-dataset)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LogiQA 由 Liu 等人于 2020 年提出（发表于 IJCAI 2020）。数据集来源于中国国家公务员考试（行政职业能力测验）的逻辑推理题目，经过专业翻译后形成中英双语版本。

@@ -23,6 +23,15 @@ sources:
 
 # StrongREJECT：越狱评测标准化评分框架
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2402.10260](https://arxiv.org/abs/2402.10260)
+- **官方主页**: [https://strong-reject.readthedocs.io](https://strong-reject.readthedocs.io)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 StrongREJECT 是 2024 年提出的越狱攻击评测**评分框架**，针对现有越狱成功率（ASR）评测标准的严重缺陷而设计。它的核心贡献不在于提供新的有害问题集，而在于提供一套**更可靠的模型回复质量评分方法**，解决了传统关键词匹配评分的虚假高分问题。

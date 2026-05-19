@@ -16,6 +16,14 @@ status: active
 
 > 系统评测音频文本大模型在多样化音乐信息检索任务上的综合基准，接受于 ISMIR 2025，揭示当前 Audio LLM 与监督模型的显著差距。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2506.12285](https://arxiv.org/abs/2506.12285)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CMI-Bench（A Comprehensive Benchmark for Evaluating Music Instruction Following）由多位音乐信息检索（MIR）领域研究者共同构建，论文发表于 arXiv（2506.12285），并被第 26 届国际音乐信息检索学会年会（ISMIR 2025）接收。该基准旨在为音频文本大语言模型（audio-text LLM）在 MIR 任务上建立统一的评测标准，以直接可比的方式对比 LLM 与专门的监督模型。

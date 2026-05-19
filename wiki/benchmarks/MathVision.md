@@ -12,11 +12,36 @@ domain:
 year: 2024
 arxiv_id: "2402.14804"
 status: active
+sota:
+  - score: "88.6"
+    model: "Qwen3.5"
+    harness: null
+    notes: "超过 GPT-5.2 (83.0) 与 Gemini 3 Pro (86.6)"
 ---
 
 # MathVision
 
 > 包含图形的多模态数学推理基准，覆盖从初中到竞赛级别的 16 个数学学科，评测模型视觉数学推理能力。
+
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Qwen3.5]] | — | 88.6 | — | 超过 GPT-5.2 (83.0) 与 Gemini 3 Pro (86.6) | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2402.14804](https://arxiv.org/abs/2402.14804)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

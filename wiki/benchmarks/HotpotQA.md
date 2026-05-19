@@ -24,6 +24,15 @@ sources: []
 
 > 要求跨多个 Wikipedia 文档进行多跳推理的问答数据集，同时提供支持事实（supporting facts）标注。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1809.09600](https://arxiv.org/abs/1809.09600)
+- **官方主页**: [https://hotpotqa.github.io/](https://hotpotqa.github.io/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 HotpotQA 由 Yang 等人于 2018 年提出（发表于 EMNLP 2018），来自卡内基梅隆大学等机构。该数据集的核心特点是**多跳推理**（multi-hop reasoning）：每道问题需要从两个或更多 Wikipedia 文档中获取信息并进行推理，才能得出正确答案。

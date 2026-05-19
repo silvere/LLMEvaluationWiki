@@ -19,6 +19,14 @@ status: active
 
 > 由阿里巴巴达摩院发布的中文复杂场景 OCR 综合评测基准，覆盖文档理解、场景文字识别、手写体、表格等多类中文 OCR 任务，是评测多模态模型中文文字识别能力的全面标准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2412.02210](https://arxiv.org/abs/2412.02210)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CC-OCR（Complex Chinese OCR，2024，阿里巴巴达摩院）是专注于**中文光学字符识别**（OCR）能力的多模态评测基准。随着 LLM 与视觉语言模型（VLM）的快速发展，传统 OCR 系统（如 PaddleOCR、Tesseract）逐步与 LLM 整合，但缺乏针对中文场景的系统性评测。

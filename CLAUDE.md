@@ -211,6 +211,26 @@ cd quartz && npx quartz build --directory ../wiki  # 重建
 - `[[slug]]` 按文件 basename 解析（`markdownLinkResolution: "shortest"`）
 - 路径中的 `/` 不影响 Quartz 的 shortest 解析，可省略目录前缀
 
+### 3.5 benchmark `sota` 字段（必读）
+
+每个 benchmark 页 frontmatter **应当**有 `sota:` 字段记录 Top 1-5 模型/harness 得分（数据 SSOT）。脚本读 frontmatter 渲染成正文 `<!-- AUTO-SOTA -->` 区块。
+
+```yaml
+sota:
+  - score: "94.3%"            # 字符串保留原文格式（含 %、约、percentile 等）
+    model: "Gemini-3.1-Pro"   # wiki/models/ 的 slug
+    harness: null              # 裸模型则 null；agent benchmark 填 wiki/harnesses/ 的 slug
+    date: "2025-12"            # 可选：YYYY-MM 或 YYYY-MM-DD
+    source: "https://..."      # 可选：权威 URL（vendor 官方 / 论文 / AA leaderboard）
+    notes: "Diamond subset"    # 可选：子集 / 推理模式 / 配置
+```
+
+**约束**：
+- `sota` 列表长度上限 5（避免 frontmatter 膨胀）
+- `model` 必须存在于 `wiki/models/`；`harness` 若填则必须存在于 `wiki/harnesses/`（validate warning）
+- 新建 benchmark 至少填 1 条 SOTA；维护时**只编辑 frontmatter**，禁止手改 `<!-- AUTO-SOTA -->` 区块（会被覆盖）
+- 历史"## 主流模型得分"区块**保留不删**，作为 Top-5 之外更全量的索引（人审）
+
 ### 3.3 必填 frontmatter
 
 ```yaml
@@ -307,6 +327,71 @@ npx tsx scripts/ingest-researcher.ts \
 ```
 
 生成 stub 后用户手工补「评测领域主要贡献」段，再跑 sync-author-backlinks。
+
+---
+
+### 3.5 benchmark 类型扩展模板（面向评测专业人员）
+
+**动机**：原 benchmark 页模板（title / type / domain / authors / arxiv_id）只够「索引」用，但**真正做评测的工程师 / 研究员**需要知道：用几 shot？CoT 开不开？工具能用吗？分数是 accuracy 还是 pass@k？当前 SOTA 多少？还在饱和前吗？跨论文对比要注意什么坑？
+
+为此 benchmark frontmatter 在原有字段基础上，**强烈建议**填以下 6 个新字段（validate-frontmatter 仅 warn 不阻断）：
+
+```yaml
+---
+title: "MMLU"
+type: benchmark
+# ...原有字段照旧...
+
+# === 新增：评测专业字段 ===
+evaluation_protocol:
+  default_shots: "5-shot"        # 0-shot / 5-shot / few-shot / agent-driven
+  default_cot: false              # 默认是否启用 chain-of-thought
+  tool_use: false                 # 是否允许工具调用
+  scoring: "accuracy"             # accuracy / pass@k / Elo / Bradley-Terry / LLM-judge / % resolved
+  isolation: null                 # 沙箱要求（agent benchmark 用，如 "Docker container per task"）
+
+saturation_status: "saturated"    # active / saturated / deprecated（必填）
+# 判定标准：
+#   active = 顶级模型 < 90% 且区分度仍可观
+#   saturated = 顶级模型 ≥ 90% 接近人类上限 / 头部模型差距 < 1-2 个百分点
+#   deprecated = 已被强证明数据污染严重 或 被更好的 successor 完全取代
+
+official_leaderboard: "https://..."  # 官方排行榜 URL（如有）
+license: "MIT / CC-BY-4.0 / Apache-2.0 / 自有 / 待更新"
+
+pitfalls:                          # 公平对比 / 复现注意事项（list）
+  - "MMLU 选项位置偏差：模型偏好 A 答案，跨模型对比时建议 shuffled run"
+  - "已知预训练数据污染（多项研究报告主流 base model 含相关测试集网页文本）"
+  - "MMLU 子学科题量不均（每科 100-300 题），单科分数方差大"
+
+sota:                              # 当前 SOTA（list，可写多个梯队）
+  - score: "90.8%"
+    model: "DeepSeek-R1"
+    harness: null                  # agent benchmark 必填 scaffold 名
+    notes: "5-shot, no CoT"
+  - score: "90.2%"
+    model: "GPT-4.1"
+    harness: null
+---
+```
+
+#### 字段约束 / 红线
+
+- **`saturation_status` 必填**：让读者一眼判断该 benchmark 是否还值得跑。
+- **`sota` 列表里每条必须带 `score + model`，并依赖 frontmatter 顶层 `as_of_date` 标记快照时间**：分数与时间强绑定，6 个月以上未刷新的 SOTA 视为过期。
+- **`pitfalls` 至少 2 条**：评测专家页面的核心价值，少于 2 条说明该页未充分调研。
+- **agent / code-patch / sandbox 类 benchmark `evaluation_protocol.isolation` 必填**：如 SWE-bench Verified、tau-bench、OSWorld。
+- **`current_sota` 字段名不推荐**：使用 `sota` 列表（已在 SWE-bench-Verified / Chatbot-Arena 落地）。
+
+#### 跨页面横向对比要求
+
+凡是同类 benchmark（数学 / 代码 / 安全 / 长上下文 / 多模态 / agent），**都要在 `相关页面` 互链**，并由 synthesis/ 下的「选基准决策树」横向编排。
+
+写好新 benchmark 页后验证：
+```bash
+npm run validate                    # 检查 frontmatter
+cd quartz && npx quartz build --directory ../wiki   # 站点构建
+```
 
 ---
 

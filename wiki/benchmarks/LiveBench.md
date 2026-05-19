@@ -21,6 +21,14 @@ status: active
 
 > 由 White Box Technologies 发布的动态防污染综合评测基准，每月从最新竞赛题目、arXiv 论文和新闻事件中自动生成新题目，通过时效性保证测试集从未出现在模型训练数据中。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.19314](https://arxiv.org/abs/2406.19314)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LiveBench（2024）是专门针对**训练数据污染**问题设计的动态评测平台。传统基准（如 MMLU、GSM8K）的题目已被大量模型训练集收录，导致评测分数严重虚高。LiveBench 的核心思路是：**只用比模型训练截止日期更新的题目来评测**，从根本上杜绝直接污染。

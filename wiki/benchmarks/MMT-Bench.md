@@ -18,6 +18,14 @@ status: active
 
 > 覆盖 162 个子任务的大规模多模态多任务评测基准，通过广泛的任务多样性衡量通用多模态智能。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2404.16006](https://arxiv.org/abs/2404.16006)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMT-Bench（Massive Multitask Test Benchmark）由上海 AI 实验室等机构于 2024 年提出，是迄今规模最大、任务覆盖最广的多模态评测基准之一。该基准的核心理念是通过**极广泛的任务覆盖**（162 个子任务）来综合评测多模态大模型的通用能力，避免单一任务类型的评测盲区。

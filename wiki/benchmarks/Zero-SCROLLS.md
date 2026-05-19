@@ -24,6 +24,15 @@ sources: []
 
 > SCROLLS 的零样本评测版本，去除了 few-shot 示例，更适合评测当代大型语言模型的长文本理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.14196](https://arxiv.org/abs/2305.14196)
+- **官方主页**: [https://www.zero.scrolls-benchmark.com/](https://www.zero.scrolls-benchmark.com/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Zero-SCROLLS 由 Shaham 等人于 2023 年提出（发表于 EMNLP 2023），是 SCROLLS 基准的零样本（zero-shot）变体版本。原版 SCROLLS 在设计时主要面向需要 few-shot 提示的早期预训练语言模型，而 Zero-SCROLLS 面向当代指令微调的大型语言模型（如 ChatGPT、GPT-4、Claude 等），它们更适合零样本指令跟随场景。

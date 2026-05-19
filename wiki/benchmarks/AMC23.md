@@ -26,6 +26,16 @@ sources:
 
 > 2023年美国数学竞赛（AMC 10A/10B/12A/12B）的题目集合，用于评测大语言模型在高中竞赛级数学推理上的表现，是连接日常数学评测（如MATH）与顶级竞赛评测（如AIME）的中间难度基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions](https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions)
+- **官网**: [https://artofproblemsolving.com/wiki/index.php/2023_AMC_10A_Problems](https://artofproblemsolving.com/wiki/index.php/2023_AMC_10A_Problems)
+- **官网**: [https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems](https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AMC（American Mathematics Competition）是由美国数学学会（MAA）主办的权威数学竞赛系列，AMC 10面向10年级及以下学生，AMC 12面向12年级及以下学生。AMC23特指2023年举办的AMC竞赛题目。

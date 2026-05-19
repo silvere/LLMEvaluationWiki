@@ -24,6 +24,15 @@ sources: []
 
 > 基于 ConceptNet 知识图谱构建的五选一常识推理问答基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1811.00937](https://arxiv.org/abs/1811.00937)
+- **官方主页**: [https://www.tau-nlp.org/commonsenseqa](https://www.tau-nlp.org/commonsenseqa)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CommonsenseQA 由 Talmor 等人于 2019 年提出（发表于 NAACL 2019）。数据集利用 ConceptNet 知识图谱作为构建框架：从 ConceptNet 中选取一个概念作为问题中心，再找出与该概念相关的三个子概念作为干扰项种子，由众包工作者针对目标概念编写五选一的问题。

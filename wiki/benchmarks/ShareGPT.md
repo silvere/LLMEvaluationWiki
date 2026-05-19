@@ -23,6 +23,15 @@ sources:
 
 # ShareGPT
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://sharegpt.com](https://sharegpt.com)
+- **官网**: [Chiang, W.L., et al. (2023). Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90%* ChatGPT Quality. LMSYS Blog.](Chiang, W.L., et al. (2023). Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90%* ChatGPT Quality. LMSYS Blog.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ShareGPT 是一个用户自发共享 ChatGPT 对话的社区平台和数据集。用户通过 ShareGPT Chrome 插件将自己认为有价值的 ChatGPT 对话一键分享至公共平台，形成了早期规模最大的人类-GPT 对话公开数据集。该数据集被广泛用于训练开源指令跟随模型，并在一定程度上影响了 LLM 评测基准的构建。

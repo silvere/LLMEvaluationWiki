@@ -24,6 +24,14 @@ sources: [""]
 
 > 面向真实长文档理解的中英文混合评测基准，v2 版本任务难度显著提升，来源于真实文档场景。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://github.com/THUDM/LongBench](https://github.com/THUDM/LongBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LongBench v2 于 2024 年发布，是清华大学团队对 LongBench v1 的重要升级。v1 版本已在长文档问答、多文档检索和代码补全等任务上建立了长上下文评测的基础框架；v2 在此基础上大幅提升任务难度，并引入更多来自真实世界文档的测试样本，使其与用户实际使用场景更贴近。

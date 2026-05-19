@@ -27,6 +27,16 @@ sources:
 
 > EvalPlus团队发布的MBPP增强版本，通过自动化方法为MBPP的每道题目大幅增加测试用例，揭示原版MBPP评测的虚高问题，提供更严格可靠的代码生成评测。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.01210](https://arxiv.org/abs/2305.01210)
+- **官方主页**: [https://github.com/evalplus/evalplus](https://github.com/evalplus/evalplus)
+- **项目主页**: [https://evalplus.github.io/leaderboard.html](https://evalplus.github.io/leaderboard.html)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MBPP+由Liu等人于2023年作为EvalPlus框架的一部分发布，与HumanEval+同时推出。研究发现，原版MBPP每道题目仅有1-3个测试用例，导致许多功能实际有误的代码也能通过测试，使得模型在原版MBPP上的表现存在系统性虚高。

@@ -17,6 +17,14 @@ status: active
 
 > 形式化数学推理基准，使用 Lean 4 定理证明器验证 AI 的数学推理正确性，实现对 MATH/AIME 竞赛题解的机器可验证形式化证明评测。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2505.02735](https://arxiv.org/abs/2505.02735)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FormalMATH 于 2025 年发布，代表了数学 AI 评测范式的重要演进：从依赖最终答案匹配（如 MATH、AIME）转向**形式化证明验证**。该基准将 MATH 数据集中的代表性题目翻译为 Lean 4 形式化语言，要求 AI 系统不仅给出正确答案，还需提供机器可自动验证的严格形式化证明。

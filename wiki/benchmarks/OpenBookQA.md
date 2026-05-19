@@ -24,6 +24,15 @@ sources: []
 
 > 模拟开卷考试的科学常识问答基准，要求模型结合核心科学事实与广泛背景知识进行推理。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1809.02789](https://arxiv.org/abs/1809.02789)
+- **官方主页**: [https://allenai.org/data/open-book-qa](https://allenai.org/data/open-book-qa)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 OpenBookQA 由 Mihaylov 等人于 2018 年提出（发表于 EMNLP 2018），来自 Allen Institute for AI。该数据集的独特设计理念是模拟"开卷考试"场景：每道题都与 1,329 个核心科学事实（"教科书"）之一相关联，但仅凭这些事实无法直接回答问题，还需要结合广泛的常识背景知识进行二跳推理。

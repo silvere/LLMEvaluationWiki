@@ -24,6 +24,15 @@ sources: []
 
 > 用于评测语言模型生成文本中事实准确性的原子级评测框架，以生物传记生成为主要测试场景。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.14251](https://arxiv.org/abs/2305.14251)
+- **官方主页**: [https://github.com/shmsw25/FActScore](https://github.com/shmsw25/FActScore)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FActScore 由 Min 等人于 2023 年提出，来自华盛顿大学（发表于 EMNLP 2023）。该框架提供了一种系统性评测 LLM 生成内容**事实准确率**的方法，特别解决了长文本生成中的幻觉（hallucination）检测问题。

@@ -23,6 +23,16 @@ sources:
 
 # RACE（ReAding Comprehension from Examinations）
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1704.04683](https://arxiv.org/abs/1704.04683)
+- **官方主页**: [https://www.cs.cmu.edu/~glai1/data/race/](https://www.cs.cmu.edu/~glai1/data/race/)
+- **官网**: [Lai, G., et al. (2017). RACE: Large-scale ReAding Comprehension Dataset From Examinations. EMNLP 2017.](Lai, G., et al. (2017). RACE: Large-scale ReAding Comprehension Dataset From Examinations. EMNLP 2017.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 RACE 是由卡内基梅隆大学于 2017 年发布的大规模阅读理解基准，全称 ReAding Comprehension from Examinations。其数据来源于中国中学和高中英语考试题目，包含约 28,000 篇文章和 97,687 道题目，是早期规模最大的阅读理解数据集之一。

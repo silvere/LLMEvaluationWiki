@@ -24,6 +24,15 @@ sources: []
 
 > 来自 GMAT 和 LSAT 考试的阅读理解逻辑推理基准，专注于高难度逻辑分析能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2002.04326](https://arxiv.org/abs/2002.04326)
+- **官方主页**: [https://whyu.me/reclor/](https://whyu.me/reclor/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ReClor 由 Yu 等人于 2020 年提出（发表于 ICLR 2020），来自新加坡国立大学。数据集收集自 GMAT（研究生管理类入学考试）和 LSAT（法学院入学考试）中的逻辑推理题，这类题目在现实中被广泛用于评测人类的批判性思维和逻辑分析能力。

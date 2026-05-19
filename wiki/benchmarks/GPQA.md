@@ -4,25 +4,67 @@ type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [knowledge, reasoning]
+as_of_date: "2026-05-19"
+last_verified: "2026-05-19"
+domain: [knowledge, reasoning, science]
 language: en
 year: 2023
-authors: ["Rein et al."]
-arxiv_id: ""
+authors: ["David Rein", "Betty Li Hou", "Asa Cooper Stickland", "Jackson Petty", "Richard Yuanzhe Pang", "Julien Dirani", "Julian Michael", "Samuel R. Bowman"]
+arxiv_id: "2311.12022"
 official_url: "https://github.com/idavidrein/gpqa"
-license: ""
+official_leaderboard: "https://epoch.ai/benchmarks/gpqa-diamond"
+license: "CC-BY-4.0"
 size: 448
 format: multiple-choice
-status: active
-saturation_threshold: 0.85
-sources: [""]
+saturation_status: saturated
+sources:
+  - "https://arxiv.org/abs/2311.12022"
+  - "https://epoch.ai/benchmarks/gpqa-diamond"
+evaluation_protocol:
+  default_shots: "0-shot 或 5-shot"
+  default_cot: true
+  tool_use: false
+  scoring: "accuracy (4-way MCQ)"
+pitfalls:
+  - "三个子集分数不可对比：Main 448 / Diamond 198 / Extended 546，论文常默认报告 Diamond"
+  - "饱和：Diamond 从 2024-09 o1 77% → 2026-02 Gemini 3.1 Pro 94.1% / Claude Opus 4.7 94.2%，已超 PhD 专家 65%"
+  - "选项位置偏差同 MMLU 类问题（4-way MCQ 共有缺陷）"
+  - "题目数量小（Diamond 仅 198），单次评测分数波动 ±1-2pt 是常态，建议多 seed 平均"
+  - "已逐渐被 [[HLE]]（Humanity's Last Exam）/ [[FrontierMath]] 等 frontier benchmark 替代"
+sota:
+  - score: "94.3%"
+    model: "Gemini-3.1-Pro"
+    harness: null
+    notes: "Diamond"
+  - score: "90.1%"
+    model: "DeepSeek-V4-Pro"
+    harness: null
+    notes: "Diamond"
+  - score: "86.2%"
+    model: "GLM-5.1"
+    harness: null
+    notes: "Diamond"
+  - score: "86.0%"
+    model: "GLM-5"
+    harness: null
+    notes: "Diamond"
+  - score: "约 85-88%"
+    model: "GPT-5"
+    harness: null
+    notes: "Diamond"
 ---
 
 # GPQA（Graduate-Level Google-Proof Q&A）
 
 > 由领域专家设计的研究生级别选择题，即使借助搜索引擎也难以作答，非专家人类准确率约 34%。
+
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://github.com/idavidrein/gpqa](https://github.com/idavidrein/gpqa)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 
@@ -47,6 +89,23 @@ GPQA 的核心价值在于评测模型是否真正掌握了研究生级别的科
 
 - 非专家人类（允许使用互联网）：约 34%
 - 顶级模型（2024-2025 年）：待更新
+
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Gemini-3.1-Pro]] | — | 94.3% | — | Diamond | — |
+| 2 | [[DeepSeek-V4-Pro]] | — | 90.1% | — | Diamond | — |
+| 3 | [[GLM-5.1]] | — | 86.2% | — | Diamond | — |
+| 4 | [[GLM-5]] | — | 86.0% | — | Diamond | — |
+| 5 | [[GPT-5]] | — | 约 85-88% | — | Diamond | — |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

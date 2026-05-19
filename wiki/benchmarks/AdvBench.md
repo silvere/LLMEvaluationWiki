@@ -23,6 +23,15 @@ sources:
 
 # AdvBench：对抗性越狱攻击评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.15043](https://arxiv.org/abs/2307.15043)
+- **官方主页**: [https://github.com/llm-attacks/llm-attacks](https://github.com/llm-attacks/llm-attacks)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AdvBench 是 2023 年由 Zou 等人随论文《Universal and Transferable Adversarial Attacks on Aligned Language Models》提出的安全评测数据集，发表于 NeurIPS 2023。它包含 **500 条**有害指令，分为两个子集，是目前最广泛引用的越狱攻击与防御研究基准之一。

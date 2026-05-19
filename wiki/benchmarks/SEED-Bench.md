@@ -23,6 +23,15 @@ sources:
 
 # SEED-Bench：多模态生成模型理解能力评测
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2307.16125](https://arxiv.org/abs/2307.16125)
+- **官方主页**: [https://github.com/AILab-CVC/SEED-Bench](https://github.com/AILab-CVC/SEED-Bench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SEED-Bench 是 2023 年由腾讯 AI Lab 提出的多模态基准，全称为 **Seed Evaluation Benchmark**。它专注于评测多模态生成模型（Multimodal Generative Models）的综合理解能力，包含约 **19,242 道**多项选择题，覆盖图像和视频两种模态。

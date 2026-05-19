@@ -55,6 +55,7 @@ const TYPE_LABELS: Record<string, string> = {
   leaderboard: "leaderboards/ — 榜单",
   entity:      "entities/ — 机构与人物",
   model:       "models/ — 模型 Spec 与评测",
+  harness:     "harnesses/ — Agent Scaffolding 与 Harness",
   paper:       "papers/ — 论文摘要与 claim",
   synthesis:   "synthesis/ — 综合分析",
   industry:    "industry/ — 行业垂类",

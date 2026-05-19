@@ -16,6 +16,14 @@ status: active
 
 > 首个针对文本生成音乐（text-to-music）任务的专家评分生成音乐数据集，涵盖 31 款模型生成的 2,748 段音乐和 14 名音乐专家的专业评分。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2501.10811](https://arxiv.org/abs/2501.10811)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MusicEval 由刘等研究者发布，论文"MusicEval: A Generative Music Dataset with Expert Ratings for Automatic Text-to-Music Evaluation"于 2025 年 1 月提交至 arXiv（2501.10811）。该工作针对文本生成音乐（TTM，text-to-music）领域长期缺乏可靠自动评测标准的核心痛点，构建了目前规模最大、专家评分最为系统的 TTM 评测数据集。

@@ -17,6 +17,14 @@ status: active
 
 > MMBench 的多语言扩展版本，将标准 MMBench 评测题目翻译至多种语言，评测多模态模型的跨语言视觉理解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.16125](https://arxiv.org/abs/2406.16125)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Multilingual MMBench 于 2024 年发布，是在原始 MMBench（英文多模态评测基准）基础上构建的多语言扩展版本。该基准将 MMBench 的评测题目系统性地翻译至多种语言（包括中文、阿拉伯语、法语、德语、印地语、西班牙语等），以评测多模态大语言模型在不同语言环境下的视觉理解能力是否一致。

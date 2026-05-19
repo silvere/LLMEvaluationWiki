@@ -26,6 +26,15 @@ sources:
 
 > DeepMind发布的竞赛级编程评测数据集，来源于Codeforces、AtCoder、CodeChef等顶级编程竞赛平台，难度极高，代表了代码生成评测的天花板之一。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2203.07814](https://arxiv.org/abs/2203.07814)
+- **官方主页**: [https://github.com/google-deepmind/code_contests](https://github.com/google-deepmind/code_contests)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CodeContests由DeepMind的Li等人于2022年随AlphaCode论文一同发布，是目前最具挑战性的代码评测数据集之一。数据集收集自多个顶级算法竞赛平台，题目需要选手具备较强的算法设计能力、数学推理能力和工程实现能力。

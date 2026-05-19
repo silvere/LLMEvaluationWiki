@@ -17,6 +17,14 @@ status: active
 
 > 面向记忆增强对话生成的真实世界评测基准，基于认知科学与心理学理论设计主动与被动两类记忆召回范式，包含 171 段历史记忆与 160 段共 1,474 轮对话，NAACL 2025 收录。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2409.15240](https://arxiv.org/abs/2409.15240)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MADial-Bench（Memory-Augmented Dialogue Benchmark）于 2024 年 9 月发布，最终被 NAACL 2025 长文收录。该工作针对"记忆增强对话系统"这一场景设计评测基准——即 AI 助手能够将历史对话记忆与当前对话情景相结合，在适当时机主动或被动地召回和利用相关历史信息，从而提升对话的连贯性、情感支持质量和亲密度。

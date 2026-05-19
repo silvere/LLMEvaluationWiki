@@ -16,6 +16,14 @@ status: active
 
 > Salesforce 提出的大型代理模型（Large Action Model）评测与训练框架，专注于工具调用和函数执行代理能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2402.15506](https://arxiv.org/abs/2402.15506)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 xLAM（Large Action Models）是 Salesforce AI Research 于 2024 年发布的代理模型评测与训练框架。xLAM 同时包含一套评测基准和一系列经过专门代理任务微调的模型系列（xLAM-1B 至 xLAM-8x22B），重点评测 LLM 在工具调用（Function Calling）、API 调用序列规划和代理决策场景下的能力。

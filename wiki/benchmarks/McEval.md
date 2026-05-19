@@ -17,6 +17,14 @@ status: active
 
 > 覆盖 40 种编程语言的大规模多语言代码评测基准，包含 16K 测试样本和代码生成、解释、补全三大任务，填补 HumanEval 等基准几乎仅覆盖 Python 的评测盲区。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.07436](https://arxiv.org/abs/2406.07436)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 McEval（Massively Multilingual Code Evaluation）于 2024 年 6 月发布，是目前覆盖编程语言最广的代码能力评测基准之一。该工作的核心动机是：现有代码评测基准（HumanEval、MBPP、HumanEval-X 等）几乎完全以 Python 为中心，即便覆盖多语言的版本（如 MultiPL-E）也是将 Python 题目机械翻译而来，导致数据多样性严重退化，无法真实反映各编程语言的惯用表达和典型使用场景。

@@ -26,6 +26,15 @@ sources:
 
 # MMVet：多模态集成能力评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2308.02490](https://arxiv.org/abs/2308.02490)
+- **官方主页**: [https://github.com/yuweihao/MM-Vet](https://github.com/yuweihao/MM-Vet)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMVet 是 2023 年提出的多模态大模型综合能力评测基准，专注于评测模型在**复杂多步骤视觉任务**上的集成能力。它包含 **218 道**经过精心设计的开放式问题，要求模型综合运用多种视觉理解能力，并采用 **LLM-as-Judge**（GPT-4 评分）机制进行评估。

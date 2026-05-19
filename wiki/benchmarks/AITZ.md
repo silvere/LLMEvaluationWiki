@@ -17,6 +17,14 @@ status: active
 
 > 针对 Android 设备 GUI 操作的 Action-in-the-Zone 任务序列评测基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2408.14428](https://arxiv.org/abs/2408.14428)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AITZ（Action-in-the-Zone）是 2024 年提出的 Android GUI 代理评测基准，专注于评测多模态模型在移动设备界面上执行精确操作序列的能力。AITZ 的核心理念是"区域感知操作"——不仅要求模型能识别出需要操作的 UI 元素，还要准确判断操作类型（点击、长按、滑动、输入）和操作区域，模拟真实用户与移动界面的自然交互方式。

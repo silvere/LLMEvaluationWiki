@@ -17,6 +17,14 @@ status: active
 
 > 评测大型多模态模型对真实世界图像扰动鲁棒性的综合基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.05474](https://arxiv.org/abs/2410.05474)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 R-Bench（Real-world Robustness Benchmark）由 Q-Future 团队于 2024 年发布，专门评估大型多模态模型（LMM）在真实世界图像损坏条件下的鲁棒性。不同于传统对抗鲁棒性研究中使用人工构造的攻击样本，R-Bench 聚焦于从用户拍摄到模型接收整个链路中自然产生的图像退化现象，包括拍摄噪声、压缩失真、天气影响、传输损耗等。

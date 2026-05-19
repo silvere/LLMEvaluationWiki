@@ -24,6 +24,15 @@ sources: []
 
 > AlpacaEval 的改进版，引入 Length-Controlled Win Rate（LC Win Rate）以减少冗长偏差，参考模型升级为 GPT-4 Turbo。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2404.04475](https://arxiv.org/abs/2404.04475)
+- **官方主页**: [https://tatsu-lab.github.io/alpaca_eval/](https://tatsu-lab.github.io/alpaca_eval/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 AlpacaEval 2.0 由 Dubois 等人于 2024 年提出（发表于 NeurIPS 2024），是对 AlpacaEval 的重要改进版本。原版 AlpacaEval 存在明显的**长度偏差**（length bias）：LLM Judge 倾向于选择更长的回答，导致模型可以通过增加回答长度来人为提高 Win Rate 分数，而与实际质量无关。

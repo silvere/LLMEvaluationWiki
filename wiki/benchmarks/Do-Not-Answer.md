@@ -23,6 +23,15 @@ sources:
 
 # Do-Not-Answer：拒答能力系统评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2308.13387](https://arxiv.org/abs/2308.13387)
+- **官方主页**: [https://github.com/Libr-AI/do-not-answer](https://github.com/Libr-AI/do-not-answer)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Do-Not-Answer 是 2023 年提出的专门评测大语言模型**拒绝回答有害问题**能力的基准数据集。它包含 **939 道**精心设计的有害问题，覆盖 5 大风险类别和 12 个子类别，旨在系统化地评测模型的安全边界识别能力，是该领域首批大规模系统性评测数据集之一。

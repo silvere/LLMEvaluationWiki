@@ -24,6 +24,14 @@ sources: []
 
 > 将特定信息片段（"针"）嵌入长文档（"草堆"）的不同位置，测试模型在长上下文中的信息检索能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://github.com/gkamradt/LLMTest_NeedleInAHaystack](https://github.com/gkamradt/LLMTest_NeedleInAHaystack)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Needle In A Haystack（NIAH）由 Gregory Kamradt 于 2023 年底创建，是评测大型语言模型**长上下文检索能力**的最流行测试之一。尽管方法简单，但该测试揭示了许多模型在长文本中"遗忘"关键信息的问题，引发了广泛关注。

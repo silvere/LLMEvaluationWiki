@@ -17,6 +17,14 @@ status: active
 
 > 面向专业软件界面的精细粒度屏幕元素定位评测基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2504.07981](https://arxiv.org/abs/2504.07981)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ScreenSpot Pro 是 2025 年提出的高难度 GUI grounding（屏幕元素定位）基准，专门评测多模态大模型在复杂专业软件界面中准确定位目标 UI 元素的能力。与早期的 ScreenSpot（2024）相比，Pro 版针对专业领域软件（如 Adobe Photoshop、AutoCAD、JetBrains IDE、Blender、Figma 等）设计，这些界面具有密集工具栏、层叠面板、高度定制化布局等特点，对视觉理解能力要求极高。

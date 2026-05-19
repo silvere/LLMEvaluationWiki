@@ -16,6 +16,14 @@ status: active
 
 > 评测 LLM 生成高效率（低时间/空间复杂度）代码能力的专项基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2402.02037](https://arxiv.org/abs/2402.02037)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Effibench 是 2024 年提出的代码效率评测基准，填补了代码生成评测领域长期忽视执行效率的空白。HumanEval、MBPP 等主流代码基准仅验证代码功能正确性，而 Effibench 同时评测生成代码的**时间效率**（运行时间）和**空间效率**（内存占用），更贴近真实工程场景中对代码质量的完整要求。

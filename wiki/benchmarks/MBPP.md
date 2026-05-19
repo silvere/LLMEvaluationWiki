@@ -26,6 +26,15 @@ sources:
 
 > 由Google Brain团队发布的974道入门级Python编程题，每道题目均附有测试用例，用于评测语言模型生成基础Python代码的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2108.07732](https://arxiv.org/abs/2108.07732)
+- **官方主页**: [https://github.com/google-research/google-research/tree/master/mbpp](https://github.com/google-research/google-research/tree/master/mbpp)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MBPP（Mostly Basic Python Problems）由Austin等人于2021年发布，旨在提供一个相对简单、标准化的代码生成评测集。题目由众包方式收集，覆盖基本数学运算、字符串操作、列表处理等常见编程模式，难度定位为入门级别，适合大多数有一定编程基础的人类解答。

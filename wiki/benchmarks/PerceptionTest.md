@@ -17,6 +17,14 @@ status: active
 
 > DeepMind 提出的视频感知技能综合测试基准，通过精心设计的日常视频评测模型的记忆、抽象、物理、语义等多类感知技能。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2305.13786](https://arxiv.org/abs/2305.13786)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 PerceptionTest 由 Google DeepMind 于 2023 年提出，是一个全面评测视频理解模型感知技能的综合基准。与大多数视频基准使用互联网自然视频不同，PerceptionTest 使用**专门为评测目的拍摄**的受控视频，由真实人类演员按照标准化脚本演示日常生活活动，从而精确控制评测变量。

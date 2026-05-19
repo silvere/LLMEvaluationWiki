@@ -24,6 +24,14 @@ sources: []
 
 > 测试因果推理能力的经典二选一问答基准，要求选出最合理的原因或结果。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://people.ict.usc.edu/~gordon/copa.html](https://people.ict.usc.edu/~gordon/copa.html)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 COPA（Choice of Plausible Alternatives）由 Gordon 等人于 2011 年提出，是自然语言推理领域的经典早期基准之一。每道题给出一个前提句子，并要求模型从两个候选项中选择最合理的原因（cause）或结果（result）。

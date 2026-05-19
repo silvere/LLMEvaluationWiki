@@ -17,6 +17,14 @@ status: active
 
 > 由 Depth Anything 团队随 Depth Anything V2 发布的单目深度估计评测基准，包含 1,000 张高质量图像和 2,000 对精确相对深度标注，覆盖 8 类代表性场景，是目前最精确的相对深度评估数据集之一（arXiv:2406.09414，NeurIPS 2024）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.09414](https://arxiv.org/abs/2406.09414)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 DA-2K 是 Depth Anything V2 技术报告（arXiv:2406.09414）中提出并公开发布的相对深度估计评测基准，随模型于 2024 年发布，已被 NeurIPS 2024 收录。"DA"代表 Depth Anything，"2K"指基准中包含的 2,000 对精确的成对相对深度标注（pairwise annotations）。

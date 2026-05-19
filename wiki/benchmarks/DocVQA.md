@@ -23,6 +23,15 @@ sources:
 
 # DocVQA：文档视觉问答基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2007.00398](https://arxiv.org/abs/2007.00398)
+- **官方主页**: [https://www.docvqa.org](https://www.docvqa.org)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 DocVQA 是 2020 年由 Mathew 等人提出的文档视觉问答基准，发表于 WACV 2021。它专注于评测模型从**真实扫描文档图像**中提取信息并回答问题的能力，包含 **50,000 余道**问答对，来源于约 12,767 张扫描工业文档图像，是文档理解领域最重要的标准基准之一。

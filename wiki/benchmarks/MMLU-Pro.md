@@ -4,25 +4,46 @@ type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
+as_of_date: "2026-05-19"
+last_verified: "2026-05-19"
 domain: [knowledge, reasoning]
 language: en
 year: 2024
-authors: ["Wang et al."]
-arxiv_id: ""
+authors: ["Yubo Wang", "Xueguang Ma", "Ge Zhang", "Yuansheng Ni", "Abhranil Chandra", "Shiguang Guo", "Weiming Ren", "Aaran Arulraj", "Xuan He", "Ziyan Jiang", "Wenhu Chen"]
+arxiv_id: "2406.01574"
 official_url: "https://github.com/TIGER-AI-Lab/MMLU-Pro"
-license: ""
+official_leaderboard: "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro"
+license: "MIT"
 size: 12032
 format: multiple-choice
-status: active
-saturation_threshold: 0.85
-sources: [""]
+saturation_status: active
+sources:
+  - "https://arxiv.org/abs/2406.01574"
+  - "https://github.com/TIGER-AI-Lab/MMLU-Pro"
+evaluation_protocol:
+  default_shots: "5-shot CoT"
+  default_cot: true
+  tool_use: false
+  scoring: "accuracy (10-way MCQ)"
+pitfalls:
+  - "**10 选项 vs MMLU 4 选项**：随机基线 10% vs 25%，分数与 MMLU 不可直接对比，常被混淆"
+  - "MMLU-Pro 引入更多推理密集题，对 CoT 启用与否敏感（CoT 与非 CoT 差距 5-15pt），跨论文比较必须确认协议"
+  - "尚未饱和：顶级模型 ~80-85%（DeepSeek-R1 84%，Claude Opus 4.6 ~82%），仍有区分度，是当前 MMLU 类替代首选"
+  - "答案提取脚本敏感：CoT 输出多样格式，不同评测框架的解析规则不一致"
+  - "14 学科分布不均（如 'engineering' 与 'philosophy' 题量差大），分子科目分数信噪比有限"
 ---
 
 # MMLU-Pro（Massive Multitask Language Understanding - Pro）
 
 > MMLU 的升级版本，将选项数从 4 扩展至 10，并引入更多推理密集型题目，以恢复原 MMLU 已丧失的区分力。
+
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **官方主页**: [https://github.com/TIGER-AI-Lab/MMLU-Pro](https://github.com/TIGER-AI-Lab/MMLU-Pro)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

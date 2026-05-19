@@ -22,6 +22,15 @@ domain:
 
 > [[LMSYS]] / [[Chatbot-Arena]] 团队 2024-04 推出的自动评测 benchmark：通过 BenchBuilder pipeline 从真实 [[Chatbot-Arena]] 对战数据中筛 500 个最有区分度的 hard prompt，由强 LLM-as-judge（GPT-4 / Claude 3.5）打对战，号称对 [[Chatbot-Arena]] human preference 排名的相关性达 89%。是替代 [[MT-Bench]] 的事实标准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **GitHub**: [https://github.com/lmarena/arena-hard-auto](https://github.com/lmarena/arena-hard-auto)
+- **官网**: [https://lmsys.org/blog/2024-04-19-arena-hard/](https://lmsys.org/blog/2024-04-19-arena-hard/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 设计
 
 - **BenchBuilder pipeline**：自动聚类 + 难度筛选 + diversity 控制，从 Chatbot Arena 200K+ 历史 prompt 中提炼 500 个

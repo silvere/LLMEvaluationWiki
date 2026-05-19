@@ -26,6 +26,15 @@ sources:
 
 > 包含2294个来自真实GitHub仓库Issue修复任务的软件工程基准，要求模型在真实代码库中定位并修复bug，是评测AI系统实际软件工程能力的权威标准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2310.01848](https://arxiv.org/abs/2310.01848)
+- **官方主页**: [https://www.swebench.com/](https://www.swebench.com/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SWE-bench由Jimenez等人于2023年发布，是AI代理（Agent）系统在软件工程领域最重要的评测基准之一。与代码生成基准（如HumanEval）不同，SWE-bench要求模型在一个真实的、大型的Python代码库中，理解Issue描述，定位相关代码，修改代码以修复问题，并通过已有的单元测试验证修复的正确性。

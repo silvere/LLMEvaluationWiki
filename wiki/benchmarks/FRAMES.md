@@ -17,6 +17,14 @@ status: active
 
 > 评测 LLM 在长文档语境下完成多跳检索推理问题的基准，聚焦事实性多步推理。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2409.12941](https://arxiv.org/abs/2409.12941)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FRAMES（Factuality, Retrieval, And Multihop Evaluation Suite）是 Google DeepMind 于 2024 年提出的长上下文多跳检索推理评测基准。FRAMES 专门设计用于评测 LLM 在需要跨越多个文档片段进行**多跳推理**（Multi-hop Reasoning）时的表现——即一个问题的回答需要从多个不同来源综合事实信息，并进行逻辑推理才能得出。

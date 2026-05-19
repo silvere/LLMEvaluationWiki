@@ -24,6 +24,15 @@ sources: []
 
 > 多约束指令跟随难度分级评测基准，通过递增约束数量系统测试模型的指令遵从能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2310.20410](https://arxiv.org/abs/2310.20410)
+- **官方主页**: [https://github.com/YJiangcm/FollowBench](https://github.com/YJiangcm/FollowBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 FollowBench 由 Jiang 等人于 2023 年提出，来自香港大学等机构。该基准专注于评测**多约束指令跟随**（multi-constraint instruction following）能力，其独特设计是通过**渐进式增加约束数量**来测试模型的指令遵从极限。

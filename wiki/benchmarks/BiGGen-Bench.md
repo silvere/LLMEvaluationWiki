@@ -24,6 +24,15 @@ sources: []
 
 > 面向大型语言模型通用生成能力的综合评测基准，覆盖 9 个核心能力维度，采用 Prometheus 评分系统进行细粒度评测。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.05761](https://arxiv.org/abs/2406.05761)
+- **官方主页**: [https://github.com/prometheus-eval/prometheus-eval/tree/main/BiGGen-Bench](https://github.com/prometheus-eval/prometheus-eval/tree/main/BiGGen-Bench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BiGGen-Bench 由 Kim 等人于 2024 年提出（来自 KAIST 和首尔大学等机构，发表于 NeurIPS 2024）。该基准旨在全面评测大型语言模型的**通用生成能力**（general generation capabilities），而非专注于某一特定任务。

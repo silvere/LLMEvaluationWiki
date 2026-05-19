@@ -16,6 +16,14 @@ status: active
 
 > 文本到图像生成组合性评测基准的增强版，系统评测 T2I 模型在属性绑定、空间关系、非空间关系等组合性维度的生成质量。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2407.01489](https://arxiv.org/abs/2407.01489)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 T2I-CompBench++ 是 T2I-CompBench（2023）的扩展升级版，于 2024 年发布。该基准专注于评测文本到图像生成模型的**组合性生成**（Compositional Generation）能力——即模型能否准确生成包含多个属性、多个对象及其关系的复杂场景。

@@ -23,6 +23,16 @@ sources:
 
 # XCOPA
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2005.00333](https://arxiv.org/abs/2005.00333)
+- **官方主页**: [https://github.com/cambridgeltl/xcopa](https://github.com/cambridgeltl/xcopa)
+- **官网**: [Ponti, E.M., et al. (2021). XCOPA: Translation and Paraphrase of the Choice of Plausible Alternatives Dataset for 11 Languages. EMNLP 2020.](Ponti, E.M., et al. (2021). XCOPA: Translation and Paraphrase of the Choice of Plausible Alternatives Dataset for 11 Languages. EMNLP 2020.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 XCOPA（Cross-lingual Choice of Plausible Alternatives）是由剑桥大学于 2021 年发布的跨语言因果推理基准，将英语 COPA（Choice of Plausible Alternatives）数据集翻译和本地化适应到 **11 种语言**，用于评测 LLM 的跨语言因果常识推理能力。

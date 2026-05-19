@@ -17,6 +17,14 @@ status: active
 
 > Meta AI 随 Movie Gen 模型一同发布的文生视频评测基准，包含 1,003 个多维度提示词，覆盖人体动作、自然场景、物理效果等核心评测方向，规模超过此前同类基准三倍以上（arXiv:2410.13720，2024）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2410.13720](https://arxiv.org/abs/2410.13720)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Movie Gen Video Bench 是 Meta AI 在其基础媒体模型 Movie Gen 技术报告（arXiv:2410.13720）中发布的文生视频评测基准，于 2024 年 10 月正式开源于 GitHub（facebookresearch/MovieGenBench）和 [[Hugging-Face|Hugging Face]]。它是 Movie Gen Bench 套件的视频部分，配套另有 Movie Gen Audio Bench（527 个提示词，评测音频生成）。

@@ -16,6 +16,14 @@ status: active
 
 > 目标中心视频理解基准，专注于评测多模态模型对视频中特定目标物体的追踪、状态变化与属性推理能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2412.17574](https://arxiv.org/abs/2412.17574)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 OVBench（Object-centric Video Benchmark）于 2024 年底发布，是专为评测多模态大语言模型以**特定目标物体为中心**的视频理解能力设计的基准。与场景级视频理解不同，OVBench 要求模型追踪视频中特定目标物体的位置、状态变化、与其他物体的交互等细粒度信息。

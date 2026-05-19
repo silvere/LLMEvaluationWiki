@@ -26,6 +26,15 @@ sources:
 
 > BigCode项目发布的多语言代码评测包，将HumanEval扩展至6种编程语言，并增加代码修复（Fix）和代码解释（Explain）两类新任务，全面评测模型的多维代码能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2308.07124](https://arxiv.org/abs/2308.07124)
+- **官方主页**: [https://github.com/bigcode-project/bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 HumanEvalPack由Muennighoff等人于2023年随OctoCoder模型论文发布，是BigCode开源代码模型社区的评测框架组件之一。在HumanEval-X的基础上，HumanEvalPack进一步将评测任务从单纯的代码生成扩展到三类任务：

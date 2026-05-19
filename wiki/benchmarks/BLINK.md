@@ -17,6 +17,14 @@ status: active
 
 > 评测人类视觉感知直觉的多模态基准，聚焦那些人类一眼即可判断但现有视觉语言模型普遍困难的视觉任务。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2404.12390](https://arxiv.org/abs/2404.12390)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 BLINK 由 University of North Carolina 等机构于 2024 年提出，专注于评测多模态大模型的**基础视觉感知直觉**能力。该基准的核心发现是：存在大量对人类来说"一眼就能看出来"（blink-and-you'll-see-it）的视觉任务，但当前最先进的视觉语言模型却系统性地无法完成这些任务。

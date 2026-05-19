@@ -24,6 +24,15 @@ sources: []
 
 > 大规模 Winograd Schema 挑战数据集，专门测试模型的常识推理与指代消解能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1907.10641](https://arxiv.org/abs/1907.10641)
+- **官方主页**: [https://winogrande.allenai.org/](https://winogrande.allenai.org/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WinoGrande 由 Sakaguchi 等人于 2019 年提出（发表于 AAAI 2020），是经典 Winograd Schema Challenge（WSC）的大规模扩展版本。原始 WSC 数据集只有 273 道题，规模太小，导致结果波动较大；WinoGrande 将其扩展到约 44,000 道题，大幅提升了统计可靠性。

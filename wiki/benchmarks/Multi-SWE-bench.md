@@ -17,6 +17,14 @@ status: active
 
 > 多语言软件工程基准，将 SWE-bench 扩展至 Python 之外的 7 种编程语言，评测 AI 代理跨语言修复真实 GitHub Issue 的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2504.02605](https://arxiv.org/abs/2504.02605)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 Multi-SWE-bench 于 2025 年发布，是对原版 SWE-bench（专注 Python）的多语言扩展。其动机明确：全球软件工程实践高度多语言化，仅评测 Python 修复能力无法全面反映代码代理的实际工程能力。

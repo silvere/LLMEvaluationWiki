@@ -23,6 +23,15 @@ sources:
 
 # ToxiGen：隐性有毒内容生成评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2203.09509](https://arxiv.org/abs/2203.09509)
+- **官方主页**: [https://github.com/microsoft/TOXIGEN](https://github.com/microsoft/TOXIGEN)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ToxiGen 是 2022 年由微软研究院提出的大规模隐性有毒内容数据集，发表于 ACL 2022。它包含约 **274,000 条**有毒和无害文本，涵盖 **13 个不同人群身份**，专注于评测和研究语言模型生成**隐性（Implicit）有毒内容**的能力与风险——即那些不含明显脏话但仍传递歧视、偏见或有害信息的表达。

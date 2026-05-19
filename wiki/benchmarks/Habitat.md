@@ -23,6 +23,15 @@ domain:
 
 > Meta FAIR / Facebook Reality Lab 2019 起开源的 embodied AI 仿真平台，由 Facebook Reality Lab 联合 Georgia Tech / SFU / Intel / Berkeley 维护。Habitat-Sim（C++ 高性能 3D 仿真，>10K FPS）+ Habitat-Lab（任务/agent 训练库）+ Habitat Challenge（年度竞赛）是 embodied navigation / manipulation 评测的事实标准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **GitHub**: [https://github.com/facebookresearch/habitat-sim](https://github.com/facebookresearch/habitat-sim)
+- **GitHub**: [https://github.com/facebookresearch/habitat-lab](https://github.com/facebookresearch/habitat-lab)
+
+<!-- AUTO-LINKS:END -->
+
 ## 组成
 
 - **Habitat-Sim**：高性能 3D 物理 + 渲染（>10K FPS on single GPU）；支持 Matterport3D / Replica / Gibson 等数据集

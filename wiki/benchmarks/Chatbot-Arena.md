@@ -4,29 +4,63 @@ type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
+as_of_date: "2026-05-19"
+last_verified: "2026-05-19"
 domain: [dialog, instruction-following, reasoning]
 language: multilingual
 year: 2023
 authors: ["LMSYS Org (UC Berkeley)"]
 arxiv_id: "2403.04132"
-official_url: "https://chat.lmsys.org"
+official_url: "https://lmarena.ai/"
+official_leaderboard: "https://lmarena.ai/leaderboard"
 license: ""
 size: 6000000
-format: multiple-choice
-status: active
-saturation_threshold: 0.90
-sources: [""]
+format: pairwise-preference
+saturation_status: active
+sources:
+  - "https://lmarena.ai/"
+  - "https://arxiv.org/abs/2403.04132"
+  - "https://news.lmarena.ai/series-a/"
+evaluation_protocol:
+  scoring: "Bradley-Terry (Elo-like)"
+  default_shots: "user-defined"
+  default_cot: false
+  tool_use: false
+sota:
+  - score: "1287 (top 10 at release)"
+    model: "Yi-Lightning"
+    harness: null
+    notes: "Elo"
 ---
 
 # Chatbot Arena（LMSYS）
 
 > 基于真实用户盲测投票的模型能力排行榜，已成为业界衡量对话助手综合质量的事实标准。
 
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Yi-Lightning]] | — | 1287 (top 10 at release) | — | Elo | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2403.04132](https://arxiv.org/abs/2403.04132)
+- **官方主页**: [https://chat.lmsys.org](https://chat.lmsys.org)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
-Chatbot Arena 由 LMSYS Org（UC Berkeley）于 2023 年发布并持续运营。其核心机制是众包盲测：用户向两个匿名模型发送同一问题，看到双方回答后选择哪个更好（或平局）。每次对战的结果通过 Elo/Bradley-Terry 评分体系汇总为全局排名，模型身份在用户投票后才揭晓。截至 2025 年，平台已积累超过 600 万次人类投票。
+Chatbot Arena 由 LMSYS Org（UC Berkeley）于 2023 年发布并持续运营。其核心机制是众包盲测：用户向两个匿名模型发送同一问题，看到双方回答后选择哪个更好（或平局）。每次对战的结果通过 Bradley-Terry 模型（早期为 online Elo）汇总为全局排名，模型身份在用户投票后才揭晓。截至 2025-09 累计 3.5M+ 真人对战投票（覆盖 400+ 模型），到 2026 已超 6M+。2026-01 母公司 [[LMSYS|LMArena]] 完成 $150M Series A、估值 $1.7B，并整体品牌更名为 Arena；月活用户 500 万+，月对话量 60M+。
 
 Chatbot Arena 的设计理念是让真实用户在真实使用场景中评判，而非依赖专家标注或预设题库。这使其能覆盖各类用户关心的任务，包括写作、编程、数学、创意生成、多语言对话等。由于问题由用户自由提出，分布反映了真实的使用需求，而非研究者的主观假设。
 
@@ -37,10 +71,12 @@ Chatbot Arena 的设计理念是让真实用户在真实使用场景中评判，
 | 属性 | 值 |
 |------|-----|
 | 发布年份 | 2023（持续运营） |
-| 大小 | 超过 600 万次人类投票（截至 2025 年） |
+| 大小 | 3.5M+ 票 / 400+ 模型（2025-09 官方）→ 6M+ 票（2026 累计） |
+| 月活用户 | 500 万+ / 150 国 / 月对话量 60M+（2026 Series A 披露） |
 | 题目格式 | 人类偏好投票（盲测 A/B 对比） |
-| 覆盖领域 | 对话、指令遵循、推理 |
-| 语言 | 多语言 |
+| 评分模型 | Bradley-Terry（早期 online Elo） |
+| 覆盖领域 | 对话、指令遵循、推理（用户自由提问） |
+| 语言 | 多语言（英语主导） |
 
 ## 当前状态
 

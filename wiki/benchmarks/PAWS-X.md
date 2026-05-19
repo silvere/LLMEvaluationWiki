@@ -23,6 +23,16 @@ sources:
 
 # PAWS-X
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1908.11828](https://arxiv.org/abs/1908.11828)
+- **官方主页**: [https://github.com/google-research-datasets/paws/tree/master/pawsx](https://github.com/google-research-datasets/paws/tree/master/pawsx)
+- **官网**: [Yang, Y., et al. (2019). PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification. EMNLP 2019.](Yang, Y., et al. (2019). PAWS-X: A Cross-lingual Adversarial Dataset for Paraphrase Identification. EMNLP 2019.)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 PAWS-X（Cross-lingual Paraphrase Adversaries from Word Scrambling）是由 Google Research 于 2019 年发布的跨语言释义（paraphrase）识别基准。该数据集将英语 PAWS 的高质量对抗性样本扩展到 **6 种语言**，专门测试模型识别**语义等价但词序不同**的句对的能力，同时避免被词汇重叠程度高但语义不同的样本欺骗。

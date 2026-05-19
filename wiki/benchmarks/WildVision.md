@@ -24,6 +24,16 @@ sources:
 
 # WildVision：野外真实用户多模态评测
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.11069](https://arxiv.org/abs/2406.11069)
+- **官方主页**: [https://huggingface.co/spaces/WildVision/vision-arena](https://huggingface.co/spaces/WildVision/vision-arena)
+- **Hugging Face**: [https://huggingface.co/datasets/WildVision/wildvision-bench](https://huggingface.co/datasets/WildVision/wildvision-bench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WildVision 是 2024 年提出的多模态模型"野外"（In-the-Wild）评测框架，通过收集真实用户向多模态模型提交的图像和问题，构建贴近实际应用场景的评测数据集。与实验室构建的基准不同，WildVision 的数据来源于真实用户在对话中上传的图片，能够反映模型在真实部署场景中的表现。

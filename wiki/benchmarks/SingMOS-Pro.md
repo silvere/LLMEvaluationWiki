@@ -16,6 +16,14 @@ status: active
 
 > 首个多语言、多任务的歌声质量评测 MOS 数据集，覆盖歌声合成（SVS）、歌声转换（SVC）和歌声修复（SVR），并被 ASRU 2024 VoiceMOS 挑战赛采用。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2510.01812](https://arxiv.org/abs/2510.01812)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SingMOS-Pro 由 TangRain 等研究者构建，论文于 2024 年 10 月提交至 arXiv（2510.01812）。它是 SingMOS 数据集（arXiv 2406.10911）的扩展增强版，旨在建立一个更全面、多任务的歌声质量评测（Singing Quality Assessment, SQA）标准。

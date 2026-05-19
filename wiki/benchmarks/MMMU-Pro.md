@@ -23,6 +23,15 @@ sources:
 
 # MMMU-Pro：专业多学科多模态进阶评测基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2409.02813](https://arxiv.org/abs/2409.02813)
+- **官方主页**: [https://mmmu-benchmark.github.io](https://mmmu-benchmark.github.io)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MMMU-Pro 是 2024 年提出的 **MMMU（Massive Multitask Multimodal Understanding）进阶版本**，专为应对顶尖多模态模型在 MMMU 上接近饱和的问题而设计。它包含约 **3,460 道**题目，通过增加题目难度、引入多图推理和扩展选项数量，显著提升了对最先进模型的区分能力。

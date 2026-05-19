@@ -16,6 +16,14 @@ status: active
 
 > 多任务安全对齐评测基准，系统评估 LLM 在多维度安全场景下的行为。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2405.11532](https://arxiv.org/abs/2405.11532)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 SafeBench 是 2024 年提出的 LLM 安全对齐综合评测基准，旨在通过多任务、多场景的统一评测框架系统性地评估大型语言模型的安全行为。与专注于有害内容拒绝的基准（如 SALAD-Bench）不同，SafeBench 覆盖了更广泛的安全维度，包括有害内容生成、虚假信息传播、隐私泄露、公平性偏见、越权行为等多类风险。

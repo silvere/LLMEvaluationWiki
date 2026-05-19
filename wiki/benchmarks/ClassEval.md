@@ -16,6 +16,14 @@ status: active
 
 > 面向类级别（class-level）Python 代码生成的评测基准，包含 100 个手工构建的 Python 类，评测模型在处理跨方法依赖和复杂类结构时的代码生成能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2308.01861](https://arxiv.org/abs/2308.01861)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ClassEval 由 Du 等人于 2023 年发布，针对现有代码基准（HumanEval、MBPP 等）只测试独立函数生成这一局限性而设计。现实软件工程中，绝大多数代码以类（class）为组织单元，方法之间存在共享状态和相互调用，但函数级评测完全无法捕捉这一复杂性。

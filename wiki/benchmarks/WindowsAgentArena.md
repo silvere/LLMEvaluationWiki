@@ -16,6 +16,14 @@ status: active
 
 > 在 Windows 操作系统中评测 AI 代理完成真实桌面任务的综合基准。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2409.08264](https://arxiv.org/abs/2409.08264)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 WindowsAgentArena（WAA）是由 Microsoft Research 于 2024 年发布的 Windows 平台 AI 代理评测基准。它在 Azure 云上的 Windows 11 虚拟机中运行，要求代理通过截图感知系统状态，完成横跨 Office 365 套件、Windows 系统工具、Web 浏览器等多类应用的实际任务。

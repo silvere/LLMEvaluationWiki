@@ -17,6 +17,14 @@ status: active
 
 > 长文档忠实检索基准，测试语言模型在超长文本上下文中精确定位和引用相关信息的能力。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.17419](https://arxiv.org/abs/2406.17419)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LOFT（Long-Context Faithful Retrieval Test）于 2024 年发布，是专为评测语言模型在**超长文本上下文**（数万至数十万 token）中精确检索与忠实引用信息能力设计的基准。LOFT 的核心关注点是模型的**忠实性（faithfulness）**：在给定大量文档后，模型的答案是否忠实基于提供的文档内容，而非依赖模型内置的参数化知识。

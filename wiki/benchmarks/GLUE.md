@@ -24,6 +24,15 @@ sources: []
 
 > 包含 9 个 NLP 任务的通用语言理解评测基准，深刻推动了预训练语言模型时代的到来。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1804.07461](https://arxiv.org/abs/1804.07461)
+- **官方主页**: [https://gluebenchmark.com/](https://gluebenchmark.com/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 GLUE 由 Wang 等人于 2018 年提出（发表于 EMNLP 2018），来自纽约大学等机构。GLUE 是第一个被广泛采用的**多任务 NLP 综合评测基准**，通过汇聚多个不同类型的 NLP 任务，提供了一个统一的语言理解能力评测框架。

@@ -13,11 +13,54 @@ domain:
 year: 2025
 arxiv_id: "2501.14249"
 status: active
+sota:
+  - score: "54.0%"
+    model: "Kimi-K2.6"
+    harness: null
+    notes: "with tools, leading"
+  - score: "30.5% / **50.4%** w/ tools"
+    model: "GLM-5"
+    harness: null
+    notes: "open-source 第一"
+  - score: "31.0%"
+    model: "GLM-5.1"
+    harness: null
+    notes: "GLM-5 增量版"
+  - score: "约 25% (with reasoning)"
+    model: "GPT-5"
+    harness: null
+  - score: "约 18.8%"
+    model: "Gemini-2.5-Pro"
+    harness: null
 ---
 
 # HLE
 
 > Humanity's Last Exam（人类最后的考试），由 Scale AI 与数千名顶级学者协作构建的超高难度跨学科评测集，代表人类专业知识的最前沿，旨在测试 AI 是否接近超越人类专家水平。
+
+<!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 当前 SOTA
+
+> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+
+| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
+|---|---|---|---|---|---|---|
+| 1 | [[Kimi-K2.6]] | — | 54.0% | — | with tools, leading | — |
+| 2 | [[GLM-5]] | — | 30.5% / **50.4%** w/ tools | — | open-source 第一 | — |
+| 3 | [[GLM-5.1]] | — | 31.0% | — | GLM-5 增量版 | — |
+| 4 | [[GPT-5]] | — | 约 25% (with reasoning) | — |  | — |
+| 5 | [[Gemini-2.5-Pro]] | — | 约 18.8% | — |  | — |
+
+<!-- AUTO-SOTA:END -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2501.14249](https://arxiv.org/abs/2501.14249)
+
+<!-- AUTO-LINKS:END -->
 
 ## 概述
 

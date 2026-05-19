@@ -17,6 +17,14 @@ status: active
 
 > 面向中文法律大语言模型的综合评测框架，覆盖客观知识问答和主观法律推理两大维度，由复旦大学发布。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2309.11325](https://arxiv.org/abs/2309.11325)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 DISC-Law-Eval 由复旦大学数据智能与社会计算实验室（DISC Lab）于 2023 年发布，是 DISC-LawLLM 项目的配套评测基准。该基准专为评测面向中国法律场景的 LLM 而设计，覆盖从法律知识记忆到法律推理应用的完整能力谱系。

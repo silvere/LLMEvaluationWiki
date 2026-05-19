@@ -17,6 +17,14 @@ status: active
 
 > 一个专门测试 LLM 密码学解密推理能力的综合基准，包含 2,358 道题目，覆盖 9 种加密算法，揭示了当前推理型 LLM（包括 o1、Claude-3.5）在系统性解密任务上的根本性局限（arXiv:2504.19093，2025）。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2504.19093](https://arxiv.org/abs/2504.19093)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CipherBank（Exploring the Boundary of LLM Reasoning Capabilities through Cryptography Challenges）是一个专为评估 LLM 密码学推理能力而设计的综合基准，于 2025 年 4 月发布于 arXiv。该工作聚焦于一个极具挑战性的推理领域：大语言模型能否理解经典密码体系的规则并对密文进行系统性解密？

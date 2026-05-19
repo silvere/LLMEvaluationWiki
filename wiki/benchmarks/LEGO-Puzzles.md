@@ -17,6 +17,14 @@ status: active
 
 > 以乐高积木拼装为测试载体的多模态空间推理基准，系统评测 MLLM 在多步骤空间理解与序列规划上的能力边界。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2503.19990](https://arxiv.org/abs/2503.19990)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 LEGO-Puzzles 由 Shanghai AI Lab 等机构联合提出，论文于 2025 年 3 月提交至 arXiv（2503.19990），并已在 OpenReview 上接受审阅。该基准以乐高积木的搭建过程为核心任务载体，系统性地评测多模态大语言模型（MLLM）从基础空间感知到复杂多步推理的全链路能力。

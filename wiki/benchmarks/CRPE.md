@@ -17,6 +17,14 @@ status: active
 
 > 评测多模态大模型因果关系感知与推理能力的基准，通过图像配对设计区分相关性感知与因果推理。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2406.04208](https://arxiv.org/abs/2406.04208)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 CRPE（Causal Reasoning and Perception Evaluation）于 2024 年提出，专门评测多模态大语言模型在视觉场景中的**因果推理**能力。该基准的核心问题是：模型是否真正理解图像中事件/状态之间的因果关系，还是仅凭视觉相关性猜测？

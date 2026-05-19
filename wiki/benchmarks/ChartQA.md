@@ -23,6 +23,15 @@ sources:
 
 # ChartQA：图表理解视觉问答基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2203.10244](https://arxiv.org/abs/2203.10244)
+- **官方主页**: [https://github.com/vis-nlp/ChartQA](https://github.com/vis-nlp/ChartQA)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ChartQA 是 2022 年由 Masry 等人提出的图表理解视觉问答基准，发表于 ACL 2022 Findings。它专注于评测模型对**真实数据图表**（条形图、折线图、饼图等）的理解与推理能力，包含 **9,608 道**来自真实数据图表的问答对，是该领域规模最大、被引用最广的基准之一。

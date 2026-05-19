@@ -23,6 +23,15 @@ sources:
 
 # ScienceQA：多学科科学视觉问答基准
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2209.09513](https://arxiv.org/abs/2209.09513)
+- **官方主页**: [https://scienceqa.github.io](https://scienceqa.github.io)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 ScienceQA 是 2022 年由 UCLA 等机构提出的多模态科学问答数据集，发表于 NeurIPS 2022。它包含 **21,208 道**多学科科学选择题，其中约 48% 配有图像，覆盖自然科学、社会科学和语言科学三大领域，是首个大规模附有**解题讲解链（Lecture & Explanation）**的多模态科学问答基准。

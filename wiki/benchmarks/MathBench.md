@@ -24,6 +24,15 @@ sources: []
 
 > 覆盖中国初中、高中到大学数学的多级别中文数学评测基准，同时包含中英文数学知识测试。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2405.12209](https://arxiv.org/abs/2405.12209)
+- **官方主页**: [https://github.com/open-compass/MathBench](https://github.com/open-compass/MathBench)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MathBench 于 2024 年发布，来自 OpenCompass 社区（上海人工智能实验室等机构主导）。该基准专门针对中文数学评测场景，填补了中文数学评测基准的空白，同时覆盖数学知识理解和问题解决能力两个维度。

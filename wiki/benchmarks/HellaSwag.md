@@ -24,6 +24,15 @@ sources: []
 
 > 基于完形填空风格的常识推理基准，要求模型从四个选项中选出最合理的句子续写。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/1905.07830](https://arxiv.org/abs/1905.07830)
+- **官方主页**: [https://rowanzellers.com/hellaswag/](https://rowanzellers.com/hellaswag/)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 HellaSwag 由 Rowan Zellers 等人于 2019 年提出，发表于 ACL 2019。其核心贡献在于引入了 **adversarial filtering**（对抗过滤）技术：通过训练一个鉴别器来筛除人类容易辨别但机器难以区分的干扰项，从而让题目对人类简单、对模型困难。

@@ -24,6 +24,15 @@ sources: []
 
 > 多轮对话细粒度评测基准，包含 1,388 道对话轮次，通过 LLM-as-Judge 对多轮对话能力进行精细化评测。
 
+<!-- AUTO-LINKS:START -->
+
+## 参考链接
+
+- **arXiv 论文**: [https://arxiv.org/abs/2402.14762](https://arxiv.org/abs/2402.14762)
+- **官方主页**: [https://github.com/mtbench101/mt-bench-101](https://github.com/mtbench101/mt-bench-101)
+
+<!-- AUTO-LINKS:END -->
+
 ## 概述
 
 MT-Bench-101 是对原版 MT-Bench（80 道题）的大规模扩展，专注于多轮对话能力的细粒度评测。原版 MT-Bench 仅有 80 道问题，统计稳定性有限；MT-Bench-101 通过扩大规模和细化任务类型，提供了更全面的多轮对话评测框架。
