@@ -33,13 +33,13 @@ sota:
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[Qwen3.5]] | — | 85.0 | — | 2026-02 | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[Qwen3.5]] | 85.0 | 2026-02 |
 
 <!-- AUTO-SOTA:END -->
 
@@ -84,10 +84,3 @@ MMMU 的重要性在于它揭示了当前多模态模型的深层能力短板。
 - [[benchmark-saturation]]
 - [[multimodal-eval]]
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[Qwen3.5|Qwen 3.5 (397B-A17B)]] | 85.0 | 2026-02 |

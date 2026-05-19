@@ -213,7 +213,7 @@ cd quartz && npx quartz build --directory ../wiki  # 重建
 
 ### 3.5 benchmark `sota` 字段（必读）
 
-每个 benchmark 页 frontmatter **应当**有 `sota:` 字段记录 Top 1-5 模型/harness 得分（数据 SSOT）。脚本读 frontmatter 渲染成正文 `<!-- AUTO-SOTA -->` 区块。
+每个 benchmark 页 frontmatter **应当**有 `sota:` 字段记录**完整**模型/harness 得分排行（含冠军 + 历代梯队）。脚本读 frontmatter 渲染成正文 `<!-- AUTO-SOTA -->` 区块（"## 模型得分排行"），**前 3 名自动加 🥇🥈🥉**。
 
 ```yaml
 sota:
@@ -221,15 +221,16 @@ sota:
     model: "Gemini-3.1-Pro"   # wiki/models/ 的 slug
     harness: null              # 裸模型则 null；agent benchmark 填 wiki/harnesses/ 的 slug
     date: "2025-12"            # 可选：YYYY-MM 或 YYYY-MM-DD
-    source: "https://..."      # 可选：权威 URL（vendor 官方 / 论文 / AA leaderboard）
+    source: "https://..."      # 可选：权威 URL
     notes: "Diamond subset"    # 可选：子集 / 推理模式 / 配置
 ```
 
 **约束**：
-- `sota` 列表长度上限 5（避免 frontmatter 膨胀）
-- `model` 必须存在于 `wiki/models/`；`harness` 若填则必须存在于 `wiki/harnesses/`（validate warning）
-- 新建 benchmark 至少填 1 条 SOTA；维护时**只编辑 frontmatter**，禁止手改 `<!-- AUTO-SOTA -->` 区块（会被覆盖）
-- 历史"## 主流模型得分"区块**保留不删**，作为 Top-5 之外更全量的索引（人审）
+- `sota` 列表长度上限 30（合并方案下，单表承载完整排行）
+- `model` 必须存在于 `wiki/models/`；`harness` 若填则必须存在于 `wiki/harnesses/`
+- 新建 benchmark 至少填 1 条；维护时**只编辑 frontmatter**，禁止手改 `<!-- AUTO-SOTA -->` 区块
+- 旧的"## 主流模型得分"区块已被 `npm run prune-legacy-scores` 一次性清除，**不再使用**
+- migrate-sota 检测到已存在 sota 时**默认 noop**（避免双键 bug）；强制重新迁移需先手动从 frontmatter 删 `sota:` 块
 
 ### 3.3 必填 frontmatter
 
@@ -392,6 +393,64 @@ sota:                              # 当前 SOTA（list，可写多个梯队）
 npm run validate                    # 检查 frontmatter
 cd quartz && npx quartz build --directory ../wiki   # 站点构建
 ```
+
+---
+
+### 3.6 synthesis 内容生成 SOP（必读）
+
+**底层逻辑**：synthesis 不是「LLM 写一份新文档」，而是「**从已 grounded 的 atomic 单页 aggregate 出横向视角**」。原子事实只在单页 frontmatter 维护一份，横向对比 / pitfall rollup 由脚本自动派生，叠加 LLM 起草的决策树和编辑判断作为薄薄一层 opinion。
+
+#### 三档内容 Tier（必须在 synthesis 页里区分）
+
+| Tier | 类型 | 谁生成 | 标记方式 | 例子 |
+|---|---|---|---|---|
+| **Tier 1** | 框架 / 结构 | LLM 起草 | 「[Tier 1] LLM 起草，未审阅」声明 | 决策树形状、分类法、章节标题 |
+| **Tier 2** | 事实 / 数字 | **必须 grounded** | marker 区块自动生成 + `derived_from` 字段 | 对比表、SOTA、saturation、pitfall list |
+| **Tier 3** | 判断 / 推荐 | 编辑判断 | 每段标 `[opinion]` / `[Tier 3]` | 推荐组合、决策建议 |
+
+**红线**：Tier 2 内容**不允许 LLM 直接写在 synthesis 页里**，必须从单页 frontmatter 派生（用 `scripts/build-synthesis-*.ts` 系列）。LLM 写完 Tier 1/3 后，留 marker 让脚本注入 Tier 2。
+
+#### 三档 confidence（synthesis 升级路径）
+
+```yaml
+confidence: draft     # LLM 起草，未审阅。顶部必须挂 ⚠️ banner
+confidence: reviewed  # 人工 spot-check 关键数字 + 决策树审阅
+confidence: promoted  # 领域专家完整审阅 + 全部断言溯源
+```
+
+升级条件：
+- `draft → reviewed`：至少 spot-check 5 处具体数字；决策树审阅一遍；推荐组合至少 3 名领域使用者反馈；保留 `[Tier]` 标记
+- `reviewed → promoted`：所有断言追溯到 source URL 或 wiki 单页；编辑判断段独立标 `[opinion]`；至少 1 名领域专家全审
+
+#### 自动 aggregation 脚本（已 ready）
+
+| 脚本 | 输入 | 输出 |
+|---|---|---|
+| `scripts/build-synthesis-tables.ts` | 所有 `wiki/benchmarks/*.md` frontmatter，按 `domain` 分组 | synthesis 页 `<!-- AUTO-SYN-TABLE:domain=X:START -->` 区块 |
+| `scripts/build-synthesis-pitfall-rollup.ts` | 所有 benchmark 的 `pitfalls:` 数组 | `benchmark-pitfalls-cheatsheet.md` 的 `<!-- AUTO-PITFALL-ROLLUP -->` 区块 |
+
+**调用时机**：
+- 新写 / 修改 benchmark 单页 frontmatter 后 → 跑两个脚本同步 synthesis
+- 每季度 routine 全跑一次
+- CI 钩子（未来）每个 PR 自动跑
+
+#### 写新 synthesis 页时的步骤
+
+1. **明确目标读者** 与 **核心问题**（如「数学评测选哪个」）—— 写在文件顶部
+2. **frontmatter 加 `derived_from:` 字段** 列出依赖的单页
+3. **顶部 banner**：`⚠️ Draft 状态：本页 X% 由 LLM 起草，对比表自动同步 grounded，决策树与推荐为编辑判断`
+4. **加「数据来源与生成方法」section**：透明化每段内容的 Tier
+5. **决策树 / 框架（Tier 1）**：LLM 起草，明确标
+6. **对比表（Tier 2）**：留 `<!-- AUTO-SYN-TABLE:domain=X:START -->...:END -->` marker，跑脚本填充
+7. **推荐组合（Tier 3）**：明确标 `[opinion]`
+8. 跑 `npx tsx scripts/build-synthesis-tables.ts` + `build-synthesis-pitfall-rollup.ts` 同步
+9. `npm run validate && cd quartz && npx quartz build --directory ../wiki` 验证
+
+#### 红线 / 禁止操作
+
+- ❌ **不允许在 synthesis 页直接写「具体数字 / SOTA」**，必须由 marker 注入或引用单页
+- ❌ **不允许混用 Tier 1/2/3 而不标记**：读者必须能立即判断哪段是事实、哪段是 opinion
+- ❌ **不允许声明 `confidence: reviewed / promoted` 而无审阅记录**（在 git commit 信息里说明审阅人 + 审阅日期）
 
 ---
 

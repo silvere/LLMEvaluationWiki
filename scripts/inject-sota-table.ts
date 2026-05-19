@@ -39,24 +39,38 @@ interface FM {
   [k: string]: unknown;
 }
 
+const MEDAL = ["🥇", "🥈", "🥉"];
+
 function buildBlock(entries: SotaEntry[]): string {
+  // 检测是否任一条目有 harness/date/source —— 决定是否渲染这几列（避免全 — 的视觉噪声）
+  const hasHarness = entries.some((e) => e.harness);
+  const hasDate = entries.some((e) => e.date);
+  const hasSource = entries.some((e) => e.source);
+
+  const headerCols = ["#", "模型", "分数", "备注"];
+  if (hasHarness) headerCols.splice(2, 0, "Harness");
+  if (hasDate) headerCols.push("时间");
+  if (hasSource) headerCols.push("来源");
+
   const lines: string[] = [
     MARK_START,
     "",
-    "## 当前 SOTA",
+    "## 模型得分排行",
     "",
-    "> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。",
+    "> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。",
     "",
-    "| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |",
-    "|---|---|---|---|---|---|---|",
+    "| " + headerCols.join(" | ") + " |",
+    "|" + headerCols.map(() => "---").join("|") + "|",
   ];
   entries.forEach((e, i) => {
-    const model = `[[${e.model}]]`;
-    const harness = e.harness ? `[[${e.harness}]]` : "—";
-    const date = e.date ?? "—";
-    const notes = e.notes ?? "";
-    const source = e.source ? `[link](${e.source})` : "—";
-    lines.push(`| ${i + 1} | ${model} | ${harness} | ${e.score} | ${date} | ${notes} | ${source} |`);
+    const rank = i < 3 ? MEDAL[i] : String(i + 1);
+    const row: string[] = [rank, `[[${e.model}]]`];
+    if (hasHarness) row.push(e.harness ? `[[${e.harness}]]` : "—");
+    row.push(e.score);
+    row.push(e.notes ?? "");
+    if (hasDate) row.push(e.date ?? "—");
+    if (hasSource) row.push(e.source ? `[link](${e.source})` : "—");
+    lines.push("| " + row.join(" | ") + " |");
   });
   lines.push("", MARK_END);
   return lines.join("\n");

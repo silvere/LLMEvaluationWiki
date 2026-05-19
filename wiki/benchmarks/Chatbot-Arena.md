@@ -41,13 +41,13 @@ sota:
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[Yi-Lightning]] | — | 1287 (top 10 at release) | — | Elo | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[Yi-Lightning]] | 1287 (top 10 at release) | Elo |
 
 <!-- AUTO-SOTA:END -->
 
@@ -95,10 +95,3 @@ Chatbot Arena 的设计理念是让真实用户在真实使用场景中评判，
 - [[llm-as-judge]]
 - [[benchmark-saturation]]
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[Yi-Lightning|Yi-Lightning]] | 1287 (top 10 at release) | Elo |

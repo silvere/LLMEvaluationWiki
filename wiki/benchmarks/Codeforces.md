@@ -41,17 +41,17 @@ sota:
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[DeepSeek-V4-Pro]] | — | 3206 | — | Elo（2026-04） | — |
-| 2 | [[Doubao-Seed-2.0]] | — | 3020 | — | Elo (Pro) | — |
-| 3 | [[DeepSeek-R1]] | — | 2029 (96.3 percentile) | — | Elo | — |
-| 4 | [[Kimi-K1.5]] | — | 94 percentile | — | Elo | — |
-| 5 | [[Doubao-Seed-1.6]] | — | 约 86.0 percentile | — | Elo | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[DeepSeek-V4-Pro]] | 3206 | Elo（2026-04） |
+| 🥈 | [[Doubao-Seed-2.0]] | 3020 | Elo (Pro) |
+| 🥉 | [[DeepSeek-R1]] | 2029 (96.3 percentile) | Elo |
+| 4 | [[Kimi-K1.5]] | 94 percentile | Elo |
+| 5 | [[Doubao-Seed-1.6]] | 约 86.0 percentile | Elo |
 
 <!-- AUTO-SOTA:END -->
 
@@ -100,14 +100,3 @@ CodeElo 基准包含近 6 个月的 Codeforces 竞赛真题，附带比赛分组
 - [[APPS]]
 - [[SWE-bench-Verified]]
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] | 3206 | Elo（2026-04） |
-| [[Doubao-Seed-2.0|Doubao Seed 2.0（Pro/Lite/Mini）]] | 3020 | Elo (Pro) |
-| [[DeepSeek-R1|DeepSeek R1]] | 2029 (96.3 percentile) | Elo |
-| [[Kimi-K1.5|Kimi K1.5]] | 94 percentile | Elo |
-| [[Doubao-Seed-1.6|Doubao Seed 1.6 / Seed-Thinking]] | 约 86.0 percentile | Elo |

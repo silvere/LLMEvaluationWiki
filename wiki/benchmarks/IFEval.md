@@ -33,15 +33,17 @@ pitfalls:
   - "对 verifier 实现敏感（Python 字数统计 vs LLM judge 差异），不同评测框架（lm-eval-harness / official）的实现细节稍异"
 sota:
   - score: "100.0%"
-    model: "Kimi-K2.5-Reasoning"
+    model: "Kimi-K2.5"
     harness: null
-    notes: "BenchLM 2026-04 weighted score"
+    notes: "Reasoning 模式（BenchLM 2026-04）"
   - score: "100.0%"
-    model: "Grok-4.20-Multi-agent"
+    model: "Grok-4.3"
     harness: null
+    notes: "Multi-agent 4.20 设置"
   - score: "97.1%"
-    model: "Grok-4.20"
+    model: "Grok-4.3"
     harness: null
+    notes: "4.20 单 agent"
 ---
 
 # IFEval（Instruction Following Evaluation）
@@ -49,6 +51,20 @@ sota:
 > 用可程序化验证的具体指令测试模型的精确遵循能力，客观衡量模型对格式和内容约束的执行准确性。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[Kimi-K2.5]] | 100.0% | Reasoning 模式（BenchLM 2026-04） |
+| 🥈 | [[Grok-4.3]] | 100.0% | Multi-agent 4.20 设置 |
+| 🥉 | [[Grok-4.3]] | 97.1% | 4.20 单 agent |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

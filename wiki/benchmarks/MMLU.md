@@ -47,6 +47,44 @@ sota:
   - score: "88.5%"
     model: "DeepSeek-V3"
     harness: null
+  - score: "约 88%"
+    model: "Claude-Opus-4"
+    harness: null
+    notes: "Pro"
+  - score: "87.4%"
+    model: "Kimi-K1.5"
+    harness: null
+  - score: "约 86%"
+    model: "Llama-3.3-70B"
+    harness: null
+  - score: "85.9%"
+    model: "Gemini-1.5-Pro"
+    harness: null
+  - score: "约 85.0%"
+    model: "Qwen2.5-72B"
+    harness: null
+  - score: "约 82%"
+    model: "Doubao-1.5-Pro"
+    harness: null
+  - score: "约 81%"
+    model: "Yi-Lightning"
+    harness: null
+  - score: "约 80.5%"
+    model: "Llama-4"
+    harness: null
+    notes: "Pro (Maverick"
+  - score: "约 80%"
+    model: "Qwen3"
+    harness: null
+    notes: "Pro"
+  - score: "76.4%"
+    model: "Gemini-2.0-Flash"
+    harness: null
+    notes: "Pro"
+  - score: "75.9%"
+    model: "DeepSeek-V3"
+    harness: null
+    notes: "-Pro"
 ---
 
 # MMLU（Massive Multitask Language Understanding）
@@ -89,17 +127,28 @@ MMLU 发布后迅速成为学术界和工业界最常引用的 LLM 综合能力�
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[DeepSeek-R1]] | — | 90.8% | — |  | — |
-| 2 | [[GPT-4.1]] | — | 约 90.2% | — |  | — |
-| 3 | [[GPT-4o]] | — | 88.7% | — |  | — |
-| 4 | [[Claude-3.5-Sonnet]] | — | 88.7% | — |  | — |
-| 5 | [[DeepSeek-V3]] | — | 88.5% | — |  | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[DeepSeek-R1]] | 90.8% |  |
+| 🥈 | [[GPT-4.1]] | 约 90.2% |  |
+| 🥉 | [[GPT-4o]] | 88.7% |  |
+| 4 | [[Claude-3.5-Sonnet]] | 88.7% |  |
+| 5 | [[DeepSeek-V3]] | 88.5% |  |
+| 6 | [[Claude-Opus-4]] | 约 88% | Pro |
+| 7 | [[Kimi-K1.5]] | 87.4% |  |
+| 8 | [[Llama-3.3-70B]] | 约 86% |  |
+| 9 | [[Gemini-1.5-Pro]] | 85.9% |  |
+| 10 | [[Qwen2.5-72B]] | 约 85.0% |  |
+| 11 | [[Doubao-1.5-Pro]] | 约 82% |  |
+| 12 | [[Yi-Lightning]] | 约 81% |  |
+| 13 | [[Llama-4]] | 约 80.5% | Pro (Maverick |
+| 14 | [[Qwen3]] | 约 80% | Pro |
+| 15 | [[Gemini-2.0-Flash]] | 76.4% | Pro |
+| 16 | [[DeepSeek-V3]] | 75.9% | -Pro |
 
 <!-- AUTO-SOTA:END -->
 
@@ -135,25 +184,3 @@ MMLU 发布后迅速成为学术界和工业界最常引用的 LLM 综合能力�
 - [[2412.15194|MMLU-CF: A Contamination-free Multi-task Language Understanding Benchmark]] · Qihao Zhao 等 · score 21/25
 - [[2311.09154|CLEAN-EVAL: Clean Evaluation on Contaminated Large Language Models]] · Wenhong Zhu 等 · score 18/25
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[DeepSeek-R1|DeepSeek R1]] | 90.8% |  |
-| [[GPT-4.1|GPT-4.1]] | 约 90.2% |  |
-| [[GPT-4o|GPT-4o]] | 88.7% |  |
-| [[Claude-3.5-Sonnet|Claude 3.5 Sonnet]] | 88.7% |  |
-| [[DeepSeek-V3|DeepSeek V3 / V3.1]] | 88.5% |  |
-| [[Claude-Opus-4|Claude Opus 4 / Opus 4.1]] | 约 88% | Pro |
-| [[Kimi-K1.5|Kimi K1.5]] | 87.4% |  |
-| [[Llama-3.3-70B|Llama 3.3 70B]] | 约 86% |  |
-| [[Gemini-1.5-Pro|Gemini 1.5 Pro]] | 85.9% |  |
-| [[Qwen2.5-72B|Qwen2.5 系列（含 72B / Coder / Math / VL）]] | 约 85.0% |  |
-| [[Doubao-1.5-Pro|Doubao 1.5 Pro]] | 约 82% |  |
-| [[Yi-Lightning|Yi-Lightning]] | 约 81% |  |
-| [[Llama-4|Llama 4 (Maverick / Scout)]] | 约 80.5% | Pro (Maverick |
-| [[Qwen3|Qwen3 系列（235B-A22B / 32B / Thinking）]] | 约 80% | Pro |
-| [[Gemini-2.0-Flash|Gemini 2.0 Flash]] | 76.4% | Pro |
-| [[DeepSeek-V3|DeepSeek V3 / V3.1]] | 75.9% | -Pro |

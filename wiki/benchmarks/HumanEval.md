@@ -49,6 +49,15 @@ sota:
   - score: "约 90%+"
     model: "GPT-4.1"
     harness: null
+  - score: "约 82-89%"
+    model: "DeepSeek-V3"
+    harness: null
+  - score: "约 88.4%"
+    model: "Llama-3.3-70B"
+    harness: null
+  - score: "71.9%"
+    model: "Gemini-1.5-Pro"
+    harness: null
 ---
 
 # HumanEval（含 HumanEval+）
@@ -92,17 +101,20 @@ HumanEval+ 是 EvalPlus 项目对 HumanEval 的增强版本，通过自动化方
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[Claude-3.7-Sonnet]] | — | 约 92-95% | — |  | — |
-| 2 | [[Qwen2.5-72B]] | — | 约 92.7% | — | Coder-32B | — |
-| 3 | [[Claude-3.5-Sonnet]] | — | 92.0% | — |  | — |
-| 4 | [[GPT-4o]] | — | 90.2% | — |  | — |
-| 5 | [[GPT-4.1]] | — | 约 90%+ | — |  | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[Claude-3.7-Sonnet]] | 约 92-95% |  |
+| 🥈 | [[Qwen2.5-72B]] | 约 92.7% | Coder-32B |
+| 🥉 | [[Claude-3.5-Sonnet]] | 92.0% |  |
+| 4 | [[GPT-4o]] | 90.2% |  |
+| 5 | [[GPT-4.1]] | 约 90%+ |  |
+| 6 | [[DeepSeek-V3]] | 约 82-89% |  |
+| 7 | [[Llama-3.3-70B]] | 约 88.4% |  |
+| 8 | [[Gemini-1.5-Pro]] | 71.9% |  |
 
 <!-- AUTO-SOTA:END -->
 
@@ -136,17 +148,3 @@ HumanEval+ 是 EvalPlus 项目对 HumanEval 的增强版本，通过自动化方
 
 - [[2604.12379|Beyond Output Correctness: Benchmarking and Evaluating Large Language Model Reasoning in Coding Tasks]] · score 19/25
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[Claude-3.7-Sonnet|Claude 3.7 Sonnet]] | 约 92-95% |  |
-| [[Qwen2.5-72B|Qwen2.5 系列（含 72B / Coder / Math / VL）]] | 约 92.7% | Coder-32B |
-| [[Claude-3.5-Sonnet|Claude 3.5 Sonnet]] | 92.0% |  |
-| [[GPT-4o|GPT-4o]] | 90.2% |  |
-| [[GPT-4.1|GPT-4.1]] | 约 90%+ |  |
-| [[DeepSeek-V3|DeepSeek V3 / V3.1]] | 约 82-89% |  |
-| [[Llama-3.3-70B|Llama 3.3 70B]] | 约 88.4% |  |
-| [[Gemini-1.5-Pro|Gemini 1.5 Pro]] | 71.9% |  |

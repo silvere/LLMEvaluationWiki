@@ -6,11 +6,19 @@ author_mode: llm
 confidence: draft
 as_of_date: "2026-05-19"
 last_verified: "2026-05-19"
+review_status: "未审阅（LLM 起草）"
+next_review_due: "2026-08-19"
 sources:
   - "https://arxiv.org/abs/2103.03874"
   - "https://artificialanalysis.ai/evaluations/aime"
   - "https://epoch.ai/benchmarks/frontier-math"
-  - "https://lmarena.ai/"
+derived_from:
+  - "wiki/benchmarks/MMLU.md"
+  - "wiki/benchmarks/MATH.md"
+  - "wiki/benchmarks/AIME.md"
+  - "wiki/benchmarks/GPQA.md"
+  - "wiki/benchmarks/FrontierMath.md"
+  - "wiki/benchmarks/GSM8K.md"
 domain:
   - synthesis
   - math
@@ -19,87 +27,104 @@ domain:
 
 # 如何选择数学评测基准（决策树）
 
-> 目标读者：在 LLM 评测中需要决定「我该跑哪个数学 benchmark」的工程师与研究员。本页给出 2026-05 当前可用的主流数学评测对比、选型决策树，以及各 benchmark 的关键 pitfall。
+> ⚠️ **Draft 状态**：本页对比表由 `scripts/build-synthesis-tables.ts` 从各 benchmark 单页 frontmatter 自动聚合，**事实层 grounded**；决策树形状与推荐组合为 LLM 起草 + 编辑判断，**未经领域专家正式审阅**，欢迎 PR / Issue 指正。
 
-## TL;DR — 一句话决策
+> 目标读者：在 LLM 评测中需要决定「我该跑哪个数学 benchmark」的工程师与研究员。本页给出当前可用的主流数学评测对比、选型决策树，以及各 benchmark 的关键 pitfall。
 
-| 你的场景 | 推荐 benchmark | 理由 |
+## 数据来源与生成方法（透明化）
+
+| 内容 | Tier | 来源 | 可信度 |
+|---|---|---|---|
+| 横向对比表（题量、SOTA、saturation、pitfall） | **Tier 2 事实** | 自动从 `wiki/benchmarks/*.md` frontmatter aggregate（每月跑脚本） | ⭐⭐⭐⭐ 与单页一致 |
+| 单页 frontmatter（sota / pitfalls / 协议） | **Tier 2 事实** | 各 benchmark 页用 WebSearch 核实 | ⭐⭐⭐ 视各页 confidence |
+| 决策树结构（按场景分支） | **Tier 1 框架** | LLM 起草，基于 2026-05 主流实践 | ⭐⭐ 结构合理但非权威 |
+| 推荐组合（"上面 + X + Y"） | **Tier 3 判断** | 编辑综合判断，可能有偏 | ⭐⭐ opinion，欢迎 PR |
+
+**升级路径**：本页 confidence: draft → 经领域专家 spot-check 至少 5 处具体数字 + 决策树审阅后升 `reviewed` → 完整审阅 + 所有断言追溯后升 `promoted`。
+
+## TL;DR — 决策
+
+| 你的场景 | 推荐 benchmark | [Tier] 理由 |
 |---|---|---|
-| 小学到高中数学综合能力（base model 训练效果） | [[GSM8K]] + [[MATH]]-500 | 已饱和但**仍是社区共识基线**，几乎所有论文都报 |
-| 竞赛级 / 推理模型 ablation | [[AIME]] 2025-2026 + [[OmniMATH]] | 题量大 / 难度高 / 污染少 |
-| frontier 模型最难题 / 是否「数学 AGI」 | [[FrontierMath]] | 数学家出题、保密、目前 o3 仅 ~25% |
-| 中文数学 | [[CMMLU]]-math / [[C-Eval]]-math / GSM8K-Zh | 中文 base model 必报 |
-| 形式化数学 / 证明 | miniF2F / ProofNet / PutnamBench | Lean / Coq 等形式语言 |
-| 数学多模态（图、公式渲染） | [[MathVista]] / We-Math | 配合视觉理解 |
+| base model 数学综合 | [[GSM8K]] + [[MATH]]-500 | [opinion] 社区共识基线，但已饱和 |
+| 推理模型 ablation | [[AIME]] 2025-2026 + 大量 maj@N | [opinion] 题量大 + 抗污染 |
+| frontier 数学能力 | [[FrontierMath]] | [grounded] 顶级模型 o3 仅 ~25% |
+| 中文数学 | C-Eval-math / CMMLU-math + GSM8K 中文版 | [opinion] |
+| 形式化证明 | miniF2F / PutnamBench | [opinion] |
+| 多模态数学 | [[MathVista]] | [opinion] |
 
-## 决策树
+## 决策树（[Tier 1] LLM 起草，未审阅）
 
 ```
 你要评测的是 base LLM 还是 reasoning model？
 │
 ├── base LLM（GPT-4o / Claude / Gemini Pro / Llama / Qwen base）
 │   │
-│   ├── 想报「公认基线」给学术圈看 → GSM8K (8.5K 题) + MATH-500 (Hendrycks)
-│   ├── 想测中文能力 → 加 C-Eval-math + CMMLU-math + GSM8K-Zh
+│   ├── 想报「公认基线」给学术圈看 → GSM8K + MATH-500
+│   ├── 想测中文能力 → 加 C-Eval-math + CMMLU-math
 │   └── 想测多模态数学（含图） → MathVista
 │
 └── reasoning model（o1 / R1 / Claude Thinking / QwQ）
     │
     ├── 主流对照 → AIME 2024+2025+2026（multi-seed maj@64）
-    ├── 测「无法靠记忆」的真难度 → FrontierMath（每月新题、私有 test set）
-    ├── 大题量验证 → OmniMATH（200K 题）/ Olympiads
-    ├── 形式化证明 → miniF2F-Lean4 / PutnamBench（形式化基准）
-    └── 想报最难分数 → HMMT（Harvard-MIT Math Tournament）
+    ├── 测「无法靠记忆」的真难度 → FrontierMath（私有 test set）
+    ├── 大题量验证 → OmniMATH / Olympiads
+    └── 形式化证明 → miniF2F-Lean4 / PutnamBench
 ```
 
-## 横向对比表
+<!-- AUTO-SYN-TABLE:domain=math:START -->
 
-| Benchmark | 题量 | 类型 | 当前 SOTA（2026-05） | 饱和 | 污染 | 推荐协议 |
+## 数学评测横向对比（自动生成）
+
+> 由 `scripts/build-synthesis-tables.ts` 从各 benchmark 单页 frontmatter 自动聚合。**维护方式：改各 benchmark 页 frontmatter，不要手改本表。**
+
+| Benchmark | 题量 | 年份 | 评测协议 | 当前 SOTA | Saturation | 主要 Pitfall |
 |---|---|---|---|---|---|---|
-| **[[GSM8K]]** | 8,500 | 小学应用题 | ~98%（多家） | ✅ 饱和 | ✅ 严重 | 仅作历史基线参考 |
-| **[[MATH]] / MATH-500** | 12,500 / 500 | 高中竞赛 | 97.3%（R1） | ✅ 饱和 | ✅ 严重 | 仅作基线 |
-| **[[AIME]]** | 30/年 | AIME 竞赛 | ~98%（Doubao Seed maj@64） / ~90% pass@1 | ⚠️ 部分饱和 | ⚠️ 2024 题污染 | **multi-seed + maj@N + 报年份** |
-| **[[FrontierMath]]** | ~300 | 研究级数学 | o3 ~25% | ❌ 完全未饱和 | ✅ 保密 | 信任 official 评测 |
-| **OmniMATH** | 200K+ | 奥赛 + 综合 | ~75-85% | ❌ active | ⚠️ 部分 | pass@1 |
-| **miniF2F-Lean4** | 488 | 形式化证明 | ~60-70% | ❌ active | ✅ 干净 | Lean compile 验证 |
-| **MathVista** | 6,141 | 多模态数学 | ~75% | ❌ active | ⚠️ 部分 | 多模态 0-shot |
-| **HLE-math 子集** | ~500 | 终极人类考试 | <10% | ❌ frontier | ✅ 保密 | 与 FrontierMath 类似 |
+| [[AIME|AIME]] | 30 | 1983 | 0-shot / exact-match accuracy（每题答案 0-9… | 98.3%（Doubao-Seed-2.0） | 🟢 active | **年份混淆**：'AIME 88%' 没意义。AIME 2022 / 2023 / 2024 / 2025 / 2026 每年新题，污染程度不同，必须明确报… |
+| [[FrontierMath|FrontierMath]] | 0 | 2024 | — | 约 25%（o3） | — | — |
+| [[GSM8K|GSM8K]] | 8500 | 2021 | — | 约 95.8%（Qwen2.5-72B） | — | — |
+| [[HLE|HLE]] | — | 2025 | — | 54.0%（Kimi-K2.6） | — | — |
+| [[MATH|MATH]] | 12500 | 2021 | 0-shot 或 4-shot CoT（推理模型默认 0-shot） / exact-match accuracy（数值答案对比） | 97.3%（DeepSeek-R1） | 🔴 saturated | **MATH ≠ MATH-500**：原 MATH 12,500 题、MATH-500 是 OpenAI o1 引入的 500 题子集，分数差异较大，跨论文… |
+| [[MathVision|MathVision]] | — | 2024 | — | 88.6（Qwen3.5） | — | — |
+| [[MGSM|MGSM]] | 2500 | 2023 | — | 约 91.1%（Llama-3.3-70B） | — | — |
+| [[AIME24|AIME 2024]] | 30 | 2024 | — | — | — | — |
+| [[AMC23|AMC23]] | 60 | 2023 | — | — | — | — |
+| [[AQuA|AQuA]] | — | 2017 | — | — | — | — |
+| [[ARB|ARB]] | 0 | 2023 | — | — | — | — |
+| [[CMM-Math|CMM-Math]] | — | 2024 | — | — | — | — |
+| [[CNMO-2024|CNMO 2024]] | — | 2024 | — | — | — | — |
+| [[DROP|DROP]] | 96567 | 2019 | — | — | — | — |
+| [[FinQA|FinQA]] | — | 2021 | — | — | — | — |
+| [[FormalMATH|FormalMATH]] | — | 2025 | — | — | — | — |
+| [[GAOKAO-Bench|GAOKAO-Bench]] | — | 2023 | — | — | — | — |
+| [[GeoQA|GeoQA]] | — | 2021 | — | — | — | — |
+| [[LiveBench|LiveBench]] | — | 2024 | — | — | — | — |
+| [[LiveMathBench|LiveMathBench]] | 0 | 2024 | — | — | — | — |
+| [[MATH500|MATH500]] | 500 | 2023 | — | — | — | — |
+| [[MathBench|MathBench]] | 3709 | 2024 | — | — | — | — |
+| [[MathIF|MathIF]] | — | 2025 | — | — | — | — |
+| [[MathVerse|MathVerse]] | 2612 | 2024 | — | — | — | — |
+| [[MathVista|MathVista]] | 6141 | 2023 | — | — | — | — |
+| [[Minerva|Minerva]] | 0 | 2022 | — | — | — | — |
+| [[OlympiadBench|OlympiadBench]] | 8952 | 2024 | — | — | — | — |
+| [[OmniMath|OmniMath]] | 4428 | 2024 | — | — | — | — |
+| [[PolyMath|PolyMath]] | 0 | 2024 | — | — | — | — |
+| [[PRM-Bench|PRM-Bench]] | — | 2025 | — | — | — | — |
+| [[Putnam|Putnam]] | 0 | 2024 | — | — | — | — |
+| [[SciBench|SciBench]] | 295 | 2023 | — | — | — | — |
+| [[TheoremQA|TheoremQA]] | 800 | 2023 | — | — | — | — |
 
-## 各 benchmark 关键 pitfall（评测专家必读）
+_共 33 个 benchmark，最后更新：2026-05-19_
 
-### GSM8K / MATH-500
-- **饱和到 97%+**，单一分数已无区分度
-- 2024 起多个研究证实主流 base model 训练语料含原题（[[benchmark-contamination]]）
-- 用法：只作为「这模型对数学完全没用」的最低基线
+<!-- AUTO-SYN-TABLE:domain=math:END -->
 
-### AIME（2024-2026）
-- **年份混淆**：「AIME 88%」无意义，必须明示哪一年 / pass@1 还是 maj@64
-- 题量极小（每套 15 题），单次 run 方差 5-10pt，**必须 multi-seed + majority-vote**
-- AIME 2024 已被部分训练语料抓取，2025-2026 题相对干净
-- 推理模型默认 maj@N（N=16/32/64），普通 LLM 0-shot CoT，跨论文比较前必看协议
-
-### FrontierMath（Epoch AI）
-- 数学家秘密出题、test set 不公开
-- 顶级模型 o3 ~25%，是当前真正的 frontier 数学评测
-- 题目分级别：T1（普通研究生题）/ T2（专业研究方向）/ T3（fields 级难题）
-- 缺点：闭源运营，独立复现困难
-
-### miniF2F / ProofNet / PutnamBench
-- 不评测数值答案而是**形式化证明**（Lean / Coq）
-- 要 LLM 生成可编译证明，验证比 exact-match 严格
-- DeepSeek-Prover / AlphaProof 等专门优化的模型才能拿高分
-
-### MathVista
-- 多模态：图表读数 + 几何 + 函数图像
-- 与纯文本数学 benchmark 互补，单看不够
-
-## 推荐组合（2026-05）
+## 推荐组合（[Tier 3] 编辑判断，可能有偏）
 
 **通用 LLM 发布报告**：GSM8K + MATH-500 + MMLU-math + AIME 2024 maj@1
 
 **推理模型对照**：AIME 2024 maj@64 + AIME 2025 + GPQA + FrontierMath + HLE
 
-**中文模型**：上面 + C-Eval-math + CMMLU-math + GSM8K-Zh
+**中文模型**：上面 + C-Eval-math + CMMLU-math + GSM8K 中文版
 
 **多模态模型**：上面 + MathVista + We-Math
 

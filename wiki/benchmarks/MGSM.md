@@ -71,13 +71,13 @@ MGSM 的重要发现是：模型在不同语言上的数学推理能力存在显
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[Llama-3.3-70B]] | — | 约 91.1% | — |  | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[Llama-3.3-70B]] | 约 91.1% |  |
 
 <!-- AUTO-SOTA:END -->
 
@@ -97,10 +97,3 @@ MGSM 的重要发现是：模型在不同语言上的数学推理能力存在显
 - [[MathBench]]
 - [[MMLU]]
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[Llama-3.3-70B|Llama 3.3 70B]] | 约 91.1% |  |

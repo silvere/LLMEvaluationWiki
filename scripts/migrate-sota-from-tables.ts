@@ -25,7 +25,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const ROOT = join(__dirname, "..");
 
 const TABLE_HEADER = /^##\s+主流模型得分/m;
-const TOP_N = 5;
+const TOP_N = 30; // 容量上限：合并方案下，sota 字段承担完整排行（不只是 Top-5）
 
 interface SotaEntry {
   score: string;
@@ -80,8 +80,11 @@ function processFile(filePath: string, dry: boolean): "skipped" | "noop" | "migr
   } catch {
     return "skipped";
   }
-  if (fm.sota && Array.isArray(fm.sota) && fm.sota.length > 0) {
-    return "noop"; // 不覆盖已有
+  // 已存在 sota 字段 → 一律 noop（避免字符串追加产生 YAML 双键 bug）
+  // 若要强制覆盖，请先手动从 frontmatter 删除 sota: 块再跑
+  const existing = Array.isArray(fm.sota) ? fm.sota : [];
+  if (existing.length > 0) {
+    return "noop";
   }
 
   const body = content.slice(fmMatch[0].length);

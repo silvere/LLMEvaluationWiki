@@ -52,6 +52,58 @@ sota:
     model: "GPT-5"
     harness: null
     notes: "Diamond"
+  - score: "87.7%"
+    model: "o3"
+    harness: null
+    notes: "Diamond"
+  - score: "84.0%"
+    model: "Gemini-2.5-Pro"
+    harness: null
+    notes: "Diamond"
+  - score: "约 78%"
+    model: "Claude-3.7-Sonnet"
+    harness: null
+    notes: "Diamond"
+  - score: "78.0%"
+    model: "o1"
+    harness: null
+    notes: "Diamond"
+  - score: "约 77.3%"
+    model: "Doubao-Seed-1.6"
+    harness: null
+    notes: "Diamond"
+  - score: "约 75.1%"
+    model: "Kimi-K2"
+    harness: null
+    notes: "Diamond"
+  - score: "71.5%"
+    model: "DeepSeek-R1"
+    harness: null
+    notes: "Diamond"
+  - score: "约 70%"
+    model: "Qwen3"
+    harness: null
+    notes: "thinking"
+  - score: "约 69.8%"
+    model: "Llama-4"
+    harness: null
+    notes: "Diamond (Maverick"
+  - score: "65.0%"
+    model: "Claude-3.5-Sonnet"
+    harness: null
+    notes: "Diamond"
+  - score: "62.1%"
+    model: "Gemini-2.0-Flash"
+    harness: null
+    notes: "Diamond"
+  - score: "约 59%"
+    model: "DeepSeek-V3"
+    harness: null
+    notes: "Diamond"
+  - score: "53.6%"
+    model: "GPT-4o"
+    harness: null
+    notes: "Diamond"
 ---
 
 # GPQA（Graduate-Level Google-Proof Q&A）
@@ -93,17 +145,30 @@ GPQA 的核心价值在于评测模型是否真正掌握了研究生级别的科
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[Gemini-3.1-Pro]] | — | 94.3% | — | Diamond | — |
-| 2 | [[DeepSeek-V4-Pro]] | — | 90.1% | — | Diamond | — |
-| 3 | [[GLM-5.1]] | — | 86.2% | — | Diamond | — |
-| 4 | [[GLM-5]] | — | 86.0% | — | Diamond | — |
-| 5 | [[GPT-5]] | — | 约 85-88% | — | Diamond | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 94.3% | Diamond |
+| 🥈 | [[DeepSeek-V4-Pro]] | 90.1% | Diamond |
+| 🥉 | [[GLM-5.1]] | 86.2% | Diamond |
+| 4 | [[GLM-5]] | 86.0% | Diamond |
+| 5 | [[GPT-5]] | 约 85-88% | Diamond |
+| 6 | [[o3]] | 87.7% | Diamond |
+| 7 | [[Gemini-2.5-Pro]] | 84.0% | Diamond |
+| 8 | [[Claude-3.7-Sonnet]] | 约 78% | Diamond |
+| 9 | [[o1]] | 78.0% | Diamond |
+| 10 | [[Doubao-Seed-1.6]] | 约 77.3% | Diamond |
+| 11 | [[Kimi-K2]] | 约 75.1% | Diamond |
+| 12 | [[DeepSeek-R1]] | 71.5% | Diamond |
+| 13 | [[Qwen3]] | 约 70% | thinking |
+| 14 | [[Llama-4]] | 约 69.8% | Diamond (Maverick |
+| 15 | [[Claude-3.5-Sonnet]] | 65.0% | Diamond |
+| 16 | [[Gemini-2.0-Flash]] | 62.1% | Diamond |
+| 17 | [[DeepSeek-V3]] | 约 59% | Diamond |
+| 18 | [[GPT-4o]] | 53.6% | Diamond |
 
 <!-- AUTO-SOTA:END -->
 
@@ -136,27 +201,3 @@ GPQA 之外，多项新基准从不同专业领域填补"研究生级"评测覆�
 - [[2410.04526|FAMMA: A Benchmark for Financial Domain Multilingual Multimodal Question Answering]] · score 21/25
 - [[2504.16137|Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark]] · score 20/25
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[Gemini-3.1-Pro|Gemini 3.1 Pro]] | 94.3% | Diamond |
-| [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] | 90.1% | Diamond |
-| [[GLM-5.1|GLM-5.1]] | 86.2% | Diamond |
-| [[GLM-5|GLM-5]] | 86.0% | Diamond |
-| [[GPT-5|GPT-5]] | 约 85-88% | Diamond |
-| [[o3|o3]] | 87.7% | Diamond |
-| [[Gemini-2.5-Pro|Gemini 2.5 Pro]] | 84.0% | Diamond |
-| [[Claude-3.7-Sonnet|Claude 3.7 Sonnet]] | 约 78% | Diamond |
-| [[o1|o1]] | 78.0% | Diamond |
-| [[Doubao-Seed-1.6|Doubao Seed 1.6 / Seed-Thinking]] | 约 77.3% | Diamond |
-| [[Kimi-K2|Kimi K2]] | 约 75.1% | Diamond |
-| [[DeepSeek-R1|DeepSeek R1]] | 71.5% | Diamond |
-| [[Qwen3|Qwen3 系列（235B-A22B / 32B / Thinking）]] | 约 70% | thinking |
-| [[Llama-4|Llama 4 (Maverick / Scout)]] | 约 69.8% | Diamond (Maverick |
-| [[Claude-3.5-Sonnet|Claude 3.5 Sonnet]] | 65.0% | Diamond |
-| [[Gemini-2.0-Flash|Gemini 2.0 Flash]] | 62.1% | Diamond |
-| [[DeepSeek-V3|DeepSeek V3 / V3.1]] | 约 59% | Diamond |
-| [[GPT-4o|GPT-4o]] | 53.6% | Diamond |

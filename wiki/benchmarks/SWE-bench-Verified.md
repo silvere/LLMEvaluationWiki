@@ -53,6 +53,34 @@ sota:
     model: "Gemini-3-Flash"
     harness: null
     notes: "agentic"
+  - score: "77.2%"
+    model: "Claude-Sonnet-4.5"
+    harness: null
+  - score: "约 74%"
+    model: "GPT-5"
+    harness: null
+  - score: "约 71%"
+    model: "o3"
+    harness: null
+  - score: "70.3% (高级配置)"
+    model: "Claude-3.7-Sonnet"
+    harness: null
+  - score: "约 65.8%"
+    model: "Kimi-K2"
+    harness: null
+    notes: "Agentic"
+  - score: "63.2%"
+    model: "Gemini-2.5-Pro"
+    harness: null
+  - score: "54.6%"
+    model: "GPT-4.1"
+    harness: null
+  - score: "49.0%"
+    model: "Claude-3.5-Sonnet"
+    harness: null
+  - score: "48.9%"
+    model: "o1"
+    harness: null
 ---
 
 # SWE-bench Verified
@@ -93,17 +121,26 @@ SWE-bench Verified 目前是业界最受认可的软件工程 Agent 能力评测
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[Gemini-3.1-Pro]] | — | 80.6% | — |  | — |
-| 2 | [[DeepSeek-V4-Pro]] | — | 80.6% | — | open-source 与 Gemini 3.1 Pro 同档 | — |
-| 3 | [[GLM-5]] | — | 77.8% | — | open-source 第一（同期） | — |
-| 4 | [[Claude-Opus-4]] | — | 72.5-79.4% | — |  | — |
-| 5 | [[Gemini-3-Flash]] | — | 78% | — | agentic | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 80.6% |  |
+| 🥈 | [[DeepSeek-V4-Pro]] | 80.6% | open-source 与 Gemini 3.1 Pro 同档 |
+| 🥉 | [[GLM-5]] | 77.8% | open-source 第一（同期） |
+| 4 | [[Claude-Opus-4]] | 72.5-79.4% |  |
+| 5 | [[Gemini-3-Flash]] | 78% | agentic |
+| 6 | [[Claude-Sonnet-4.5]] | 77.2% |  |
+| 7 | [[GPT-5]] | 约 74% |  |
+| 8 | [[o3]] | 约 71% |  |
+| 9 | [[Claude-3.7-Sonnet]] | 70.3% (高级配置) |  |
+| 10 | [[Kimi-K2]] | 约 65.8% | Agentic |
+| 11 | [[Gemini-2.5-Pro]] | 63.2% |  |
+| 12 | [[GPT-4.1]] | 54.6% |  |
+| 13 | [[Claude-3.5-Sonnet]] | 49.0% |  |
+| 14 | [[o1]] | 48.9% |  |
 
 <!-- AUTO-SOTA:END -->
 
@@ -121,23 +158,3 @@ SWE-bench Verified 目前是业界最受认可的软件工程 Agent 能力评测
 - [[LiveCodeBench]]
 - [[data-contamination]]
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[Gemini-3.1-Pro|Gemini 3.1 Pro]] | 80.6% |  |
-| [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] | 80.6% | open-source 与 Gemini 3.1 Pro 同档 |
-| [[GLM-5|GLM-5]] | 77.8% | open-source 第一（同期） |
-| [[Claude-Opus-4|Claude Opus 4 / Opus 4.1]] | 72.5-79.4% |  |
-| [[Gemini-3-Flash|Gemini 3 Flash]] | 78% | agentic |
-| [[Claude-Sonnet-4.5|Claude Sonnet 4.5]] | 77.2% |  |
-| [[GPT-5|GPT-5]] | 约 74% |  |
-| [[o3|o3]] | 约 71% |  |
-| [[Claude-3.7-Sonnet|Claude 3.7 Sonnet]] | 70.3% (高级配置) |  |
-| [[Kimi-K2|Kimi K2]] | 约 65.8% | Agentic |
-| [[Gemini-2.5-Pro|Gemini 2.5 Pro]] | 63.2% |  |
-| [[GPT-4.1|GPT-4.1]] | 54.6% |  |
-| [[Claude-3.5-Sonnet|Claude 3.5 Sonnet]] | 49.0% |  |
-| [[o1|o1]] | 48.9% |  |

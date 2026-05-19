@@ -38,16 +38,16 @@ sota:
 
 <!-- AUTO-SOTA:START -->
 
-## 当前 SOTA
+## 模型得分排行
 
-> 以下 Top 得分由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter 而非本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | Harness | 分数 | 时间 | 备注 | 来源 |
-|---|---|---|---|---|---|---|
-| 1 | [[Kimi-K2.6]] | — | 58.6% | — | tied with GPT-5.5 | — |
-| 2 | [[GLM-5.1]] | — | 58.4% | — | 榜首（超过 Claude Opus 4.6 / GPT-5.4） | — |
-| 3 | [[Qwen3.6]] | — | 榜首 | — | 官方表述：top in SWE-bench Pro | — |
-| 4 | [[DeepSeek-V4-Pro]] | — | 55.4% | — | open-source 第一 | — |
+| # | 模型 | 分数 | 备注 |
+|---|---|---|---|
+| 🥇 | [[Kimi-K2.6]] | 58.6% | tied with GPT-5.5 |
+| 🥈 | [[GLM-5.1]] | 58.4% | 榜首（超过 Claude Opus 4.6 / GPT-5.4） |
+| 🥉 | [[Qwen3.6]] | 榜首 | 官方表述：top in SWE-bench Pro |
+| 4 | [[DeepSeek-V4-Pro]] | 55.4% | open-source 第一 |
 
 <!-- AUTO-SOTA:END -->
 
@@ -99,13 +99,3 @@ SWE-bench Pro 的发布时机恰逢 SWE-bench Verified 开始出现[[benchmark-s
 - [[SWE-Lancer]]
 - [[benchmark-saturation]]
 
-## 主流模型得分（来自 wiki/models/）
-
-> 以下分数来自 wiki/models/ 中各模型的官方/技术报告数据（汇总自 model spec 页）。准确数字以模型方公布为准。
-
-| 模型 | 分数 | 备注 |
-|------|------|------|
-| [[Kimi-K2.6|Kimi K2.6]] | 58.6% | tied with GPT-5.5 |
-| [[GLM-5.1|GLM-5.1]] | 58.4% | 榜首（超过 Claude Opus 4.6 / GPT-5.4） |
-| [[Qwen3.6|Qwen 3.6 Max Preview]] | 榜首 | 官方表述：top in SWE-bench Pro |
-| [[DeepSeek-V4-Pro|DeepSeek V4-Pro]] | 55.4% | open-source 第一 |

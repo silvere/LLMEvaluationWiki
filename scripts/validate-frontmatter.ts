@@ -21,7 +21,7 @@ const VALID_TYPES = new Set([
 ]);
 const VALID_STATUS = new Set(["active", "saturated", "contaminated", "deprecated"]);
 const VALID_AUTHOR_MODE = new Set(["llm", "human", "mixed"]);
-const VALID_CONFIDENCE = new Set(["draft", "verified", "promoted"]);
+const VALID_CONFIDENCE = new Set(["draft", "verified", "reviewed", "promoted"]);
 const VALID_DOMAINS = new Set([
   "knowledge", "reasoning", "math", "code", "long-context",
   "instruction-following", "multimodal", "safety", "hallucination",
@@ -135,7 +135,7 @@ function validateFile(filePath: string, content: string): ValidationResult {
   if (fm["author_mode"] && !VALID_AUTHOR_MODE.has(fm["author_mode"] as string))
     result.errors.push(`author_mode 非法: "${fm["author_mode"]}"，允许值: llm, human, mixed`);
   if (fm["confidence"] && !VALID_CONFIDENCE.has(fm["confidence"] as string))
-    result.errors.push(`confidence 非法: "${fm["confidence"]}"，允许值: draft, verified, promoted`);
+    result.errors.push(`confidence 非法: "${fm["confidence"]}"，允许值: draft, verified, reviewed, promoted`);
   if (type === "benchmark" && fm["status"] && !VALID_STATUS.has(fm["status"] as string))
     result.errors.push(`status 非法: "${fm["status"]}"，允许值: ${[...VALID_STATUS].join(", ")}`);
   if (type === "source" && fm["source_type"] && !VALID_SOURCE_TYPES.has(fm["source_type"] as string))
@@ -147,7 +147,7 @@ function validateFile(filePath: string, content: string): ValidationResult {
     if (!Array.isArray(sota)) {
       result.errors.push(`sota 必须是数组，实际: ${typeof sota}`);
     } else {
-      if (sota.length > 5) result.warnings.push(`sota 数组长度 ${sota.length} > 5，建议精简到 Top-5`);
+      if (sota.length > 30) result.warnings.push(`sota 数组长度 ${sota.length} > 30，建议精简（合并方案下上限 30）`);
       sota.forEach((e: unknown, i: number) => {
         if (typeof e !== "object" || e === null) {
           result.errors.push(`sota[${i}] 必须是对象`);

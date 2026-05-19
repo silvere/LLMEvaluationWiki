@@ -6,6 +6,8 @@ author_mode: llm
 confidence: draft
 as_of_date: "2026-05-19"
 last_verified: "2026-05-19"
+review_status: "未审阅（LLM 起草，全部为 [opinion] 编辑判断）"
+next_review_due: "2026-08-19"
 sources:
   - "https://lmarena.ai/"
   - "https://epoch.ai/benchmarks/"
@@ -18,7 +20,15 @@ domain:
 
 # 2026 LLM 评测推荐组合（按场景）
 
-> 目标读者：在 2026-05 当前节点要为某类模型 / 产品 / 安全场景选评测组合的研究员与产品 / 安全工程师。每个场景给出「必报 + 建议 + 严苛 ablation」三档。
+> ⚠️ **Draft 状态 + 全篇 [Tier 3 判断]**：本页所有「推荐组合」都是 LLM 起草的编辑判断，**不是行业共识或权威标准**。可作为 starting point，不应作为唯一依据。读者应结合本组实际场景调整。各 benchmark 单页（链接到的）才是事实层 grounded 的数据。
+
+> 目标读者：在当前节点（2026-05）要为某类模型 / 产品 / 安全场景选评测组合的研究员与产品 / 安全工程师。每个场景给出「必报 + 建议 + 严苛 ablation」三档。
+
+## 数据来源与生成方法
+
+- **本页所有推荐为 [Tier 3 opinion]**：LLM 综合 2026-05 主流实践 + 本 wiki 各 benchmark 单页 + 公开 leaderboard（LMArena / Epoch AI / Artificial Analysis）整理
+- **不是事实声明**：「必报」不代表行业强制要求，「严苛 ablation」也只是建议路径
+- **使用方式**：把本页作为「discovery 入口」，决定具体跑哪些时务必去对应 benchmark 单页看 evaluation_protocol / pitfalls / current SOTA
 
 ## 通用原则（先看这里）
 
