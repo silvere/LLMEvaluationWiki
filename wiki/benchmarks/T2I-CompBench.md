@@ -1,0 +1,44 @@
+---
+title: "T2I-CompBench"
+type: benchmark
+publish: true
+author_mode: llm
+confidence: draft
+as_of_date: "2026-05-19"
+last_verified: "2026-05-19"
+sources:
+  - "https://arxiv.org/abs/2307.06350"
+aliases:
+  - T2I-CompBench
+  - T2ICompBench
+  - T2I-CompBench++
+domain:
+  - benchmark
+  - vision
+  - multimodal
+---
+
+# T2I-CompBench
+
+> 2023-07 由 HKU / Microsoft 等发布的 text-to-image compositional 评测：6,000 个 prompt，分 3 类 compositional 能力 ×（attribute binding / object relationships / complex composition）。是与 [[GenEval]] 并列的 T2I compositional 评测主流，T2I-CompBench++（2024）扩展到更复杂的多模态场景。
+
+## 设计
+
+- **3 大类 + 6 子任务**：
+  - **Attribute Binding**：color / shape / texture
+  - **Object Relationships**：spatial / non-spatial
+  - **Complex Composition**：多对象 + 多属性 + 多关系
+- **打分**：BLIP-VQA / UniDet / CLIPScore / 3-in-1 综合指标
+
+## 与 GenEval 关系
+
+- [[GenEval]] 更短小、agent-like 评测（atomic property checks）
+- T2I-CompBench 更全面，关注 attribute binding 等 GenEval 较少覆盖维度
+- 现代 T2I 论文通常两者都报
+
+## 相关页面
+
+- [[GenEval]]
+- [[MJHQ-30K]]
+- [[Stable-Diffusion-3]]
+- [[multimodal-eval]]

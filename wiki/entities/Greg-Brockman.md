@@ -55,7 +55,7 @@ domain:
 ## 本 wiki 收录的该作者论文
 
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:START -->
-*共 2 篇（截至 2026-05-17，按发表年份倒序）*
+*共 2 篇（截至 2026-05-19，按发表年份倒序）*
 
 - [[2108.07258|Evaluating Large Language Models Trained on Code]]（2021）
 - [[2001.08361|Scaling Laws for Neural Language Models]]（2020）

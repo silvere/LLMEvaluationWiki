@@ -54,7 +54,7 @@ domain:
 ## 本 wiki 收录的该作者论文
 
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:START -->
-*共 1 篇（截至 2026-05-17，按发表年份倒序）*
+*共 1 篇（截至 2026-05-19，按发表年份倒序）*
 
 - [[2307.15043|Universal and Transferable Adversarial Attacks on Aligned Language Models]]（2023）
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:END -->

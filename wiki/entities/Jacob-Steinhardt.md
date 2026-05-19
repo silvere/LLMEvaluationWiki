@@ -56,7 +56,7 @@ domain:
 ## 本 wiki 收录的该作者论文
 
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:START -->
-*共 2 篇（截至 2026-05-17，按发表年份倒序）*
+*共 2 篇（截至 2026-05-19，按发表年份倒序）*
 
 - [[2109.07958|Measuring Coding Challenge Competence With APPS]]（2021）
 - [[2009.03300|Measuring Massive Multitask Language Understanding]]（2020）

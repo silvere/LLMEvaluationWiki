@@ -58,7 +58,7 @@ domain:
 ## 本 wiki 收录的该作者论文
 
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:START -->
-*共 2 篇（截至 2026-05-17，按发表年份倒序）*
+*共 2 篇（截至 2026-05-19，按发表年份倒序）*
 
 - [[2203.02155|Training language models to follow instructions with human feedback]]（2022）
 - [[2309.05463|TruthfulQA: Measuring How Models Mimic Human Falsehoods]]（2021）

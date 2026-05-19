@@ -69,7 +69,7 @@ domain:
 ## 本 wiki 收录的该作者论文
 
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:START -->
-*共 3 篇（截至 2026-05-17，按发表年份倒序）*
+*共 3 篇（截至 2026-05-19，按发表年份倒序）*
 
 - [[2311.12983|GPQA: A Graduate-Level Google-Proof Q&A Benchmark]]（2023）
 - [[1905.07830|SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems]]（2019）

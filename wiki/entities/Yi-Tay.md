@@ -15,11 +15,11 @@ domain:
 
 # Yi Tay
 
-> Reka AI 联合创始人兼首席科学家；前 Google Brain / DeepMind PaLM 项目核心研究员。Transformer 架构变体、scaling laws 与多模态预训练评测的高产作者。
+> Google DeepMind Senior Staff Research Scientist（2024-11 回归）；前 Reka AI 联合创始人兼首席科学家（2022-2024，主导 Reka Core 多模态模型）；前 Google Brain / DeepMind PaLM 项目核心研究员。Transformer 架构变体、scaling laws 与多模态预训练评测的高产作者。
 
 ## 基本信息
 
-- **所属机构**：Reka AI（创始团队）；前 Google Brain / DeepMind
+- **所属机构**：Google DeepMind（2024-11 回归，Senior Staff Research Scientist）·前 Reka AI 联合创始人 + 首席科学家（2022-2024）·前 Google Brain
 - **研究方向**：Transformer architectures / Scaling laws / Multimodal pretraining / Efficient attention
 - **学历背景**：Nanyang Technological University 博士
 

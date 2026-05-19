@@ -63,7 +63,7 @@ domain:
 ## 本 wiki 收录的该作者论文
 
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:START -->
-*共 4 篇（截至 2026-05-17，按发表年份倒序）*
+*共 4 篇（截至 2026-05-19，按发表年份倒序）*
 
 - [[2201.11903|Chain-of-Thought Prompting Elicits Reasoning in Large Language Models]]（2022）
 - [[2203.11171|Self-Consistency Improves Chain of Thought Reasoning in Language Models]]（2022）

@@ -27,7 +27,7 @@ vLLM 由 UC Berkeley Sky Computing Lab（Ion Stoica / Hao Zhang 等团队）2023
 
 - **评测 pipeline 默认推理后端**：[[LM-Evaluation-Harness]]、[[OpenCompass]]、[[HELM]] 等主流评测框架都支持以 vLLM 为推理后端
 - **多 batch 评测加速**：把 [[MMLU]] / [[BBH]] / [[BIG-bench]] 等多任务批量评测的吞吐拉高 5-10×
-- **serving-aware benchmark**：催生 [[VLLMBench]] 之类专评推理引擎吞吐/延迟的新基准
+- **serving-aware benchmark**：催生 vLLM 官方 benchmark_serving.py 等专评推理引擎吞吐/延迟的工具脚本
 
 ## 相关页面
 

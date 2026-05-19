@@ -58,7 +58,7 @@ domain:
 ## 本 wiki 收录的该作者论文
 
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:START -->
-*（截至 2026-05-17，本 wiki 暂未收录 Jiajun Wu 作为作者的论文）*
+*（截至 2026-05-19，本 wiki 暂未收录 Jiajun Wu 作为作者的论文）*
 <!-- AUTO-GENERATED-BY-SYNC-AUTHOR-BACKLINKS:END -->
 
 ## 相关页面
