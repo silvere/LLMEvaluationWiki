@@ -13,6 +13,8 @@ domain:
 year: 2018
 arxiv_id: "1803.05457"
 status: saturated
+dimension: A
+subdimension: benchmark
 ---
 
 # ARC-Easy（ARC-e）

@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2307.09705"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # CValues：中文大语言模型价值观对齐评测基准

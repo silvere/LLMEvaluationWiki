@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2309.07045"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # SafetyBench：中英双语安全能力综合评测基准

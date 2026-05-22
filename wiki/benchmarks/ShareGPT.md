@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.80
 sources:
   - "Chiang, W.L., et al. (2023). Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90%* ChatGPT Quality. LMSYS Blog."
+dimension: B
 ---
 
 # ShareGPT

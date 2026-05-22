@@ -13,6 +13,8 @@ status: active
 aliases:
   - ARC-AGI
   - ARC-AGI 1.0
+dimension: A
+subdimension: benchmark
 ---
 
 # ARC-AGI1

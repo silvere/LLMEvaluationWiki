@@ -1,18 +1,27 @@
 ---
 title: "BIG-bench 评测框架"
 type: tool
+dimension: A
+subdimension: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-sources: []
+as_of_date: "2026-05-22"
+last_verified: "2026-05-22"
+saturation_status: deprecated
+legacy_note: "经典 / 维护减弱：项目已 freeze，新模型评测应优先用 BBH (BIG-Bench Hard) 子集 + lm-eval 集成版"
+sources:
+  - "https://arxiv.org/abs/2206.04615"
+  - "https://github.com/google/BIG-bench"
+  - "https://github.com/suzgunmirac/BIG-Bench-Hard"
 aliases:
   - big-bench
   - BIG-Bench
 ---
 
 # BIG-bench 评测框架
+
+> ⚠️ **经典 / 维护减弱**：原仓库 google/BIG-bench 已基本停止维护，但其 BBH（BIG-Bench Hard）子集仍是主流 reasoning 评测必报。新模型评测应：(1) 用 [[BBH]] 子集替代全集；(2) 通过 [[lm-evaluation-harness]] 跑（已集成 BBH）。完整 234 任务的全集已不再适合作为模型主报告项。
 
 ## 概述
 

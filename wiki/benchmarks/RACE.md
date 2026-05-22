@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "Lai, G., et al. (2017). RACE: Large-scale ReAding Comprehension Dataset From Examinations. EMNLP 2017."
+dimension: A
+subdimension: benchmark
 ---
 
 # RACE（ReAding Comprehension from Examinations）

@@ -20,6 +20,7 @@ saturation_threshold: 0.95
 sources:
   - "https://arxiv.org/abs/1809.08887"
   - "https://yale-lily.github.io/spider"
+dimension: H
 ---
 
 # Spider

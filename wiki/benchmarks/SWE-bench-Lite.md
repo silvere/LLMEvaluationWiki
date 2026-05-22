@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2310.01848"
   - "https://www.swebench.com/"
+dimension: H
 ---
 
 # SWE-bench Lite

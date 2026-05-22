@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2409.02813"
+dimension: E
 ---
 
 # MMMU-Pro：专业多学科多模态进阶评测基准

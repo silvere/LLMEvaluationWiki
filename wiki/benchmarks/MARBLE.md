@@ -11,6 +11,8 @@ domain:
 year: 2023
 arxiv_id: "2310.17317"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # MARBLE

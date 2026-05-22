@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2402.05044"
 status: active
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # SALAD-Bench

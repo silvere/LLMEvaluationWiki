@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2303.17568"
   - "https://github.com/THUDM/CodeGeeX"
+dimension: H
 ---
 
 # HumanEval-X

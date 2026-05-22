@@ -16,6 +16,8 @@ aliases:
 domain:
   - benchmark
   - leaderboard
+dimension: A
+subdimension: benchmark
 ---
 
 # Arena-Hard-Auto

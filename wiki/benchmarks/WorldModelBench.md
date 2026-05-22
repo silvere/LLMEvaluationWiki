@@ -11,6 +11,7 @@ domain:
   - video
 year: 2024
 status: active
+dimension: E
 ---
 
 # WorldModelBench

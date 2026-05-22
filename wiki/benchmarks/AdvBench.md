@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2307.15043"
+dimension: I
+subdimension: jailbreak
 ---
 
 # AdvBench：对抗性越狱攻击评测基准

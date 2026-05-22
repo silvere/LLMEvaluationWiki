@@ -12,6 +12,8 @@ arxiv_id: ""
 status: active
 aliases:
   - ARC-AGI 2.0
+dimension: A
+subdimension: benchmark
 ---
 
 # ARC-AGI2

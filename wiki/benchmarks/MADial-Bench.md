@@ -11,6 +11,7 @@ domain:
 year: 2024
 arxiv_id: "2409.15240"
 status: active
+dimension: B
 ---
 
 # MADial-Bench

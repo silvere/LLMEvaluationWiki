@@ -10,6 +10,8 @@ domain:
 year: 2023
 arxiv_id: "2308.09975"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # FinEval

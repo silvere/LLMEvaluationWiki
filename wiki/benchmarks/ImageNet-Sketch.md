@@ -10,6 +10,8 @@ domain:
 year: 2019
 arxiv_id: "1905.13549"
 status: active
+dimension: F
+subdimension: T2I
 ---
 
 # ImageNet-Sketch

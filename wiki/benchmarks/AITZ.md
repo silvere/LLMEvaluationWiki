@@ -11,6 +11,8 @@ domain:
 year: 2024
 arxiv_id: "2408.14428"
 status: active
+dimension: D
+subdimension: general
 ---
 
 # AITZ

@@ -11,6 +11,7 @@ domain:
 year: 2012
 arxiv_id: ""
 status: active
+dimension: E
 ---
 
 # NYU-Depth-V2

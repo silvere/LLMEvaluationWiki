@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2401.03065"
   - "https://github.com/facebookresearch/cruxeval"
+dimension: H
 ---
 
 # CRUXEval (Code Reasoning, Understanding, and eXecution Evaluation)

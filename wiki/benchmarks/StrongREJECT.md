@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2402.10260"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # StrongREJECT：越狱评测标准化评分框架

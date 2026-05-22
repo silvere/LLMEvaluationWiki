@@ -1,49 +1,75 @@
 ---
-title: "IFEval"
+title: IFEval
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
-domain: [instruction-following]
+as_of_date: '2026-05-19'
+last_verified: '2026-05-22'
+domain:
+- instruction-following
 language: en
 year: 2023
-authors: ["Jeffrey Zhou", "Tianjian Lu", "Swaroop Mishra", "Siddhartha Brahma", "Sujoy Basu", "Yi Luan", "Denny Zhou", "Le Hou"]
-arxiv_id: "2311.07911"
-official_url: "https://github.com/google-research/google-research/tree/master/instruction_following_eval"
-official_leaderboard: "https://benchlm.ai/instruction-following"
-license: "Apache-2.0"
+authors:
+- Jeffrey Zhou
+- Tianjian Lu
+- Swaroop Mishra
+- Siddhartha Brahma
+- Sujoy Basu
+- Yi Luan
+- Denny Zhou
+- Le Hou
+arxiv_id: '2311.07911'
+official_url: https://github.com/google-research/google-research/tree/master/instruction_following_eval
+official_leaderboard: https://benchlm.ai/instruction-following
+license: Apache-2.0
 size: 541
 format: programmatic-verifiable
 saturation_status: saturated
 sources:
-  - "https://arxiv.org/abs/2311.07911"
-  - "https://github.com/google-research/google-research/tree/master/instruction_following_eval"
+- https://arxiv.org/abs/2311.07911
+- https://github.com/google-research/google-research/tree/master/instruction_following_eval
 evaluation_protocol:
-  default_shots: "0-shot"
+  default_shots: 0-shot
   default_cot: false
   tool_use: false
-  scoring: "Prompt-level / Instruction-level accuracy（strict & loose 两套指标）"
+  scoring: Prompt-level / Instruction-level accuracy（strict & loose 两套指标）
 pitfalls:
-  - "**Strict vs Loose 模式分数差 10-15pt**：strict 严格匹配格式（如字数 ≥400），loose 容忍轻微违反；跨论文必须确认是哪个"
-  - "Prompt-level vs Instruction-level：一个 prompt 可有多条指令，Prompt-level 要求**全部**满足，Instruction-level 是平均通过率，分数有 5-10pt 差异"
-  - "饱和：顶级模型 ≥90%（Claude Mythos Preview / GPT-5.4 / Grok 4.20 等），区分度低；应配合 AdvancedIF / MultiIF / FollowBench"
-  - "指令类型固定 25 种（写 N 字、含关键词、避免字母 'C' 等），覆盖工程价值有限，对 jailbreak / 长指令 / 多 turn 不评测"
-  - "对 verifier 实现敏感（Python 字数统计 vs LLM judge 差异），不同评测框架（lm-eval-harness / official）的实现细节稍异"
+- '**Strict vs Loose 模式分数差 10-15pt**：strict 严格匹配格式（如字数 ≥400），loose 容忍轻微违反；跨论文必须确认是哪个'
+- Prompt-level vs Instruction-level：一个 prompt 可有多条指令，Prompt-level 要求**全部**满足，Instruction-level 是平均通过率，分数有 5-10pt 差异
+- 饱和：顶级模型 ≥90%（Claude Mythos Preview / GPT-5.4 / Grok 4.20 等），区分度低；应配合 AdvancedIF / MultiIF / FollowBench
+- 指令类型固定 25 种（写 N 字、含关键词、避免字母 'C' 等），覆盖工程价值有限，对 jailbreak / 长指令 / 多 turn 不评测
+- 对 verifier 实现敏感（Python 字数统计 vs LLM judge 差异），不同评测框架（lm-eval-harness / official）的实现细节稍异
 sota:
-  - score: "100.0%"
-    model: "Kimi-K2.5"
-    harness: null
-    notes: "Reasoning 模式（BenchLM 2026-04）"
-  - score: "100.0%"
-    model: "Grok-4.3"
-    harness: null
-    notes: "Multi-agent 4.20 设置"
-  - score: "97.1%"
-    model: "Grok-4.3"
-    harness: null
-    notes: "4.20 单 agent"
+- score: 95.0%
+  model: Qwen3.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://awesomeagents.ai/leaderboards/instruction-following-leaderboard/
+  notes: Qwen3.5-27B，prompt-level accuracy
+- score: 94.3%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://awesomeagents.ai/leaderboards/instruction-following-leaderboard/
+  notes: Qwen3.6 Plus，prompt-level
+- score: 93.9%
+  model: o3-mini
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://awesomeagents.ai/leaderboards/instruction-following-leaderboard/
+  notes: prompt-level
+- score: 93.2%
+  model: Claude-3.7-Sonnet
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://awesomeagents.ai/leaderboards/instruction-following-leaderboard/
+  notes: prompt-level（2025 年水平）
+dimension: B
 ---
 
 # IFEval（Instruction Following Evaluation）
@@ -56,13 +82,14 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Kimi-K2.5]] | 100.0% | Reasoning 模式（BenchLM 2026-04） |
-| 🥈 | [[Grok-4.3]] | 100.0% | Multi-agent 4.20 设置 |
-| 🥉 | [[Grok-4.3]] | 97.1% | 4.20 单 agent |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.5]] | 🚫 no | 95.0% | Qwen3.5-27B，prompt-level accuracy | 2026-04 | [link](https://awesomeagents.ai/leaderboards/instruction-following-leaderboard/) |
+| 🥈 | [[Qwen3.6]] | 🚫 no | 94.3% | Qwen3.6 Plus，prompt-level | 2026-04 | [link](https://awesomeagents.ai/leaderboards/instruction-following-leaderboard/) |
+| 🥉 | [[o3-mini]] | 🚫 no | 93.9% | prompt-level | 2026-05 | [link](https://awesomeagents.ai/leaderboards/instruction-following-leaderboard/) |
+| 4 | [[Claude-3.7-Sonnet]] | 🚫 no | 93.2% | prompt-level（2025 年水平） | 2026-04 | [link](https://awesomeagents.ai/leaderboards/instruction-following-leaderboard/) |
 
 <!-- AUTO-SOTA:END -->
 

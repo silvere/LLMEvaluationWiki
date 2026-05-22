@@ -454,6 +454,77 @@ confidence: promoted  # 领域专家完整审阅 + 全部断言溯源
 
 ---
 
+### 3.7 评测对象 11 维度 taxonomy（dimension/subdimension 字段）
+
+**动机**：当前 wiki 379 个 benchmark 一锅炖在 `benchmarks/`，缺乏「按评测对象类型」的二级索引。借鉴 LLM 评测圈通用的 A-K 分类（参考 artifact），引入 `dimension:` frontmatter 字段，让每页能被维度索引。
+
+#### 维度定义（A-K + 3 横切）
+
+| dimension | 名称 | 典型工具 |
+|---|---|---|
+| **A** | 基座模型/通用能力（含 Harness / Benchmark / Leaderboard） | MMLU / HellaSwag / lm-eval / HELM / Open LLM Leaderboard |
+| **B** | Chat / Instruction-Following | Chatbot Arena / MT-Bench / AlpacaEval / IFEval / WildBench |
+| **C** | RAG（评测 + retrieval + embedding） | RAGAs / TruLens / MTEB / BEIR / FinanceBench |
+| **D** | Agent（tool-use / web-gui / software-eng / general） | AgentBench / GAIA / SWE-bench / WebArena / OSWorld / tau-bench |
+| **E** | 视觉理解（VLM / LMM） | MMMU / MMBench / MathVista / Video-MME / VLMEvalKit |
+| **F** | 视觉生成（T2I / T2V / I2V / preference / metric）—— **业务核心** | VBench / HEIM / GenEval / PickScore / FID / FVD |
+| **G** | 音频 / 音乐生成 | AIR-Bench / AudioBench / VoiceBench / MusicBench / FAD |
+| **H** | 代码能力 | HumanEval / LiveCodeBench / SWE-bench-Verified / BigCodeBench |
+| **I** | 安全 / 对齐 / Red-teaming | HarmBench / JailbreakBench / WMDP / garak / PyRIT |
+| **J** | 中文 | C-Eval / CMMLU / SuperCLUE / Xiezhi / CMB |
+| **K** | Judge 校准 / Meta-evaluation | RewardBench / JudgeBench / PandaLM / Auto-J / Prometheus |
+| **long-ctx** | 长上下文（横切，可能与其他维度共存） | RULER / NIAH / LongBench / InfiniteBench |
+| **obs** | Observability / 商业评测平台（横切） | LangSmith / Langfuse / Phoenix / Braintrust / Patronus |
+| **infra** | 评测基础设施（横切，非评测工具本身） | vLLM / SGLang / TGI / TensorRT-LLM |
+
+#### subdimension（仅部分维度有）
+
+```yaml
+# A 维度
+subdimension: harness | benchmark | leaderboard
+
+# D Agent 维度
+subdimension: tool-use | web-gui | software-eng | general
+
+# F 视觉生成
+subdimension: T2I | T2V | I2V | preference | metric
+
+# I 安全
+subdimension: red-team-tool | safety-benchmark | jailbreak | content-safety
+
+# K Judge
+subdimension: judge-model | judge-benchmark | reward-model
+```
+
+#### frontmatter 写法
+
+```yaml
+---
+title: "RewardBench"
+type: benchmark
+dimension: K               # 必填（11 大档之一 + long-ctx/obs/infra）
+subdimension: judge-benchmark  # 可选（适用维度填）
+infrastructure: false      # 仅 infra 维度填 true（vLLM/SGLang 等）
+legacy_note: ""            # AlpacaFarm 类标 "deprecated, 推荐 X 替代"
+# ...原有字段...
+---
+```
+
+#### 落地策略
+
+1. **新 stub 必填 `dimension:`**（validate-frontmatter 强校验）
+2. **已有 379 benchmark / 24 tools / 4 harnesses**：用 `scripts/backfill-dimensions.ts` 基于 `domain:` 字段批量映射，缺失只 warn 不阻断
+3. **`scripts/build-synthesis-tables.ts`** 支持按 dimension 分组，自动生成 11 篇 dimension index synthesis 页
+4. **不强制按 dimension 重组目录**：维度是 frontmatter 索引，目录结构保持 type-based（benchmarks/ / tools/ / harnesses/）；唯二例外是 `wiki/tools/judges/` + `wiki/tools/observability/` 子目录（K + obs 工具特别集中）
+
+#### 红线
+
+- ❌ **新 stub 缺 `dimension:` 字段** → validate-frontmatter 报 error（阻断 push）
+- ❌ **dimension 值非法**（非 A-K / long-ctx / obs / infra）→ error
+- ❌ **F 维度 stub 缺 `subdimension`** → warn（业务核心维度需要分组）
+
+---
+
 ## 4. 已建立的关键缺失页（2026-05-14 补建）
 
 以下 stub 页是此前多处引用但缺失而导致死链的，已补建：

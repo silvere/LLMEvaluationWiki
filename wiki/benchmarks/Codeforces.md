@@ -1,36 +1,59 @@
 ---
-title: "Codeforces"
+title: Codeforces
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - code
+- code
 year: 2024
-arxiv_id: "2501.01257"
+arxiv_id: '2501.01257'
 status: active
 sota:
-  - score: "3206"
-    model: "DeepSeek-V4-Pro"
-    harness: null
-    notes: "Elo（2026-04）"
-  - score: "3020"
-    model: "Doubao-Seed-2.0"
-    harness: null
-    notes: "Elo (Pro)"
-  - score: "2029 (96.3 percentile)"
-    model: "DeepSeek-R1"
-    harness: null
-    notes: "Elo"
-  - score: "94 percentile"
-    model: "Kimi-K1.5"
-    harness: null
-    notes: "Elo"
-  - score: "约 86.0 percentile"
-    model: "Doubao-Seed-1.6"
-    harness: null
-    notes: "Elo"
+- score: '3206'
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://codersera.com/blog/deepseek-v4-vs-claude-opus-4-7/
+  notes: Elo（CodeElo 框架，Legendary Grandmaster 级）
+- score: '3020'
+  model: Doubao-Seed-2.0
+  harness: null
+  with_tools: false
+  date: 2025-11
+  source: https://team.doubao.com/zh/special/doubao_seed
+  notes: Elo（Pro），Doubao-Seed-2.0 报告
+- score: '2727'
+  model: o3
+  harness: null
+  with_tools: false
+  date: 2026-01
+  source: https://openai.com/index/openai-o3-system-card/
+  notes: Elo，真实 Codeforces 提交（99.8th percentile）
+- score: '2029'
+  model: DeepSeek-R1
+  harness: null
+  with_tools: false
+  date: 2025-01
+  source: https://arxiv.org/abs/2501.12948
+  notes: Elo（CodeElo），96.3th percentile，DeepSeek R1 报告
+- score: '808'
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://codeforces.com/blog/entry/133874
+  notes: Elo，Codeforces 官方评测帖（11th percentile，2024 基线）
+- score: '94'
+  model: Kimi-K1.5
+  harness: null
+  with_tools: false
+  date: 2025-01
+  source: https://arxiv.org/abs/2501.12599
+  notes: percentile（非 Elo），Kimi K1.5 报告（注：与上方 Elo 不同量纲）
+dimension: H
 ---
 
 # Codeforces
@@ -43,15 +66,16 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[DeepSeek-V4-Pro]] | 3206 | Elo（2026-04） |
-| 🥈 | [[Doubao-Seed-2.0]] | 3020 | Elo (Pro) |
-| 🥉 | [[DeepSeek-R1]] | 2029 (96.3 percentile) | Elo |
-| 4 | [[Kimi-K1.5]] | 94 percentile | Elo |
-| 5 | [[Doubao-Seed-1.6]] | 约 86.0 percentile | Elo |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[DeepSeek-V4-Pro]] | 🚫 no | 3206 | Elo（CodeElo 框架，Legendary Grandmaster 级） | 2026-04 | [link](https://codersera.com/blog/deepseek-v4-vs-claude-opus-4-7/) |
+| 🥈 | [[Doubao-Seed-2.0]] | 🚫 no | 3020 | Elo（Pro），Doubao-Seed-2.0 报告 | 2025-11 | [link](https://team.doubao.com/zh/special/doubao_seed) |
+| 🥉 | [[o3]] | 🚫 no | 2727 | Elo，真实 Codeforces 提交（99.8th percentile） | 2026-01 | [link](https://openai.com/index/openai-o3-system-card/) |
+| 4 | [[DeepSeek-R1]] | 🚫 no | 2029 | Elo（CodeElo），96.3th percentile，DeepSeek R1 报告 | 2025-01 | [link](https://arxiv.org/abs/2501.12948) |
+| 5 | [[GPT-4o]] | 🚫 no | 808 | Elo，Codeforces 官方评测帖（11th percentile，2024 基线） | 2024-06 | [link](https://codeforces.com/blog/entry/133874) |
+| 6 | [[Kimi-K1.5]] | 🚫 no | 94 | percentile（非 Elo），Kimi K1.5 报告（注：与上方 Elo 不同量纲） | 2025-01 | [link](https://arxiv.org/abs/2501.12599) |
 
 <!-- AUTO-SOTA:END -->
 

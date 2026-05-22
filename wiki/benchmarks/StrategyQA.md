@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "Geva, M., et al. (2021). Did Aristotle Use a Laptop? A Question Answering Benchmark with Implicit Reasoning Strategies. TACL 2021."
+dimension: A
+subdimension: benchmark
 ---
 
 # StrategyQA

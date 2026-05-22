@@ -20,6 +20,8 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2410.07985"
   - "https://omni-math.github.io/"
+dimension: A
+subdimension: benchmark
 ---
 
 # OmniMath

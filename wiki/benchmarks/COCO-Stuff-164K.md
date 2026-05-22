@@ -11,6 +11,7 @@ domain:
 year: 2018
 arxiv_id: "1612.03716"
 status: active
+dimension: E
 ---
 
 # COCO-Stuff-164K

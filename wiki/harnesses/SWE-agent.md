@@ -23,6 +23,8 @@ sources:
 domain:
   - agent
   - code
+dimension: A
+subdimension: harness
 ---
 
 # SWE-agent

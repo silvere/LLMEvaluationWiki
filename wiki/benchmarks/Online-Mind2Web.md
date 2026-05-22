@@ -11,6 +11,8 @@ domain:
 year: 2025
 arxiv_id: "2504.01382"
 status: active
+dimension: D
+subdimension: web-gui
 ---
 
 # Online-Mind2Web

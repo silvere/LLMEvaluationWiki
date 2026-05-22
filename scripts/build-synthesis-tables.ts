@@ -48,6 +48,8 @@ interface BenchRow {
   slug: string;
   title: string;
   domains: string[];
+  dimension?: string;
+  subdimension?: string;
   size?: number | string;
   year?: number | string;
   arxiv?: string;
@@ -84,7 +86,13 @@ function normDomains(d?: string | string[]): string[] {
 }
 
 function loadBenchmarks(): BenchRow[] {
-  const files = glob("wiki/benchmarks/*.md", { cwd: ROOT, absolute: true });
+  // 跨目录扫描：benchmarks + tools (含子目录) + harnesses + leaderboards
+  const files = [
+    ...glob("wiki/benchmarks/*.md", { cwd: ROOT, absolute: true }),
+    ...glob("wiki/tools/**/*.md", { cwd: ROOT, absolute: true }),
+    ...glob("wiki/harnesses/*.md", { cwd: ROOT, absolute: true }),
+    ...glob("wiki/leaderboards/*.md", { cwd: ROOT, absolute: true }),
+  ];
   const rows: BenchRow[] = [];
   for (const fp of files) {
     const c = readFileSync(fp, "utf8");
@@ -97,6 +105,8 @@ function loadBenchmarks(): BenchRow[] {
       slug,
       title,
       domains,
+      dimension: typeof fm["dimension"] === "string" ? (fm["dimension"] as string) : undefined,
+      subdimension: typeof fm["subdimension"] === "string" ? (fm["subdimension"] as string) : undefined,
       size: fm.size,
       year: fm.year,
       arxiv: fm.arxiv_id ? String(fm.arxiv_id) : undefined,
@@ -116,6 +126,84 @@ function rowsForDomain(all: BenchRow[], domainKey: string): BenchRow[] {
   const group = DOMAIN_GROUPS[domainKey];
   if (!group) return [];
   return all.filter(r => r.domains.some(d => group.match.includes(d)));
+}
+
+// 按 dimension（CLAUDE.md §3.7 的 A-K + long-ctx / obs / infra）聚合
+const DIMENSION_TITLES: Record<string, string> = {
+  A: "A 维度 基座模型 / 通用能力",
+  B: "B 维度 Chat / Instruction-Following",
+  C: "C 维度 RAG / 检索增强",
+  D: "D 维度 Agent / 工具调用 / Web-GUI",
+  E: "E 维度 视觉理解（VLM）",
+  F: "F 维度 视觉生成（图像 / 视频 / I2V）",
+  G: "G 维度 音频 / 音乐",
+  H: "H 维度 代码能力",
+  I: "I 维度 安全 / 对齐 / Red-team",
+  J: "J 维度 中文评测",
+  K: "K 维度 Judge 校准 / Meta-evaluation",
+  "long-ctx": "长上下文（横切维度）",
+  obs: "Observability / 商业评测平台（横切维度）",
+  infra: "评测基础设施（横切维度）",
+};
+
+function rowsForDimension(all: BenchRow[], dim: string): BenchRow[] {
+  return all.filter(r => r.dimension === dim);
+}
+
+function renderDimensionTable(dim: string, rows: BenchRow[]): string {
+  const title = DIMENSION_TITLES[dim] ?? `dimension=${dim}`;
+  // F 维度按 subdimension 二次分组
+  const sorted = [...rows].sort((a, b) => {
+    if (dim === "F") {
+      const subA = a.subdimension ?? "zzz";
+      const subB = b.subdimension ?? "zzz";
+      if (subA !== subB) return subA.localeCompare(subB);
+    }
+    const fmA = a.fmHasSota ? 0 : 1;
+    const fmB = b.fmHasSota ? 0 : 1;
+    if (fmA !== fmB) return fmA - fmB;
+    return a.title.localeCompare(b.title);
+  });
+  const head = dim === "F" || dim === "D" || dim === "I" || dim === "K"
+    ? "| Benchmark / Tool | 子类 | 题量 | 年份 | SOTA / 备注 | Saturation |"
+    : "| Benchmark / Tool | 题量 | 年份 | 评测协议 | SOTA / 备注 | Saturation |";
+  const sep = dim === "F" || dim === "D" || dim === "I" || dim === "K"
+    ? "|---|---|---|---|---|---|"
+    : "|---|---|---|---|---|---|";
+  const body = sorted.map(r => {
+    const sota = r.topSota ? `${r.topSota.score}（${r.topSota.model}）` : "—";
+    const protocol = r.shots !== "—" ? `${r.shots} / ${truncate(r.scoring, 30)}` : truncate(r.scoring, 30);
+    if (dim === "F" || dim === "D" || dim === "I" || dim === "K") {
+      return `| [[${r.slug}|${r.title}]] | ${r.subdimension ?? "—"} | ${r.size ?? "—"} | ${r.year ?? "—"} | ${sota} | ${statusBadge(r.saturation)} |`;
+    }
+    return `| [[${r.slug}|${r.title}]] | ${r.size ?? "—"} | ${r.year ?? "—"} | ${protocol} | ${sota} | ${statusBadge(r.saturation)} |`;
+  }).join("\n");
+  return [
+    `<!-- AUTO-SYN-TABLE:dimension=${dim}:START -->`,
+    "",
+    `## ${title}（自动生成）`,
+    "",
+    "> 由 `scripts/build-synthesis-tables.ts` 从各单页 frontmatter `dimension:` 字段自动聚合。**维护方式：改各单页 frontmatter，不要手改本表。**",
+    "",
+    head,
+    sep,
+    body,
+    "",
+    `_共 ${sorted.length} 条，最后更新：${new Date().toISOString().split("T")[0]}_`,
+    "",
+    `<!-- AUTO-SYN-TABLE:dimension=${dim}:END -->`,
+  ].join("\n");
+}
+
+function injectDimensionBlock(content: string, dim: string, block: string): { content: string; changed: boolean } {
+  const startTag = `<!-- AUTO-SYN-TABLE:dimension=${dim}:START -->`;
+  const endTag = `<!-- AUTO-SYN-TABLE:dimension=${dim}:END -->`;
+  const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(`${escape(startTag)}[\\s\\S]*?${escape(endTag)}`, "m");
+  if (re.test(content)) {
+    return { content: content.replace(re, block), changed: true };
+  }
+  return { content, changed: false };
 }
 
 function statusBadge(s: string): string {
@@ -173,10 +261,12 @@ function injectBlock(content: string, domainKey: string, block: string): { conte
   return { content, changed: false };
 }
 
-function processFile(fp: string, allBenchmarks: BenchRow[]): { changed: boolean; injectedDomains: string[] } {
+function processFile(fp: string, allBenchmarks: BenchRow[]): { changed: boolean; injectedDomains: string[]; injectedDimensions: string[] } {
   const content = readFileSync(fp, "utf8");
   let newContent = content;
   const injected: string[] = [];
+  const injectedDims: string[] = [];
+  // domain markers（旧路径，保留）
   for (const domainKey of Object.keys(DOMAIN_GROUPS)) {
     const startTag = `<!-- AUTO-SYN-TABLE:domain=${domainKey}:START -->`;
     if (!newContent.includes(startTag)) continue;
@@ -189,9 +279,22 @@ function processFile(fp: string, allBenchmarks: BenchRow[]): { changed: boolean;
       injected.push(domainKey);
     }
   }
+  // dimension markers（新路径）
+  for (const dim of Object.keys(DIMENSION_TITLES)) {
+    const startTag = `<!-- AUTO-SYN-TABLE:dimension=${dim}:START -->`;
+    if (!newContent.includes(startTag)) continue;
+    const rows = rowsForDimension(allBenchmarks, dim);
+    if (rows.length === 0) continue;
+    const block = renderDimensionTable(dim, rows);
+    const res = injectDimensionBlock(newContent, dim, block);
+    if (res.changed) {
+      newContent = res.content;
+      injectedDims.push(dim);
+    }
+  }
   const changed = newContent !== content;
   if (changed && !DRY) writeFileSync(fp, newContent);
-  return { changed, injectedDomains: injected };
+  return { changed, injectedDomains: injected, injectedDimensions: injectedDims };
 }
 
 const benchmarks = loadBenchmarks();
@@ -204,10 +307,23 @@ console.log(`   有 sota frontmatter：${fmWithSota} / 有 pitfalls frontmatter�
 
 let totalChanged = 0;
 for (const fp of synthesisFiles) {
-  const { changed, injectedDomains } = processFile(fp, benchmarks);
+  const { changed, injectedDomains, injectedDimensions } = processFile(fp, benchmarks);
   if (changed) {
     totalChanged++;
-    console.log(`✅ ${fp.split("/").pop()}: 填充 ${injectedDomains.join(", ")}${DRY ? " (dry-run)" : ""}`);
+    const tags: string[] = [];
+    if (injectedDomains.length) tags.push(`domain=${injectedDomains.join(",")}`);
+    if (injectedDimensions.length) tags.push(`dim=${injectedDimensions.join(",")}`);
+    console.log(`✅ ${fp.split("/").pop()}: 填充 ${tags.join(" / ")}${DRY ? " (dry-run)" : ""}`);
   }
+}
+
+// dimension 分布概览
+const dimDistribution: Record<string, number> = {};
+for (const b of benchmarks) {
+  if (b.dimension) dimDistribution[b.dimension] = (dimDistribution[b.dimension] ?? 0) + 1;
+}
+console.log(`\n📈 dimension 分布（${benchmarks.length} 个单页）:`);
+for (const [d, n] of Object.entries(dimDistribution).sort((a, b) => b[1] - a[1])) {
+  console.log(`  ${d}: ${n}`);
 }
 console.log(`\n总更新: ${totalChanged} 个 synthesis 文件${DRY ? "（dry-run）" : ""}`);

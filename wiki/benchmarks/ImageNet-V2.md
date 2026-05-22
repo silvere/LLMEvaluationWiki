@@ -10,6 +10,8 @@ domain:
 year: 2019
 arxiv_id: "1902.10811"
 status: active
+dimension: F
+subdimension: T2I
 ---
 
 # ImageNet-V2

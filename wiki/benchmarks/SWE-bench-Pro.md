@@ -1,33 +1,46 @@
 ---
-title: "SWE-bench Pro"
+title: SWE-bench Pro
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - code
-  - agent
+- code
+- agent
 year: 2025
-arxiv_id: "2509.16941"
+arxiv_id: '2509.16941'
 status: active
 sota:
-  - score: "58.6%"
-    model: "Kimi-K2.6"
-    harness: null
-    notes: "tied with GPT-5.5"
-  - score: "58.4%"
-    model: "GLM-5.1"
-    harness: null
-    notes: "榜首（超过 Claude Opus 4.6 / GPT-5.4）"
-  - score: "榜首"
-    model: "Qwen3.6"
-    harness: null
-    notes: "官方表述：top in SWE-bench Pro"
-  - score: "55.4%"
-    model: "DeepSeek-V4-Pro"
-    harness: null
-    notes: "open-source 第一"
+- score: 48.2%
+  model: Claude-Opus-4.7
+  harness: OpenHands
+  with_tools: true
+  date: 2026-04
+  source: https://swebench.com/pro
+  notes: SWE-bench Pro（更难任务集），OpenHands harness
+- score: 43.5%
+  model: GPT-5
+  harness: OpenHands
+  with_tools: true
+  date: 2026-04
+  source: https://swebench.com/pro
+  notes: SWE-bench Pro
+- score: 38.2%
+  model: Gemini-3.1-Pro
+  harness: OpenHands
+  with_tools: true
+  date: 2026-04
+  source: https://swebench.com/pro
+  notes: SWE-bench Pro
+- score: 32.1%
+  model: DeepSeek-V4-Pro
+  harness: OpenHands
+  with_tools: true
+  date: 2026-04
+  source: https://swebench.com/pro
+  notes: SWE-bench Pro
+dimension: H
 ---
 
 # SWE-bench Pro
@@ -40,14 +53,14 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Kimi-K2.6]] | 58.6% | tied with GPT-5.5 |
-| 🥈 | [[GLM-5.1]] | 58.4% | 榜首（超过 Claude Opus 4.6 / GPT-5.4） |
-| 🥉 | [[Qwen3.6]] | 榜首 | 官方表述：top in SWE-bench Pro |
-| 4 | [[DeepSeek-V4-Pro]] | 55.4% | open-source 第一 |
+| # | 模型 | Harness | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | [[OpenHands]] | 🔧 with | 48.2% | SWE-bench Pro（更难任务集），OpenHands harness | 2026-04 | [link](https://swebench.com/pro) |
+| 🥈 | [[GPT-5]] | [[OpenHands]] | 🔧 with | 43.5% | SWE-bench Pro | 2026-04 | [link](https://swebench.com/pro) |
+| 🥉 | [[Gemini-3.1-Pro]] | [[OpenHands]] | 🔧 with | 38.2% | SWE-bench Pro | 2026-04 | [link](https://swebench.com/pro) |
+| 4 | [[DeepSeek-V4-Pro]] | [[OpenHands]] | 🔧 with | 32.1% | SWE-bench Pro | 2026-04 | [link](https://swebench.com/pro) |
 
 <!-- AUTO-SOTA:END -->
 

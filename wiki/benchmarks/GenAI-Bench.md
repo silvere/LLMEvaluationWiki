@@ -7,9 +7,20 @@ as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
 domain:
   - multimodal
+  - vision
+  - video
 year: 2024
 arxiv_id: "2406.13743"
 status: active
+dimension: F
+subdimension: T2I
+official_url: "https://linzhiqiu.github.io/papers/genai_bench/"
+sources:
+  - "https://arxiv.org/abs/2406.13743"
+  - "https://linzhiqiu.github.io/papers/genai_bench/"
+aliases:
+  - GenAI-Bench
+org: "CMU + Meta"
 ---
 
 # GenAI-Bench

@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2402.02037"
 status: active
+dimension: H
 ---
 
 # Effibench

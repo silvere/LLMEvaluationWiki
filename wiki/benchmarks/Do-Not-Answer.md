@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2308.13387"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # Do-Not-Answer：拒答能力系统评测基准

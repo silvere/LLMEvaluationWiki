@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2404.04990"
 status: active
+dimension: F
+subdimension: T2V
 ---
 
 # T2VQA-DB

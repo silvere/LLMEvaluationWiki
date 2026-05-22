@@ -11,6 +11,8 @@ domain:
 year: 2025
 arxiv_id: "2502.10248"
 status: active
+dimension: F
+subdimension: T2V
 ---
 
 # Step-Video-T2V-Eval

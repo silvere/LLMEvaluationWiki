@@ -11,6 +11,7 @@ domain:
 year: 2018
 arxiv_id: ""
 status: active
+dimension: E
 ---
 
 # CHAIR

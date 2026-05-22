@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.85
 sources:
   - "Shridhar, M., et al. (2021). ALFWorld: Aligning Text and Embodied Environments for Interactive Learning. ICLR 2021."
+dimension: D
+subdimension: general
 ---
 
 # ALFWorld

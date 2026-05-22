@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2406.14515"
 status: active
+dimension: E
 ---
 
 # MMBench-Video

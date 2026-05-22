@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2310.11440"
 status: active
+dimension: F
 ---
 
 # EvalCrafter

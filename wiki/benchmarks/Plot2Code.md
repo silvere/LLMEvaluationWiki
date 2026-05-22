@@ -11,6 +11,7 @@ domain:
 year: 2024
 arxiv_id: "2403.00476"
 status: active
+dimension: H
 ---
 
 # Plot2Code

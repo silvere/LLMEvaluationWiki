@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.80
 sources:
   - "Zhao, W., et al. (2024). WildChat: 1M ChatGPT Interaction Logs in the Wild. ICLR 2024."
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # WildChat

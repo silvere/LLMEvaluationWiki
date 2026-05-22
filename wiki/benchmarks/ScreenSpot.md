@@ -11,6 +11,8 @@ domain:
 year: 2024
 arxiv_id: "2401.13649"
 status: active
+dimension: D
+subdimension: general
 ---
 
 # ScreenSpot

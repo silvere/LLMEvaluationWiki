@@ -1,29 +1,65 @@
 ---
-title: "FrontierMath"
+title: FrontierMath
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [math, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- math
+- reasoning
 language: en
 year: 2024
 authors: []
-arxiv_id: ""
-official_url: "https://epochai.org/frontiermath"
-license: ""
+arxiv_id: ''
+official_url: https://epochai.org/frontiermath
+license: ''
 size: 0
 format: open-ended
 status: active
-saturation_threshold: 0.50
+saturation_threshold: 0.5
 sources:
-  - "https://epochai.org/frontiermath"
-  - "https://www.nature.com/articles/d41586-024-03502-6"
+- https://epochai.org/frontiermath
+- https://www.nature.com/articles/d41586-024-03502-6
 sota:
-  - score: "约 25%"
-    model: "o3"
-    harness: null
+- score: 52.4%
+  model: GPT-5.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://benchlm.ai/benchmarks/frontierMath
+  notes: GPT-5.5 Pro，FrontierMath overall（多数模型 <10%）
+- score: 51.7%
+  model: GPT-5.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://benchlm.ai/benchmarks/frontierMath
+  notes: GPT-5.5 standard
+- score: 50.0%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://benchlm.ai/benchmarks/frontierMath
+  notes: GPT-5.4 Pro
+- score: 43.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained
+  notes: Tier 1-3 整体得分
+- score: 22.9%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained
+  notes: Tier 4（最难级别，几乎是纯研究前沿题）
+dimension: A
+subdimension: benchmark
 ---
 
 # FrontierMath
@@ -76,11 +112,15 @@ FrontierMath的核心特点：
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[o3]] | 约 25% |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5.5]] | 🚫 no | 52.4% | GPT-5.5 Pro，FrontierMath overall（多数模型 <10%） | 2026-04 | [link](https://benchlm.ai/benchmarks/frontierMath) |
+| 🥈 | [[GPT-5.5]] | 🚫 no | 51.7% | GPT-5.5 standard | 2026-04 | [link](https://benchlm.ai/benchmarks/frontierMath) |
+| 🥉 | [[GPT-5]] | 🚫 no | 50.0% | GPT-5.4 Pro | 2026-04 | [link](https://benchlm.ai/benchmarks/frontierMath) |
+| 4 | [[Claude-Opus-4.7]] | 🚫 no | 43.8% | Tier 1-3 整体得分 | 2026-04 | [link](https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained) |
+| 5 | [[Claude-Opus-4.7]] | 🚫 no | 22.9% | Tier 4（最难级别，几乎是纯研究前沿题） | 2026-04 | [link](https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained) |
 
 <!-- AUTO-SOTA:END -->
 

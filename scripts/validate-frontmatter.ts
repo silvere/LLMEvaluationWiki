@@ -22,6 +22,19 @@ const VALID_TYPES = new Set([
 const VALID_STATUS = new Set(["active", "saturated", "contaminated", "deprecated"]);
 const VALID_AUTHOR_MODE = new Set(["llm", "human", "mixed"]);
 const VALID_CONFIDENCE = new Set(["draft", "verified", "reviewed", "promoted"]);
+const VALID_DIMENSIONS = new Set([
+  // 11 主维度
+  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
+  // 3 横切维度
+  "long-ctx", "obs", "infra",
+]);
+const VALID_SUBDIMENSIONS: Record<string, Set<string>> = {
+  A: new Set(["harness", "benchmark", "leaderboard"]),
+  D: new Set(["tool-use", "web-gui", "software-eng", "general"]),
+  F: new Set(["T2I", "T2V", "I2V", "preference", "metric"]),
+  I: new Set(["red-team-tool", "safety-benchmark", "jailbreak", "content-safety"]),
+  K: new Set(["judge-model", "judge-benchmark", "reward-model"]),
+};
 const VALID_DOMAINS = new Set([
   "knowledge", "reasoning", "math", "code", "long-context",
   "instruction-following", "multimodal", "safety", "hallucination",
@@ -136,6 +149,18 @@ function validateFile(filePath: string, content: string): ValidationResult {
     result.errors.push(`author_mode 非法: "${fm["author_mode"]}"，允许值: llm, human, mixed`);
   if (fm["confidence"] && !VALID_CONFIDENCE.has(fm["confidence"] as string))
     result.errors.push(`confidence 非法: "${fm["confidence"]}"，允许值: draft, verified, reviewed, promoted`);
+  // dimension / subdimension 校验（CLAUDE.md §3.7）
+  if (fm["dimension"]) {
+    if (!VALID_DIMENSIONS.has(fm["dimension"] as string)) {
+      result.errors.push(`dimension 非法: "${fm["dimension"]}"，允许值: ${[...VALID_DIMENSIONS].join(", ")}`);
+    } else if (fm["subdimension"]) {
+      const dim = fm["dimension"] as string;
+      const validSubs = VALID_SUBDIMENSIONS[dim];
+      if (validSubs && !validSubs.has(fm["subdimension"] as string)) {
+        result.errors.push(`subdimension "${fm["subdimension"]}" 非 ${dim} 维度合法值，允许值: ${[...validSubs].join(", ")}`);
+      }
+    }
+  }
   if (type === "benchmark" && fm["status"] && !VALID_STATUS.has(fm["status"] as string))
     result.errors.push(`status 非法: "${fm["status"]}"，允许值: ${[...VALID_STATUS].join(", ")}`);
   if (type === "source" && fm["source_type"] && !VALID_SOURCE_TYPES.has(fm["source_type"] as string))

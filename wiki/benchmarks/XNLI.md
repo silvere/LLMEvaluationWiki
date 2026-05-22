@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "Conneau, A., et al. (2018). XNLI: Evaluating Cross-lingual Sentence Representations. EMNLP 2018."
+dimension: A
+subdimension: benchmark
 ---
 
 # XNLI

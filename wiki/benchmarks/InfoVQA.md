@@ -10,6 +10,7 @@ domain:
 year: 2022
 arxiv_id: "2104.12763"
 status: active
+dimension: E
 ---
 
 # InfoVQA

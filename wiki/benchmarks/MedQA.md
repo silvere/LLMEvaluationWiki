@@ -18,6 +18,8 @@ format: multiple-choice
 status: active
 saturation_threshold: 0.90
 sources: []
+dimension: A
+subdimension: benchmark
 ---
 
 # MedQA

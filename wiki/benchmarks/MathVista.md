@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2310.02255"
+dimension: E
 ---
 
 # MathVista：数学视觉推理综合评测基准

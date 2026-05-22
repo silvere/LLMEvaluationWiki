@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.80
 sources:
   - "Liu, X., et al. (2023). AgentBench: Evaluating LLMs as Agents. ICLR 2024."
+dimension: D
+subdimension: general
 ---
 
 # AgentBench

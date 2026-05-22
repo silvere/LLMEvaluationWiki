@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2307.08689"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # Collie Hard

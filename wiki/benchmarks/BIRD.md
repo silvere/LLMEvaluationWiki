@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2305.03111"
   - "https://bird-bench.github.io/"
+dimension: H
 ---
 
 # BIRD (BIg Bench for LaRge-scale Database Grounded Text-to-SQL Evaluation)

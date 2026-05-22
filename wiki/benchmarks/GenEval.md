@@ -16,6 +16,7 @@ domain:
   - benchmark
   - vision
   - multimodal
+dimension: F
 ---
 
 # GenEval

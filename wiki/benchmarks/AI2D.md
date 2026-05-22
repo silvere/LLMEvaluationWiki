@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://prior.allenai.org/projects/diagram-understanding"
   - "https://arxiv.org/abs/1603.07988"
+dimension: E
 ---
 
 # AI2D：科学图表理解评测基准

@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "Onoe, Y., et al. (2021). CREAK: A Dataset for Commonsense Reasoning over Entity Knowledge. NeurIPS 2021 Datasets and Benchmarks Track."
+dimension: A
+subdimension: benchmark
 ---
 
 # CREAK

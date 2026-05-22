@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2306.13394"
+dimension: E
 ---
 
 # MME：多模态大模型综合评测基准

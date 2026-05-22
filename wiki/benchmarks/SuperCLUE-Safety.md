@@ -13,6 +13,8 @@ domain:
 year: 2023
 arxiv_id: ""
 status: active
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # SuperCLUE-Safety

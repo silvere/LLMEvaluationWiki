@@ -22,6 +22,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2308.02490"
+dimension: E
 ---
 
 # MMVet：多模态集成能力评测基准

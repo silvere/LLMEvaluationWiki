@@ -20,6 +20,8 @@ saturation_threshold: 0.95
 sources:
   - "https://arxiv.org/abs/2305.20050"
   - "https://github.com/openai/prm800k"
+dimension: A
+subdimension: benchmark
 ---
 
 # MATH500

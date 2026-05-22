@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/1804.06876"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # WinoBias：性别-职业偏见指代消解评测基准

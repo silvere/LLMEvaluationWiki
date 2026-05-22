@@ -20,6 +20,8 @@ saturation_threshold: 0.95
 sources:
   - "https://artofproblemsolving.com/wiki/index.php/2023_AMC_10A_Problems"
   - "https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems"
+dimension: A
+subdimension: benchmark
 ---
 
 # AMC23

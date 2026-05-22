@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.50
 sources:
   - "https://artofproblemsolving.com/wiki/index.php/William_Lowell_Putnam_Mathematical_Competition"
+dimension: A
+subdimension: benchmark
 ---
 
 # Putnam

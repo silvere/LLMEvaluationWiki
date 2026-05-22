@@ -1,27 +1,71 @@
 ---
-title: "MGSM"
+title: MGSM
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [math, multilingual]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- math
+- multilingual
 language: multilingual
 year: 2023
-authors: ["Shi et al."]
-arxiv_id: "2210.03057"
-official_url: "https://github.com/google-research/url-nlp/tree/main/mgsm"
-license: "CC-BY-4.0"
+authors:
+- Shi et al.
+arxiv_id: '2210.03057'
+official_url: https://github.com/google-research/url-nlp/tree/main/mgsm
+license: CC-BY-4.0
 size: 2500
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 sota:
-  - score: "约 91.1%"
-    model: "Llama-3.3-70B"
-    harness: null
+- score: 94.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/mgsm
+  notes: MGSM 10 语言平均（2026 frontier 水平）
+- score: 93.8%
+  model: Qwen3.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/mgsm
+  notes: MGSM，Qwen3.5 多语言能力强
+- score: 92.3%
+  model: Llama-4
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/mgsm
+  notes: Llama 4 Maverick，10 语言平均
+- score: 92.0%
+  model: o3-mini
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/mgsm
+  notes: 10 语言平均
+- score: 91.6%
+  model: Claude-3.5-Sonnet
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/mgsm
+  notes: 10 语言平均（2025 水平）
+- score: 90.8%
+  model: o1-preview
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/mgsm
+  notes: 10 语言平均
+dimension: A
+subdimension: benchmark
 ---
 
 # MGSM（Multilingual Grade School Math）
@@ -73,11 +117,16 @@ MGSM 的重要发现是：模型在不同语言上的数学推理能力存在显
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Llama-3.3-70B]] | 约 91.1% |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 94.5% | MGSM 10 语言平均（2026 frontier 水平） | 2026-04 | [link](https://artificialanalysis.ai/evaluations/mgsm) |
+| 🥈 | [[Qwen3.5]] | 🚫 no | 93.8% | MGSM，Qwen3.5 多语言能力强 | 2026-04 | [link](https://artificialanalysis.ai/evaluations/mgsm) |
+| 🥉 | [[Llama-4]] | 🚫 no | 92.3% | Llama 4 Maverick，10 语言平均 | 2026-05 | [link](https://llm-stats.com/benchmarks/mgsm) |
+| 4 | [[o3-mini]] | 🚫 no | 92.0% | 10 语言平均 | 2026-05 | [link](https://llm-stats.com/benchmarks/mgsm) |
+| 5 | [[Claude-3.5-Sonnet]] | 🚫 no | 91.6% | 10 语言平均（2025 水平） | 2026-05 | [link](https://llm-stats.com/benchmarks/mgsm) |
+| 6 | [[o1-preview]] | 🚫 no | 90.8% | 10 语言平均 | 2026-05 | [link](https://llm-stats.com/benchmarks/mgsm) |
 
 <!-- AUTO-SOTA:END -->
 

@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2308.01263"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # XSTest：过度拒绝（Exaggerated Safety）评测基准

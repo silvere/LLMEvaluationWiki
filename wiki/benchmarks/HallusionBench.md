@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2310.14566"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # HallusionBench：视觉语言幻觉系统评测基准

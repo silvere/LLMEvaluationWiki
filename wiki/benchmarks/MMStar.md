@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2403.20330"
+dimension: E
 ---
 
 # MMStar：精选高质量多模态评测基准

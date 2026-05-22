@@ -18,6 +18,8 @@ format: multiple-choice
 status: saturated
 saturation_threshold: 0.90
 sources: []
+dimension: A
+subdimension: benchmark
 ---
 
 # WinoGrande

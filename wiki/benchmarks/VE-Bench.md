@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2410.05765"
 status: active
+dimension: E
 ---
 
 # VE-Bench

@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.75
 sources:
   - "Wang, R., et al. (2022). ScienceWorld: Is Your Agent Smarter than a 5th Grader? EMNLP 2022."
+dimension: D
+subdimension: general
 ---
 
 # ScienceWorld

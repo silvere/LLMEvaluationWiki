@@ -20,6 +20,8 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2307.13692"
   - "https://github.com/TheDuckAI/arb"
+dimension: A
+subdimension: benchmark
 ---
 
 # ARB (Advanced Reasoning Benchmark)

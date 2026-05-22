@@ -17,6 +17,7 @@ aliases:
 domain:
   - benchmark
   - long-context
+dimension: long-ctx
 ---
 
 # Needle in a Haystack（NIAH）

@@ -11,6 +11,7 @@ domain:
 year: 2025
 arxiv_id: "2504.02605"
 status: active
+dimension: H
 ---
 
 # Multi-SWE-bench

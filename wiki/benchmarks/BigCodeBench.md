@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2406.15877"
   - "https://bigcode-bench.github.io/"
+dimension: H
 ---
 
 # BigCodeBench

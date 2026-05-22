@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2004.09456"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # StereoSet：语言模型刻板印象测量基准

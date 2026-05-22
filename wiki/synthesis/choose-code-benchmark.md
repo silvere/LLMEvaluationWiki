@@ -84,7 +84,8 @@ domain:
 | [[HumanEval|HumanEval]] | 164 | 2021 | 0-shot / pass@k（k 通常为 1，最初论文用 pass@1/1… | 约 92-95%（Claude-3.7-Sonnet） | 🔴 saturated | 样本量太小（164 题），统计噪声大，单次 run 1-2 个百分点波动很常见 |
 | [[LiveCodeBench|LiveCodeBench]] | 600 | 2024 | 0-shot / pass@1（部分变体支持 pass@5） | 约 80%（Gemini-2.5-Pro） | 🟢 active | **必须报告时间窗**：'LiveCodeBench 80%' 没意义，必须说 '2024-08 之后题目 80%'，否则无法排除污染 |
 | [[SWE-bench-Pro|SWE-bench Pro]] | — | 2025 | — | 58.6%（Kimi-K2.6） | — | — |
-| [[SWE-bench-Verified|SWE-bench Verified]] | 500 | 2024 | agent-driven / % resolved (patch passes ALL … | 80.6%（Gemini-3.1-Pro） | 🟢 active | Verified ≠ Full ≠ Lite：常被混淆。Verified 500 题、Full 2,294 题、Lite 300 题，分数不可直接对比 |
+| [[SWE-bench-Verified|SWE-bench Verified]] | 500 | 2024 | agent-driven / % resolved (patch passes ALL … | 93.9%（Claude-Opus-4.7） | 🟢 active | Verified ≠ Full ≠ Lite：常被混淆。Verified 500 题、Full 2,294 题、Lite 300 题，分数不可直接对比 |
+| [[Aider|Aider]] | — | — | — | — | — | — |
 | [[Aider-Polyglot|Aider Polyglot]] | — | 2024 | — | — | — | — |
 | [[APPS|APPS]] | 10000 | 2021 | — | — | — | — |
 | [[BFCL|BFCL]] | — | 2024 | — | — | — | — |
@@ -95,6 +96,7 @@ domain:
 | [[CodeApex|CodeApex]] | — | 2023 | — | — | — | — |
 | [[CodeContests|CodeContests]] | 13610 | 2022 | — | — | — | — |
 | [[CRUXEval|CRUXEval]] | 800 | 2024 | — | — | — | — |
+| [[Devin|Devin]] | — | — | — | — | — | — |
 | [[DS-1000|DS-1000]] | 1000 | 2022 | — | — | — | — |
 | [[Effibench|Effibench]] | — | 2024 | — | — | — | — |
 | [[EvalPerf|EvalPerf]] | 0 | 2024 | — | — | — | — |
@@ -116,11 +118,13 @@ domain:
 | [[MLE-Bench|MLE-Bench]] | — | 2024 | — | — | — | — |
 | [[Multi-SWE-bench|Multi-SWE-bench]] | — | 2025 | — | — | — | — |
 | [[MultiPL-E|MultiPL-E]] | — | 2022 | — | — | — | — |
+| [[OpenHands|OpenHands]] | — | — | — | — | — | — |
 | [[PaperBench|PaperBench]] | — | 2025 | — | — | — | — |
 | [[Plot2Code|Plot2Code]] | — | 2024 | — | — | — | — |
 | [[SciCode|SciCode]] | 338 | 2024 | — | — | — | — |
 | [[Spider|Spider]] | 10181 | 2018 | — | — | — | — |
 | [[SUPER|SUPER]] | — | 2024 | — | — | — | — |
+| [[SWE-agent|SWE-agent]] | — | — | — | — | — | — |
 | [[SWE-bench|SWE-bench]] | 2294 | 2023 | — | — | — | — |
 | [[SWE-bench-Lite|SWE-bench Lite]] | 300 | 2023 | — | — | — | — |
 | [[SWE-Lancer|SWE-Lancer]] | — | 2025 | — | — | — | — |
@@ -128,7 +132,7 @@ domain:
 | [[TDD-Bench-Verified|TDD-Bench Verified]] | — | 2024 | — | — | — | — |
 | [[TheAgentCompany|TheAgentCompany]] | — | 2024 | — | — | — | — |
 
-_共 47 个 benchmark，最后更新：2026-05-19_
+_共 51 个 benchmark，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:domain=code:END -->
 
@@ -142,9 +146,12 @@ _共 47 个 benchmark，最后更新：2026-05-19_
 |---|---|---|---|---|---|---|
 | [[OSWorld|OSWorld]] | — | 2024 | — | 约 50-61%（Claude-Sonnet-4.5） | — | — |
 | [[SWE-bench-Pro|SWE-bench Pro]] | — | 2025 | — | 58.6%（Kimi-K2.6） | — | — |
-| [[SWE-bench-Verified|SWE-bench Verified]] | 500 | 2024 | agent-driven / % resolved (patch passes ALL … | 80.6%（Gemini-3.1-Pro） | 🟢 active | Verified ≠ Full ≠ Lite：常被混淆。Verified 500 题、Full 2,294 题、Lite 300 题，分数不可直接对比 |
+| [[SWE-bench-Verified|SWE-bench Verified]] | 500 | 2024 | agent-driven / % resolved (patch passes ALL … | 93.9%（Claude-Opus-4.7） | 🟢 active | Verified ≠ Full ≠ Lite：常被混淆。Verified 500 题、Full 2,294 题、Lite 300 题，分数不可直接对比 |
 | [[tau-bench|τ-bench (tau-bench)]] | 477 | 2024 | — | 高于 Opus 4（Claude-Sonnet-4.5） | — | — |
 | [[AgentBench|AgentBench]] | 1091 | 2023 | — | — | — | — |
+| [[AgentBoard|AgentBoard]] | — | — | — | — | — | — |
+| [[AgentHarm|AgentHarm]] | — | — | — | — | — | — |
+| [[Aider|Aider]] | — | — | — | — | — | — |
 | [[AITZ|AITZ]] | — | 2024 | — | — | — | — |
 | [[ALFWorld|ALFWorld]] | 3553 | 2021 | — | — | — | — |
 | [[Android-Control|Android-Control]] | — | 2024 | — | — | — | — |
@@ -154,10 +161,14 @@ _共 47 个 benchmark，最后更新：2026-05-19_
 | [[BEHAVIOR-1K|BEHAVIOR-1K]] | — | — | — | — | — | — |
 | [[BFCL|BFCL]] | — | 2024 | — | — | — | — |
 | [[BiGGen-Bench|BiGGen-Bench]] | 765 | 2024 | — | — | — | — |
+| [[BrowserGym|BrowserGym]] | — | — | — | — | — | — |
+| [[Devin|Devin]] | — | — | — | — | — | — |
 | [[GAIA|GAIA (General AI Assistants)]] | 466 | 2023 | — | — | — | — |
 | [[Habitat|Habitat (Embodied AI Simulator)]] | — | — | — | — | — | — |
 | [[InterCode|InterCode]] | 0 | 2023 | — | — | — | — |
 | [[IT-Bench|IT-Bench]] | — | 2025 | — | — | — | — |
+| [[Langfuse|Langfuse]] | — | — | — | — | — | — |
+| [[Mind2Web|Mind2Web]] | — | — | — | — | — | — |
 | [[MINT|MINT (Multi-turn INteractive Tool-use)]] | 586 | 2023 | — | — | — | — |
 | [[MLE-Bench|MLE-Bench]] | — | 2024 | — | — | — | — |
 | [[MLGym-Bench|MLGym-Bench]] | — | 2025 | — | — | — | — |
@@ -165,14 +176,18 @@ _共 47 个 benchmark，最后更新：2026-05-19_
 | [[Multi-SWE-bench|Multi-SWE-bench]] | — | 2025 | — | — | — | — |
 | [[Nestful|Nestful]] | — | 2024 | — | — | — | — |
 | [[Online-Mind2Web|Online-Mind2Web]] | — | 2025 | — | — | — | — |
+| [[OpenHands|OpenHands]] | — | — | — | — | — | — |
 | [[PaperBench|PaperBench]] | — | 2025 | — | — | — | — |
 | [[PARTNR|PARTNR]] | — | 2024 | — | — | — | — |
+| [[Patronus|Patronus AI]] | — | — | — | — | — | — |
+| [[Petri|Petri]] | — | — | — | — | — | — |
 | [[RobustAPI|RobustAPI]] | — | 2024 | — | — | — | — |
 | [[ScienceWorld|ScienceWorld]] | 30 | 2022 | — | — | — | — |
 | [[ScreenSpot|ScreenSpot]] | — | 2024 | — | — | — | — |
 | [[ScreenSpot-Pro|ScreenSpot Pro]] | — | 2025 | — | — | — | — |
 | [[StableToolBench|StableToolBench]] | — | — | — | — | — | — |
 | [[SUPER|SUPER]] | — | 2024 | — | — | — | — |
+| [[SWE-agent|SWE-agent]] | — | — | — | — | — | — |
 | [[SWE-bench|SWE-bench]] | 2294 | 2023 | — | — | — | — |
 | [[SWE-bench-Lite|SWE-bench Lite]] | 300 | 2023 | — | — | — | — |
 | [[SWE-Lancer|SWE-Lancer]] | — | 2025 | — | — | — | — |
@@ -180,7 +195,9 @@ _共 47 个 benchmark，最后更新：2026-05-19_
 | [[TheAgentCompany|TheAgentCompany]] | — | 2024 | — | — | — | — |
 | [[ToolACE|ToolACE]] | — | 2024 | — | — | — | — |
 | [[ToolBench|ToolBench]] | 126486 | 2023 | — | — | — | — |
+| [[VisualWebArena|VisualWebArena]] | — | — | — | — | — | — |
 | [[VisualWebBench|VisualWebBench]] | — | 2024 | — | — | — | — |
+| [[Weave|Weave (W&B)]] | — | — | — | — | — | — |
 | [[WebArena|WebArena]] | 812 | 2023 | — | — | — | — |
 | [[WebVoyager|WebVoyager]] | — | 2024 | — | — | — | — |
 | [[WebWalkerQA|WebWalkerQA]] | — | 2025 | — | — | — | — |
@@ -189,7 +206,7 @@ _共 47 个 benchmark，最后更新：2026-05-19_
 | [[tau2-bench|τ²-Bench]] | — | 2025 | — | — | — | — |
 | [[tau3-bench|τ³-Bench]] | — | 2025 | — | — | — | — |
 
-_共 48 个 benchmark，最后更新：2026-05-19_
+_共 61 个 benchmark，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:domain=agent:END -->
 

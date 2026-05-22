@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2410.18374"
 status: active
+dimension: F
 ---
 
 # TVBench

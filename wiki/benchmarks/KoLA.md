@@ -18,6 +18,8 @@ format: other
 status: active
 saturation_threshold: 0.90
 sources: []
+dimension: A
+subdimension: benchmark
 ---
 
 # KoLA（Knowledge-oriented LLM Assessment）

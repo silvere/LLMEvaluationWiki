@@ -11,6 +11,7 @@ domain:
 year: 2023
 arxiv_id: "2311.17005"
 status: active
+dimension: F
 ---
 
 # MVBench

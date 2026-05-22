@@ -11,6 +11,8 @@ domain:
 year: 2017
 arxiv_id: "1705.04146"
 status: saturated
+dimension: A
+subdimension: benchmark
 ---
 
 # AQuA

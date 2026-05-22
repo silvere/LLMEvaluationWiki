@@ -20,6 +20,8 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2206.14858"
   - "https://ai.googleblog.com/2022/06/minerva-solving-quantitative-reasoning.html"
+dimension: A
+subdimension: benchmark
 ---
 
 # Minerva

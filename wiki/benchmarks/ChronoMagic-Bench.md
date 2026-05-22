@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2406.18522"
 status: active
+dimension: E
 ---
 
 # ChronoMagic-Bench

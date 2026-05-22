@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2406.18495"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # WildGuard：野外安全交互评测与分类工具

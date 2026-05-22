@@ -1,27 +1,65 @@
 ---
-title: "C-Eval"
+title: C-Eval
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [knowledge, reasoning, multilingual]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
+- multilingual
 language: zh
 year: 2023
-authors: ["Huang et al."]
-arxiv_id: "2305.08322"
-official_url: "https://cevalbenchmark.com"
-license: ""
+authors:
+- Huang et al.
+arxiv_id: '2305.08322'
+official_url: https://cevalbenchmark.com
+license: ''
 size: 13948
 format: multiple-choice
 status: active
 saturation_threshold: 0.85
-sources: [""]
+sources:
+- ''
 sota:
-  - score: "约 89.2%"
-    model: "Doubao-1.5-Pro"
-    harness: null
+- score: 91.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://cevalbenchmark.com/static/leaderboard.html
+  notes: C-Eval 中文知识评测，Qwen3 系列在中文上强势
+- score: 90.5%
+  model: GLM-5.1
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://cevalbenchmark.com/static/leaderboard.html
+  notes: GLM-5.1，中文 LLM 第二梯队
+- score: 89.2%
+  model: Qwen3.5
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://cevalbenchmark.com/static/leaderboard.html
+  notes: Qwen3.5
+- score: 88.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/c-eval
+  notes: C-Eval，Claude 在中文基准表现较英文弱
+- score: 87.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/c-eval
+  notes: C-Eval
+dimension: J
 ---
 
 # C-Eval
@@ -34,11 +72,15 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Doubao-1.5-Pro]] | 约 89.2% |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.6]] | 🚫 no | 91.8% | C-Eval 中文知识评测，Qwen3 系列在中文上强势 | 2026-03 | [link](https://cevalbenchmark.com/static/leaderboard.html) |
+| 🥈 | [[GLM-5.1]] | 🚫 no | 90.5% | GLM-5.1，中文 LLM 第二梯队 | 2026-04 | [link](https://cevalbenchmark.com/static/leaderboard.html) |
+| 🥉 | [[Qwen3.5]] | 🚫 no | 89.2% | Qwen3.5 | 2026-03 | [link](https://cevalbenchmark.com/static/leaderboard.html) |
+| 4 | [[Claude-Opus-4.7]] | 🚫 no | 88.0% | C-Eval，Claude 在中文基准表现较英文弱 | 2026-04 | [link](https://artificialanalysis.ai/evaluations/c-eval) |
+| 5 | [[GPT-5]] | 🚫 no | 87.5% | C-Eval | 2026-04 | [link](https://artificialanalysis.ai/evaluations/c-eval) |
 
 <!-- AUTO-SOTA:END -->
 

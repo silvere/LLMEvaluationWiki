@@ -10,6 +10,7 @@ domain:
 year: 2016
 arxiv_id: "1608.00272"
 status: active
+dimension: E
 ---
 
 # RefCOCO

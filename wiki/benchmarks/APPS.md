@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2105.09938"
   - "https://github.com/hendrycks/apps"
+dimension: H
 ---
 
 # APPS (Automated Programming Progress Standard)

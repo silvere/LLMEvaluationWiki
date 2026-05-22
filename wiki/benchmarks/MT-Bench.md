@@ -1,23 +1,79 @@
 ---
-title: "MT-Bench"
+title: MT-Bench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [reasoning, instruction-following, dialog]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- instruction-following
+- dialog
 language: en
 year: 2023
-authors: ["Zheng et al."]
-arxiv_id: "2306.05685"
-official_url: "https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge"
-license: ""
+authors:
+- Zheng et al.
+arxiv_id: '2306.05685'
+official_url: https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge
+license: ''
 size: 80
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
-sources: [""]
+saturation_threshold: 0.9
+sources:
+- ''
+dimension: B
+sota:
+- score: '9.6'
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/mt-bench
+  notes: GPT-4-judge，10 分制（MT-Bench 官方榜已停更，Chatbot Arena 是替代）
+- score: '9.5'
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/mt-bench
+  notes: GPT-4-judge，10 分制
+- score: '9.0'
+  model: Claude-3.5-Sonnet
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge
+  notes: GPT-4-judge 评分（10 分制），多轮对话评测
+- score: '8.99'
+  model: GPT-4
+  harness: null
+  with_tools: false
+  date: 2023-06
+  source: https://arxiv.org/abs/2306.05685
+  notes: MT-Bench 原始论文，GPT-4-judge
+- score: '8.98'
+  model: Claude-3-Opus
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://github.com/lm-sys/FastChat
+  notes: GPT-4-judge，LMSYS FastChat 榜
+- score: '8.61'
+  model: GPT-3.5-Turbo
+  harness: null
+  with_tools: false
+  date: 2023-06
+  source: https://arxiv.org/abs/2306.05685
+  notes: MT-Bench 论文基线
+- score: '7.81'
+  model: LLaMA-2-70B
+  harness: null
+  with_tools: false
+  date: 2023-07
+  source: https://arxiv.org/abs/2306.05685
+  notes: 开源模型基线（2023 年最佳开源）
 ---
 
 # MT-Bench（Multi-Turn Benchmark）
@@ -25,6 +81,24 @@ sources: [""]
 > 用 GPT-4 作为评判的多轮对话质量基准，最早系统性验证 LLM-as-Judge 范式，开创聊天助手能力评测新方向。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 9.6 | GPT-4-judge，10 分制（MT-Bench 官方榜已停更，Chatbot Arena 是替代） | 2026-04 | [link](https://artificialanalysis.ai/evaluations/mt-bench) |
+| 🥈 | [[GPT-5]] | 🚫 no | 9.5 | GPT-4-judge，10 分制 | 2026-04 | [link](https://artificialanalysis.ai/evaluations/mt-bench) |
+| 🥉 | [[Claude-3.5-Sonnet]] | 🚫 no | 9.0 | GPT-4-judge 评分（10 分制），多轮对话评测 | 2024-06 | [link](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge) |
+| 4 | [[GPT-4]] | 🚫 no | 8.99 | MT-Bench 原始论文，GPT-4-judge | 2023-06 | [link](https://arxiv.org/abs/2306.05685) |
+| 5 | [[Claude-3-Opus]] | 🚫 no | 8.98 | GPT-4-judge，LMSYS FastChat 榜 | 2024-03 | [link](https://github.com/lm-sys/FastChat) |
+| 6 | [[GPT-3.5-Turbo]] | 🚫 no | 8.61 | MT-Bench 论文基线 | 2023-06 | [link](https://arxiv.org/abs/2306.05685) |
+| 7 | [[LLaMA-2-70B]] | 🚫 no | 7.81 | 开源模型基线（2023 年最佳开源） | 2023-07 | [link](https://arxiv.org/abs/2306.05685) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

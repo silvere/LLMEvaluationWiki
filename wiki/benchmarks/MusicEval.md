@@ -10,6 +10,7 @@ domain:
 year: 2025
 arxiv_id: "2501.10811"
 status: active
+dimension: G
 ---
 
 # MusicEval

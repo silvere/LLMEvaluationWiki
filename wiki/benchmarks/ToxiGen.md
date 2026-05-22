@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2203.09509"
+dimension: I
+subdimension: content-safety
 ---
 
 # ToxiGen：隐性有毒内容生成评测基准

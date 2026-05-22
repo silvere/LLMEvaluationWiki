@@ -1,28 +1,58 @@
 ---
-title: "MMMU"
+title: MMMU
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [multimodal, knowledge, reasoning]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- multimodal
+- knowledge
+- reasoning
 language: en
 year: 2023
-authors: ["Yue et al."]
-arxiv_id: "2311.16502"
-official_url: "https://mmmu-benchmark.github.io"
-license: ""
+authors:
+- Yue et al.
+arxiv_id: '2311.16502'
+official_url: https://mmmu-benchmark.github.io
+license: ''
 size: 11550
 format: multiple-choice
 status: active
 saturation_threshold: 0.75
-sources: [""]
+sources:
+- ''
 sota:
-  - score: "85.0"
-    model: "Qwen3.5"
-    harness: null
-    notes: "2026-02"
+- score: 86.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://llm-stats.com/benchmarks/mmmu
+  notes: Qwen3.6 Plus（VL 版本），MMMU standard
+- score: 84.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/mmmu
+  notes: MMMU standard
+- score: 84.1%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.buildfastwithai.com/blogs/claude-opus-4-7-review-benchmarks-2026
+  notes: MMMU standard（+5.9pt vs Opus 4.6）
+- score: 83.9%
+  model: Qwen3.5
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/mmmu
+  notes: Qwen3.5-122B，MMMU standard
+dimension: E
 ---
 
 # MMMU（Massive Multitask Multi-modal Understanding）
@@ -35,11 +65,14 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Qwen3.5]] | 85.0 | 2026-02 |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.6]] | 🚫 no | 86.0% | Qwen3.6 Plus（VL 版本），MMMU standard | 2026-03 | [link](https://llm-stats.com/benchmarks/mmmu) |
+| 🥈 | [[GPT-5]] | 🚫 no | 84.2% | MMMU standard | 2026-05 | [link](https://llm-stats.com/benchmarks/mmmu) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 84.1% | MMMU standard（+5.9pt vs Opus 4.6） | 2026-04 | [link](https://www.buildfastwithai.com/blogs/claude-opus-4-7-review-benchmarks-2026) |
+| 4 | [[Qwen3.5]] | 🚫 no | 83.9% | Qwen3.5-122B，MMMU standard | 2026-05 | [link](https://llm-stats.com/benchmarks/mmmu) |
 
 <!-- AUTO-SOTA:END -->
 

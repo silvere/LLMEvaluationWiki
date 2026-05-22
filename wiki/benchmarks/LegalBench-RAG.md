@@ -11,6 +11,8 @@ domain:
 year: 2024
 arxiv_id: "2408.10343"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # LegalBench-RAG

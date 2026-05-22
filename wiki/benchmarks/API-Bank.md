@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.80
 sources:
   - "Li, M., et al. (2023). API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs. EMNLP 2023."
+dimension: D
+subdimension: tool-use
 ---
 
 # API-Bank

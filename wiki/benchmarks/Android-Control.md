@@ -11,6 +11,8 @@ domain:
 year: 2024
 arxiv_id: "2406.03679"
 status: active
+dimension: D
+subdimension: web-gui
 ---
 
 # Android-Control

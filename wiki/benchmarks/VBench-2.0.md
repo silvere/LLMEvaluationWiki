@@ -10,6 +10,7 @@ domain:
 year: 2025
 arxiv_id: "2503.21755"
 status: active
+dimension: F
 ---
 
 # VBench-2.0

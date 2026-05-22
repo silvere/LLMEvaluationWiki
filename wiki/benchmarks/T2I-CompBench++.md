@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2407.01489"
 status: active
+dimension: F
+subdimension: T2I
 ---
 
 # T2I-CompBench++

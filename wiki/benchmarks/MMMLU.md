@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://huggingface.co/datasets/openai/MMMLU"
+dimension: A
+subdimension: benchmark
 ---
 
 # MMMLU (Multilingual Massive Multitask Language Understanding)

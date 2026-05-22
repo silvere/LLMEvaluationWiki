@@ -10,6 +10,10 @@ aliases:
   - gpt-4
   - GPT-3
   - InstructGPT
+  - GPT-4-Turbo
+  - GPT-4-turbo
+  - GPT-3.5-Turbo
+  - GPT-3.5
 domain:
   - entity
 ---

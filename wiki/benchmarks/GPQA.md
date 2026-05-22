@@ -1,109 +1,176 @@
 ---
-title: "GPQA"
+title: GPQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
-domain: [knowledge, reasoning, science]
+as_of_date: '2026-05-22'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
+- science
 language: en
 year: 2023
-authors: ["David Rein", "Betty Li Hou", "Asa Cooper Stickland", "Jackson Petty", "Richard Yuanzhe Pang", "Julien Dirani", "Julian Michael", "Samuel R. Bowman"]
-arxiv_id: "2311.12022"
-official_url: "https://github.com/idavidrein/gpqa"
-official_leaderboard: "https://epoch.ai/benchmarks/gpqa-diamond"
-license: "CC-BY-4.0"
+authors:
+- David Rein
+- Betty Li Hou
+- Asa Cooper Stickland
+- Jackson Petty
+- Richard Yuanzhe Pang
+- Julien Dirani
+- Julian Michael
+- Samuel R. Bowman
+arxiv_id: '2311.12022'
+official_url: https://github.com/idavidrein/gpqa
+official_leaderboard: https://epoch.ai/benchmarks/gpqa-diamond
+license: CC-BY-4.0
 size: 448
 format: multiple-choice
 saturation_status: saturated
 sources:
-  - "https://arxiv.org/abs/2311.12022"
-  - "https://epoch.ai/benchmarks/gpqa-diamond"
+- https://arxiv.org/abs/2311.12022
+- https://epoch.ai/benchmarks/gpqa-diamond
 evaluation_protocol:
-  default_shots: "0-shot 或 5-shot"
+  default_shots: 0-shot 或 5-shot
   default_cot: true
   tool_use: false
-  scoring: "accuracy (4-way MCQ)"
+  scoring: accuracy (4-way MCQ)
 pitfalls:
-  - "三个子集分数不可对比：Main 448 / Diamond 198 / Extended 546，论文常默认报告 Diamond"
-  - "饱和：Diamond 从 2024-09 o1 77% → 2026-02 Gemini 3.1 Pro 94.1% / Claude Opus 4.7 94.2%，已超 PhD 专家 65%"
-  - "选项位置偏差同 MMLU 类问题（4-way MCQ 共有缺陷）"
-  - "题目数量小（Diamond 仅 198），单次评测分数波动 ±1-2pt 是常态，建议多 seed 平均"
-  - "已逐渐被 [[HLE]]（Humanity's Last Exam）/ [[FrontierMath]] 等 frontier benchmark 替代"
+- 三个子集分数不可对比：Main 448 / Diamond 198 / Extended 546，论文常默认报告 Diamond
+- 饱和：Diamond 从 2024-09 o1 77% → 2026-02 Gemini 3.1 Pro 94.1% / Claude Opus 4.7 94.2%，已超 PhD 专家 65%
+- 选项位置偏差同 MMLU 类问题（4-way MCQ 共有缺陷）
+- 题目数量小（Diamond 仅 198），单次评测分数波动 ±1-2pt 是常态，建议多 seed 平均
+- 已逐渐被 [[HLE]]（Humanity's Last Exam）/ [[FrontierMath]] 等 frontier benchmark 替代
 sota:
-  - score: "94.3%"
-    model: "Gemini-3.1-Pro"
-    harness: null
-    notes: "Diamond"
-  - score: "90.1%"
-    model: "DeepSeek-V4-Pro"
-    harness: null
-    notes: "Diamond"
-  - score: "86.2%"
-    model: "GLM-5.1"
-    harness: null
-    notes: "Diamond"
-  - score: "86.0%"
-    model: "GLM-5"
-    harness: null
-    notes: "Diamond"
-  - score: "约 85-88%"
-    model: "GPT-5"
-    harness: null
-    notes: "Diamond"
-  - score: "87.7%"
-    model: "o3"
-    harness: null
-    notes: "Diamond"
-  - score: "84.0%"
-    model: "Gemini-2.5-Pro"
-    harness: null
-    notes: "Diamond"
-  - score: "约 78%"
-    model: "Claude-3.7-Sonnet"
-    harness: null
-    notes: "Diamond"
-  - score: "78.0%"
-    model: "o1"
-    harness: null
-    notes: "Diamond"
-  - score: "约 77.3%"
-    model: "Doubao-Seed-1.6"
-    harness: null
-    notes: "Diamond"
-  - score: "约 75.1%"
-    model: "Kimi-K2"
-    harness: null
-    notes: "Diamond"
-  - score: "71.5%"
-    model: "DeepSeek-R1"
-    harness: null
-    notes: "Diamond"
-  - score: "约 70%"
-    model: "Qwen3"
-    harness: null
-    notes: "thinking"
-  - score: "约 69.8%"
-    model: "Llama-4"
-    harness: null
-    notes: "Diamond (Maverick"
-  - score: "65.0%"
-    model: "Claude-3.5-Sonnet"
-    harness: null
-    notes: "Diamond"
-  - score: "62.1%"
-    model: "Gemini-2.0-Flash"
-    harness: null
-    notes: "Diamond"
-  - score: "约 59%"
-    model: "DeepSeek-V3"
-    harness: null
-    notes: "Diamond"
-  - score: "53.6%"
-    model: "GPT-4o"
-    harness: null
-    notes: "Diamond"
+- score: 94.6%
+  model: Claude-Opus-4.7
+  harness: null
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/gpqa
+  notes: Mythos Preview, Diamond
+  with_tools: false
+- score: 94.3%
+  model: Gemini-3.1-Pro
+  harness: null
+  date: 2025-12
+  source: https://blog.google/
+  notes: Diamond
+  with_tools: false
+- score: 94.2%
+  model: Claude-Opus-4.7
+  harness: null
+  date: 2026-04
+  source: https://www.anthropic.com/
+  notes: Diamond
+  with_tools: false
+- score: 94.1%
+  model: Gemini-3.1-Pro
+  harness: null
+  date: 2026-02
+  source: https://pricepertoken.com/leaderboards/benchmark/gpqa
+  notes: Preview 02/26, Diamond
+  with_tools: false
+- score: 92.0%
+  model: GPT-5
+  harness: null
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/gpqa-diamond
+  notes: GPT-5.4, Diamond
+  with_tools: false
+- score: 91.5%
+  model: GPT-5
+  harness: null
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/gpqa-diamond
+  notes: GPT-5.3 Codex, Diamond
+  with_tools: false
+- score: 90.1%
+  model: DeepSeek-V4-Pro
+  harness: null
+  date: 2026-04
+  source: https://api-docs.deepseek.com/news/news260424
+  notes: Diamond
+  with_tools: false
+- score: 87.7%
+  model: o3
+  harness: null
+  date: 2024-12
+  source: https://openai.com/
+  notes: Diamond
+  with_tools: false
+- score: 86.2%
+  model: GLM-5.1
+  harness: null
+  date: 2026-03
+  source: https://huggingface.co/zai-org/GLM-5.1
+  notes: Diamond
+  with_tools: false
+- score: 86.0%
+  model: GLM-5
+  harness: null
+  date: 2026-02
+  source: https://huggingface.co/zai-org/GLM-5
+  notes: Diamond
+  with_tools: false
+- score: 84.0%
+  model: Gemini-2.5-Pro
+  harness: null
+  date: 2025-06
+  source: https://deepmind.google/
+  notes: Diamond
+  with_tools: false
+- score: 78.1%
+  model: Claude-3.7-Sonnet
+  harness: null
+  date: 2025-02
+  source: https://www.anthropic.com/
+  notes: Diamond, extended thinking
+  with_tools: false
+- score: 78.0%
+  model: o1
+  harness: null
+  date: 2024-09
+  source: https://openai.com/
+  notes: Diamond
+  with_tools: false
+- score: 77.3%
+  model: Doubao-Seed-1.6
+  harness: null
+  date: 2025-06
+  source: https://www.volcengine.com/
+  notes: Diamond
+  with_tools: false
+- score: 75.1%
+  model: Kimi-K2
+  harness: null
+  date: 2025-11
+  source: https://artificialanalysis.ai/
+  notes: Diamond
+  with_tools: false
+- score: 71.5%
+  model: DeepSeek-R1
+  harness: null
+  date: 2025-01
+  source: https://api-docs.deepseek.com/
+  notes: Diamond
+  with_tools: false
+- score: 65.0%
+  model: Claude-3.5-Sonnet
+  harness: null
+  date: 2024-06
+  source: https://www.anthropic.com/
+  notes: Diamond
+  with_tools: false
+- score: 53.6%
+  model: GPT-4o
+  harness: null
+  date: 2024-05
+  source: https://openai.com/
+  notes: Diamond
+  with_tools: false
+dimension: A
+subdimension: benchmark
 ---
 
 # GPQA（Graduate-Level Google-Proof Q&A）
@@ -147,28 +214,28 @@ GPQA 的核心价值在于评测模型是否真正掌握了研究生级别的科
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Gemini-3.1-Pro]] | 94.3% | Diamond |
-| 🥈 | [[DeepSeek-V4-Pro]] | 90.1% | Diamond |
-| 🥉 | [[GLM-5.1]] | 86.2% | Diamond |
-| 4 | [[GLM-5]] | 86.0% | Diamond |
-| 5 | [[GPT-5]] | 约 85-88% | Diamond |
-| 6 | [[o3]] | 87.7% | Diamond |
-| 7 | [[Gemini-2.5-Pro]] | 84.0% | Diamond |
-| 8 | [[Claude-3.7-Sonnet]] | 约 78% | Diamond |
-| 9 | [[o1]] | 78.0% | Diamond |
-| 10 | [[Doubao-Seed-1.6]] | 约 77.3% | Diamond |
-| 11 | [[Kimi-K2]] | 约 75.1% | Diamond |
-| 12 | [[DeepSeek-R1]] | 71.5% | Diamond |
-| 13 | [[Qwen3]] | 约 70% | thinking |
-| 14 | [[Llama-4]] | 约 69.8% | Diamond (Maverick |
-| 15 | [[Claude-3.5-Sonnet]] | 65.0% | Diamond |
-| 16 | [[Gemini-2.0-Flash]] | 62.1% | Diamond |
-| 17 | [[DeepSeek-V3]] | 约 59% | Diamond |
-| 18 | [[GPT-4o]] | 53.6% | Diamond |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 94.6% | Mythos Preview, Diamond | 2026-05 | [link](https://llm-stats.com/benchmarks/gpqa) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 94.3% | Diamond | 2025-12 | [link](https://blog.google/) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 94.2% | Diamond | 2026-04 | [link](https://www.anthropic.com/) |
+| 4 | [[Gemini-3.1-Pro]] | 🚫 no | 94.1% | Preview 02/26, Diamond | 2026-02 | [link](https://pricepertoken.com/leaderboards/benchmark/gpqa) |
+| 5 | [[GPT-5]] | 🚫 no | 92.0% | GPT-5.4, Diamond | 2026-04 | [link](https://artificialanalysis.ai/evaluations/gpqa-diamond) |
+| 6 | [[GPT-5]] | 🚫 no | 91.5% | GPT-5.3 Codex, Diamond | 2026-04 | [link](https://artificialanalysis.ai/evaluations/gpqa-diamond) |
+| 7 | [[DeepSeek-V4-Pro]] | 🚫 no | 90.1% | Diamond | 2026-04 | [link](https://api-docs.deepseek.com/news/news260424) |
+| 8 | [[o3]] | 🚫 no | 87.7% | Diamond | 2024-12 | [link](https://openai.com/) |
+| 9 | [[GLM-5.1]] | 🚫 no | 86.2% | Diamond | 2026-03 | [link](https://huggingface.co/zai-org/GLM-5.1) |
+| 10 | [[GLM-5]] | 🚫 no | 86.0% | Diamond | 2026-02 | [link](https://huggingface.co/zai-org/GLM-5) |
+| 11 | [[Gemini-2.5-Pro]] | 🚫 no | 84.0% | Diamond | 2025-06 | [link](https://deepmind.google/) |
+| 12 | [[Claude-3.7-Sonnet]] | 🚫 no | 78.1% | Diamond, extended thinking | 2025-02 | [link](https://www.anthropic.com/) |
+| 13 | [[o1]] | 🚫 no | 78.0% | Diamond | 2024-09 | [link](https://openai.com/) |
+| 14 | [[Doubao-Seed-1.6]] | 🚫 no | 77.3% | Diamond | 2025-06 | [link](https://www.volcengine.com/) |
+| 15 | [[Kimi-K2]] | 🚫 no | 75.1% | Diamond | 2025-11 | [link](https://artificialanalysis.ai/) |
+| 16 | [[DeepSeek-R1]] | 🚫 no | 71.5% | Diamond | 2025-01 | [link](https://api-docs.deepseek.com/) |
+| 17 | [[Claude-3.5-Sonnet]] | 🚫 no | 65.0% | Diamond | 2024-06 | [link](https://www.anthropic.com/) |
+| 18 | [[GPT-4o]] | 🚫 no | 53.6% | Diamond | 2024-05 | [link](https://openai.com/) |
 
 <!-- AUTO-SOTA:END -->
 

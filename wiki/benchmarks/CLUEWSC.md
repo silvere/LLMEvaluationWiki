@@ -11,6 +11,8 @@ domain:
 year: 2020
 arxiv_id: ""
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # CLUEWSC

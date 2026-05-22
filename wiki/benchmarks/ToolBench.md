@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.75
 sources:
   - "Qin, Y., et al. (2023). ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs. ICLR 2024."
+dimension: D
+subdimension: tool-use
 ---
 
 # ToolBench

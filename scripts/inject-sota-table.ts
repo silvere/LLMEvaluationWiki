@@ -29,9 +29,16 @@ interface SotaEntry {
   score: string;
   model: string;
   harness?: string | null;
+  with_tools?: boolean | null;  // true=带 tools/agentic，false=裸模型，null=未知
   date?: string;
   source?: string;
   notes?: string;
+}
+
+function parseScore(s: string | undefined): number {
+  if (!s) return -1;
+  const m = String(s).match(/(\d+(?:\.\d+)?)/);
+  return m ? parseFloat(m[1]) : -1;
 }
 
 interface FM {
@@ -42,13 +49,21 @@ interface FM {
 const MEDAL = ["🥇", "🥈", "🥉"];
 
 function buildBlock(entries: SotaEntry[]): string {
-  // 检测是否任一条目有 harness/date/source —— 决定是否渲染这几列（避免全 — 的视觉噪声）
-  const hasHarness = entries.some((e) => e.harness);
-  const hasDate = entries.some((e) => e.date);
-  const hasSource = entries.some((e) => e.source);
+  // 排序修复：按 score 数字降序（修复 GLM-5.1 排在 GLM-5 后面的 bug）
+  // 复制数组避免 mutate 原 frontmatter
+  const sorted = [...entries].sort((a, b) => parseScore(b.score) - parseScore(a.score));
 
-  const headerCols = ["#", "模型", "分数", "备注"];
-  if (hasHarness) headerCols.splice(2, 0, "Harness");
+  // 自适应列：只有当数据存在时才渲染该列
+  const hasHarness = sorted.some((e) => e.harness);
+  const hasTools = sorted.some((e) => e.with_tools !== undefined && e.with_tools !== null);
+  const hasDate = sorted.some((e) => e.date);
+  const hasSource = sorted.some((e) => e.source);
+
+  const headerCols = ["#", "模型"];
+  if (hasHarness) headerCols.push("Harness");
+  if (hasTools) headerCols.push("Tools");
+  headerCols.push("分数");
+  headerCols.push("备注");
   if (hasDate) headerCols.push("时间");
   if (hasSource) headerCols.push("来源");
 
@@ -57,15 +72,19 @@ function buildBlock(entries: SotaEntry[]): string {
     "",
     "## 模型得分排行",
     "",
-    "> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。",
+    "> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。",
     "",
     "| " + headerCols.join(" | ") + " |",
     "|" + headerCols.map(() => "---").join("|") + "|",
   ];
-  entries.forEach((e, i) => {
+  sorted.forEach((e, i) => {
     const rank = i < 3 ? MEDAL[i] : String(i + 1);
     const row: string[] = [rank, `[[${e.model}]]`];
     if (hasHarness) row.push(e.harness ? `[[${e.harness}]]` : "—");
+    if (hasTools) {
+      const tv = e.with_tools;
+      row.push(tv === true ? "🔧 with" : tv === false ? "🚫 no" : "—");
+    }
     row.push(e.score);
     row.push(e.notes ?? "");
     if (hasDate) row.push(e.date ?? "—");

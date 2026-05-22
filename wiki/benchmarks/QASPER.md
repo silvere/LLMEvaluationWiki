@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.85
 sources:
   - "Dasigi, P., et al. (2021). A Dataset of Information-Seeking Questions and Answers Anchored in Research Papers. NAACL 2021."
+dimension: C
 ---
 
 # QASPER

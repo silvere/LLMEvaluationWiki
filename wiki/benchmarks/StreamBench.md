@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2406.08009"
 status: active
+dimension: E
 ---
 
 # StreamBench

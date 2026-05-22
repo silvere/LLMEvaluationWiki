@@ -20,6 +20,8 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2307.10635"
   - "https://scibench-ucla.github.io/"
+dimension: A
+subdimension: benchmark
 ---
 
 # SciBench

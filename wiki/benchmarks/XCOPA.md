@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.88
 sources:
   - "Ponti, E.M., et al. (2021). XCOPA: Translation and Paraphrase of the Choice of Plausible Alternatives Dataset for 11 Languages. EMNLP 2020."
+dimension: A
+subdimension: benchmark
 ---
 
 # XCOPA

@@ -11,6 +11,7 @@ domain:
 year: 2023
 arxiv_id: "2304.08485"
 status: active
+dimension: E
 ---
 
 # LLaVA-Bench

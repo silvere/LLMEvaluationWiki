@@ -10,6 +10,7 @@ domain:
 year: 2023
 arxiv_id: "2308.09126"
 status: active
+dimension: E
 ---
 
 # EgoSchema

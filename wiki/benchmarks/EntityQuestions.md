@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.85
 sources:
   - "Sciavolino, C., et al. (2021). Simple Entity-Centric Questions Challenge Dense Retrievers. EMNLP 2021."
+dimension: A
+subdimension: benchmark
 ---
 
 # EntityQuestions

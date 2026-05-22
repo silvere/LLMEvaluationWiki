@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2009.11462"
+dimension: I
+subdimension: content-safety
 ---
 
 # RealToxicityPrompts：真实文本毒性触发评测基准

@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2203.10244"
+dimension: E
 ---
 
 # ChartQA：图表理解视觉问答基准

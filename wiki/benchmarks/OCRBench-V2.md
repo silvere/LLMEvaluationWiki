@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2404.01981"
 status: active
+dimension: E
 ---
 
 # OCRBench V2

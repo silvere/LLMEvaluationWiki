@@ -12,6 +12,8 @@ domain:
 year: 2012
 arxiv_id: ""
 status: active
+dimension: F
+subdimension: T2I
 ---
 
 # ImageNet-1K

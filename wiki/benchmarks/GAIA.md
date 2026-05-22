@@ -1,29 +1,75 @@
 ---
-title: "GAIA (General AI Assistants)"
+title: GAIA (General AI Assistants)
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [agent, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- agent
+- reasoning
 language: en
 year: 2023
-authors: ["Grégoire Mialon", "Clémentine Fourrier", "Craig Swift", "Thomas Wolf", "Yann LeCun", "Thomas Scialom"]
-arxiv_id: "2311.12983"
-official_url: "https://huggingface.co/datasets/gaia-benchmark/GAIA"
-license: "CC BY-NC 4.0"
+authors:
+- Grégoire Mialon
+- Clémentine Fourrier
+- Craig Swift
+- Thomas Wolf
+- Yann LeCun
+- Thomas Scialom
+arxiv_id: '2311.12983'
+official_url: https://huggingface.co/datasets/gaia-benchmark/GAIA
+license: CC BY-NC 4.0
 size: 466
 format: open-ended
 status: active
 saturation_threshold: 0.85
 sources:
-  - "Mialon, G., et al. (2023). GAIA: A Benchmark for General AI Assistants. ICLR 2024."
+- 'Mialon, G., et al. (2023). GAIA: A Benchmark for General AI Assistants. ICLR 2024.'
+dimension: D
+subdimension: general
+sota:
+- score: 74.6%
+  model: Claude-Sonnet-4.6
+  harness: OpenHands
+  with_tools: true
+  date: 2026-04
+  source: https://hal.cs.princeton.edu/gaia
+  notes: 整体（Level1 86%/Level2 74.8%/Level3 53%），Princeton HAL 框架
+- score: 72.6%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://huggingface.co/spaces/gaia-benchmark/leaderboard
+  notes: OpenAI Deep Research，validation set
+- score: 44.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://huggingface.co/spaces/gaia-benchmark/leaderboard
+  notes: bare（无 scaffolding），与 with_tools 差 30pt+ 说明框架影响极大
 ---
 
 # GAIA
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Harness | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Sonnet-4.6]] | [[OpenHands]] | 🔧 with | 74.6% | 整体（Level1 86%/Level2 74.8%/Level3 53%），Princeton HAL 框架 | 2026-04 | [link](https://hal.cs.princeton.edu/gaia) |
+| 🥈 | [[GPT-5]] | — | 🔧 with | 72.6% | OpenAI Deep Research，validation set | 2026-02 | [link](https://huggingface.co/spaces/gaia-benchmark/leaderboard) |
+| 🥉 | [[GPT-5]] | — | 🚫 no | 44.8% | bare（无 scaffolding），与 with_tools 差 30pt+ 说明框架影响极大 | 2026-05 | [link](https://huggingface.co/spaces/gaia-benchmark/leaderboard) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

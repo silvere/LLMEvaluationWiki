@@ -11,6 +11,7 @@ domain:
 year: 2024
 arxiv_id: "2406.08035"
 status: active
+dimension: long-ctx
 ---
 
 # LVBench

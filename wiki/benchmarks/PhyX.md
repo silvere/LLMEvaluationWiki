@@ -12,6 +12,7 @@ domain:
 year: 2025
 arxiv_id: "2505.15929"
 status: active
+dimension: E
 ---
 
 # PhyX

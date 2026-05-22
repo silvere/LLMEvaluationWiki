@@ -11,6 +11,7 @@ domain:
 year: 2025
 arxiv_id: "2502.09621"
 status: active
+dimension: E
 ---
 
 # MME-CoT

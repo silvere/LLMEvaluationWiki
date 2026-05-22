@@ -15,6 +15,7 @@ domain:
   - benchmark
   - video
   - multimodal
+dimension: E
 ---
 
 # InfiniBench

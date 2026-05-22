@@ -11,6 +11,8 @@ domain:
 year: 2024
 arxiv_id: "2406.05956"
 status: active
+dimension: F
+subdimension: T2I
 ---
 
 # Commonsense-T2I

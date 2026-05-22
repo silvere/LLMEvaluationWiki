@@ -10,6 +10,8 @@ domain:
 year: 2021
 arxiv_id: "1907.07174"
 status: active
+dimension: F
+subdimension: T2I
 ---
 
 # ImageNet-A

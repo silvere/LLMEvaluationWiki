@@ -388,3 +388,367 @@ score = 1 × paper_count
 - 在新一轮 model spec 任务开始时，**第一步必须**是 `WebSearch` 11 家 vendor 的"latest model 2026"，**第二步**才是写文件。
 - 若用户给的是"补全 / 完善"类指令，**默认含义就是要扫缺漏**，不是只 patch 现有的。
 
+
+---
+
+## LEARNINGS-018: 本地预览 server 必须用 ThreadingHTTPServer，不能用 SimpleHTTPServer
+
+**日期**：2026-05-19
+**触发**：用户报告 "8083这个端口貌似访问不了了"。
+
+**诊断链路**（下次端口"在 LISTEN 但 connect 超时"直接对照）：
+1. `ps aux | grep wiki_server` → 进程在跑（PID 50103，启动 5 天前），STATE 是 `SN`（背景优先级，被 macOS 降权了）
+2. `lsof -nP -iTCP:8083` → 端口确实 LISTEN，但发现一个外网 IP `47.245.9.17` 的 ESTABLISHED 长连接挂着
+3. `curl -sS localhost:8083/` → `Failed to connect ... after 7788 ms`（connect 阶段超时，不是 HTTP 错误）
+
+**根因**：`SimpleHTTPServer` / `http.server` 默认是**单线程**的，一个慢连接（外部爬虫 / 长 idle 连接 / 客户端不读 socket）能把整个 server 的 accept loop 阻塞。SN 状态进一步让 OS 不给它 CPU。
+
+**修复（不是简单重启）**：
+
+```python
+# /tmp/wiki_server.py 关键改动
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+
+ThreadingHTTPServer.allow_reuse_address = True  # 重启免等 TIME_WAIT
+with ThreadingHTTPServer(("", port), WikiHandler) as httpd:
+    httpd.daemon_threads = True  # 卡死 worker 不阻止退出
+    httpd.serve_forever()
+```
+
+**为什么不能只 kill + 用 `python -m http.server`**：
+- 内置 CLI 是 `HTTPServer` 单线程，重启完同样会被下一个慢连接卡。
+- 必须用 `ThreadingHTTPServer` + `daemon_threads = True` + 自定义 handler（保留 CLAUDE.md §2.1 的 arXiv ID `.html` fallback）。
+
+**Hard rule**：
+1. 本地预览 server **永远** 用 `ThreadingHTTPServer`，不用 `SimpleHTTPServer` / `HTTPServer`。
+2. 跑超过 1 天的本地 server 默认怀疑"被慢连接卡了"——先查 `lsof` 看有没有外网 ESTABLISHED 连接。
+3. 启动方式统一用 `nohup python3 /tmp/wiki_server.py <root> <port> > /tmp/wiki_server.log 2>&1 &`，留 log 供排查。
+
+**验证**（5 个 endpoint，全部 < 7ms）：
+- `/` → 200 / 6ms
+- `/models/` → 200 / 1ms
+- `/models/DeepSeek-V4-Pro` → 200 / 1ms
+- `/papers/2404.07440` (arXiv ID 含点号 fallback) → 200 / 1ms
+- `/benchmarks/GPQA` → 200 / 1ms
+
+
+---
+
+## LEARNINGS-019: frontmatter 的 arxiv_id / official_url / sources 必须显式注入正文
+
+**日期**：2026-05-19
+**触发**：用户问 "http://localhost:8083/benchmarks/InterCode 这种页面，为何没有 InterCode 的链接或者论文链接？"
+
+**根因**：
+- Quartz 默认**不会**把 frontmatter 的自定义字段（`arxiv_id` / `official_url` / `sources`）渲染到页面正文。
+- benchmark 模板把这些字段当成"元数据"放在 frontmatter 里，但模板的正文部分从来没有"参考链接"section。
+- 用户访问页面只看到正文，找不到论文链接和官网链接。
+
+**影响面**：
+- 量化扫描：**265/379 = 70%** 的 benchmark 页面 frontmatter 有 arxiv_id/official_url 但正文没出现。
+- 不止 benchmarks——papers / models / tools / leaderboards 都可能有同样问题。
+
+**修复**：
+1. 新增 `scripts/inject-benchmark-links.ts`：扫 frontmatter，在 H1 之后、第一个 H2 之前注入"## 参考链接"区块，用 `<!-- AUTO-LINKS:START -->...<!-- AUTO-LINKS:END -->` 包住（幂等，重跑只替换该区块）。
+2. URL 智能分类：arxiv.org → "arXiv 论文"，github.com → "GitHub 仓库"，huggingface.co → "Hugging Face"，etc.
+3. 注册到 `package.json`：
+   - `npm run inject-links` — 仅 benchmarks
+   - `npm run inject-links-all` — benchmarks + papers + models + tools + leaderboards
+   - 加入 `check-all` 流水线，每次 build 前自动跑
+
+**Hard rule**：
+1. **任何 frontmatter 字段如果用户需要看，必须显式渲染到正文**，不能假设 Quartz 帮你渲染。
+2. **新增 benchmark / paper / model 页时，frontmatter 填了 arxiv_id / official_url 后必须跑 `npm run inject-links`**（已加到 check-all）。
+3. **自动注入区块必须用 marker**（`AUTO-LINKS:START/END`），避免覆盖人工编辑或重复追加。
+
+**验证**：
+- 抽样 9 个 benchmark 页：InterCode / HumanEval / GPQA / AIME / MMLU / HLE / SWE-bench-Verified / SWE-bench-Pro / MMMU 全部出现可点击参考链接。
+- TOC 目录自动出现"参考链接"条目，可锚点跳转。
+- 第二次跑脚本 changed=0 noop=379，幂等性 OK。
+
+
+---
+
+## LEARNINGS-020: entity 类 "相关页面" 必须从字段算，不能手写
+
+**日期**：2026-05-19
+**触发**：用户问 "ByteDance-AI 的相关页面里有 C-Eval，这两个之间没啥关联吧？相关页面的思路是啥？"
+
+**根因诊断**：
+- 179 个 entity 页中**95 页有手写"相关页面"**，其中 53% 有问题（plain text / 中文死链 / broken wikilink）
+- ByteDance-AI 把 C-Eval 列为相关，只因正文有一句"豆包在 C-Eval 上发分"——这种"用过"关系如果都列，得列几十个 benchmark，颗粒度乱
+- "相关"定义本身就模糊，作者各凭直觉，无统一抓手
+
+**修复**：
+1. 新建 `scripts/inject-entity-related.ts` —— 用 `<!-- AUTO-RELATED:START -->` marker 注入"## 自动关联"区块
+2. 算两个维度：
+   - **该机构发布的模型**：扫 `wiki/models/` 的 `developer` 字段双向 substring 匹配 entity 的 slug/title/aliases
+   - **同类机构**：同 `entity_type` + **同 region 优先**（中国公司/中国学界/美国公司/美国学界/欧洲分组），保证 ByteDance 的兄弟是 Alibaba/DeepSeek 而不是 Stanford-CRFM
+3. 前置数据治理：给 24 个核心机构补 `entity_type: org`（之前 137/179 未填）
+4. 注入位置：文件末尾追加（不动现有手写"相关页面" section）
+5. 注册到 `package.json`：`npm run inject-entity-related`
+
+**关键设计权衡**：
+- **不删现有手写"相关页面"**——避免误伤作者精选语义，让自动区块和手写并存，后续 review 决定清理
+- **region 分组写在脚本里而非 frontmatter**——27 个核心机构的 region 列表不会频繁变，写在脚本里集中维护比 179 个 frontmatter 加字段简洁
+- **developer 字段必须用规范 slug 形式**（如 `Alibaba-Tongyi`），新建 model spec 时不要写 `Alibaba (Qwen Team)` 这种带括号——否则匹配率下降
+
+**Hard rule**：
+1. 任何 entity 类页（机构/研究者/模型家族）的"相关"信息**必须从 frontmatter 字段算**，不允许纯手写 plain text。
+2. 新建 model spec 时 `developer:` 字段必须等于对应 entity 的 slug（如 `developer: Alibaba-Tongyi`），不要写公司全称或带括号别名。
+3. 新增 entity 页时必须填 `entity_type:`（org / person / model）。
+
+**验证**：
+- ByteDance-AI 自动列出 3 个 Doubao 模型（按时间倒序）+ 7 个中国公司兄弟
+- Anthropic 自动列出美国公司兄弟（OpenAI / Google-DeepMind / Meta-AI / Microsoft-Research / Cohere / xAI / Reka）
+- 全量 changed=27 noop=152，HTTP 200 / 2ms
+
+
+---
+
+## LEARNINGS-021: entities/ 物理拆目录到 people/orgs/model-families/
+
+**日期**：2026-05-19
+**触发**：用户反馈 "左侧链接的 entities 下面，人和组织混在一起，感觉有点乱"
+
+**根因**：
+- 179 个 entity 平铺在 `wiki/entities/`，按字母排序就会出现 `01-AI / Aaron-Jaech / Adina-Williams / AI2 / Alibaba-Tongyi / Andrej-Karpathy` 这种人物和机构交错的视觉混乱
+- Quartz Explorer 按目录树渲染，**物理目录就是分组抓手**
+
+**修复**（端到端 3 步闭环）：
+1. **数据治理**：先把 113 个未填 `entity_type` 的 entity 用启发式分类
+   - 启发式规则：title 含 Lab/AI/Research/Institute/University → org；slug 是英文人名格式（Firstname-Lastname） → person；其他 outlier 11 个人审
+   - 最终：person 124 / org 50 / model 5
+2. **物理拆目录**：按 entity_type mv
+   - `wiki/entities/<person>.md` → `wiki/entities/people/<person>.md`
+   - `wiki/entities/<org>.md` → `wiki/entities/orgs/<org>.md`
+   - `wiki/entities/<model>.md` → `wiki/entities/model-families/<model>.md`
+3. **脚本适配**：把 `inject-entity-related.ts` 的 glob 从 `wiki/entities/*.md` 改成 `wiki/entities/**/*.md`（递归）
+
+**关键技术结论**：
+- **wikilink shortest 解析按 basename，跨目录仍能 work**——`[[Andrej-Karpathy]]` 不管在 `wiki/sources/` 还是 `wiki/papers/`，都自动解析到 `wiki/entities/people/Andrej-Karpathy.md`，**完全不用批改 wikilink**
+- 但 **URL 会变**：`/entities/Andrej-Karpathy` → `/entities/people/Andrej-Karpathy`，外部书签会失效（本 wiki 流量小可控）
+- 用 `shutil.move` 一次 mv 179 个，git 自动识别 rename
+
+**Hard rule**：
+1. 新建 entity 页时**必须按 entity_type 放对应子目录**：people / orgs / model-families
+2. 新增 entity_type 类别（如未来 community / event）时同步建子目录
+3. `inject-entity-related.ts` 永远用 `wiki/entities/**/*.md` 递归 glob
+
+**验证证据**（curl http://localhost:8083）：
+- `/entities/people/Andrej-Karpathy` → 200
+- `/entities/orgs/ByteDance-AI` → 200
+- `/entities/orgs/Anthropic` → 200
+- `/entities/model-families/Qwen` → 200
+- `/entities/Andrej-Karpathy`（旧 URL） → 404（迁移成功）
+- ByteDance-AI 页里 `[[Alibaba-Tongyi]]` 自动渲染成 `entities/orgs/Alibaba-Tongyi`，跨目录解析 work
+
+
+---
+
+## LEARNINGS-022: 年度报告类内容必须建立"时效性闭环"
+
+**日期**：2026-05-19
+**触发**：用户反馈 "http://localhost:8083/papers/state-of-ai-2023 这个是 2023 年的报告，太老了"
+
+**诊断（先量化，再下药）**：
+- 全 wiki 时效性扫描：paper 类 49/163 ≤2023，benchmark 类 170/379 ≤2023
+- **关键洞察**：≤2023 的内容里**绝大多数是经典锚点**（GLUE / SuperGLUE / MMLU / HumanEval / CoT 论文等），**不该删**——它们是 LLM 评测的历史地基
+- 真正的时效性问题：**年度系列报告**缺新版（State of AI / AI Index / Epoch Compute Trends）
+- 用 grep `source_type:report` + title 含 "annual / state of / index 20\d\d" 锁定到 8 个报告条目，其中 3 个系列缺新版
+
+**修复**：
+1. WebSearch 验证新版**真实存在**（不靠记忆）：
+   - State of AI Report 2024（2024-10-10 by Nathan Benaich）✓
+   - State of AI Report 2025（2025-10，第八版）✓
+   - AI Index Report 2025（Stanford HAI 2025-04，第八版）✓
+   - AI Index Report 2026（Stanford HAI 2026-04，第九版 423 页）✓
+2. 建 4 个新 paper 页，每页含：核心 claim（带数据）+ 关联 wiki 页 wikilink + 权威官方 source URL
+3. **在旧版页面顶部注入 `[!note]` callout**，指向新版——避免用户撞进旧页迷路
+4. AI Index 2026 的 claim 与 wiki 实测得分交叉引用：`SWE-bench 60→100% 一年` 与 [[SWE-bench-Verified]] 页得分趋势一致；`美中差距闭合` 与 [[DeepSeek-V4-Pro]] / [[GLM-5]] / [[Qwen3.5]] 实测得分吻合
+
+**Hard rule**：
+1. 任何**年度系列**内容（年报、leaderboard 快照、模型 release timeline）必须建立"前代→当前→后续"双向链接，在 frontmatter 加 `series:` 字段或在 H1 后注入跳转 callout
+2. 经典论文 / 经典 benchmark 即使 ≤2023 也**不视为过期**——时效性判定要看"内容类型"而非"年份"
+3. 新版报告条目的 `confidence: draft`，等人审核对原文页码后 promote 到 `verified`
+4. 老页保留作为历史快照，**不删不改 claim**，只在顶部加跳转 callout
+
+**验证**：
+- 4 新页 HTTP 200：state-of-ai-2024/2025 + ai-index-2025/2026
+- 老页 state-of-ai-2023 顶部成功跳转到 5 个新版本（`[!note] callout` 渲染正常）
+- 老页 ai-index-2024 也加了跳转，避免 2024 用户再次撞进旧内容
+
+
+---
+
+## LEARNINGS-023: benchmark SOTA SSOT + harness 维度
+
+**日期**：2026-05-19
+**触发**：用户问"各 benchmark 维护一个 Top 模型得分情况，至少一个最高分吧？harness 也要考虑"
+
+**根因诊断**：
+- 379 个 benchmark 里 0 个 frontmatter 含结构化 SOTA 字段
+- 93 个有 "## SOTA 表现" H2 但大多是"待更新"占位符
+- 20 个手工"## 主流模型得分"表与 wiki/models/ 双重维护，未对齐
+- wiki/tools/ 24 个全是评测工具，**0 个 agent harness 页**——SWE-bench 表里只列模型不区分 SWE-agent / OpenHands 等 scaffolding
+
+**修复（顶层设计：单一数据源 SSOT + marker 幂等渲染）**：
+
+```
+frontmatter.sota → 脚本 → 正文 <!-- AUTO-SOTA --> 区块
+```
+
+1. **数据 schema**（CLAUDE.md §3.5）：
+   ```yaml
+   sota:
+     - {score, model, harness, date, source, notes}
+   ```
+   - `harness: null` = 裸模型；agent benchmark 填 wiki/harnesses/ 的 slug
+   - 上限 5 条避免 frontmatter 膨胀
+2. **新 type: harness**（注册到 validate VALID_TYPES + build-index TYPE_ORDER）
+3. **4 个 harness stub**：SWE-agent / OpenHands / Aider / Devin（含 developer / official_url / supported_benchmarks）
+4. **2 个新脚本**：
+   - `migrate-sota-from-tables.ts`：解析现有"## 主流模型得分"表 → 写入 frontmatter，保序取 Top-5
+   - `inject-sota-table.ts`：读 frontmatter `sota` → 渲染 marker 区块插入 "## SOTA 表现" 之后
+5. **流水线注册**：`check-all` 加 `inject-sota`
+
+**Hard rule**（CLAUDE.md §3.5）：
+1. 新建 benchmark 必须填 `sota` 至少 1 条
+2. 维护时**只编辑 frontmatter**，禁止手改 `<!-- AUTO-SOTA -->` 区块
+3. `model` slug 必须存在于 wiki/models/；`harness` 必须存在于 wiki/harnesses/
+4. 历史"## 主流模型得分"区块保留作为 Top-5 之外的全量索引
+
+**踩的坑**：
+- 第一次 quartz build 失败——`wiki/papers/agent-evolver.md` 等 9 个 paper 的 `authors:` 字段是混合 inline+block YAML（`["- \"Name\""]` 后跟 `- "Name"`），yaml.load 解析失败。批量 regex 修正为纯 block list。
+
+**验证证据**：
+- 20 benchmark migrate=20 noop=0；inject=20 noop=359；第二次 inject changed=0（幂等 ✓）
+- 4 个 harness 页 HTTP 200
+- 4 个抽样 benchmark 页（GPQA / SWE-bench-Verified / HumanEval / AIME）顶部 "当前 SOTA" 表正常渲染，含 Top-5 模型 wikilink
+- TOC 自动出现"当前 SOTA"锚点
+- Quartz build 965 文件，2299 emit，53 秒
+
+**长期演进**：
+- 359 个未迁移 benchmark 逐步人审补 SOTA（颗粒度 < 5/page，PR-friendly）
+- agent benchmark 第二轮人审补 harness 字段（如 SWE-bench-Verified 加 "SWE-agent" / "OpenHands"）
+- 可选：写 `audit-sota.ts` 扫 source URL 404、扫 model/harness slug 存在性
+
+
+---
+
+## LEARNINGS-024: SOTA 双表整合 — SSOT 落地 + YAML 双键陷阱
+
+**日期**：2026-05-19
+**触发**：用户反馈 "AIME 的当前 SOTA 和主流模型得分两表看起来重复"
+
+**根因诊断**：
+- LEARNINGS-023 的设计让"当前 SOTA"（Top-5 frontmatter 渲染）和"主流模型得分"（手工 14 行表）共存——视觉上 100% 重复（前 5 行完全相同），只有后 9 行长尾不重复
+- 设计意图本是"冠军 vs 全量梯队"互补，但实现没拉开差异
+
+**修复路径**：
+1. 扩 `sota` 上限 5 → 30，让 frontmatter 承载完整排行（不只是 Top-5）
+2. inject-sota 区块改名"## 模型得分排行"，加 # 列 + 前 3 名 🥇🥈🥉
+3. 写 prune-legacy-scores-section.ts 删除 20 个 benchmark 的手工"## 主流模型得分"区块
+4. validate sota 上限 5 → 30
+
+**踩坑（必须记录）**：
+- migrate-sota 用**字符串拼接**写 frontmatter（`fmText + "\nsota:\n..."`），当 frontmatter 已存在 sota 字段时会产生**双 sota 键**——这是无效 YAML，导致 js-yaml `duplicated mapping key` 错误 → inject-sota 全部 skip（20/20）→ prune 又删了手工表 → **页面什么得分都看不到**
+- 20 个 benchmark 全部踩坑（每次 migrate 累加一份）
+- 修复：写 dedupe-sota-keys.ts 保留最后一个块 + 改 migrate-sota 让"存在 sota 即 noop"
+
+**Hard rule**：
+1. **写 frontmatter 永远用 yaml.load → 修改对象 → yaml.dump → 重写文件**，禁止字符串拼接追加字段。否则会产生重复键。
+2. migrate 类脚本 default 必须保守："存在该字段即 noop"，强制覆盖需 `--force` flag
+3. 双表整合后 SSOT 落地：`sota` frontmatter 字段是**唯一**模型得分来源；手工区块永远禁止
+
+**验证证据**：
+- AIME / GPQA / SWE-bench-Verified 等 20 个 benchmark：手工"主流模型得分"区块=0 ✓，"模型得分排行"区块 ✓ 含 🥇🥈🥉
+- AIME 14 条全部渲染（98.3% Doubao → 9-13% GPT-4o 完整代际）
+- 第二次 inject 幂等 changed=0
+- Quartz build 969 文件 emit
+
+**新增脚本与 npm script**：
+- `npm run migrate-sota` （扩容版，存在 sota 即 noop）
+- `npm run dedupe-sota` （清理双键）
+- `npm run prune-legacy-scores` （删历史手工区块）
+- `npm run inject-sota` （新格式：奖牌 + # 列）
+
+
+---
+
+## LEARNINGS-025: SOTA 数据质量是系统性缺陷 — 评测口径 + 时效性 + 排序
+
+**日期**：2026-05-19
+**触发**：用户对照 Scale AI / Artificial Analysis / llm-stats / pricepertoken 四方榜单后指出 HLE 数据严重过时——SOTA 缺当前 frontier（Claude Mythos 64.7% / Gemini 3.1 Pro 44.7%），同时给出 5 个具体修订方向
+
+**根因诊断**（量化全 wiki）：
+- 21/21 benchmark 全部踩同样的坑（HLE 不是孤例）：
+  - **100% 缺 source URL**
+  - **100% 缺 date 时间戳**
+  - **71% score 含"约/待更新"模糊词**
+  - **81% 缺 2026 frontier 模型**
+  - **24% 排序异常**
+- 深层原因：migrate-sota 从手工 3 列表（模型/分数/备注）忠实复刻——原表本身就缺评测口径/时间/源维度
+
+**修复（4 步）**：
+1. **升级 sota schema**：加 `with_tools: boolean` 字段，区分"with tools / no tools 是两个赛道"（HLE 上 ~20pt gap）
+2. **改 inject-sota**：
+   - 自适应列（Tools / 时间 / 来源仅在数据存在时渲染）
+   - **按 score 数字降序自动排序**（修 GLM-5.1 排 GLM-5 后面的 bug）
+   - 表头标"按 score 自动降序"
+3. **重写 HLE sota**（基于 4 方榜单）：18 行 with-tools / no-tools 双赛道完整覆盖（Claude Mythos 64.7% → Gemini 2.5 Pro 18.8%），每行带 source URL + date
+4. **HLE 加效度边界 callout**：
+   - with_tools / no_tools 跨赛道不可比
+   - FutureHouse 2025-09 化学/生物 30% 答案有误（题数 3000→2500）
+   - judge 选择敏感（GLM-5.1 用 GPT-5.2 vs Claude judge 差 3-5pt）
+   - last_verified 月级更新
+
+**新增 audit-sota.ts**（`npm run audit-sota`）：
+- 扫所有 benchmark sota 字段，输出待修清单（no_source / no_date / no_with_tools / vague_score / order_anomaly / frontier_missing）
+- 输出当前 21 个 benchmark 的 issues 标签
+
+**Hard rule**：
+1. **sota 条目必须有 source URL + date + with_tools 标注**——否则跨模型/跨时间不可比
+2. **HLE / AIME 等月级更新的 benchmark，frontmatter 必须有 `last_verified` 日期**，超过 6 个月未 verified 算 stale
+3. **sota 排序由脚本自动按 score 数字降序**，frontmatter 中条目顺序不重要——避免手工排序 bug
+4. 高难度 benchmark（HLE / GPQA / FrontierMath）必须有效度边界 `[!warning]` callout，标注题目质量 / judge 敏感性 / 评测协议差异
+
+**演进路径**：
+- 剩 20 个 benchmark 按 `npm run audit-sota` 输出的清单逐个治理（按重要性：HLE/GPQA/SWE-bench/AIME 已完成或在前列）
+- 未来 sota 字段可加 `evaluation_protocol` 字段（pass@1 / maj@64 / 0-shot CoT 等）
+- 可考虑接入 Artificial Analysis API 半自动同步主流 benchmark 月级 SOTA
+
+
+---
+
+## LEARNINGS-026: P0 SOTA 治理批次（4 benchmark）+ 高效率脚本化模式
+
+**日期**：2026-05-22
+**触发**：用户确认 HLE 治理质量后说"继续吧"——按 audit 清单推进 P0 批次
+
+**P0 完成清单**：
+- SWE-bench-Verified: 15 条 sota（Claude Mythos 93.9% → 历史 GPT-5 74%）
+- GPQA: 18 条 sota（Claude Mythos 94.6% → GPT-4o 53.6%）
+- AIME: 19 条 sota（多模型 100% → GPT-4o 9-13%）
+- MMLU: 9 条 sota（GPT-5.4 92% → Llama-4 85%，已饱和）
+
+**方法论沉淀**（比 LEARNINGS-025 更精炼）：
+- WebSearch 4 个 query 并行 → 单一 Python 脚本批量重写 frontmatter（比 4 次 Read+Edit 快 5 倍）
+- frontmatter 数据维度统一：score / model / harness / with_tools / date / source / notes
+- audit 工具量化效果对比：
+  - no_source: 95% → **76%** (-19pt)
+  - no_date: 95% → **76%** (-19pt)
+  - no_with_tools: 95% → **86%** (-9pt)
+  - order_anomaly: 24% → **10%** (-14pt)
+  - frontier_missing: 67% → **62%** (-5pt)
+
+**关键洞察**：
+- **GPQA 不区分 with/no tools**（标准评测都是 zero-shot CoT），故 with_tools 字段保留 null，audit 工具的 `no_with_tools` 误报可接受
+- **MMLU 已饱和**（90%+ 集中），audit 的 `vague_score` 也是合理标注（"约 92%"是因为分数本身就接近，置信区间 ±1pt）
+- **同模型不同变体应保留多行**（如 Claude-Opus-4.7 Mythos vs Adaptive vs baseline；GPT-5.4 vs 5.3 Codex），不要去重，体现"同代际不同模式"差异
+
+**剩余演进**：
+- P1 批次（HumanEval / MATH / LiveCodeBench / Codeforces）按相同模式
+- P2 批次（C-Eval / CMMLU / MGSM / MMMU 等单条 sota）扩容
+- 长期可考虑 audit-sota 加 `--ignore-vague-on-saturated` flag（MMLU 类已饱和 benchmark 不报 vague）
+

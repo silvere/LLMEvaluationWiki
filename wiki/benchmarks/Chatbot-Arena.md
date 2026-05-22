@@ -1,36 +1,72 @@
 ---
-title: "Chatbot Arena"
+title: Chatbot Arena
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
-domain: [dialog, instruction-following, reasoning]
+as_of_date: '2026-05-19'
+last_verified: '2026-05-22'
+domain:
+- dialog
+- instruction-following
+- reasoning
 language: multilingual
 year: 2023
-authors: ["LMSYS Org (UC Berkeley)"]
-arxiv_id: "2403.04132"
-official_url: "https://lmarena.ai/"
-official_leaderboard: "https://lmarena.ai/leaderboard"
-license: ""
+authors:
+- LMSYS Org (UC Berkeley)
+arxiv_id: '2403.04132'
+official_url: https://lmarena.ai/
+official_leaderboard: https://lmarena.ai/leaderboard
+license: ''
 size: 6000000
 format: pairwise-preference
 saturation_status: active
 sources:
-  - "https://lmarena.ai/"
-  - "https://arxiv.org/abs/2403.04132"
-  - "https://news.lmarena.ai/series-a/"
+- https://lmarena.ai/
+- https://arxiv.org/abs/2403.04132
+- https://news.lmarena.ai/series-a/
 evaluation_protocol:
-  scoring: "Bradley-Terry (Elo-like)"
-  default_shots: "user-defined"
+  scoring: Bradley-Terry (Elo-like)
+  default_shots: user-defined
   default_cot: false
   tool_use: false
 sota:
-  - score: "1287 (top 10 at release)"
-    model: "Yi-Lightning"
-    harness: null
-    notes: "Elo"
+- score: '1504'
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://benchlm.ai/llm-leaderboard-history
+  notes: Arena ELO（Text），with extended thinking，lmarena.ai 榜首
+- score: '1493'
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.promptt.dev/blog/lmsys-chatbot-arena-leaderboard-2026
+  notes: Arena ELO（Text），Gemini 3.1 Pro Preview
+- score: '1484'
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://benchlm.ai/llm-leaderboard-history
+  notes: Arena ELO（Text），GPT-5.4 High
+- score: '1470'
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://aidevdayindia.org/blogs/lmsys-chatbot-arena-current-rankings/
+  notes: Arena ELO（Text），standard（无扩展 thinking）
+- score: '1465'
+  model: GPT-5.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.swfte.com/lmsys-leaderboard
+  notes: Arena ELO（Text）
+dimension: B
 ---
 
 # Chatbot Arena（LMSYS）
@@ -43,11 +79,15 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Yi-Lightning]] | 1287 (top 10 at release) | Elo |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 1504 | Arena ELO（Text），with extended thinking，lmarena.ai 榜首 | 2026-04 | [link](https://benchlm.ai/llm-leaderboard-history) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 1493 | Arena ELO（Text），Gemini 3.1 Pro Preview | 2026-04 | [link](https://www.promptt.dev/blog/lmsys-chatbot-arena-leaderboard-2026) |
+| 🥉 | [[GPT-5]] | 🚫 no | 1484 | Arena ELO（Text），GPT-5.4 High | 2026-04 | [link](https://benchlm.ai/llm-leaderboard-history) |
+| 4 | [[Claude-Opus-4.7]] | 🚫 no | 1470 | Arena ELO（Text），standard（无扩展 thinking） | 2026-04 | [link](https://aidevdayindia.org/blogs/lmsys-chatbot-arena-current-rankings/) |
+| 5 | [[GPT-5.5]] | 🚫 no | 1465 | Arena ELO（Text） | 2026-04 | [link](https://www.swfte.com/lmsys-leaderboard) |
 
 <!-- AUTO-SOTA:END -->
 

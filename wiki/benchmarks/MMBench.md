@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2307.06281"
+dimension: E
 ---
 
 # MMBench：多模态理解细粒度评测基准

@@ -10,6 +10,7 @@ domain:
 year: 2022
 arxiv_id: "2208.08227"
 status: active
+dimension: H
 ---
 
 # MultiPL-E

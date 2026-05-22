@@ -12,6 +12,7 @@ domain:
 year: 2025
 arxiv_id: "2501.05040"
 status: active
+dimension: E
 ---
 
 # Physics-IQ

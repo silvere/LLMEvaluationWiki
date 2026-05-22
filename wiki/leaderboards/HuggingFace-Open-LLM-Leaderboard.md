@@ -9,6 +9,8 @@ last_verified: "2026-05-13"
 sources: []
 aliases:
   - Open-LLM-Leaderboard
+dimension: A
+subdimension: leaderboard
 ---
 
 # Hugging Face Open LLM Leaderboard

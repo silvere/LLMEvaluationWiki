@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2307.04657"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # BeaverTails：安全对齐研究数据集

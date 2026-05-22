@@ -12,6 +12,7 @@ domain:
 year: 2024
 arxiv_id: ""
 status: active
+dimension: E
 ---
 
 # VideoGen-Eval 1.0

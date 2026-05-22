@@ -16,6 +16,8 @@ domain:
   - multimodal
   - safety
 task: "AI-generated-video-detection"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # GenVidBench

@@ -21,6 +21,8 @@ sources:
 domain:
   - agent
   - code
+dimension: A
+subdimension: harness
 ---
 
 # Aider

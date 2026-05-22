@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2405.11532"
 status: active
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # SafeBench

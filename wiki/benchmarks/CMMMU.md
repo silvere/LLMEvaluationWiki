@@ -16,6 +16,7 @@ aliases:
 domain:
   - benchmark
   - multimodal
+dimension: E
 ---
 
 # CMMMU（Chinese Massive Multi-discipline Multimodal Understanding）

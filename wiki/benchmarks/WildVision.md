@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2406.11069"
   - "https://huggingface.co/datasets/WildVision/wildvision-bench"
+dimension: E
 ---
 
 # WildVision：野外真实用户多模态评测

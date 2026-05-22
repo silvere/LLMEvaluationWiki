@@ -12,6 +12,8 @@ domain:
 year: 2024
 arxiv_id: "2412.06171"
 status: active
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # Holmes-VAU

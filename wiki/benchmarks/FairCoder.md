@@ -11,6 +11,7 @@ domain:
 year: 2025
 arxiv_id: "2501.05396"
 status: active
+dimension: H
 ---
 
 # FairCoder

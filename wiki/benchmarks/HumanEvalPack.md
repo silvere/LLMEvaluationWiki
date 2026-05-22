@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2308.07124"
   - "https://github.com/bigcode-project/bigcode-evaluation-harness"
+dimension: H
 ---
 
 # HumanEvalPack

@@ -11,6 +11,8 @@ domain:
 year: 2024
 arxiv_id: "2410.15553"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # Multi-IF

@@ -11,6 +11,7 @@ domain:
 year: 2024
 arxiv_id: "2411.07140"
 status: active
+dimension: J
 ---
 
 # Chinese SimpleQA

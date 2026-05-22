@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2209.09513"
+dimension: E
 ---
 
 # ScienceQA：多学科科学视觉问答基准

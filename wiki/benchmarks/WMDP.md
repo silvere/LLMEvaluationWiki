@@ -15,6 +15,8 @@ aliases:
 domain:
   - benchmark
   - safety
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # WMDP（Weapons of Mass Destruction Proxy）

@@ -80,10 +80,10 @@ domain:
 
 | Benchmark | 题量 | 年份 | 评测协议 | 当前 SOTA | Saturation | 主要 Pitfall |
 |---|---|---|---|---|---|---|
-| [[AIME|AIME]] | 30 | 1983 | 0-shot / exact-match accuracy（每题答案 0-9… | 98.3%（Doubao-Seed-2.0） | 🟢 active | **年份混淆**：'AIME 88%' 没意义。AIME 2022 / 2023 / 2024 / 2025 / 2026 每年新题，污染程度不同，必须明确报… |
+| [[AIME|AIME]] | 30 | 1983 | 0-shot / exact-match accuracy（每题答案 0-9… | 100%（Kimi-K2.6） | 🟢 active | **年份混淆**：'AIME 88%' 没意义。AIME 2022 / 2023 / 2024 / 2025 / 2026 每年新题，污染程度不同，必须明确报… |
 | [[FrontierMath|FrontierMath]] | 0 | 2024 | — | 约 25%（o3） | — | — |
 | [[GSM8K|GSM8K]] | 8500 | 2021 | — | 约 95.8%（Qwen2.5-72B） | — | — |
-| [[HLE|HLE]] | — | 2025 | — | 54.0%（Kimi-K2.6） | — | — |
+| [[HLE|HLE]] | — | 2025 | — | 64.7%（Claude-Opus-4.7） | — | — |
 | [[MATH|MATH]] | 12500 | 2021 | 0-shot 或 4-shot CoT（推理模型默认 0-shot） / exact-match accuracy（数值答案对比） | 97.3%（DeepSeek-R1） | 🔴 saturated | **MATH ≠ MATH-500**：原 MATH 12,500 题、MATH-500 是 OpenAI o1 引入的 500 题子集，分数差异较大，跨论文… |
 | [[MathVision|MathVision]] | — | 2024 | — | 88.6（Qwen3.5） | — | — |
 | [[MGSM|MGSM]] | 2500 | 2023 | — | 约 91.1%（Llama-3.3-70B） | — | — |
@@ -114,7 +114,7 @@ domain:
 | [[SciBench|SciBench]] | 295 | 2023 | — | — | — | — |
 | [[TheoremQA|TheoremQA]] | 800 | 2023 | — | — | — | — |
 
-_共 33 个 benchmark，最后更新：2026-05-19_
+_共 33 个 benchmark，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:domain=math:END -->
 

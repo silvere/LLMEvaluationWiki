@@ -11,6 +11,7 @@ domain:
 year: 2024
 arxiv_id: "2405.11985"
 status: active
+dimension: E
 ---
 
 # MTVQA

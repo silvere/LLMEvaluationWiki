@@ -1,90 +1,108 @@
 ---
-title: "MMLU"
+title: MMLU
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
-domain: [knowledge, reasoning, multilingual]
+as_of_date: '2026-05-22'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
+- multilingual
 language: en
 year: 2020
-authors: ["Dan Hendrycks", "Collin Burns", "Steven Basart", "Andy Zou", "Mantas Mazeika", "Dawn Song", "Jacob Steinhardt"]
-arxiv_id: "2009.03300"
-official_url: "https://github.com/hendrycks/test"
-official_leaderboard: "https://paperswithcode.com/sota/multi-task-language-understanding-on-mmlu"
-license: "MIT"
+authors:
+- Dan Hendrycks
+- Collin Burns
+- Steven Basart
+- Andy Zou
+- Mantas Mazeika
+- Dawn Song
+- Jacob Steinhardt
+arxiv_id: '2009.03300'
+official_url: https://github.com/hendrycks/test
+official_leaderboard: https://paperswithcode.com/sota/multi-task-language-understanding-on-mmlu
+license: MIT
 size: 15908
 format: multiple-choice
 saturation_status: saturated
 sources:
-  - "https://arxiv.org/abs/2009.03300"
-  - "https://github.com/hendrycks/test"
+- https://arxiv.org/abs/2009.03300
+- https://github.com/hendrycks/test
 evaluation_protocol:
-  default_shots: "5-shot"
+  default_shots: 5-shot
   default_cot: false
   tool_use: false
-  scoring: "accuracy (4-way MCQ)"
+  scoring: accuracy (4-way MCQ)
 pitfalls:
-  - "选项位置偏差：模型偏好 A 选项（arXiv 2309.03882 实证），跨模型对比建议 shuffled-options run"
-  - "预训练数据污染：MMLU 题目大量源于公开考试 / Wikipedia，主流 base model 训练语料几乎确认包含相关网页"
-  - "饱和：顶级模型已 ≥90%（接近人类专家 89.8%）单一分数无区分度，必须搭配 MMLU-Pro / GPQA"
-  - "57 学科题量不均（100-300 题/科），单科方差大，不可逐子集比较"
-  - "跨论文常混淆 MMLU / MMLU-CF / MMLU-Redux / MMLU-Pro，对比前必须确认 variant"
+- 选项位置偏差：模型偏好 A 选项（arXiv 2309.03882 实证），跨模型对比建议 shuffled-options run
+- 预训练数据污染：MMLU 题目大量源于公开考试 / Wikipedia，主流 base model 训练语料几乎确认包含相关网页
+- 饱和：顶级模型已 ≥90%（接近人类专家 89.8%）单一分数无区分度，必须搭配 MMLU-Pro / GPQA
+- 57 学科题量不均（100-300 题/科），单科方差大，不可逐子集比较
+- 跨论文常混淆 MMLU / MMLU-CF / MMLU-Redux / MMLU-Pro，对比前必须确认 variant
 sota:
-  - score: "90.8%"
-    model: "DeepSeek-R1"
-    harness: null
-  - score: "约 90.2%"
-    model: "GPT-4.1"
-    harness: null
-  - score: "88.7%"
-    model: "GPT-4o"
-    harness: null
-  - score: "88.7%"
-    model: "Claude-3.5-Sonnet"
-    harness: null
-  - score: "88.5%"
-    model: "DeepSeek-V3"
-    harness: null
-  - score: "约 88%"
-    model: "Claude-Opus-4"
-    harness: null
-    notes: "Pro"
-  - score: "87.4%"
-    model: "Kimi-K1.5"
-    harness: null
-  - score: "约 86%"
-    model: "Llama-3.3-70B"
-    harness: null
-  - score: "85.9%"
-    model: "Gemini-1.5-Pro"
-    harness: null
-  - score: "约 85.0%"
-    model: "Qwen2.5-72B"
-    harness: null
-  - score: "约 82%"
-    model: "Doubao-1.5-Pro"
-    harness: null
-  - score: "约 81%"
-    model: "Yi-Lightning"
-    harness: null
-  - score: "约 80.5%"
-    model: "Llama-4"
-    harness: null
-    notes: "Pro (Maverick"
-  - score: "约 80%"
-    model: "Qwen3"
-    harness: null
-    notes: "Pro"
-  - score: "76.4%"
-    model: "Gemini-2.0-Flash"
-    harness: null
-    notes: "Pro"
-  - score: "75.9%"
-    model: "DeepSeek-V3"
-    harness: null
-    notes: "-Pro"
+- score: 92.0%
+  model: GPT-5
+  harness: null
+  date: 2026-04
+  source: https://tokenmix.ai/blog/mmlu-benchmark-leaderboard
+  notes: GPT-5.4
+  with_tools: false
+- score: 91.0%
+  model: Claude-Opus-4
+  harness: null
+  date: 2026-02
+  source: https://tokenmix.ai/blog/mmlu-benchmark-leaderboard
+  notes: Opus 4.6
+  with_tools: false
+- score: 91.0%
+  model: Claude-Opus-4.7
+  harness: null
+  date: 2026-04
+  source: https://www.anthropic.com/
+  with_tools: false
+- score: 90.0%
+  model: Gemini-3.1-Pro
+  harness: null
+  date: 2026-02
+  source: https://pricepertoken.com/leaderboards/benchmark/mmlu-pro
+  with_tools: false
+- score: 89.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  date: 2026-04
+  source: https://api-docs.deepseek.com/news/news260424
+  with_tools: false
+- score: 88.0%
+  model: GPT-5.5
+  harness: null
+  date: 2026-04
+  source: https://openai.com/
+  with_tools: false
+- score: 86.4%
+  model: GPT-4o
+  harness: null
+  date: 2024-05
+  source: https://openai.com/
+  notes: 历史参考
+  with_tools: false
+- score: 86.0%
+  model: Claude-3.5-Sonnet
+  harness: null
+  date: 2024-06
+  source: https://www.anthropic.com/
+  notes: 历史参考
+  with_tools: false
+- score: 85.0%
+  model: Llama-4
+  harness: null
+  date: 2025-04
+  source: https://ai.meta.com/
+  notes: Maverick
+  with_tools: false
+dimension: A
+subdimension: benchmark
 ---
 
 # MMLU（Massive Multitask Language Understanding）
@@ -129,26 +147,19 @@ MMLU 发布后迅速成为学术界和工业界最常引用的 LLM 综合能力�
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[DeepSeek-R1]] | 90.8% |  |
-| 🥈 | [[GPT-4.1]] | 约 90.2% |  |
-| 🥉 | [[GPT-4o]] | 88.7% |  |
-| 4 | [[Claude-3.5-Sonnet]] | 88.7% |  |
-| 5 | [[DeepSeek-V3]] | 88.5% |  |
-| 6 | [[Claude-Opus-4]] | 约 88% | Pro |
-| 7 | [[Kimi-K1.5]] | 87.4% |  |
-| 8 | [[Llama-3.3-70B]] | 约 86% |  |
-| 9 | [[Gemini-1.5-Pro]] | 85.9% |  |
-| 10 | [[Qwen2.5-72B]] | 约 85.0% |  |
-| 11 | [[Doubao-1.5-Pro]] | 约 82% |  |
-| 12 | [[Yi-Lightning]] | 约 81% |  |
-| 13 | [[Llama-4]] | 约 80.5% | Pro (Maverick |
-| 14 | [[Qwen3]] | 约 80% | Pro |
-| 15 | [[Gemini-2.0-Flash]] | 76.4% | Pro |
-| 16 | [[DeepSeek-V3]] | 75.9% | -Pro |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 92.0% | GPT-5.4 | 2026-04 | [link](https://tokenmix.ai/blog/mmlu-benchmark-leaderboard) |
+| 🥈 | [[Claude-Opus-4]] | 🚫 no | 91.0% | Opus 4.6 | 2026-02 | [link](https://tokenmix.ai/blog/mmlu-benchmark-leaderboard) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 91.0% |  | 2026-04 | [link](https://www.anthropic.com/) |
+| 4 | [[Gemini-3.1-Pro]] | 🚫 no | 90.0% |  | 2026-02 | [link](https://pricepertoken.com/leaderboards/benchmark/mmlu-pro) |
+| 5 | [[DeepSeek-V4-Pro]] | 🚫 no | 89.0% |  | 2026-04 | [link](https://api-docs.deepseek.com/news/news260424) |
+| 6 | [[GPT-5.5]] | 🚫 no | 88.0% |  | 2026-04 | [link](https://openai.com/) |
+| 7 | [[GPT-4o]] | 🚫 no | 86.4% | 历史参考 | 2024-05 | [link](https://openai.com/) |
+| 8 | [[Claude-3.5-Sonnet]] | 🚫 no | 86.0% | 历史参考 | 2024-06 | [link](https://www.anthropic.com/) |
+| 9 | [[Llama-4]] | 🚫 no | 85.0% | Maverick | 2025-04 | [link](https://ai.meta.com/) |
 
 <!-- AUTO-SOTA:END -->
 

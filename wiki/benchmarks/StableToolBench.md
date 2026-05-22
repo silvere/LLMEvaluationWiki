@@ -15,6 +15,8 @@ aliases:
 domain:
   - benchmark
   - agent
+dimension: D
+subdimension: tool-use
 ---
 
 # StableToolBench

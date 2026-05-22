@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2305.10355"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # POPE：视觉对象幻觉轮询评测基准

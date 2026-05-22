@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2305.07895"
+dimension: E
 ---
 
 # OCRBench：多模态模型 OCR 与文字理解评测基准

@@ -1,30 +1,56 @@
 ---
-title: "τ-bench (tau-bench)"
+title: τ-bench (tau-bench)
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 aliases:
   - τ-bench
-domain: [agent]
+  - tau-bench
+domain:
+- agent
 language: en
 year: 2024
-authors: ["Shunyu Yao", "Noah Shinn", "Pedram Razavi", "Karthik Narasimhan"]
-arxiv_id: "2406.12045"
-official_url: "https://github.com/sierra-research/tau-bench"
-license: "MIT"
+authors:
+- Shunyu Yao
+- Noah Shinn
+- Pedram Razavi
+- Karthik Narasimhan
+arxiv_id: '2406.12045'
+official_url: https://github.com/sierra-research/tau-bench
+license: MIT
 size: 477
 format: open-ended
 status: active
-saturation_threshold: 0.80
+saturation_threshold: 0.8
 sources:
-  - "Yao, S., et al. (2024). τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv:2406.12045."
+- 'Yao, S., et al. (2024). τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv:2406.12045.'
 sota:
-  - score: "高于 Opus 4"
-    model: "Claude-Sonnet-4.5"
-    harness: null
+- score: 89.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-05
+  source: https://benchlm.ai/benchmarks/tauBench
+  notes: Claude Mythos Preview，τ-bench（retail + airline 平均）
+- score: 87.5%
+  model: Claude-Sonnet-4.6
+  harness: null
+  with_tools: true
+  date: 2026-05
+  source: https://benchlm.ai/benchmarks/tauBench
+  notes: τ-bench（retail + airline 平均）
+- score: 86.2%
+  model: Claude-Sonnet-4.6
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://benchlm.ai/benchmarks/tauBench
+  notes: Claude Sonnet 4.5 版本
+dimension: D
+subdimension: general
 ---
 
 # τ-bench（tau-bench）
@@ -35,11 +61,13 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Claude-Sonnet-4.5]] | 高于 Opus 4 |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🔧 with | 89.2% | Claude Mythos Preview，τ-bench（retail + airline 平均） | 2026-05 | [link](https://benchlm.ai/benchmarks/tauBench) |
+| 🥈 | [[Claude-Sonnet-4.6]] | 🔧 with | 87.5% | τ-bench（retail + airline 平均） | 2026-05 | [link](https://benchlm.ai/benchmarks/tauBench) |
+| 🥉 | [[Claude-Sonnet-4.6]] | 🔧 with | 86.2% | Claude Sonnet 4.5 版本 | 2026-03 | [link](https://benchlm.ai/benchmarks/tauBench) |
 
 <!-- AUTO-SOTA:END -->
 

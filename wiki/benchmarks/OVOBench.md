@@ -11,6 +11,7 @@ domain:
 year: 2025
 arxiv_id: "2501.05510"
 status: active
+dimension: E
 ---
 
 # OVO-Bench

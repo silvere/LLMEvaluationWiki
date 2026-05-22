@@ -12,6 +12,7 @@ domain:
 year: 2025
 arxiv_id: "2504.01848"
 status: active
+dimension: H
 ---
 
 # PaperBench

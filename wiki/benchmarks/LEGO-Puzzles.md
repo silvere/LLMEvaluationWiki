@@ -11,6 +11,7 @@ domain:
 year: 2025
 arxiv_id: "2503.19990"
 status: active
+dimension: E
 ---
 
 # LEGO-Puzzles

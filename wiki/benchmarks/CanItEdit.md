@@ -10,6 +10,7 @@ domain:
 year: 2023
 arxiv_id: "2312.14906"
 status: active
+dimension: H
 ---
 
 # CanItEdit

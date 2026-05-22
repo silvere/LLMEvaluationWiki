@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2409.08264"
 status: active
+dimension: D
+subdimension: general
 ---
 
 # WindowsAgentArena

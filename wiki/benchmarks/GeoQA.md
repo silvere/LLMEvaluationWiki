@@ -11,6 +11,8 @@ domain:
 year: 2021
 arxiv_id: "2105.14517"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # GeoQA

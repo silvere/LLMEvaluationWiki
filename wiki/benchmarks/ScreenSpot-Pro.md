@@ -11,6 +11,8 @@ domain:
 year: 2025
 arxiv_id: "2504.07981"
 status: active
+dimension: D
+subdimension: general
 ---
 
 # ScreenSpot Pro

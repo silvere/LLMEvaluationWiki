@@ -12,6 +12,8 @@ domain:
 year: 2022
 arxiv_id: "2210.07316"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # MTEB

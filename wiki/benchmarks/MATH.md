@@ -1,70 +1,119 @@
 ---
-title: "MATH"
+title: MATH
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
-domain: [math, reasoning]
+as_of_date: '2026-05-19'
+last_verified: '2026-05-22'
+domain:
+- math
+- reasoning
 language: en
 year: 2021
-authors: ["Dan Hendrycks", "Collin Burns", "Saurav Kadavath", "Akul Arora", "Steven Basart", "Eric Tang", "Dawn Song", "Jacob Steinhardt"]
-arxiv_id: "2103.03874"
-official_url: "https://github.com/hendrycks/math"
-official_leaderboard: "https://paperswithcode.com/sota/math-word-problem-solving-on-math"
-license: "MIT"
+authors:
+- Dan Hendrycks
+- Collin Burns
+- Saurav Kadavath
+- Akul Arora
+- Steven Basart
+- Eric Tang
+- Dawn Song
+- Jacob Steinhardt
+arxiv_id: '2103.03874'
+official_url: https://github.com/hendrycks/math
+official_leaderboard: https://paperswithcode.com/sota/math-word-problem-solving-on-math
+license: MIT
 size: 12500
 format: open-ended
 saturation_status: saturated
 sources:
-  - "https://arxiv.org/abs/2103.03874"
-  - "https://github.com/hendrycks/math"
+- https://arxiv.org/abs/2103.03874
+- https://github.com/hendrycks/math
 evaluation_protocol:
-  default_shots: "0-shot 或 4-shot CoT（推理模型默认 0-shot）"
+  default_shots: 0-shot 或 4-shot CoT（推理模型默认 0-shot）
   default_cot: true
   tool_use: false
-  scoring: "exact-match accuracy（数值答案对比）"
+  scoring: exact-match accuracy（数值答案对比）
 pitfalls:
-  - "**MATH ≠ MATH-500**：原 MATH 12,500 题、MATH-500 是 OpenAI o1 引入的 500 题子集，分数差异较大，跨论文必须确认"
-  - "饱和：MATH-500 顶级模型 ≥97%（DeepSeek-R1 97.3%），无区分度，应替换为 [[AIME]] / [[FrontierMath]]"
-  - "答案提取脚本敏感：模型输出 \\boxed{...} 还是末行答案差异大，不同评测框架（lm-evaluation-harness / OpenAI eval）的提取规则不一致"
-  - "训练数据污染严重：MATH 已在公开训练语料数年，所有主流 base model 几乎确定见过"
-  - "中文报告时常把 MATH-500 误称为 MATH，跨语言对比前必须确认 variant"
+- '**MATH ≠ MATH-500**：原 MATH 12,500 题、MATH-500 是 OpenAI o1 引入的 500 题子集，分数差异较大，跨论文必须确认'
+- 饱和：MATH-500 顶级模型 ≥97%（DeepSeek-R1 97.3%），无区分度，应替换为 [[AIME]] / [[FrontierMath]]
+- 答案提取脚本敏感：模型输出 \boxed{...} 还是末行答案差异大，不同评测框架（lm-evaluation-harness / OpenAI eval）的提取规则不一致
+- 训练数据污染严重：MATH 已在公开训练语料数年，所有主流 base model 几乎确定见过
+- 中文报告时常把 MATH-500 误称为 MATH，跨语言对比前必须确认 variant
 sota:
-  - score: "97.3%"
-    model: "DeepSeek-R1"
-    harness: null
-    notes: "500"
-  - score: "96.2%"
-    model: "Kimi-K1.5"
-    harness: null
-    notes: "500"
-  - score: "94.8%"
-    model: "o1"
-    harness: null
-  - score: "90.2%"
-    model: "DeepSeek-V3"
-    harness: null
-    notes: "500"
-  - score: "约 89.7%"
-    model: "Gemini-2.0-Flash"
-    harness: null
-  - score: "约 78%"
-    model: "Doubao-1.5-Pro"
-    harness: null
-  - score: "约 77%"
-    model: "Llama-3.3-70B"
-    harness: null
-  - score: "76.6%"
-    model: "GPT-4o"
-    harness: null
-  - score: "约 75%"
-    model: "Yi-Lightning"
-    harness: null
-  - score: "67.7%"
-    model: "Gemini-1.5-Pro"
-    harness: null
+- score: 99.4%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://benchlm.ai/math
+  notes: MATH-500，顶级模型饱和区
+- score: 99.2%
+  model: o3
+  harness: null
+  with_tools: false
+  date: 2025-04
+  source: https://benchlm.ai/math
+  notes: MATH-500
+- score: 97.3%
+  model: DeepSeek-R1
+  harness: null
+  with_tools: false
+  date: 2025-01
+  source: https://arxiv.org/abs/2501.12948
+  notes: MATH-500，DeepSeek-R1 报告
+- score: 96.7%
+  model: Kimi-K2.5
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://arxiv.org/abs/2506.01427
+  notes: MATH-500，Kimi K2 系列
+- score: 96.2%
+  model: Kimi-K1.5
+  harness: null
+  with_tools: false
+  date: 2025-01
+  source: https://arxiv.org/abs/2501.12599
+  notes: MATH-500，Kimi K1.5 报告
+- score: 94.8%
+  model: o1
+  harness: null
+  with_tools: false
+  date: 2024-09
+  source: https://openai.com/o1/
+  notes: 原始 MATH（非 MATH-500），o1 首发
+- score: 90.2%
+  model: DeepSeek-V3
+  harness: null
+  with_tools: false
+  date: 2025-12
+  source: https://arxiv.org/abs/2412.19437
+  notes: MATH-500
+- score: 89.7%
+  model: Gemini-2.0-Flash
+  harness: null
+  with_tools: false
+  date: 2025-02
+  source: https://artificialanalysis.ai/
+  notes: MATH-500
+- score: 76.6%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://arxiv.org/abs/2410.21276
+  notes: MATH-500，2024 基线
+- score: 67.7%
+  model: Gemini-1.5-Pro
+  harness: null
+  with_tools: false
+  date: 2024-09
+  source: https://artificialanalysis.ai/
+  notes: MATH-500，2024 基线
+dimension: A
+subdimension: benchmark
 ---
 
 # MATH（Mathematics Assessment）
@@ -108,20 +157,20 @@ MATH 由 Hendrycks 等人于 2021 年发布，共包含 12,500 道数学题，�
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[DeepSeek-R1]] | 97.3% | 500 |
-| 🥈 | [[Kimi-K1.5]] | 96.2% | 500 |
-| 🥉 | [[o1]] | 94.8% |  |
-| 4 | [[DeepSeek-V3]] | 90.2% | 500 |
-| 5 | [[Gemini-2.0-Flash]] | 约 89.7% |  |
-| 6 | [[Doubao-1.5-Pro]] | 约 78% |  |
-| 7 | [[Llama-3.3-70B]] | 约 77% |  |
-| 8 | [[GPT-4o]] | 76.6% |  |
-| 9 | [[Yi-Lightning]] | 约 75% |  |
-| 10 | [[Gemini-1.5-Pro]] | 67.7% |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 99.4% | MATH-500，顶级模型饱和区 | 2026-04 | [link](https://benchlm.ai/math) |
+| 🥈 | [[o3]] | 🚫 no | 99.2% | MATH-500 | 2025-04 | [link](https://benchlm.ai/math) |
+| 🥉 | [[DeepSeek-R1]] | 🚫 no | 97.3% | MATH-500，DeepSeek-R1 报告 | 2025-01 | [link](https://arxiv.org/abs/2501.12948) |
+| 4 | [[Kimi-K2.5]] | 🚫 no | 96.7% | MATH-500，Kimi K2 系列 | 2026-02 | [link](https://arxiv.org/abs/2506.01427) |
+| 5 | [[Kimi-K1.5]] | 🚫 no | 96.2% | MATH-500，Kimi K1.5 报告 | 2025-01 | [link](https://arxiv.org/abs/2501.12599) |
+| 6 | [[o1]] | 🚫 no | 94.8% | 原始 MATH（非 MATH-500），o1 首发 | 2024-09 | [link](https://openai.com/o1/) |
+| 7 | [[DeepSeek-V3]] | 🚫 no | 90.2% | MATH-500 | 2025-12 | [link](https://arxiv.org/abs/2412.19437) |
+| 8 | [[Gemini-2.0-Flash]] | 🚫 no | 89.7% | MATH-500 | 2025-02 | [link](https://artificialanalysis.ai/) |
+| 9 | [[GPT-4o]] | 🚫 no | 76.6% | MATH-500，2024 基线 | 2024-05 | [link](https://arxiv.org/abs/2410.21276) |
+| 10 | [[Gemini-1.5-Pro]] | 🚫 no | 67.7% | MATH-500，2024 基线 | 2024-09 | [link](https://artificialanalysis.ai/) |
 
 <!-- AUTO-SOTA:END -->
 

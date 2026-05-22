@@ -9,7 +9,10 @@ last_verified: "2026-05-14"
 aliases:
   - llama
   - LLaMA-2
+  - LLaMA-2-70B
   - Llama
+  - Llama-3.1-70B
+  - Llama-3.1
 domain:
   - entity
 ---

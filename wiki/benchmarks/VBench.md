@@ -10,6 +10,7 @@ domain:
 year: 2023
 arxiv_id: "2311.17982"
 status: active
+dimension: F
 ---
 
 # VBench

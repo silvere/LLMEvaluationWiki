@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2407.13168"
   - "https://scicode-bench.github.io/"
+dimension: H
 ---
 
 # SciCode

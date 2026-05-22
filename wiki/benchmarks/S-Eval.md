@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2408.09326"
 status: active
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # S-Eval

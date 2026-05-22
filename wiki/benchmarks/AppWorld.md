@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2407.18901"
 status: active
+dimension: D
+subdimension: general
 ---
 
 # AppWorld

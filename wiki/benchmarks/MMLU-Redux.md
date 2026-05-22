@@ -14,6 +14,8 @@ language: "en"
 year: 2024
 status: "active"
 arxiv_id: "2406.04127"
+dimension: A
+subdimension: benchmark
 ---
 
 # MMLU-Redux

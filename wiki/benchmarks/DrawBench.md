@@ -10,6 +10,7 @@ domain:
 year: 2022
 arxiv_id: ""
 status: active
+dimension: F
 ---
 
 # DrawBench

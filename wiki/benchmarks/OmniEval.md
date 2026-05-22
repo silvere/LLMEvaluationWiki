@@ -12,6 +12,7 @@ domain:
 year: 2025
 arxiv_id: ""
 status: active
+dimension: E
 ---
 
 # OmniEval

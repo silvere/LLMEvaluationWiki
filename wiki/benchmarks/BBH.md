@@ -1,23 +1,86 @@
 ---
-title: "BBH"
+title: BBH
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [reasoning, knowledge]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- knowledge
 language: en
 year: 2022
-authors: ["Suzgun et al."]
-arxiv_id: ""
-official_url: "https://github.com/suzgunmirac/BIG-Bench-Hard"
-license: ""
+authors:
+- Suzgun et al.
+arxiv_id: ''
+official_url: https://github.com/suzgunmirac/BIG-Bench-Hard
+license: ''
 size: 6511
 format: other
 status: saturated
-saturation_threshold: 0.90
-sources: [""]
+saturation_threshold: 0.9
+sources:
+- ''
+dimension: A
+subdimension: benchmark
+sota:
+- score: 95.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/bbh
+  notes: 3-shot CoT，BBH 已向顶级模型饱和
+- score: 94.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://artificialanalysis.ai/evaluations/bbh
+  notes: 3-shot CoT
+- score: 93.1%
+  model: Claude-3.5-Sonnet
+  harness: null
+  with_tools: false
+  date: 2024-10
+  source: https://llm-stats.com/benchmarks/big-bench-hard
+  notes: 3-shot CoT，Oct 版
+- score: 89.2%
+  model: Gemini-1.5-Pro
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://llm-stats.com/benchmarks/big-bench-hard
+  notes: 3-shot CoT
+- score: 87.6%
+  model: Gemma-3-27B
+  harness: null
+  with_tools: false
+  date: 2025-11
+  source: https://llm-stats.com/benchmarks/big-bench-hard
+  notes: 3-shot CoT，Google 开源模型
+- score: 86.8%
+  model: Claude-3-Opus
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://www.anthropic.com/news/claude-3-family
+  notes: 3-shot CoT
+- score: 85.5%
+  model: Gemini-1.5-Flash
+  harness: null
+  with_tools: false
+  date: 2024-09
+  source: https://llm-stats.com/benchmarks/big-bench-hard
+  notes: 3-shot CoT
+- score: 82.9%
+  model: Claude-3-Sonnet
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://llm-stats.com/benchmarks/big-bench-hard
+  notes: 3-shot CoT
 ---
 
 # BBH（BIG-Bench Hard）
@@ -54,6 +117,26 @@ BBH 由 Suzgun 等人于 2022 年提出，其全称为 BIG-Bench Hard，是对 G
 ## SOTA 表现
 
 - 顶级模型（2024-2025 年）：待更新
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 95.2% | 3-shot CoT，BBH 已向顶级模型饱和 | 2026-04 | [link](https://artificialanalysis.ai/evaluations/bbh) |
+| 🥈 | [[GPT-5]] | 🚫 no | 94.8% | 3-shot CoT | 2026-04 | [link](https://artificialanalysis.ai/evaluations/bbh) |
+| 🥉 | [[Claude-3.5-Sonnet]] | 🚫 no | 93.1% | 3-shot CoT，Oct 版 | 2024-10 | [link](https://llm-stats.com/benchmarks/big-bench-hard) |
+| 4 | [[Gemini-1.5-Pro]] | 🚫 no | 89.2% | 3-shot CoT | 2024-06 | [link](https://llm-stats.com/benchmarks/big-bench-hard) |
+| 5 | [[Gemma-3-27B]] | 🚫 no | 87.6% | 3-shot CoT，Google 开源模型 | 2025-11 | [link](https://llm-stats.com/benchmarks/big-bench-hard) |
+| 6 | [[Claude-3-Opus]] | 🚫 no | 86.8% | 3-shot CoT | 2024-03 | [link](https://www.anthropic.com/news/claude-3-family) |
+| 7 | [[Gemini-1.5-Flash]] | 🚫 no | 85.5% | 3-shot CoT | 2024-09 | [link](https://llm-stats.com/benchmarks/big-bench-hard) |
+| 8 | [[Claude-3-Sonnet]] | 🚫 no | 82.9% | 3-shot CoT | 2024-03 | [link](https://llm-stats.com/benchmarks/big-bench-hard) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

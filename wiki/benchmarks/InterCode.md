@@ -20,6 +20,7 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2306.14898"
   - "https://intercode-benchmark.github.io/"
+dimension: H
 ---
 
 # InterCode

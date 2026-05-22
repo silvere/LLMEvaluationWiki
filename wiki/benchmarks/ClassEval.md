@@ -10,6 +10,7 @@ domain:
 year: 2023
 arxiv_id: "2308.01861"
 status: active
+dimension: H
 ---
 
 # ClassEval

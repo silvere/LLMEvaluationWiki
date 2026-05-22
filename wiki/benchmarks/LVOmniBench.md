@@ -17,6 +17,7 @@ domain:
 task: long-audiovisual-understanding
 format: multiple-choice
 status: active
+dimension: long-ctx
 ---
 
 # LVOmniBench

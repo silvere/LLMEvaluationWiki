@@ -1,22 +1,47 @@
 ---
-title: "MathVision"
+title: MathVision
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - math
-  - reasoning
+- multimodal
+- math
+- reasoning
 year: 2024
-arxiv_id: "2402.14804"
+arxiv_id: '2402.14804'
 status: active
 sota:
-  - score: "88.6"
-    model: "Qwen3.5"
-    harness: null
-    notes: "超过 GPT-5.2 (83.0) 与 Gemini 3 Pro (86.6)"
+- score: 71.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://mathvision-challenge.github.io/leaderboard
+  notes: MathVision（数学视觉推理），Gemini 多模态强
+- score: 68.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mathvision-challenge.github.io/leaderboard
+  notes: MathVision
+- score: 65.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mathvision-challenge.github.io/leaderboard
+  notes: MathVision
+- score: 60.2%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://mathvision-challenge.github.io/leaderboard
+  notes: Qwen3.6 VL
+dimension: E
 ---
 
 # MathVision
@@ -29,11 +54,14 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Qwen3.5]] | 88.6 | 超过 GPT-5.2 (83.0) 与 Gemini 3 Pro (86.6) |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 71.2% | MathVision（数学视觉推理），Gemini 多模态强 | 2026-05 | [link](https://mathvision-challenge.github.io/leaderboard) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 68.5% | MathVision | 2026-04 | [link](https://mathvision-challenge.github.io/leaderboard) |
+| 🥉 | [[GPT-5]] | 🚫 no | 65.8% | MathVision | 2026-04 | [link](https://mathvision-challenge.github.io/leaderboard) |
+| 4 | [[Qwen3.6]] | 🚫 no | 60.2% | Qwen3.6 VL | 2026-03 | [link](https://mathvision-challenge.github.io/leaderboard) |
 
 <!-- AUTO-SOTA:END -->
 

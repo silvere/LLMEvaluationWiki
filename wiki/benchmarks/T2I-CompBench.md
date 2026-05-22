@@ -16,6 +16,8 @@ domain:
   - benchmark
   - vision
   - multimodal
+dimension: F
+subdimension: T2I
 ---
 
 # T2I-CompBench

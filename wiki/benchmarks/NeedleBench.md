@@ -13,6 +13,7 @@ arxiv_id: "2407.11963"
 status: active
 aliases:
   - NeedleBench
+dimension: long-ctx
 ---
 
 # NeedleBench

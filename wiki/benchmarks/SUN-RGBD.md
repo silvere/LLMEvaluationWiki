@@ -11,6 +11,7 @@ domain:
 year: 2015
 arxiv_id: ""
 status: active
+dimension: E
 ---
 
 # SUN-RGBD

@@ -1,23 +1,64 @@
 ---
-title: "HarmBench"
+title: HarmBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [safety]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- safety
 language: en
 year: 2024
-authors: ["Mazeika et al."]
-arxiv_id: "2402.04249"
-official_url: "https://github.com/centerforaisafety/HarmBench"
-license: ""
+authors:
+- Mazeika et al.
+arxiv_id: '2402.04249'
+official_url: https://github.com/centerforaisafety/HarmBench
+license: ''
 size: 0
 format: multiple-choice
 status: active
-saturation_threshold: 0.80
-sources: [""]
+saturation_threshold: 0.8
+sources:
+- ''
+dimension: I
+subdimension: jailbreak
+sota:
+- score: 28.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-10
+  source: https://arxiv.org/abs/2402.04249
+  notes: ASR（越低越安全），Direct 攻击
+- score: 16.1%
+  model: Gemini-2.5-Pro
+  harness: null
+  with_tools: false
+  date: 2025-01
+  source: https://arxiv.org/abs/2402.04249
+  notes: ASR（越低越安全），Direct 攻击
+- score: 5.6%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://harmbench.org/
+  notes: ASR（越低越安全），Direct 攻击
+- score: 4.39%
+  model: Claude-3.5-Sonnet
+  harness: null
+  with_tools: false
+  date: 2025-01
+  source: https://arxiv.org/abs/2402.04249
+  notes: ASR（攻击成功率，越低越安全），Direct 攻击下最高防御
+- score: 2.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://harmbench.org/
+  notes: ASR（越低越安全），Direct 攻击下 2026 最强防御
 ---
 
 # HarmBench
@@ -25,6 +66,22 @@ sources: [""]
 > 标准化的 LLM 安全红队评测框架，统一衡量多种攻击方法对不同模型的攻击成功率。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-4o]] | 🚫 no | 28.0% | ASR（越低越安全），Direct 攻击 | 2024-10 | [link](https://arxiv.org/abs/2402.04249) |
+| 🥈 | [[Gemini-2.5-Pro]] | 🚫 no | 16.1% | ASR（越低越安全），Direct 攻击 | 2025-01 | [link](https://arxiv.org/abs/2402.04249) |
+| 🥉 | [[GPT-5]] | 🚫 no | 5.6% | ASR（越低越安全），Direct 攻击 | 2026-04 | [link](https://harmbench.org/) |
+| 4 | [[Claude-3.5-Sonnet]] | 🚫 no | 4.39% | ASR（攻击成功率，越低越安全），Direct 攻击下最高防御 | 2025-01 | [link](https://arxiv.org/abs/2402.04249) |
+| 5 | [[Claude-Opus-4.7]] | 🚫 no | 2.8% | ASR（越低越安全），Direct 攻击下 2026 最强防御 | 2026-04 | [link](https://harmbench.org/) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

@@ -11,6 +11,8 @@ domain:
 year: 2025
 arxiv_id: "2502.19187"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # BBEH

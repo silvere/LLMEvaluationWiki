@@ -21,6 +21,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2405.21075"
+dimension: E
 ---
 
 # Video-MME：全面的视频多模态评测基准

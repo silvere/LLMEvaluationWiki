@@ -18,6 +18,7 @@ format: multiple-choice
 status: active
 saturation_threshold: 0.75
 sources: [""]
+dimension: long-ctx
 ---
 
 # LongBench v2

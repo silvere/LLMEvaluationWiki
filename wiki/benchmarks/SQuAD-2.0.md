@@ -18,6 +18,8 @@ format: open-ended
 status: saturated
 saturation_threshold: 0.90
 sources: []
+dimension: A
+subdimension: benchmark
 ---
 
 # SQuAD 2.0（Stanford Question Answering Dataset 2.0）

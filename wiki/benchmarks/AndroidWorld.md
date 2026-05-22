@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2405.14573"
 status: active
+dimension: D
+subdimension: web-gui
 ---
 
 # AndroidWorld

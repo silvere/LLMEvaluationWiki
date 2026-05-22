@@ -13,6 +13,8 @@ sources:
 aliases:
   - Qwen
   - 通义千问
+  - Qwen2-72B
+  - Qwen2.5-72B-Instruct
   - Qwen2
   - Qwen2.5
   - Qwen3

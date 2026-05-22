@@ -8,6 +8,10 @@ as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
 aliases:
   - claude
+  - Claude-3-Opus
+  - Claude-3-Sonnet
+  - Claude-3-Haiku
+  - Claude-3.5-Haiku
 domain:
   - entity
 ---

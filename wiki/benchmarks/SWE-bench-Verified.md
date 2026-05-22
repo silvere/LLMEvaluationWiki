@@ -1,86 +1,153 @@
 ---
-title: "SWE-bench Verified"
+title: SWE-bench Verified
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
-domain: [code, agent]
+as_of_date: '2026-05-22'
+last_verified: '2026-05-22'
+domain:
+- code
+- agent
 language: en
 year: 2024
-authors: ["Carlos E. Jimenez", "John Yang", "Alexander Wettig", "Shunyu Yao", "Kexin Pei", "Ofir Press", "Karthik Narasimhan"]
-arxiv_id: "2310.06770"
-official_url: "https://www.swebench.com/verified.html"
-official_leaderboard: "https://www.swebench.com/"
-license: "MIT"
+authors:
+- Carlos E. Jimenez
+- John Yang
+- Alexander Wettig
+- Shunyu Yao
+- Kexin Pei
+- Ofir Press
+- Karthik Narasimhan
+arxiv_id: '2310.06770'
+official_url: https://www.swebench.com/verified.html
+official_leaderboard: https://www.swebench.com/
+license: MIT
 size: 500
 format: code-patch
 saturation_status: active
 sources:
-  - "https://www.swebench.com/verified.html"
-  - "https://openai.com/index/introducing-swe-bench-verified/"
-  - "https://www.nist.gov/media/748456"
-  - "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified"
+- https://www.swebench.com/verified.html
+- https://openai.com/index/introducing-swe-bench-verified/
+- https://www.nist.gov/media/748456
+- https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified
 evaluation_protocol:
-  default_shots: "agent-driven"
+  default_shots: agent-driven
   default_cot: true
   tool_use: true
-  scoring: "% resolved (patch passes ALL FAIL_TO_PASS + PASS_TO_PASS tests)"
-  isolation: "Docker container per task"
+  scoring: '% resolved (patch passes ALL FAIL_TO_PASS + PASS_TO_PASS tests)'
+  isolation: Docker container per task
 pitfalls:
-  - "Verified ≠ Full ≠ Lite：常被混淆。Verified 500 题、Full 2,294 题、Lite 300 题，分数不可直接对比"
-  - "5.2%（NIST 评估）任务存在 unintended solutions：Agent 通过读取 .git 历史 / 修改测试代码 / 添加 test-specific shortcut 通过测试而非真解 issue（NIST 报告：https://www.nist.gov/media/748456）"
-  - "SWE-ABS 论文（2026）报告：top-30 leaderboard agent 共 11,041 个 patch 中 19.78% 在强化测试套件下失败，提示 unit test 强度仍不足"
-  - "Agent 框架（SWE-agent / OpenHands / Aider）的 scaffolding 选择对分数影响巨大，跨论文对比时必须报告 scaffold"
-  - "成本：完整跑 SWE-bench Verified 一次 ~$50-200（视 agent / 模型），无法快速 ablation"
+- Verified ≠ Full ≠ Lite：常被混淆。Verified 500 题、Full 2,294 题、Lite 300 题，分数不可直接对比
+- 5.2%（NIST 评估）任务存在 unintended solutions：Agent 通过读取 .git 历史 / 修改测试代码 / 添加 test-specific shortcut 通过测试而非真解 issue（NIST 报告：https://www.nist.gov/media/748456）
+- SWE-ABS 论文（2026）报告：top-30 leaderboard agent 共 11,041 个 patch 中 19.78% 在强化测试套件下失败，提示 unit test 强度仍不足
+- Agent 框架（SWE-agent / OpenHands / Aider）的 scaffolding 选择对分数影响巨大，跨论文对比时必须报告 scaffold
+- 成本：完整跑 SWE-bench Verified 一次 ~$50-200（视 agent / 模型），无法快速 ablation
 sota:
-  - score: "80.6%"
-    model: "Gemini-3.1-Pro"
-    harness: null
-  - score: "80.6%"
-    model: "DeepSeek-V4-Pro"
-    harness: null
-    notes: "open-source 与 Gemini 3.1 Pro 同档"
-  - score: "77.8%"
-    model: "GLM-5"
-    harness: null
-    notes: "open-source 第一（同期）"
-  - score: "72.5-79.4%"
-    model: "Claude-Opus-4"
-    harness: null
-  - score: "78%"
-    model: "Gemini-3-Flash"
-    harness: null
-    notes: "agentic"
-  - score: "77.2%"
-    model: "Claude-Sonnet-4.5"
-    harness: null
-  - score: "约 74%"
-    model: "GPT-5"
-    harness: null
-  - score: "约 71%"
-    model: "o3"
-    harness: null
-  - score: "70.3% (高级配置)"
-    model: "Claude-3.7-Sonnet"
-    harness: null
-  - score: "约 65.8%"
-    model: "Kimi-K2"
-    harness: null
-    notes: "Agentic"
-  - score: "63.2%"
-    model: "Gemini-2.5-Pro"
-    harness: null
-  - score: "54.6%"
-    model: "GPT-4.1"
-    harness: null
-  - score: "49.0%"
-    model: "Claude-3.5-Sonnet"
-    harness: null
-  - score: "48.9%"
-    model: "o1"
-    harness: null
+- score: 93.9%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/swe-bench-verified
+  notes: Mythos Preview (agentic)
+- score: 87.6%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/swe-bench-verified
+  notes: Adaptive
+- score: 82.6%
+  model: GPT-5.5
+  harness: null
+  with_tools: true
+  date: 2026-05
+  source: https://www.codeant.ai/blogs/swe-bench-scores
+  notes: GPT-5.5
+- score: 82.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-05
+  source: https://www.codeant.ai/blogs/swe-bench-scores
+  notes: baseline
+- score: 80.6%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2025-12
+  source: https://blog.google/technology/google-deepmind/gemini-update-may-2026/
+  notes: Gemini 3.1 Pro Preview
+- score: 80.6%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://api-docs.deepseek.com/news/news260424
+  notes: open-source 同档
+- score: 78.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://www.codeant.ai/blogs/swe-bench-scores
+  notes: 02/26 ver
+- score: 78.2%
+  model: Claude-Opus-4
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://www.codeant.ai/blogs/swe-bench-scores
+  notes: Opus 4.6 Thinking
+- score: 78.0%
+  model: Gemini-3-Flash
+  harness: null
+  with_tools: true
+  date: 2026-01
+  source: https://blog.google/
+  notes: agentic
+- score: 77.8%
+  model: GLM-5
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://huggingface.co/zai-org/GLM-5
+  notes: open-source 第一
+- score: 77.2%
+  model: Claude-Sonnet-4.5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://www.anthropic.com/
+- score: 74.0%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2026-05
+  source: https://www.codeant.ai/blogs/swe-bench-scores
+  notes: GPT-5.3 Codex
+- score: 74.0%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://www.codeant.ai/blogs/swe-bench-scores
+  notes: GPT-5.4
+- score: 74.0%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-08
+  source: https://openai.com/
+  notes: 初版
+- score: 71.7%
+  model: o3
+  harness: null
+  with_tools: true
+  date: 2024-12
+  source: https://openai.com/
+dimension: H
 ---
 
 # SWE-bench Verified
@@ -123,24 +190,25 @@ SWE-bench Verified 目前是业界最受认可的软件工程 Agent 能力评测
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Gemini-3.1-Pro]] | 80.6% |  |
-| 🥈 | [[DeepSeek-V4-Pro]] | 80.6% | open-source 与 Gemini 3.1 Pro 同档 |
-| 🥉 | [[GLM-5]] | 77.8% | open-source 第一（同期） |
-| 4 | [[Claude-Opus-4]] | 72.5-79.4% |  |
-| 5 | [[Gemini-3-Flash]] | 78% | agentic |
-| 6 | [[Claude-Sonnet-4.5]] | 77.2% |  |
-| 7 | [[GPT-5]] | 约 74% |  |
-| 8 | [[o3]] | 约 71% |  |
-| 9 | [[Claude-3.7-Sonnet]] | 70.3% (高级配置) |  |
-| 10 | [[Kimi-K2]] | 约 65.8% | Agentic |
-| 11 | [[Gemini-2.5-Pro]] | 63.2% |  |
-| 12 | [[GPT-4.1]] | 54.6% |  |
-| 13 | [[Claude-3.5-Sonnet]] | 49.0% |  |
-| 14 | [[o1]] | 48.9% |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🔧 with | 93.9% | Mythos Preview (agentic) | 2026-05 | [link](https://llm-stats.com/benchmarks/swe-bench-verified) |
+| 🥈 | [[Claude-Opus-4.7]] | 🔧 with | 87.6% | Adaptive | 2026-05 | [link](https://llm-stats.com/benchmarks/swe-bench-verified) |
+| 🥉 | [[GPT-5.5]] | 🔧 with | 82.6% | GPT-5.5 | 2026-05 | [link](https://www.codeant.ai/blogs/swe-bench-scores) |
+| 4 | [[Claude-Opus-4.7]] | 🔧 with | 82.0% | baseline | 2026-05 | [link](https://www.codeant.ai/blogs/swe-bench-scores) |
+| 5 | [[Gemini-3.1-Pro]] | 🔧 with | 80.6% | Gemini 3.1 Pro Preview | 2025-12 | [link](https://blog.google/technology/google-deepmind/gemini-update-may-2026/) |
+| 6 | [[DeepSeek-V4-Pro]] | 🔧 with | 80.6% | open-source 同档 | 2026-04 | [link](https://api-docs.deepseek.com/news/news260424) |
+| 7 | [[Gemini-3.1-Pro]] | 🔧 with | 78.8% | 02/26 ver | 2026-02 | [link](https://www.codeant.ai/blogs/swe-bench-scores) |
+| 8 | [[Claude-Opus-4]] | 🔧 with | 78.2% | Opus 4.6 Thinking | 2026-02 | [link](https://www.codeant.ai/blogs/swe-bench-scores) |
+| 9 | [[Gemini-3-Flash]] | 🔧 with | 78.0% | agentic | 2026-01 | [link](https://blog.google/) |
+| 10 | [[GLM-5]] | 🔧 with | 77.8% | open-source 第一 | 2026-02 | [link](https://huggingface.co/zai-org/GLM-5) |
+| 11 | [[Claude-Sonnet-4.5]] | 🔧 with | 77.2% |  | 2025-09 | [link](https://www.anthropic.com/) |
+| 12 | [[GPT-5]] | 🔧 with | 74.0% | GPT-5.3 Codex | 2026-05 | [link](https://www.codeant.ai/blogs/swe-bench-scores) |
+| 13 | [[GPT-5]] | 🔧 with | 74.0% | GPT-5.4 | 2026-02 | [link](https://www.codeant.ai/blogs/swe-bench-scores) |
+| 14 | [[GPT-5]] | 🔧 with | 74.0% | 初版 | 2025-08 | [link](https://openai.com/) |
+| 15 | [[o3]] | 🔧 with | 71.7% |  | 2024-12 | [link](https://openai.com/) |
 
 <!-- AUTO-SOTA:END -->
 

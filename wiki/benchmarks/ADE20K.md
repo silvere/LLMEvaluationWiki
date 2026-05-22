@@ -10,6 +10,7 @@ domain:
 year: 2017
 arxiv_id: ""
 status: active
+dimension: E
 ---
 
 # ADE20K

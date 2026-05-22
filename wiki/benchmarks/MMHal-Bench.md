@@ -11,6 +11,8 @@ domain:
 year: 2023
 arxiv_id: "2309.14525"
 status: active
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # MMHal-Bench

@@ -10,6 +10,8 @@ domain:
 year: 2021
 arxiv_id: "2012.13048"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # ProofWriter

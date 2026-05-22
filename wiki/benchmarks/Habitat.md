@@ -17,6 +17,8 @@ aliases:
 domain:
   - benchmark
   - agent
+dimension: D
+subdimension: general
 ---
 
 # Habitat（AI Habitat）

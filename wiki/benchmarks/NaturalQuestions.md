@@ -18,6 +18,7 @@ format: open-ended
 status: active
 saturation_threshold: 0.90
 sources: []
+dimension: C
 ---
 
 # NaturalQuestions（NQ）

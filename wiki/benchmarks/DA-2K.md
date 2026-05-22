@@ -11,6 +11,7 @@ domain:
 year: 2024
 arxiv_id: "2406.09414"
 status: active
+dimension: E
 ---
 
 # DA-2K

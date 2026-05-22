@@ -20,6 +20,8 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2402.14008"
   - "https://github.com/OpenBMB/OlympiadBench"
+dimension: A
+subdimension: benchmark
 ---
 
 # OlympiadBench

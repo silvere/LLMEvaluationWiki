@@ -1,53 +1,106 @@
 ---
-title: "LiveCodeBench"
+title: LiveCodeBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
-domain: [code]
+as_of_date: '2026-05-19'
+last_verified: '2026-05-22'
+domain:
+- code
 language: en
 year: 2024
-authors: ["Naman Jain", "King Han", "Alex Gu", "Wen-Ding Li", "Fanjia Yan", "Tianjun Zhang", "Sida Wang", "Armando Solar-Lezama", "Koushik Sen", "Ion Stoica"]
-arxiv_id: "2403.07974"
-official_url: "https://livecodebench.github.io"
-official_leaderboard: "https://livecodebench.github.io/leaderboard.html"
-license: "MIT"
+authors:
+- Naman Jain
+- King Han
+- Alex Gu
+- Wen-Ding Li
+- Fanjia Yan
+- Tianjun Zhang
+- Sida Wang
+- Armando Solar-Lezama
+- Koushik Sen
+- Ion Stoica
+arxiv_id: '2403.07974'
+official_url: https://livecodebench.github.io
+official_leaderboard: https://livecodebench.github.io/leaderboard.html
+license: MIT
 size: 600
 format: code
 saturation_status: active
 sources:
-  - "https://arxiv.org/abs/2403.07974"
-  - "https://livecodebench.github.io/"
-  - "https://github.com/livecodebench/livecodebench"
+- https://arxiv.org/abs/2403.07974
+- https://livecodebench.github.io/
+- https://github.com/livecodebench/livecodebench
 evaluation_protocol:
-  default_shots: "0-shot"
+  default_shots: 0-shot
   default_cot: true
   tool_use: false
-  scoring: "pass@1（部分变体支持 pass@5）"
-  time_filter: "按题目发布日期过滤，仅评测模型 cutoff 之后的题"
+  scoring: pass@1（部分变体支持 pass@5）
+  time_filter: 按题目发布日期过滤，仅评测模型 cutoff 之后的题
 pitfalls:
-  - "**必须报告时间窗**：'LiveCodeBench 80%' 没意义，必须说 '2024-08 之后题目 80%'，否则无法排除污染"
-  - "数据来源 LeetCode/AtCoder/CodeForces，仍以英文 + 算法竞赛风格为主，对工程任务代表性不足（应结合 SWE-bench）"
-  - "模型 cutoff 内的题分数会被记忆污染，cutoff 后题分数显著下降——这正是 LiveCodeBench 的设计核心"
-  - "题目持续更新（约每月），不同时间快照的分数不可直接对比，引用时必须说明 leaderboard 版本"
+- '**必须报告时间窗**：''LiveCodeBench 80%'' 没意义，必须说 ''2024-08 之后题目 80%''，否则无法排除污染'
+- 数据来源 LeetCode/AtCoder/CodeForces，仍以英文 + 算法竞赛风格为主，对工程任务代表性不足（应结合 SWE-bench）
+- 模型 cutoff 内的题分数会被记忆污染，cutoff 后题分数显著下降——这正是 LiveCodeBench 的设计核心
+- 题目持续更新（约每月），不同时间快照的分数不可直接对比，引用时必须说明 leaderboard 版本
 sota:
-  - score: "约 80%"
-    model: "Gemini-2.5-Pro"
-    harness: null
-  - score: "约 70%"
-    model: "Qwen3"
-    harness: null
-  - score: "约 53.7%"
-    model: "Kimi-K2"
-    harness: null
-  - score: "约 43.4%"
-    model: "Llama-4"
-    harness: null
-  - score: "约 36%"
-    model: "Gemini-2.0-Flash"
-    harness: null
+- score: 91.7%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://pricepertoken.com/leaderboards/benchmark/livecodebench
+  notes: pass@1，thinking mode，recent problems
+- score: 89.4%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://pricepertoken.com/leaderboards/benchmark/livecodebench
+  notes: pass@1，GPT-5.2，recent problems
+- score: 87.1%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://pricepertoken.com/leaderboards/benchmark/livecodebench
+  notes: pass@1，extended thinking，recent problems
+- score: 85.3%
+  model: Kimi-K2
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://pricepertoken.com/leaderboards/benchmark/livecodebench
+  notes: pass@1，recent problems
+- score: 79.7%
+  model: Gemini-2.5-Pro
+  harness: null
+  with_tools: false
+  date: 2025-06
+  source: https://livecodebench.github.io/leaderboard.html
+  notes: pass@1，all problems（2025 H1，已被 3.1-Pro 大幅超越）
+- score: 71.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://artificialanalysis.ai/evaluations/livecodebench
+  notes: pass@1，all-time snapshot 2026-05-12
+- score: 53.7%
+  model: Kimi-K2
+  harness: null
+  with_tools: false
+  date: 2025-11
+  source: https://livecodebench.github.io/leaderboard.html
+  notes: pass@1，all-time window（注：newer window 85.3%）
+- score: 43.4%
+  model: Llama-4
+  harness: null
+  with_tools: false
+  date: 2025-04
+  source: https://artificialanalysis.ai/evaluations/livecodebench
+  notes: pass@1，all-time
+dimension: H
 ---
 
 # LiveCodeBench
@@ -90,15 +143,18 @@ LiveCodeBench 的重要发现之一是揭示了"HumanEval 高分陷阱"：在 Hu
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Gemini-2.5-Pro]] | 约 80% |  |
-| 🥈 | [[Qwen3]] | 约 70% |  |
-| 🥉 | [[Kimi-K2]] | 约 53.7% |  |
-| 4 | [[Llama-4]] | 约 43.4% |  |
-| 5 | [[Gemini-2.0-Flash]] | 约 36% |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 91.7% | pass@1，thinking mode，recent problems | 2026-05 | [link](https://pricepertoken.com/leaderboards/benchmark/livecodebench) |
+| 🥈 | [[GPT-5]] | 🚫 no | 89.4% | pass@1，GPT-5.2，recent problems | 2026-05 | [link](https://pricepertoken.com/leaderboards/benchmark/livecodebench) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 87.1% | pass@1，extended thinking，recent problems | 2026-05 | [link](https://pricepertoken.com/leaderboards/benchmark/livecodebench) |
+| 4 | [[Kimi-K2]] | 🚫 no | 85.3% | pass@1，recent problems | 2026-05 | [link](https://pricepertoken.com/leaderboards/benchmark/livecodebench) |
+| 5 | [[Gemini-2.5-Pro]] | 🚫 no | 79.7% | pass@1，all problems（2025 H1，已被 3.1-Pro 大幅超越） | 2025-06 | [link](https://livecodebench.github.io/leaderboard.html) |
+| 6 | [[Qwen3.6]] | 🚫 no | 71.8% | pass@1，all-time snapshot 2026-05-12 | 2026-05 | [link](https://artificialanalysis.ai/evaluations/livecodebench) |
+| 7 | [[Kimi-K2]] | 🚫 no | 53.7% | pass@1，all-time window（注：newer window 85.3%） | 2025-11 | [link](https://livecodebench.github.io/leaderboard.html) |
+| 8 | [[Llama-4]] | 🚫 no | 43.4% | pass@1，all-time | 2025-04 | [link](https://artificialanalysis.ai/evaluations/livecodebench) |
 
 <!-- AUTO-SOTA:END -->
 

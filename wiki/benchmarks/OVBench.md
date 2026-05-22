@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2412.17574"
 status: active
+dimension: F
 ---
 
 # OVBench

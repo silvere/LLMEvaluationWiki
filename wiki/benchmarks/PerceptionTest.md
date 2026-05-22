@@ -11,6 +11,7 @@ domain:
 year: 2023
 arxiv_id: "2305.13786"
 status: active
+dimension: E
 ---
 
 # PerceptionTest

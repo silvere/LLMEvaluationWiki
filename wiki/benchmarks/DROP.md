@@ -18,6 +18,8 @@ format: open-ended
 status: active
 saturation_threshold: 0.90
 sources: []
+dimension: A
+subdimension: benchmark
 ---
 
 # DROP（Discrete Reasoning Over Paragraphs）

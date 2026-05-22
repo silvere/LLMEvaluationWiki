@@ -12,6 +12,8 @@ domain:
 year: 2023
 arxiv_id: "2311.12022"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # GPQA-Diamond

@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2307.16125"
+dimension: E
 ---
 
 # SEED-Bench：多模态生成模型理解能力评测

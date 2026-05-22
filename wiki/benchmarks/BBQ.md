@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2110.08193"
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # BBQ：偏见基准问答测试集

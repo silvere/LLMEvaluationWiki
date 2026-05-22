@@ -11,6 +11,8 @@ domain:
 year: 2021
 arxiv_id: "2109.00122"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # FinQA

@@ -11,6 +11,8 @@ domain:
 year: 2024
 arxiv_id: "2405.06161"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # MIBench

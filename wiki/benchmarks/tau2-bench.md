@@ -14,6 +14,8 @@ domain:
 year: 2025
 arxiv_id: "2506.07982"
 status: active
+dimension: D
+subdimension: general
 ---
 
 # τ²-Bench

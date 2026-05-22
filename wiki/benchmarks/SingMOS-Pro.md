@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2510.01812"
 status: active
+dimension: G
 ---
 
 # SingMOS-Pro

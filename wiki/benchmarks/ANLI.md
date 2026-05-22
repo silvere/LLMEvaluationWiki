@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "Nie, Y., et al. (2020). Adversarial NLI: A New Benchmark for Natural Language Understanding. ACL 2020."
+dimension: A
+subdimension: benchmark
 ---
 
 # ANLI（Adversarial NLI）

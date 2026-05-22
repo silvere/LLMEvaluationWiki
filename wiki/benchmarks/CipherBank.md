@@ -11,6 +11,8 @@ domain:
 year: 2025
 arxiv_id: "2504.19093"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # CipherBank

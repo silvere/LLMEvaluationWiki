@@ -20,6 +20,8 @@ saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2305.12524"
   - "https://github.com/wenhuchen/TheoremQA"
+dimension: A
+subdimension: benchmark
 ---
 
 # TheoremQA

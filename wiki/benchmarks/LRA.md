@@ -15,6 +15,7 @@ aliases:
 domain:
   - benchmark
   - long-context
+dimension: long-ctx
 ---
 
 # Long Range Arena（LRA）

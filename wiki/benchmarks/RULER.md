@@ -18,6 +18,7 @@ format: multiple-choice
 status: active
 saturation_threshold: 0.80
 sources: [""]
+dimension: long-ctx
 ---
 
 # RULER（Ruler Unified Long-context Evaluation for Language Models）

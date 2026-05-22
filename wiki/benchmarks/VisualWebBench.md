@@ -11,6 +11,8 @@ domain:
 year: 2024
 arxiv_id: "2404.05955"
 status: active
+dimension: D
+subdimension: web-gui
 ---
 
 # VisualWebBench

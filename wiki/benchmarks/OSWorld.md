@@ -1,19 +1,53 @@
 ---
-title: "OSWorld"
+title: OSWorld
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - agent
+- agent
 year: 2024
-arxiv_id: "2404.07972"
+arxiv_id: '2404.07972'
 status: active
 sota:
-  - score: "约 50-61%"
-    model: "Claude-Sonnet-4.5"
-    harness: null
+- score: 79.6%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://llm-stats.com/benchmarks/osworld
+  notes: Claude Mythos Preview，OSWorld-Verified 变体
+- score: 78.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://llm-stats.com/benchmarks/osworld
+  notes: Claude Opus 4.7 standard，OSWorld-Verified
+- score: 72.7%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://llm-stats.com/benchmarks/osworld
+  notes: Claude Opus 4.6，OSWorld standard（不含 Verified variant）
+- score: 72.5%
+  model: Claude-Sonnet-4.6
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://llm-stats.com/benchmarks/osworld
+  notes: OSWorld standard
+- score: 66.7%
+  model: Qwen3.6
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://llm-stats.com/benchmarks/osworld
+  notes: Qwen3 VL 235B A22B，OSWorld standard
+dimension: D
+subdimension: web-gui
 ---
 
 # OSWorld
@@ -26,11 +60,15 @@ sota:
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Claude-Sonnet-4.5]] | 约 50-61% |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🔧 with | 79.6% | Claude Mythos Preview，OSWorld-Verified 变体 | 2026-04 | [link](https://llm-stats.com/benchmarks/osworld) |
+| 🥈 | [[Claude-Opus-4.7]] | 🔧 with | 78.0% | Claude Opus 4.7 standard，OSWorld-Verified | 2026-04 | [link](https://llm-stats.com/benchmarks/osworld) |
+| 🥉 | [[Claude-Opus-4.7]] | 🔧 with | 72.7% | Claude Opus 4.6，OSWorld standard（不含 Verified variant） | 2026-04 | [link](https://llm-stats.com/benchmarks/osworld) |
+| 4 | [[Claude-Sonnet-4.6]] | 🔧 with | 72.5% | OSWorld standard | 2026-04 | [link](https://llm-stats.com/benchmarks/osworld) |
+| 5 | [[Qwen3.6]] | 🔧 with | 66.7% | Qwen3 VL 235B A22B，OSWorld standard | 2026-04 | [link](https://llm-stats.com/benchmarks/osworld) |
 
 <!-- AUTO-SOTA:END -->
 

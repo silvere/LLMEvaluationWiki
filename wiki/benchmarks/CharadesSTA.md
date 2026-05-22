@@ -10,6 +10,7 @@ domain:
 year: 2017
 arxiv_id: "1705.02101"
 status: active
+dimension: E
 ---
 
 # Charades-STA

@@ -1,63 +1,106 @@
 ---
-title: "HumanEval"
+title: HumanEval
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
-domain: [code]
+as_of_date: '2026-05-19'
+last_verified: '2026-05-22'
+domain:
+- code
 language: en
 year: 2021
-authors: ["Mark Chen", "Jerry Tworek", "Heewoo Jun", "Qiming Yuan", "Henrique Ponde de Oliveira Pinto", "Jared Kaplan", "Harri Edwards", "Yuri Burda", "Nicholas Joseph", "Greg Brockman"]
-arxiv_id: "2107.03374"
-official_url: "https://github.com/openai/human-eval"
-official_leaderboard: "https://paperswithcode.com/sota/code-generation-on-humaneval"
-license: "MIT"
+authors:
+- Mark Chen
+- Jerry Tworek
+- Heewoo Jun
+- Qiming Yuan
+- Henrique Ponde de Oliveira Pinto
+- Jared Kaplan
+- Harri Edwards
+- Yuri Burda
+- Nicholas Joseph
+- Greg Brockman
+arxiv_id: '2107.03374'
+official_url: https://github.com/openai/human-eval
+official_leaderboard: https://paperswithcode.com/sota/code-generation-on-humaneval
+license: MIT
 size: 164
 format: code
 saturation_status: saturated
 sources:
-  - "https://arxiv.org/abs/2107.03374"
-  - "https://github.com/openai/human-eval"
+- https://arxiv.org/abs/2107.03374
+- https://github.com/openai/human-eval
 evaluation_protocol:
-  default_shots: "0-shot"
+  default_shots: 0-shot
   default_cot: false
   tool_use: false
-  scoring: "pass@k（k 通常为 1，最初论文用 pass@1/10/100）"
+  scoring: pass@k（k 通常为 1，最初论文用 pass@1/10/100）
 pitfalls:
-  - "样本量太小（164 题），统计噪声大，单次 run 1-2 个百分点波动很常见"
-  - "完全饱和：顶级模型 pass@1 ≥ 93%（GPT-5.4 93.1% / Claude Sonnet 4 95.1%）；继续报告 HumanEval 已无区分度"
-  - "确认污染：HumanEval 已在公开训练语料数年，所有主流 base model 几乎确定见过，分数虚高（参考 LiveCodeBench 论文 2403.07974）"
-  - "与 MBPP 题目重叠（10+ 题），跨 benchmark 不可独立采样"
-  - "pass@1 vs pass@10 区别巨大（顶级模型 pass@10 比 pass@1 高 5-15pt），跨论文比较前必须看 k"
-  - "应替换为：HumanEval+ / EvalPlus（更多测试用例）/ LiveCodeBench / SWE-bench-Verified"
+- 样本量太小（164 题），统计噪声大，单次 run 1-2 个百分点波动很常见
+- 完全饱和：顶级模型 pass@1 ≥ 93%（GPT-5.4 93.1% / Claude Sonnet 4 95.1%）；继续报告 HumanEval 已无区分度
+- 确认污染：HumanEval 已在公开训练语料数年，所有主流 base model 几乎确定见过，分数虚高（参考 LiveCodeBench 论文 2403.07974）
+- 与 MBPP 题目重叠（10+ 题），跨 benchmark 不可独立采样
+- pass@1 vs pass@10 区别巨大（顶级模型 pass@10 比 pass@1 高 5-15pt），跨论文比较前必须看 k
+- 应替换为：HumanEval+ / EvalPlus（更多测试用例）/ LiveCodeBench / SWE-bench-Verified
 sota:
-  - score: "约 92-95%"
-    model: "Claude-3.7-Sonnet"
-    harness: null
-  - score: "约 92.7%"
-    model: "Qwen2.5-72B"
-    harness: null
-    notes: "Coder-32B"
-  - score: "92.0%"
-    model: "Claude-3.5-Sonnet"
-    harness: null
-  - score: "90.2%"
-    model: "GPT-4o"
-    harness: null
-  - score: "约 90%+"
-    model: "GPT-4.1"
-    harness: null
-  - score: "约 82-89%"
-    model: "DeepSeek-V3"
-    harness: null
-  - score: "约 88.4%"
-    model: "Llama-3.3-70B"
-    harness: null
-  - score: "71.9%"
-    model: "Gemini-1.5-Pro"
-    harness: null
+- score: 96.3%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.codesota.com/llm/humaneval-mbpp
+  notes: pass@1，HumanEval 已饱和（164 题）
+- score: 94.5%
+  model: Kimi-K2
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/humaneval
+  notes: pass@1
+- score: 94.1%
+  model: Claude-Sonnet-4.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.codesota.com/llm/humaneval-mbpp
+  notes: pass@1
+- score: 93.4%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/humaneval
+  notes: pass@1
+- score: 92.7%
+  model: Qwen2.5-Coder-32B
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/humaneval
+  notes: pass@1，Coder 版本
+- score: 90.2%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://llm-stats.com/benchmarks/humaneval
+  notes: pass@1，2024 基线
+- score: 87.1%
+  model: DeepSeek-V3
+  harness: null
+  with_tools: false
+  date: 2025-12
+  source: https://arxiv.org/abs/2412.19437
+  notes: pass@1，DeepSeek V3 技术报告
+- score: 71.9%
+  model: Gemini-2.5-Pro
+  harness: null
+  with_tools: false
+  date: 2025-06
+  source: https://artificialanalysis.ai/evaluations/humaneval
+  notes: pass@1，2025 H1 水平
+dimension: H
 ---
 
 # HumanEval（含 HumanEval+）
@@ -103,18 +146,18 @@ HumanEval+ 是 EvalPlus 项目对 HumanEval 的增强版本，通过自动化方
 
 ## 模型得分排行
 
-> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染。维护：编辑 frontmatter，不要手改本表。
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
 
-| # | 模型 | 分数 | 备注 |
-|---|---|---|---|
-| 🥇 | [[Claude-3.7-Sonnet]] | 约 92-95% |  |
-| 🥈 | [[Qwen2.5-72B]] | 约 92.7% | Coder-32B |
-| 🥉 | [[Claude-3.5-Sonnet]] | 92.0% |  |
-| 4 | [[GPT-4o]] | 90.2% |  |
-| 5 | [[GPT-4.1]] | 约 90%+ |  |
-| 6 | [[DeepSeek-V3]] | 约 82-89% |  |
-| 7 | [[Llama-3.3-70B]] | 约 88.4% |  |
-| 8 | [[Gemini-1.5-Pro]] | 71.9% |  |
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 96.3% | pass@1，HumanEval 已饱和（164 题） | 2026-04 | [link](https://www.codesota.com/llm/humaneval-mbpp) |
+| 🥈 | [[Kimi-K2]] | 🚫 no | 94.5% | pass@1 | 2026-05 | [link](https://llm-stats.com/benchmarks/humaneval) |
+| 🥉 | [[Claude-Sonnet-4.6]] | 🚫 no | 94.1% | pass@1 | 2026-04 | [link](https://www.codesota.com/llm/humaneval-mbpp) |
+| 4 | [[GPT-5]] | 🚫 no | 93.4% | pass@1 | 2026-05 | [link](https://llm-stats.com/benchmarks/humaneval) |
+| 5 | [[Qwen2.5-Coder-32B]] | 🚫 no | 92.7% | pass@1，Coder 版本 | 2026-05 | [link](https://llm-stats.com/benchmarks/humaneval) |
+| 6 | [[GPT-4o]] | 🚫 no | 90.2% | pass@1，2024 基线 | 2024-05 | [link](https://llm-stats.com/benchmarks/humaneval) |
+| 7 | [[DeepSeek-V3]] | 🚫 no | 87.1% | pass@1，DeepSeek V3 技术报告 | 2025-12 | [link](https://arxiv.org/abs/2412.19437) |
+| 8 | [[Gemini-2.5-Pro]] | 🚫 no | 71.9% | pass@1，2025 H1 水平 | 2025-06 | [link](https://artificialanalysis.ai/evaluations/humaneval) |
 
 <!-- AUTO-SOTA:END -->
 

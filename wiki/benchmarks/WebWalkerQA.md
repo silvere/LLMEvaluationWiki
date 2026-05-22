@@ -11,6 +11,8 @@ domain:
 year: 2025
 arxiv_id: "2501.07572"
 status: active
+dimension: D
+subdimension: web-gui
 ---
 
 # WebWalkerQA

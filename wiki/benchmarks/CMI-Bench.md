@@ -10,6 +10,7 @@ domain:
 year: 2025
 arxiv_id: "2506.12285"
 status: active
+dimension: G
 ---
 
 # CMI-Bench

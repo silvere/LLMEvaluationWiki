@@ -11,6 +11,7 @@ domain:
 year: 2024
 arxiv_id: "2407.15754"
 status: active
+dimension: long-ctx
 ---
 
 # LongVideoBench

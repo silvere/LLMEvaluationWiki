@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/2007.00398"
+dimension: E
 ---
 
 # DocVQA：文档视觉问答基准

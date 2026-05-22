@@ -11,6 +11,7 @@ domain:
 year: 2024
 arxiv_id: "2406.10453"
 status: active
+dimension: E
 ---
 
 # Event-Bench

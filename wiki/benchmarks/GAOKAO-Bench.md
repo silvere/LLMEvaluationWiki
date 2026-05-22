@@ -12,6 +12,8 @@ domain:
 year: 2023
 arxiv_id: "2305.12474"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # GAOKAO-Bench

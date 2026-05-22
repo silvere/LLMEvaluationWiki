@@ -1,23 +1,69 @@
 ---
-title: "AlpacaEval 2.0"
+title: AlpacaEval 2.0
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [instruction-following]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- instruction-following
 language: en
 year: 2024
-authors: ["Dubois et al."]
-arxiv_id: "2404.04475"
-official_url: "https://tatsu-lab.github.io/alpaca_eval/"
-license: "Apache-2.0"
+authors:
+- Dubois et al.
+arxiv_id: '2404.04475'
+official_url: https://tatsu-lab.github.io/alpaca_eval/
+license: Apache-2.0
 size: 805
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
+dimension: B
+sota:
+- score: 78.3%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: LC win rate vs GPT-4 Turbo，2026 frontier 水平
+- score: 74.1%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: LC win rate
+- score: 65.6%
+  model: Claude-3.5-Sonnet
+  harness: null
+  with_tools: false
+  date: 2024-10
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: LC（length-controlled）win rate vs GPT-4 Turbo reference，AlpacaEval 2.0 官方榜
+- score: 57.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-07
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: LC win rate，GPT-4 Omni
+- score: 50.7%
+  model: GPT-4-Turbo
+  harness: null
+  with_tools: false
+  date: 2024-01
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: LC win rate（参考基准模型）
+- score: 37.1%
+  model: Claude-3-Opus
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: LC win rate，2024-03 快照
 ---
 
 # AlpacaEval 2.0
@@ -59,6 +105,24 @@ AlpacaEval 2.0 的核心改进是引入了 **Length-Controlled Win Rate（LC Win
 ## SOTA 表现
 
 顶尖模型（GPT-4o、Claude 3.5 Sonnet、Gemini Ultra 等）的 LC Win Rate 均超过 55%（以 GPT-4 Turbo 为基线，50% 表示与基线持平）。具体最新成绩见官方排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 78.3% | LC win rate vs GPT-4 Turbo，2026 frontier 水平 | 2026-04 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+| 🥈 | [[GPT-5]] | 🚫 no | 74.1% | LC win rate | 2026-04 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+| 🥉 | [[Claude-3.5-Sonnet]] | 🚫 no | 65.6% | LC（length-controlled）win rate vs GPT-4 Turbo reference，AlpacaEval 2.0 官方榜 | 2024-10 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+| 4 | [[GPT-4o]] | 🚫 no | 57.5% | LC win rate，GPT-4 Omni | 2024-07 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+| 5 | [[GPT-4-Turbo]] | 🚫 no | 50.7% | LC win rate（参考基准模型） | 2024-01 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+| 6 | [[Claude-3-Opus]] | 🚫 no | 37.1% | LC win rate，2024-03 快照 | 2024-03 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

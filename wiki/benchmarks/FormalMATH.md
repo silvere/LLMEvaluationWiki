@@ -11,6 +11,8 @@ domain:
 year: 2025
 arxiv_id: "2505.02735"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # FormalMATH

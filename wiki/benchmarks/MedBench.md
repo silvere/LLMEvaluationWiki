@@ -12,6 +12,8 @@ domain:
 year: 2024
 arxiv_id: "2312.12806"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # MedBench

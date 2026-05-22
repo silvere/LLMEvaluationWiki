@@ -12,6 +12,8 @@ domain:
 year: 2025
 arxiv_id: "2502.14499"
 status: active
+dimension: D
+subdimension: general
 ---
 
 # MLGym-Bench

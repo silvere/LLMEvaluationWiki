@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.80
 sources:
   - "Wang, X., et al. (2023). MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback. ICLR 2024."
+dimension: D
+subdimension: tool-use
 ---
 
 # MINT

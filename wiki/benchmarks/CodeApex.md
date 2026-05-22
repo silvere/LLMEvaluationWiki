@@ -10,6 +10,7 @@ domain:
 year: 2023
 arxiv_id: "2309.01940"
 status: active
+dimension: H
 ---
 
 # CodeApex

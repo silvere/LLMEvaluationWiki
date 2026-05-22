@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/1904.08920"
+dimension: E
 ---
 
 # TextVQA：文字感知视觉问答基准

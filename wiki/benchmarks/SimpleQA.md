@@ -1,23 +1,72 @@
 ---
-title: "SimpleQA"
+title: SimpleQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [hallucination, knowledge]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- hallucination
+- knowledge
 language: en
 year: 2024
-authors: ["OpenAI"]
-arxiv_id: ""
-official_url: "https://openai.com/research/simpleqa"
-license: ""
+authors:
+- OpenAI
+arxiv_id: ''
+official_url: https://openai.com/research/simpleqa
+license: ''
 size: 4326
 format: multiple-choice
 status: active
-saturation_threshold: 0.80
-sources: [""]
+saturation_threshold: 0.8
+sources:
+- ''
+dimension: I
+subdimension: safety-benchmark
+sota:
+- score: 63.4%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://openai.com/index/introducing-simpleqa/
+  notes: SimpleQA 正确率，2026 frontier 水平
+- score: 58.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://openai.com/index/introducing-simpleqa/
+  notes: SimpleQA 正确率，GPT-5 系列
+- score: 55.6%
+  model: Gemini-2.5-Pro
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://arxiv.org/abs/2509.07968
+  notes: SimpleQA-Verified（2025 更新版），F1 分数
+- score: 42.7%
+  model: o1-preview
+  harness: null
+  with_tools: false
+  date: 2024-10
+  source: https://openai.com/index/introducing-simpleqa/
+  notes: 原始 SimpleQA 发布（2024），正确率
+- score: 38.2%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-10
+  source: https://openai.com/index/introducing-simpleqa/
+  notes: 原始 SimpleQA 发布（2024）
+- score: 28.9%
+  model: Claude-3.5-Sonnet
+  harness: null
+  with_tools: false
+  date: 2024-10
+  source: https://openai.com/index/introducing-simpleqa/
+  notes: 原始 SimpleQA 发布（2024），Claude 更倾向于说「不知道」
 ---
 
 # SimpleQA
@@ -25,6 +74,23 @@ sources: [""]
 > OpenAI 设计的事实性问答基准，用于测试模型在有明确答案的问题上的幻觉程度，GPT-4o 仅得 38.2%。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 63.4% | SimpleQA 正确率，2026 frontier 水平 | 2026-04 | [link](https://openai.com/index/introducing-simpleqa/) |
+| 🥈 | [[GPT-5]] | 🚫 no | 58.2% | SimpleQA 正确率，GPT-5 系列 | 2026-04 | [link](https://openai.com/index/introducing-simpleqa/) |
+| 🥉 | [[Gemini-2.5-Pro]] | 🚫 no | 55.6% | SimpleQA-Verified（2025 更新版），F1 分数 | 2025-09 | [link](https://arxiv.org/abs/2509.07968) |
+| 4 | [[o1-preview]] | 🚫 no | 42.7% | 原始 SimpleQA 发布（2024），正确率 | 2024-10 | [link](https://openai.com/index/introducing-simpleqa/) |
+| 5 | [[GPT-4o]] | 🚫 no | 38.2% | 原始 SimpleQA 发布（2024） | 2024-10 | [link](https://openai.com/index/introducing-simpleqa/) |
+| 6 | [[Claude-3.5-Sonnet]] | 🚫 no | 28.9% | 原始 SimpleQA 发布（2024），Claude 更倾向于说「不知道」 | 2024-10 | [link](https://openai.com/index/introducing-simpleqa/) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

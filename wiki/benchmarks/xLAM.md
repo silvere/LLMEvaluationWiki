@@ -10,6 +10,8 @@ domain:
 year: 2024
 arxiv_id: "2402.15506"
 status: active
+dimension: D
+subdimension: tool-use
 ---
 
 # xLAM

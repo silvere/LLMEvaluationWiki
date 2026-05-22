@@ -10,6 +10,7 @@ domain:
 year: 2024
 arxiv_id: "2406.16871"
 status: active
+dimension: E
 ---
 
 # TOMATO

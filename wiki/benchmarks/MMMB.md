@@ -10,6 +10,7 @@ domain:
   - multimodal
 year: 2024
 status: active
+dimension: E
 ---
 
 # MMMB

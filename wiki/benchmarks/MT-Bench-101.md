@@ -18,6 +18,7 @@ format: dialog
 status: active
 saturation_threshold: 0.90
 sources: []
+dimension: B
 ---
 
 # MT-Bench-101

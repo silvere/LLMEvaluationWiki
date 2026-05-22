@@ -18,6 +18,7 @@ format: multiple-choice
 status: active
 saturation_threshold: 0.90
 sources: []
+dimension: long-ctx
 ---
 
 # QuALITY（Question Answering with Long Input Texts, Yes!）

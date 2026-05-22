@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.85
 sources:
   - "Clark, J.H., et al. (2020). TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages. TACL 2020."
+dimension: A
+subdimension: benchmark
 ---
 
 # TyDi QA

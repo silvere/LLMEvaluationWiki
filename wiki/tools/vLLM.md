@@ -11,6 +11,9 @@ sources:
   - "https://blog.vllm.ai/"
 aliases:
   - vllm
+dimension: infra
+infrastructure: true
+note: "vLLM 是评测**基础设施**（推理引擎），不是评测工具本身。但几乎所有 LLM 评测 harness 都依赖 vLLM 类引擎做高吞吐推理。"
 domain:
   - other
 ---

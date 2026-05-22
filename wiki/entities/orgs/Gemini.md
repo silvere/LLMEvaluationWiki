@@ -8,6 +8,8 @@ as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
 aliases:
   - gemini
+  - Gemini-1.5-Flash
+  - Gemini-1.0-Pro
 domain:
   - entity
 ---

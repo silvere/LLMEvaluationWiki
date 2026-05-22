@@ -11,6 +11,7 @@ domain:
 year: 2025
 arxiv_id: "2503.10076"
 status: active
+dimension: E
 ---
 
 # VMBench

@@ -11,6 +11,7 @@ domain:
 year: 2021
 arxiv_id: "2111.08897"
 status: active
+dimension: E
 ---
 
 # ARKitScenes

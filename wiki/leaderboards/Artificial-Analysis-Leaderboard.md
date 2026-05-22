@@ -13,6 +13,8 @@ domain:
   - benchmark-design
 official_url: "https://artificialanalysis.ai/leaderboards/models"
 update_frequency: continuous
+dimension: A
+subdimension: leaderboard
 ---
 
 # Artificial Analysis Leaderboard

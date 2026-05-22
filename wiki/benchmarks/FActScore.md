@@ -18,6 +18,8 @@ format: open-ended
 status: active
 saturation_threshold: 0.90
 sources: []
+dimension: I
+subdimension: safety-benchmark
 ---
 
 # FActScore（Factual precision in Atomized Statements Score）

@@ -19,6 +19,7 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "https://arxiv.org/abs/1612.00837"
+dimension: E
 ---
 
 # VQAv2：视觉问答平衡数据集 v2

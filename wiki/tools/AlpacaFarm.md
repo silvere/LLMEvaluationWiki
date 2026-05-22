@@ -1,15 +1,22 @@
 ---
 title: "AlpacaFarm"
 type: tool
+dimension: B
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-sources: []
+as_of_date: "2026-05-22"
+last_verified: "2026-05-22"
+saturation_status: deprecated
+legacy_note: "已被 AlpacaEval 2.0 / Arena-Hard-Auto 替代，建议新评测用后两者"
+sources:
+  - "https://arxiv.org/abs/2305.14387"
+  - "https://github.com/tatsu-lab/alpaca_farm"
 ---
 
 # AlpacaFarm
+
+> ⚠️ **Deprecated**：本框架已基本退出主流评测。新评测请改用 [[AlpacaEval]] 2.0（同团队 instruction-following 评测继任者，含 length-controlled win rate）或 [[Arena-Hard-Auto]]（更高人类偏好相关性）。
 
 ## 概述
 

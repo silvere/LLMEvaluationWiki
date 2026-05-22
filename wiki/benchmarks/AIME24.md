@@ -20,6 +20,8 @@ saturation_threshold: 0.80
 sources:
   - "https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems"
   - "https://artofproblemsolving.com/wiki/index.php/2024_AIME_II_Problems"
+dimension: A
+subdimension: benchmark
 ---
 
 # AIME 2024

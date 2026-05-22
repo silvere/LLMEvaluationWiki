@@ -11,6 +11,8 @@ domain:
 year: 2023
 arxiv_id: "2309.16289"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # LawBench

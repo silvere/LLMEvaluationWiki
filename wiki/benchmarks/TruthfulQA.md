@@ -1,23 +1,72 @@
 ---
-title: "TruthfulQA"
+title: TruthfulQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [hallucination, knowledge]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- hallucination
+- knowledge
 language: en
 year: 2022
-authors: ["Lin et al."]
-arxiv_id: "2109.07958"
-official_url: "https://github.com/sylinrl/TruthfulQA"
-license: ""
+authors:
+- Lin et al.
+arxiv_id: '2109.07958'
+official_url: https://github.com/sylinrl/TruthfulQA
+license: ''
 size: 817
 format: multiple-choice
 status: active
 saturation_threshold: 0.85
-sources: [""]
+sources:
+- ''
+dimension: I
+subdimension: safety-benchmark
+sota:
+- score: 85.1%
+  model: GPT-4
+  harness: null
+  with_tools: false
+  date: 2023-03
+  source: https://arxiv.org/abs/2303.08774
+  notes: MC2（多标签准确率），GPT-4 技术报告
+- score: 72.3%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://llm-stats.com/benchmarks/truthfulqa
+  notes: MC1（单答案），frontier 模型因「礼貌性拒绝」分数偏低于小模型
+- score: 68.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://llm-stats.com/benchmarks/truthfulqa
+  notes: MC1
+- score: 65.5%
+  model: Claude-3.5-Sonnet
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://llm-stats.com/benchmarks/truthfulqa
+  notes: MC1，Claude 注重安全拒绝，分数偏低
+- score: 62.0%
+  model: Llama-3.1-70B
+  harness: null
+  with_tools: false
+  date: 2024-07
+  source: https://llm-stats.com/benchmarks/truthfulqa
+  notes: MC1，Meta AI 发布报告
+- score: 59.0%
+  model: GPT-4
+  harness: null
+  with_tools: false
+  date: 2023-03
+  source: https://arxiv.org/abs/2303.08774
+  notes: MC1（单答案准确率），GPT-4 技术报告
 ---
 
 # TruthfulQA
@@ -25,6 +74,23 @@ sources: [""]
 > 测试模型是否会复现人类常见错误信念的幻觉评测基准，同时评估回答的真实性与信息量两个维度。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-4]] | 🚫 no | 85.1% | MC2（多标签准确率），GPT-4 技术报告 | 2023-03 | [link](https://arxiv.org/abs/2303.08774) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 72.3% | MC1（单答案），frontier 模型因「礼貌性拒绝」分数偏低于小模型 | 2026-04 | [link](https://llm-stats.com/benchmarks/truthfulqa) |
+| 🥉 | [[GPT-5]] | 🚫 no | 68.5% | MC1 | 2026-04 | [link](https://llm-stats.com/benchmarks/truthfulqa) |
+| 4 | [[Claude-3.5-Sonnet]] | 🚫 no | 65.5% | MC1，Claude 注重安全拒绝，分数偏低 | 2024-06 | [link](https://llm-stats.com/benchmarks/truthfulqa) |
+| 5 | [[Llama-3.1-70B]] | 🚫 no | 62.0% | MC1，Meta AI 发布报告 | 2024-07 | [link](https://llm-stats.com/benchmarks/truthfulqa) |
+| 6 | [[GPT-4]] | 🚫 no | 59.0% | MC1（单答案准确率），GPT-4 技术报告 | 2023-03 | [link](https://arxiv.org/abs/2303.08774) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

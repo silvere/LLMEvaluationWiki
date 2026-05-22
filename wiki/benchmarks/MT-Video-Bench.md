@@ -16,6 +16,7 @@ domain:
   - multimodal
   - dialog
 task: "video-understanding"
+dimension: E
 ---
 
 # MT-Video-Bench

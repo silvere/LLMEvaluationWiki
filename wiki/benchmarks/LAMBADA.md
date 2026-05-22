@@ -18,6 +18,8 @@ format: open-ended
 status: saturated
 saturation_threshold: 0.90
 sources: []
+dimension: A
+subdimension: benchmark
 ---
 
 # LAMBADA（LAnguage Modeling Broadened to Account for Discourse Aspects）

@@ -19,6 +19,8 @@ status: active
 saturation_threshold: 0.90
 sources:
   - "Levesque, H., Davis, E., & Morgenstern, L. (2012). The Winograd Schema Challenge. AAAI Spring Symposium: Logical Formalizations of Commonsense Reasoning."
+dimension: A
+subdimension: benchmark
 ---
 
 # Winograd Schema Challenge

@@ -11,6 +11,8 @@ domain:
 year: 2025
 arxiv_id: ""
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # PRM-Bench

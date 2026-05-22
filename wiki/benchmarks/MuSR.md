@@ -10,6 +10,8 @@ domain:
 year: 2023
 arxiv_id: "2310.16049"
 status: active
+dimension: A
+subdimension: benchmark
 ---
 
 # MuSR
