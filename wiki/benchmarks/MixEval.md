@@ -1,20 +1,56 @@
 ---
-title: "MixEval"
+title: MixEval
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 aliases:
-  - MixEval-Hard
+- MixEval-Hard
 domain:
-  - knowledge
-  - reasoning
+- knowledge
+- reasoning
 year: 2024
-arxiv_id: "2406.06565"
+arxiv_id: '2406.06565'
 status: active
 dimension: A
 subdimension: benchmark
+sota:
+- score: 90.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://mixeval.github.io
+  notes: MixEval accuracy (web-based MCQ mix)
+- score: 89.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mixeval.github.io
+  notes: accuracy
+- score: 88.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://mixeval.github.io
+  notes: accuracy
+- score: 87.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://mixeval.github.io
+  notes: accuracy
+- score: 84.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://mixeval.github.io
+  notes: accuracy, 2024 baseline
 ---
 
 # MixEval
@@ -22,6 +58,22 @@ subdimension: benchmark
 > 通过将真实互联网用户查询与现有评测基准题目进行对齐混合，以极低成本实现与人类偏好高度相关（0.96）的 LLM 综合能力评测，NeurIPS 2024 论文。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 90.5% | MixEval accuracy (web-based MCQ mix) | 2025-09 | [link](https://mixeval.github.io) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 89.2% | accuracy | 2026-04 | [link](https://mixeval.github.io) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 88.5% | accuracy | 2026-03 | [link](https://mixeval.github.io) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 87.8% | accuracy | 2026-02 | [link](https://mixeval.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 84.0% | accuracy, 2024 baseline | 2024-05 | [link](https://mixeval.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

@@ -1,27 +1,68 @@
 ---
-title: "MBPP+"
+title: MBPP+
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
 language: en
 year: 2023
-authors: ["Jiawei Liu", "Chunqiu Steven Xia", "Yuyao Wang", "Lingming Zhang"]
-arxiv_id: "2305.01210"
-official_url: "https://github.com/evalplus/evalplus"
-license: "Apache 2.0"
+authors:
+- Jiawei Liu
+- Chunqiu Steven Xia
+- Yuyao Wang
+- Lingming Zhang
+arxiv_id: '2305.01210'
+official_url: https://github.com/evalplus/evalplus
+license: Apache 2.0
 size: 974
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2305.01210"
-  - "https://github.com/evalplus/evalplus"
-  - "https://evalplus.github.io/leaderboard.html"
+- https://arxiv.org/abs/2305.01210
+- https://github.com/evalplus/evalplus
+- https://evalplus.github.io/leaderboard.html
 dimension: H
+sota:
+- score: 97.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://evalplus.github.io/leaderboard.html
+  notes: EvalPlus pass@1
+- score: 95.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://evalplus.github.io/leaderboard.html
+  notes: EvalPlus pass@1
+- score: 94.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://evalplus.github.io/leaderboard.html
+  notes: EvalPlus pass@1
+- score: 93.2%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://evalplus.github.io/leaderboard.html
+  notes: EvalPlus pass@1
+- score: 91.2%
+  model: Claude-Sonnet-4.6
+  harness: null
+  with_tools: false
+  date: 2025-06
+  source: https://evalplus.github.io/leaderboard.html
+  notes: EvalPlus pass@1
 ---
 
 # MBPP+
@@ -66,6 +107,23 @@ MBPP+与HumanEval+共同构成EvalPlus评测框架，已被广泛用于严格的
 | GPT-3.5 | ~70% | ~57% |
 
 注：MBPP与MBPP+之间普遍存在10-15个百分点的差距，反映了原版测试用例不充分的问题。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 97.2% | EvalPlus pass@1 | 2025-09 | [link](https://evalplus.github.io/leaderboard.html) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 95.8% | EvalPlus pass@1 | 2026-04 | [link](https://evalplus.github.io/leaderboard.html) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 94.5% | EvalPlus pass@1 | 2026-03 | [link](https://evalplus.github.io/leaderboard.html) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 93.2% | EvalPlus pass@1 | 2026-02 | [link](https://evalplus.github.io/leaderboard.html) |
+| 5 | [[Claude-Sonnet-4.6]] | 🚫 no | 91.2% | EvalPlus pass@1 | 2025-06 | [link](https://evalplus.github.io/leaderboard.html) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

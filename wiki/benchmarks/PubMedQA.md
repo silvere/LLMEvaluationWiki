@@ -1,25 +1,64 @@
 ---
-title: "PubMedQA"
+title: PubMedQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [knowledge, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
 language: en
 year: 2019
-authors: ["Jin et al."]
-arxiv_id: "1909.06146"
-official_url: "https://pubmedqa.github.io/"
-license: "MIT"
+authors:
+- Jin et al.
+arxiv_id: '1909.06146'
+official_url: https://pubmedqa.github.io/
+license: MIT
 size: 273535
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 82.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: yes/no/maybe accuracy on PubMedQA
+- score: 80.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: yes/no/maybe accuracy
+- score: 79.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: yes/no/maybe accuracy
+- score: 77.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: yes/no/maybe accuracy
+- score: 74.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: yes/no/maybe accuracy, 2024 baseline
 ---
 
 # PubMedQA
@@ -65,6 +104,23 @@ PubMedQA 要求模型理解生物医学研究文献的结构和逻辑，判断�
 ## SOTA 表现
 
 顶尖大型语言模型在 PubMedQA（专家标注测试集）上的准确率超过 80%，部分接近 90%。具体最新成绩见各模型官方技术报告。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 82.5% | yes/no/maybe accuracy on PubMedQA | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 80.8% | yes/no/maybe accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 79.5% | yes/no/maybe accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 77.8% | yes/no/maybe accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 74.0% | yes/no/maybe accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

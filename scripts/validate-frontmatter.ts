@@ -23,17 +23,20 @@ const VALID_STATUS = new Set(["active", "saturated", "contaminated", "deprecated
 const VALID_AUTHOR_MODE = new Set(["llm", "human", "mixed"]);
 const VALID_CONFIDENCE = new Set(["draft", "verified", "reviewed", "promoted"]);
 const VALID_DIMENSIONS = new Set([
-  // 11 主维度
-  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
+  // 13 主维度（A-K + L Methodology + dom Domain-specific）
+  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "dom",
   // 3 横切维度
   "long-ctx", "obs", "infra",
 ]);
 const VALID_SUBDIMENSIONS: Record<string, Set<string>> = {
   A: new Set(["harness", "benchmark", "leaderboard"]),
+  C: new Set(["embedding-eval", "rag-eval", "retrieval"]),
   D: new Set(["tool-use", "web-gui", "software-eng", "general"]),
   F: new Set(["T2I", "T2V", "I2V", "preference", "metric"]),
   I: new Set(["red-team-tool", "safety-benchmark", "jailbreak", "content-safety"]),
   K: new Set(["judge-model", "judge-benchmark", "reward-model"]),
+  L: new Set(["contamination", "saturation", "benchmark-critique", "dynamic-eval", "survey"]),
+  dom: new Set(["medical", "legal", "finance", "education", "scientific", "embedding-eval"]),
 };
 const VALID_DOMAINS = new Set([
   "knowledge", "reasoning", "math", "code", "long-context",

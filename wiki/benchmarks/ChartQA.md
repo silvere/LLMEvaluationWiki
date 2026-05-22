@@ -1,30 +1,88 @@
 ---
-title: "ChartQA"
+title: ChartQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
 language: en
 year: 2022
-authors: ["Ahmed Masry", "Do Xuan Long", "Jia Qing Tan", "Shafiq Joty", "Enamul Hoque"]
-arxiv_id: "2203.10244"
-official_url: "https://github.com/vis-nlp/ChartQA"
-license: ""
+authors:
+- Ahmed Masry
+- Do Xuan Long
+- Jia Qing Tan
+- Shafiq Joty
+- Enamul Hoque
+arxiv_id: '2203.10244'
+official_url: https://github.com/vis-nlp/ChartQA
+license: ''
 size: 9608
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2203.10244"
+- https://arxiv.org/abs/2203.10244
 dimension: E
+sota:
+- score: 96.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://arxiv.org/abs/2203.10244
+  notes: relaxed accuracy on ChartQA test
+- score: 95.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://arxiv.org/abs/2203.10244
+  notes: relaxed accuracy
+- score: 95.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: relaxed accuracy
+- score: 94.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: relaxed accuracy
+- score: 88.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: relaxed accuracy, 2024 baseline
 ---
 
 # ChartQA：图表理解视觉问答基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 96.5% | relaxed accuracy on ChartQA test | 2026-03 | [link](https://arxiv.org/abs/2203.10244) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 95.8% | relaxed accuracy | 2026-04 | [link](https://arxiv.org/abs/2203.10244) |
+| 🥉 | [[GPT-5]] | 🚫 no | 95.2% | relaxed accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 4 | [[Qwen3.6]] | 🚫 no | 94.5% | relaxed accuracy | 2026-04 | [link](https://qwenlm.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 88.5% | relaxed accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

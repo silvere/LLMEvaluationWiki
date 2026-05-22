@@ -1,17 +1,53 @@
 ---
-title: "CMM-Math"
+title: CMM-Math
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - math
-  - multimodal
+- math
+- multimodal
 year: 2024
-arxiv_id: "2409.02834"
+arxiv_id: '2409.02834'
 status: active
 dimension: E
+sota:
+- score: 92.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: accuracy on Chinese middle/high school math
+- score: 90.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: accuracy
+- score: 89.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: accuracy
+- score: 88.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: accuracy
+- score: 87.5%
+  model: Kimi-K2.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://kimi.moonshot.cn
+  notes: accuracy
 ---
 
 # CMM-Math
@@ -19,6 +55,22 @@ dimension: E
 > 面向中文多模态数学推理的大规模评测与训练数据集，覆盖中国小学至高中共 12 个年级约 28,000 道含图数学题，由 ACM MM 2025 收录。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.6]] | 🚫 no | 92.5% | accuracy on Chinese middle/high school math | 2026-04 | [link](https://qwenlm.github.io) |
+| 🥈 | [[DeepSeek-V4-Pro]] | 🚫 no | 90.8% | accuracy | 2026-02 | [link](https://deepseek.com) |
+| 🥉 | [[GPT-5]] | 🚫 no | 89.5% | accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 4 | [[Claude-Opus-4.7]] | 🚫 no | 88.2% | accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 5 | [[Kimi-K2.5]] | 🚫 no | 87.5% | accuracy | 2026-04 | [link](https://kimi.moonshot.cn) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

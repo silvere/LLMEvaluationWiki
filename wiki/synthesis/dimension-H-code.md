@@ -43,21 +43,28 @@ domain:
 
 | Benchmark / Tool | 题量 | 年份 | 评测协议 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
+| [[Aider-Polyglot|Aider Polyglot]] | — | 2024 | — | 76.8%（Claude-Opus-4.7） | — |
+| [[APPS|APPS]] | 10000 | 2021 | — | 94.2%（GPT-5） | — |
+| [[BFCL|BFCL]] | — | 2024 | — | 97.8%（GPT-5） | — |
+| [[BigCodeBench|BigCodeBench]] | 1140 | 2024 | — | 74.5%（Claude-Opus-4.7） | — |
 | [[Codeforces|Codeforces]] | — | 2024 | — | 3206（DeepSeek-V4-Pro） | — |
-| [[HumanEval|HumanEval]] | 164 | 2021 | 0-shot / pass@k（k 通常为 1，最初论文用 pass@1/1… | 约 92-95%（Claude-3.7-Sonnet） | 🔴 saturated |
-| [[LiveCodeBench|LiveCodeBench]] | 600 | 2024 | 0-shot / pass@1（部分变体支持 pass@5） | 约 80%（Gemini-2.5-Pro） | 🟢 active |
-| [[SWE-bench-Pro|SWE-bench Pro]] | — | 2025 | — | 58.6%（Kimi-K2.6） | — |
+| [[CRUXEval|CRUXEval]] | 800 | 2024 | — | 96.2%（Claude-Opus-4.7） | — |
+| [[HumanEval|HumanEval]] | 164 | 2021 | 0-shot / pass@k（k 通常为 1，最初论文用 pass@1/1… | 96.3%（Claude-Opus-4.7） | 🔴 saturated |
+| [[LiveBench|LiveBench]] | — | 2024 | — | 92.6%（GPT-5） | — |
+| [[LiveCodeBench|LiveCodeBench]] | 600 | 2024 | 0-shot / pass@1（部分变体支持 pass@5） | 91.7%（Gemini-3.1-Pro） | 🟢 active |
+| [[MBPP|MBPP]] | 974 | 2021 | — | 94.9%（o4-mini） | — |
+| [[MBPP-Plus|MBPP+]] | 974 | 2023 | — | 97.2%（GPT-5） | — |
+| [[Multi-SWE-bench|Multi-SWE-bench]] | — | 2025 | — | 42.5%（Claude-Opus-4.7） | — |
+| [[MultiPL-E|MultiPL-E]] | — | 2022 | — | 87.5%（Claude-Opus-4.7） | — |
+| [[SWE-bench|SWE-bench]] | 2294 | 2023 | — | 61.2%（Claude-Opus-4.7） | — |
+| [[SWE-bench-Lite|SWE-bench Lite]] | 300 | 2023 | — | 72.8%（Claude-Opus-4.7） | — |
+| [[SWE-bench-Pro|SWE-bench Pro]] | — | 2025 | — | 48.2%（Claude-Opus-4.7） | — |
 | [[SWE-bench-Verified|SWE-bench Verified]] | 500 | 2024 | agent-driven / % resolved (patch passes ALL … | 93.9%（Claude-Opus-4.7） | 🟢 active |
-| [[Aider-Polyglot|Aider Polyglot]] | — | 2024 | — | — | — |
-| [[APPS|APPS]] | 10000 | 2021 | — | — | — |
-| [[BFCL|BFCL]] | — | 2024 | — | — | — |
-| [[BigCodeBench|BigCodeBench]] | 1140 | 2024 | — | — | — |
 | [[BIRD|BIRD]] | 12751 | 2023 | — | — | — |
 | [[CanItEdit|CanItEdit]] | — | 2023 | — | — | — |
 | [[ClassEval|ClassEval]] | — | 2023 | — | — | — |
 | [[CodeApex|CodeApex]] | — | 2023 | — | — | — |
 | [[CodeContests|CodeContests]] | 13610 | 2022 | — | — | — |
-| [[CRUXEval|CRUXEval]] | 800 | 2024 | — | — | — |
 | [[DS-1000|DS-1000]] | 1000 | 2022 | — | — | — |
 | [[Effibench|Effibench]] | — | 2024 | — | — | — |
 | [[EvalPerf|EvalPerf]] | 0 | 2024 | — | — | — |
@@ -71,21 +78,14 @@ domain:
 | [[InterCode|InterCode]] | 0 | 2023 | — | — | — |
 | [[IT-Bench|IT-Bench]] | — | 2025 | — | — | — |
 | [[LCB|LCB]] | — | 2024 | — | — | — |
-| [[LiveBench|LiveBench]] | — | 2024 | — | — | — |
-| [[MBPP|MBPP]] | 974 | 2021 | — | — | — |
-| [[MBPP-Plus|MBPP+]] | 974 | 2023 | — | — | — |
 | [[McEval|McEval]] | — | 2024 | — | — | — |
 | [[ML-Bench|ML-Bench]] | — | 2024 | — | — | — |
 | [[MLE-Bench|MLE-Bench]] | — | 2024 | — | — | — |
-| [[Multi-SWE-bench|Multi-SWE-bench]] | — | 2025 | — | — | — |
-| [[MultiPL-E|MultiPL-E]] | — | 2022 | — | — | — |
 | [[PaperBench|PaperBench]] | — | 2025 | — | — | — |
 | [[Plot2Code|Plot2Code]] | — | 2024 | — | — | — |
 | [[SciCode|SciCode]] | 338 | 2024 | — | — | — |
 | [[Spider|Spider]] | 10181 | 2018 | — | — | — |
 | [[SUPER|SUPER]] | — | 2024 | — | — | — |
-| [[SWE-bench|SWE-bench]] | 2294 | 2023 | — | — | — |
-| [[SWE-bench-Lite|SWE-bench Lite]] | 300 | 2023 | — | — | — |
 | [[SWE-Lancer|SWE-Lancer]] | — | 2025 | — | — | — |
 | [[SWT-Bench|SWT-Bench]] | — | 2024 | — | — | — |
 | [[TDD-Bench-Verified|TDD-Bench Verified]] | — | 2024 | — | — | — |

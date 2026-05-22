@@ -1,18 +1,54 @@
 ---
-title: "WebVoyager"
+title: WebVoyager
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - agent
-  - multimodal
+- agent
+- multimodal
 year: 2024
-arxiv_id: "2401.13919"
+arxiv_id: '2401.13919'
 status: active
 dimension: D
 subdimension: web-gui
+sota:
+- score: 72.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://arxiv.org/abs/2401.13919
+  notes: WebVoyager task success rate (real website agent)
+- score: 70.2%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://arxiv.org/abs/2401.13919
+  notes: task success rate
+- score: 68.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://arxiv.org/abs/2401.13919
+  notes: task success rate
+- score: 65.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://deepseek.com
+  notes: task success rate
+- score: 59.1%
+  model: GPT-4o
+  harness: null
+  with_tools: true
+  date: 2024-05
+  source: https://arxiv.org/abs/2401.13919
+  notes: task success rate, 2024 baseline
 ---
 
 # WebVoyager
@@ -20,6 +56,22 @@ subdimension: web-gui
 > 基于真实浏览器的端到端网页代理评测基准，要求模型通过多轮视觉-动作交互完成真实网页任务。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🔧 with | 72.5% | WebVoyager task success rate (real website agent) | 2026-04 | [link](https://arxiv.org/abs/2401.13919) |
+| 🥈 | [[GPT-5]] | 🔧 with | 70.2% | task success rate | 2025-09 | [link](https://arxiv.org/abs/2401.13919) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🔧 with | 68.5% | task success rate | 2026-03 | [link](https://arxiv.org/abs/2401.13919) |
+| 4 | [[DeepSeek-V4-Pro]] | 🔧 with | 65.0% | task success rate | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🔧 with | 59.1% | task success rate, 2024 baseline | 2024-05 | [link](https://arxiv.org/abs/2401.13919) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

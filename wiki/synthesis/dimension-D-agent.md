@@ -43,46 +43,55 @@ domain:
 
 | Benchmark / Tool | 子类 | 题量 | 年份 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
-| [[OSWorld|OSWorld]] | web-gui | — | 2024 | 约 50-61%（Claude-Sonnet-4.5） | — |
-| [[tau-bench|τ-bench (tau-bench)]] | general | 477 | 2024 | 高于 Opus 4（Claude-Sonnet-4.5） | — |
-| [[AgentBench|AgentBench]] | general | 1091 | 2023 | — | — |
+| [[AgentBench|AgentBench]] | general | 1091 | 2023 | 54.3%（GPT-5） | — |
+| [[AndroidWorld|AndroidWorld]] | web-gui | — | 2024 | 65.2%（Claude-Opus-4.7） | — |
+| [[GAIA|GAIA (General AI Assistants)]] | general | 466 | 2023 | 74.6%（Claude-Sonnet-4.6） | — |
+| [[OSWorld|OSWorld]] | web-gui | — | 2024 | 79.6%（Claude-Opus-4.7） | — |
+| [[VisualWebArena|VisualWebArena]] | web-gui | — | — | 58.5%（Claude-Opus-4.7） | — |
+| [[WebArena|WebArena]] | web-gui | 812 | 2023 | 68.4%（Claude-Opus-4.7） | — |
+| [[tau-bench|τ-bench (tau-bench)]] | general | 477 | 2024 | 89.2%（Claude-Opus-4.7） | — |
 | [[AgentBoard|AgentBoard]] | general | — | — | — | — |
 | [[AITZ|AITZ]] | general | — | 2024 | — | — |
 | [[ALFWorld|ALFWorld]] | general | 3553 | 2021 | — | — |
 | [[Android-Control|Android-Control]] | web-gui | — | 2024 | — | — |
-| [[AndroidWorld|AndroidWorld]] | web-gui | — | 2024 | — | — |
 | [[API-Bank|API-Bank]] | tool-use | 2138 | 2023 | — | — |
 | [[AppWorld|AppWorld]] | general | — | 2024 | — | — |
+| [[AssistantBench|AssistantBench]] | web-gui | — | 2024 | — | — |
 | [[BEHAVIOR-1K|BEHAVIOR-1K]] | general | — | — | — | — |
 | [[BiGGen-Bench|BiGGen-Bench]] | general | 765 | 2024 | — | — |
 | [[BrowserGym|BrowserGym]] | web-gui | — | — | — | — |
-| [[GAIA|GAIA (General AI Assistants)]] | general | 466 | 2023 | — | — |
 | [[Habitat|Habitat (Embodied AI Simulator)]] | general | — | — | — | — |
 | [[Mind2Web|Mind2Web]] | web-gui | — | — | — | — |
 | [[MINT|MINT (Multi-turn INteractive Tool-use)]] | tool-use | 586 | 2023 | — | — |
+| [[2410.07095|MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering]] | software-eng | — | 2024 | — | — |
 | [[MLGym-Bench|MLGym-Bench]] | general | — | 2025 | — | — |
 | [[MobileMiniWob++|MobileMiniWob++]] | web-gui | — | 2024 | — | — |
 | [[Nestful|Nestful]] | tool-use | — | 2024 | — | — |
 | [[Online-Mind2Web|Online-Mind2Web]] | web-gui | — | 2025 | — | — |
+| [[2506.16042|OSWorld-Human: Benchmarking the Efficiency of Computer-Use Agents]] | web-gui | — | 2025 | — | — |
 | [[PARTNR|PARTNR]] | general | — | 2024 | — | — |
 | [[RobustAPI|RobustAPI]] | general | — | 2024 | — | — |
 | [[ScienceWorld|ScienceWorld]] | general | 30 | 2022 | — | — |
 | [[ScreenSpot|ScreenSpot]] | general | — | 2024 | — | — |
 | [[ScreenSpot-Pro|ScreenSpot Pro]] | general | — | 2025 | — | — |
 | [[StableToolBench|StableToolBench]] | tool-use | — | — | — | — |
+| [[2410.03859|SWE-bench Multimodal: Do AI Systems Generalize to Visual Software Domains?]] | software-eng | — | 2024 | — | — |
+| [[2502.12115|SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?]] | software-eng | — | 2025 | — | — |
+| [[2412.14161|TheAgentCompany: Benchmarking LLM Agents on Consequential Real World Tasks]] | software-eng | — | 2024 | — | — |
 | [[ToolACE|ToolACE]] | tool-use | — | 2024 | — | — |
 | [[ToolBench|ToolBench]] | tool-use | 126486 | 2023 | — | — |
-| [[VisualWebArena|VisualWebArena]] | web-gui | — | — | — | — |
+| [[2402.01622|TravelPlanner: A Benchmark for Real-World Planning with Language Agents]] | general | — | 2024 | — | — |
 | [[VisualWebBench|VisualWebBench]] | web-gui | — | 2024 | — | — |
-| [[WebArena|WebArena]] | web-gui | 812 | 2023 | — | — |
 | [[WebVoyager|WebVoyager]] | web-gui | — | 2024 | — | — |
 | [[WebWalkerQA|WebWalkerQA]] | web-gui | — | 2025 | — | — |
+| [[2409.08264|Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale]] | web-gui | — | 2024 | — | — |
 | [[WindowsAgentArena|WindowsAgentArena]] | general | — | 2024 | — | — |
+| [[WorkArena|WorkArena]] | web-gui | — | 2024 | — | — |
 | [[xLAM|xLAM]] | tool-use | — | 2024 | — | — |
 | [[tau2-bench|τ²-Bench]] | general | — | 2025 | — | — |
 | [[tau3-bench|τ³-Bench]] | general | — | 2025 | — | — |
 
-_共 38 条，最后更新：2026-05-22_
+_共 47 条，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:dimension=D:END -->
 

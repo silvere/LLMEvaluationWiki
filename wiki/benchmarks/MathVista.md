@@ -1,30 +1,94 @@
 ---
-title: "MathVista"
+title: MathVista
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal, math]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
+- math
 language: en
 year: 2023
-authors: ["Pan Lu", "Hritik Bansal", "Tony Xia", "Jiacheng Liu", "Chunyuan Li", "Hannaneh Hajishirzi", "Hao Cheng", "Kai-Wei Chang", "Michel Galley", "Jianfeng Gao"]
-arxiv_id: "2310.02255"
-official_url: "https://mathvista.github.io"
-license: ""
+authors:
+- Pan Lu
+- Hritik Bansal
+- Tony Xia
+- Jiacheng Liu
+- Chunyuan Li
+- Hannaneh Hajishirzi
+- Hao Cheng
+- Kai-Wei Chang
+- Michel Galley
+- Jianfeng Gao
+arxiv_id: '2310.02255'
+official_url: https://mathvista.github.io
+license: ''
 size: 6141
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2310.02255"
+- https://arxiv.org/abs/2310.02255
 dimension: E
+sota:
+- score: 82.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://mathvista.github.io
+  notes: accuracy on MathVista mini testmini
+- score: 81.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://mathvista.github.io
+  notes: accuracy
+- score: 80.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mathvista.github.io
+  notes: accuracy
+- score: 79.2%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mathvista.github.io
+  notes: accuracy
+- score: 63.8%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://mathvista.github.io
+  notes: accuracy, 2024 baseline
 ---
 
 # MathVista：数学视觉推理综合评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 82.5% | accuracy on MathVista mini testmini | 2026-03 | [link](https://mathvista.github.io) |
+| 🥈 | [[GPT-5]] | 🚫 no | 81.2% | accuracy | 2025-09 | [link](https://mathvista.github.io) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 80.5% | accuracy | 2026-04 | [link](https://mathvista.github.io) |
+| 4 | [[Qwen3.6]] | 🚫 no | 79.2% | accuracy | 2026-04 | [link](https://mathvista.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 63.8% | accuracy, 2024 baseline | 2024-05 | [link](https://mathvista.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

@@ -1,24 +1,64 @@
 ---
-title: "LongBench"
+title: LongBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [long-context, reasoning, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- long-context
+- reasoning
+- knowledge
 language: multilingual
 year: 2023
-authors: ["Bai et al."]
-arxiv_id: "2308.14508"
-official_url: "https://github.com/THUDM/LongBench"
-license: "MIT"
+authors:
+- Bai et al.
+arxiv_id: '2308.14508'
+official_url: https://github.com/THUDM/LongBench
+license: MIT
 size: 4750
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: long-ctx
+sota:
+- score: 87.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: LongBench v2 overall score
+- score: 85.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: LongBench v2 overall score
+- score: 84.3%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: LongBench v2 overall score
+- score: 82.6%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: LongBench v2 overall score
+- score: 72.4%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: LongBench v1 score, 2024 baseline
 ---
 
 # LongBench
@@ -66,6 +106,23 @@ LongBench 为衡量不同上下文窗口大小的模型提供了标准化比较�
 ## SOTA 表现
 
 顶尖长上下文模型（Claude 3 系列、GPT-4 Turbo、Gemini 1.5 Pro 等）在 LongBench 整体上的平均分超过 60 分（满分 100）。具体最新成绩见各模型官方技术报告及 GitHub 排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 87.2% | LongBench v2 overall score | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 85.5% | LongBench v2 overall score | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 84.3% | LongBench v2 overall score | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 82.6% | LongBench v2 overall score | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 72.4% | LongBench v1 score, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

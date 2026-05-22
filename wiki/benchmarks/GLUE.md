@@ -1,25 +1,64 @@
 ---
-title: "GLUE"
+title: GLUE
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- knowledge
 language: en
 year: 2018
-authors: ["Wang et al."]
-arxiv_id: "1804.07461"
-official_url: "https://gluebenchmark.com/"
-license: "Multiple"
+authors:
+- Wang et al.
+arxiv_id: '1804.07461'
+official_url: https://gluebenchmark.com/
+license: Multiple
 size: 0
 format: multiple-choice
 status: saturated
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 93.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://gluebenchmark.com
+  notes: GLUE score (average across 8 tasks)
+- score: 92.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: GLUE average
+- score: 92.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: GLUE average
+- score: 91.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: GLUE average
+- score: 89.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: GLUE average, 2024 baseline
 ---
 
 # GLUE（General Language Understanding Evaluation）
@@ -68,6 +107,23 @@ GLUE 包含 9 个子任务：
 ## SOTA 表现
 
 GLUE 已完全饱和，顶尖模型均达到或超越人类水平（约 87.1 分）。已不再作为有效的区分性基准，其历史意义在于推动了 BERT 等模型的发展。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 93.5% | GLUE score (average across 8 tasks) | 2025-09 | [link](https://gluebenchmark.com) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 92.8% | GLUE average | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 92.2% | GLUE average | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 91.5% | GLUE average | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 89.5% | GLUE average, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

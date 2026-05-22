@@ -11,6 +11,8 @@ sources:
   - "https://vision-cair.github.io/Infinibench/"
 aliases:
   - InfiniBench
+  - InfiniteBench
+  - ∞Bench
 domain:
   - benchmark
   - video

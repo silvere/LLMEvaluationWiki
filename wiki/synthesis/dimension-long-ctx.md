@@ -43,13 +43,15 @@ domain:
 
 | Benchmark / Tool | 题量 | 年份 | 评测协议 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
+| [[LongBench|LongBench]] | 4750 | 2023 | — | 87.2%（GPT-5） | — |
+| [[QuALITY|QuALITY]] | 2523 | 2022 | — | 96.2%（GPT-5） | — |
+| [[RULER|RULER]] | 0 | 2024 | — | 97.8%（Gemini-3.1-Pro） | — |
 | [[CLongEval|CLongEval]] | 0 | 2024 | — | — | — |
 | [[FRAMES|FRAMES]] | — | 2024 | — | — | — |
 | [[HELMET|HELMET]] | 0 | 2024 | — | — | — |
 | [[L-Eval|L-Eval]] | 411 | 2023 | — | — | — |
 | [[LOFT|LOFT]] | — | 2024 | — | — | — |
 | [[LRA|Long Range Arena (LRA)]] | — | — | — | — | — |
-| [[LongBench|LongBench]] | 4750 | 2023 | — | — | — |
 | [[LongBench-v2|LongBench v2]] | 0 | 2024 | — | — | — |
 | [[LongVideoBench|LongVideoBench]] | — | 2024 | — | — | — |
 | [[LVBench|LVBench]] | — | 2024 | — | — | — |
@@ -60,13 +62,12 @@ domain:
 | [[NeedleInAHaystack|Needle In A Haystack]] | 0 | 2023 | — | — | — |
 | [[NIAH|Needle in a Haystack (NIAH)]] | — | — | — | — | — |
 | [[NeedleBench|NeedleBench]] | — | 2024 | — | — | — |
+| [[2502.05167|NoLiMa: Long-Context Evaluation Beyond Literal Matching]] | — | 2025 | — | — | — |
 | [[OpenAI-MRCR|OpenAI-MRCR]] | — | 2025 | — | — | — |
-| [[QuALITY|QuALITY]] | 2523 | 2022 | — | — | — |
-| [[RULER|RULER]] | 0 | 2024 | — | — | — |
 | [[SCROLLS|SCROLLS]] | 0 | 2022 | — | — | — |
 | [[Zero-SCROLLS|Zero-SCROLLS]] | 0 | 2023 | — | — | — |
 
-_共 22 条，最后更新：2026-05-22_
+_共 23 条，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:dimension=long-ctx:END -->
 

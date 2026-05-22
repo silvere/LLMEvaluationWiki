@@ -1,22 +1,74 @@
 ---
-title: "RealWorldQA"
+title: RealWorldQA
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - reasoning
+- multimodal
+- reasoning
 year: 2024
-arxiv_id: ""
+arxiv_id: ''
 status: active
 dimension: E
+sota:
+- score: 82.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://realworldqa.ai
+  notes: accuracy on real-world spatial QA
+- score: 81.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://realworldqa.ai
+  notes: accuracy
+- score: 80.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://realworldqa.ai
+  notes: accuracy
+- score: 79.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://realworldqa.ai
+  notes: accuracy
+- score: 69.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://realworldqa.ai
+  notes: accuracy, 2024 baseline
 ---
 
 # RealWorldQA
 
 > xAI 发布的真实世界空间推理基准，图像均来自真实场景照片，测试模型的空间常识理解能力。
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 82.5% | accuracy on real-world spatial QA | 2026-03 | [link](https://realworldqa.ai) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 81.2% | accuracy | 2026-04 | [link](https://realworldqa.ai) |
+| 🥉 | [[GPT-5]] | 🚫 no | 80.5% | accuracy | 2025-09 | [link](https://realworldqa.ai) |
+| 4 | [[Qwen3.6]] | 🚫 no | 79.8% | accuracy | 2026-04 | [link](https://realworldqa.ai) |
+| 5 | [[GPT-4o]] | 🚫 no | 69.5% | accuracy, 2024 baseline | 2024-05 | [link](https://realworldqa.ai) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 概述
 

@@ -12,7 +12,7 @@ for p in glob.glob("**/*.md", recursive=True):
     s = os.path.splitext(os.path.basename(p))[0]
     known.add(s); known_l.add(s.lower())
 
-ar = re.compile(r'aliases:\s*\n((?:  - .+\n)+)', re.M)
+ar = re.compile(r'aliases:\s*\n((?:[ \t]*- .+\n)+)', re.M)
 for p in glob.glob("**/*.md", recursive=True):
     try:
         head = open(p).read()[:1500]

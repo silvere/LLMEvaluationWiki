@@ -1,31 +1,91 @@
 ---
-title: "AI2D"
+title: AI2D
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
+- knowledge
 language: en
 year: 2016
-authors: ["Aniruddha Kembhavi", "Mike Salvato", "Eric Kolve", "Mausam", "Hannaneh Hajishirzi", "Ali Farhadi"]
-arxiv_id: ""
-official_url: "https://allenai.org/data/diagrams"
-license: "CC BY 4.0"
+authors:
+- Aniruddha Kembhavi
+- Mike Salvato
+- Eric Kolve
+- Mausam
+- Hannaneh Hajishirzi
+- Ali Farhadi
+arxiv_id: ''
+official_url: https://allenai.org/data/diagrams
+license: CC BY 4.0
 size: 15000
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://prior.allenai.org/projects/diagram-understanding"
-  - "https://arxiv.org/abs/1603.07988"
+- https://prior.allenai.org/projects/diagram-understanding
+- https://arxiv.org/abs/1603.07988
 dimension: E
+sota:
+- score: 98.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: accuracy on AI2D diagram understanding
+- score: 98.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: accuracy
+- score: 97.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: accuracy
+- score: 97.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: accuracy
+- score: 94.2%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: accuracy, 2024 baseline
 ---
 
 # AI2D：科学图表理解评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 98.5% | accuracy on AI2D diagram understanding | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 98.0% | accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[GPT-5]] | 🚫 no | 97.5% | accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 4 | [[Qwen3.6]] | 🚫 no | 97.0% | accuracy | 2026-04 | [link](https://qwenlm.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 94.2% | accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

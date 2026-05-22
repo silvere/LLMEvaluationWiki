@@ -1,30 +1,95 @@
 ---
-title: "MMBench"
+title: MMBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
 language: en
 year: 2023
-authors: ["Yuan Liu", "Haodong Duan", "Yuanhan Zhang", "Bo Li", "Songyang Zhang", "Wangbo Zhao", "Yike Yuan", "Jiaqi Wang", "Conghui He", "Ziwei Liu", "Kai Chen", "Dahua Lin"]
-arxiv_id: "2307.06281"
-official_url: "https://mmbench.opencompass.org.cn"
-license: ""
+authors:
+- Yuan Liu
+- Haodong Duan
+- Yuanhan Zhang
+- Bo Li
+- Songyang Zhang
+- Wangbo Zhao
+- Yike Yuan
+- Jiaqi Wang
+- Conghui He
+- Ziwei Liu
+- Kai Chen
+- Dahua Lin
+arxiv_id: '2307.06281'
+official_url: https://mmbench.opencompass.org.cn
+license: ''
 size: 3000
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2307.06281"
+- https://arxiv.org/abs/2307.06281
 dimension: E
+sota:
+- score: 95.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://mmbench.opencompass.org.cn
+  notes: MMBench-EN top-1 accuracy
+- score: 95.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mmbench.opencompass.org.cn
+  notes: MMBench-EN top-1 accuracy
+- score: 94.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://mmbench.opencompass.org.cn
+  notes: MMBench-EN top-1 accuracy
+- score: 94.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mmbench.opencompass.org.cn
+  notes: MMBench-EN top-1 accuracy
+- score: 86.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://mmbench.opencompass.org.cn
+  notes: MMBench-EN, 2024 baseline
 ---
 
 # MMBench：多模态理解细粒度评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 95.8% | MMBench-EN top-1 accuracy | 2026-03 | [link](https://mmbench.opencompass.org.cn) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 95.2% | MMBench-EN top-1 accuracy | 2026-04 | [link](https://mmbench.opencompass.org.cn) |
+| 🥉 | [[GPT-5]] | 🚫 no | 94.8% | MMBench-EN top-1 accuracy | 2025-09 | [link](https://mmbench.opencompass.org.cn) |
+| 4 | [[Qwen3.6]] | 🚫 no | 94.0% | MMBench-EN top-1 accuracy | 2026-04 | [link](https://mmbench.opencompass.org.cn) |
+| 5 | [[GPT-4o]] | 🚫 no | 86.5% | MMBench-EN, 2024 baseline | 2024-05 | [link](https://mmbench.opencompass.org.cn) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

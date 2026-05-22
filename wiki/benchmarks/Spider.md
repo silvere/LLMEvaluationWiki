@@ -1,26 +1,75 @@
 ---
-title: "Spider"
+title: Spider
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
 language: en
 year: 2018
-authors: ["Tao Yu", "Rui Zhang", "Kai Yang", "Michihiro Yasunaga", "Dongxu Wang", "Zifan Li", "James Ma", "Irene Li", "Qingning Yao", "Shanelle Roman", "Zilin Zhang", "Dragomir Radev"]
-arxiv_id: "1809.08887"
-official_url: "https://yale-lily.github.io/spider"
-license: "CC BY-SA 4.0"
+authors:
+- Tao Yu
+- Rui Zhang
+- Kai Yang
+- Michihiro Yasunaga
+- Dongxu Wang
+- Zifan Li
+- James Ma
+- Irene Li
+- Qingning Yao
+- Shanelle Roman
+- Zilin Zhang
+- Dragomir Radev
+arxiv_id: '1809.08887'
+official_url: https://yale-lily.github.io/spider
+license: CC BY-SA 4.0
 size: 10181
 format: code
 status: active
 saturation_threshold: 0.95
 sources:
-  - "https://arxiv.org/abs/1809.08887"
-  - "https://yale-lily.github.io/spider"
+- https://arxiv.org/abs/1809.08887
+- https://yale-lily.github.io/spider
 dimension: H
+sota:
+- score: 96.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://yale-lily.github.io/spider
+  notes: Spider text-to-SQL execution accuracy
+- score: 95.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://yale-lily.github.io/spider
+  notes: execution accuracy
+- score: 94.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://yale-lily.github.io/spider
+  notes: execution accuracy
+- score: 93.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: execution accuracy
+- score: 91.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: execution accuracy, 2024 baseline
 ---
 
 # Spider
@@ -64,6 +113,23 @@ Spider的发布推动了整个Text-to-SQL领域的快速发展，催生了大量
 | DAIL-SQL + GPT-4 | ~86.6% | ~83.6% |
 
 注：随着LLM能力提升，Spider难度对顶级模型已接近饱和，更难的BIRD等基准逐渐取代其地位。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 96.5% | Spider text-to-SQL execution accuracy | 2025-09 | [link](https://yale-lily.github.io/spider) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 95.2% | execution accuracy | 2026-04 | [link](https://yale-lily.github.io/spider) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 94.5% | execution accuracy | 2026-03 | [link](https://yale-lily.github.io/spider) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 93.8% | execution accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 91.0% | execution accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

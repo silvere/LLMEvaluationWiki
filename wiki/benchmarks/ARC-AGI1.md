@@ -1,20 +1,56 @@
 ---
-title: "ARC-AGI1"
+title: ARC-AGI1
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - reasoning
+- reasoning
 year: 2019
-arxiv_id: "1911.01547"
+arxiv_id: '1911.01547'
 status: active
 aliases:
-  - ARC-AGI
-  - ARC-AGI 1.0
+- ARC-AGI
+- ARC-AGI 1.0
 dimension: A
 subdimension: benchmark
+sota:
+- score: 95.0%
+  model: GPT-5.5
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://llm-stats.com/benchmarks/arc-agi
+  notes: ARC-AGI v1，semi-private eval set（人类基线 ~85%）
+- score: 92.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://arcprize.org/
+  notes: ARC-AGI v1，2026 frontier
+- score: 90.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-12
+  source: https://llm-stats.com/benchmarks/arc-agi
+  notes: ARC-AGI v1
+- score: 87.5%
+  model: o3
+  harness: null
+  with_tools: false
+  date: 2024-12
+  source: https://arcprize.org/blog/oai-o3-pub-breakthrough
+  notes: ARC-AGI v1，high-compute（$10k budget），首次超越人类基线
+- score: 75.7%
+  model: o3
+  harness: null
+  with_tools: false
+  date: 2024-12
+  source: https://arcprize.org/blog/oai-o3-pub-breakthrough
+  notes: ARC-AGI v1，low-compute（~$26/task）
 ---
 
 # ARC-AGI1
@@ -22,6 +58,22 @@ subdimension: benchmark
 > 抽象推理语料库 1.0（Abstraction and Reasoning Corpus），François Chollet 于 2019 年提出的 AGI 能力测试基准，通过视觉模式推理任务衡量模型的核心知识泛化能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5.5]] | 🚫 no | 95.0% | ARC-AGI v1，semi-private eval set（人类基线 ~85%） | 2026-05 | [link](https://llm-stats.com/benchmarks/arc-agi) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 92.0% | ARC-AGI v1，2026 frontier | 2026-04 | [link](https://arcprize.org/) |
+| 🥉 | [[GPT-5]] | 🚫 no | 90.5% | ARC-AGI v1 | 2025-12 | [link](https://llm-stats.com/benchmarks/arc-agi) |
+| 4 | [[o3]] | 🚫 no | 87.5% | ARC-AGI v1，high-compute（$10k budget），首次超越人类基线 | 2024-12 | [link](https://arcprize.org/blog/oai-o3-pub-breakthrough) |
+| 5 | [[o3]] | 🚫 no | 75.7% | ARC-AGI v1，low-compute（~$26/task） | 2024-12 | [link](https://arcprize.org/blog/oai-o3-pub-breakthrough) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

@@ -1,18 +1,54 @@
 ---
-title: "FinQA"
+title: FinQA
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - reasoning
-  - math
+- reasoning
+- math
 year: 2021
-arxiv_id: "2109.00122"
+arxiv_id: '2109.00122'
 status: active
 dimension: A
 subdimension: benchmark
+sota:
+- score: 88.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/czyssrs/FinQA
+  notes: FinQA execution accuracy (financial numerical reasoning)
+- score: 86.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/czyssrs/FinQA
+  notes: execution accuracy
+- score: 84.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/czyssrs/FinQA
+  notes: execution accuracy
+- score: 83.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: execution accuracy
+- score: 78.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: execution accuracy, 2024 baseline
 ---
 
 # FinQA
@@ -20,6 +56,22 @@ subdimension: benchmark
 > 基于真实上市公司财报（年报/季报）的数值推理问答基准，要求模型从非结构化文本和表格中提取数据并执行多步骤金融计算。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 88.5% | FinQA execution accuracy (financial numerical reasoning) | 2025-09 | [link](https://github.com/czyssrs/FinQA) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 86.2% | execution accuracy | 2026-04 | [link](https://github.com/czyssrs/FinQA) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 84.8% | execution accuracy | 2026-03 | [link](https://github.com/czyssrs/FinQA) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 83.5% | execution accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 78.0% | execution accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

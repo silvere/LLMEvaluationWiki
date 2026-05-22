@@ -1,17 +1,53 @@
 ---
-title: "MLVU"
+title: MLVU
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - long-context
+- multimodal
+- long-context
 year: 2024
-arxiv_id: "2406.04264"
+arxiv_id: '2406.04264'
 status: active
 dimension: long-ctx
+sota:
+- score: 85.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/JUNJIE99/MLVU
+  notes: MLVU long video understanding accuracy
+- score: 84.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/JUNJIE99/MLVU
+  notes: accuracy
+- score: 83.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/JUNJIE99/MLVU
+  notes: accuracy
+- score: 82.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/JUNJIE99/MLVU
+  notes: accuracy
+- score: 64.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/JUNJIE99/MLVU
+  notes: accuracy, 2024 baseline
 ---
 
 # MLVU
@@ -19,6 +55,22 @@ dimension: long-ctx
 > 面向长视频理解的多任务综合评测基准，视频时长从数分钟到数小时，系统评测模型的长视频推理能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 85.5% | MLVU long video understanding accuracy | 2026-03 | [link](https://github.com/JUNJIE99/MLVU) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 84.2% | accuracy | 2026-04 | [link](https://github.com/JUNJIE99/MLVU) |
+| 🥉 | [[GPT-5]] | 🚫 no | 83.5% | accuracy | 2025-09 | [link](https://github.com/JUNJIE99/MLVU) |
+| 4 | [[Qwen3.6]] | 🚫 no | 82.0% | accuracy | 2026-04 | [link](https://github.com/JUNJIE99/MLVU) |
+| 5 | [[GPT-4o]] | 🚫 no | 64.5% | accuracy, 2024 baseline | 2024-05 | [link](https://github.com/JUNJIE99/MLVU) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

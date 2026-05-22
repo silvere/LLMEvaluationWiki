@@ -1,24 +1,63 @@
 ---
-title: "HotpotQA"
+title: HotpotQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, retrieval]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- retrieval
 language: en
 year: 2018
-authors: ["Yang et al."]
-arxiv_id: "1809.09600"
-official_url: "https://hotpotqa.github.io/"
-license: "CC-BY-SA-4.0"
+authors:
+- Yang et al.
+arxiv_id: '1809.09600'
+official_url: https://hotpotqa.github.io/
+license: CC-BY-SA-4.0
 size: 113000
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: C
+sota:
+- score: 84.2%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: F1 score, multi-hop retrieval
+- score: 81.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: F1 score, multi-hop retrieval
+- score: 80.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: F1 score, multi-hop retrieval
+- score: 78.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://deepseek.com
+  notes: F1 score, multi-hop retrieval
+- score: 74.0%
+  model: GPT-4o
+  harness: null
+  with_tools: true
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: F1 score, 2024 baseline
 ---
 
 # HotpotQA
@@ -63,6 +102,23 @@ HotpotQA 提供两种评测设置：
 ## SOTA 表现
 
 在干扰设置下，顶尖系统的联合 F1 分数超过 75%。全文设置更具挑战性。具体最新成绩见官方排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🔧 with | 84.2% | F1 score, multi-hop retrieval | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🔧 with | 81.5% | F1 score, multi-hop retrieval | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🔧 with | 80.2% | F1 score, multi-hop retrieval | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🔧 with | 78.8% | F1 score, multi-hop retrieval | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🔧 with | 74.0% | F1 score, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

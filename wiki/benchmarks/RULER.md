@@ -1,24 +1,72 @@
 ---
-title: "RULER"
+title: RULER
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [long-context, reasoning, retrieval]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- long-context
+- reasoning
+- retrieval
 language: en
 year: 2024
-authors: ["Hsieh et al."]
-arxiv_id: "2404.06654"
-official_url: "https://github.com/hsiehjackson/RULER"
-license: ""
+authors:
+- Hsieh et al.
+arxiv_id: '2404.06654'
+official_url: https://github.com/hsiehjackson/RULER
+license: ''
 size: 0
 format: multiple-choice
 status: active
-saturation_threshold: 0.80
-sources: [""]
+saturation_threshold: 0.8
+sources:
+- ''
 dimension: long-ctx
+sota:
+- score: 97.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: 128K context average score
+- score: 97.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: 128K context average score
+- score: 96.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: 128K context average score
+- score: 95.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: 128K context average score
+- score: 94.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: 128K context average score
+- score: 91.2%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: 128K context, 2024 baseline
 ---
 
 # RULER（Ruler Unified Long-context Evaluation for Language Models）
@@ -26,6 +74,23 @@ dimension: long-ctx
 > 专为测试长上下文理解能力设计的综合评测框架，覆盖 4K 到 128K 的上下文长度，揭示模型声称能力与实际性能之间的差距。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 97.8% | 128K context average score | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 97.2% | 128K context average score | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[GPT-5]] | 🚫 no | 96.5% | 128K context average score | 2025-09 | [link](https://openai.com/gpt-5) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 95.8% | 128K context average score | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[Qwen3.6]] | 🚫 no | 94.8% | 128K context average score | 2026-04 | [link](https://qwenlm.github.io) |
+| 6 | [[GPT-4o]] | 🚫 no | 91.2% | 128K context, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

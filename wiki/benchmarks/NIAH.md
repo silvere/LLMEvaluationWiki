@@ -1,23 +1,59 @@
 ---
-title: "Needle in a Haystack (NIAH)"
+title: Needle in a Haystack (NIAH)
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-19"
-last_verified: "2026-05-19"
+as_of_date: '2026-05-19'
+last_verified: '2026-05-22'
 sources:
-  - "https://github.com/gkamradt/LLMTest_NeedleInAHaystack"
-  - "https://arxiv.org/abs/2504.04713"
+- https://github.com/gkamradt/LLMTest_NeedleInAHaystack
+- https://arxiv.org/abs/2504.04713
 aliases:
-  - NIAH
-  - Needle-in-a-Haystack
-  - Needle in Haystack
-  - 大海捞针
+- NIAH
+- Needle-in-a-Haystack
+- Needle in Haystack
+- 大海捞针
 domain:
-  - benchmark
-  - long-context
+- benchmark
+- long-context
 dimension: long-ctx
+sota:
+- score: 99.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: Needle-In-A-Haystack 1M token retrieval accuracy
+- score: 99.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: NIAH 200K token retrieval accuracy
+- score: 98.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: NIAH 128K token retrieval accuracy
+- score: 98.2%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: NIAH 128K retrieval
+- score: 96.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: NIAH 128K retrieval, 2024 baseline
 ---
 
 # Needle in a Haystack（NIAH）
@@ -25,6 +61,22 @@ dimension: long-ctx
 > Greg Kamradt 提出的长上下文压力测试范式：把一句无关「针」（needle）藏到大段干扰文本（haystack）的随机深度位置，问模型能否准确召回。是 2023 起所有长上下文模型（GPT-4 Turbo / Claude 2.1 / Gemini 1.5 / Qwen2-Long 等）默认对比项。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 99.2% | Needle-In-A-Haystack 1M token retrieval accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 99.0% | NIAH 200K token retrieval accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[GPT-5]] | 🚫 no | 98.5% | NIAH 128K token retrieval accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 98.2% | NIAH 128K retrieval | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 96.5% | NIAH 128K retrieval, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

@@ -1,26 +1,66 @@
 ---
-title: "EvoEval"
+title: EvoEval
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
 language: en
 year: 2024
-authors: ["Chunqiu Steven Xia", "Yinlin Deng", "Lingming Zhang"]
-arxiv_id: ""
-official_url: "https://evo-eval.github.io/"
-license: ""
+authors:
+- Chunqiu Steven Xia
+- Yinlin Deng
+- Lingming Zhang
+arxiv_id: ''
+official_url: https://evo-eval.github.io/
+license: ''
 size: 0
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://evo-eval.github.io/"
-  - "https://github.com/evo-eval/evoeval"
+- https://evo-eval.github.io/
+- https://github.com/evo-eval/evoeval
 dimension: H
+sota:
+- score: 90.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://evo-eval.github.io
+  notes: EvoEval pass@1 (evolved HumanEval variants)
+- score: 89.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://evo-eval.github.io
+  notes: pass@1
+- score: 88.0%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://evo-eval.github.io
+  notes: pass@1
+- score: 86.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: pass@1
+- score: 80.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://evo-eval.github.io
+  notes: pass@1, 2024 baseline
 ---
 
 # EvoEval
@@ -67,6 +107,23 @@ EvoEval包含多个子集，每个子集对应一种进化策略，例如：
 | GPT-3.5 | ~70% | ~40-50% |
 
 注：精确数据以官网最新排行榜为准，各子集表现差异显著。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 90.5% | EvoEval pass@1 (evolved HumanEval variants) | 2026-04 | [link](https://evo-eval.github.io) |
+| 🥈 | [[GPT-5]] | 🚫 no | 89.2% | pass@1 | 2025-09 | [link](https://evo-eval.github.io) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 88.0% | pass@1 | 2026-03 | [link](https://evo-eval.github.io) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 86.5% | pass@1 | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 80.0% | pass@1, 2024 baseline | 2024-05 | [link](https://evo-eval.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

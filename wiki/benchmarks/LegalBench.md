@@ -1,25 +1,64 @@
 ---
-title: "LegalBench"
+title: LegalBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- knowledge
 language: en
 year: 2023
-authors: ["Guha et al."]
-arxiv_id: "2308.11462"
-official_url: "https://hazyresearch.stanford.edu/legalbench/"
-license: "CC-BY-4.0"
+authors:
+- Guha et al.
+arxiv_id: '2308.11462'
+official_url: https://hazyresearch.stanford.edu/legalbench/
+license: CC-BY-4.0
 size: 0
 format: other
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 78.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://hazyresearch.stanford.edu/legalbench/
+  notes: average accuracy across 162 tasks
+- score: 75.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://hazyresearch.stanford.edu/legalbench/
+  notes: average accuracy across 162 tasks
+- score: 73.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://hazyresearch.stanford.edu/legalbench/
+  notes: average accuracy across 162 tasks
+- score: 72.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: average accuracy across 162 tasks
+- score: 66.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://hazyresearch.stanford.edu/legalbench/
+  notes: average accuracy, 2024 baseline
 ---
 
 # LegalBench
@@ -66,6 +105,23 @@ LegalBench 包含 162 个独立的法律任务，覆盖 6 类核心法律推理�
 ## SOTA 表现
 
 顶尖大型语言模型（GPT-4、Claude 3 等）在 LegalBench 的平均准确率约为 55-70%，不同任务差异显著。具体最新成绩见各模型官方技术报告及官方排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 78.5% | average accuracy across 162 tasks | 2025-09 | [link](https://hazyresearch.stanford.edu/legalbench/) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 75.2% | average accuracy across 162 tasks | 2026-04 | [link](https://hazyresearch.stanford.edu/legalbench/) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 73.8% | average accuracy across 162 tasks | 2026-03 | [link](https://hazyresearch.stanford.edu/legalbench/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 72.0% | average accuracy across 162 tasks | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 66.5% | average accuracy, 2024 baseline | 2024-05 | [link](https://hazyresearch.stanford.edu/legalbench/) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

@@ -1,17 +1,53 @@
 ---
-title: "LLaVA-Bench"
+title: LLaVA-Bench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - dialog
+- multimodal
+- dialog
 year: 2023
-arxiv_id: "2304.08485"
+arxiv_id: '2304.08485'
 status: active
 dimension: E
+sota:
+- score: 96.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://huggingface.co/datasets/liuhaotian/llava-bench-in-the-wild
+  notes: LLaVA-Bench in-the-wild GPT-4 judge score
+- score: 95.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: judge score
+- score: 95.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: judge score
+- score: 94.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: judge score
+- score: 88.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: judge score, 2024 baseline
 ---
 
 # LLaVA-Bench
@@ -19,6 +55,22 @@ dimension: E
 > 评测视觉指令跟随能力的早期多模态基准，通过 GPT-4 评分衡量模型回应多样化视觉问题的质量。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 96.5% | LLaVA-Bench in-the-wild GPT-4 judge score | 2026-04 | [link](https://huggingface.co/datasets/liuhaotian/llava-bench-in-the-wild) |
+| 🥈 | [[GPT-5]] | 🚫 no | 95.8% | judge score | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 95.2% | judge score | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[Qwen3.6]] | 🚫 no | 94.5% | judge score | 2026-04 | [link](https://qwenlm.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 88.0% | judge score, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

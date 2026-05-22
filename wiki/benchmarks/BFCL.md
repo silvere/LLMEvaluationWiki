@@ -1,17 +1,53 @@
 ---
-title: "BFCL"
+title: BFCL
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - agent
-  - code
+- agent
+- code
 year: 2024
-arxiv_id: "2407.09203"
+arxiv_id: '2407.09203'
 status: active
 dimension: H
+sota:
+- score: 97.8%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html
+  notes: BFCL v3 overall accuracy
+- score: 96.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html
+  notes: BFCL v3 overall accuracy
+- score: 95.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html
+  notes: BFCL v3 overall accuracy
+- score: 94.6%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html
+  notes: BFCL v3 overall accuracy
+- score: 90.0%
+  model: GPT-4o
+  harness: null
+  with_tools: true
+  date: 2024-05
+  source: https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html
+  notes: BFCL v3, 2024 baseline
 ---
 
 # BFCL
@@ -19,6 +55,22 @@ dimension: H
 > Berkeley Function Calling Leaderboard（伯克利函数调用排行榜），系统评测大语言模型调用外部 API 和工具函数的准确性、格式合规性和参数填充能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🔧 with | 97.8% | BFCL v3 overall accuracy | 2025-09 | [link](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html) |
+| 🥈 | [[Claude-Opus-4.7]] | 🔧 with | 96.5% | BFCL v3 overall accuracy | 2026-04 | [link](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🔧 with | 95.8% | BFCL v3 overall accuracy | 2026-03 | [link](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html) |
+| 4 | [[DeepSeek-V4-Pro]] | 🔧 with | 94.6% | BFCL v3 overall accuracy | 2026-02 | [link](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html) |
+| 5 | [[GPT-4o]] | 🔧 with | 90.0% | BFCL v3, 2024 baseline | 2024-05 | [link](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

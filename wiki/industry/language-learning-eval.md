@@ -1,12 +1,14 @@
 ---
-title: "语言学习AI评测"
+title: 语言学习AI评测
 type: industry
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-14'
 sources: []
+dimension: dom
+subdimension: education
 ---
 
 # 语言学习AI评测

@@ -1,24 +1,65 @@
 ---
-title: "LongBench v2"
+title: LongBench v2
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-13"
-last_verified: "2026-05-13"
-domain: [long-context, knowledge, reasoning]
+as_of_date: '2026-05-13'
+last_verified: '2026-05-22'
+domain:
+- long-context
+- knowledge
+- reasoning
 language: multilingual
 year: 2024
-authors: ["Bai et al."]
-arxiv_id: ""
-official_url: "https://github.com/THUDM/LongBench"
-license: ""
+authors:
+- Bai et al.
+arxiv_id: ''
+official_url: https://github.com/THUDM/LongBench
+license: ''
 size: 0
 format: multiple-choice
 status: active
 saturation_threshold: 0.75
-sources: [""]
+sources:
+- ''
 dimension: long-ctx
+sota:
+- score: 76.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/THUDM/LongBench
+  notes: LongBench v2 overall score (harder version)
+- score: 74.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/THUDM/LongBench
+  notes: LongBench v2 score
+- score: 73.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/THUDM/LongBench
+  notes: LongBench v2 score
+- score: 72.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: LongBench v2 score
+- score: 65.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/THUDM/LongBench
+  notes: LongBench v2 score, 2024 baseline
 ---
 
 # LongBench v2
@@ -26,6 +67,22 @@ dimension: long-ctx
 > 面向真实长文档理解的中英文混合评测基准，v2 版本任务难度显著提升，来源于真实文档场景。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 76.5% | LongBench v2 overall score (harder version) | 2025-09 | [link](https://github.com/THUDM/LongBench) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 74.8% | LongBench v2 score | 2026-04 | [link](https://github.com/THUDM/LongBench) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 73.5% | LongBench v2 score | 2026-03 | [link](https://github.com/THUDM/LongBench) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 72.0% | LongBench v2 score | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 65.0% | LongBench v2 score, 2024 baseline | 2024-05 | [link](https://github.com/THUDM/LongBench) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

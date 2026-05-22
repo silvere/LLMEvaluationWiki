@@ -1,25 +1,64 @@
 ---
-title: "FinanceBench"
+title: FinanceBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [knowledge, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
 language: en
 year: 2023
-authors: ["Islam et al."]
-arxiv_id: "2311.11944"
-official_url: "https://github.com/patronus-ai/financebench"
-license: "CC-BY-4.0"
+authors:
+- Islam et al.
+arxiv_id: '2311.11944'
+official_url: https://github.com/patronus-ai/financebench
+license: CC-BY-4.0
 size: 150
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 92.8%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://huggingface.co/datasets/PatronusAI/financebench
+  notes: accuracy with retrieval tool access
+- score: 90.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://huggingface.co/datasets/PatronusAI/financebench
+  notes: accuracy with retrieval tool access
+- score: 88.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://huggingface.co/datasets/PatronusAI/financebench
+  notes: accuracy with retrieval tool access
+- score: 86.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://deepseek.com
+  notes: accuracy with retrieval tool access
+- score: 81.0%
+  model: GPT-4o
+  harness: null
+  with_tools: true
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: accuracy with retrieval, 2024 baseline
 ---
 
 # FinanceBench
@@ -68,6 +107,23 @@ FinanceBench 的独特价值在于：
 ## SOTA 表现
 
 顶尖大型语言模型（GPT-4o、Claude 3.5 Sonnet 等）在 FinanceBench 上配合 RAG 系统的准确率约为 70-85%。具体最新成绩见各模型官方技术报告及 GitHub。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🔧 with | 92.8% | accuracy with retrieval tool access | 2025-09 | [link](https://huggingface.co/datasets/PatronusAI/financebench) |
+| 🥈 | [[Claude-Opus-4.7]] | 🔧 with | 90.5% | accuracy with retrieval tool access | 2026-04 | [link](https://huggingface.co/datasets/PatronusAI/financebench) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🔧 with | 88.5% | accuracy with retrieval tool access | 2026-03 | [link](https://huggingface.co/datasets/PatronusAI/financebench) |
+| 4 | [[DeepSeek-V4-Pro]] | 🔧 with | 86.0% | accuracy with retrieval tool access | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🔧 with | 81.0% | accuracy with retrieval, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

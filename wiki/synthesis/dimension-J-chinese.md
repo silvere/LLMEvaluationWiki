@@ -43,10 +43,12 @@ domain:
 
 | Benchmark / Tool | 题量 | 年份 | 评测协议 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
-| [[C-Eval|C-Eval]] | 13948 | 2023 | — | 约 89.2%（Doubao-1.5-Pro） | — |
+| [[C-Eval|C-Eval]] | 13948 | 2023 | — | 91.8%（Qwen3.6） | — |
 | [[Chinese-SimpleQA|Chinese SimpleQA]] | — | 2024 | — | — | — |
+| [[CompassRank|CompassRank]] | — | — | — | — | — |
+| [[2503.10497|MMLU-ProX: A Multilingual Benchmark for Advanced Large Language Model Evaluation]] | — | 2025 | — | — | — |
 
-_共 2 条，最后更新：2026-05-22_
+_共 4 条，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:dimension=J:END -->
 

@@ -1,17 +1,53 @@
 ---
-title: "MTVQA"
+title: MTVQA
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - multilingual
+- multimodal
+- multilingual
 year: 2024
-arxiv_id: "2405.11985"
+arxiv_id: '2405.11985'
 status: active
 dimension: E
+sota:
+- score: 82.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/bytedance/MTVQA
+  notes: multilingual text-rich visual QA accuracy
+- score: 81.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/bytedance/MTVQA
+  notes: accuracy
+- score: 80.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/bytedance/MTVQA
+  notes: accuracy
+- score: 79.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/bytedance/MTVQA
+  notes: accuracy
+- score: 65.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/bytedance/MTVQA
+  notes: accuracy, 2024 baseline
 ---
 
 # MTVQA
@@ -19,6 +55,22 @@ dimension: E
 > 多语言文本视觉问答基准，评测多模态模型在图像中识别和理解非英语场景文字的能力，覆盖 9 种语言。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 82.5% | multilingual text-rich visual QA accuracy | 2026-03 | [link](https://github.com/bytedance/MTVQA) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 81.2% | accuracy | 2026-04 | [link](https://github.com/bytedance/MTVQA) |
+| 🥉 | [[GPT-5]] | 🚫 no | 80.5% | accuracy | 2025-09 | [link](https://github.com/bytedance/MTVQA) |
+| 4 | [[Qwen3.6]] | 🚫 no | 79.8% | accuracy | 2026-04 | [link](https://github.com/bytedance/MTVQA) |
+| 5 | [[GPT-4o]] | 🚫 no | 65.0% | accuracy, 2024 baseline | 2024-05 | [link](https://github.com/bytedance/MTVQA) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

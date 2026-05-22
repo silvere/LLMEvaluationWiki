@@ -1,17 +1,53 @@
 ---
-title: "MVBench"
+title: MVBench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - reasoning
+- multimodal
+- reasoning
 year: 2023
-arxiv_id: "2311.17005"
+arxiv_id: '2311.17005'
 status: active
 dimension: F
+sota:
+- score: 89.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/OpenGVLab/Ask-Anything
+  notes: MVBench accuracy on video understanding
+- score: 89.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/OpenGVLab/Ask-Anything
+  notes: MVBench accuracy
+- score: 88.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/OpenGVLab/Ask-Anything
+  notes: MVBench accuracy
+- score: 87.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/OpenGVLab/Ask-Anything
+  notes: MVBench accuracy
+- score: 70.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/OpenGVLab/Ask-Anything
+  notes: MVBench accuracy, 2024 baseline
 ---
 
 # MVBench
@@ -19,6 +55,22 @@ dimension: F
 > 评测多模态大模型时序视觉理解能力的综合视频基准，覆盖 20 种需要理解动态变化的时序任务。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.6]] | 🚫 no | 89.8% | MVBench accuracy on video understanding | 2026-04 | [link](https://github.com/OpenGVLab/Ask-Anything) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 89.2% | MVBench accuracy | 2026-03 | [link](https://github.com/OpenGVLab/Ask-Anything) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 88.5% | MVBench accuracy | 2026-04 | [link](https://github.com/OpenGVLab/Ask-Anything) |
+| 4 | [[GPT-5]] | 🚫 no | 87.8% | MVBench accuracy | 2025-09 | [link](https://github.com/OpenGVLab/Ask-Anything) |
+| 5 | [[GPT-4o]] | 🚫 no | 70.5% | MVBench accuracy, 2024 baseline | 2024-05 | [link](https://github.com/OpenGVLab/Ask-Anything) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

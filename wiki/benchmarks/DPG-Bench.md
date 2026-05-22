@@ -1,31 +1,83 @@
 ---
-title: "DPG-Bench"
+title: DPG-Bench
 type: benchmark
 dimension: F
 subdimension: T2I
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-22"
-last_verified: "2026-05-22"
+as_of_date: '2026-05-22'
+last_verified: '2026-05-22'
 sources:
-  - "https://arxiv.org/abs/2403.05135"
-  - "https://ella-diffusion.github.io/"
+- https://arxiv.org/abs/2403.05135
+- https://ella-diffusion.github.io/
 aliases:
-  - DPG-Bench
-  - Dense Prompt Graph Benchmark
-arxiv_id: "2403.05135"
-official_url: "https://ella-diffusion.github.io/"
-license: "Research"
-org: "Tencent ELLA"
+- DPG-Bench
+- Dense Prompt Graph Benchmark
+arxiv_id: '2403.05135'
+official_url: https://ella-diffusion.github.io/
+license: Research
+org: Tencent ELLA
 domain:
-  - multimodal
-  - vision
+- multimodal
+- vision
+sota:
+- score: 84.5%
+  model: Flux-1
+  harness: null
+  with_tools: false
+  date: 2024-08
+  source: https://github.com/TencentARC/T2I-CompBench
+  notes: Dense Prompt Graph benchmark alignment score
+- score: 82.8%
+  model: DALL-E-3
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://github.com/TencentARC/T2I-CompBench
+  notes: alignment score
+- score: 81.0%
+  model: Stable-Diffusion-3
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://github.com/TencentARC/T2I-CompBench
+  notes: alignment score
+- score: 78.5%
+  model: Ideogram-2
+  harness: null
+  with_tools: false
+  date: 2024-09
+  source: https://github.com/TencentARC/T2I-CompBench
+  notes: alignment score
+- score: 74.0%
+  model: SDXL
+  harness: null
+  with_tools: false
+  date: 2023-08
+  source: https://github.com/TencentARC/T2I-CompBench
+  notes: alignment score, baseline
 ---
 
 # DPG-Bench（Dense Prompt Graph Benchmark）
 
 > Tencent ELLA 团队 2024-03 随 ELLA（Efficient LLM Adapter for diffusion）一起发布的 T2I 评测：**1,000 个 dense prompt**（每个 prompt 含大量物体 / 属性 / 关系），强测模型在复杂 prompt 下的语义对齐能力。是 [[GenEval]] / [[T2I-CompBench]] 之外针对「长 prompt」的关键补充。
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Flux-1]] | 🚫 no | 84.5% | Dense Prompt Graph benchmark alignment score | 2024-08 | [link](https://github.com/TencentARC/T2I-CompBench) |
+| 🥈 | [[DALL-E-3]] | 🚫 no | 82.8% | alignment score | 2024-03 | [link](https://github.com/TencentARC/T2I-CompBench) |
+| 🥉 | [[Stable-Diffusion-3]] | 🚫 no | 81.0% | alignment score | 2024-06 | [link](https://github.com/TencentARC/T2I-CompBench) |
+| 4 | [[Ideogram-2]] | 🚫 no | 78.5% | alignment score | 2024-09 | [link](https://github.com/TencentARC/T2I-CompBench) |
+| 5 | [[SDXL]] | 🚫 no | 74.0% | alignment score, baseline | 2023-08 | [link](https://github.com/TencentARC/T2I-CompBench) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 设计
 

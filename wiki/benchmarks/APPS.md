@@ -1,26 +1,74 @@
 ---
-title: "APPS"
+title: APPS
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
 language: en
 year: 2021
-authors: ["Dan Hendrycks", "Steven Basart", "Saurav Kadavath", "Mantas Mazeika", "Akul Arora", "Ethan Guo", "Collin Burns", "Samir Puranik", "Horace He", "Dawn Song", "Jacob Steinhardt"]
-arxiv_id: "2105.09938"
-official_url: "https://github.com/hendrycks/apps"
-license: "MIT"
+authors:
+- Dan Hendrycks
+- Steven Basart
+- Saurav Kadavath
+- Mantas Mazeika
+- Akul Arora
+- Ethan Guo
+- Collin Burns
+- Samir Puranik
+- Horace He
+- Dawn Song
+- Jacob Steinhardt
+arxiv_id: '2105.09938'
+official_url: https://github.com/hendrycks/apps
+license: MIT
 size: 10000
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2105.09938"
-  - "https://github.com/hendrycks/apps"
+- https://arxiv.org/abs/2105.09938
+- https://github.com/hendrycks/apps
 dimension: H
+sota:
+- score: 94.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: introductory-level pass rate
+- score: 91.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: introductory-level pass rate
+- score: 90.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: introductory-level pass rate
+- score: 88.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: introductory-level pass rate
+- score: 82.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: introductory-level pass rate, 2024 baseline
 ---
 
 # APPS (Automated Programming Progress Standard)
@@ -62,6 +110,23 @@ APPS的发布填补了当时代码评测基准中缺乏大规模、多难度覆�
 | 早期GPT-3（2021） | 0.2% | 0.0% | 0.0% |
 
 注：随着模型迭代，入门级别题目的通过率已大幅提升，竞赛级别题目仍是挑战。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 94.2% | introductory-level pass rate | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 91.5% | introductory-level pass rate | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 90.2% | introductory-level pass rate | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 88.8% | introductory-level pass rate | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 82.0% | introductory-level pass rate, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

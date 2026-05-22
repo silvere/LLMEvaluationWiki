@@ -1,24 +1,84 @@
 ---
-title: "ARC-AGI2"
+title: ARC-AGI2
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - reasoning
+- reasoning
 year: 2025
-arxiv_id: ""
+arxiv_id: ''
 status: active
 aliases:
-  - ARC-AGI 2.0
+- ARC-AGI 2.0
 dimension: A
 subdimension: benchmark
+sota:
+- score: 85.0%
+  model: GPT-5.5
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://benchlm.ai/benchmarks/arcAgi2
+  notes: ARC-AGI v2（比 v1 难数倍，人类基线 ~60-70%）
+- score: 83.3%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://benchlm.ai/benchmarks/arcAgi2
+  notes: GPT-5.4 Pro
+- score: 77.1%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-05
+  source: https://benchlm.ai/benchmarks/arcAgi2
+  notes: ARC-AGI v2
+- score: 75.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://arcprize.org/
+  notes: ARC-AGI v2
+- score: 37.6%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2025-12
+  source: https://arcprize.org/blog/arc-prize-2025-results-analysis
+  notes: ARC Prize 2025 竞赛集（更难），12 月快照
+- score: 24.0%
+  model: o3
+  harness: null
+  with_tools: false
+  date: 2025-12
+  source: https://arxiv.org/abs/2601.10904
+  notes: ARC Prize 2025 Kaggle 第一名系统（NVARC），私有评测集
 ---
 
 # ARC-AGI2
 
 > 抽象推理语料库 2.0，ARC-AGI1 的升级版，针对前代基准被"工程突破"而非真正泛化推理的方式攻克后，设计了更高标准的纯推理挑战。
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5.5]] | 🚫 no | 85.0% | ARC-AGI v2（比 v1 难数倍，人类基线 ~60-70%） | 2026-05 | [link](https://benchlm.ai/benchmarks/arcAgi2) |
+| 🥈 | [[GPT-5]] | 🚫 no | 83.3% | GPT-5.4 Pro | 2026-05 | [link](https://benchlm.ai/benchmarks/arcAgi2) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 77.1% | ARC-AGI v2 | 2026-05 | [link](https://benchlm.ai/benchmarks/arcAgi2) |
+| 4 | [[Claude-Opus-4.7]] | 🚫 no | 75.8% | ARC-AGI v2 | 2026-04 | [link](https://arcprize.org/) |
+| 5 | [[Claude-Opus-4.7]] | 🚫 no | 37.6% | ARC Prize 2025 竞赛集（更难），12 月快照 | 2025-12 | [link](https://arcprize.org/blog/arc-prize-2025-results-analysis) |
+| 6 | [[o3]] | 🚫 no | 24.0% | ARC Prize 2025 Kaggle 第一名系统（NVARC），私有评测集 | 2025-12 | [link](https://arxiv.org/abs/2601.10904) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 概述
 

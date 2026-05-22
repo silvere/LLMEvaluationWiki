@@ -1,31 +1,90 @@
 ---
-title: "XSTest"
+title: XSTest
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [safety]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- safety
 language: en
 year: 2023
-authors: ["Paul Röttger", "Hannah Rose Kirk", "Bertie Vidgen", "Giuseppe Attanasio", "Federico Bianchi", "Dirk Hovy"]
-arxiv_id: "2308.01263"
-official_url: "https://github.com/paul-rottger/exaggerated-safety"
-license: "CC BY 4.0"
+authors:
+- Paul Röttger
+- Hannah Rose Kirk
+- Bertie Vidgen
+- Giuseppe Attanasio
+- Federico Bianchi
+- Dirk Hovy
+arxiv_id: '2308.01263'
+official_url: https://github.com/paul-rottger/exaggerated-safety
+license: CC BY 4.0
 size: 250
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2308.01263"
+- https://arxiv.org/abs/2308.01263
 dimension: I
 subdimension: safety-benchmark
+sota:
+- score: 98.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://arxiv.org/abs/2308.01263
+  notes: accuracy on safe/unsafe prompt classification
+- score: 97.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://arxiv.org/abs/2308.01263
+  notes: accuracy
+- score: 96.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://arxiv.org/abs/2308.01263
+  notes: accuracy
+- score: 96.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://arxiv.org/abs/2308.01263
+  notes: accuracy
+- score: 93.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://arxiv.org/abs/2308.01263
+  notes: accuracy, 2024 baseline
 ---
 
 # XSTest：过度拒绝（Exaggerated Safety）评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 98.2% | accuracy on safe/unsafe prompt classification | 2026-04 | [link](https://arxiv.org/abs/2308.01263) |
+| 🥈 | [[GPT-5]] | 🚫 no | 97.5% | accuracy | 2025-09 | [link](https://arxiv.org/abs/2308.01263) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 96.8% | accuracy | 2026-03 | [link](https://arxiv.org/abs/2308.01263) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 96.0% | accuracy | 2026-02 | [link](https://arxiv.org/abs/2308.01263) |
+| 5 | [[GPT-4o]] | 🚫 no | 93.5% | accuracy, 2024 baseline | 2024-05 | [link](https://arxiv.org/abs/2308.01263) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

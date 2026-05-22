@@ -1,33 +1,94 @@
 ---
-title: "MMVet"
+title: MMVet
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 aliases:
-  - MM-Vet v2
-  - MMVet-v2
-domain: [multimodal]
+- MM-Vet v2
+- MMVet-v2
+domain:
+- multimodal
 language: en
 year: 2023
-authors: ["Weihao Yu", "Zhengyuan Yang", "Linjie Li", "Jianfeng Wang", "Kevin Lin", "Zicheng Liu", "Xinchao Wang", "Lijuan Wang"]
-arxiv_id: "2308.02490"
-official_url: "https://github.com/yuweihao/MM-Vet"
-license: ""
+authors:
+- Weihao Yu
+- Zhengyuan Yang
+- Linjie Li
+- Jianfeng Wang
+- Kevin Lin
+- Zicheng Liu
+- Xinchao Wang
+- Lijuan Wang
+arxiv_id: '2308.02490'
+official_url: https://github.com/yuweihao/MM-Vet
+license: ''
 size: 218
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2308.02490"
+- https://arxiv.org/abs/2308.02490
 dimension: E
+sota:
+- score: 92.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/yuweihao/MM-Vet
+  notes: MM-Vet v2 score (GPT-4 judge)
+- score: 92.0%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/yuweihao/MM-Vet
+  notes: MM-Vet v2 score
+- score: 91.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/yuweihao/MM-Vet
+  notes: MM-Vet v2 score
+- score: 90.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/yuweihao/MM-Vet
+  notes: MM-Vet v2 score
+- score: 69.1%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/yuweihao/MM-Vet
+  notes: MM-Vet v2 score, 2024 baseline
 ---
 
 # MMVet：多模态集成能力评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 92.5% | MM-Vet v2 score (GPT-4 judge) | 2026-04 | [link](https://github.com/yuweihao/MM-Vet) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 92.0% | MM-Vet v2 score | 2026-03 | [link](https://github.com/yuweihao/MM-Vet) |
+| 🥉 | [[GPT-5]] | 🚫 no | 91.5% | MM-Vet v2 score | 2025-09 | [link](https://github.com/yuweihao/MM-Vet) |
+| 4 | [[Qwen3.6]] | 🚫 no | 90.8% | MM-Vet v2 score | 2026-04 | [link](https://github.com/yuweihao/MM-Vet) |
+| 5 | [[GPT-4o]] | 🚫 no | 69.1% | MM-Vet v2 score, 2024 baseline | 2024-05 | [link](https://github.com/yuweihao/MM-Vet) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

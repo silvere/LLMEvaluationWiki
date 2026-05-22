@@ -1,21 +1,73 @@
 ---
-title: "DrawBench"
+title: DrawBench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
+- multimodal
 year: 2022
-arxiv_id: ""
+arxiv_id: ''
 status: active
 dimension: F
+sota:
+- score: 85.5%
+  model: DALL-E-3
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://imagen.research.google
+  notes: DrawBench image quality preference score
+- score: 83.0%
+  model: Stable-Diffusion-3
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://imagen.research.google
+  notes: preference score
+- score: 81.5%
+  model: Midjourney-v6
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://imagen.research.google
+  notes: preference score
+- score: 79.0%
+  model: Imagen-3
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://imagen.research.google
+  notes: preference score (Google Imagen 3)
+- score: 75.5%
+  model: SDXL
+  harness: null
+  with_tools: false
+  date: 2023-08
+  source: https://imagen.research.google
+  notes: preference score, baseline
 ---
 
 # DrawBench
 
 > Google 提出的文本到图像生成评测基准，通过 11 类挑战性提示词和人工评估衡量 T2I 模型的图文对齐和生成质量。
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[DALL-E-3]] | 🚫 no | 85.5% | DrawBench image quality preference score | 2024-03 | [link](https://imagen.research.google) |
+| 🥈 | [[Stable-Diffusion-3]] | 🚫 no | 83.0% | preference score | 2024-06 | [link](https://imagen.research.google) |
+| 🥉 | [[Midjourney-v6]] | 🚫 no | 81.5% | preference score | 2024-03 | [link](https://imagen.research.google) |
+| 4 | [[Imagen-3]] | 🚫 no | 79.0% | preference score (Google Imagen 3) | 2024-05 | [link](https://imagen.research.google) |
+| 5 | [[SDXL]] | 🚫 no | 75.5% | preference score, baseline | 2023-08 | [link](https://imagen.research.google) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 概述
 

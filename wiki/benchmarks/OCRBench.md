@@ -1,30 +1,91 @@
 ---
-title: "OCRBench"
+title: OCRBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
 language: en
 year: 2023
-authors: ["Zhenrui Liu", "Tianwei Lin", "Quanhao Guo", "Zheyao Zhang", "Weifeng Lin", "Haoxuan Hua", "Dahua Lin", "Wayne Zhang"]
-arxiv_id: "2305.07895"
-official_url: "https://github.com/Yuliang-Liu/MultimodalOCR"
-license: ""
+authors:
+- Zhenrui Liu
+- Tianwei Lin
+- Quanhao Guo
+- Zheyao Zhang
+- Weifeng Lin
+- Haoxuan Hua
+- Dahua Lin
+- Wayne Zhang
+arxiv_id: '2305.07895'
+official_url: https://github.com/Yuliang-Liu/MultimodalOCR
+license: ''
 size: 1000
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2305.07895"
+- https://arxiv.org/abs/2305.07895
 dimension: E
+sota:
+- score: 92.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2 overall score
+- score: 91.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2
+- score: 90.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2
+- score: 89.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2
+- score: 81.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench, 2024 baseline
 ---
 
 # OCRBench：多模态模型 OCR 与文字理解评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.6]] | 🚫 no | 92.8% | OCRBench v2 overall score | 2026-04 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 91.5% | OCRBench v2 | 2026-03 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 90.8% | OCRBench v2 | 2026-04 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+| 4 | [[GPT-5]] | 🚫 no | 89.5% | OCRBench v2 | 2025-09 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+| 5 | [[GPT-4o]] | 🚫 no | 81.0% | OCRBench, 2024 baseline | 2024-05 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

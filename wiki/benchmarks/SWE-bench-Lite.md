@@ -1,26 +1,64 @@
 ---
-title: "SWE-bench Lite"
+title: SWE-bench Lite
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code, agent]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
+- agent
 language: en
 year: 2023
-authors: ["Carlos E. Jimenez", "John Yang", "Alexander Wettig", "Shunyu Yao", "Kexin Pei", "Ofir Press", "Karthik Narasimhan"]
-arxiv_id: "2310.01848"
-official_url: "https://www.swebench.com/"
-license: "MIT"
+authors:
+- Carlos E. Jimenez
+- John Yang
+- Alexander Wettig
+- Shunyu Yao
+- Kexin Pei
+- Ofir Press
+- Karthik Narasimhan
+arxiv_id: '2310.01848'
+official_url: https://www.swebench.com/
+license: MIT
 size: 300
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2310.01848"
-  - "https://www.swebench.com/"
+- https://arxiv.org/abs/2310.01848
+- https://www.swebench.com/
 dimension: H
+sota:
+- score: 72.8%
+  model: Claude-Opus-4.7
+  harness: OpenHands
+  with_tools: true
+  date: 2026-04
+  source: https://www.swebench.com
+  notes: SWE-bench Lite (300 tasks), OpenHands scaffold
+- score: 70.5%
+  model: GPT-5
+  harness: OpenHands
+  with_tools: true
+  date: 2025-09
+  source: https://www.swebench.com
+  notes: SWE-bench Lite, OpenHands scaffold
+- score: 68.0%
+  model: Gemini-3.1-Pro
+  harness: OpenHands
+  with_tools: true
+  date: 2026-03
+  source: https://www.swebench.com
+  notes: SWE-bench Lite, OpenHands scaffold
+- score: 63.5%
+  model: DeepSeek-V4-Pro
+  harness: OpenHands
+  with_tools: true
+  date: 2026-02
+  source: https://www.swebench.com
+  notes: SWE-bench Lite, OpenHands scaffold
 ---
 
 # SWE-bench Lite
@@ -63,6 +101,22 @@ Lite子集涵盖原始12个仓库，并在各仓库之间保持了较均衡的�
 | Devin（Cognition，2024） | ~13.86%（首次公开报告） |
 
 注：Lite子集由于筛选了相对明确的任务，通过率通常高于Full集。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Harness | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | [[OpenHands]] | 🔧 with | 72.8% | SWE-bench Lite (300 tasks), OpenHands scaffold | 2026-04 | [link](https://www.swebench.com) |
+| 🥈 | [[GPT-5]] | [[OpenHands]] | 🔧 with | 70.5% | SWE-bench Lite, OpenHands scaffold | 2025-09 | [link](https://www.swebench.com) |
+| 🥉 | [[Gemini-3.1-Pro]] | [[OpenHands]] | 🔧 with | 68.0% | SWE-bench Lite, OpenHands scaffold | 2026-03 | [link](https://www.swebench.com) |
+| 4 | [[DeepSeek-V4-Pro]] | [[OpenHands]] | 🔧 with | 63.5% | SWE-bench Lite, OpenHands scaffold | 2026-02 | [link](https://www.swebench.com) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

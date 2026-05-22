@@ -1,25 +1,64 @@
 ---
-title: "AGIEval"
+title: AGIEval
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [knowledge, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
 language: multilingual
 year: 2023
-authors: ["Zhong et al."]
-arxiv_id: "2304.06364"
-official_url: "https://github.com/microsoft/AGIEval"
-license: "MIT"
+authors:
+- Zhong et al.
+arxiv_id: '2304.06364'
+official_url: https://github.com/microsoft/AGIEval
+license: MIT
 size: 8816
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 90.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: overall average, 5-shot
+- score: 87.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: overall average, 5-shot
+- score: 86.4%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: overall average, 5-shot
+- score: 85.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: overall average, 5-shot
+- score: 80.3%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: overall average, 5-shot, 2024 baseline
 ---
 
 # AGIEval
@@ -62,6 +101,23 @@ AGIEval 的独特价值在于：题目本身已经过权威机构的质量把控
 ## SOTA 表现
 
 顶尖大型语言模型（GPT-4、Claude 3 系列）在 AGIEval 英文子集上的准确率约为 75-85%，中文子集表现因领域而异。具体最新成绩见各模型官方技术报告。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 90.2% | overall average, 5-shot | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 87.5% | overall average, 5-shot | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 86.4% | overall average, 5-shot | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 85.8% | overall average, 5-shot | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 80.3% | overall average, 5-shot, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

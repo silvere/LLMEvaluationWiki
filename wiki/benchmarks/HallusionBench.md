@@ -1,31 +1,99 @@
 ---
-title: "HallusionBench"
+title: HallusionBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal, hallucination]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
+- hallucination
 language: en
 year: 2023
-authors: ["Tianrui Guan", "Fuxiao Liu", "Xiyang Wu", "Ruiqi Xian", "Zongxia Li", "Xiaoyu Liu", "Xijun Wang", "Lichang Chen", "Furong Huang", "Yaser Yacoob", "Gedas Bertasius", "Mohamed Elhoseiny", "Ser-Nam Lim", "Dinesh Manocha"]
-arxiv_id: "2310.14566"
-official_url: "https://github.com/tianyi-lab/HallusionBench"
-license: ""
+authors:
+- Tianrui Guan
+- Fuxiao Liu
+- Xiyang Wu
+- Ruiqi Xian
+- Zongxia Li
+- Xiaoyu Liu
+- Xijun Wang
+- Lichang Chen
+- Furong Huang
+- Yaser Yacoob
+- Gedas Bertasius
+- Mohamed Elhoseiny
+- Ser-Nam Lim
+- Dinesh Manocha
+arxiv_id: '2310.14566'
+official_url: https://github.com/tianyi-lab/HallusionBench
+license: ''
 size: 1129
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2310.14566"
+- https://arxiv.org/abs/2310.14566
 dimension: I
 subdimension: safety-benchmark
+sota:
+- score: 85.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/tianyi-lab/HallusionBench
+  notes: figure understanding accuracy (anti-hallucination)
+- score: 84.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/tianyi-lab/HallusionBench
+  notes: accuracy
+- score: 83.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/tianyi-lab/HallusionBench
+  notes: accuracy
+- score: 82.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/tianyi-lab/HallusionBench
+  notes: accuracy
+- score: 63.6%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/tianyi-lab/HallusionBench
+  notes: accuracy, 2024 baseline
 ---
 
 # HallusionBench：视觉语言幻觉系统评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 85.2% | figure understanding accuracy (anti-hallucination) | 2026-04 | [link](https://github.com/tianyi-lab/HallusionBench) |
+| 🥈 | [[GPT-5]] | 🚫 no | 84.5% | accuracy | 2025-09 | [link](https://github.com/tianyi-lab/HallusionBench) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 83.8% | accuracy | 2026-03 | [link](https://github.com/tianyi-lab/HallusionBench) |
+| 4 | [[Qwen3.6]] | 🚫 no | 82.5% | accuracy | 2026-04 | [link](https://github.com/tianyi-lab/HallusionBench) |
+| 5 | [[GPT-4o]] | 🚫 no | 63.6% | accuracy, 2024 baseline | 2024-05 | [link](https://github.com/tianyi-lab/HallusionBench) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

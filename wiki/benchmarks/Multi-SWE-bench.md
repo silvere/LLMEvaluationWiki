@@ -1,17 +1,46 @@
 ---
-title: "Multi-SWE-bench"
+title: Multi-SWE-bench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - code
-  - agent
+- code
+- agent
 year: 2025
-arxiv_id: "2504.02605"
+arxiv_id: '2504.02605'
 status: active
 dimension: H
+sota:
+- score: 42.5%
+  model: Claude-Opus-4.7
+  harness: OpenHands
+  with_tools: true
+  date: 2026-04
+  source: https://multi-swe-bench.github.io
+  notes: multi-repo multi-language resolution rate
+- score: 40.2%
+  model: GPT-5
+  harness: OpenHands
+  with_tools: true
+  date: 2025-09
+  source: https://multi-swe-bench.github.io
+  notes: multi-repo multi-language resolution rate
+- score: 38.5%
+  model: Gemini-3.1-Pro
+  harness: OpenHands
+  with_tools: true
+  date: 2026-03
+  source: https://multi-swe-bench.github.io
+  notes: multi-repo multi-language resolution rate
+- score: 35.8%
+  model: DeepSeek-V4-Pro
+  harness: OpenHands
+  with_tools: true
+  date: 2026-02
+  source: https://multi-swe-bench.github.io
+  notes: multi-repo multi-language resolution rate
 ---
 
 # Multi-SWE-bench
@@ -19,6 +48,21 @@ dimension: H
 > 多语言软件工程基准，将 SWE-bench 扩展至 Python 之外的 7 种编程语言，评测 AI 代理跨语言修复真实 GitHub Issue 的能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Harness | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | [[OpenHands]] | 🔧 with | 42.5% | multi-repo multi-language resolution rate | 2026-04 | [link](https://multi-swe-bench.github.io) |
+| 🥈 | [[GPT-5]] | [[OpenHands]] | 🔧 with | 40.2% | multi-repo multi-language resolution rate | 2025-09 | [link](https://multi-swe-bench.github.io) |
+| 🥉 | [[Gemini-3.1-Pro]] | [[OpenHands]] | 🔧 with | 38.5% | multi-repo multi-language resolution rate | 2026-03 | [link](https://multi-swe-bench.github.io) |
+| 4 | [[DeepSeek-V4-Pro]] | [[OpenHands]] | 🔧 with | 35.8% | multi-repo multi-language resolution rate | 2026-02 | [link](https://multi-swe-bench.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

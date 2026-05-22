@@ -1,32 +1,105 @@
 ---
-title: "Video-MME"
+title: Video-MME
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 aliases:
-  - VideoMME
-domain: [multimodal]
+- VideoMME
+domain:
+- multimodal
 language: en
 year: 2024
-authors: ["Chaoyou Fu", "Yuhan Dai", "Yondong Luo", "Lei Li", "Shuhuai Ren", "Renrui Zhang", "Zihan Wang", "Chenyu Zhou", "Yunhang Shen", "Mengdan Zhang", "Peixian Chen", "Yanwei Li", "Shaohui Lin", "Sirui Zhao", "Ke Li", "Tong Xu", "Xiawu Zheng", "Enhong Chen", "Rongrong Ji", "Xing Sun"]
-arxiv_id: "2405.21075"
-official_url: "https://video-mme.github.io"
-license: ""
+authors:
+- Chaoyou Fu
+- Yuhan Dai
+- Yondong Luo
+- Lei Li
+- Shuhuai Ren
+- Renrui Zhang
+- Zihan Wang
+- Chenyu Zhou
+- Yunhang Shen
+- Mengdan Zhang
+- Peixian Chen
+- Yanwei Li
+- Shaohui Lin
+- Sirui Zhao
+- Ke Li
+- Tong Xu
+- Xiawu Zheng
+- Enhong Chen
+- Rongrong Ji
+- Xing Sun
+arxiv_id: '2405.21075'
+official_url: https://video-mme.github.io
+license: ''
 size: 2700
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2405.21075"
+- https://arxiv.org/abs/2405.21075
 dimension: E
+sota:
+- score: 88.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://video-mme.github.io
+  notes: Video-MME overall accuracy (w/ subtitles)
+- score: 87.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://video-mme.github.io
+  notes: Video-MME overall accuracy (w/ subtitles)
+- score: 86.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://video-mme.github.io
+  notes: Video-MME overall (w/ subtitles)
+- score: 85.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://video-mme.github.io
+  notes: Video-MME overall (w/ subtitles)
+- score: 75.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://video-mme.github.io
+  notes: Video-MME overall, 2024 baseline
 ---
 
 # Video-MME：全面的视频多模态评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 88.5% | Video-MME overall accuracy (w/ subtitles) | 2026-03 | [link](https://video-mme.github.io) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 87.2% | Video-MME overall accuracy (w/ subtitles) | 2026-04 | [link](https://video-mme.github.io) |
+| 🥉 | [[GPT-5]] | 🚫 no | 86.5% | Video-MME overall (w/ subtitles) | 2025-09 | [link](https://video-mme.github.io) |
+| 4 | [[Qwen3.6]] | 🚫 no | 85.0% | Video-MME overall (w/ subtitles) | 2026-04 | [link](https://video-mme.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 75.0% | Video-MME overall, 2024 baseline | 2024-05 | [link](https://video-mme.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

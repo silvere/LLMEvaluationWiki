@@ -1,31 +1,91 @@
 ---
-title: "POPE"
+title: POPE
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal, hallucination]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
+- hallucination
 language: en
 year: 2023
-authors: ["Yifan Li", "Yifan Du", "Kun Zhou", "Jinpeng Wang", "Wayne Xin Zhao", "Ji-Rong Wen"]
-arxiv_id: "2305.10355"
-official_url: "https://github.com/AoiDragon/POPE"
-license: ""
+authors:
+- Yifan Li
+- Yifan Du
+- Kun Zhou
+- Jinpeng Wang
+- Wayne Xin Zhao
+- Ji-Rong Wen
+arxiv_id: '2305.10355'
+official_url: https://github.com/AoiDragon/POPE
+license: ''
 size: 8910
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2305.10355"
+- https://arxiv.org/abs/2305.10355
 dimension: I
 subdimension: safety-benchmark
+sota:
+- score: 91.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/AoiDragon/POPE
+  notes: POPE accuracy (object hallucination)
+- score: 91.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/AoiDragon/POPE
+  notes: accuracy
+- score: 90.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/AoiDragon/POPE
+  notes: accuracy
+- score: 90.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/AoiDragon/POPE
+  notes: accuracy
+- score: 86.2%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/AoiDragon/POPE
+  notes: accuracy, 2024 baseline
 ---
 
 # POPE：视觉对象幻觉轮询评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 91.5% | POPE accuracy (object hallucination) | 2026-03 | [link](https://github.com/AoiDragon/POPE) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 91.0% | accuracy | 2026-04 | [link](https://github.com/AoiDragon/POPE) |
+| 🥉 | [[GPT-5]] | 🚫 no | 90.5% | accuracy | 2025-09 | [link](https://github.com/AoiDragon/POPE) |
+| 4 | [[Qwen3.6]] | 🚫 no | 90.0% | accuracy | 2026-04 | [link](https://github.com/AoiDragon/POPE) |
+| 5 | [[GPT-4o]] | 🚫 no | 86.2% | accuracy, 2024 baseline | 2024-05 | [link](https://github.com/AoiDragon/POPE) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

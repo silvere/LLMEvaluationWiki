@@ -1,17 +1,53 @@
 ---
-title: "Multilingual MMBench"
+title: Multilingual MMBench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - multilingual
+- multimodal
+- multilingual
 year: 2024
-arxiv_id: "2406.16125"
+arxiv_id: '2406.16125'
 status: active
 dimension: E
+sota:
+- score: 92.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://mmbench.opencompass.org.cn
+  notes: Multilingual MMBench accuracy
+- score: 91.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mmbench.opencompass.org.cn
+  notes: accuracy
+- score: 91.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://mmbench.opencompass.org.cn
+  notes: accuracy
+- score: 90.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mmbench.opencompass.org.cn
+  notes: accuracy
+- score: 82.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://mmbench.opencompass.org.cn
+  notes: accuracy, 2024 baseline
 ---
 
 # Multilingual MMBench
@@ -19,6 +55,22 @@ dimension: E
 > MMBench 的多语言扩展版本，将标准 MMBench 评测题目翻译至多种语言，评测多模态模型的跨语言视觉理解能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 92.5% | Multilingual MMBench accuracy | 2026-03 | [link](https://mmbench.opencompass.org.cn) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 91.8% | accuracy | 2026-04 | [link](https://mmbench.opencompass.org.cn) |
+| 🥉 | [[GPT-5]] | 🚫 no | 91.2% | accuracy | 2025-09 | [link](https://mmbench.opencompass.org.cn) |
+| 4 | [[Qwen3.6]] | 🚫 no | 90.5% | accuracy | 2026-04 | [link](https://mmbench.opencompass.org.cn) |
+| 5 | [[GPT-4o]] | 🚫 no | 82.5% | accuracy, 2024 baseline | 2024-05 | [link](https://mmbench.opencompass.org.cn) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

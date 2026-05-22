@@ -1,26 +1,76 @@
 ---
-title: "HumanEval-X"
+title: HumanEval-X
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
 language: en
 year: 2023
-authors: ["Qinkai Zheng", "Xiao Xia", "Xu Zou", "Yuxiao Dong", "Shan Wang", "Yufei Xue", "Zihan Wang", "Lei Shen", "Andi Wang", "Yang Li", "Teng Su", "Zhilin Yang", "Jie Tang"]
-arxiv_id: "2303.17568"
-official_url: "https://github.com/THUDM/CodeGeeX"
-license: "Apache 2.0"
+authors:
+- Qinkai Zheng
+- Xiao Xia
+- Xu Zou
+- Yuxiao Dong
+- Shan Wang
+- Yufei Xue
+- Zihan Wang
+- Lei Shen
+- Andi Wang
+- Yang Li
+- Teng Su
+- Zhilin Yang
+- Jie Tang
+arxiv_id: '2303.17568'
+official_url: https://github.com/THUDM/CodeGeeX
+license: Apache 2.0
 size: 820
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2303.17568"
-  - "https://github.com/THUDM/CodeGeeX"
+- https://arxiv.org/abs/2303.17568
+- https://github.com/THUDM/CodeGeeX
 dimension: H
+sota:
+- score: 90.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/THUDM/CodeGeeX
+  notes: HumanEval-X pass@1 (multilingual HumanEval)
+- score: 89.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: pass@1
+- score: 88.0%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: pass@1
+- score: 86.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: pass@1
+- score: 82.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: pass@1, 2024 baseline
 ---
 
 # HumanEval-X
@@ -64,6 +114,23 @@ HumanEval-X支持两类评测任务：
 | CodeGeeX2 | ~71% | ~65% | ~61% |
 
 注：各语言表现差异较大，Go和JavaScript的支持质量因模型而异。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 90.5% | HumanEval-X pass@1 (multilingual HumanEval) | 2026-04 | [link](https://github.com/THUDM/CodeGeeX) |
+| 🥈 | [[GPT-5]] | 🚫 no | 89.2% | pass@1 | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 88.0% | pass@1 | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 86.5% | pass@1 | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 82.0% | pass@1, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

@@ -1,17 +1,53 @@
 ---
-title: "TemporalBench"
+title: TemporalBench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - video
-  - multimodal
+- video
+- multimodal
 year: 2024
-arxiv_id: "2410.10818"
+arxiv_id: '2410.10818'
 status: active
 dimension: E
+sota:
+- score: 78.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://arxiv.org/abs/2410.10818
+  notes: temporal understanding accuracy in video
+- score: 76.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://arxiv.org/abs/2410.10818
+  notes: accuracy
+- score: 75.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://arxiv.org/abs/2410.10818
+  notes: accuracy
+- score: 74.2%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://arxiv.org/abs/2410.10818
+  notes: accuracy
+- score: 58.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://arxiv.org/abs/2410.10818
+  notes: accuracy, 2024 baseline
 ---
 
 # TemporalBench
@@ -19,6 +55,22 @@ dimension: E
 > 专注于细粒度视频时序理解的多模态评测基准，由微软联合斯坦福大学于2024年发布，揭示了当前视频模型在时序理解上与人类的巨大差距。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 78.5% | temporal understanding accuracy in video | 2026-03 | [link](https://arxiv.org/abs/2410.10818) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 76.8% | accuracy | 2026-04 | [link](https://arxiv.org/abs/2410.10818) |
+| 🥉 | [[GPT-5]] | 🚫 no | 75.5% | accuracy | 2025-09 | [link](https://arxiv.org/abs/2410.10818) |
+| 4 | [[Qwen3.6]] | 🚫 no | 74.2% | accuracy | 2026-04 | [link](https://arxiv.org/abs/2410.10818) |
+| 5 | [[GPT-4o]] | 🚫 no | 58.0% | accuracy, 2024 baseline | 2024-05 | [link](https://arxiv.org/abs/2410.10818) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

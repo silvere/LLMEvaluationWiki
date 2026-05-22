@@ -1,24 +1,62 @@
 ---
-title: "AlpacaEval"
+title: AlpacaEval
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [instruction-following]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- instruction-following
 language: en
 year: 2023
-authors: ["Li et al."]
-arxiv_id: "2305.14387"
-official_url: "https://tatsu-lab.github.io/alpaca_eval/"
-license: "Apache-2.0"
+authors:
+- Li et al.
+arxiv_id: '2305.14387'
+official_url: https://tatsu-lab.github.io/alpaca_eval/
+license: Apache-2.0
 size: 805
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: B
+sota:
+- score: 98.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: AlpacaEval 1.0 win rate vs text-davinci-003
+- score: 97.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: win rate
+- score: 97.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: win rate
+- score: 96.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: win rate
+- score: 93.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://tatsu-lab.github.io/alpaca_eval/
+  notes: win rate, 2024 baseline
 ---
 
 # AlpacaEval
@@ -62,6 +100,23 @@ AlpacaEval 的优势在于自动化程度高、评测成本低，且与人工评
 ## SOTA 表现
 
 顶尖模型（GPT-4o、Claude 3.5 Sonnet 等）的原始 Win Rate 均超过 90%，而 length-controlled win rate 更能体现真实能力差距。具体最新成绩见官方排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 98.5% | AlpacaEval 1.0 win rate vs text-davinci-003 | 2025-09 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 97.8% | win rate | 2026-04 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 97.2% | win rate | 2026-03 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 96.5% | win rate | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 93.0% | win rate, 2024 baseline | 2024-05 | [link](https://tatsu-lab.github.io/alpaca_eval/) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

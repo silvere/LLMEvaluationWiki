@@ -1,25 +1,64 @@
 ---
-title: "CommonsenseQA"
+title: CommonsenseQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [knowledge, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
 language: en
 year: 2019
-authors: ["Talmor et al."]
-arxiv_id: "1811.00937"
-official_url: "https://www.tau-nlp.org/commonsenseqa"
-license: "MIT"
+authors:
+- Talmor et al.
+arxiv_id: '1811.00937'
+official_url: https://www.tau-nlp.org/commonsenseqa
+license: MIT
 size: 12247
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 90.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: 7-shot accuracy
+- score: 88.4%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: 7-shot accuracy
+- score: 87.6%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: 7-shot accuracy
+- score: 86.8%
+  model: Qwen3.5
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://qwenlm.github.io
+  notes: 7-shot accuracy
+- score: 82.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: 7-shot accuracy, 2024 baseline
 ---
 
 # CommonsenseQA
@@ -60,6 +99,23 @@ CommonsenseQA 共约 12,247 道题，分为训练集（9,741）、验证集（1,
 ## SOTA 表现
 
 顶尖大型语言模型在 CommonsenseQA 上的准确率已超过 90%，接近人类基线（约 89%）。具体最新成绩见各模型官方技术报告及官方排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 90.2% | 7-shot accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 88.4% | 7-shot accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 87.6% | 7-shot accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[Qwen3.5]] | 🚫 no | 86.8% | 7-shot accuracy | 2026-03 | [link](https://qwenlm.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 82.5% | 7-shot accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

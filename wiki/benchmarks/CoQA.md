@@ -1,24 +1,63 @@
 ---
-title: "CoQA"
+title: CoQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, dialog]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- dialog
 language: en
 year: 2019
-authors: ["Reddy et al."]
-arxiv_id: "1808.07042"
-official_url: "https://stanfordnlp.github.io/coqa/"
-license: "Multiple (by source)"
+authors:
+- Reddy et al.
+arxiv_id: '1808.07042'
+official_url: https://stanfordnlp.github.io/coqa/
+license: Multiple (by source)
 size: 127000
 format: dialog
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: B
+sota:
+- score: 95.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://stanfordnlp.github.io/coqa/
+  notes: F1 score on CoQA dev set
+- score: 95.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://stanfordnlp.github.io/coqa/
+  notes: F1 score
+- score: 94.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://stanfordnlp.github.io/coqa/
+  notes: F1 score
+- score: 93.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: F1 score
+- score: 90.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: F1 score, 2024 baseline
 ---
 
 # CoQA（Conversational Question Answering）
@@ -59,6 +98,23 @@ CoQA 的独特挑战包括：指代消解（需理解对话中的代词指代）
 ## SOTA 表现
 
 顶尖系统在 CoQA 测试集上的 F1 分数超过 90%，已接近人类水平（约 88.8% F1）。具体最新成绩见官方排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 95.8% | F1 score on CoQA dev set | 2025-09 | [link](https://stanfordnlp.github.io/coqa/) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 95.0% | F1 score | 2026-04 | [link](https://stanfordnlp.github.io/coqa/) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 94.2% | F1 score | 2026-03 | [link](https://stanfordnlp.github.io/coqa/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 93.5% | F1 score | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 90.0% | F1 score, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

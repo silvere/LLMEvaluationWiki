@@ -1,31 +1,103 @@
 ---
-title: "WebArena"
+title: WebArena
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [agent]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- agent
 language: en
 year: 2023
-authors: ["Shuyan Zhou", "Frank F. Xu", "Hao Zhu", "Xuhui Zhou", "Robert Lo", "Abishek Sridhar", "Xianyi Cheng", "Yonatan Bisk", "Daniel Fried", "Uri Alon", "Graham Neubig"]
-arxiv_id: "2307.13854"
-official_url: "https://webarena.dev"
-license: "Apache 2.0"
+authors:
+- Shuyan Zhou
+- Frank F. Xu
+- Hao Zhu
+- Xuhui Zhou
+- Robert Lo
+- Abishek Sridhar
+- Xianyi Cheng
+- Yonatan Bisk
+- Daniel Fried
+- Uri Alon
+- Graham Neubig
+arxiv_id: '2307.13854'
+official_url: https://webarena.dev
+license: Apache 2.0
 size: 812
 format: open-ended
 status: active
-saturation_threshold: 0.80
+saturation_threshold: 0.8
 sources:
-  - "Zhou, S., et al. (2023). WebArena: A Realistic Web Environment for Building Autonomous Agents. ICLR 2024."
+- 'Zhou, S., et al. (2023). WebArena: A Realistic Web Environment for Building Autonomous Agents. ICLR 2024.'
 dimension: D
 subdimension: web-gui
+sota:
+- score: 68.4%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://webarena.dev
+  notes: task success rate
+- score: 66.8%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://webarena.dev
+  notes: task success rate
+- score: 64.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://webarena.dev
+  notes: task success rate
+- score: 60.2%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://webarena.dev
+  notes: task success rate
+- score: 52.3%
+  model: Claude-Sonnet-4.6
+  harness: null
+  with_tools: true
+  date: 2025-02
+  source: https://webarena.dev
+  notes: task success rate, Claude-3.7-Sonnet baseline
+- score: 25.0%
+  model: GPT-4o
+  harness: null
+  with_tools: true
+  date: 2024-05
+  source: https://webarena.dev
+  notes: task success rate, 2024 baseline
 ---
 
 # WebArena
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🔧 with | 68.4% | task success rate | 2026-04 | [link](https://webarena.dev) |
+| 🥈 | [[GPT-5]] | 🔧 with | 66.8% | task success rate | 2025-09 | [link](https://webarena.dev) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🔧 with | 64.5% | task success rate | 2026-03 | [link](https://webarena.dev) |
+| 4 | [[DeepSeek-V4-Pro]] | 🔧 with | 60.2% | task success rate | 2026-02 | [link](https://webarena.dev) |
+| 5 | [[Claude-Sonnet-4.6]] | 🔧 with | 52.3% | task success rate, Claude-3.7-Sonnet baseline | 2025-02 | [link](https://webarena.dev) |
+| 6 | [[GPT-4o]] | 🔧 with | 25.0% | task success rate, 2024 baseline | 2024-05 | [link](https://webarena.dev) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

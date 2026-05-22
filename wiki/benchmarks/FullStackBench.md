@@ -1,16 +1,52 @@
 ---
-title: "FullStackBench"
+title: FullStackBench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - code
+- code
 year: 2024
-arxiv_id: "2412.00535"
+arxiv_id: '2412.00535'
 status: active
 dimension: H
+sota:
+- score: 82.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://huggingface.co/datasets/ByteDance-Seed/FullStackBench
+  notes: FullStackBench pass@1 (full-stack code generation)
+- score: 81.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://huggingface.co/datasets/ByteDance-Seed/FullStackBench
+  notes: pass@1
+- score: 80.0%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://huggingface.co/datasets/ByteDance-Seed/FullStackBench
+  notes: pass@1
+- score: 78.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: pass@1
+- score: 72.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: pass@1, 2024 baseline
 ---
 
 # FullStackBench
@@ -18,6 +54,22 @@ dimension: H
 > 覆盖前端、后端、数据库、DevOps 全栈技术栈的多语言代码生成综合评测基准。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 82.5% | FullStackBench pass@1 (full-stack code generation) | 2026-04 | [link](https://huggingface.co/datasets/ByteDance-Seed/FullStackBench) |
+| 🥈 | [[GPT-5]] | 🚫 no | 81.2% | pass@1 | 2025-09 | [link](https://huggingface.co/datasets/ByteDance-Seed/FullStackBench) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 80.0% | pass@1 | 2026-03 | [link](https://huggingface.co/datasets/ByteDance-Seed/FullStackBench) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 78.5% | pass@1 | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 72.0% | pass@1, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

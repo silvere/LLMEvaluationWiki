@@ -8,12 +8,12 @@ last_verified: "2026-05-14"
 aliases:
   - MTEB
 domain:
-  - knowledge
+  - retrieval
 year: 2022
 arxiv_id: "2210.07316"
 status: active
-dimension: A
-subdimension: benchmark
+dimension: C
+subdimension: embedding-eval
 ---
 
 # MTEB

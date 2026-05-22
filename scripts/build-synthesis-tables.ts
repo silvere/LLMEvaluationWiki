@@ -92,6 +92,9 @@ function loadBenchmarks(): BenchRow[] {
     ...glob("wiki/tools/**/*.md", { cwd: ROOT, absolute: true }),
     ...glob("wiki/harnesses/*.md", { cwd: ROOT, absolute: true }),
     ...glob("wiki/leaderboards/*.md", { cwd: ROOT, absolute: true }),
+    ...glob("wiki/papers/*.md", { cwd: ROOT, absolute: true }),
+    ...glob("wiki/industry/*.md", { cwd: ROOT, absolute: true }),
+    ...glob("wiki/concepts/*.md", { cwd: ROOT, absolute: true }),
   ];
   const rows: BenchRow[] = [];
   for (const fp of files) {
@@ -141,6 +144,8 @@ const DIMENSION_TITLES: Record<string, string> = {
   I: "I 维度 安全 / 对齐 / Red-team",
   J: "J 维度 中文评测",
   K: "K 维度 Judge 校准 / Meta-evaluation",
+  L: "L 维度 评测方法论 / Meta-eval Theory",
+  dom: "dom 维度 领域专项 / Domain-specific",
   "long-ctx": "长上下文（横切维度）",
   obs: "Observability / 商业评测平台（横切维度）",
   infra: "评测基础设施（横切维度）",

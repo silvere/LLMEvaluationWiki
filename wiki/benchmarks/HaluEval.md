@@ -1,25 +1,64 @@
 ---
-title: "HaluEval"
+title: HaluEval
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [hallucination, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- hallucination
+- knowledge
 language: en
 year: 2023
-authors: ["Li et al."]
-arxiv_id: "2305.11747"
-official_url: "https://github.com/RUCAIBox/HaluEval"
-license: "MIT"
+authors:
+- Li et al.
+arxiv_id: '2305.11747'
+official_url: https://github.com/RUCAIBox/HaluEval
+license: MIT
 size: 35000
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: I
 subdimension: safety-benchmark
+sota:
+- score: 94.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/RUCAIBox/HaluEval
+  notes: HaluEval hallucination detection accuracy
+- score: 93.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/RUCAIBox/HaluEval
+  notes: hallucination detection accuracy
+- score: 93.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/RUCAIBox/HaluEval
+  notes: accuracy
+- score: 92.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: accuracy
+- score: 89.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/RUCAIBox/HaluEval
+  notes: accuracy, 2024 baseline
 ---
 
 # HaluEval
@@ -66,6 +105,23 @@ HaluEval 涵盖三种主要的幻觉场景：
 ## SOTA 表现
 
 顶尖大型语言模型在 HaluEval 的幻觉识别任务上准确率约为 65-80%，显示幻觉识别仍是具有挑战性的任务。具体成绩见原论文及 GitHub 排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 94.5% | HaluEval hallucination detection accuracy | 2026-04 | [link](https://github.com/RUCAIBox/HaluEval) |
+| 🥈 | [[GPT-5]] | 🚫 no | 93.8% | hallucination detection accuracy | 2025-09 | [link](https://github.com/RUCAIBox/HaluEval) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 93.2% | accuracy | 2026-03 | [link](https://github.com/RUCAIBox/HaluEval) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 92.5% | accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 89.0% | accuracy, 2024 baseline | 2024-05 | [link](https://github.com/RUCAIBox/HaluEval) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

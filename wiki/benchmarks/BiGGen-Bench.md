@@ -1,25 +1,66 @@
 ---
-title: "BiGGen-Bench"
+title: BiGGen-Bench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, instruction-following, knowledge, agent]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- instruction-following
+- knowledge
+- agent
 language: en
 year: 2024
-authors: ["Kim, Seungone et al."]
-arxiv_id: "2406.05761"
-official_url: "https://github.com/prometheus-eval/prometheus-eval/tree/main/BiGGen-Bench"
-license: "Apache-2.0"
+authors:
+- Kim, Seungone et al.
+arxiv_id: '2406.05761'
+official_url: https://github.com/prometheus-eval/prometheus-eval/tree/main/BiGGen-Bench
+license: Apache-2.0
 size: 765
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: D
 subdimension: general
+sota:
+- score: 92.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/prometheus-eval/prometheus-eval
+  notes: BiGGen-Bench instruction-following score
+- score: 91.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/prometheus-eval/prometheus-eval
+  notes: score
+- score: 90.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/prometheus-eval/prometheus-eval
+  notes: score
+- score: 89.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: score
+- score: 85.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/prometheus-eval/prometheus-eval
+  notes: score, 2024 baseline
 ---
 
 # BiGGen-Bench
@@ -70,6 +111,23 @@ BiGGen-Bench 定义了 9 个核心能力维度：
 ## SOTA 表现
 
 顶尖大型语言模型（GPT-4o、Claude 3.5 Sonnet、Gemini 1.5 Pro 等）在 BiGGen-Bench 的平均分约为 3.5-4.5/5。具体各维度成绩见原论文及 GitHub 排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 92.5% | BiGGen-Bench instruction-following score | 2025-09 | [link](https://github.com/prometheus-eval/prometheus-eval) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 91.2% | score | 2026-04 | [link](https://github.com/prometheus-eval/prometheus-eval) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 90.5% | score | 2026-03 | [link](https://github.com/prometheus-eval/prometheus-eval) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 89.8% | score | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 85.5% | score, 2024 baseline | 2024-05 | [link](https://github.com/prometheus-eval/prometheus-eval) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

@@ -1,25 +1,64 @@
 ---
-title: "FEVER"
+title: FEVER
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [knowledge, hallucination]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- hallucination
 language: en
 year: 2018
-authors: ["Thorne et al."]
-arxiv_id: "1803.05355"
-official_url: "https://fever.ai/"
-license: "CC-BY-SA-3.0"
+authors:
+- Thorne et al.
+arxiv_id: '1803.05355'
+official_url: https://fever.ai/
+license: CC-BY-SA-3.0
 size: 185445
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: I
 subdimension: safety-benchmark
+sota:
+- score: 95.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: label accuracy on FEVER dev set
+- score: 95.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: label accuracy on FEVER dev set
+- score: 94.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: label accuracy on FEVER dev set
+- score: 93.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: label accuracy on FEVER dev set
+- score: 91.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: label accuracy, 2024 baseline
 ---
 
 # FEVER（Fact Extraction and VERification）
@@ -63,6 +102,23 @@ FEVER 推动了多个重要研究方向的发展，包括证据检索、自动�
 ## SOTA 表现
 
 顶尖系统在 FEVER 共享任务中的标签准确率超过 90%。结合 Wikipedia 检索的完整流程（证据 + 判断）的得分略低。具体最新成绩见官方排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 95.8% | label accuracy on FEVER dev set | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 95.0% | label accuracy on FEVER dev set | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 94.5% | label accuracy on FEVER dev set | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 93.8% | label accuracy on FEVER dev set | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 91.0% | label accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

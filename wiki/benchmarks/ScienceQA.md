@@ -1,30 +1,93 @@
 ---
-title: "ScienceQA"
+title: ScienceQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
+- knowledge
 language: en
 year: 2022
-authors: ["Pan Lu", "Swaroop Mishra", "Tony Xia", "Liang Qiu", "Kai-Wei Chang", "Song-Chun Zhu", "Oyvind Tafjord", "Peter Clark", "Ashwin Kalyan"]
-arxiv_id: "2209.09513"
-official_url: "https://scienceqa.github.io"
-license: ""
+authors:
+- Pan Lu
+- Swaroop Mishra
+- Tony Xia
+- Liang Qiu
+- Kai-Wei Chang
+- Song-Chun Zhu
+- Oyvind Tafjord
+- Peter Clark
+- Ashwin Kalyan
+arxiv_id: '2209.09513'
+official_url: https://scienceqa.github.io
+license: ''
 size: 21208
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2209.09513"
+- https://arxiv.org/abs/2209.09513
 dimension: E
+sota:
+- score: 99.0%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://scienceqa.github.io
+  notes: accuracy on ScienceQA multimodal MCQ
+- score: 98.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://scienceqa.github.io
+  notes: accuracy
+- score: 98.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://scienceqa.github.io
+  notes: accuracy
+- score: 97.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://scienceqa.github.io
+  notes: accuracy
+- score: 96.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://scienceqa.github.io
+  notes: accuracy, 2024 baseline
 ---
 
 # ScienceQA：多学科科学视觉问答基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 99.0% | accuracy on ScienceQA multimodal MCQ | 2025-09 | [link](https://scienceqa.github.io) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 98.5% | accuracy | 2026-04 | [link](https://scienceqa.github.io) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 98.2% | accuracy | 2026-03 | [link](https://scienceqa.github.io) |
+| 4 | [[Qwen3.6]] | 🚫 no | 97.8% | accuracy | 2026-04 | [link](https://scienceqa.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 96.5% | accuracy, 2024 baseline | 2024-05 | [link](https://scienceqa.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

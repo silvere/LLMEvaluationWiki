@@ -1,16 +1,52 @@
 ---
-title: "VBench"
+title: VBench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
+- multimodal
 year: 2023
-arxiv_id: "2311.17982"
+arxiv_id: '2311.17982'
 status: active
 dimension: F
+sota:
+- score: 86.8%
+  model: Kling-2.1
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://vchitect.github.io/VBench-project/
+  notes: VBench overall quality score (T2V)
+- score: 85.5%
+  model: Sora
+  harness: null
+  with_tools: false
+  date: 2024-04
+  source: https://vchitect.github.io/VBench-project/
+  notes: VBench overall score (OpenAI Sora)
+- score: 84.2%
+  model: Wan-Video-2.1
+  harness: null
+  with_tools: false
+  date: 2025-12
+  source: https://vchitect.github.io/VBench-project/
+  notes: VBench overall (Alibaba)
+- score: 82.5%
+  model: CogVideoX-5B
+  harness: null
+  with_tools: false
+  date: 2024-08
+  source: https://vchitect.github.io/VBench-project/
+  notes: VBench overall (Zhipu)
+- score: 80.8%
+  model: HunyuanVideo
+  harness: null
+  with_tools: false
+  date: 2024-12
+  source: https://vchitect.github.io/VBench-project/
+  notes: VBench overall (Tencent)
 ---
 
 # VBench
@@ -18,6 +54,22 @@ dimension: F
 > 视频生成模型综合评测基准，将视频质量分解为 16 个独立可评测的细粒度维度。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Kling-2.1]] | 🚫 no | 86.8% | VBench overall quality score (T2V) | 2026-03 | [link](https://vchitect.github.io/VBench-project/) |
+| 🥈 | [[Sora]] | 🚫 no | 85.5% | VBench overall score (OpenAI Sora) | 2024-04 | [link](https://vchitect.github.io/VBench-project/) |
+| 🥉 | [[Wan-Video-2.1]] | 🚫 no | 84.2% | VBench overall (Alibaba) | 2025-12 | [link](https://vchitect.github.io/VBench-project/) |
+| 4 | [[CogVideoX-5B]] | 🚫 no | 82.5% | VBench overall (Zhipu) | 2024-08 | [link](https://vchitect.github.io/VBench-project/) |
+| 5 | [[HunyuanVideo]] | 🚫 no | 80.8% | VBench overall (Tencent) | 2024-12 | [link](https://vchitect.github.io/VBench-project/) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

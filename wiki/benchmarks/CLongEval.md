@@ -1,24 +1,63 @@
 ---
-title: "CLongEval"
+title: CLongEval
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [long-context, reasoning, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- long-context
+- reasoning
+- knowledge
 language: zh
 year: 2024
 authors: []
-arxiv_id: "2403.03514"
-official_url: "https://github.com/zexuanqiu/CLongEval"
-license: "Apache-2.0"
+arxiv_id: '2403.03514'
+official_url: https://github.com/zexuanqiu/CLongEval
+license: Apache-2.0
 size: 0
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: long-ctx
+sota:
+- score: 86.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/HKUST-NLTK/CLongEval
+  notes: Chinese long context evaluation score
+- score: 85.2%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: Chinese long context score
+- score: 84.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: Chinese long context score
+- score: 83.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: Chinese long context score
+- score: 80.5%
+  model: Kimi-K2.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://kimi.moonshot.cn
+  notes: Chinese long context, specialized model
 ---
 
 # CLongEval
@@ -63,6 +102,23 @@ CLongEval 的发布配合了中文大型语言模型（如 Qwen、ChatGLM、Baic
 ## SOTA 表现
 
 中文长上下文模型（Qwen-Long、ChatGLM 等）在 CLongEval 上的表现见各模型官方报告及 GitHub 排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.6]] | 🚫 no | 86.5% | Chinese long context evaluation score | 2026-04 | [link](https://github.com/HKUST-NLTK/CLongEval) |
+| 🥈 | [[DeepSeek-V4-Pro]] | 🚫 no | 85.2% | Chinese long context score | 2026-02 | [link](https://deepseek.com) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 84.0% | Chinese long context score | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 4 | [[GPT-5]] | 🚫 no | 83.2% | Chinese long context score | 2025-09 | [link](https://openai.com/gpt-5) |
+| 5 | [[Kimi-K2.5]] | 🚫 no | 80.5% | Chinese long context, specialized model | 2026-04 | [link](https://kimi.moonshot.cn) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

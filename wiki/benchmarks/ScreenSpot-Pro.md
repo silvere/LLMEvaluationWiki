@@ -1,18 +1,54 @@
 ---
-title: "ScreenSpot Pro"
+title: ScreenSpot Pro
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - agent
-  - multimodal
+- agent
+- multimodal
 year: 2025
-arxiv_id: "2504.07981"
+arxiv_id: '2504.07981'
 status: active
 dimension: D
 subdimension: general
+sota:
+- score: 52.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/njucckevin/ScreenSpot-Pro
+  notes: ScreenSpot-Pro GUI grounding accuracy (professional UI)
+- score: 50.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/njucckevin/ScreenSpot-Pro
+  notes: accuracy
+- score: 48.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/njucckevin/ScreenSpot-Pro
+  notes: accuracy
+- score: 46.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/njucckevin/ScreenSpot-Pro
+  notes: accuracy
+- score: 18.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/njucckevin/ScreenSpot-Pro
+  notes: accuracy, 2024 baseline
 ---
 
 # ScreenSpot Pro
@@ -20,6 +56,22 @@ subdimension: general
 > 面向专业软件界面的精细粒度屏幕元素定位评测基准。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 52.8% | ScreenSpot-Pro GUI grounding accuracy (professional UI) | 2026-04 | [link](https://github.com/njucckevin/ScreenSpot-Pro) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 50.5% | accuracy | 2026-03 | [link](https://github.com/njucckevin/ScreenSpot-Pro) |
+| 🥉 | [[GPT-5]] | 🚫 no | 48.2% | accuracy | 2025-09 | [link](https://github.com/njucckevin/ScreenSpot-Pro) |
+| 4 | [[Qwen3.6]] | 🚫 no | 46.0% | accuracy | 2026-04 | [link](https://github.com/njucckevin/ScreenSpot-Pro) |
+| 5 | [[GPT-4o]] | 🚫 no | 18.5% | accuracy, 2024 baseline | 2024-05 | [link](https://github.com/njucckevin/ScreenSpot-Pro) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

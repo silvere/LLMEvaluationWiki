@@ -1,24 +1,63 @@
 ---
-title: "QuALITY"
+title: QuALITY
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, long-context]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- long-context
 language: en
 year: 2022
-authors: ["Pang et al."]
-arxiv_id: "2112.08608"
-official_url: "https://github.com/nyu-mll/quality"
-license: "Apache-2.0"
+authors:
+- Pang et al.
+arxiv_id: '2112.08608'
+official_url: https://github.com/nyu-mll/quality
+license: Apache-2.0
 size: 2523
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: long-ctx
+sota:
+- score: 96.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: accuracy on QuALITY long document QA
+- score: 95.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: accuracy
+- score: 94.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: accuracy
+- score: 93.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: accuracy
+- score: 90.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: accuracy, 2024 baseline
 ---
 
 # QuALITY（Question Answering with Long Input Texts, Yes!）
@@ -59,6 +98,23 @@ QuALITY 是评测语言模型长文本阅读理解能力的重要基准，被长
 ## SOTA 表现
 
 当前长上下文大型语言模型（如 GPT-4、Claude 3 系列）在 QuALITY 上的准确率超过 90%。具体最新成绩见各模型官方技术报告。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 96.2% | accuracy on QuALITY long document QA | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 95.5% | accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 94.8% | accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 93.5% | accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 90.0% | accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

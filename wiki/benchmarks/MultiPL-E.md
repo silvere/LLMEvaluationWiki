@@ -1,16 +1,52 @@
 ---
-title: "MultiPL-E"
+title: MultiPL-E
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - code
+- code
 year: 2022
-arxiv_id: "2208.08227"
+arxiv_id: '2208.08227'
 status: active
 dimension: H
+sota:
+- score: 87.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://huggingface.co/datasets/nuprl/MultiPL-E
+  notes: average pass@1 across 18 languages
+- score: 86.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: average pass@1 across 18 languages
+- score: 84.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: average pass@1 across 18 languages
+- score: 83.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: average pass@1 across 18 languages
+- score: 78.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: average pass@1, 2024 baseline
 ---
 
 # MultiPL-E
@@ -18,6 +54,22 @@ dimension: H
 > 将 HumanEval 和 MBPP 的题目机械转译为 18 种编程语言的多语言代码生成基准，用于评测模型的跨语言代码泛化能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 87.5% | average pass@1 across 18 languages | 2026-04 | [link](https://huggingface.co/datasets/nuprl/MultiPL-E) |
+| 🥈 | [[GPT-5]] | 🚫 no | 86.2% | average pass@1 across 18 languages | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 84.8% | average pass@1 across 18 languages | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 83.0% | average pass@1 across 18 languages | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 78.5% | average pass@1, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

@@ -65,12 +65,14 @@ for (const f of files) {
   const text = readFileSync(f, "utf-8");
   const m = text.match(/^---\n([\s\S]*?)\n---/);
   if (!m) continue;
-  let fm: { sota?: SotaEntry[] };
-  try { fm = (yaml.load(m[1]) as { sota?: SotaEntry[] }) ?? {}; } catch { continue; }
+  let fm: { sota?: SotaEntry[]; dimension?: string };
+  try { fm = (yaml.load(m[1]) as { sota?: SotaEntry[]; dimension?: string }) ?? {}; } catch { continue; }
   const sota = Array.isArray(fm.sota) ? fm.sota : [];
   if (sota.length === 0) continue;
   totalWithSota++;
   const bench = f.split("/").pop()!.replace(/\.md$/, "");
+  // dimension F (visual gen) and G (audio gen) use T2V/T2I/audio models, not chat LLMs
+  const skipFrontier = fm.dimension === "F" || fm.dimension === "G";
   const issues: string[] = [];
 
   const hasSource = sota.some((e) => e.source);
@@ -90,10 +92,12 @@ for (const f of files) {
     if (out > 0) { issues.push("order_anomaly"); aggregate.order_anomaly++; }
   }
 
-  // frontier 覆盖
-  const models = new Set(sota.map((e) => e.model ?? ""));
-  const hit = [...models].filter((x) => FRONTIER_2026.has(x)).length;
-  if (hit < 2) { issues.push(`frontier_${hit}/17`); aggregate.frontier_missing++; }
+  // frontier 覆盖（dimension F/G 为视频/音频生成模型，跳过 LLM frontier 检查）
+  if (!skipFrontier) {
+    const models = new Set(sota.map((e) => e.model ?? ""));
+    const hit = [...models].filter((x) => FRONTIER_2026.has(x)).length;
+    if (hit < 2) { issues.push(`frontier_${hit}/17`); aggregate.frontier_missing++; }
+  }
 
   if (issues.length > 0) audits.push({ benchmark: bench, sotaCount: sota.length, issues });
 }

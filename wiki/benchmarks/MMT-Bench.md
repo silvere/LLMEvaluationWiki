@@ -1,18 +1,54 @@
 ---
-title: "MMT-Bench"
+title: MMT-Bench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - knowledge
-  - reasoning
+- multimodal
+- knowledge
+- reasoning
 year: 2024
-arxiv_id: "2404.16006"
+arxiv_id: '2404.16006'
 status: active
 dimension: E
+sota:
+- score: 77.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://mmt-bench.github.io
+  notes: MMT-Bench accuracy (300+ subtasks)
+- score: 76.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mmt-bench.github.io
+  notes: accuracy
+- score: 75.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://mmt-bench.github.io
+  notes: accuracy
+- score: 74.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mmt-bench.github.io
+  notes: accuracy
+- score: 63.4%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://mmt-bench.github.io
+  notes: accuracy, 2024 baseline
 ---
 
 # MMT-Bench
@@ -20,6 +56,22 @@ dimension: E
 > 覆盖 162 个子任务的大规模多模态多任务评测基准，通过广泛的任务多样性衡量通用多模态智能。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 77.5% | MMT-Bench accuracy (300+ subtasks) | 2026-03 | [link](https://mmt-bench.github.io) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 76.2% | accuracy | 2026-04 | [link](https://mmt-bench.github.io) |
+| 🥉 | [[GPT-5]] | 🚫 no | 75.5% | accuracy | 2025-09 | [link](https://mmt-bench.github.io) |
+| 4 | [[Qwen3.6]] | 🚫 no | 74.8% | accuracy | 2026-04 | [link](https://mmt-bench.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 63.4% | accuracy, 2024 baseline | 2024-05 | [link](https://mmt-bench.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

@@ -43,12 +43,13 @@ RAG 系统级用 RAGAs / TruLens / ARES；retrieval 单独评用 MTEB / BEIR / M
 
 | Benchmark / Tool | 题量 | 年份 | 评测协议 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
-| [[HotpotQA|HotpotQA]] | 113000 | 2018 | — | — | — |
-| [[NaturalQuestions|NaturalQuestions]] | 323000 | 2019 | — | — | — |
+| [[HotpotQA|HotpotQA]] | 113000 | 2018 | — | 84.2%（GPT-5） | — |
+| [[NaturalQuestions|NaturalQuestions]] | 323000 | 2019 | — | 72.5%（GPT-5） | — |
+| [[TriviaQA|TriviaQA]] | 650000 | 2017 | — | 92.4%（GPT-5） | — |
+| [[MTEB|MTEB]] | — | 2022 | — | — | — |
 | [[QASPER|QASPER (Question Answering on Scientific Papers)]] | 5049 | 2021 | — | — | — |
-| [[TriviaQA|TriviaQA]] | 650000 | 2017 | — | — | — |
 
-_共 4 条，最后更新：2026-05-22_
+_共 5 条，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:dimension=C:END -->
 

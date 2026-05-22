@@ -1,27 +1,65 @@
 ---
-title: "AMC23"
+title: AMC23
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [math, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- math
+- reasoning
 language: en
 year: 2023
 authors: []
-arxiv_id: ""
-official_url: "https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions"
-license: ""
+arxiv_id: ''
+official_url: https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions
+license: ''
 size: 60
 format: multiple-choice
 status: active
 saturation_threshold: 0.95
 sources:
-  - "https://artofproblemsolving.com/wiki/index.php/2023_AMC_10A_Problems"
-  - "https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems"
+- https://artofproblemsolving.com/wiki/index.php/2023_AMC_10A_Problems
+- https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems
 dimension: A
 subdimension: benchmark
+sota:
+- score: 88.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: AMC 2023 accuracy (American Math Competition)
+- score: 86.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: AMC 2023 accuracy
+- score: 85.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: AMC 2023 accuracy
+- score: 84.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: AMC 2023 accuracy
+- score: 82.8%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: AMC 2023 accuracy
 ---
 
 # AMC23
@@ -66,6 +104,23 @@ AMC成绩达到一定分数线可晋级AIME，AMC23因此作为AIME难度的前�
 | GPT-4（2023） | ~20-24/30 |
 
 注：顶级模型在AMC级别已接近饱和，区分度主要体现在后半部分难题。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 88.5% | AMC 2023 accuracy (American Math Competition) | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 86.2% | AMC 2023 accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[DeepSeek-V4-Pro]] | 🚫 no | 85.0% | AMC 2023 accuracy | 2026-02 | [link](https://deepseek.com) |
+| 4 | [[Gemini-3.1-Pro]] | 🚫 no | 84.5% | AMC 2023 accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 5 | [[Qwen3.6]] | 🚫 no | 82.8% | AMC 2023 accuracy | 2026-04 | [link](https://qwenlm.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

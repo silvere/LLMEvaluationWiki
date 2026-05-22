@@ -1,26 +1,90 @@
 ---
-title: "CodeContests"
+title: CodeContests
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
+- reasoning
 language: en
 year: 2022
-authors: ["Yujia Li", "David Choi", "Junyoung Chung", "Nate Kushman", "Julian Schrittwieser", "Rémi Leblond", "Tom Eccles", "James Keeling", "Felix Gimeno", "Agustin Dal Lago", "Thomas Hubert", "Peter Choy", "Cyprien de Masson d'Autume", "Igor Babuschkin", "Xinyun Chen", "Po-Sen Huang", "Johannes Welbl", "Sven Gowal", "Alexey Cherepanov", "James Molloy", "Daniel J. Mankowitz", "Esme Sutherland Robson", "Pushmeet Kohli", "Nando de Freitas", "Koray Kavukcuoglu", "Oriol Vinyals"]
-arxiv_id: "2203.07814"
-official_url: "https://github.com/google-deepmind/code_contests"
-license: ""
+authors:
+- Yujia Li
+- David Choi
+- Junyoung Chung
+- Nate Kushman
+- Julian Schrittwieser
+- Rémi Leblond
+- Tom Eccles
+- James Keeling
+- Felix Gimeno
+- Agustin Dal Lago
+- Thomas Hubert
+- Peter Choy
+- Cyprien de Masson d'Autume
+- Igor Babuschkin
+- Xinyun Chen
+- Po-Sen Huang
+- Johannes Welbl
+- Sven Gowal
+- Alexey Cherepanov
+- James Molloy
+- Daniel J. Mankowitz
+- Esme Sutherland Robson
+- Pushmeet Kohli
+- Nando de Freitas
+- Koray Kavukcuoglu
+- Oriol Vinyals
+arxiv_id: '2203.07814'
+official_url: https://github.com/google-deepmind/code_contests
+license: ''
 size: 13610
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2203.07814"
-  - "https://github.com/google-deepmind/code_contests"
+- https://arxiv.org/abs/2203.07814
+- https://github.com/google-deepmind/code_contests
 dimension: H
+sota:
+- score: 62.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/google-deepmind/code_contests
+  notes: CodeContests solve rate (competitive programming)
+- score: 60.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/google-deepmind/code_contests
+  notes: solve rate
+- score: 58.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: solve rate
+- score: 57.0%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: solve rate
+- score: 45.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: solve rate, 2024 baseline
 ---
 
 # CodeContests
@@ -64,6 +128,23 @@ CodeContests由DeepMind的Li等人于2022年随AlphaCode论文一同发布，是
 | GPT-4（代码生成） | 在Div.2题目上有限通过 |
 
 注：竞赛级别题目对当前大多数通用大模型仍极具挑战。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 62.5% | CodeContests solve rate (competitive programming) | 2025-09 | [link](https://github.com/google-deepmind/code_contests) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 60.2% | solve rate | 2026-04 | [link](https://github.com/google-deepmind/code_contests) |
+| 🥉 | [[DeepSeek-V4-Pro]] | 🚫 no | 58.5% | solve rate | 2026-02 | [link](https://deepseek.com) |
+| 4 | [[Gemini-3.1-Pro]] | 🚫 no | 57.0% | solve rate | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 5 | [[GPT-4o]] | 🚫 no | 45.0% | solve rate, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

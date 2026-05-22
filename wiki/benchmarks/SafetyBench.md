@@ -1,31 +1,94 @@
 ---
-title: "SafetyBench"
+title: SafetyBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [safety]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- safety
 language: en
 year: 2023
-authors: ["Zhexin Zhang", "Leqi Lei", "Lindong Wu", "Rui Sun", "Yongkang Huang", "Chong Long", "Xiao Liu", "Xuanyu Lei", "Jie Tang", "Minlie Huang"]
-arxiv_id: ""
-official_url: "https://github.com/thu-coai/SafetyBench"
-license: "Apache 2.0"
+authors:
+- Zhexin Zhang
+- Leqi Lei
+- Lindong Wu
+- Rui Sun
+- Yongkang Huang
+- Chong Long
+- Xiao Liu
+- Xuanyu Lei
+- Jie Tang
+- Minlie Huang
+arxiv_id: ''
+official_url: https://github.com/thu-coai/SafetyBench
+license: Apache 2.0
 size: 11435
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2309.07045"
+- https://arxiv.org/abs/2309.07045
 dimension: I
 subdimension: safety-benchmark
+sota:
+- score: 96.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://llmbench.ai/safety
+  notes: Chinese safety benchmark MCQ accuracy
+- score: 95.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://llmbench.ai/safety
+  notes: accuracy
+- score: 95.2%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: accuracy
+- score: 94.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://llmbench.ai/safety
+  notes: accuracy
+- score: 91.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://llmbench.ai/safety
+  notes: accuracy, 2024 baseline
 ---
 
 # SafetyBench：中英双语安全能力综合评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 96.5% | Chinese safety benchmark MCQ accuracy | 2026-04 | [link](https://llmbench.ai/safety) |
+| 🥈 | [[GPT-5]] | 🚫 no | 95.8% | accuracy | 2025-09 | [link](https://llmbench.ai/safety) |
+| 🥉 | [[Qwen3.6]] | 🚫 no | 95.2% | accuracy | 2026-04 | [link](https://qwenlm.github.io) |
+| 4 | [[Gemini-3.1-Pro]] | 🚫 no | 94.5% | accuracy | 2026-03 | [link](https://llmbench.ai/safety) |
+| 5 | [[GPT-4o]] | 🚫 no | 91.0% | accuracy, 2024 baseline | 2024-05 | [link](https://llmbench.ai/safety) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

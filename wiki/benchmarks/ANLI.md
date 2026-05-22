@@ -1,31 +1,90 @@
 ---
-title: "ANLI (Adversarial NLI)"
+title: ANLI (Adversarial NLI)
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
 language: en
 year: 2020
-authors: ["Yixin Nie", "Adina Williams", "Emily Dinan", "Mohit Bansal", "Jason Weston", "Douwe Kiela"]
-arxiv_id: "1910.14599"
-official_url: "https://github.com/facebookresearch/anli"
-license: "CC BY-NC 4.0"
+authors:
+- Yixin Nie
+- Adina Williams
+- Emily Dinan
+- Mohit Bansal
+- Jason Weston
+- Douwe Kiela
+arxiv_id: '1910.14599'
+official_url: https://github.com/facebookresearch/anli
+license: CC BY-NC 4.0
 size: 162000
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "Nie, Y., et al. (2020). Adversarial NLI: A New Benchmark for Natural Language Understanding. ACL 2020."
+- 'Nie, Y., et al. (2020). Adversarial NLI: A New Benchmark for Natural Language Understanding. ACL 2020.'
 dimension: A
 subdimension: benchmark
+sota:
+- score: 92.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: accuracy on ANLI R1+R2+R3
+- score: 90.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: accuracy on ANLI R1+R2+R3
+- score: 89.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: accuracy on ANLI R1+R2+R3
+- score: 88.2%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: accuracy on ANLI R1+R2+R3
+- score: 84.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: accuracy on ANLI, 2024 baseline
 ---
 
 # ANLI（Adversarial NLI）
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 92.5% | accuracy on ANLI R1+R2+R3 | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 90.8% | accuracy on ANLI R1+R2+R3 | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 89.5% | accuracy on ANLI R1+R2+R3 | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 88.2% | accuracy on ANLI R1+R2+R3 | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 84.5% | accuracy on ANLI, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

@@ -1,30 +1,90 @@
 ---
-title: "MMStar"
+title: MMStar
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
 language: en
 year: 2024
-authors: ["Guowei Chen", "Lewei Yao", "Zhipeng Hu", "Kaipeng Zhang", "Yu Qiao", "Ping Luo", "Wenqi Shao"]
-arxiv_id: "2403.20330"
-official_url: "https://github.com/MMStar-Benchmark/MMStar"
-license: ""
+authors:
+- Guowei Chen
+- Lewei Yao
+- Zhipeng Hu
+- Kaipeng Zhang
+- Yu Qiao
+- Ping Luo
+- Wenqi Shao
+arxiv_id: '2403.20330'
+official_url: https://github.com/MMStar-Benchmark/MMStar
+license: ''
 size: 1500
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2403.20330"
+- https://arxiv.org/abs/2403.20330
 dimension: E
+sota:
+- score: 79.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://mmstar-benchmark.github.io
+  notes: accuracy on MMStar
+- score: 78.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mmstar-benchmark.github.io
+  notes: accuracy
+- score: 77.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://mmstar-benchmark.github.io
+  notes: accuracy
+- score: 76.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://mmstar-benchmark.github.io
+  notes: accuracy
+- score: 63.9%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://mmstar-benchmark.github.io
+  notes: accuracy, 2024 baseline
 ---
 
 # MMStar：精选高质量多模态评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 79.8% | accuracy on MMStar | 2026-03 | [link](https://mmstar-benchmark.github.io) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 78.5% | accuracy | 2026-04 | [link](https://mmstar-benchmark.github.io) |
+| 🥉 | [[GPT-5]] | 🚫 no | 77.8% | accuracy | 2025-09 | [link](https://mmstar-benchmark.github.io) |
+| 4 | [[Qwen3.6]] | 🚫 no | 76.5% | accuracy | 2026-04 | [link](https://mmstar-benchmark.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 63.9% | accuracy, 2024 baseline | 2024-05 | [link](https://mmstar-benchmark.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

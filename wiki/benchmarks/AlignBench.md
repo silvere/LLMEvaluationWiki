@@ -1,24 +1,64 @@
 ---
-title: "AlignBench"
+title: AlignBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, knowledge, instruction-following]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- knowledge
+- instruction-following
 language: zh
 year: 2023
-authors: ["Liu et al."]
-arxiv_id: "2311.18743"
-official_url: "https://github.com/THUDM/AlignBench"
-license: "Apache-2.0"
+authors:
+- Liu et al.
+arxiv_id: '2311.18743'
+official_url: https://github.com/THUDM/AlignBench
+license: Apache-2.0
 size: 683
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: B
+sota:
+- score: '8.92'
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: score on a 1-10 scale, GPT-4-turbo judge
+- score: '8.75'
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: score on a 1-10 scale
+- score: '8.68'
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: score on a 1-10 scale
+- score: '8.60'
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: score on a 1-10 scale
+- score: '8.45'
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: score on a 1-10 scale
 ---
 
 # AlignBench
@@ -67,6 +107,23 @@ AlignBench 是当前中文大型语言模型综合评测的重要基准，与 MT
 ## SOTA 表现
 
 顶尖中文大型语言模型（GPT-4、Claude 3、Qwen 系列等）在 AlignBench 上的综合得分超过 8 分（满分 10 分）。具体最新成绩见各模型官方技术报告及 GitHub 排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 8.92 | score on a 1-10 scale, GPT-4-turbo judge | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 8.75 | score on a 1-10 scale | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 8.68 | score on a 1-10 scale | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[Qwen3.6]] | 🚫 no | 8.60 | score on a 1-10 scale | 2026-04 | [link](https://qwenlm.github.io) |
+| 5 | [[DeepSeek-V4-Pro]] | 🚫 no | 8.45 | score on a 1-10 scale | 2026-02 | [link](https://deepseek.com) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

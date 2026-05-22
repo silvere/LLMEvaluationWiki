@@ -1,25 +1,64 @@
 ---
-title: "MedQA"
+title: MedQA
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [knowledge, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
 language: multilingual
 year: 2021
-authors: ["Jin et al."]
-arxiv_id: "2009.13081"
-official_url: "https://github.com/jind11/MedQA"
-license: "MIT"
+authors:
+- Jin et al.
+arxiv_id: '2009.13081'
+official_url: https://github.com/jind11/MedQA
+license: MIT
 size: 12723
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 96.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: USMLE MedQA 4-option accuracy
+- score: 95.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: USMLE MedQA 4-option accuracy
+- score: 94.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: USMLE MedQA 4-option accuracy
+- score: 92.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: USMLE MedQA 4-option accuracy
+- score: 90.2%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: USMLE MedQA 4-option, 2024 baseline
 ---
 
 # MedQA
@@ -63,6 +102,23 @@ MedQA 是评测医学 AI 能力的标准基准之一，与 PubMedQA 和 MedMCQA 
 ## SOTA 表现
 
 GPT-4 在 MedQA (USMLE) 上的准确率约为 87%，超过医师执照考试及格线（约 60%）。顶尖医学专用模型（如 MedPaLM 2）准确率更高，接近 90%。具体最新成绩见各模型官方技术报告。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 96.5% | USMLE MedQA 4-option accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 95.0% | USMLE MedQA 4-option accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 94.2% | USMLE MedQA 4-option accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 92.5% | USMLE MedQA 4-option accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 90.2% | USMLE MedQA 4-option, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

@@ -12,6 +12,8 @@ aliases:
   - Claude-3-Sonnet
   - Claude-3-Haiku
   - Claude-3.5-Haiku
+  - Claude-2
+  - Claude-1
 domain:
   - entity
 ---

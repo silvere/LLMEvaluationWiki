@@ -1,24 +1,63 @@
 ---
-title: "SCROLLS"
+title: SCROLLS
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [long-context, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- long-context
+- reasoning
 language: en
 year: 2022
-authors: ["Shaham et al."]
-arxiv_id: "2201.03533"
-official_url: "https://www.scrolls-benchmark.com/"
-license: "Multiple"
+authors:
+- Shaham et al.
+arxiv_id: '2201.03533'
+official_url: https://www.scrolls-benchmark.com/
+license: Multiple
 size: 0
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: long-ctx
+sota:
+- score: 87.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.scrolls-benchmark.com
+  notes: geometric mean across SCROLLS subtasks
+- score: 86.0%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: geometric mean
+- score: 84.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: geometric mean
+- score: 83.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: geometric mean
+- score: 78.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: geometric mean, 2024 baseline
 ---
 
 # SCROLLS（Standardized CompaRison Over Long Language Sequences）
@@ -66,6 +105,23 @@ SCROLLS 的价值在于提供了一个社区共识的长文本评测标准，使
 ## SOTA 表现
 
 顶尖长上下文模型在 SCROLLS 各子任务上的表现参差不齐，整体宏平均得分见官方排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 87.2% | geometric mean across SCROLLS subtasks | 2026-04 | [link](https://www.scrolls-benchmark.com) |
+| 🥈 | [[GPT-5]] | 🚫 no | 86.0% | geometric mean | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 84.8% | geometric mean | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 83.5% | geometric mean | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 78.0% | geometric mean, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

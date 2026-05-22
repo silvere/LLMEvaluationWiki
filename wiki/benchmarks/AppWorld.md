@@ -1,17 +1,53 @@
 ---
-title: "AppWorld"
+title: AppWorld
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - agent
+- agent
 year: 2024
-arxiv_id: "2407.18901"
+arxiv_id: '2407.18901'
 status: active
 dimension: D
 subdimension: general
+sota:
+- score: 52.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://appworld.dev
+  notes: AppWorld task success rate (100+ apps)
+- score: 50.2%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://appworld.dev
+  notes: task success rate
+- score: 48.0%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://appworld.dev
+  notes: task success rate
+- score: 45.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://deepseek.com
+  notes: task success rate
+- score: 26.3%
+  model: GPT-4o
+  harness: null
+  with_tools: true
+  date: 2024-05
+  source: https://appworld.dev
+  notes: task success rate, 2024 baseline
 ---
 
 # AppWorld
@@ -19,6 +55,22 @@ subdimension: general
 > 评测 AI 代理通过 API 调用操控多个互联应用程序完成复杂任务的能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🔧 with | 52.5% | AppWorld task success rate (100+ apps) | 2026-04 | [link](https://appworld.dev) |
+| 🥈 | [[GPT-5]] | 🔧 with | 50.2% | task success rate | 2025-09 | [link](https://appworld.dev) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🔧 with | 48.0% | task success rate | 2026-03 | [link](https://appworld.dev) |
+| 4 | [[DeepSeek-V4-Pro]] | 🔧 with | 45.5% | task success rate | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🔧 with | 26.3% | task success rate, 2024 baseline | 2024-05 | [link](https://appworld.dev) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

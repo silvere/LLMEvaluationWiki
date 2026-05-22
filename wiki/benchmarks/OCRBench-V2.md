@@ -1,16 +1,52 @@
 ---
-title: "OCRBench V2"
+title: OCRBench V2
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
+- multimodal
 year: 2024
-arxiv_id: "2404.01981"
+arxiv_id: '2404.01981'
 status: active
 dimension: E
+sota:
+- score: 85.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2 score
+- score: 84.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2 score
+- score: 83.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2 score
+- score: 82.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2 score
+- score: 72.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/Yuliang-Liu/MultimodalOCR
+  notes: OCRBench v2, 2024 baseline
 ---
 
 # OCRBench V2
@@ -18,6 +54,22 @@ dimension: E
 > OCRBench 的升级版，将规模扩展至 10,000 道题，覆盖更多语言与场景的综合 OCR 评测基准。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.6]] | 🚫 no | 85.5% | OCRBench v2 score | 2026-04 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 84.2% | OCRBench v2 score | 2026-03 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 83.5% | OCRBench v2 score | 2026-04 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+| 4 | [[GPT-5]] | 🚫 no | 82.8% | OCRBench v2 score | 2025-09 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+| 5 | [[GPT-4o]] | 🚫 no | 72.0% | OCRBench v2, 2024 baseline | 2024-05 | [link](https://github.com/Yuliang-Liu/MultimodalOCR) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

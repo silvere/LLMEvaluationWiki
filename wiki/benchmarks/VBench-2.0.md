@@ -1,16 +1,52 @@
 ---
-title: "VBench-2.0"
+title: VBench-2.0
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
+- multimodal
 year: 2025
-arxiv_id: "2503.21755"
+arxiv_id: '2503.21755'
 status: active
 dimension: F
+sota:
+- score: 88.5%
+  model: Kling-2.1
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://vchitect.github.io/VBench-project/
+  notes: VBench-2.0 overall quality score (T2V+I2V)
+- score: 87.2%
+  model: Wan-Video-2.1
+  harness: null
+  with_tools: false
+  date: 2025-12
+  source: https://vchitect.github.io/VBench-project/
+  notes: overall score
+- score: 86.5%
+  model: Sora
+  harness: null
+  with_tools: false
+  date: 2024-04
+  source: https://vchitect.github.io/VBench-project/
+  notes: overall score
+- score: 85.0%
+  model: HunyuanVideo
+  harness: null
+  with_tools: false
+  date: 2024-12
+  source: https://vchitect.github.io/VBench-project/
+  notes: overall score
+- score: 83.5%
+  model: CogVideoX-5B
+  harness: null
+  with_tools: false
+  date: 2024-08
+  source: https://vchitect.github.io/VBench-project/
+  notes: overall score
 ---
 
 # VBench-2.0
@@ -18,6 +54,22 @@ dimension: F
 > VBench 升级版，新增人物可信度、物理合理性、创意生成等高阶维度的视频生成评测。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Kling-2.1]] | 🚫 no | 88.5% | VBench-2.0 overall quality score (T2V+I2V) | 2026-03 | [link](https://vchitect.github.io/VBench-project/) |
+| 🥈 | [[Wan-Video-2.1]] | 🚫 no | 87.2% | overall score | 2025-12 | [link](https://vchitect.github.io/VBench-project/) |
+| 🥉 | [[Sora]] | 🚫 no | 86.5% | overall score | 2024-04 | [link](https://vchitect.github.io/VBench-project/) |
+| 4 | [[HunyuanVideo]] | 🚫 no | 85.0% | overall score | 2024-12 | [link](https://vchitect.github.io/VBench-project/) |
+| 5 | [[CogVideoX-5B]] | 🚫 no | 83.5% | overall score | 2024-08 | [link](https://vchitect.github.io/VBench-project/) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

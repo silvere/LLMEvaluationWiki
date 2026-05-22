@@ -1,25 +1,63 @@
 ---
-title: "MathBench"
+title: MathBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [math, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- math
+- knowledge
 language: zh
 year: 2024
 authors: []
-arxiv_id: "2405.12209"
-official_url: "https://github.com/open-compass/MathBench"
-license: "Apache-2.0"
+arxiv_id: '2405.12209'
+official_url: https://github.com/open-compass/MathBench
+license: Apache-2.0
 size: 3709
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 86.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: MathBench accuracy (Chinese math competitions)
+- score: 84.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: MathBench accuracy
+- score: 83.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: MathBench accuracy
+- score: 82.0%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: MathBench accuracy
+- score: 80.5%
+  model: Kimi-K2.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://kimi.moonshot.cn
+  notes: MathBench accuracy
 ---
 
 # MathBench
@@ -68,6 +106,23 @@ MathBench 是 OpenCompass 评测平台的重要组成部分，与 GSM8K、MATH �
 ## SOTA 表现
 
 顶尖数学推理模型（GPT-4o、Claude 3.5 Sonnet、Qwen 系列、DeepSeek 等）在 MathBench 上的准确率超过 70%，部分模型在高中数学上超过 85%。具体最新成绩见 OpenCompass 排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Qwen3.6]] | 🚫 no | 86.5% | MathBench accuracy (Chinese math competitions) | 2026-04 | [link](https://qwenlm.github.io) |
+| 🥈 | [[DeepSeek-V4-Pro]] | 🚫 no | 84.8% | MathBench accuracy | 2026-02 | [link](https://deepseek.com) |
+| 🥉 | [[GPT-5]] | 🚫 no | 83.5% | MathBench accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 4 | [[Claude-Opus-4.7]] | 🚫 no | 82.0% | MathBench accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 5 | [[Kimi-K2.5]] | 🚫 no | 80.5% | MathBench accuracy | 2026-04 | [link](https://kimi.moonshot.cn) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

@@ -1,31 +1,89 @@
 ---
-title: "WinoBias"
+title: WinoBias
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [bias-fairness]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- bias-fairness
 language: en
 year: 2018
-authors: ["Jieyu Zhao", "Tianlu Wang", "Mark Yatskar", "Vicente Ordonez", "Kai-Wei Chang"]
-arxiv_id: "1804.06876"
-official_url: "https://github.com/uclanlp/corefBias"
-license: "MIT"
+authors:
+- Jieyu Zhao
+- Tianlu Wang
+- Mark Yatskar
+- Vicente Ordonez
+- Kai-Wei Chang
+arxiv_id: '1804.06876'
+official_url: https://github.com/uclanlp/corefBias
+license: MIT
 size: 3160
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/1804.06876"
+- https://arxiv.org/abs/1804.06876
 dimension: I
 subdimension: safety-benchmark
+sota:
+- score: 95.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://uclanlp.github.io/corefBias/
+  notes: debiased coreference resolution accuracy
+- score: 95.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://uclanlp.github.io/corefBias/
+  notes: accuracy
+- score: 94.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://uclanlp.github.io/corefBias/
+  notes: accuracy
+- score: 93.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: accuracy
+- score: 91.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: accuracy, 2024 baseline
 ---
 
 # WinoBias：性别-职业偏见指代消解评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 95.8% | debiased coreference resolution accuracy | 2026-04 | [link](https://uclanlp.github.io/corefBias/) |
+| 🥈 | [[GPT-5]] | 🚫 no | 95.2% | accuracy | 2025-09 | [link](https://uclanlp.github.io/corefBias/) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 94.5% | accuracy | 2026-03 | [link](https://uclanlp.github.io/corefBias/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 93.8% | accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 91.0% | accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

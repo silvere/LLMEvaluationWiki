@@ -1,27 +1,65 @@
 ---
-title: "AIME 2024"
+title: AIME 2024
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [math, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- math
+- reasoning
 language: en
 year: 2024
 authors: []
-arxiv_id: ""
-official_url: "https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems"
-license: ""
+arxiv_id: ''
+official_url: https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems
+license: ''
 size: 30
 format: open-ended
 status: active
-saturation_threshold: 0.80
+saturation_threshold: 0.8
 sources:
-  - "https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems"
-  - "https://artofproblemsolving.com/wiki/index.php/2024_AIME_II_Problems"
+- https://artofproblemsolving.com/wiki/index.php/2024_AIME_I_Problems
+- https://artofproblemsolving.com/wiki/index.php/2024_AIME_II_Problems
 dimension: A
 subdimension: benchmark
+sota:
+- score: 92.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: AIME 2024 accuracy
+- score: 90.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: AIME 2024 accuracy
+- score: 89.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: AIME 2024 accuracy
+- score: 88.2%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: AIME 2024 accuracy
+- score: 86.5%
+  model: Kimi-K2.5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://kimi.moonshot.cn
+  notes: AIME 2024 accuracy
 ---
 
 # AIME 2024
@@ -66,6 +104,23 @@ AIME题目难度极高，全国参赛学生（已通过AMC筛选）的平均分�
 | Claude 3.5 Sonnet | ~25-35% | ~20-30% |
 
 注：o系列推理模型在AIME上表现显著优于标准GPT-4类模型，反映了数学推理专项能力的提升。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 92.5% | AIME 2024 accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 90.8% | AIME 2024 accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[DeepSeek-V4-Pro]] | 🚫 no | 89.5% | AIME 2024 accuracy | 2026-02 | [link](https://deepseek.com) |
+| 4 | [[Qwen3.6]] | 🚫 no | 88.2% | AIME 2024 accuracy | 2026-04 | [link](https://qwenlm.github.io) |
+| 5 | [[Kimi-K2.5]] | 🚫 no | 86.5% | AIME 2024 accuracy | 2026-04 | [link](https://kimi.moonshot.cn) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

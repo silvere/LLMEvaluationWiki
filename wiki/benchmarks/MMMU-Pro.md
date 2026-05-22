@@ -1,30 +1,98 @@
 ---
-title: "MMMU-Pro"
+title: MMMU-Pro
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [multimodal, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- multimodal
+- knowledge
 language: en
 year: 2024
-authors: ["Xiang Yue", "Tianyu Zheng", "Yuansheng Ni", "Yubo Wang", "Kai Zhang", "Shengbang Tong", "Yuxuan Sun", "Ming Yin", "Botao Yu", "Ge Zhang", "Huan Sun", "Yu Su", "Wenhu Chen", "Graham Neubig"]
-arxiv_id: "2409.02813"
-official_url: "https://mmmu-benchmark.github.io"
-license: ""
+authors:
+- Xiang Yue
+- Tianyu Zheng
+- Yuansheng Ni
+- Yubo Wang
+- Kai Zhang
+- Shengbang Tong
+- Yuxuan Sun
+- Ming Yin
+- Botao Yu
+- Ge Zhang
+- Huan Sun
+- Yu Su
+- Wenhu Chen
+- Graham Neubig
+arxiv_id: '2409.02813'
+official_url: https://mmmu-benchmark.github.io
+license: ''
 size: 3460
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2409.02813"
+- https://arxiv.org/abs/2409.02813
 dimension: E
+sota:
+- score: 68.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: overall accuracy
+- score: 65.4%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: overall accuracy
+- score: 63.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: overall accuracy
+- score: 62.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: overall accuracy
+- score: 46.9%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: overall accuracy, 2024 baseline
 ---
 
 # MMMU-Pro：专业多学科多模态进阶评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 68.2% | overall accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 🥈 | [[GPT-5]] | 🚫 no | 65.4% | overall accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥉 | [[Claude-Opus-4.7]] | 🚫 no | 63.8% | overall accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 4 | [[Qwen3.6]] | 🚫 no | 62.0% | overall accuracy | 2026-04 | [link](https://qwenlm.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 46.9% | overall accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

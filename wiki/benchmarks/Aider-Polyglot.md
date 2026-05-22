@@ -1,21 +1,73 @@
 ---
-title: "Aider Polyglot"
+title: Aider Polyglot
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - code
+- code
 year: 2024
-arxiv_id: ""
+arxiv_id: ''
 status: active
 dimension: H
+sota:
+- score: 76.8%
+  model: Claude-Opus-4.7
+  harness: Aider
+  with_tools: true
+  date: 2026-04
+  source: https://aider.chat/docs/leaderboards/
+  notes: percent correct on polyglot benchmark
+- score: 75.2%
+  model: GPT-5
+  harness: Aider
+  with_tools: true
+  date: 2025-09
+  source: https://aider.chat/docs/leaderboards/
+  notes: percent correct on polyglot benchmark
+- score: 72.5%
+  model: Gemini-3.1-Pro
+  harness: Aider
+  with_tools: true
+  date: 2026-03
+  source: https://aider.chat/docs/leaderboards/
+  notes: percent correct on polyglot benchmark
+- score: 71.8%
+  model: Claude-Sonnet-4.6
+  harness: Aider
+  with_tools: true
+  date: 2026-02
+  source: https://aider.chat/docs/leaderboards/
+  notes: percent correct on polyglot benchmark
+- score: 70.8%
+  model: DeepSeek-V4-Pro
+  harness: Aider
+  with_tools: true
+  date: 2026-02
+  source: https://aider.chat/docs/leaderboards/
+  notes: percent correct on polyglot benchmark
 ---
 
 # Aider Polyglot
 
 > Aider 代码编辑工具发布的多编程语言代码编辑评测基准，测试模型对不同语言代码库的编辑能力。
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Harness | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | [[Aider]] | 🔧 with | 76.8% | percent correct on polyglot benchmark | 2026-04 | [link](https://aider.chat/docs/leaderboards/) |
+| 🥈 | [[GPT-5]] | [[Aider]] | 🔧 with | 75.2% | percent correct on polyglot benchmark | 2025-09 | [link](https://aider.chat/docs/leaderboards/) |
+| 🥉 | [[Gemini-3.1-Pro]] | [[Aider]] | 🔧 with | 72.5% | percent correct on polyglot benchmark | 2026-03 | [link](https://aider.chat/docs/leaderboards/) |
+| 4 | [[Claude-Sonnet-4.6]] | [[Aider]] | 🔧 with | 71.8% | percent correct on polyglot benchmark | 2026-02 | [link](https://aider.chat/docs/leaderboards/) |
+| 5 | [[DeepSeek-V4-Pro]] | [[Aider]] | 🔧 with | 70.8% | percent correct on polyglot benchmark | 2026-02 | [link](https://aider.chat/docs/leaderboards/) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 概述
 

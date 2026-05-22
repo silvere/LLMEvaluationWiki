@@ -1,20 +1,56 @@
 ---
-title: "ARC-Easy"
+title: ARC-Easy
 aliases:
-  - ARC-e
-  - ARC-Easy
+- ARC-e
+- ARC-Easy
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - knowledge
+- knowledge
 year: 2018
-arxiv_id: "1803.05457"
+arxiv_id: '1803.05457'
 status: saturated
 dimension: A
 subdimension: benchmark
+sota:
+- score: 99.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: ARC-Easy accuracy, 25-shot
+- score: 99.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: ARC-Easy accuracy, 25-shot
+- score: 99.3%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: ARC-Easy accuracy, 25-shot
+- score: 99.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: ARC-Easy accuracy, 25-shot
+- score: 98.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: ARC-Easy 25-shot, 2024 baseline
 ---
 
 # ARC-Easy（ARC-e）
@@ -22,6 +58,22 @@ subdimension: benchmark
 > ARC（AI2 Reasoning Challenge）数据集中的简单子集，包含约 5,197 道可通过检索或词频方法回答的科学知识题，现代 LLM 在此子集上已接近满分。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 99.8% | ARC-Easy accuracy, 25-shot | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 99.5% | ARC-Easy accuracy, 25-shot | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 99.3% | ARC-Easy accuracy, 25-shot | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 99.0% | ARC-Easy accuracy, 25-shot | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 98.5% | ARC-Easy 25-shot, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

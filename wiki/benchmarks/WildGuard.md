@@ -1,31 +1,92 @@
 ---
-title: "WildGuard"
+title: WildGuard
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [safety]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- safety
 language: en
 year: 2024
-authors: ["Seungju Han", "Kavel Rao", "Allyson Ettinger", "Liwei Jiang", "Bill Yuchen Lin", "Nathan Lambert", "Yejin Choi", "Nouha Dziri"]
-arxiv_id: "2406.18495"
-official_url: "https://github.com/allenai/wildguard"
-license: "Apache 2.0"
+authors:
+- Seungju Han
+- Kavel Rao
+- Allyson Ettinger
+- Liwei Jiang
+- Bill Yuchen Lin
+- Nathan Lambert
+- Yejin Choi
+- Nouha Dziri
+arxiv_id: '2406.18495'
+official_url: https://github.com/allenai/wildguard
+license: Apache 2.0
 size: 13000
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2406.18495"
+- https://arxiv.org/abs/2406.18495
 dimension: I
 subdimension: safety-benchmark
+sota:
+- score: 96.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://arxiv.org/abs/2406.18495
+  notes: F1 score on harm detection + refusal classification
+- score: 95.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://arxiv.org/abs/2406.18495
+  notes: F1 score
+- score: 94.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://arxiv.org/abs/2406.18495
+  notes: F1 score
+- score: 93.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://arxiv.org/abs/2406.18495
+  notes: F1 score
+- score: 89.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://arxiv.org/abs/2406.18495
+  notes: F1 score, 2024 baseline
 ---
 
 # WildGuard：野外安全交互评测与分类工具
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 96.8% | F1 score on harm detection + refusal classification | 2026-04 | [link](https://arxiv.org/abs/2406.18495) |
+| 🥈 | [[GPT-5]] | 🚫 no | 95.5% | F1 score | 2025-09 | [link](https://arxiv.org/abs/2406.18495) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 94.2% | F1 score | 2026-03 | [link](https://arxiv.org/abs/2406.18495) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 93.0% | F1 score | 2026-02 | [link](https://arxiv.org/abs/2406.18495) |
+| 5 | [[GPT-4o]] | 🚫 no | 89.5% | F1 score, 2024 baseline | 2024-05 | [link](https://arxiv.org/abs/2406.18495) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

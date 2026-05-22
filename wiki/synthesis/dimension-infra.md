@@ -36,6 +36,18 @@ domain:
 - **维护**：改各单页 frontmatter → 跑 `npx tsx scripts/build-synthesis-tables.ts` 同步
 
 <!-- AUTO-SYN-TABLE:dimension=infra:START -->
+
+## 评测基础设施（横切维度）（自动生成）
+
+> 由 `scripts/build-synthesis-tables.ts` 从各单页 frontmatter `dimension:` 字段自动聚合。**维护方式：改各单页 frontmatter，不要手改本表。**
+
+| Benchmark / Tool | 题量 | 年份 | 评测协议 | SOTA / 备注 | Saturation |
+|---|---|---|---|---|---|
+| [[SGLang|SGLang]] | — | — | — | — | — |
+| [[vLLM|vLLM]] | — | — | — | — | — |
+
+_共 2 条，最后更新：2026-05-22_
+
 <!-- AUTO-SYN-TABLE:dimension=infra:END -->
 
 ## 相关页面

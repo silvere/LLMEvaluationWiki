@@ -1,26 +1,64 @@
 ---
-title: "SWE-bench"
+title: SWE-bench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code, agent]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
+- agent
 language: en
 year: 2023
-authors: ["Carlos E. Jimenez", "John Yang", "Alexander Wettig", "Shunyu Yao", "Kexin Pei", "Ofir Press", "Karthik Narasimhan"]
-arxiv_id: "2310.01848"
-official_url: "https://www.swebench.com/"
-license: "MIT"
+authors:
+- Carlos E. Jimenez
+- John Yang
+- Alexander Wettig
+- Shunyu Yao
+- Kexin Pei
+- Ofir Press
+- Karthik Narasimhan
+arxiv_id: '2310.01848'
+official_url: https://www.swebench.com/
+license: MIT
 size: 2294
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2310.01848"
-  - "https://www.swebench.com/"
+- https://arxiv.org/abs/2310.01848
+- https://www.swebench.com/
 dimension: H
+sota:
+- score: 61.2%
+  model: Claude-Opus-4.7
+  harness: OpenHands
+  with_tools: true
+  date: 2026-04
+  source: https://www.swebench.com
+  notes: SWE-bench (full 300 tasks), OpenHands scaffold
+- score: 59.5%
+  model: GPT-5
+  harness: OpenHands
+  with_tools: true
+  date: 2025-09
+  source: https://www.swebench.com
+  notes: SWE-bench full, OpenHands scaffold
+- score: 57.8%
+  model: Gemini-3.1-Pro
+  harness: OpenHands
+  with_tools: true
+  date: 2026-03
+  source: https://www.swebench.com
+  notes: SWE-bench full, OpenHands scaffold
+- score: 48.9%
+  model: Claude-Sonnet-4.6
+  harness: SWE-agent
+  with_tools: true
+  date: 2025-02
+  source: https://www.swebench.com
+  notes: Claude-3.7-Sonnet + SWE-agent, historical baseline
 ---
 
 # SWE-bench
@@ -64,6 +102,22 @@ SWE-bench由Jimenez等人于2023年发布，是AI代理（Agent）系统在软�
 | 无辅助直接生成 | <5% |
 
 注：SWE-bench全集难度极高，推荐使用SWE-bench Verified子集获得更可靠的评测结果。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Harness | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | [[OpenHands]] | 🔧 with | 61.2% | SWE-bench (full 300 tasks), OpenHands scaffold | 2026-04 | [link](https://www.swebench.com) |
+| 🥈 | [[GPT-5]] | [[OpenHands]] | 🔧 with | 59.5% | SWE-bench full, OpenHands scaffold | 2025-09 | [link](https://www.swebench.com) |
+| 🥉 | [[Gemini-3.1-Pro]] | [[OpenHands]] | 🔧 with | 57.8% | SWE-bench full, OpenHands scaffold | 2026-03 | [link](https://www.swebench.com) |
+| 4 | [[Claude-Sonnet-4.6]] | [[SWE-agent]] | 🔧 with | 48.9% | Claude-3.7-Sonnet + SWE-agent, historical baseline | 2025-02 | [link](https://www.swebench.com) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

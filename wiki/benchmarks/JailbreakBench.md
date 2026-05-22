@@ -1,31 +1,96 @@
 ---
-title: "JailbreakBench"
+title: JailbreakBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [safety]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- safety
 language: en
 year: 2024
-authors: ["Patrick Chao", "Edoardo Debenedetti", "Alexander Robey", "Maksym Andriushchenko", "Francesco Croce", "Vikash Sehwag", "Edgar Dobriban", "Nicolas Flammarion", "George J. Pappas", "Florian Tramèr", "Hamed Hassani", "Eric Wong"]
-arxiv_id: "2404.01318"
-official_url: "https://jailbreakbench.github.io"
-license: "MIT"
+authors:
+- Patrick Chao
+- Edoardo Debenedetti
+- Alexander Robey
+- Maksym Andriushchenko
+- Francesco Croce
+- Vikash Sehwag
+- Edgar Dobriban
+- Nicolas Flammarion
+- George J. Pappas
+- Florian Tramèr
+- Hamed Hassani
+- Eric Wong
+arxiv_id: '2404.01318'
+official_url: https://jailbreakbench.github.io
+license: MIT
 size: 100
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2404.01318"
+- https://arxiv.org/abs/2404.01318
 dimension: I
 subdimension: jailbreak
+sota:
+- score: 8.2%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://jailbreakbench.github.io
+  notes: ASR (lower=safer), 2024 baseline
+- score: 4.8%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://jailbreakbench.github.io
+  notes: ASR (lower=safer)
+- score: 3.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://jailbreakbench.github.io
+  notes: ASR (lower=safer)
+- score: 2.2%
+  model: Claude-Sonnet-4.6
+  harness: null
+  with_tools: false
+  date: 2025-06
+  source: https://jailbreakbench.github.io
+  notes: ASR (lower=safer)
+- score: 1.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://jailbreakbench.github.io
+  notes: attack success rate (lower=safer), GCG attack
 ---
 
 # JailbreakBench：越狱攻击标准化评测框架
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-4o]] | 🚫 no | 8.2% | ASR (lower=safer), 2024 baseline | 2024-05 | [link](https://jailbreakbench.github.io) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 4.8% | ASR (lower=safer) | 2026-03 | [link](https://jailbreakbench.github.io) |
+| 🥉 | [[GPT-5]] | 🚫 no | 3.5% | ASR (lower=safer) | 2025-09 | [link](https://jailbreakbench.github.io) |
+| 4 | [[Claude-Sonnet-4.6]] | 🚫 no | 2.2% | ASR (lower=safer) | 2025-06 | [link](https://jailbreakbench.github.io) |
+| 5 | [[Claude-Opus-4.7]] | 🚫 no | 1.5% | attack success rate (lower=safer), GCG attack | 2026-04 | [link](https://jailbreakbench.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

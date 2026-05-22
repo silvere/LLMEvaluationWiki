@@ -1,26 +1,96 @@
 ---
-title: "BigCodeBench"
+title: BigCodeBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
 language: en
 year: 2024
-authors: ["Terry Yue Zhuo", "Minh Chien Vu", "Jenny Chim", "Han Hu", "Wenhao Yu", "Ratnadira Widyasari", "Imam Nur Bani Yusuf", "Haolan Zhan", "Junda He", "Indraneil Paul", "Simon Brunner", "Chen Gong", "Thong Hoang", "Armel Randy Zebaze", "Xiaoheng Hong", "Wen-Ding Li", "Jean Kaddour", "Ming Xu", "Zhihan Zhang", "Prateek Yadav", "Naman Jain", "Alex Gu", "Zhoujun Cheng", "Jiawei Liu", "Qian Liu", "Zijian Wang", "David Lo", "Binyuan Hui", "Niklas Muennighoff", "Daniel Fried", "Xiaoning Du", "Harm de Vries", "Leandro von Werra"]
-arxiv_id: "2406.15877"
-official_url: "https://bigcode-bench.github.io/"
-license: "Apache 2.0"
+authors:
+- Terry Yue Zhuo
+- Minh Chien Vu
+- Jenny Chim
+- Han Hu
+- Wenhao Yu
+- Ratnadira Widyasari
+- Imam Nur Bani Yusuf
+- Haolan Zhan
+- Junda He
+- Indraneil Paul
+- Simon Brunner
+- Chen Gong
+- Thong Hoang
+- Armel Randy Zebaze
+- Xiaoheng Hong
+- Wen-Ding Li
+- Jean Kaddour
+- Ming Xu
+- Zhihan Zhang
+- Prateek Yadav
+- Naman Jain
+- Alex Gu
+- Zhoujun Cheng
+- Jiawei Liu
+- Qian Liu
+- Zijian Wang
+- David Lo
+- Binyuan Hui
+- Niklas Muennighoff
+- Daniel Fried
+- Xiaoning Du
+- Harm de Vries
+- Leandro von Werra
+arxiv_id: '2406.15877'
+official_url: https://bigcode-bench.github.io/
+license: Apache 2.0
 size: 1140
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2406.15877"
-  - "https://bigcode-bench.github.io/"
+- https://arxiv.org/abs/2406.15877
+- https://bigcode-bench.github.io/
 dimension: H
+sota:
+- score: 74.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard
+  notes: pass@1 Complete variant，2026 frontier
+- score: 71.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard
+  notes: pass@1 Complete
+- score: 61.1%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard
+  notes: pass@1 Complete，2024 基线
+- score: 59.7%
+  model: DeepSeek-V3
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard
+  notes: DeepSeek-Coder-V2-Instruct，Complete
+- score: 58.6%
+  model: Claude-3.5-Sonnet
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard
+  notes: pass@1 Complete
 ---
 
 # BigCodeBench
@@ -65,6 +135,23 @@ BigCodeBench包含两个评测模式：
 | GPT-4o（2024） | ~61% | ~55% |
 | Claude 3.5 Sonnet | ~58% | ~52% |
 | 开源前沿模型 | ~50-55% | ~45-50% |
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 74.5% | pass@1 Complete variant，2026 frontier | 2026-04 | [link](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) |
+| 🥈 | [[GPT-5]] | 🚫 no | 71.8% | pass@1 Complete | 2026-04 | [link](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) |
+| 🥉 | [[GPT-4o]] | 🚫 no | 61.1% | pass@1 Complete，2024 基线 | 2024-05 | [link](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) |
+| 4 | [[DeepSeek-V3]] | 🚫 no | 59.7% | DeepSeek-Coder-V2-Instruct，Complete | 2024-06 | [link](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) |
+| 5 | [[Claude-3.5-Sonnet]] | 🚫 no | 58.6% | pass@1 Complete | 2024-06 | [link](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

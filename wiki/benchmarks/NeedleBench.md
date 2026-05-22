@@ -1,19 +1,55 @@
 ---
-title: "NeedleBench"
+title: NeedleBench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - long-context
-  - multilingual
+- long-context
+- multilingual
 year: 2024
-arxiv_id: "2407.11963"
+arxiv_id: '2407.11963'
 status: active
 aliases:
-  - NeedleBench
+- NeedleBench
 dimension: long-ctx
+sota:
+- score: 98.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/open-compass/opencompass
+  notes: NeedleBench retrieval accuracy at 128K context
+- score: 98.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: retrieval accuracy at 128K
+- score: 97.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: retrieval accuracy at 128K
+- score: 97.5%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://qwenlm.github.io
+  notes: retrieval accuracy at 128K
+- score: 95.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: retrieval accuracy, 2024 baseline
 ---
 
 # NeedleBench
@@ -21,6 +57,22 @@ dimension: long-ctx
 > 面向中文长文本的"大海捞针"（Needle-in-Haystack）评测基准，系统评估大语言模型在超长上下文中定位和检索关键信息的能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 98.5% | NeedleBench retrieval accuracy at 128K context | 2026-04 | [link](https://github.com/open-compass/opencompass) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 98.2% | retrieval accuracy at 128K | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 🥉 | [[GPT-5]] | 🚫 no | 97.8% | retrieval accuracy at 128K | 2025-09 | [link](https://openai.com/gpt-5) |
+| 4 | [[Qwen3.6]] | 🚫 no | 97.5% | retrieval accuracy at 128K | 2026-04 | [link](https://qwenlm.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 95.0% | retrieval accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

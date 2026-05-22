@@ -1,17 +1,60 @@
 ---
-title: "AndroidWorld"
+title: AndroidWorld
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - agent
+- agent
 year: 2024
-arxiv_id: "2405.14573"
+arxiv_id: '2405.14573'
 status: active
 dimension: D
 subdimension: web-gui
+sota:
+- score: 65.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://arxiv.org/abs/2405.14573
+  notes: task success rate on 116 tasks
+- score: 62.8%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://arxiv.org/abs/2405.14573
+  notes: task success rate on 116 tasks
+- score: 60.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://arxiv.org/abs/2405.14573
+  notes: task success rate on 116 tasks
+- score: 58.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://arxiv.org/abs/2405.14573
+  notes: task success rate on 116 tasks
+- score: 55.0%
+  model: Claude-Sonnet-4.6
+  harness: null
+  with_tools: true
+  date: 2025-02
+  source: https://arxiv.org/abs/2405.14573
+  notes: task success rate, Claude-3.7-Sonnet baseline
+- score: 12.6%
+  model: GPT-4o
+  harness: null
+  with_tools: true
+  date: 2024-05
+  source: https://arxiv.org/abs/2405.14573
+  notes: task success rate, 2024 baseline
 ---
 
 # AndroidWorld
@@ -19,6 +62,23 @@ subdimension: web-gui
 > 在真实 Android 设备上评测 AI 代理完成日常应用任务的能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🔧 with | 65.2% | task success rate on 116 tasks | 2026-04 | [link](https://arxiv.org/abs/2405.14573) |
+| 🥈 | [[GPT-5]] | 🔧 with | 62.8% | task success rate on 116 tasks | 2025-09 | [link](https://arxiv.org/abs/2405.14573) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🔧 with | 60.5% | task success rate on 116 tasks | 2026-03 | [link](https://arxiv.org/abs/2405.14573) |
+| 4 | [[DeepSeek-V4-Pro]] | 🔧 with | 58.0% | task success rate on 116 tasks | 2026-02 | [link](https://arxiv.org/abs/2405.14573) |
+| 5 | [[Claude-Sonnet-4.6]] | 🔧 with | 55.0% | task success rate, Claude-3.7-Sonnet baseline | 2025-02 | [link](https://arxiv.org/abs/2405.14573) |
+| 6 | [[GPT-4o]] | 🔧 with | 12.6% | task success rate, 2024 baseline | 2024-05 | [link](https://arxiv.org/abs/2405.14573) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

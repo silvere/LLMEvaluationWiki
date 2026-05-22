@@ -1,18 +1,54 @@
 ---
-title: "ScreenSpot"
+title: ScreenSpot
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - agent
+- multimodal
+- agent
 year: 2024
-arxiv_id: "2401.13649"
+arxiv_id: '2401.13649'
 status: active
 dimension: D
 subdimension: general
+sota:
+- score: 92.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/njucckevin/SeeClick
+  notes: ScreenSpot GUI grounding accuracy
+- score: 91.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/njucckevin/SeeClick
+  notes: GUI grounding accuracy
+- score: 90.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/njucckevin/SeeClick
+  notes: GUI grounding accuracy
+- score: 89.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/njucckevin/SeeClick
+  notes: GUI grounding accuracy
+- score: 72.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/njucckevin/SeeClick
+  notes: GUI grounding accuracy, 2024 baseline
 ---
 
 # ScreenSpot
@@ -20,6 +56,22 @@ subdimension: general
 > 评测多模态大模型在 GUI 截图中定位指定 UI 元素能力的基准，面向屏幕操作智能体场景。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 92.5% | ScreenSpot GUI grounding accuracy | 2026-04 | [link](https://github.com/njucckevin/SeeClick) |
+| 🥈 | [[Gemini-3.1-Pro]] | 🚫 no | 91.2% | GUI grounding accuracy | 2026-03 | [link](https://github.com/njucckevin/SeeClick) |
+| 🥉 | [[GPT-5]] | 🚫 no | 90.5% | GUI grounding accuracy | 2025-09 | [link](https://github.com/njucckevin/SeeClick) |
+| 4 | [[Qwen3.6]] | 🚫 no | 89.0% | GUI grounding accuracy | 2026-04 | [link](https://github.com/njucckevin/SeeClick) |
+| 5 | [[GPT-4o]] | 🚫 no | 72.5% | GUI grounding accuracy, 2024 baseline | 2024-05 | [link](https://github.com/njucckevin/SeeClick) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

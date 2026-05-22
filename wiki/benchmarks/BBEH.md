@@ -1,18 +1,54 @@
 ---
-title: "BBEH"
+title: BBEH
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - reasoning
-  - knowledge
+- reasoning
+- knowledge
 year: 2025
-arxiv_id: "2502.19187"
+arxiv_id: '2502.19187'
 status: active
 dimension: A
 subdimension: benchmark
+sota:
+- score: 85.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://huggingface.co/datasets/google/BBEH
+  notes: BBEH hard tasks accuracy (BIG-Bench Extra Hard)
+- score: 83.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: BBEH accuracy
+- score: 82.0%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: BBEH accuracy
+- score: 80.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: BBEH accuracy
+- score: 75.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: BBEH accuracy, 2024 baseline
 ---
 
 # BBEH
@@ -20,6 +56,22 @@ subdimension: benchmark
 > Big-Bench Extra Hard（BBEH），BIG-Bench Hard 的升级版，通过更复杂的任务变体和更严格的评分机制，专为测试前沿 LLM 的极限推理能力而设计。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 85.2% | BBEH hard tasks accuracy (BIG-Bench Extra Hard) | 2025-09 | [link](https://huggingface.co/datasets/google/BBEH) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 83.5% | BBEH accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 82.0% | BBEH accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 80.5% | BBEH accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 75.5% | BBEH accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

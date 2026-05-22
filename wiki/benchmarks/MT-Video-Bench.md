@@ -1,22 +1,58 @@
 ---
-title: "MT-Video-Bench"
+title: MT-Video-Bench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-language: "en"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+language: en
 year: 2025
-status: "active"
-arxiv_id: "2510.17722"
+status: active
+arxiv_id: '2510.17722'
 sources:
-  - "[[mt-video-bench]]"
+- '[[mt-video-bench]]'
 domain:
-  - multimodal
-  - dialog
-task: "video-understanding"
+- multimodal
+- dialog
+task: video-understanding
 dimension: E
+sota:
+- score: 88.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://huggingface.co/datasets/HumanMLLM/MT-Video-Bench
+  notes: multi-turn video QA accuracy
+- score: 87.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://huggingface.co/datasets/HumanMLLM/MT-Video-Bench
+  notes: accuracy
+- score: 86.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://huggingface.co/datasets/HumanMLLM/MT-Video-Bench
+  notes: accuracy
+- score: 85.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://huggingface.co/datasets/HumanMLLM/MT-Video-Bench
+  notes: accuracy
+- score: 72.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: accuracy, 2024 baseline
 ---
 
 # MT-Video-Bench
@@ -24,6 +60,22 @@ dimension: E
 > 首个专注于多轮对话场景的视频理解综合评测基准，包含 1,000 个对话、5,887 个 QA 对，从感知性与交互性两大维度系统评估多模态 LLM 的视频理解能力。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 88.5% | multi-turn video QA accuracy | 2026-03 | [link](https://huggingface.co/datasets/HumanMLLM/MT-Video-Bench) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 87.2% | accuracy | 2026-04 | [link](https://huggingface.co/datasets/HumanMLLM/MT-Video-Bench) |
+| 🥉 | [[GPT-5]] | 🚫 no | 86.5% | accuracy | 2025-09 | [link](https://huggingface.co/datasets/HumanMLLM/MT-Video-Bench) |
+| 4 | [[Qwen3.6]] | 🚫 no | 85.0% | accuracy | 2026-04 | [link](https://huggingface.co/datasets/HumanMLLM/MT-Video-Bench) |
+| 5 | [[GPT-4o]] | 🚫 no | 72.0% | accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

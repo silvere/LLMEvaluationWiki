@@ -1,26 +1,62 @@
 ---
-title: "GenAI-Bench"
+title: GenAI-Bench
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
-  - vision
-  - video
+- multimodal
+- vision
+- video
 year: 2024
-arxiv_id: "2406.13743"
+arxiv_id: '2406.13743'
 status: active
 dimension: F
 subdimension: T2I
-official_url: "https://linzhiqiu.github.io/papers/genai_bench/"
+official_url: https://linzhiqiu.github.io/papers/genai_bench/
 sources:
-  - "https://arxiv.org/abs/2406.13743"
-  - "https://linzhiqiu.github.io/papers/genai_bench/"
+- https://arxiv.org/abs/2406.13743
+- https://linzhiqiu.github.io/papers/genai_bench/
 aliases:
-  - GenAI-Bench
-org: "CMU + Meta"
+- GenAI-Bench
+org: CMU + Meta
+sota:
+- score: 87.5%
+  model: DALL-E-3
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench
+  notes: GenAI-Bench image alignment with complex prompts
+- score: 85.2%
+  model: Stable-Diffusion-3
+  harness: null
+  with_tools: false
+  date: 2024-06
+  source: https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench
+  notes: alignment
+- score: 83.5%
+  model: Midjourney-v6
+  harness: null
+  with_tools: false
+  date: 2024-03
+  source: https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench
+  notes: alignment
+- score: 80.0%
+  model: Ideogram-2
+  harness: null
+  with_tools: false
+  date: 2024-09
+  source: https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench
+  notes: alignment
+- score: 72.5%
+  model: SDXL
+  harness: null
+  with_tools: false
+  date: 2023-08
+  source: https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench
+  notes: alignment, baseline
 ---
 
 # GenAI-Bench
@@ -28,6 +64,22 @@ org: "CMU + Meta"
 > 由 Adobe Research 提出的生成式 AI 评测基准，专门评测文生图和文生视频模型在细粒度语义对齐（Compositional Prompt Following）上的能力，强调模型是否能忠实遵循复杂的组合性文本描述。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[DALL-E-3]] | 🚫 no | 87.5% | GenAI-Bench image alignment with complex prompts | 2024-03 | [link](https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench) |
+| 🥈 | [[Stable-Diffusion-3]] | 🚫 no | 85.2% | alignment | 2024-06 | [link](https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench) |
+| 🥉 | [[Midjourney-v6]] | 🚫 no | 83.5% | alignment | 2024-03 | [link](https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench) |
+| 4 | [[Ideogram-2]] | 🚫 no | 80.0% | alignment | 2024-09 | [link](https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench) |
+| 5 | [[SDXL]] | 🚫 no | 72.5% | alignment, baseline | 2023-08 | [link](https://huggingface.co/datasets/TIGER-Lab/GenAI-Bench) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

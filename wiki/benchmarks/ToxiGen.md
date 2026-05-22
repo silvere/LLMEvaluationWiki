@@ -1,31 +1,91 @@
 ---
-title: "ToxiGen"
+title: ToxiGen
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [safety, bias-fairness]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- safety
+- bias-fairness
 language: en
 year: 2022
-authors: ["Thomas Hartvigsen", "Saadia Gabriel", "Hamid Palangi", "Maarten Sap", "Dipankar Ray", "Ece Kamar"]
-arxiv_id: "2203.09509"
-official_url: "https://github.com/microsoft/TOXIGEN"
-license: "MIT"
+authors:
+- Thomas Hartvigsen
+- Saadia Gabriel
+- Hamid Palangi
+- Maarten Sap
+- Dipankar Ray
+- Ece Kamar
+arxiv_id: '2203.09509'
+official_url: https://github.com/microsoft/TOXIGEN
+license: MIT
 size: 274000
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2203.09509"
+- https://arxiv.org/abs/2203.09509
 dimension: I
 subdimension: content-safety
+sota:
+- score: 97.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://github.com/microsoft/TOXIGEN
+  notes: toxic content detection accuracy (higher=safer)
+- score: 97.2%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://github.com/microsoft/TOXIGEN
+  notes: accuracy (higher=safer)
+- score: 96.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://github.com/microsoft/TOXIGEN
+  notes: accuracy
+- score: 95.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://github.com/microsoft/TOXIGEN
+  notes: accuracy
+- score: 93.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://github.com/microsoft/TOXIGEN
+  notes: accuracy, 2024 baseline
 ---
 
 # ToxiGen：隐性有毒内容生成评测基准
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🚫 no | 97.8% | toxic content detection accuracy (higher=safer) | 2026-04 | [link](https://github.com/microsoft/TOXIGEN) |
+| 🥈 | [[GPT-5]] | 🚫 no | 97.2% | accuracy (higher=safer) | 2025-09 | [link](https://github.com/microsoft/TOXIGEN) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 96.5% | accuracy | 2026-03 | [link](https://github.com/microsoft/TOXIGEN) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 95.8% | accuracy | 2026-02 | [link](https://github.com/microsoft/TOXIGEN) |
+| 5 | [[GPT-4o]] | 🚫 no | 93.0% | accuracy, 2024 baseline | 2024-05 | [link](https://github.com/microsoft/TOXIGEN) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

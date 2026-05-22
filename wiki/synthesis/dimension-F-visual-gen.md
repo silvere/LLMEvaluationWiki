@@ -44,15 +44,20 @@ T2I 综合：HEIM / ImagenHub / GenEval / T2I-CompBench / DPG-Bench / MJHQ-30K�
 | Benchmark / Tool | 子类 | 题量 | 年份 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
 | [[VBench-I2V|VBench-I2V]] | I2V | — | — | — | — |
+| [[CLIPScore|CLIPScore]] | metric | — | 2021 | — | — |
+| [[2412.09645|Evaluation Agent: Efficient and Promptable Evaluation Framework for Visual Generative Models]] | metric | — | 2024 | — | — |
 | [[VQAScore|VQAScore]] | metric | — | — | — | — |
 | [[HPSv2|HPSv2]] | preference | — | — | — | — |
+| [[2508.03789|HPSv3: Towards Wide-Spectrum Human Preference Score]] | preference | — | 2025 | — | — |
 | [[ImageReward|ImageReward]] | preference | — | — | — | — |
 | [[PickScore|PickScore]] | preference | — | — | — | — |
+| [[HEIM|HEIM]] | T2I | — | — | 86.2%（GPT-5） | — |
 | [[Commonsense-T2I|Commonsense-T2I]] | T2I | — | 2024 | — | — |
 | [[DPG-Bench|DPG-Bench]] | T2I | — | — | — | — |
+| [[ELLA|ELLA]] | T2I | — | 2024 | — | — |
 | [[EvalMuse-40K|EvalMuse-40K]] | T2I | — | — | — | — |
 | [[GenAI-Bench|GenAI-Bench]] | T2I | — | 2024 | — | — |
-| [[HEIM|HEIM]] | T2I | — | — | — | — |
+| [[2512.16853|GenEval 2: Addressing Benchmark Drift in Text-to-Image Evaluation]] | T2I | — | 2025 | — | — |
 | [[ImageNet-1K|ImageNet-1K]] | T2I | — | 2012 | — | — |
 | [[ImageNet-A|ImageNet-A]] | T2I | — | 2021 | — | — |
 | [[ImageNet-R|ImageNet-R]] | T2I | — | 2021 | — | — |
@@ -60,21 +65,26 @@ T2I 综合：HEIM / ImagenHub / GenEval / T2I-CompBench / DPG-Bench / MJHQ-30K�
 | [[ImageNet-V2|ImageNet-V2]] | T2I | — | 2019 | — | — |
 | [[ImagenHub|ImagenHub]] | T2I | — | — | — | — |
 | [[MJHQ-30K|MJHQ-30K]] | T2I | — | — | — | — |
+| [[2404.16820|Revisiting Text-to-Image Evaluation with Gecko: On Metrics, Prompts, and Human Ratings]] | T2I | — | 2024 | — | — |
 | [[T2I-CompBench|T2I-CompBench]] | T2I | — | — | — | — |
 | [[T2I-CompBench++|T2I-CompBench++]] | T2I | — | 2024 | — | — |
+| [[2303.11897|TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering]] | T2I | — | 2023 | — | — |
+| [[2311.01813|FETV: A Benchmark for Fine-Grained Evaluation of Open-Domain Text-to-Video Generation]] | T2V | — | 2023 | — | — |
 | [[Step-Video-T2V-Eval|Step-Video-T2V-Eval]] | T2V | — | 2025 | — | — |
 | [[T2V-CompBench|T2V-CompBench]] | T2V | — | 2024 | — | — |
 | [[T2VQA-DB|T2VQA-DB]] | T2V | — | 2024 | — | — |
+| [[2503.21755|VBench-2.0: Advancing Video Generation Benchmark Suite for Intrinsic Faithfulness]] | T2V | — | 2025 | — | — |
+| [[2411.13503|VBench++: Comprehensive and Versatile Benchmark Suite for Video Generative Models]] | T2V | — | 2024 | — | — |
+| [[GenEval|GenEval]] | — | — | — | 91.5%（GPT-5） | — |
+| [[MVBench|MVBench]] | — | — | 2023 | 89.8%（Qwen3.6） | — |
+| [[VBench|VBench]] | — | — | 2023 | 86.8%（Kling-2.1） | — |
 | [[DrawBench|DrawBench]] | — | — | 2022 | — | — |
 | [[EvalCrafter|EvalCrafter]] | — | — | 2024 | — | — |
-| [[GenEval|GenEval]] | — | — | — | — | — |
-| [[MVBench|MVBench]] | — | — | 2023 | — | — |
 | [[OVBench|OVBench]] | — | — | 2024 | — | — |
 | [[TVBench|TVBench]] | — | — | 2024 | — | — |
-| [[VBench|VBench]] | — | — | 2023 | — | — |
 | [[VBench-2.0|VBench-2.0]] | — | — | 2025 | — | — |
 
-_共 30 条，最后更新：2026-05-22_
+_共 40 条，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:dimension=F:END -->
 

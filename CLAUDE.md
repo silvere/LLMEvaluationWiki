@@ -454,11 +454,13 @@ confidence: promoted  # 领域专家完整审阅 + 全部断言溯源
 
 ---
 
-### 3.7 评测对象 11 维度 taxonomy（dimension/subdimension 字段）
+### 3.7 评测对象 13 维度 taxonomy（dimension/subdimension 字段）
 
-**动机**：当前 wiki 379 个 benchmark 一锅炖在 `benchmarks/`，缺乏「按评测对象类型」的二级索引。借鉴 LLM 评测圈通用的 A-K 分类（参考 artifact），引入 `dimension:` frontmatter 字段，让每页能被维度索引。
+**动机**：当前 wiki 379 个 benchmark 一锅炖在 `benchmarks/`，缺乏「按评测对象类型」的二级索引。借鉴 LLM 评测圈通用分类（参考两版 artifact：140+ 工具 + 230+ 论文），引入 `dimension:` frontmatter 字段，让每页能被维度索引。
 
-#### 维度定义（A-K + 3 横切）
+> **演进记录**：v1 是 11 维度（A-K + 3 横切，2026-05-14 落地）；v2 扩到 **13 维度**（+ L Methodology + dom Domain-specific，2026-05-22）以纳入评测方法论与领域专项。
+
+#### 维度定义（A-K + L + dom + 3 横切）
 
 | dimension | 名称 | 典型工具 |
 |---|---|---|
@@ -473,6 +475,8 @@ confidence: promoted  # 领域专家完整审阅 + 全部断言溯源
 | **I** | 安全 / 对齐 / Red-teaming | HarmBench / JailbreakBench / WMDP / garak / PyRIT |
 | **J** | 中文 | C-Eval / CMMLU / SuperCLUE / Xiezhi / CMB |
 | **K** | Judge 校准 / Meta-evaluation | RewardBench / JudgeBench / PandaLM / Auto-J / Prometheus |
+| **L** | 评测方法论 / Meta-eval theory（**v2 新增**） | benchmark-contamination / Are-We-Done-with-MMLU / leaderboard-volatility / DynaBench |
+| **dom** | 领域专项 / Domain-specific（**v2 新增**） | MedHELM / LegalBench / LawBench / FinBen / FinanceBench / EduBench / SciBench |
 | **long-ctx** | 长上下文（横切，可能与其他维度共存） | RULER / NIAH / LongBench / InfiniteBench |
 | **obs** | Observability / 商业评测平台（横切） | LangSmith / Langfuse / Phoenix / Braintrust / Patronus |
 | **infra** | 评测基础设施（横切，非评测工具本身） | vLLM / SGLang / TGI / TensorRT-LLM |
@@ -494,7 +498,15 @@ subdimension: red-team-tool | safety-benchmark | jailbreak | content-safety
 
 # K Judge
 subdimension: judge-model | judge-benchmark | reward-model
+
+# L 评测方法论（v2 新增）
+subdimension: contamination | saturation | benchmark-critique | dynamic-eval | survey
+
+# dom 领域专项（v2 新增）
+subdimension: medical | legal | finance | education | scientific | embedding-eval
 ```
+
+> **注**：MTEB / BEIR / MMTEB 等 embedding 评测虽属 C RAG 维度，但建议同时挂 `subdimension: embedding-eval` 用于细分检索。
 
 #### frontmatter 写法
 
@@ -520,8 +532,9 @@ legacy_note: ""            # AlpacaFarm 类标 "deprecated, 推荐 X 替代"
 #### 红线
 
 - ❌ **新 stub 缺 `dimension:` 字段** → validate-frontmatter 报 error（阻断 push）
-- ❌ **dimension 值非法**（非 A-K / long-ctx / obs / infra）→ error
+- ❌ **dimension 值非法**（非 A-K / L / dom / long-ctx / obs / infra）→ error
 - ❌ **F 维度 stub 缺 `subdimension`** → warn（业务核心维度需要分组）
+- ❌ **dom 维度 stub 缺 `subdimension`** → warn（领域需细分到 medical/legal/finance/education/scientific）
 
 ---
 

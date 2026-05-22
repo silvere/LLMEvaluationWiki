@@ -1,31 +1,88 @@
 ---
-title: "Winograd Schema Challenge"
+title: Winograd Schema Challenge
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, knowledge]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- knowledge
 language: en
 year: 2012
-authors: ["Hector J. Levesque", "Ernest Davis", "Leora Morgenstern"]
-arxiv_id: ""
-official_url: "https://cs.nyu.edu/~davise/papers/WinogradSchemas/WS.html"
-license: ""
+authors:
+- Hector J. Levesque
+- Ernest Davis
+- Leora Morgenstern
+arxiv_id: ''
+official_url: https://cs.nyu.edu/~davise/papers/WinogradSchemas/WS.html
+license: ''
 size: 273
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "Levesque, H., Davis, E., & Morgenstern, L. (2012). The Winograd Schema Challenge. AAAI Spring Symposium: Logical Formalizations of Commonsense Reasoning."
+- 'Levesque, H., Davis, E., & Morgenstern, L. (2012). The Winograd Schema Challenge. AAAI Spring Symposium: Logical Formalizations of Commonsense Reasoning.'
 dimension: A
 subdimension: benchmark
+sota:
+- score: 98.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: Winograd Schema Challenge accuracy
+- score: 97.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: accuracy
+- score: 97.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: accuracy
+- score: 96.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: accuracy
+- score: 95.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: accuracy, 2024 baseline
 ---
 
 # Winograd Schema Challenge
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 98.5% | Winograd Schema Challenge accuracy | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 97.8% | accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 97.2% | accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 96.5% | accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 95.0% | accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

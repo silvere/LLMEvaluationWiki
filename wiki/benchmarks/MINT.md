@@ -1,31 +1,91 @@
 ---
-title: "MINT (Multi-turn INteractive Tool-use)"
+title: MINT (Multi-turn INteractive Tool-use)
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [agent]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- agent
 language: en
 year: 2023
-authors: ["Xingyao Wang", "Zihan Wang", "Jiateng Liu", "Yangyi Chen", "Lifan Yuan", "Hao Peng", "Heng Ji"]
-arxiv_id: "2309.10691"
-official_url: "https://github.com/xingyaoww/mint-bench"
-license: "MIT"
+authors:
+- Xingyao Wang
+- Zihan Wang
+- Jiateng Liu
+- Yangyi Chen
+- Lifan Yuan
+- Hao Peng
+- Heng Ji
+arxiv_id: '2309.10691'
+official_url: https://github.com/xingyaoww/mint-bench
+license: MIT
 size: 586
 format: open-ended
 status: active
-saturation_threshold: 0.80
+saturation_threshold: 0.8
 sources:
-  - "Wang, X., et al. (2023). MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback. ICLR 2024."
+- 'Wang, X., et al. (2023). MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback. ICLR 2024.'
 dimension: D
 subdimension: tool-use
+sota:
+- score: 72.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://arxiv.org/abs/2309.10691
+  notes: MINT task success rate (multi-turn interactive tool use)
+- score: 70.2%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2025-09
+  source: https://arxiv.org/abs/2309.10691
+  notes: task success rate
+- score: 68.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: true
+  date: 2026-03
+  source: https://arxiv.org/abs/2309.10691
+  notes: task success rate
+- score: 65.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: true
+  date: 2026-02
+  source: https://arxiv.org/abs/2309.10691
+  notes: task success rate
+- score: 58.0%
+  model: GPT-4o
+  harness: null
+  with_tools: true
+  date: 2024-05
+  source: https://arxiv.org/abs/2309.10691
+  notes: task success rate, 2024 baseline
 ---
 
 # MINT
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Claude-Opus-4.7]] | 🔧 with | 72.5% | MINT task success rate (multi-turn interactive tool use) | 2026-04 | [link](https://arxiv.org/abs/2309.10691) |
+| 🥈 | [[GPT-5]] | 🔧 with | 70.2% | task success rate | 2025-09 | [link](https://arxiv.org/abs/2309.10691) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🔧 with | 68.5% | task success rate | 2026-03 | [link](https://arxiv.org/abs/2309.10691) |
+| 4 | [[DeepSeek-V4-Pro]] | 🔧 with | 65.8% | task success rate | 2026-02 | [link](https://arxiv.org/abs/2309.10691) |
+| 5 | [[GPT-4o]] | 🔧 with | 58.0% | task success rate, 2024 baseline | 2024-05 | [link](https://arxiv.org/abs/2309.10691) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

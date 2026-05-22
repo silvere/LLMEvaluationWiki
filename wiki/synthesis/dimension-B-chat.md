@@ -43,22 +43,23 @@ Chat 评测主流是 Chatbot Arena Elo + Arena-Hard-Auto + MT-Bench + AlpacaEval
 
 | Benchmark / Tool | 题量 | 年份 | 评测协议 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
-| [[Chatbot-Arena|Chatbot Arena]] | 6000000 | 2023 | user-defined / Bradley-Terry (Elo-like) | 1287 (top 10 at release)（Yi-Lightning） | 🟢 active |
-| [[IFEval|IFEval]] | 541 | 2023 | 0-shot / Prompt-level / Instruction-le… | 100.0%（Kimi-K2.5） | 🔴 saturated |
-| [[AlignBench|AlignBench]] | 683 | 2023 | — | — | — |
+| [[AlignBench|AlignBench]] | 683 | 2023 | — | 8.92（GPT-5） | — |
+| [[AlpacaEval-2.0|AlpacaEval 2.0]] | 805 | 2024 | — | 78.3%（Claude-Opus-4.7） | — |
+| [[Chatbot-Arena|Chatbot Arena]] | 6000000 | 2023 | user-defined / Bradley-Terry (Elo-like) | 1504（Claude-Opus-4.7） | 🟢 active |
+| [[CoQA|CoQA]] | 127000 | 2019 | — | 95.8%（GPT-5） | — |
+| [[IFEval|IFEval]] | 541 | 2023 | 0-shot / Prompt-level / Instruction-le… | 95.0%（Qwen3.5） | 🔴 saturated |
+| [[MT-Bench|MT-Bench]] | 80 | 2023 | — | 9.6（Claude-Opus-4.7） | — |
+| [[MT-Bench-101|MT-Bench-101]] | 1388 | 2024 | — | 9.72（GPT-5） | — |
+| [[WildBench|WildBench]] | 1024 | 2024 | — | 50.8%（GPT-5） | — |
 | [[AlpacaEval|AlpacaEval]] | 805 | 2023 | — | — | — |
-| [[AlpacaEval-2.0|AlpacaEval 2.0]] | 805 | 2024 | — | — | — |
+| [[AlpacaFarm|AlpacaFarm]] | — | — | — | — | ⚫ deprecated |
 | [[ArenaHard|Arena-Hard]] | 500 | 2024 | — | — | — |
-| [[CoQA|CoQA]] | 127000 | 2019 | — | — | — |
 | [[FollowBench|FollowBench]] | 820 | 2023 | — | — | — |
 | [[MADial-Bench|MADial-Bench]] | — | 2024 | — | — | — |
-| [[MT-Bench|MT-Bench]] | 80 | 2023 | — | — | — |
-| [[MT-Bench-101|MT-Bench-101]] | 1388 | 2024 | — | — | — |
 | [[MultiChallenge|MultiChallenge]] | — | 2025 | — | — | — |
 | [[ShareGPT|ShareGPT]] | 90000 | 2023 | — | — | — |
-| [[WildBench|WildBench]] | 1024 | 2024 | — | — | — |
 
-_共 14 条，最后更新：2026-05-22_
+_共 15 条，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:dimension=B:END -->
 

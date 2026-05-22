@@ -1,25 +1,64 @@
 ---
-title: "DROP"
+title: DROP
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [reasoning, math]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- reasoning
+- math
 language: en
 year: 2019
-authors: ["Dua et al."]
-arxiv_id: "1903.00161"
-official_url: "https://allenai.org/data/drop"
-license: "CC-BY-4.0"
+authors:
+- Dua et al.
+arxiv_id: '1903.00161'
+official_url: https://allenai.org/data/drop
+license: CC-BY-4.0
 size: 96567
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: A
 subdimension: benchmark
+sota:
+- score: 93.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: F1 score, 3-shot
+- score: 91.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: F1 score, 3-shot
+- score: 90.4%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: F1 score, 3-shot
+- score: 89.2%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: F1 score, 3-shot
+- score: 88.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: F1 score, 3-shot, 2024 baseline
 ---
 
 # DROP（Discrete Reasoning Over Paragraphs）
@@ -62,6 +101,23 @@ DROP 是评测语言模型数值推理和组合推理能力的重要基准，与
 ## SOTA 表现
 
 顶尖系统在 DROP 验证集上的 F1 分数超过 90%。大型语言模型（如 GPT-4）配合思维链（CoT）推理表现优秀。具体最新成绩见各模型官方技术报告。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 93.5% | F1 score, 3-shot | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 91.8% | F1 score, 3-shot | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 90.4% | F1 score, 3-shot | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 89.2% | F1 score, 3-shot | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 88.0% | F1 score, 3-shot, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

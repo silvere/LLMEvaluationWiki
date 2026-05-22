@@ -1,26 +1,84 @@
 ---
-title: "SciCode"
+title: SciCode
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [code, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- code
+- reasoning
 language: en
 year: 2024
-authors: ["Minyang Tian", "Luyu Gao", "Shizhuo Dylan Zhang", "Xinan Chen", "Cunwei Fan", "Xuefei Guo", "Roland Haas", "Pan Ji", "Kittithat Krongchon", "Yao Li", "Shengyan Liu", "Di Luo", "Yutao Ma", "Hao Tong", "Kha Trinh", "Hanghang Tong", "Julien Juillard", "Yifan Zhang", "Jiawei Han", "Heng Ji"]
-arxiv_id: "2407.13168"
-official_url: "https://scicode-bench.github.io/"
-license: ""
+authors:
+- Minyang Tian
+- Luyu Gao
+- Shizhuo Dylan Zhang
+- Xinan Chen
+- Cunwei Fan
+- Xuefei Guo
+- Roland Haas
+- Pan Ji
+- Kittithat Krongchon
+- Yao Li
+- Shengyan Liu
+- Di Luo
+- Yutao Ma
+- Hao Tong
+- Kha Trinh
+- Hanghang Tong
+- Julien Juillard
+- Yifan Zhang
+- Jiawei Han
+- Heng Ji
+arxiv_id: '2407.13168'
+official_url: https://scicode-bench.github.io/
+license: ''
 size: 338
 format: code
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "https://arxiv.org/abs/2407.13168"
-  - "https://scicode-bench.github.io/"
+- https://arxiv.org/abs/2407.13168
+- https://scicode-bench.github.io/
 dimension: H
+sota:
+- score: 42.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://scicode-bench.github.io
+  notes: SciCode solve rate (scientific computing code)
+- score: 40.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://scicode-bench.github.io
+  notes: solve rate
+- score: 38.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://scicode-bench.github.io
+  notes: solve rate
+- score: 36.0%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: solve rate
+- score: 28.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://scicode-bench.github.io
+  notes: solve rate, 2024 baseline
 ---
 
 # SciCode
@@ -64,6 +122,23 @@ SciCode的测评采用两种模式：（1）有科学背景知识提示（with c
 | GPT-4 Turbo | ~17% | ~12% |
 
 注：SciCode难度极高，即使顶级模型的通过率也不超过30%，具有良好的区分度。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 42.5% | SciCode solve rate (scientific computing code) | 2025-09 | [link](https://scicode-bench.github.io) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 40.2% | solve rate | 2026-04 | [link](https://scicode-bench.github.io) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 38.5% | solve rate | 2026-03 | [link](https://scicode-bench.github.io) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 36.0% | solve rate | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 28.5% | solve rate, 2024 baseline | 2024-05 | [link](https://scicode-bench.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

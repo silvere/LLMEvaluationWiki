@@ -43,10 +43,26 @@ domain:
 
 | Benchmark / Tool | 题量 | 年份 | 评测协议 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
-| [[MathVision|MathVision]] | — | 2024 | — | 88.6（Qwen3.5） | — |
-| [[MMMU|MMMU]] | 11550 | 2023 | — | 85.0（Qwen3.5） | — |
+| [[AI2D|AI2D]] | 15000 | 2016 | — | 98.5%（Gemini-3.1-Pro） | — |
+| [[ChartQA|ChartQA]] | 9608 | 2022 | — | 96.5%（Gemini-3.1-Pro） | — |
+| [[CMM-Math|CMM-Math]] | — | 2024 | — | 92.5%（Qwen3.6） | — |
+| [[CMMMU|CMMMU]] | — | — | — | 85.2%（Qwen3.6） | — |
+| [[DocVQA|DocVQA]] | 50000 | 2020 | — | 97.2%（Gemini-3.1-Pro） | — |
+| [[EgoSchema|EgoSchema]] | — | 2023 | — | 84.5%（Gemini-3.1-Pro） | — |
+| [[MathVision|MathVision]] | — | 2024 | — | 71.2%（Gemini-3.1-Pro） | — |
+| [[MathVista|MathVista]] | 6141 | 2023 | — | 82.5%（Gemini-3.1-Pro） | — |
+| [[MMBench|MMBench]] | 3000 | 2023 | — | 95.8%（Gemini-3.1-Pro） | — |
+| [[MMMU|MMMU]] | 11550 | 2023 | — | 86.0%（Qwen3.6） | — |
+| [[MMMU-Pro|MMMU-Pro]] | 3460 | 2024 | — | 68.2%（Gemini-3.1-Pro） | — |
+| [[MMStar|MMStar]] | 1500 | 2024 | — | 79.8%（Gemini-3.1-Pro） | — |
+| [[MMVet|MMVet]] | 218 | 2023 | — | 92.5%（Claude-Opus-4.7） | — |
+| [[OCRBench|OCRBench]] | 1000 | 2023 | — | 92.8%（Qwen3.6） | — |
+| [[RealWorldQA|RealWorldQA]] | — | 2024 | — | 82.5%（Gemini-3.1-Pro） | — |
+| [[ScienceQA|ScienceQA]] | 21208 | 2022 | — | 99.0%（GPT-5） | — |
+| [[TextVQA|TextVQA]] | 45336 | 2019 | — | 90.5%（Claude-Opus-4.7） | — |
+| [[Video-MME|Video-MME]] | 2700 | 2024 | — | 88.5%（Gemini-3.1-Pro） | — |
+| [[VQAv2|VQAv2]] | 2150000 | 2017 | — | 89.5%（Gemini-3.1-Pro） | — |
 | [[ADE20K|ADE20K]] | — | 2017 | — | — | — |
-| [[AI2D|AI2D]] | 15000 | 2016 | — | — | — |
 | [[All-Angles-Bench|All-Angles-Bench]] | — | 2025 | — | — | — |
 | [[ARKitScenes|ARKitScenes]] | — | 2021 | — | — | — |
 | [[BLINK|BLINK]] | — | 2024 | — | — | — |
@@ -54,17 +70,12 @@ domain:
 | [[CG-Bench|CG-Bench]] | — | 2024 | — | — | — |
 | [[CHAIR|CHAIR]] | — | 2018 | — | — | — |
 | [[CharadesSTA|Charades-STA]] | — | 2017 | — | — | — |
-| [[ChartQA|ChartQA]] | 9608 | 2022 | — | — | — |
 | [[CharXiv|CharXiv]] | — | 2024 | — | — | — |
 | [[ChronoMagic-Bench|ChronoMagic-Bench]] | — | 2024 | — | — | — |
-| [[CMM-Math|CMM-Math]] | — | 2024 | — | — | — |
-| [[CMMMU|CMMMU]] | — | — | — | — | — |
 | [[COCO-Stuff-164K|COCO-Stuff-164K]] | — | 2018 | — | — | — |
 | [[CountBench|CountBench]] | — | 2024 | — | — | — |
 | [[CRPE|CRPE]] | — | 2024 | — | — | — |
 | [[DA-2K|DA-2K]] | — | 2024 | — | — | — |
-| [[DocVQA|DocVQA]] | 50000 | 2020 | — | — | — |
-| [[EgoSchema|EgoSchema]] | — | 2023 | — | — | — |
 | [[EMMA|EMMA]] | — | 2024 | — | — | — |
 | [[EvalMuse-Alignment|EvalMuse-Alignment]] | — | 2024 | — | — | — |
 | [[EvalMuse-Structure|EvalMuse-Structure]] | — | 2024 | — | — | — |
@@ -78,9 +89,7 @@ domain:
 | [[LLaVA-Bench|LLaVA-Bench]] | — | 2023 | — | — | — |
 | [[Mantis-Eval|Mantis-Eval]] | — | 2024 | — | — | — |
 | [[MathVerse|MathVerse]] | 2612 | 2024 | — | — | — |
-| [[MathVista|MathVista]] | 6141 | 2023 | — | — | — |
 | [[MIRB|MIRB]] | — | 2024 | — | — | — |
-| [[MMBench|MMBench]] | 3000 | 2023 | — | — | — |
 | [[MMBench-Video|MMBench-Video]] | — | 2024 | — | — | — |
 | [[MME|MME]] | 2194 | 2023 | — | — | — |
 | [[MME-CoT|MME-CoT]] | — | 2025 | — | — | — |
@@ -89,10 +98,7 @@ domain:
 | [[MME-VideoOCR|MME-VideoOCR]] | — | 2025 | — | — | — |
 | [[MMIU|MMIU]] | — | 2024 | — | — | — |
 | [[MMMB|MMMB]] | — | 2024 | — | — | — |
-| [[MMMU-Pro|MMMU-Pro]] | 3460 | 2024 | — | — | — |
-| [[MMStar|MMStar]] | 1500 | 2024 | — | — | — |
 | [[MMT-Bench|MMT-Bench]] | — | 2024 | — | — | — |
-| [[MMVet|MMVet]] | 218 | 2023 | — | — | — |
 | [[MMVP|MMVP]] | — | 2024 | — | — | — |
 | [[MMVU|MMVU]] | — | 2024 | — | — | — |
 | [[MotionBench|MotionBench]] | — | 2024 | — | — | — |
@@ -102,7 +108,6 @@ domain:
 | [[MuirBench|MuirBench]] | — | 2024 | — | — | — |
 | [[Multilingual-MMBench|Multilingual MMBench]] | — | 2024 | — | — | — |
 | [[NYU-Depth-V2|NYU-Depth-V2]] | — | 2012 | — | — | — |
-| [[OCRBench|OCRBench]] | 1000 | 2023 | — | — | — |
 | [[OCRBench-V2|OCRBench V2]] | — | 2024 | — | — | — |
 | [[OmniEval|OmniEval]] | — | 2025 | — | — | — |
 | [[OVOBench|OVO-Bench]] | — | 2025 | — | — | — |
@@ -111,11 +116,9 @@ domain:
 | [[Physics-IQ|Physics-IQ]] | — | 2025 | — | — | — |
 | [[PhyX|PhyX]] | — | 2025 | — | — | — |
 | [[R-Bench|R-Bench]] | — | 2024 | — | — | — |
-| [[RealWorldQA|RealWorldQA]] | — | 2024 | — | — | — |
 | [[RefCOCO|RefCOCO]] | — | 2016 | — | — | — |
 | [[RefCOCO+|RefCOCO+]] | — | 2016 | — | — | — |
 | [[RefCOCOg|RefCOCOg]] | — | 2016 | — | — | — |
-| [[ScienceQA|ScienceQA]] | 21208 | 2022 | — | — | — |
 | [[SEED-Bench|SEED-Bench]] | 19242 | 2023 | — | — | — |
 | [[SEEDBench-2-Plus|SEEDBench-2-Plus]] | — | 2024 | — | — | — |
 | [[StreamBench|StreamBench]] | — | 2024 | — | — | — |
@@ -123,16 +126,13 @@ domain:
 | [[TACoS|TACoS]] | — | 2013 | — | — | — |
 | [[TempCompass|TempCompass]] | — | 2024 | — | — | — |
 | [[TemporalBench|TemporalBench]] | — | 2024 | — | — | — |
-| [[TextVQA|TextVQA]] | 45336 | 2019 | — | — | — |
 | [[TOMATO|TOMATO]] | — | 2024 | — | — | — |
 | [[VCBench|VCBench]] | — | 2024 | — | — | — |
 | [[VCR|VCR]] | — | 2024 | — | — | — |
 | [[VE-Bench|VE-Bench]] | — | 2024 | — | — | — |
 | [[Video-Holmes|Video-Holmes]] | — | 2025 | — | — | — |
-| [[Video-MME|Video-MME]] | 2700 | 2024 | — | — | — |
 | [[VideoGen-Eval|VideoGen-Eval 1.0]] | — | 2024 | — | — | — |
 | [[VMBench|VMBench]] | — | 2025 | — | — | — |
-| [[VQAv2|VQAv2]] | 2150000 | 2017 | — | — | — |
 | [[WildVision|WildVision]] | 0 | 2024 | — | — | — |
 | [[WorldModelBench|WorldModelBench]] | — | 2024 | — | — | — |
 | [[WorldScore|WorldScore]] | — | 2024 | — | — | — |

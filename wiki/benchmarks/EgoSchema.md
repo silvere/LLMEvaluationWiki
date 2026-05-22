@@ -1,16 +1,52 @@
 ---
-title: "EgoSchema"
+title: EgoSchema
 type: benchmark
 publish: true
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
 domain:
-  - multimodal
+- multimodal
 year: 2023
-arxiv_id: "2308.09126"
+arxiv_id: '2308.09126'
 status: active
 dimension: E
+sota:
+- score: 84.5%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://egoschema.github.io
+  notes: accuracy on long-form video QA
+- score: 83.2%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://egoschema.github.io
+  notes: accuracy
+- score: 82.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://egoschema.github.io
+  notes: accuracy
+- score: 81.0%
+  model: Qwen3.6
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://egoschema.github.io
+  notes: accuracy
+- score: 72.2%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://egoschema.github.io
+  notes: accuracy, 2024 baseline
 ---
 
 # EgoSchema
@@ -18,6 +54,22 @@ dimension: E
 > 专注于第一人称（Ego）视角长视频理解的多选题基准，每题需综合 3 分钟视频内容作答。
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[Gemini-3.1-Pro]] | 🚫 no | 84.5% | accuracy on long-form video QA | 2026-03 | [link](https://egoschema.github.io) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 83.2% | accuracy | 2026-04 | [link](https://egoschema.github.io) |
+| 🥉 | [[GPT-5]] | 🚫 no | 82.5% | accuracy | 2025-09 | [link](https://egoschema.github.io) |
+| 4 | [[Qwen3.6]] | 🚫 no | 81.0% | accuracy | 2026-04 | [link](https://egoschema.github.io) |
+| 5 | [[GPT-4o]] | 🚫 no | 72.2% | accuracy, 2024 baseline | 2024-05 | [link](https://egoschema.github.io) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

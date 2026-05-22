@@ -1,30 +1,84 @@
 ---
-title: "ShareGPT"
+title: ShareGPT
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [dialog]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- dialog
 language: en
 year: 2023
-authors: ["Domino Starr (Community)"]
-arxiv_id: ""
-official_url: "https://sharegpt.com"
-license: "CC BY 4.0"
+authors:
+- Domino Starr (Community)
+arxiv_id: ''
+official_url: https://sharegpt.com
+license: CC BY 4.0
 size: 90000
 format: open-ended
 status: active
-saturation_threshold: 0.80
+saturation_threshold: 0.8
 sources:
-  - "Chiang, W.L., et al. (2023). Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90%* ChatGPT Quality. LMSYS Blog."
+- 'Chiang, W.L., et al. (2023). Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90%* ChatGPT Quality. LMSYS Blog.'
 dimension: B
+sota:
+- score: '8.92'
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered
+  notes: GPT-4 judge score (1-10) on ShareGPT conversations
+- score: '8.78'
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: judge score (1-10)
+- score: '8.72'
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: judge score (1-10)
+- score: '8.65'
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: judge score (1-10)
+- score: '8.35'
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: judge score (1-10), 2024 baseline
 ---
 
 # ShareGPT
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 8.92 | GPT-4 judge score (1-10) on ShareGPT conversations | 2025-09 | [link](https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 8.78 | judge score (1-10) | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 8.72 | judge score (1-10) | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 8.65 | judge score (1-10) | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 8.35 | judge score (1-10), 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

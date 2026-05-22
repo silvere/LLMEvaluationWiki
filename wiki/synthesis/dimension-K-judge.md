@@ -43,18 +43,25 @@ Judge benchmark：RewardBench / JudgeBench / LLMBar / MT-Bench Human Judgments�
 
 | Benchmark / Tool | 子类 | 题量 | 年份 | SOTA / 备注 | Saturation |
 |---|---|---|---|---|---|
+| [[2504.08942|AgentRewardBench: Evaluating Automatic Evaluations of Web Agent Trajectories]] | judge-benchmark | — | 2025 | — | — |
 | [[Auto-J|Auto-J]] | judge-model | — | — | — | — |
 | [[CompassJudger|CompassJudger-1]] | judge-model | — | — | — | — |
 | [[JudgeBench|JudgeBench]] | judge-benchmark | — | — | — | — |
 | [[JudgeLM|JudgeLM]] | judge-model | — | — | — | — |
+| [[2305.17926|Large Language Models are not Fair Evaluators]] | judge-benchmark | — | 2023 | — | — |
 | [[LLMBar|LLMBar]] | judge-benchmark | — | — | — | — |
+| [[2502.14191|Multimodal RewardBench: Holistic Evaluation of Reward Models for Vision Language Models]] | reward-model | — | 2025 | — | — |
 | [[PandaLM|PandaLM]] | judge-model | — | — | — | — |
+| [[2501.03124|PRMBench: A Fine-grained and Challenging Benchmark for Process-Level Reward Models]] | judge-benchmark | — | 2025 | — | — |
+| [[2412.06559|ProcessBench: Identifying Process Errors in Mathematical Reasoning]] | judge-benchmark | — | 2024 | — | — |
 | [[Prometheus|Prometheus]] | judge-model | — | — | — | — |
 | [[Prometheus|Prometheus 2]] | judge-model | — | — | — | — |
+| [[2405.01535|Prometheus 2: An Open Source Language Model Specialized in Evaluating Other Language Models]] | judge-model | — | 2024 | — | — |
 | [[RewardBench|RewardBench]] | judge-benchmark | — | — | — | — |
+| [[2506.01937|RewardBench 2: Advancing Reward Model Evaluation]] | judge-benchmark | — | 2025 | — | — |
 | [[Themis|Themis]] | judge-model | — | — | — | — |
 
-_共 10 条，最后更新：2026-05-22_
+_共 17 条，最后更新：2026-05-22_
 
 <!-- AUTO-SYN-TABLE:dimension=K:END -->
 

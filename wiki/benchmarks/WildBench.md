@@ -1,24 +1,63 @@
 ---
-title: "WildBench"
+title: WildBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [instruction-following, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- instruction-following
+- reasoning
 language: en
 year: 2024
-authors: ["Lin et al."]
-arxiv_id: "2406.04770"
-official_url: "https://huggingface.co/spaces/allenai/WildBench"
-license: "Apache-2.0"
+authors:
+- Lin et al.
+arxiv_id: '2406.04770'
+official_url: https://huggingface.co/spaces/allenai/WildBench
+license: Apache-2.0
 size: 1024
 format: open-ended
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources: []
 dimension: B
+sota:
+- score: 50.8%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://huggingface.co/spaces/allenai/WildBench
+  notes: WB-Reward score, GPT-4o judge
+- score: 48.5%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://huggingface.co/spaces/allenai/WildBench
+  notes: WB-Reward score, GPT-4o judge
+- score: 46.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://huggingface.co/spaces/allenai/WildBench
+  notes: WB-Reward score
+- score: 44.8%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://huggingface.co/spaces/allenai/WildBench
+  notes: WB-Reward score
+- score: 40.5%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://huggingface.co/spaces/allenai/WildBench
+  notes: WB-Reward score, 2024 baseline
 ---
 
 # WildBench
@@ -64,6 +103,23 @@ WildBench 的重要贡献是引入了**细粒度的评分标准**：Judge 不仅
 ## SOTA 表现
 
 顶尖模型（GPT-4o、Claude 3.5 Sonnet 等）在 WildBench 上的 WB-Score 超过 7.0/10，WB-Reward 胜率超过 60%。具体最新成绩见官方 HuggingFace 排行榜。
+
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 50.8% | WB-Reward score, GPT-4o judge | 2025-09 | [link](https://huggingface.co/spaces/allenai/WildBench) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 48.5% | WB-Reward score, GPT-4o judge | 2026-04 | [link](https://huggingface.co/spaces/allenai/WildBench) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 46.2% | WB-Reward score | 2026-03 | [link](https://huggingface.co/spaces/allenai/WildBench) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 44.8% | WB-Reward score | 2026-02 | [link](https://huggingface.co/spaces/allenai/WildBench) |
+| 5 | [[GPT-4o]] | 🚫 no | 40.5% | WB-Reward score, 2024 baseline | 2024-05 | [link](https://huggingface.co/spaces/allenai/WildBench) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 主要挑战与局限
 

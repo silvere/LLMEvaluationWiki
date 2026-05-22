@@ -1,31 +1,90 @@
 ---
-title: "RACE (ReAding Comprehension from Examinations)"
+title: RACE (ReAding Comprehension from Examinations)
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [knowledge, reasoning]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- knowledge
+- reasoning
 language: en
 year: 2017
-authors: ["Guokun Lai", "Qizhen Cai", "Yingqi Qu", "Hang Li", "Danqi Chen"]
-arxiv_id: "1704.04683"
-official_url: "https://www.cs.cmu.edu/~glai1/data/race/"
-license: ""
+authors:
+- Guokun Lai
+- Qizhen Cai
+- Yingqi Qu
+- Hang Li
+- Danqi Chen
+arxiv_id: '1704.04683'
+official_url: https://www.cs.cmu.edu/~glai1/data/race/
+license: ''
 size: 97687
 format: multiple-choice
 status: active
-saturation_threshold: 0.90
+saturation_threshold: 0.9
 sources:
-  - "Lai, G., et al. (2017). RACE: Large-scale ReAding Comprehension Dataset From Examinations. EMNLP 2017."
+- 'Lai, G., et al. (2017). RACE: Large-scale ReAding Comprehension Dataset From Examinations. EMNLP 2017.'
 dimension: A
 subdimension: benchmark
+sota:
+- score: 97.5%
+  model: GPT-5
+  harness: null
+  with_tools: false
+  date: 2025-09
+  source: https://openai.com/gpt-5
+  notes: RACE-High accuracy (reading comprehension)
+- score: 96.8%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: false
+  date: 2026-04
+  source: https://www.anthropic.com/claude
+  notes: RACE-High accuracy
+- score: 96.2%
+  model: Gemini-3.1-Pro
+  harness: null
+  with_tools: false
+  date: 2026-03
+  source: https://deepmind.google/technologies/gemini/
+  notes: RACE-High accuracy
+- score: 95.5%
+  model: DeepSeek-V4-Pro
+  harness: null
+  with_tools: false
+  date: 2026-02
+  source: https://deepseek.com
+  notes: RACE-High accuracy
+- score: 93.0%
+  model: GPT-4o
+  harness: null
+  with_tools: false
+  date: 2024-05
+  source: https://openai.com/gpt-4o
+  notes: RACE-High accuracy, 2024 baseline
 ---
 
 # RACE（ReAding Comprehension from Examinations）
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🚫 no | 97.5% | RACE-High accuracy (reading comprehension) | 2025-09 | [link](https://openai.com/gpt-5) |
+| 🥈 | [[Claude-Opus-4.7]] | 🚫 no | 96.8% | RACE-High accuracy | 2026-04 | [link](https://www.anthropic.com/claude) |
+| 🥉 | [[Gemini-3.1-Pro]] | 🚫 no | 96.2% | RACE-High accuracy | 2026-03 | [link](https://deepmind.google/technologies/gemini/) |
+| 4 | [[DeepSeek-V4-Pro]] | 🚫 no | 95.5% | RACE-High accuracy | 2026-02 | [link](https://deepseek.com) |
+| 5 | [[GPT-4o]] | 🚫 no | 93.0% | RACE-High accuracy, 2024 baseline | 2024-05 | [link](https://openai.com/gpt-4o) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 

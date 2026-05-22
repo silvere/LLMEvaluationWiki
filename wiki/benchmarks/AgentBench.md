@@ -1,31 +1,93 @@
 ---
-title: "AgentBench"
+title: AgentBench
 type: benchmark
 publish: true
 author_mode: llm
 confidence: draft
-as_of_date: "2026-05-14"
-last_verified: "2026-05-14"
-domain: [agent]
+as_of_date: '2026-05-14'
+last_verified: '2026-05-22'
+domain:
+- agent
 language: en
 year: 2023
-authors: ["Xiao Liu", "Hao Yu", "Hanchen Zhang", "Yifan Xu", "Xuanyu Lei", "Hanyu Lai", "Yu Gu", "Yuxian Gu", "Hangliang Ding", "Kai Men", "Kejuan Yang", "Shudan Zhang", "Xiang Deng", "Aohan Zeng", "Zhiyuan Liu", "Yuxiao Dong", "Jie Tang"]
-arxiv_id: "2308.03688"
-official_url: "https://llmbench.ai/agent"
-license: "Apache 2.0"
+authors:
+- Xiao Liu
+- Hao Yu
+- Hanchen Zhang
+- Yifan Xu
+- Xuanyu Lei
+- Hanyu Lai
+- Yu Gu
+- Yuxian Gu
+- Hangliang Ding
+- Kai Men
+- Kejuan Yang
+- Shudan Zhang
+- Xiang Deng
+- Aohan Zeng
+- Zhiyuan Liu
+- Yuxiao Dong
+- Jie Tang
+arxiv_id: '2308.03688'
+official_url: https://llmbench.ai/agent
+license: Apache 2.0
 size: 1091
 format: open-ended
 status: active
-saturation_threshold: 0.80
+saturation_threshold: 0.8
 sources:
-  - "Liu, X., et al. (2023). AgentBench: Evaluating LLMs as Agents. ICLR 2024."
+- 'Liu, X., et al. (2023). AgentBench: Evaluating LLMs as Agents. ICLR 2024.'
 dimension: D
 subdimension: general
+sota:
+- score: 54.3%
+  model: GPT-5
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://benchmarkingagents.com/agent-benchmarks/
+  notes: 8 环境整体（OS/DB/KG/Web/ALFWorld/...），更新版评估框架
+- score: 48.7%
+  model: Claude-Opus-4.7
+  harness: null
+  with_tools: true
+  date: 2026-04
+  source: https://benchmarkingagents.com/agent-benchmarks/
+  notes: 8 环境整体
+- score: '4.27'
+  model: GPT-4
+  harness: null
+  with_tools: true
+  date: 2023-08
+  source: https://arxiv.org/abs/2308.03688
+  notes: 原始论文评分（0-8 scale），AgentBench 首发
+- score: '2.11'
+  model: Claude-2
+  harness: null
+  with_tools: true
+  date: 2023-08
+  source: https://arxiv.org/abs/2308.03688
+  notes: 原始论文评分（0-8 scale）
 ---
 
 # AgentBench
 
 <!-- AUTO-LINKS:START -->
+
+<!-- AUTO-SOTA:START -->
+
+## 模型得分排行
+
+> 完整模型得分排行（含 SOTA 与历代梯队）。由 `scripts/inject-sota-table.ts` 从 frontmatter `sota` 字段自动渲染，**按 score 自动降序**。维护：编辑 frontmatter，不要手改本表。
+
+| # | 模型 | Tools | 分数 | 备注 | 时间 | 来源 |
+|---|---|---|---|---|---|---|
+| 🥇 | [[GPT-5]] | 🔧 with | 54.3% | 8 环境整体（OS/DB/KG/Web/ALFWorld/...），更新版评估框架 | 2026-04 | [link](https://benchmarkingagents.com/agent-benchmarks/) |
+| 🥈 | [[Claude-Opus-4.7]] | 🔧 with | 48.7% | 8 环境整体 | 2026-04 | [link](https://benchmarkingagents.com/agent-benchmarks/) |
+| 🥉 | [[GPT-4]] | 🔧 with | 4.27 | 原始论文评分（0-8 scale），AgentBench 首发 | 2023-08 | [link](https://arxiv.org/abs/2308.03688) |
+| 4 | [[Claude-2]] | 🔧 with | 2.11 | 原始论文评分（0-8 scale） | 2023-08 | [link](https://arxiv.org/abs/2308.03688) |
+
+<!-- AUTO-SOTA:END -->
 
 ## 参考链接
 
