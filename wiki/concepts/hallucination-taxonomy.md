@@ -9,6 +9,7 @@ last_verified: "2026-05-14"
 sources: []
 aliases:
   - hallucination
+  - hallucination
   - hallucination-taxonomy
 ---
 

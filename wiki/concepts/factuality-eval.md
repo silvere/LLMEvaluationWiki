@@ -7,6 +7,8 @@ confidence: draft
 as_of_date: "2026-05-14"
 last_verified: "2026-05-14"
 sources: []
+aliases:
+  - factuality
 ---
 
 # 事实性评测（Factuality Evaluation）

@@ -8,6 +8,7 @@ last_verified: "2026-05-14"
 sources: []
 aliases:
   - safety-eval-landscape
+  - safety-evaluation
   - AI安全评测
 domain:
   - safety
