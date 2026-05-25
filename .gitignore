@@ -12,3 +12,6 @@ private/
 # Claude Code self-improvement hook 沉淀（保留 LEARNINGS.md，忽略其它）
 .learnings/ERRORS.md
 .learnings/FEATURE_REQUESTS.md
+
+# Claude Code 内部目录
+.claude/
