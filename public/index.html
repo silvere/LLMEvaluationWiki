@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr"><head><title>LLMEvaluationWiki 全量索引 — LLMEvaluationWiki</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="LLM 评测 Wiki"/><meta property="og:title" content="LLMEvaluationWiki 全量索引 — LLMEvaluationWiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="LLMEvaluationWiki 全量索引 — LLMEvaluationWiki"/><meta name="twitter:description" content="LLMEvaluationWiki 索引 ⚠️ 本文件由 scripts/build-index.ts 自动生成，请勿手动编辑。 每次 /ingest 操作完成后会自动重建。上次生成：2026-05-14 统计 类别页数benchmark164concept97tool23leaderboard19entity66source68synthesis0industry38合计475 benchmarks/ — 评测集 [AdvBench] draft · safety (2023) [AgentBench] draft · agent (2023) [AGIEval] draft · knowl..."/><meta property="og:description" content="LLMEvaluationWiki 索引 ⚠️ 本文件由 scripts/build-index.ts 自动生成，请勿手动编辑。 每次 /ingest 操作完成后会自动重建。上次生成：2026-05-14 统计 类别页数benchmark164concept97tool23leaderboard19entity66source68synthesis0industry38合计475 benchmarks/ — 评测集 [AdvBench] draft · safety (2023) [AgentBench] draft · agent (2023) [AGIEval] draft · knowl..."/><meta property="og:image:alt" content="LLMEvaluationWiki 索引 ⚠️ 本文件由 scripts/build-index.ts 自动生成，请勿手动编辑。 每次 /ingest 操作完成后会自动重建。上次生成：2026-05-14 统计 类别页数benchmark164concept97tool23leaderboard19entity66source68synthesis0industry38合计475 benchmarks/ — 评测集 [AdvBench] draft · safety (2023) [AgentBench] draft · agent (2023) [AGIEval] draft · knowl..."/><meta property="twitter:domain" content="wiki.jerryai.cn"/><meta property="og:url" content="https://wiki.jerryai.cn/index"/><meta property="twitter:url" content="https://wiki.jerryai.cn/index"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="LLMEvaluationWiki 索引 ⚠️ 本文件由 scripts/build-index.ts 自动生成，请勿手动编辑。 每次 /ingest 操作完成后会自动重建。上次生成：2026-05-14 统计 类别页数benchmark164concept97tool23leaderboard19entity66source68synthesis0industry38合计475 benchmarks/ — 评测集 [AdvBench] draft · safety (2023) [AgentBench] draft · agent (2023) [AGIEval] draft · knowl..."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2J5dGVkYW5jZS9Db2RlL0xMTUV2YWx1YXRpb25XaWtpL3F1YXJ0ei9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><script>
+        (function() {
+          const setTitle = (el) => {
+            if (el && !el.getAttribute("title")) {
+              const text = (el.textContent || "").trim()
+              if (text) el.setAttribute("title", text)
+            }
+          }
+          const apply = (root) => {
+            for (const a of root.querySelectorAll(".explorer-content a")) setTitle(a)
+            for (const s of root.querySelectorAll(".explorer-content .folder-title, .explorer-content .folder-container button span")) setTitle(s)
+          }
+          const observe = () => {
+            const container = document.querySelector(".explorer-content")
+            if (!container) return false
+            apply(document)
+            const mo = new MutationObserver(() => apply(container))
+            mo.observe(container, { childList: true, subtree: true })
+            if (window.addCleanup) window.addCleanup(() => mo.disconnect())
+            return true
+          }
+          document.addEventListener("nav", () => {
+            // explorer 是 async 渲染，多试几次直到 container 出现
+            if (observe()) return
+            const t = setInterval(() => { if (observe()) clearInterval(t) }, 100)
+            setTimeout(() => clearInterval(t), 5000)
+          })
+        })()
+      </script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://wiki.jerryai.cn/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://wiki.jerryai.cn/index-og-image.webp"/><meta property="og:image:url" content="https://wiki.jerryai.cn/index-og-image.webp"/><meta name="twitter:image" content="https://wiki.jerryai.cn/index-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="index"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">LLM 评测 Wiki</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>搜索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜索些什么" placeholder="搜索些什么"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="阅读模式"><title>阅读模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-0" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">LLMEvaluationWiki 全量索引</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-25T04:22:46.021Z">2026年5月25日</time><span>17分钟阅读</span></p></div></div><article class="popover-hint"><h1 id="llmevaluationwiki-索引">LLMEvaluationWiki 索引<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#llmevaluationwiki-索引" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p>⚠️ 本文件由 <code>scripts/build-index.ts</code> 自动生成，<strong>请勿手动编辑</strong>。
+每次 <code>/ingest</code> 操作完成后会自动重建。上次生成：2026-05-14</p>
+</blockquote>
+<hr/>
+<h2 id="统计">统计<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#统计" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>类别</th><th>页数</th></tr></thead><tbody><tr><td>benchmark</td><td>164</td></tr><tr><td>concept</td><td>97</td></tr><tr><td>tool</td><td>23</td></tr><tr><td>leaderboard</td><td>19</td></tr><tr><td>entity</td><td>66</td></tr><tr><td>source</td><td>68</td></tr><tr><td>synthesis</td><td>0</td></tr><tr><td>industry</td><td>38</td></tr><tr><td><strong>合计</strong></td><td><strong>475</strong></td></tr></tbody></table></div>
+<hr/>
+<h2 id="benchmarks--评测集">benchmarks/ — 评测集<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#benchmarks--评测集" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./wiki/benchmarks/AdvBench" class="internal alias" data-slug="wiki/benchmarks/AdvBench">[AdvBench]</a> <code>draft</code> · safety (2023)</li>
+<li><a href="./wiki/benchmarks/AgentBench" class="internal alias" data-slug="wiki/benchmarks/AgentBench">[AgentBench]</a> <code>draft</code> · agent (2023)</li>
+<li><a href="./wiki/benchmarks/AGIEval" class="internal alias" data-slug="wiki/benchmarks/AGIEval">[AGIEval]</a> <code>draft</code> · knowledge, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/AI2D" class="internal alias" data-slug="wiki/benchmarks/AI2D">[AI2D]</a> <code>draft</code> · multimodal, knowledge (2016)</li>
+<li><a href="./wiki/benchmarks/AIME" class="internal alias" data-slug="wiki/benchmarks/AIME">[AIME]</a> <code>draft</code> · math, reasoning (1983)</li>
+<li><a href="./wiki/benchmarks/AIME24" class="internal alias" data-slug="wiki/benchmarks/AIME24">[AIME24|AIME 2024]</a> <code>draft</code> · math, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/ALFWorld" class="internal alias" data-slug="wiki/benchmarks/ALFWorld">[ALFWorld]</a> <code>draft</code> · agent (2021)</li>
+<li><a href="./wiki/benchmarks/AlignBench" class="internal alias" data-slug="wiki/benchmarks/AlignBench">[AlignBench]</a> <code>draft</code> · reasoning, knowledge, instruction-following (2023)</li>
+<li><a href="./wiki/benchmarks/AlpacaEval" class="internal alias" data-slug="wiki/benchmarks/AlpacaEval">[AlpacaEval]</a> <code>draft</code> · instruction-following (2023)</li>
+<li><a href="./wiki/benchmarks/AlpacaEval-2.0" class="internal alias" data-slug="wiki/benchmarks/AlpacaEval-2.0">[AlpacaEval-2.0|AlpacaEval 2.0]</a> <code>draft</code> · instruction-following (2024)</li>
+<li><a href="./wiki/benchmarks/AMC23" class="internal alias" data-slug="wiki/benchmarks/AMC23">[AMC23]</a> <code>draft</code> · math, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/ANLI" class="internal alias" data-slug="wiki/benchmarks/ANLI">[ANLI|ANLI (Adversarial NLI)]</a> <code>draft</code> · reasoning (2020)</li>
+<li><a href="./wiki/benchmarks/API-Bank" class="internal alias" data-slug="wiki/benchmarks/API-Bank">[API-Bank]</a> <code>draft</code> · agent (2023)</li>
+<li><a href="./wiki/benchmarks/APPS" class="internal alias" data-slug="wiki/benchmarks/APPS">[APPS]</a> <code>draft</code> · code (2021)</li>
+<li><a href="./wiki/benchmarks/ARB" class="internal alias" data-slug="wiki/benchmarks/ARB">[ARB]</a> <code>draft</code> · reasoning, math (2023)</li>
+<li><a href="./wiki/benchmarks/ARC" class="internal alias" data-slug="wiki/benchmarks/ARC">[ARC]</a> <code>draft</code> <code>saturated</code> · knowledge, reasoning (2018)</li>
+<li><a href="./wiki/benchmarks/ArenaHard" class="internal alias" data-slug="wiki/benchmarks/ArenaHard">[ArenaHard|Arena-Hard]</a> <code>draft</code> · reasoning, instruction-following (2024)</li>
+<li><a href="./wiki/benchmarks/BBH" class="internal alias" data-slug="wiki/benchmarks/BBH">[BBH]</a> <code>draft</code> <code>saturated</code> · reasoning, knowledge (2022)</li>
+<li><a href="./wiki/benchmarks/BBQ" class="internal alias" data-slug="wiki/benchmarks/BBQ">[BBQ]</a> <code>draft</code> · bias-fairness (2022)</li>
+<li><a href="./wiki/benchmarks/BeaverTails" class="internal alias" data-slug="wiki/benchmarks/BeaverTails">[BeaverTails]</a> <code>draft</code> · safety, bias-fairness (2023)</li>
+<li><a href="./wiki/benchmarks/BigCodeBench" class="internal alias" data-slug="wiki/benchmarks/BigCodeBench">[BigCodeBench]</a> <code>draft</code> · code (2024)</li>
+<li><a href="./wiki/benchmarks/BiGGen-Bench" class="internal alias" data-slug="wiki/benchmarks/BiGGen-Bench">[BiGGen-Bench]</a> <code>draft</code> · reasoning, instruction-following, knowledge (2024)</li>
+<li><a href="./wiki/benchmarks/BIRD" class="internal alias" data-slug="wiki/benchmarks/BIRD">[BIRD]</a> <code>draft</code> · code (2023)</li>
+<li><a href="./wiki/benchmarks/BoolQ" class="internal alias" data-slug="wiki/benchmarks/BoolQ">[BoolQ]</a> <code>draft</code> · reasoning, knowledge (2019)</li>
+<li><a href="./wiki/benchmarks/C-Eval" class="internal alias" data-slug="wiki/benchmarks/C-Eval">[C-Eval]</a> <code>draft</code> · knowledge, reasoning, multilingual (2023)</li>
+<li><a href="./wiki/benchmarks/ChartQA" class="internal alias" data-slug="wiki/benchmarks/ChartQA">[ChartQA]</a> <code>draft</code> · multimodal (2022)</li>
+<li><a href="./wiki/benchmarks/Chatbot-Arena" class="internal alias" data-slug="wiki/benchmarks/Chatbot-Arena">[Chatbot-Arena|Chatbot Arena]</a> <code>draft</code> · dialog, instruction-following, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/CLongEval" class="internal alias" data-slug="wiki/benchmarks/CLongEval">[CLongEval]</a> <code>draft</code> · long-context, reasoning, knowledge (2024)</li>
+<li><a href="./wiki/benchmarks/CMMLU" class="internal alias" data-slug="wiki/benchmarks/CMMLU">[CMMLU]</a> <code>draft</code> · knowledge, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/CodeContests" class="internal alias" data-slug="wiki/benchmarks/CodeContests">[CodeContests]</a> <code>draft</code> · code, reasoning (2022)</li>
+<li><a href="./wiki/benchmarks/CommonsenseQA" class="internal alias" data-slug="wiki/benchmarks/CommonsenseQA">[CommonsenseQA]</a> <code>draft</code> · knowledge, reasoning (2019)</li>
+<li><a href="./wiki/benchmarks/COPA" class="internal alias" data-slug="wiki/benchmarks/COPA">[COPA]</a> <code>draft</code> <code>saturated</code> · reasoning (2011)</li>
+<li><a href="./wiki/benchmarks/CoQA" class="internal alias" data-slug="wiki/benchmarks/CoQA">[CoQA]</a> <code>draft</code> · reasoning, dialog (2019)</li>
+<li><a href="./wiki/benchmarks/CREAK" class="internal alias" data-slug="wiki/benchmarks/CREAK">[CREAK|CREAK (Commonsense Reasoning over Entity Knowledge)]</a> <code>draft</code> · knowledge, reasoning (2021)</li>
+<li><a href="./wiki/benchmarks/CRUXEval" class="internal alias" data-slug="wiki/benchmarks/CRUXEval">[CRUXEval]</a> <code>draft</code> · code, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/CValues" class="internal alias" data-slug="wiki/benchmarks/CValues">[CValues]</a> <code>draft</code> · safety, bias-fairness (2023)</li>
+<li><a href="./wiki/benchmarks/Do-Not-Answer" class="internal alias" data-slug="wiki/benchmarks/Do-Not-Answer">[Do-Not-Answer]</a> <code>draft</code> · safety (2023)</li>
+<li><a href="./wiki/benchmarks/DocVQA" class="internal alias" data-slug="wiki/benchmarks/DocVQA">[DocVQA]</a> <code>draft</code> · multimodal (2020)</li>
+<li><a href="./wiki/benchmarks/DROP" class="internal alias" data-slug="wiki/benchmarks/DROP">[DROP]</a> <code>draft</code> · reasoning, math (2019)</li>
+<li><a href="./wiki/benchmarks/DS-1000" class="internal alias" data-slug="wiki/benchmarks/DS-1000">[DS-1000]</a> <code>draft</code> · code (2022)</li>
+<li><a href="./wiki/benchmarks/EntityQuestions" class="internal alias" data-slug="wiki/benchmarks/EntityQuestions">[EntityQuestions]</a> <code>draft</code> · knowledge (2021)</li>
+<li><a href="./wiki/benchmarks/EvalPerf" class="internal alias" data-slug="wiki/benchmarks/EvalPerf">[EvalPerf]</a> <code>draft</code> · code, efficiency (2024)</li>
+<li><a href="./wiki/benchmarks/EvoEval" class="internal alias" data-slug="wiki/benchmarks/EvoEval">[EvoEval]</a> <code>draft</code> · code (2024)</li>
+<li><a href="./wiki/benchmarks/FActScore" class="internal alias" data-slug="wiki/benchmarks/FActScore">[FActScore]</a> <code>draft</code> · hallucination, knowledge (2023)</li>
+<li><a href="./wiki/benchmarks/FEVER" class="internal alias" data-slug="wiki/benchmarks/FEVER">[FEVER]</a> <code>draft</code> · knowledge, hallucination (2018)</li>
+<li><a href="./wiki/benchmarks/FinanceBench" class="internal alias" data-slug="wiki/benchmarks/FinanceBench">[FinanceBench]</a> <code>draft</code> · knowledge, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/FLASK" class="internal alias" data-slug="wiki/benchmarks/FLASK">[FLASK]</a> <code>draft</code> · instruction-following, reasoning, safety (2023)</li>
+<li><a href="./wiki/benchmarks/FLoRes-200" class="internal alias" data-slug="wiki/benchmarks/FLoRes-200">[FLoRes-200]</a> <code>draft</code> · multilingual (2022)</li>
+<li><a href="./wiki/benchmarks/FollowBench" class="internal alias" data-slug="wiki/benchmarks/FollowBench">[FollowBench]</a> <code>draft</code> · instruction-following (2023)</li>
+<li><a href="./wiki/benchmarks/FrontierMath" class="internal alias" data-slug="wiki/benchmarks/FrontierMath">[FrontierMath]</a> <code>draft</code> · math, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/GAIA" class="internal alias" data-slug="wiki/benchmarks/GAIA">[GAIA|GAIA (General AI Assistants)]</a> <code>draft</code> · agent, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/GenVidBench" class="internal alias" data-slug="wiki/benchmarks/GenVidBench">[GenVidBench]</a> <code>draft</code> · multimodal, safety (2025)</li>
+<li><a href="./wiki/benchmarks/GLUE" class="internal alias" data-slug="wiki/benchmarks/GLUE">[GLUE]</a> <code>draft</code> <code>saturated</code> · reasoning, knowledge (2018)</li>
+<li><a href="./wiki/benchmarks/GPQA" class="internal alias" data-slug="wiki/benchmarks/GPQA">[GPQA]</a> <code>draft</code> · knowledge, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/GSM8K" class="internal alias" data-slug="wiki/benchmarks/GSM8K">[GSM8K]</a> <code>draft</code> <code>saturated</code> · math, reasoning (2021)</li>
+<li><a href="./wiki/benchmarks/HallusionBench" class="internal alias" data-slug="wiki/benchmarks/HallusionBench">[HallusionBench]</a> <code>draft</code> · multimodal, hallucination (2023)</li>
+<li><a href="./wiki/benchmarks/HaluEval" class="internal alias" data-slug="wiki/benchmarks/HaluEval">[HaluEval]</a> <code>draft</code> · hallucination, knowledge (2023)</li>
+<li><a href="./wiki/benchmarks/HarmBench" class="internal alias" data-slug="wiki/benchmarks/HarmBench">[HarmBench]</a> <code>draft</code> · safety (2024)</li>
+<li><a href="./wiki/benchmarks/HellaSwag" class="internal alias" data-slug="wiki/benchmarks/HellaSwag">[HellaSwag]</a> <code>draft</code> <code>saturated</code> · reasoning (2019)</li>
+<li><a href="./wiki/benchmarks/HELMET" class="internal alias" data-slug="wiki/benchmarks/HELMET">[HELMET]</a> <code>draft</code> · long-context, reasoning, retrieval (2024)</li>
+<li><a href="./wiki/benchmarks/HotpotQA" class="internal alias" data-slug="wiki/benchmarks/HotpotQA">[HotpotQA]</a> <code>draft</code> · reasoning, retrieval (2018)</li>
+<li><a href="./wiki/benchmarks/HumanEval" class="internal alias" data-slug="wiki/benchmarks/HumanEval">[HumanEval]</a> <code>draft</code> <code>saturated</code> · code (2021)</li>
+<li><a href="./wiki/benchmarks/HumanEval-X" class="internal alias" data-slug="wiki/benchmarks/HumanEval-X">[HumanEval-X]</a> <code>draft</code> · code (2023)</li>
+<li><a href="./wiki/benchmarks/HumanEvalPack" class="internal alias" data-slug="wiki/benchmarks/HumanEvalPack">[HumanEvalPack]</a> <code>draft</code> · code (2023)</li>
+<li><a href="./wiki/benchmarks/IFEval" class="internal alias" data-slug="wiki/benchmarks/IFEval">[IFEval]</a> <code>draft</code> · instruction-following (2023)</li>
+<li><a href="./wiki/benchmarks/InterCode" class="internal alias" data-slug="wiki/benchmarks/InterCode">[InterCode]</a> <code>draft</code> · code, agent (2023)</li>
+<li><a href="./wiki/benchmarks/JailbreakBench" class="internal alias" data-slug="wiki/benchmarks/JailbreakBench">[JailbreakBench]</a> <code>draft</code> · safety (2024)</li>
+<li><a href="./wiki/benchmarks/KoLA" class="internal alias" data-slug="wiki/benchmarks/KoLA">[KoLA]</a> <code>draft</code> · knowledge, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/L-Eval" class="internal alias" data-slug="wiki/benchmarks/L-Eval">[L-Eval]</a> <code>draft</code> · long-context, reasoning, knowledge (2023)</li>
+<li><a href="./wiki/benchmarks/LAMBADA" class="internal alias" data-slug="wiki/benchmarks/LAMBADA">[LAMBADA]</a> <code>draft</code> <code>saturated</code> · reasoning, knowledge (2016)</li>
+<li><a href="./wiki/benchmarks/LegalBench" class="internal alias" data-slug="wiki/benchmarks/LegalBench">[LegalBench]</a> <code>draft</code> · reasoning, knowledge (2023)</li>
+<li><a href="./wiki/benchmarks/LiveCodeBench" class="internal alias" data-slug="wiki/benchmarks/LiveCodeBench">[LiveCodeBench]</a> <code>draft</code> · code (2024)</li>
+<li><a href="./wiki/benchmarks/LiveMathBench" class="internal alias" data-slug="wiki/benchmarks/LiveMathBench">[LiveMathBench]</a> <code>draft</code> · math, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/LogiQA" class="internal alias" data-slug="wiki/benchmarks/LogiQA">[LogiQA]</a> <code>draft</code> · reasoning (2020)</li>
+<li><a href="./wiki/benchmarks/LongBench" class="internal alias" data-slug="wiki/benchmarks/LongBench">[LongBench]</a> <code>draft</code> · long-context, reasoning, knowledge (2023)</li>
+<li><a href="./wiki/benchmarks/LongBench-v2" class="internal alias" data-slug="wiki/benchmarks/LongBench-v2">[LongBench-v2|LongBench v2]</a> <code>draft</code> · long-context, knowledge, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/LVOmniBench" class="internal alias" data-slug="wiki/benchmarks/LVOmniBench">[LVOmniBench]</a> <code>draft</code> · multimodal, long-context (2026)</li>
+<li><a href="./wiki/benchmarks/MATH" class="internal alias" data-slug="wiki/benchmarks/MATH">[MATH]</a> <code>draft</code> <code>saturated</code> · math, reasoning (2021)</li>
+<li><a href="./wiki/benchmarks/MATH500" class="internal alias" data-slug="wiki/benchmarks/MATH500">[MATH500]</a> <code>draft</code> · math, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/MathBench" class="internal alias" data-slug="wiki/benchmarks/MathBench">[MathBench]</a> <code>draft</code> · math, knowledge (2024)</li>
+<li><a href="./wiki/benchmarks/MathVerse" class="internal alias" data-slug="wiki/benchmarks/MathVerse">[MathVerse]</a> <code>draft</code> · multimodal, math (2024)</li>
+<li><a href="./wiki/benchmarks/MathVista" class="internal alias" data-slug="wiki/benchmarks/MathVista">[MathVista]</a> <code>draft</code> · multimodal, math (2023)</li>
+<li><a href="./wiki/benchmarks/MBPP" class="internal alias" data-slug="wiki/benchmarks/MBPP">[MBPP]</a> <code>draft</code> · code (2021)</li>
+<li><a href="./wiki/benchmarks/MBPP-Plus" class="internal alias" data-slug="wiki/benchmarks/MBPP-Plus">[MBPP-Plus|MBPP+]</a> <code>draft</code> · code (2023)</li>
+<li><a href="./wiki/benchmarks/MedQA" class="internal alias" data-slug="wiki/benchmarks/MedQA">[MedQA]</a> <code>draft</code> · knowledge, reasoning (2021)</li>
+<li><a href="./wiki/benchmarks/MGSM" class="internal alias" data-slug="wiki/benchmarks/MGSM">[MGSM]</a> <code>draft</code> · math, multilingual (2023)</li>
+<li><a href="./wiki/benchmarks/Minerva" class="internal alias" data-slug="wiki/benchmarks/Minerva">[Minerva]</a> <code>draft</code> · math, reasoning (2022)</li>
+<li><a href="./wiki/benchmarks/MINT" class="internal alias" data-slug="wiki/benchmarks/MINT">[MINT|MINT (Multi-turn INteractive Tool-use)]</a> <code>draft</code> · agent (2023)</li>
+<li><a href="./wiki/benchmarks/MMBench" class="internal alias" data-slug="wiki/benchmarks/MMBench">[MMBench]</a> <code>draft</code> · multimodal (2023)</li>
+<li><a href="./wiki/benchmarks/MME" class="internal alias" data-slug="wiki/benchmarks/MME">[MME]</a> <code>draft</code> · multimodal (2023)</li>
+<li><a href="./wiki/benchmarks/MMLU" class="internal alias" data-slug="wiki/benchmarks/MMLU">[MMLU]</a> <code>draft</code> <code>saturated</code> · knowledge, reasoning, multilingual (2020)</li>
+<li><a href="./wiki/benchmarks/MMLU-Pro" class="internal alias" data-slug="wiki/benchmarks/MMLU-Pro">[MMLU-Pro]</a> <code>draft</code> · knowledge, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/MMLU-Redux" class="internal alias" data-slug="wiki/benchmarks/MMLU-Redux">[MMLU-Redux]</a> <code>draft</code> · knowledge, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/MMMLU" class="internal alias" data-slug="wiki/benchmarks/MMMLU">[MMMLU]</a> <code>draft</code> · knowledge, multilingual (2024)</li>
+<li><a href="./wiki/benchmarks/MMMU" class="internal alias" data-slug="wiki/benchmarks/MMMU">[MMMU]</a> <code>draft</code> · multimodal, knowledge, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/MMMU-Pro" class="internal alias" data-slug="wiki/benchmarks/MMMU-Pro">[MMMU-Pro]</a> <code>draft</code> · multimodal, knowledge (2024)</li>
+<li><a href="./wiki/benchmarks/MMStar" class="internal alias" data-slug="wiki/benchmarks/MMStar">[MMStar]</a> <code>draft</code> · multimodal (2024)</li>
+<li><a href="./wiki/benchmarks/MMVet" class="internal alias" data-slug="wiki/benchmarks/MMVet">[MMVet]</a> <code>draft</code> · multimodal (2023)</li>
+<li><a href="./wiki/benchmarks/MT-Bench" class="internal alias" data-slug="wiki/benchmarks/MT-Bench">[MT-Bench]</a> <code>draft</code> · reasoning, instruction-following, dialog (2023)</li>
+<li><a href="./wiki/benchmarks/MT-Bench-101" class="internal alias" data-slug="wiki/benchmarks/MT-Bench-101">[MT-Bench-101]</a> <code>draft</code> · dialog, instruction-following (2024)</li>
+<li><a href="./wiki/benchmarks/MT-Video-Bench" class="internal alias" data-slug="wiki/benchmarks/MT-Video-Bench">[MT-Video-Bench]</a> <code>draft</code> · multimodal, dialog (2025)</li>
+<li><a href="./wiki/benchmarks/MultiNLI" class="internal alias" data-slug="wiki/benchmarks/MultiNLI">[MultiNLI]</a> <code>draft</code> <code>saturated</code> · reasoning (2018)</li>
+<li><a href="./wiki/benchmarks/NaturalQuestions" class="internal alias" data-slug="wiki/benchmarks/NaturalQuestions">[NaturalQuestions]</a> <code>draft</code> · knowledge, retrieval (2019)</li>
+<li><a href="./wiki/benchmarks/NeedleInAHaystack" class="internal alias" data-slug="wiki/benchmarks/NeedleInAHaystack">[NeedleInAHaystack|Needle In A Haystack]</a> <code>draft</code> · long-context, retrieval (2023)</li>
+<li><a href="./wiki/benchmarks/OCRBench" class="internal alias" data-slug="wiki/benchmarks/OCRBench">[OCRBench]</a> <code>draft</code> · multimodal (2023)</li>
+<li><a href="./wiki/benchmarks/OlympiadBench" class="internal alias" data-slug="wiki/benchmarks/OlympiadBench">[OlympiadBench]</a> <code>draft</code> · math, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/OmniMath" class="internal alias" data-slug="wiki/benchmarks/OmniMath">[OmniMath]</a> <code>draft</code> · math, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/OpenBookQA" class="internal alias" data-slug="wiki/benchmarks/OpenBookQA">[OpenBookQA]</a> <code>draft</code> · knowledge, reasoning (2018)</li>
+<li><a href="./wiki/benchmarks/PAWS-X" class="internal alias" data-slug="wiki/benchmarks/PAWS-X">[PAWS-X|PAWS-X (Cross-lingual Paraphrase Adversaries from Word Scrambling)]</a> <code>draft</code> · multilingual (2019)</li>
+<li><a href="./wiki/benchmarks/PIQA" class="internal alias" data-slug="wiki/benchmarks/PIQA">[PIQA]</a> <code>draft</code> · reasoning, knowledge (2020)</li>
+<li><a href="./wiki/benchmarks/PolyMath" class="internal alias" data-slug="wiki/benchmarks/PolyMath">[PolyMath]</a> <code>draft</code> · math, reasoning, multilingual (2024)</li>
+<li><a href="./wiki/benchmarks/POPE" class="internal alias" data-slug="wiki/benchmarks/POPE">[POPE]</a> <code>draft</code> · multimodal, hallucination (2023)</li>
+<li><a href="./wiki/benchmarks/PubMedQA" class="internal alias" data-slug="wiki/benchmarks/PubMedQA">[PubMedQA]</a> <code>draft</code> · knowledge, reasoning (2019)</li>
+<li><a href="./wiki/benchmarks/Putnam" class="internal alias" data-slug="wiki/benchmarks/Putnam">[Putnam]</a> <code>draft</code> · math, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/QASPER" class="internal alias" data-slug="wiki/benchmarks/QASPER">[QASPER|QASPER (Question Answering on Scientific Papers)]</a> <code>draft</code> · knowledge, retrieval (2021)</li>
+<li><a href="./wiki/benchmarks/QuALITY" class="internal alias" data-slug="wiki/benchmarks/QuALITY">[QuALITY]</a> <code>draft</code> · reasoning, long-context (2022)</li>
+<li><a href="./wiki/benchmarks/RACE" class="internal alias" data-slug="wiki/benchmarks/RACE">[RACE|RACE (ReAding Comprehension from Examinations)]</a> <code>draft</code> · knowledge, reasoning (2017)</li>
+<li><a href="./wiki/benchmarks/RealToxicityPrompts" class="internal alias" data-slug="wiki/benchmarks/RealToxicityPrompts">[RealToxicityPrompts]</a> <code>draft</code> · safety (2020)</li>
+<li><a href="./wiki/benchmarks/ReClor" class="internal alias" data-slug="wiki/benchmarks/ReClor">[ReClor]</a> <code>draft</code> · reasoning (2020)</li>
+<li><a href="./wiki/benchmarks/RULER" class="internal alias" data-slug="wiki/benchmarks/RULER">[RULER]</a> <code>draft</code> · long-context, reasoning, retrieval (2024)</li>
+<li><a href="./wiki/benchmarks/SafetyBench" class="internal alias" data-slug="wiki/benchmarks/SafetyBench">[SafetyBench]</a> <code>draft</code> · safety (2023)</li>
+<li><a href="./wiki/benchmarks/SciBench" class="internal alias" data-slug="wiki/benchmarks/SciBench">[SciBench]</a> <code>draft</code> · reasoning, math (2023)</li>
+<li><a href="./wiki/benchmarks/SciCode" class="internal alias" data-slug="wiki/benchmarks/SciCode">[SciCode]</a> <code>draft</code> · code, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/ScienceQA" class="internal alias" data-slug="wiki/benchmarks/ScienceQA">[ScienceQA]</a> <code>draft</code> · multimodal, knowledge (2022)</li>
+<li><a href="./wiki/benchmarks/ScienceWorld" class="internal alias" data-slug="wiki/benchmarks/ScienceWorld">[ScienceWorld]</a> <code>draft</code> · agent, reasoning (2022)</li>
+<li><a href="./wiki/benchmarks/SCROLLS" class="internal alias" data-slug="wiki/benchmarks/SCROLLS">[SCROLLS]</a> <code>draft</code> · long-context, reasoning (2022)</li>
+<li><a href="./wiki/benchmarks/SEED-Bench" class="internal alias" data-slug="wiki/benchmarks/SEED-Bench">[SEED-Bench]</a> <code>draft</code> · multimodal (2023)</li>
+<li><a href="./wiki/benchmarks/ShareGPT" class="internal alias" data-slug="wiki/benchmarks/ShareGPT">[ShareGPT]</a> <code>draft</code> · dialog (2023)</li>
+<li><a href="./wiki/benchmarks/SimpleQA" class="internal alias" data-slug="wiki/benchmarks/SimpleQA">[SimpleQA]</a> <code>draft</code> · hallucination, knowledge (2024)</li>
+<li><a href="./wiki/benchmarks/SNLI" class="internal alias" data-slug="wiki/benchmarks/SNLI">[SNLI]</a> <code>draft</code> <code>saturated</code> · reasoning (2015)</li>
+<li><a href="./wiki/benchmarks/SocialIQA" class="internal alias" data-slug="wiki/benchmarks/SocialIQA">[SocialIQA]</a> <code>draft</code> · reasoning, knowledge (2019)</li>
+<li><a href="./wiki/benchmarks/Spider" class="internal alias" data-slug="wiki/benchmarks/Spider">[Spider]</a> <code>draft</code> · code (2018)</li>
+<li><a href="./wiki/benchmarks/SQuAD-2.0" class="internal alias" data-slug="wiki/benchmarks/SQuAD-2.0">[SQuAD-2.0|SQuAD 2.0]</a> <code>draft</code> <code>saturated</code> · knowledge, reasoning (2018)</li>
+<li><a href="./wiki/benchmarks/StereoSet" class="internal alias" data-slug="wiki/benchmarks/StereoSet">[StereoSet]</a> <code>draft</code> · bias-fairness (2021)</li>
+<li><a href="./wiki/benchmarks/StrategyQA" class="internal alias" data-slug="wiki/benchmarks/StrategyQA">[StrategyQA]</a> <code>draft</code> · reasoning (2021)</li>
+<li><a href="./wiki/benchmarks/StrongREJECT" class="internal alias" data-slug="wiki/benchmarks/StrongREJECT">[StrongREJECT]</a> <code>draft</code> · safety (2024)</li>
+<li><a href="./wiki/benchmarks/SuperGLUE" class="internal alias" data-slug="wiki/benchmarks/SuperGLUE">[SuperGLUE]</a> <code>draft</code> <code>saturated</code> · reasoning, knowledge (2019)</li>
+<li><a href="./wiki/benchmarks/SWE-bench" class="internal alias" data-slug="wiki/benchmarks/SWE-bench">[SWE-bench]</a> <code>draft</code> · code, agent (2023)</li>
+<li><a href="./wiki/benchmarks/SWE-bench-Lite" class="internal alias" data-slug="wiki/benchmarks/SWE-bench-Lite">[SWE-bench-Lite|SWE-bench Lite]</a> <code>draft</code> · code, agent (2023)</li>
+<li><a href="./wiki/benchmarks/SWE-bench-Verified" class="internal alias" data-slug="wiki/benchmarks/SWE-bench-Verified">[SWE-bench-Verified|SWE-bench Verified]</a> <code>draft</code> · code, agent (2024)</li>
+<li><a href="./wiki/benchmarks/TextVQA" class="internal alias" data-slug="wiki/benchmarks/TextVQA">[TextVQA]</a> <code>draft</code> · multimodal (2019)</li>
+<li><a href="./wiki/benchmarks/TheoremQA" class="internal alias" data-slug="wiki/benchmarks/TheoremQA">[TheoremQA]</a> <code>draft</code> · reasoning, math (2023)</li>
+<li><a href="./wiki/benchmarks/ToolBench" class="internal alias" data-slug="wiki/benchmarks/ToolBench">[ToolBench]</a> <code>draft</code> · agent (2023)</li>
+<li><a href="./wiki/benchmarks/ToxiGen" class="internal alias" data-slug="wiki/benchmarks/ToxiGen">[ToxiGen]</a> <code>draft</code> · safety, bias-fairness (2022)</li>
+<li><a href="./wiki/benchmarks/TriviaQA" class="internal alias" data-slug="wiki/benchmarks/TriviaQA">[TriviaQA]</a> <code>draft</code> · knowledge, retrieval (2017)</li>
+<li><a href="./wiki/benchmarks/TruthfulQA" class="internal alias" data-slug="wiki/benchmarks/TruthfulQA">[TruthfulQA]</a> <code>draft</code> · hallucination, knowledge (2022)</li>
+<li><a href="./wiki/benchmarks/TyDiQA" class="internal alias" data-slug="wiki/benchmarks/TyDiQA">[TyDiQA|TyDi QA (Typologically Diverse Question Answering)]</a> <code>draft</code> · knowledge, multilingual (2020)</li>
+<li><a href="./wiki/benchmarks/Video-MME" class="internal alias" data-slug="wiki/benchmarks/Video-MME">[Video-MME]</a> <code>draft</code> · multimodal (2024)</li>
+<li><a href="./wiki/benchmarks/VQAv2" class="internal alias" data-slug="wiki/benchmarks/VQAv2">[VQAv2]</a> <code>draft</code> · multimodal (2017)</li>
+<li><a href="./wiki/benchmarks/WebArena" class="internal alias" data-slug="wiki/benchmarks/WebArena">[WebArena]</a> <code>draft</code> · agent (2023)</li>
+<li><a href="./wiki/benchmarks/WiCE" class="internal alias" data-slug="wiki/benchmarks/WiCE">[WiCE]</a> <code>draft</code> · hallucination, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/WildBench" class="internal alias" data-slug="wiki/benchmarks/WildBench">[WildBench]</a> <code>draft</code> · instruction-following, reasoning (2024)</li>
+<li><a href="./wiki/benchmarks/WildChat" class="internal alias" data-slug="wiki/benchmarks/WildChat">[WildChat]</a> <code>draft</code> · safety, dialog (2024)</li>
+<li><a href="./wiki/benchmarks/WildGuard" class="internal alias" data-slug="wiki/benchmarks/WildGuard">[WildGuard]</a> <code>draft</code> · safety (2024)</li>
+<li><a href="./wiki/benchmarks/WildVision" class="internal alias" data-slug="wiki/benchmarks/WildVision">[WildVision]</a> <code>draft</code> · multimodal (2024)</li>
+<li><a href="./wiki/benchmarks/WinoBias" class="internal alias" data-slug="wiki/benchmarks/WinoBias">[WinoBias]</a> <code>draft</code> · bias-fairness (2018)</li>
+<li><a href="./wiki/benchmarks/WinoGrad" class="internal alias" data-slug="wiki/benchmarks/WinoGrad">[WinoGrad|Winograd Schema Challenge]</a> <code>draft</code> · reasoning, knowledge (2012)</li>
+<li><a href="./wiki/benchmarks/WinoGrande" class="internal alias" data-slug="wiki/benchmarks/WinoGrande">[WinoGrande]</a> <code>draft</code> <code>saturated</code> · reasoning (2019)</li>
+<li><a href="./wiki/benchmarks/WMT23" class="internal alias" data-slug="wiki/benchmarks/WMT23">[WMT23|WMT23 (Conference on Machine Translation 2023)]</a> <code>draft</code> · multilingual (2023)</li>
+<li><a href="./wiki/benchmarks/XCOPA" class="internal alias" data-slug="wiki/benchmarks/XCOPA">[XCOPA|XCOPA (Cross-lingual Choice of Plausible Alternatives)]</a> <code>draft</code> · reasoning, multilingual (2021)</li>
+<li><a href="./wiki/benchmarks/XNLI" class="internal alias" data-slug="wiki/benchmarks/XNLI">[XNLI|XNLI (Cross-lingual Natural Language Inference)]</a> <code>draft</code> · reasoning, multilingual (2018)</li>
+<li><a href="./wiki/benchmarks/XSTest" class="internal alias" data-slug="wiki/benchmarks/XSTest">[XSTest]</a> <code>draft</code> · safety (2023)</li>
+<li><a href="./wiki/benchmarks/Zero-SCROLLS" class="internal alias" data-slug="wiki/benchmarks/Zero-SCROLLS">[Zero-SCROLLS]</a> <code>draft</code> · long-context, reasoning (2023)</li>
+<li><a href="./wiki/benchmarks/tau-bench" class="internal alias" data-slug="wiki/benchmarks/tau-bench">[tau-bench|τ-bench (tau-bench)]</a> <code>draft</code> · agent (2024)</li>
+</ul>
+<hr/>
+<h2 id="concepts--概念与方法">concepts/ — 概念与方法<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#concepts--概念与方法" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./wiki/concepts/leaderboard-contamination" class="internal alias" data-slug="wiki/concepts/leaderboard-contamination">[leaderboard-contamination|榜单污染（Leaderboard Contamination）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/annotation-artifacts" class="internal alias" data-slug="wiki/concepts/annotation-artifacts">[annotation-artifacts|标注产物（Annotation Artifacts）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/inter-annotator-agreement" class="internal alias" data-slug="wiki/concepts/inter-annotator-agreement">[inter-annotator-agreement|标注一致性（Inter-Annotator Agreement）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/test-time-compute" class="internal alias" data-slug="wiki/concepts/test-time-compute">[test-time-compute|测试时计算（Test-Time Compute）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/sycophancy" class="internal alias" data-slug="wiki/concepts/sycophancy">[sycophancy|谄媚行为（Sycophancy）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/membership-inference" class="internal alias" data-slug="wiki/concepts/membership-inference">[membership-inference|成员推断攻击（Membership Inference Attack）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/needle-in-haystack-concept" class="internal alias" data-slug="wiki/concepts/needle-in-haystack-concept">[needle-in-haystack-concept|大海捞针测试（Needle in a Haystack）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/dynamic-benchmarks-concept" class="internal alias" data-slug="wiki/concepts/dynamic-benchmarks-concept">[dynamic-benchmarks-concept|动态基准（Dynamic Benchmarks）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/adversarial-robustness" class="internal alias" data-slug="wiki/concepts/adversarial-robustness">[adversarial-robustness|对抗鲁棒性（Adversarial Robustness）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/multi-turn-eval" class="internal alias" data-slug="wiki/concepts/multi-turn-eval">[multi-turn-eval|多轮对话评测（Multi-Turn Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/multimodal-eval" class="internal alias" data-slug="wiki/concepts/multimodal-eval">[multimodal-eval|多模态评测]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/distributional-shift" class="internal alias" data-slug="wiki/concepts/distributional-shift">[distributional-shift|分布偏移（Distributional Shift）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/out-of-distribution-generalization" class="internal alias" data-slug="wiki/concepts/out-of-distribution-generalization">[out-of-distribution-generalization|分布外泛化（Out-of-Distribution Generalization）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/tool-use-eval" class="internal alias" data-slug="wiki/concepts/tool-use-eval">[tool-use-eval|工具使用评测（Tool Use Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/specification-gaming" class="internal alias" data-slug="wiki/concepts/specification-gaming">[specification-gaming|规格投机（Specification Gaming）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/red-teaming" class="internal alias" data-slug="wiki/concepts/red-teaming">[red-teaming|红队测试（Red Teaming）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/hallucination-taxonomy" class="internal alias" data-slug="wiki/concepts/hallucination-taxonomy">[hallucination-taxonomy|幻觉分类体系（Hallucination Taxonomy）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/benchmark-design" class="internal alias" data-slug="wiki/concepts/benchmark-design">[benchmark-design|基准设计原则（Benchmark Design）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/benchmark-gaming" class="internal alias" data-slug="wiki/concepts/benchmark-gaming">[benchmark-gaming|基准刷分（Benchmark Gaming）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/benchmark-validity" class="internal alias" data-slug="wiki/concepts/benchmark-validity">[benchmark-validity|基准效度（Benchmark Validity）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/reward-hacking" class="internal alias" data-slug="wiki/concepts/reward-hacking">[reward-hacking|奖励黑客（Reward Hacking）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/shortcut-learning" class="internal alias" data-slug="wiki/concepts/shortcut-learning">[shortcut-learning|捷径学习（Shortcut Learning）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/exact-match" class="internal alias" data-slug="wiki/concepts/exact-match">[exact-match|精确匹配率（Exact Match）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/open-ended-eval-challenges" class="internal alias" data-slug="wiki/concepts/open-ended-eval-challenges">[open-ended-eval-challenges|开放式评测挑战（Open-Ended Evaluation Challenges）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/perplexity" class="internal alias" data-slug="wiki/concepts/perplexity">[perplexity|困惑度（Perplexity）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/scaling-laws" class="internal alias" data-slug="wiki/concepts/scaling-laws">[scaling-laws|扩展定律（Scaling Laws）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/zero-shot-evaluation" class="internal alias" data-slug="wiki/concepts/zero-shot-evaluation">[zero-shot-evaluation|零样本评测（Zero-Shot Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/model-card" class="internal alias" data-slug="wiki/concepts/model-card">[model-card|模型卡（Model Card）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/model-collapse" class="internal alias" data-slug="wiki/concepts/model-collapse">[model-collapse|模型坍塌（Model Collapse）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/capability-elicitation" class="internal alias" data-slug="wiki/concepts/capability-elicitation">[capability-elicitation|能力激发（Capability Elicitation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/capability-overhang" class="internal alias" data-slug="wiki/concepts/capability-overhang">[capability-overhang|能力悬挂（Capability Overhang）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/capability-vs-alignment" class="internal alias" data-slug="wiki/concepts/capability-vs-alignment">[capability-vs-alignment|能力与对齐的权衡（Capability vs Alignment）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/preference-eval" class="internal alias" data-slug="wiki/concepts/preference-eval">[preference-eval|偏好评测（Preference Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/evaluation-overfitting" class="internal alias" data-slug="wiki/concepts/evaluation-overfitting">[evaluation-overfitting|评测过拟合（Evaluation Overfitting）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/confidence-intervals-eval" class="internal alias" data-slug="wiki/concepts/confidence-intervals-eval">[confidence-intervals-eval|评测置信区间（Confidence Intervals in Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/expected-calibration-error" class="internal alias" data-slug="wiki/concepts/expected-calibration-error">[expected-calibration-error|期望校准误差（Expected Calibration Error）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/deceptive-alignment" class="internal alias" data-slug="wiki/concepts/deceptive-alignment">[deceptive-alignment|欺骗性对齐（Deceptive Alignment）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/human-eval-protocol" class="internal alias" data-slug="wiki/concepts/human-eval-protocol">[human-eval-protocol|人工评测协议（Human Evaluation Protocol）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/RLHF" class="internal alias" data-slug="wiki/concepts/RLHF">[RLHF|人类反馈强化学习（RLHF）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/human-preference-eval" class="internal alias" data-slug="wiki/concepts/human-preference-eval">[human-preference-eval|人类偏好评测]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/verbosity-bias" class="internal alias" data-slug="wiki/concepts/verbosity-bias">[verbosity-bias|冗长偏差（Verbosity Bias）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/sandbagging" class="internal alias" data-slug="wiki/concepts/sandbagging">[sandbagging|沙袋行为（Sandbagging）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/in-context-learning" class="internal alias" data-slug="wiki/concepts/in-context-learning">[in-context-learning|上下文学习（In-Context Learning）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/win-rate" class="internal alias" data-slug="wiki/concepts/win-rate">[win-rate|胜率（Win Rate）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/win-rate-vs-elo" class="internal alias" data-slug="wiki/concepts/win-rate-vs-elo">[win-rate-vs-elo|胜率与 Elo 分数]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/factuality-eval" class="internal alias" data-slug="wiki/concepts/factuality-eval">[factuality-eval|事实性评测（Factuality Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/dataset-contamination-types" class="internal alias" data-slug="wiki/concepts/dataset-contamination-types">[dataset-contamination-types|数据集污染类型（Dataset Contamination Types）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/chain-of-thought-eval" class="internal alias" data-slug="wiki/concepts/chain-of-thought-eval">[chain-of-thought-eval|思维链评测（Chain-of-Thought Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/prompt-sensitivity" class="internal alias" data-slug="wiki/concepts/prompt-sensitivity">[prompt-sensitivity|提示敏感性（Prompt Sensitivity）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/prompt-injection" class="internal alias" data-slug="wiki/concepts/prompt-injection">[prompt-injection|提示注入（Prompt Injection）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/inference-time-scaling" class="internal alias" data-slug="wiki/concepts/inference-time-scaling">[inference-time-scaling|推理时扩展（Inference-Time Scaling）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/micro-vs-macro-average" class="internal alias" data-slug="wiki/concepts/micro-vs-macro-average">[micro-vs-macro-average|微观平均与宏观平均（Micro vs Macro Average）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/position-bias" class="internal alias" data-slug="wiki/concepts/position-bias">[position-bias|位置偏差（Position Bias）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/contamination-detection" class="internal alias" data-slug="wiki/concepts/contamination-detection">[contamination-detection|污染检测（Contamination Detection）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/sparse-evaluation" class="internal alias" data-slug="wiki/concepts/sparse-evaluation">[sparse-evaluation|稀疏评测（Sparse Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/prompt-leakage" class="internal alias" data-slug="wiki/concepts/prompt-leakage">[prompt-leakage|系统提示泄露（Prompt Leakage）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/significance-testing" class="internal alias" data-slug="wiki/concepts/significance-testing">[significance-testing|显著性检验（Significance Testing）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/constitutional-AI" class="internal alias" data-slug="wiki/concepts/constitutional-AI">[constitutional-AI|宪法 AI（Constitutional AI）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/effect-size-NLP" class="internal alias" data-slug="wiki/concepts/effect-size-NLP">[effect-size-NLP|效应量（Effect Size in NLP Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/emergent-capabilities" class="internal alias" data-slug="wiki/concepts/emergent-capabilities">[emergent-capabilities|涌现能力（Emergent Capabilities）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/correlation-with-human" class="internal alias" data-slug="wiki/concepts/correlation-with-human">[correlation-with-human|与人类判断的相关性（Correlation with Human Judgment）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/meta-evaluation" class="internal alias" data-slug="wiki/concepts/meta-evaluation">[meta-evaluation|元评测（Meta-Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/jailbreak" class="internal alias" data-slug="wiki/concepts/jailbreak">[jailbreak|越狱攻击（Jailbreak）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/DPO" class="internal alias" data-slug="wiki/concepts/DPO">[DPO|直接偏好优化（DPO）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/calibration" class="internal alias" data-slug="wiki/concepts/calibration">[calibration|置信度校准（Calibration）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/crowdsourcing-eval" class="internal alias" data-slug="wiki/concepts/crowdsourcing-eval">[crowdsourcing-eval|众包评测（Crowdsourcing Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/automated-eval-vs-human" class="internal alias" data-slug="wiki/concepts/automated-eval-vs-human">[automated-eval-vs-human|自动评测与人工评测的对比]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/self-enhancement-bias" class="internal alias" data-slug="wiki/concepts/self-enhancement-bias">[self-enhancement-bias|自我增强偏差（Self-Enhancement Bias）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/self-consistency" class="internal alias" data-slug="wiki/concepts/self-consistency">[self-consistency|自一致性（Self-Consistency）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/bootstrap-sampling" class="internal alias" data-slug="wiki/concepts/bootstrap-sampling">[bootstrap-sampling|自助采样法（Bootstrap Sampling）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/agent-eval" class="internal alias" data-slug="wiki/concepts/agent-eval">[agent-eval|Agent 评测]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/benchmark-contamination" class="internal alias" data-slug="wiki/concepts/benchmark-contamination">[benchmark-contamination|Benchmark 数据污染]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/BERTScore" class="internal alias" data-slug="wiki/concepts/BERTScore">[BERTScore]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/BLEU" class="internal alias" data-slug="wiki/concepts/BLEU">[BLEU|BLEU 分数]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Brier-score" class="internal alias" data-slug="wiki/concepts/Brier-score">[Brier-score|Brier 分数（Brier Score）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/chain-of-thought" class="internal alias" data-slug="wiki/concepts/chain-of-thought">[chain-of-thought|Chain-of-Thought (CoT) 推理]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Cohens-kappa" class="internal alias" data-slug="wiki/concepts/Cohens-kappa">[Cohens-kappa|Cohen’s κ 系数]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/elo-rating" class="internal alias" data-slug="wiki/concepts/elo-rating">[elo-rating|Elo 评分与 Bradley-Terry 模型]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/F1-score" class="internal alias" data-slug="wiki/concepts/F1-score">[F1-score|F1 分数]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/few-shot-learning" class="internal alias" data-slug="wiki/concepts/few-shot-learning"> Zero-shot 评测]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Fleiss-kappa" class="internal alias" data-slug="wiki/concepts/Fleiss-kappa">[Fleiss-kappa|Fleiss’ κ 系数]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/goodharts-law" class="internal alias" data-slug="wiki/concepts/goodharts-law">[goodharts-law|Goodhart’s Law 与评测]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Kendall-tau" class="internal alias" data-slug="wiki/concepts/Kendall-tau">[Kendall-tau|Kendall’s τ（Kendall 相关系数）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Krippendorffs-alpha" class="internal alias" data-slug="wiki/concepts/Krippendorffs-alpha">[Krippendorffs-alpha|Krippendorff’s α 系数]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Likert-scale" class="internal alias" data-slug="wiki/concepts/Likert-scale">[Likert-scale|Likert 量表]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/llm-as-judge" class="internal alias" data-slug="wiki/concepts/llm-as-judge">[llm-as-judge|LLM-as-Judge 评测方法]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/McNemar-test" class="internal alias" data-slug="wiki/concepts/McNemar-test">[McNemar-test|McNemar 检验（McNemar’s Test）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/METEOR" class="internal alias" data-slug="wiki/concepts/METEOR">[METEOR]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/min-k-contamination" class="internal alias" data-slug="wiki/concepts/min-k-contamination">[min-k-contamination|Min-K% 概率法]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/n-gram-contamination" class="internal alias" data-slug="wiki/concepts/n-gram-contamination">[n-gram-contamination|n-gram 重叠污染检测]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/pass-at-k" class="internal alias" data-slug="wiki/concepts/pass-at-k">[pass-at-k|Pass@k]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Pearson-correlation" class="internal alias" data-slug="wiki/concepts/Pearson-correlation">[Pearson-correlation|Pearson 相关系数（Pearson Correlation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/process-reward-model" class="internal alias" data-slug="wiki/concepts/process-reward-model">[process-reward-model|Process Reward Model (PRM)]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/retrieval-augmented-generation-eval" class="internal alias" data-slug="wiki/concepts/retrieval-augmented-generation-eval">[retrieval-augmented-generation-eval|RAG 评测（Retrieval-Augmented Generation Evaluation）]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/ROUGE" class="internal alias" data-slug="wiki/concepts/ROUGE">[ROUGE|ROUGE 指标]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Spearman-correlation" class="internal alias" data-slug="wiki/concepts/Spearman-correlation">[Spearman-correlation|Spearman 等级相关系数]</a> <code>draft</code></li>
+<li><a href="./wiki/concepts/Wilcoxon-test" class="internal alias" data-slug="wiki/concepts/Wilcoxon-test">[Wilcoxon-test|Wilcoxon 检验（Wilcoxon Test）]</a> <code>draft</code></li>
+</ul>
+<hr/>
+<h2 id="tools--评测工具链">tools/ — 评测工具链<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tools--评测工具链" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./wiki/tools/AlpacaFarm" class="internal alias" data-slug="wiki/tools/AlpacaFarm">[AlpacaFarm]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/Arize-Phoenix" class="internal alias" data-slug="wiki/tools/Arize-Phoenix">[Arize-Phoenix|Arize Phoenix]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/BIG-bench-framework" class="internal alias" data-slug="wiki/tools/BIG-bench-framework">[BIG-bench-framework|BIG-bench 评测框架]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/Braintrust" class="internal alias" data-slug="wiki/tools/Braintrust">[Braintrust]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/chatbot-arena-platform" class="internal alias" data-slug="wiki/tools/chatbot-arena-platform">[chatbot-arena-platform|Chatbot Arena 平台（技术实现）]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/continuous-eval" class="internal alias" data-slug="wiki/tools/continuous-eval">[continuous-eval]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/DeepEval" class="internal alias" data-slug="wiki/tools/DeepEval">[DeepEval]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/evalplus" class="internal alias" data-slug="wiki/tools/evalplus">[evalplus|EvalPlus（HumanEval+）]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/Evidently-AI" class="internal alias" data-slug="wiki/tools/Evidently-AI">[Evidently-AI|Evidently AI]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/Giskard" class="internal alias" data-slug="wiki/tools/Giskard">[Giskard]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/helm" class="internal alias" data-slug="wiki/tools/helm">[helm|HELM（Stanford CRFM）]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/inspect-ai" class="internal alias" data-slug="wiki/tools/inspect-ai">[inspect-ai|Inspect AI（UK AI Safety Institute）]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/LangSmith-Eval" class="internal alias" data-slug="wiki/tools/LangSmith-Eval">[LangSmith-Eval|LangSmith Eval]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/lm-evaluation-harness" class="internal alias" data-slug="wiki/tools/lm-evaluation-harness">[lm-evaluation-harness|Language Model Evaluation Harness（EleutherAI）]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/LMMS-Eval" class="internal alias" data-slug="wiki/tools/LMMS-Eval">[LMMS-Eval]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/MT-Bench-code" class="internal alias" data-slug="wiki/tools/MT-Bench-code">[MT-Bench-code|MT-Bench 评测实现]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/OpenAI-Evals" class="internal alias" data-slug="wiki/tools/OpenAI-Evals">[OpenAI-Evals|OpenAI Evals]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/opencompass" class="internal alias" data-slug="wiki/tools/opencompass">[opencompass|OpenCompass（上海 AI 实验室）]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/Prometheus" class="internal alias" data-slug="wiki/tools/Prometheus">[Prometheus]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/PromptBench" class="internal alias" data-slug="wiki/tools/PromptBench">[PromptBench]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/promptfoo" class="internal alias" data-slug="wiki/tools/promptfoo">[promptfoo]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/RAGAs" class="internal alias" data-slug="wiki/tools/RAGAs">[RAGAs]</a> <code>draft</code></li>
+<li><a href="./wiki/tools/TruLens" class="internal alias" data-slug="wiki/tools/TruLens">[TruLens]</a> <code>draft</code></li>
+</ul>
+<hr/>
+<h2 id="leaderboards--榜单">leaderboards/ — 榜单<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#leaderboards--榜单" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./wiki/leaderboards/OpenCompass-Sinian" class="internal alias" data-slug="wiki/leaderboards/OpenCompass-Sinian">[OpenCompass-Sinian|司南排行榜（OpenCompass Sinian）]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/Agent-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/Agent-Leaderboard">[Agent-Leaderboard|Agent Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/Aider-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/Aider-Leaderboard">[Aider-Leaderboard|Aider Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/AlpacaEval-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/AlpacaEval-Leaderboard">[AlpacaEval-Leaderboard|AlpacaEval Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/ArenaHard-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/ArenaHard-Leaderboard">[ArenaHard-Leaderboard|Arena-Hard Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/BigCodeBench-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/BigCodeBench-Leaderboard">[BigCodeBench-Leaderboard|BigCodeBench Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/EvalPlus-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/EvalPlus-Leaderboard">[EvalPlus-Leaderboard|EvalPlus Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/HELM-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/HELM-Leaderboard">[HELM-Leaderboard|HELM Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/HuggingFace-Open-LLM-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/HuggingFace-Open-LLM-Leaderboard">[HuggingFace-Open-LLM-Leaderboard|Hugging Face Open LLM Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/LiveBench" class="internal alias" data-slug="wiki/leaderboards/LiveBench">[LiveBench]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/LiveBench-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/LiveBench-Leaderboard">[LiveBench-Leaderboard|LiveBench Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/LMSYS-Chatbot-Arena" class="internal alias" data-slug="wiki/leaderboards/LMSYS-Chatbot-Arena">[LMSYS-Chatbot-Arena|LMSYS Chatbot Arena]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/MMMU-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/MMMU-Leaderboard">[MMMU-Leaderboard|MMMU Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/Open-LLM-Leaderboard-v2" class="internal alias" data-slug="wiki/leaderboards/Open-LLM-Leaderboard-v2">[Open-LLM-Leaderboard-v2|Open LLM Leaderboard v2]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/Scale-SEAL-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/Scale-SEAL-Leaderboard">[Scale-SEAL-Leaderboard|Scale SEAL Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/SuperCLUE-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/SuperCLUE-Leaderboard">[SuperCLUE-Leaderboard|SuperCLUE Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/SWE-bench-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/SWE-bench-Leaderboard">[SWE-bench-Leaderboard|SWE-bench Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/WildBench-Leaderboard" class="internal alias" data-slug="wiki/leaderboards/WildBench-Leaderboard">[WildBench-Leaderboard|WildBench Leaderboard]</a> <code>draft</code></li>
+<li><a href="./wiki/leaderboards/WildVision-Arena" class="internal alias" data-slug="wiki/leaderboards/WildVision-Arena">[WildVision-Arena|WildVision Arena]</a> <code>draft</code></li>
+</ul>
+<hr/>
+<h2 id="entities--机构与人物">entities/ — 机构与人物<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#entities--机构与人物" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./wiki/entities/Alibaba-Tongyi" class="internal alias" data-slug="wiki/entities/Alibaba-Tongyi">[Alibaba-Tongyi|阿里巴巴通义（Alibaba Tongyi）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Baidu-AI" class="internal alias" data-slug="wiki/entities/Baidu-AI">[Baidu-AI|百度AI（Baidu AI）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/01-AI" class="internal alias" data-slug="wiki/entities/01-AI">[01-AI|零一万物（01.AI）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Shanghai-AI-Lab" class="internal alias" data-slug="wiki/entities/Shanghai-AI-Lab">[Shanghai-AI-Lab|上海人工智能实验室（上海 AI 实验室）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Moonshot-AI" class="internal alias" data-slug="wiki/entities/Moonshot-AI">[Moonshot-AI|月之暗面（Moonshot AI）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Zhipu-AI" class="internal alias" data-slug="wiki/entities/Zhipu-AI">[Zhipu-AI|智谱AI（Zhipu AI）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/ByteDance-AI" class="internal alias" data-slug="wiki/entities/ByteDance-AI">[ByteDance-AI|字节跳动AI（ByteDance AI）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/AI2" class="internal alias" data-slug="wiki/entities/AI2">[AI2|Allen Institute for AI (AI2)]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Andrej-Karpathy" class="internal alias" data-slug="wiki/entities/Andrej-Karpathy">[Andrej-Karpathy|Andrej Karpathy]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Anthropic" class="internal alias" data-slug="wiki/entities/Anthropic">[Anthropic]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/ARC-Alignment" class="internal alias" data-slug="wiki/entities/ARC-Alignment">[ARC-Alignment|ARC（对齐研究中心）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/BAIR" class="internal alias" data-slug="wiki/entities/BAIR">[BAIR|BAIR（Berkeley AI Research）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Center-for-AI-Safety" class="internal alias" data-slug="wiki/entities/Center-for-AI-Safety">[Center-for-AI-Safety|Center for AI Safety (CAIS)]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Christopher-Manning" class="internal alias" data-slug="wiki/entities/Christopher-Manning">[Christopher-Manning|Christopher Manning]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/CMU-LTI" class="internal alias" data-slug="wiki/entities/CMU-LTI">[CMU-LTI|CMU LTI（卡内基梅隆大学语言技术研究所）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Cohere" class="internal alias" data-slug="wiki/entities/Cohere">[Cohere]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Dan-Hendrycks" class="internal alias" data-slug="wiki/entities/Dan-Hendrycks">[Dan-Hendrycks|Dan Hendrycks]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Dario-Amodei" class="internal alias" data-slug="wiki/entities/Dario-Amodei">[Dario-Amodei|Dario Amodei]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/DeepSeek" class="internal alias" data-slug="wiki/entities/DeepSeek">[DeepSeek|DeepSeek（深度求索）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/EleutherAI" class="internal alias" data-slug="wiki/entities/EleutherAI">[EleutherAI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Emily-Bender" class="internal alias" data-slug="wiki/entities/Emily-Bender">[Emily-Bender|Emily Bender]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Epoch-AI" class="internal alias" data-slug="wiki/entities/Epoch-AI">[Epoch-AI|Epoch AI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Fei-Fei-Li" class="internal alias" data-slug="wiki/entities/Fei-Fei-Li">[Fei-Fei-Li|Fei-Fei Li（李飞飞）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Google-DeepMind" class="internal alias" data-slug="wiki/entities/Google-DeepMind">[Google-DeepMind|Google DeepMind]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Graham-Neubig" class="internal alias" data-slug="wiki/entities/Graham-Neubig">[Graham-Neubig|Graham Neubig]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Hugging-Face" class="internal alias" data-slug="wiki/entities/Hugging-Face">[Hugging-Face|Hugging Face]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Ilya-Sutskever" class="internal alias" data-slug="wiki/entities/Ilya-Sutskever">[Ilya-Sutskever|Ilya Sutskever]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Jacob-Devlin" class="internal alias" data-slug="wiki/entities/Jacob-Devlin">[Jacob-Devlin|Jacob Devlin]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Jason-Wei" class="internal alias" data-slug="wiki/entities/Jason-Wei">[Jason-Wei|Jason Wei]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Kawin-Ethayarajh" class="internal alias" data-slug="wiki/entities/Kawin-Ethayarajh">[Kawin-Ethayarajh|Kawin Ethayarajh]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Lianmin-Zheng" class="internal alias" data-slug="wiki/entities/Lianmin-Zheng">[Lianmin-Zheng|Lianmin Zheng（郑联民）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/LMSYS-Org" class="internal alias" data-slug="wiki/entities/LMSYS-Org">[LMSYS-Org|LMSYS Org]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Long-Ouyang" class="internal alias" data-slug="wiki/entities/Long-Ouyang">[Long-Ouyang|Long Ouyang（欧阳龙）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Margaret-Mitchell" class="internal alias" data-slug="wiki/entities/Margaret-Mitchell">[Margaret-Mitchell|Margaret Mitchell]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Meta-AI" class="internal alias" data-slug="wiki/entities/Meta-AI">[Meta-AI|Meta AI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/METR" class="internal alias" data-slug="wiki/entities/METR">[METR|METR（Model Evaluation and Threat Research）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Microsoft-Research" class="internal alias" data-slug="wiki/entities/Microsoft-Research">[Microsoft-Research|Microsoft Research]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Mila" class="internal alias" data-slug="wiki/entities/Mila">[Mila|Mila（蒙特利尔学习算法研究所）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/MiniMax" class="internal alias" data-slug="wiki/entities/MiniMax">[MiniMax]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Mistral-AI" class="internal alias" data-slug="wiki/entities/Mistral-AI">[Mistral-AI|Mistral AI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/MIT-CSAIL" class="internal alias" data-slug="wiki/entities/MIT-CSAIL">[MIT-CSAIL|MIT CSAIL（MIT 计算机科学与人工智能实验室）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/MLCommons" class="internal alias" data-slug="wiki/entities/MLCommons">[MLCommons]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Nathan-Lambert" class="internal alias" data-slug="wiki/entities/Nathan-Lambert">[Nathan-Lambert|Nathan Lambert]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Neel-Nanda" class="internal alias" data-slug="wiki/entities/Neel-Nanda">[Neel-Nanda|Neel Nanda]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/NVIDIA-AI" class="internal alias" data-slug="wiki/entities/NVIDIA-AI">[NVIDIA-AI|NVIDIA AI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/OpenAI" class="internal alias" data-slug="wiki/entities/OpenAI">[OpenAI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Oren-Etzioni" class="internal alias" data-slug="wiki/entities/Oren-Etzioni">[Oren-Etzioni|Oren Etzioni]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Oxford-FHI" class="internal alias" data-slug="wiki/entities/Oxford-FHI">[Oxford-FHI|Oxford FHI（牛津大学人类未来研究所）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Partnership-on-AI" class="internal alias" data-slug="wiki/entities/Partnership-on-AI">[Partnership-on-AI|Partnership on AI (PAI)]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Percy-Liang" class="internal alias" data-slug="wiki/entities/Percy-Liang">[Percy-Liang|Percy Liang]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Peter-Clark" class="internal alias" data-slug="wiki/entities/Peter-Clark">[Peter-Clark|Peter Clark]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Rohan-Taori" class="internal alias" data-slug="wiki/entities/Rohan-Taori">[Rohan-Taori|Rohan Taori]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Sam-Bowman" class="internal alias" data-slug="wiki/entities/Sam-Bowman">[Sam-Bowman|Sam Bowman]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Samuel-Bowman" class="internal alias" data-slug="wiki/entities/Samuel-Bowman">[Samuel-Bowman|Samuel Bowman]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Scale-AI" class="internal alias" data-slug="wiki/entities/Scale-AI">[Scale-AI|Scale AI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Stability-AI" class="internal alias" data-slug="wiki/entities/Stability-AI">[Stability-AI|Stability AI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Stanford-CRFM" class="internal alias" data-slug="wiki/entities/Stanford-CRFM">[Stanford-CRFM|Stanford CRFM]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Timnit-Gebru" class="internal alias" data-slug="wiki/entities/Timnit-Gebru">[Timnit-Gebru|Timnit Gebru]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Tom-Brown" class="internal alias" data-slug="wiki/entities/Tom-Brown">[Tom-Brown|Tom Brown]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/UK-AISI" class="internal alias" data-slug="wiki/entities/UK-AISI">[UK-AISI|UK AI Safety Institute（英国人工智能安全研究所）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Vector-Institute" class="internal alias" data-slug="wiki/entities/Vector-Institute">[Vector-Institute|Vector Institute（向量研究所）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Wei-Lin-Chiang" class="internal alias" data-slug="wiki/entities/Wei-Lin-Chiang">[Wei-Lin-Chiang|Wei-Lin Chiang（蔣維麟）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/xAI" class="internal alias" data-slug="wiki/entities/xAI">[xAI]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Yann-LeCun" class="internal alias" data-slug="wiki/entities/Yann-LeCun">[Yann-LeCun|Yann LeCun]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Yejin-Choi" class="internal alias" data-slug="wiki/entities/Yejin-Choi">[Yejin-Choi|Yejin Choi（崔叶真）]</a> <code>draft</code></li>
+<li><a href="./wiki/entities/Yoshua-Bengio" class="internal alias" data-slug="wiki/entities/Yoshua-Bengio">[Yoshua-Bengio|Yoshua Bengio]</a> <code>draft</code></li>
+</ul>
+<hr/>
+<h2 id="sources--原始文献摘要">sources/ — 原始文献摘要<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources--原始文献摘要" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./wiki/sources/2402.10260" class="internal alias" data-slug="wiki/sources/2402.10260">[2402.10260|A Strong REJECT for Empty Jailbreaks]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/1910.14599" class="internal alias" data-slug="wiki/sources/1910.14599">[1910.14599|Adversarial NLI: A New Benchmark for Natural Language Understanding]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2308.03688" class="internal alias" data-slug="wiki/sources/2308.03688">[2308.03688|AgentBench: Evaluating LLMs as Agents]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/agent-evolver" class="internal alias" data-slug="wiki/sources/agent-evolver">[agent-evolver|AgentEvolver: Towards Efficient Self-Evolving Agent System]</a> <code>draft</code> (2025)</li>
+<li><a href="./wiki/sources/2304.06364" class="internal alias" data-slug="wiki/sources/2304.06364">[2304.06364|AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/ai-index-2024" class="internal alias" data-slug="wiki/sources/ai-index-2024">[ai-index-2024|AI Index Report 2024]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2305.14387" class="internal alias" data-slug="wiki/sources/2305.14387">[2305.14387|AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2307.04657" class="internal alias" data-slug="wiki/sources/2307.04657">[2307.04657|BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/1904.09675" class="internal alias" data-slug="wiki/sources/1904.09675">[1904.09675|BERTScore: Evaluating Text Generation with BERT]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/td-scaling" class="internal alias" data-slug="wiki/sources/td-scaling">[td-scaling|Beyond Quantity: Trajectory Diversity Scaling for Code Agents]</a> <code>draft</code> (2026)</li>
+<li><a href="./wiki/sources/2206.04615" class="internal alias" data-slug="wiki/sources/2206.04615">[2206.04615|Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2406.15877" class="internal alias" data-slug="wiki/sources/2406.15877">[2406.15877|BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2201.11903" class="internal alias" data-slug="wiki/sources/2201.11903">[2201.11903|Chain-of-Thought Prompting Elicits Reasoning in Large Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/claude3-anthropic-2024" class="internal alias" data-slug="wiki/sources/claude3-anthropic-2024">[claude3-anthropic-2024|Claude 3 Model Card]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2306.09212" class="internal alias" data-slug="wiki/sources/2306.09212">[2306.09212|CMMLU: Measuring Chinese Massive Multitask Language Understanding]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2212.08073" class="internal alias" data-slug="wiki/sources/2212.08073">[2212.08073|Constitutional AI: Harmlessness from AI Feedback]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2401.03065" class="internal alias" data-slug="wiki/sources/2401.03065">[2401.03065|CRUXEval: A Benchmark for Code Reasoning, Understanding and Execution]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/deepseek-v2-2024" class="internal alias" data-slug="wiki/sources/deepseek-v2-2024">[deepseek-v2-2024|DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2310.16789" class="internal alias" data-slug="wiki/sources/2310.16789">[2310.16789|Detecting Pretraining Data from Large Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2101.02235" class="internal alias" data-slug="wiki/sources/2101.02235">[2101.02235|Did Aristotle Use a Laptop? A Question Answering Benchmark with Implicit Reasoning Strategies]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2305.18290" class="internal alias" data-slug="wiki/sources/2305.18290">[2305.18290|Direct Preference Optimization: Your Language Model is Secretly a Reward Model]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2308.13387" class="internal alias" data-slug="wiki/sources/2308.13387">[2308.13387|Do-Not-Answer: A Dataset for Evaluating Safeguards in LLMs]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2206.07682" class="internal alias" data-slug="wiki/sources/2206.07682">[2206.07682|Emergent Abilities of Large Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2108.07258" class="internal alias" data-slug="wiki/sources/2108.07258">[2108.07258|Evaluating Large Language Models Trained on Code]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2305.14251" class="internal alias" data-slug="wiki/sources/2305.14251">[2305.14251|FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2110.14168" class="internal alias" data-slug="wiki/sources/2110.14168">[2110.14168|Finetuned Language Models Are Zero-Shot Learners]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/gemini-1-0-google-2024" class="internal alias" data-slug="wiki/sources/gemini-1-0-google-2024">[gemini-1-0-google-2024|Gemini: A Family of Highly Capable Multimodal Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/genvid-bench" class="internal alias" data-slug="wiki/sources/genvid-bench">[genvid-bench|GenVidBench: A Challenging Benchmark for AI-Generated Video Detection]</a> <code>draft</code> (2026)</li>
+<li><a href="./wiki/sources/1804.07461" class="internal alias" data-slug="wiki/sources/1804.07461">[1804.07461|GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2311.12983" class="internal alias" data-slug="wiki/sources/2311.12983">[2311.12983|GPQA: A Graduate-Level Google-Proof Q&amp;A Benchmark]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/gpt4-technical-report-2023" class="internal alias" data-slug="wiki/sources/gpt4-technical-report-2023">[gpt4-technical-report-2023|GPT-4 Technical Report]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2310.14566" class="internal alias" data-slug="wiki/sources/2310.14566">[2310.14566|HallusionBench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2305.11747" class="internal alias" data-slug="wiki/sources/2305.11747">[2305.11747|HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/1907.10641" class="internal alias" data-slug="wiki/sources/1907.10641">[1907.10641|HellaSwag: Can a Machine Really Finish Your Sentence?]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2305.10207" class="internal alias" data-slug="wiki/sources/2305.10207">[2305.10207|Holistic Evaluation of Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2305.20050" class="internal alias" data-slug="wiki/sources/2305.20050">[2305.20050|Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2308.11462" class="internal alias" data-slug="wiki/sources/2308.11462">[2308.11462|LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2307.09288" class="internal alias" data-slug="wiki/sources/2307.09288">[2307.09288|Llama 2: Open Foundation and Fine-Tuned Chat Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2308.14508" class="internal alias" data-slug="wiki/sources/2308.14508">[2308.14508|LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/lvomni-bench" class="internal alias" data-slug="wiki/sources/lvomni-bench">[lvomni-bench|LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs]</a> <code>draft</code> (2026)</li>
+<li><a href="./wiki/sources/2310.02255" class="internal alias" data-slug="wiki/sources/2310.02255">[2310.02255|MathVista: Evaluating Math Reasoning in Visual Contexts]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2109.07958" class="internal alias" data-slug="wiki/sources/2109.07958">[2109.07958|Measuring Coding Challenge Competence With APPS]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2009.03300" class="internal alias" data-slug="wiki/sources/2009.03300">[2009.03300|Measuring Massive Multitask Language Understanding]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/llama3-meta-2024" class="internal alias" data-slug="wiki/sources/llama3-meta-2024">[llama3-meta-2024|Meta Llama 3]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2404.07440" class="internal alias" data-slug="wiki/sources/2404.07440">[2404.07440|Meta Llama 3 技术报告]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2310.16944" class="internal alias" data-slug="wiki/sources/2310.16944">[2310.16944|Mistral 7B]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2307.06281" class="internal alias" data-slug="wiki/sources/2307.06281">[2307.06281|MMBench: Is Your Multi-modal Model an All-around Player?]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2311.16502" class="internal alias" data-slug="wiki/sources/2311.16502">[2311.16502|MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/mt-video-bench" class="internal alias" data-slug="wiki/sources/mt-video-bench">[mt-video-bench|MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating Multimodal LLMs in Multi-Turn Dialogues]</a> <code>draft</code> (2026)</li>
+<li><a href="./wiki/sources/2402.14008" class="internal alias" data-slug="wiki/sources/2402.14008">[2402.14008|OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2107.03374" class="internal alias" data-slug="wiki/sources/2107.03374">[2107.03374|Program Synthesis with Large Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2001.08361" class="internal alias" data-slug="wiki/sources/2001.08361">[2001.08361|Scaling Laws for Neural Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2203.11171" class="internal alias" data-slug="wiki/sources/2203.11171">[2203.11171|Self-Consistency Improves Chain of Thought Reasoning in Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/sparseeval" class="internal alias" data-slug="wiki/sources/sparseeval">[sparseeval|SparseEval: Efficient Evaluation of Large Language Models by Sparse Optimization]</a> <code>draft</code> (2026)</li>
+<li><a href="./wiki/sources/state-of-ai-2023" class="internal alias" data-slug="wiki/sources/state-of-ai-2023">[state-of-ai-2023|State of AI Report 2023]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/1905.07830" class="internal alias" data-slug="wiki/sources/1905.07830">[1905.07830|SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2310.01848" class="internal alias" data-slug="wiki/sources/2310.01848">[2310.01848|SWE-bench: Can Language Models Resolve Real-World GitHub Issues?]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/thinking-to-recall" class="internal alias" data-slug="wiki/sources/thinking-to-recall">[thinking-to-recall|Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs]</a> <code>draft</code> (2026)</li>
+<li><a href="./wiki/sources/2307.16789" class="internal alias" data-slug="wiki/sources/2307.16789">[2307.16789|ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2203.02155" class="internal alias" data-slug="wiki/sources/2203.02155">[2203.02155|Training language models to follow instructions with human feedback]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/epoch-compute-trends-2023" class="internal alias" data-slug="wiki/sources/epoch-compute-trends-2023">[epoch-compute-trends-2023|Trends in Machine Learning Hardware and Computing]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2309.05463" class="internal alias" data-slug="wiki/sources/2309.05463">[2309.05463|TruthfulQA: Measuring How Models Mimic Human Falsehoods]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2307.15043" class="internal alias" data-slug="wiki/sources/2307.15043">[2307.15043|Universal and Transferable Adversarial Attacks on Aligned Language Models]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/videoscaffold" class="internal alias" data-slug="wiki/sources/videoscaffold">[videoscaffold|VideoScaffold: Elastic-Scale Visual Hierarchies for Streaming Video Understanding in MLLMs]</a> <code>draft</code> (2025)</li>
+<li><a href="./wiki/sources/2307.13854" class="internal alias" data-slug="wiki/sources/2307.13854">[2307.13854|WebArena: A Realistic Web Environment for Building Autonomous Agents]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/reward-model-teacher" class="internal alias" data-slug="wiki/sources/reward-model-teacher">[reward-model-teacher|What Makes a Reward Model a Good Teacher? An Optimization Perspective]</a> <code>draft</code> (2025)</li>
+<li><a href="./wiki/sources/2308.11432" class="internal alias" data-slug="wiki/sources/2308.11432">[2308.11432|WildBench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild]</a> <code>draft</code></li>
+<li><a href="./wiki/sources/2308.01263" class="internal alias" data-slug="wiki/sources/2308.01263">[2308.01263|XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models]</a> <code>draft</code></li>
+</ul>
+<hr/>
+<h2 id="synthesis--综合分析">synthesis/ — 综合分析<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#synthesis--综合分析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><em>（尚无内容）</em></p>
+<hr/>
+<h2 id="industry--行业垂类">industry/ — 行业垂类<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#industry--行业垂类" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./wiki/industry/creative-writing-eval" class="internal alias" data-slug="wiki/industry/creative-writing-eval">[creative-writing-eval|创意写作评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/code-review-eval" class="internal alias" data-slug="wiki/industry/code-review-eval">[code-review-eval|代码审查AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/code-eval" class="internal alias" data-slug="wiki/industry/code-eval">[code-eval|代码与软件工程AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/dialogue-systems-eval" class="internal alias" data-slug="wiki/industry/dialogue-systems-eval">[dialogue-systems-eval|对话系统评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/multilingual-eval" class="internal alias" data-slug="wiki/industry/multilingual-eval">[multilingual-eval|多语言AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/legal-eval" class="internal alias" data-slug="wiki/industry/legal-eval">[legal-eval|法律AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/compliance-eval" class="internal alias" data-slug="wiki/industry/compliance-eval">[compliance-eval|合规AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/chemistry-eval" class="internal alias" data-slug="wiki/industry/chemistry-eval">[chemistry-eval|化学AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/hallucination-eval" class="internal alias" data-slug="wiki/industry/hallucination-eval">[hallucination-eval|幻觉专项评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/translation-eval" class="internal alias" data-slug="wiki/industry/translation-eval">[translation-eval|机器翻译评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/RAG-eval" class="internal alias" data-slug="wiki/industry/RAG-eval">[RAG-eval|检索增强生成评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/education-eval" class="internal alias" data-slug="wiki/industry/education-eval">[education-eval|教育AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/financial-eval" class="internal alias" data-slug="wiki/industry/financial-eval">[financial-eval|金融AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/scientific-research-eval" class="internal alias" data-slug="wiki/industry/scientific-research-eval">[scientific-research-eval|科学研究AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/customer-service-eval" class="internal alias" data-slug="wiki/industry/customer-service-eval">[customer-service-eval|客服AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/software-debugging-eval" class="internal alias" data-slug="wiki/industry/software-debugging-eval">[software-debugging-eval|软件调试AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/social-science-eval" class="internal alias" data-slug="wiki/industry/social-science-eval">[social-science-eval|社会科学AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/biology-eval" class="internal alias" data-slug="wiki/industry/biology-eval">[biology-eval|生物AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/data-analysis-eval" class="internal alias" data-slug="wiki/industry/data-analysis-eval">[data-analysis-eval|数据分析AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/math-olympiad-eval" class="internal alias" data-slug="wiki/industry/math-olympiad-eval">[math-olympiad-eval|数学竞赛 AI 评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/recommendation-eval" class="internal alias" data-slug="wiki/industry/recommendation-eval">[recommendation-eval|推荐系统AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/reasoning-eval" class="internal alias" data-slug="wiki/industry/reasoning-eval">[reasoning-eval|推理能力专项评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/cybersecurity-eval" class="internal alias" data-slug="wiki/industry/cybersecurity-eval">[cybersecurity-eval|网络安全AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/summarization-eval" class="internal alias" data-slug="wiki/industry/summarization-eval">[summarization-eval|文本摘要评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/document-understanding-eval" class="internal alias" data-slug="wiki/industry/document-understanding-eval">[document-understanding-eval|文档理解评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/accessibility-eval" class="internal alias" data-slug="wiki/industry/accessibility-eval">[accessibility-eval|无障碍AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/physics-eval" class="internal alias" data-slug="wiki/industry/physics-eval">[physics-eval|物理AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/psychological-eval" class="internal alias" data-slug="wiki/industry/psychological-eval">[psychological-eval|心理健康AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/information-extraction-eval" class="internal alias" data-slug="wiki/industry/information-extraction-eval">[information-extraction-eval|信息抽取评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/academic-writing-eval" class="internal alias" data-slug="wiki/industry/academic-writing-eval">[academic-writing-eval|学术写作AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/drug-discovery-eval" class="internal alias" data-slug="wiki/industry/drug-discovery-eval">[drug-discovery-eval|药物发现AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/medical-eval" class="internal alias" data-slug="wiki/industry/medical-eval">[medical-eval|医疗AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/medical-imaging-eval" class="internal alias" data-slug="wiki/industry/medical-imaging-eval">[medical-imaging-eval|医学影像AI评测（多模态）]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/language-learning-eval" class="internal alias" data-slug="wiki/industry/language-learning-eval">[language-learning-eval|语言学习AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/knowledge-graph-eval" class="internal alias" data-slug="wiki/industry/knowledge-graph-eval">[knowledge-graph-eval|知识图谱AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/instruction-following-eval" class="internal alias" data-slug="wiki/industry/instruction-following-eval">[instruction-following-eval|指令跟随专项评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/patent-analysis-eval" class="internal alias" data-slug="wiki/industry/patent-analysis-eval">[patent-analysis-eval|专利AI评测]</a> <code>draft</code></li>
+<li><a href="./wiki/industry/autonomous-agents-eval" class="internal alias" data-slug="wiki/industry/autonomous-agents-eval">[autonomous-agents-eval|自主代理评测]</a> <code>draft</code></li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>关系图谱</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-0" aria-expanded="true"><h3>目录</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#llmevaluationwiki-索引" data-for="llmevaluationwiki-索引">LLMEvaluationWiki 索引</a></li><li class="depth-1"><a href="#统计" data-for="统计">统计</a></li><li class="depth-1"><a href="#benchmarks--评测集" data-for="benchmarks--评测集">benchmarks/ — 评测集</a></li><li class="depth-1"><a href="#concepts--概念与方法" data-for="concepts--概念与方法">concepts/ — 概念与方法</a></li><li class="depth-1"><a href="#tools--评测工具链" data-for="tools--评测工具链">tools/ — 评测工具链</a></li><li class="depth-1"><a href="#leaderboards--榜单" data-for="leaderboards--榜单">leaderboards/ — 榜单</a></li><li class="depth-1"><a href="#entities--机构与人物" data-for="entities--机构与人物">entities/ — 机构与人物</a></li><li class="depth-1"><a href="#sources--原始文献摘要" data-for="sources--原始文献摘要">sources/ — 原始文献摘要</a></li><li class="depth-1"><a href="#synthesis--综合分析" data-for="synthesis--综合分析">synthesis/ — 综合分析</a></li><li class="depth-1"><a href="#industry--行业垂类" data-for="industry--行业垂类">industry/ — 行业垂类</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

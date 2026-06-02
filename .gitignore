@@ -2,7 +2,7 @@ node_modules/
 .DS_Store
 *.log
 quartz/.quartz-cache/
-quartz/public/
+# quartz/public/ — 需要提交构建产物以支持 Goofy 静态部署
 quartz/node_modules/
 quartz/.quartz-cache/
 
