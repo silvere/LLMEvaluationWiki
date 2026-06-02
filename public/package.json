@@ -1,0 +1,32 @@
+{
+  "name": "llm-evaluation-wiki",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "validate": "tsx scripts/validate-frontmatter.ts",
+    "build-index": "tsx scripts/build-index.ts",
+    "lint": "tsx scripts/lint-wiki.ts",
+    "fix-links": "tsx scripts/fix-source-links.ts",
+    "audit-sources": "tsx scripts/audit-sources.ts",
+    "ingest-paper": "tsx scripts/ingest-paper.ts",
+    "inject-links": "tsx scripts/inject-benchmark-links.ts",
+    "inject-links-all": "tsx scripts/inject-benchmark-links.ts --all",
+    "inject-entity-related": "tsx scripts/inject-entity-related.ts",
+    "migrate-sota": "tsx scripts/migrate-sota-from-tables.ts",
+    "inject-sota": "tsx scripts/inject-sota-table.ts",
+    "dedupe-sota": "tsx scripts/dedupe-sota-keys.ts",
+    "prune-legacy-scores": "tsx scripts/prune-legacy-scores-section.ts",
+    "audit-sota": "tsx scripts/audit-sota.ts",
+    "check-all": "npm run fix-links && npm run inject-links && npm run inject-entity-related && npm run inject-sota && npm run validate && npm run build-index && npm run lint"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "@types/js-yaml": "^4.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "glob": "^11.0.0"
+  }
+}
