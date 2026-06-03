@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>LLM 评测 Wiki</title>
+      <link>https://wiki.jerryai.cn</link>
+      <description>最近的10条笔记 on LLM 评测 Wiki</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>对抗鲁棒性（Adversarial Robustness）</title>
+    <link>https://wiki.jerryai.cn/concepts/adversarial-robustness</link>
+    <guid>https://wiki.jerryai.cn/concepts/adversarial-robustness</guid>
+    <description><![CDATA[ 对抗鲁棒性（Adversarial Robustness） LLM 在面对专门设计以误导或操纵其输出的恶意输入时，仍能保持正确、安全、可靠行为的能力。 定义 对抗鲁棒性（Adversarial Robustness）衡量 LLM 抵御对抗攻击的能力。对抗攻击是指通过精心构造的输入扰动，使模型产生错误输出或不安全行为，且这些扰动通常对人类是透明或合理的。 主要攻击类型： 语义保持扰动：同义词替换、句式改写、字符级扰动（错别字、Unicode 变体）等 越狱攻击（Jailbreaking）：通过角色扮演、假设场景、提示注入等绕过安全护栏 提示注入（Prompt Injection）：在用户输入或外... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>Agent 评测</title>
+    <link>https://wiki.jerryai.cn/concepts/agent-eval</link>
+    <guid>https://wiki.jerryai.cn/concepts/agent-eval</guid>
+    <description><![CDATA[ Agent 评测 评测 AI Agent 在多步骤、工具调用、真实环境任务中的完成能力。 定义 Agent 评测是指评估 AI 系统在需要规划、决策、工具使用和多轮交互的任务上的表现。与单次问答不同，Agent 任务通常包含：向外部环境（浏览器、代码执行器、文件系统等）发出动作、根据环境反馈调整策略、在多步骤序列中完成目标。 重要性（在 LLM 评测中） 随着 LLM 从”聊天机器人”向”能干活的 Agent”演进，Agent 评测成为衡量模型实际用途最直接的方式。代码修复（SWE-bench）、网页浏览（WebArena）、操作系统控制（OSWorld）等 benchmark 已成为衡量前沿... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>中文 LLM 评测（Chinese LLM Evaluation）</title>
+    <link>https://wiki.jerryai.cn/concepts/chinese-evaluation</link>
+    <guid>https://wiki.jerryai.cn/concepts/chinese-evaluation</guid>
+    <description><![CDATA[ 中文 LLM 评测（Chinese LLM Evaluation） 针对中文语言能力、文化理解和安全合规的大模型专项评测体系。 核心挑战 中文评测面临独特的挑战：汉字形态多样、语义歧义、文化背景依赖（成语、典故）、以及中文特有的安全合规要求（涉及政治敏感内容的处理）。直接使用英文 benchmark 翻译的方式存在文化偏差和表达不自然问题。 主要评测方向 知识与推理：以 C-Eval、CMMLU 为代表的多任务学习评测 对话与指令跟随：中文 MT-Bench 变体、CLEVA 安全与对齐：SafetyPrompts、中文 jailbreak 测试集 角色扮演与对话：CharacterEval（... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>代码能力评测（Code Evaluation）</title>
+    <link>https://wiki.jerryai.cn/concepts/code-evaluation</link>
+    <guid>https://wiki.jerryai.cn/concepts/code-evaluation</guid>
+    <description><![CDATA[ 代码能力评测（Code Evaluation） 系统评估大模型代码生成、编辑、调试、理解能力的方法与基准体系。 核心评测维度 代码生成：给定自然语言描述生成正确代码（HumanEval、MBPP） 代码编辑：修改已有代码以满足新需求（CodeEditorBench、SWE-bench） 代码理解：解释、摘要、注释代码 可视化与交互：生成可运行的前端代码（ArtifactsBench） 真实世界任务：解决 GitHub issue（SWE-bench） 评测方法 主要采用 pass@k 指标：运行生成代码对应的单元测试，统计 k 次生成中至少通过一次的比例。 沙箱隔离是 agent 类代码评测的... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>事实性评测（Factuality Evaluation）</title>
+    <link>https://wiki.jerryai.cn/concepts/factuality-eval</link>
+    <guid>https://wiki.jerryai.cn/concepts/factuality-eval</guid>
+    <description><![CDATA[ 事实性评测（Factuality Evaluation） 评测 LLM 生成内容与客观世界事实一致性的方法体系，是幻觉检测的核心任务，面临验证基础设施构建和自动化扩展的重大挑战。 定义 事实性评测（Factuality Evaluation）目标是：量化 LLM 生成文本中真实、准确的事实命题比例，识别错误的事实声明（幻觉）。 与简单的”正确性”评测不同，事实性评测需要处理： 开放域的任意事实声明（非选择题） 程度不同的错误（完全错误 vs 轻微不准确） 时间敏感的事实（历史事实 vs 可能已变化的当前事实） 无法验证的声明（主观判断、未来预测） 重要性（在 LLM 评测中） 事实性是 LLM... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>幻觉分类体系（Hallucination Taxonomy）</title>
+    <link>https://wiki.jerryai.cn/concepts/hallucination-taxonomy</link>
+    <guid>https://wiki.jerryai.cn/concepts/hallucination-taxonomy</guid>
+    <description><![CDATA[ 幻觉分类体系（Hallucination Taxonomy） 系统化分类 LLM 生成内容中不同类型错误和虚构信息的框架，包括内在幻觉 vs 外在幻觉、事实性幻觉 vs 忠实性幻觉等核心维度。 定义 幻觉（Hallucination）在 LLM 语境中指模型生成的与事实、源文本或逻辑不符的内容。系统化的分类有助于设计针对性的评测方法。 主要分类维度： 按来源分： 内在幻觉（Intrinsic Hallucination）：生成内容与输入源文本（如 RAG 检索结果）矛盾 外在幻觉（Extrinsic Hallucination）：生成内容无法从源文本中验证，可能是虚构或无关信息 按错误类型分：... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>安全评测全景</title>
+    <link>https://wiki.jerryai.cn/concepts/safety-eval-landscape</link>
+    <guid>https://wiki.jerryai.cn/concepts/safety-eval-landscape</guid>
+    <description><![CDATA[ 安全评测全景 LLM 安全评测的系统性概述，涵盖有害内容、越狱攻击、对齐失败等维度的主要基准与评测方法。 主要评测维度 有害内容生成 评测模型是否会输出有害、违法或不道德内容： HarmBench — 400+ 有害行为的红队测试基准 ToxiGen — 面向少数族裔的隐性毒性语言评测 越狱攻击（Jailbreaking） 评测模型对提示注入和越狱攻击的抵抗能力： HarmBench 包含直接请求与越狱变体两类攻击 真实性与幻觉 TruthfulQA — 检测模型是否会生成已知错误信息 偏见与公平性 评测模型在不同人口群体上的差异化表现。 评测方法论 Red Teaming — 专家手工或自动... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>LLM 评测综述（Survey）</title>
+    <link>https://wiki.jerryai.cn/concepts/survey</link>
+    <guid>https://wiki.jerryai.cn/concepts/survey</guid>
+    <description><![CDATA[ LLM 评测综述（Survey） 系统梳理大模型评测领域现状、方法、数据集与挑战的综述类论文。 主要综述方向 全面综述：覆盖知识、推理、安全、对齐、专业领域的全景综述 专项综述：幻觉、事实性、Agent、多模态、代码等单一维度的深度梳理 方法论综述：自动评估、人工评估、LLM-as-judge 方法的对比与分析 代表性综述论文 Evaluating Large Language Models: A Comprehensive Survey — 2023 年最全面的综述之一 A Survey on Evaluation of Large Language Models — 三维框架，高引用综述 ... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>LLMEvaluationWiki 全量索引</title>
+    <link>https://wiki.jerryai.cn/</link>
+    <guid>https://wiki.jerryai.cn/</guid>
+    <description><![CDATA[ LLMEvaluationWiki 索引 ⚠️ 本文件由 scripts/build-index.ts 自动生成，请勿手动编辑。 每次 /ingest 操作完成后会自动重建。上次生成：2026-05-25 统计 类别页数benchmark395concept115tool43leaderboard21entity186model41paper215synthesis20industry38合计1074 benchmarks/ — 评测集 ADE20K draft · multimodal (2017) AdvBench draft · safety (2023) AgentBench draf... ]]></description>
+    <pubDate>Mon, 25 May 2026 06:33:44 GMT</pubDate>
+  </item><item>
+    <title>SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models</title>
+    <link>https://wiki.jerryai.cn/papers/2303.08896</link>
+    <guid>https://wiki.jerryai.cn/papers/2303.08896</guid>
+    <description><![CDATA[ SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models 提出基于采样一致性的零资源幻觉检测方法，无需外部知识库即可识别黑盒 LLM 输出中的非事实句子。 核心主张 [CLAIM]: 若 LLM 对某概念有真实知识，多次采样的输出在事实上应高度一致；反之，幻觉内容会在不同采样间呈现不一致性。 [CLAIM]: SelfCheckGPT 无需访问模型内部参数或外部知识库，仅通过多次采样即可实现零资源的幻觉检测，适用于所有黑盒 LLM。 [CLAIM]: 在 ... ]]></description>
+    <pubDate>Mon, 25 May 2026 05:07:34 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
